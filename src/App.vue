@@ -1,6 +1,6 @@
 <script setup>
 // import pGame from './components/p-game.vue'
-import pRoate from './views/p-roate/p-roate.vue'
+// import pRoate from './views/p-roate/p-roate.vue'
 
 </script>
 

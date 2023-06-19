@@ -1,7 +1,9 @@
 <script setup>
 import { useRouter, useRoute } from "vue-router";
-import bgTree from "@/assets/route/bg-tree.jpg";
-import imgStart from "@/assets/route/start.png";
+import bgTree from "@/assets/image-route/bg-tree.jpg";
+
+
+import imgStart from "@/assets/image-route/enter.png";
 
 const imageObj = {
   bgTree,
@@ -23,7 +25,7 @@ const { goDetail } = routeAll();
 <template>
   <div class="container">
     <div >
-      <img @click="goDetail()" :src="imageObj.imgStart" alt="">
+      <img class="start" @click="goDetail()" :src="imageObj.imgStart" alt="">
     </div>
   </div>
 </template>
@@ -35,8 +37,11 @@ const { goDetail } = routeAll();
   width: 100%;
   height: 100%;
   background: v-bind("'url(' + imageObj.bgTree + ')'") no-repeat;
-  background-size: 100% 100% ;
+  background-size: cover;
+  background-position: 45%;
 }
-
+.start{
+  width: 150px;
+}
 
 </style>

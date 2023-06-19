@@ -2,49 +2,48 @@
 import { reactive, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
-import bgTree from "@/assets/route/bg-tree.jpg";
-import imgback from "@/assets/route/back.png";
-import bgBox from "@/assets/route/bg-box.png";
-import bgActive from "@/assets/route/bg-active.png";
-import play from "@/assets/route/play.png";
-import imgResult from "@/assets/route/result.png";
-import bgItem from "@/assets/route/bg-item.png";
-import item1n from "@/assets/route/item1.png";
-import item2 from "@/assets/route/item2.png";
-import item3 from "@/assets/route/item3.png";
-import item4 from "@/assets/route/item4.png";
-import item5 from "@/assets/route/item5.png";
-import item6 from "@/assets/route/item6.png";
-import item7 from "@/assets/route/item7.png";
-import item8 from "@/assets/route/item8.png";
-import item9 from "@/assets/route/item9.png";
-import item10 from "@/assets/route/item10.png";
-import item11 from "@/assets/route/item11.png";
-import item12 from "@/assets/route/item12.png";
+import bgTree from "@/assets/image-route/bg-tree.jpg";
+
+import imgback from "@/assets/image-route/back.png";
+import play from "@/assets/image-route/play.png";
+import start from "@/assets/image-route/start.png";
+import center from "@/assets/image-route/center.png";
+import bgAuto from "@/assets/image-route/bg-auto.png";
+import auto1n from "@/assets/image-route/auto1.png";
+import auto2 from "@/assets/image-route/auto2.png";
+import auto3 from "@/assets/image-route/auto3.png";
+import auto4 from "@/assets/image-route/auto4.png";
+import auto5 from "@/assets/image-route/auto5.png";
+import auto6 from "@/assets/image-route/auto6.png";
+import auto7 from "@/assets/image-route/auto7.png";
+import auto8 from "@/assets/image-route/auto8.png";
+import auto9 from "@/assets/image-route/auto9.png";
+import auto10 from "@/assets/image-route/auto10.png";
+import auto11 from "@/assets/image-route/auto11.png";
+import auto12 from "@/assets/image-route/auto12.png";
 export default {
   setup() {
     let imageReat=reactive({
-      bgItem,
-      bgActive
+      bgAuto,
     })
     const imageObj = {
+      center,
       bgTree,
       imgback,
-      imgResult,
-      bgBox,
       play,
-      item1n,
-      item2,
-      item3,
-      item4,
-      item5,
-      item6,
-      item7,
-      item8,
-      item9,
-      item10,
-      item11,
-      item12,
+      start,
+      auto1n,
+      auto2,
+      auto3,
+      auto4,
+      auto5,
+      auto6,
+      auto7,
+      auto8,
+      auto9,
+      auto10,
+      auto11,
+      auto12,
     };
     const router = new useRouter();
     const open=ref(false)
@@ -65,79 +64,67 @@ export default {
     let obj = reactive({
       resultList: [
         {
-          name: "10点券",
-          prize_img: imageObj.item1n,
+          prize_img: imageObj.auto1n,
           prize_id: "c10",
           order: 1,
         },
         {
-          name: "20点券",
-          prize_img: imageObj.item2,
+          prize_img: imageObj.auto2,
           prize_id: "c20",
           order: 2,
         },
         {
-          name: "30点券",
-          prize_img: imageObj.item3,
+          prize_img: imageObj.auto3,
           prize_id: "c30",
           order: 3,
         },
         {
-          name: "40点券",
-          prize_img: imageObj.item4,
+          prize_img: imageObj.auto4,
           prize_id: "c30",
           order: 4,
         },
         {
-          name: "120点券",
-          prize_img: imageObj.item12,
+          prize_img: imageObj.auto12,
           prize_id: "c120",
           order: 12,
         },
         {
-          name: "50点券",
-          prize_img: imageObj.item5,
+          prize_img: imageObj.auto5,
           prize_id: "c50",
           order: 5,
         },
 
         { order: -9 },
         {
-          name: "110点券",
-          prize_img: imageObj.item11,
+          prize_img: imageObj.auto11,
           prize_id: "c110",
           order: 11,
         },
 
         {
-          name: "60点券",
-          prize_img: imageObj.item6,
+          prize_img: imageObj.auto6,
           prize_id: "c60",
           order: 6,
         },
 
         {
-          name: "100点券",
-          prize_img: imageObj.item10,
+          prize_img: imageObj.auto10,
           prize_id: "c100",
           order: 10,
         },
 
         {
-          name: "90点券",
-          prize_img: imageObj.item9,
+          prize_img: imageObj.auto9,
           prize_id: "c90",
           order: 9,
         },
         {
-          name: "80点券",
-          prize_img: imageObj.item8,
+          prize_img: imageObj.auto8,
           prize_id: "c80",
           order: 8,
         },
         {
-          name: "70点券",
-          prize_img: imageObj.item7,
+          prize_img: imageObj.auto7,
           prize_id: "c70",
           order: 7,
         },
@@ -226,6 +213,7 @@ export default {
           obj.lotterywin === obj.index
         ) {
           open.value=true
+          router.push('/over')
           clearTimeout(obj.lottery.timer);
           setTimeout(() => {
             allMethods.resetData();
@@ -283,23 +271,42 @@ export default {
           <div v-if="item.order !== -9">
             <div class="header"><img :src="item.prize_img" alt="" /></div>
             <div class="name">
-              <!-- {{ item.name }}{{ item.order + "--" + (obj.index - 1) }} -->
             </div>
           </div>
-          <div v-else class="start" @click.stop.prevent="startGo"></div>
+          <div v-else class="start" >
+            <img :src="imageObj.center" alt=""> 
+
+          </div>
         </li>
       </ul>
     </div>
+
+    <div class="button-box">
+      <div class="buttom-item" @click.stop.prevent="startGo"><img :src="imageObj.play" alt=""> </div>
+      <div class="buttom-item" @click.stop.prevent="startGo"><img :src="imageObj.start" alt=""> </div>
+
+    </div>
   </div>
-  <Teleport to="body">
+  <!-- <Teleport to="body">
       <div v-if="open" class="modal" @click="openDialog">
-        <!-- 12312 -->
         <img  class="model-img" :src="imageObj.imgResult" alt="">
       </div>
-    </Teleport>
+    </Teleport> -->
 </template>
 <style scoped>
 /* @import url("@/assets/reset.css"); */
+.button-box{
+  margin-top: 10vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.buttom-item{
+  width: 100px;
+}
+.buttom-item img{
+  width: 100%;
+}
 .modal{
   position: fixed;
   width: 100%;
@@ -326,7 +333,8 @@ export default {
   height: 100vh;
   display: inline-block;
   background: v-bind("'url(' + imageObj.bgTree + ')'") no-repeat;
-  background-size: 100% 100% ;
+  background-size: cover;
+  background-position: 45%;
 
 }
 .sudoku-container section {
@@ -335,27 +343,29 @@ export default {
 .sudoku-wrap {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 400px;
   margin: 20px auto;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center center;
-  background: v-bind("'url(' + imageObj.bgBox + ')'") no-repeat;
+  /* background: v-bind("'url(' + imageObj.bgBox + ')'") no-repeat; */
   background-size: 100%;
 }
 .sudoku-wrap ul {
   position: absolute;
-  top: 31%;
+  top: 10%;
   left: 50%;
   transform: translateX(-50%);
   display: grid;
-  grid-row-gap: 4px;
-  grid-column-gap:10px;
-  grid-template-columns: 22% 22% 22% 22%;
-  grid-template-rows: 22% 22% 22% 22%;
-  width: 80vw;
-  height: 80vw;
+  /* grid-row-gap: 4px;
+  grid-column-gap:4px; */
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 25% 25% 25% 25%;
+  width: 85vw;
+  height: 85vw;
   margin: 0 auto;
+  background-color: rgb(0, 0, 0,0.3);
+  border-radius: 10px;
 }
 .sudoku-wrap ul li {
   
@@ -391,7 +401,7 @@ export default {
   width: 100%;
   height: 100%;
   /* background-image: url('img/start.png'); */
-  background: v-bind("'url(' + imageObj.play + ')'") no-repeat;
+  /* background: v-bind("'url(' + imageObj.play + ')'") no-repeat; */
   
   background-repeat: no-repeat;
   background-size: 80% 80%;
@@ -408,18 +418,20 @@ export default {
   color: #035d68;
 }
 .sudoku-wrap ul li.rw {
-  background-image: v-bind("'url(' + imageReat.bgItem + ')'") ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-image: v-bind("'url(' + imageReat.bgItem + ')'") ; */
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center center;
-  padding-top: 0.14rem;
 }
 .sudoku-wrap ul li.rw .header {
   height: 30%;
 }
 .sudoku-wrap ul li.rw img {
-  width: 80%;
-  height: 80%;
+  width: 87%;
+  height: 87%;
   margin: 0 auto;
 }
 .sudoku-wrap ul li.rw .name {
@@ -436,7 +448,8 @@ export default {
   color: #00ffff;
 }
 .sudoku-wrap ul li.active{
-  background-image: v-bind("'url(' + imageReat.bgActive + ')'") ;
+  background-image: v-bind("'url(' + imageReat.bgAuto + ')'") ;
+  background-size: cover;
 
 }
 .sudoku-wrap ul li.active::after {
