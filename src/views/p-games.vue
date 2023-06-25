@@ -1,25 +1,27 @@
 <script>
 
-import bgImage from "../assets/bg.png";
-import buttonImage from "../assets/button.png";
-import bodyImage from "../assets/bgbody.jpg";
-import bgItemImage from "../assets/change.png";
-import boxBg from "../assets/box-bg.png";
-import buttonBg from "../assets/start.png";
-import backBg from "../assets/back.png";
+import dialog from "../assets/slot/dialog.png";
+import startImage from "../assets/slot/start.png";
+import bgImage from "../assets/slot/bg-2.jpg";
+import mainImage from "../assets/slot/bg-3.png";
+import bgItemImage from "../assets/slot/change.png";
+import contentBg from "../assets/slot/bg-4.png";
+import gpBg from "../assets/slot/back.png";
+import star from "../assets/slot/star.gif";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
   setup() {
     const className = "container";
     const cssConfig = reactive({
-      bgImage,
+      dialog,
       bgItemImage,
-      buttonImage,
-      boxBg,
-      buttonBg,
-      bodyImage,
-      backBg
+      startImage,
+      contentBg,
+      bgImage,
+      gpBg,
+      mainImage,
+      star
     });
     const ItemList = [
       {
@@ -58,7 +60,7 @@ export default {
         const box2 = document.getElementById("content");
         const coords = { x: 0, y: 0 }; // Start at (0, 0)
         const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
-          .to({ x: 0, y: (3421 * content.clientHeight) / box2.clientHeight }, 500) // Move to (300, 200) in 1 second.
+          .to({ x: 0, y: (980 * content.clientHeight) / box2.clientHeight }, 100) // Move to (300, 200) in 1 second.
           .easing() // Use an easing function to make the animation smooth.
           .onUpdate(() => {
             if (timeOhter > 1000 && timeOhter <= 4000) {
@@ -108,19 +110,19 @@ export default {
           if (i == 3) {
             boxLists[0].style.setProperty(
               "background-position-y",
-              -0-parseInt(Math.ceil(Math.random() * 3421) / 311) * 311 + "px"
+              -0-parseInt(Math.ceil(Math.random() * 980) / 140) * 140 + "px"
             );
           }
           if (i == 4) {
             boxLists[1].style.setProperty(
               "background-position-y",
-              -0-parseInt(Math.ceil(Math.random() * 3421) / 311) * 311 + "px"
+              -0-parseInt(Math.ceil(Math.random() * 980) / 140) * 140 + "px"
             );
           }
           if (i == 5) {
             boxLists[2].style.setProperty(
               "background-position-y",
-              -0-parseInt(Math.ceil(Math.random() * 3421) / 311) * 311 + "px"
+              -0-parseInt(Math.ceil(Math.random() * 980) / 140) * 140 + "px"
             );
           }
         }, 1000);
@@ -157,7 +159,10 @@ export default {
   </div>
   <div :class="className">
     <!-- <img src="../assets/slot/bian.gif" alt=""> -->
-    <div v-if="start" class="start" @click="start=false"> </div>
+    <div v-if="start" class="start-bg"><img :src="cssConfig.mainImage" alt=""></div>
+    <div v-if="start" class="start" @click="start=false">
+    
+    </div>
 
     <div v-else class="content" id="content">
       <div class="content-he" id="content-he">
@@ -169,12 +174,14 @@ export default {
         ></div>
         </div>
       </div>
-      <div class="buttons" @click="run"></div>
+      <div class="buttons" @click="run">
+    </div>
     </div>
     <Teleport to="body">
       <div  v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
-        <img  class="model-img" :src="cssConfig.bgImage" alt="">
+        <img class="model-star" :src="cssConfig.star" alt="">
+        <img  class="model-img" :src="cssConfig.dialog" alt="">
       </div>
     </Teleport>
   </div>
@@ -191,21 +198,22 @@ export default {
   
 }
 .head-back{
-  width: 60px;
-  height: 60px;
-  background: v-bind("'url(' + cssConfig.backBg + ')'") no-repeat;
+  width: 50px;
+  height: 50px;
+  background: v-bind("'url(' + cssConfig.gpBg + ')'") no-repeat;
   background-size: 100%;
   z-index: 999;
 }
 .start{
-  width: 120px;
-  height: 50px;
-  background: v-bind("'url(' + cssConfig.buttonImage + ')'") no-repeat;
+    width: 170px;
+    height: 80px;
+  background: v-bind("'url(' + cssConfig.startImage + ')'") no-repeat;
   background-size: 100%;
+  z-index: 99;
 
 }
 .container {
-  background: v-bind("'url(' + cssConfig.bodyImage + ')'") no-repeat;
+  background: v-bind("'url(' + cssConfig.bgImage + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -219,42 +227,42 @@ export default {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
-  width: 94vw;
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background: v-bind("'url(' + cssConfig.boxBg + ')'") no-repeat;
+  background: v-bind("'url(' + cssConfig.contentBg + ')'") no-repeat;
   background-size: 120%;
-  background-position: center;
+  background-position: center 0;
   color: #fff;
   font-weight: 600;
   font-size: 26;
 }
 .buttons {
-  position: absolute;
-    top: 61%;
+  /* position: absolute;
+    top: 66%; */
     width: 159px;
     height: 80px;
   z-index: 999;
-  /* background: v-bind("'url(' + cssConfig.buttonBg + ')'") no-repeat; */
-  background-size: 100% ;
+  background: v-bind("'url(' + cssConfig.startImage + ')'") no-repeat;
+  background-size: 100%;
 }
 .content-he {
-  margin-top: -33%;
-  position: relative;
-  width: 120%;
-  height: 45%;
-  display: flex;
-  justify-content: space-between;
-  transform: scale(0.6);
+    margin-top: 5.3rem;
+    position: relative;
+    width: 135%;
+    height: 420px;
+    display: flex;
+    justify-content: space-between;
+    transform: scale(0.6);
 }
 .content-hidden{
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 60%;
+  height: 100%;
   overflow: hidden;
 
 }
@@ -262,27 +270,41 @@ export default {
   
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + cssConfig.bgItemImage + ')'") no-repeat;
+  background: v-bind("'url(' + cssConfig.bgItemImage + ')'") ;
   background-position-x: center;
   background-position-y: -0px;
+  background-repeat-x: no-repeat;
 }
 
 .modal{
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  width: 80vw;
-  height: 40vh;
+  width: 100vw;
+  height: 100vh;
   z-index: 9999;
-  /* background: v-bind("'url(' + cssConfig.bgImage + ')'") no-repeat; */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* background: v-bind("'url(' + cssConfig.dialog + ')'") no-repeat; */
   /* background-size: 100%; */
+}
+.model-star{
+    position: absolute;
+    width: 50%;
 }
 .model-img{
   width: 100%;
-  height: 100%;
 
+}
+
+.start-bg{
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+.start-bg img{
+    width: 100%;
 }
 </style>

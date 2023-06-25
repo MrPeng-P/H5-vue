@@ -4,15 +4,44 @@
       <img :src="stateData.prize_img" alt="" />
     </div>
     <div class="dial-run" @click="run">
-      <div>点击抽奖</div>
-      <p>10超级币/次</p>
+      <img :src="objImg.prizeIndex" alt="" />
     </div>
     <div class="dial-mork-wrap" @touchmove.prevent.stop v-if="isrun"></div>
     <!-- 抽奖进行中，禁用页面所有操作 z-index: 99; -->
   </div>
+  <div>
+    <img class="start" @click="run" :src="objImg.start" alt="" />
+  </div>
+  <div>
+    <img class="start-result" :src="objImg.playResult" alt="" />
+  </div>
+  <Teleport to="body">
+      <div  v-if="open" class="modal" @click="openDialog">
+        <!-- 12312 -->
+        <div class="model-img">
+          <img  class="model-bg" :src="objImg.dialog" alt="">
+          <img  class="model-item" :src="dialImg.dialImg.img" alt="">
+        </div>
+        <div class="model-txt">Congratulations on winning： {{  dialImg.dialImg.coin}}</div>
+      </div>
+   
+    </Teleport>
+
 </template>
 <script>
 import { reactive, ref, computed } from "vue";
+import prizeIndex from "@/assets/dial/prizeIndex.png";
+import start from "@/assets/dial/play.png";
+import playResult from "@/assets/dial/playResult.png";
+import dialog from "@/assets/dial/dialog.png";
+import J1 from "@/assets/dial/J1.png";
+import J2 from "@/assets/dial/J2.png";
+import J3 from "@/assets/dial/J3.png";
+import J4 from "@/assets/dial/J4.png";
+import J5 from "@/assets/dial/J5.png";
+import J6 from "@/assets/dial/J6.png";
+import J7 from "@/assets/dial/J7.png";
+import J8 from "@/assets/dial/J8.png";
 
 export default {
   props: {
@@ -30,46 +59,75 @@ export default {
   setup(props, content) {
     const { emit } = content;
     let isrun = ref(false);
-    const rotateItem=360/8 //每一项角度
+    const rotateItem = 360 / 8; //每一项角度
+    let open=ref(false)
     let rotateAngle = ref(0);
+    const objImg = reactive({
+      prizeIndex,
+      start,
+      playResult,
+      dialog
+    });
+    
     let config = reactive({
       duration: 5000, // 总旋转时间 ms级
-      circle: 5+parseInt(Math.ceil(Math.random() * 100))/100, // 旋转圈数
+      circle: 5 + parseInt(Math.ceil(Math.random() * 100)) / 100, // 旋转圈数
       mode: "ease-in-out", // 由快到慢 惯性效果都省了
+
     });
-    let dialList=[{
-      name:'积分10',
-      deg:1,
-      coin:10
-    },{
-      name:'积分20',
-      deg:2,
-      coin:20
-    },{
-      name:'积分30',
-      deg:3,
-      coin:30
-    },{
-      name:'积分40',
-      deg:4,
-      coin:40
-    },{
-      name:'积分50',
-      deg:5,
-      coin:50
-    },{
-      name:'积分60',
-      deg:6,
-      coin:60
-    },{
-      name:'积分70',
-      deg:7,
-      coin:70
-    },{
-      name:'积分80',
-      deg:8,
-      coin:80
-    }]
+    let dialImg=reactive({
+      dialImg:{}
+    })
+    let dialList = [
+      {
+        name: "2万",
+        deg: 1,
+        coin: 20000,
+        img:J6
+      },
+      {
+        name: "5千",
+        deg: 2,
+        coin: 5000,
+        img:J1
+      },
+      {
+        name: "2千",
+        deg: 3,
+        coin: 2000,
+        img:J3
+      },
+      {
+        name: "3万",
+        deg: 4,
+        coin: 30000,
+        img:J5
+      },
+      {
+        name: "1千",
+        deg: 5,
+        coin: 1000,
+        img:J7
+      },
+      {
+        name: "1万",
+        deg: 6,
+        coin: 10000,
+        img:J8
+      },
+      {
+        name: "1万",
+        deg: 7,
+        coin: 10000,
+        img:J2
+      },
+      {
+        name: "3千",
+        deg: 8,
+        coin: 3000,
+        img:J4
+      },
+    ];
     let cricleAdd = ref(1);
     let drawIndex = ref(0);
     // 计算属性
@@ -79,23 +137,26 @@ export default {
         -webkit-transition: transform ${_c.duration}ms ${_c.mode};
         transition: transform ${_c.duration}ms ${_c.mode};
         -webkit-transform: rotate(${rotateAngle.value}deg);
-            transform: rotate(${rotateAngle.value}deg);`;
+            transform: rotate(${rotateAngle.value-22.5}deg);`;
     });
     const allMethods = {
+      openDialog:()=>{
+        open.value=false
+      },
       async run() {
-        if (props.stateData.coin < 10) {
+        if (props.stateData.coin < 1000) {
           console.log("超级币不足");
           return;
         }
         if (isrun.value) return;
-        config.circle=5+parseInt(Math.ceil(Math.random() * 100))/100
+        config.circle = 5 + parseInt(Math.ceil(Math.random() * 100)) / 100;
         // const data = await this.goDraw()
         // 可以作为弹窗等信息展示
         emit("draw_fin", "start");
         //更新积分
-        emit("changeCoin",{
-          coin:props.stateData.coin-10
-        })
+        emit("changeCoin", {
+          coin: props.stateData.coin - 1000,
+        });
         // this.$set(props.stateData, "coin", 0); // 更新数据，此处仅为示例，推荐使用 draw_fin方法的 start/fin 进行相应数据更新
         isrun.value = true;
         rotateAngle.value =
@@ -104,15 +165,26 @@ export default {
         // this.config.circle * 360 * this.cricleAdd 顺时针总圈数/累积总圈数
         // 22.5 + this.drawIndex * 45 ===> (奖品位置 === this.drawIndex * 45) (指针中间位置 === 22.5)
         //旋转角度
-        const rotates=rotateAngle.value%360
-        
-       const dialItem= dialList.filter((item)=>{
-          return rotates/rotateItem<item.deg&&rotates/rotateItem>item.deg-1
-        })
-        console.log('%c ..........dialItem.........','color:#31ef0e','恭喜中奖：'+dialItem[0].name)
+        const rotates = rotateAngle.value % 360;
+
+        const dialItem = dialList.filter((item) => {
+          return (
+            rotates / rotateItem < item.deg &&
+            rotates / rotateItem > item.deg - 1
+          );
+        });
+        console.log(
+          "%c ..........dialItem.........",
+          "color:#31ef0e",
+          "恭喜中奖：" + dialItem[0].name
+        );
+        dialImg.dialImg={...dialItem[0]}
         cricleAdd.value++;
         setTimeout(() => {
-          emit("draw_fin", "fin");
+          emit("changeCoin", {
+          coin: props.stateData.coin +dialItem[0].coin  ,
+        });
+        open.value=true
           isrun.value = false;
           // rotateAngle.value=0
         }, config.duration);
@@ -136,6 +208,9 @@ export default {
       drawIndex,
       ...allMethods,
       rotateStyle,
+      objImg,
+      open,
+      dialImg
     };
   },
 };
@@ -154,9 +229,11 @@ export default {
   width: 100%;
   height: 100%;
   position: relative;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 }
-
+.dial-bg{
+  transform: rotate(23deg)
+}
 .dial-animate-wrap .dial-bg img {
   width: 100%;
   height: 100%;
@@ -165,9 +242,13 @@ export default {
 .dial-animate-wrap .dial-run {
   width: 3rem;
   height: 3rem;
-  background: url("../dial/dial-center-icon.png") no-repeat;
+  /* background: v-bind("'url(' + objImg.prizeIndex + ')'") no-repeat; */
 
-  background-size: contain;
+  /* background-size: contain; */
+  /* background-position: center -20px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   left: 0;
   right: 0;
@@ -175,6 +256,11 @@ export default {
   bottom: 0;
   margin: auto;
   text-align: center;
+}
+
+.dial-animate-wrap .dial-run img {
+  margin-top: -65%;
+  width: 37%;
 }
 
 .dial-animate-wrap .dial-run div {
@@ -191,5 +277,52 @@ export default {
   font-weight: bold;
   color: #834f36;
   line-height: 0.2rem;
+}
+.start {
+  margin: 10vh auto 0;
+  width: 130px;
+}
+
+.start-result{
+  margin: 10px auto 0;
+  width: 100px;
+}
+
+.modal{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  color: #fff;
+  font-size: 16px;
+  /* background: v-bind("'url(' + cssConfig.bgImage + ')'") no-repeat; */
+  /* background-size: 100%; */
+}
+.model-img{
+  position: relative;
+  width: 100%;
+
+ 
+}
+.model-bg{
+  margin: 0 auto;
+  width: 85%;
+}
+.model-item{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+transform: translate(-50%,-50%);
+width: 70%;
+}
+
+.model-txt{
+  margin-top: -10px;
 }
 </style>

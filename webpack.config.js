@@ -21,7 +21,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/images-all/[hash][ext]",
+          filename: "assets/images-game/[hash][ext]",
         },
       },
     ],
@@ -33,7 +33,7 @@ module.exports = {
     },
   },
   output: {
-    filename: "assets/inAjs/all[hash].js",
+    filename: "assets/dialJs/game[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [
