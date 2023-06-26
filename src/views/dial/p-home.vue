@@ -1,9 +1,9 @@
 <script setup>
 import { useRouter, useRoute } from "vue-router";
-import bgBox from "@/assets/dial/back-1.jpg";
+import bgBox from "@/assets/dial2/back-1.jpg";
 
 
-import start from "@/assets/dial/play.png";
+import start from "@/assets/dial2/play.png";
 
 const imageObj = {
   bgBox,
@@ -43,7 +43,7 @@ const { goDetail } = routeAll();
   
 }
 .start{
-  margin-top: -60%;
+  /* margin-top: -60%; */
   width: 150px;
 }
 

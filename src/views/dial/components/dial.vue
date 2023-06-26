@@ -8,6 +8,8 @@
     </div>
     <div class="dial-mork-wrap" @touchmove.prevent.stop v-if="isrun"></div>
     <!-- 抽奖进行中，禁用页面所有操作 z-index: 99; -->
+  <img class="box-liwu" :src="objImg.liwu" alt="">
+
   </div>
   <div>
     <img class="start" @click="run" :src="objImg.start" alt="" />
@@ -15,6 +17,7 @@
   <div>
     <img class="start-result" :src="objImg.playResult" alt="" />
   </div>
+  
   <Teleport to="body">
       <div  v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
@@ -30,18 +33,19 @@
 </template>
 <script>
 import { reactive, ref, computed } from "vue";
-import prizeIndex from "@/assets/dial/prizeIndex.png";
-import start from "@/assets/dial/play.png";
-import playResult from "@/assets/dial/playResult.png";
-import dialog from "@/assets/dial/dialog.png";
-import J1 from "@/assets/dial/J1.png";
-import J2 from "@/assets/dial/J2.png";
-import J3 from "@/assets/dial/J3.png";
-import J4 from "@/assets/dial/J4.png";
-import J5 from "@/assets/dial/J5.png";
-import J6 from "@/assets/dial/J6.png";
-import J7 from "@/assets/dial/J7.png";
-import J8 from "@/assets/dial/J8.png";
+import prizeIndex from "@/assets/dial2/prizeIndex.png";
+import start from "@/assets/dial2/play.png";
+import playResult from "@/assets/dial2/playResult.png";
+import dialog from "@/assets/dial2/dialog.png";
+import J1 from "@/assets/dial2/w1.png";
+import J2 from "@/assets/dial2/w2.png";
+import J3 from "@/assets/dial2/w3.png";
+import J4 from "@/assets/dial2/w4.png";
+import J5 from "@/assets/dial2/w5.png";
+import J6 from "@/assets/dial2/w6.png";
+import J7 from "@/assets/dial2/w7.png";
+import J8 from "@/assets/dial2/w8.png";
+import liwu from "@/assets/dial2/liwu.png";
 
 export default {
   props: {
@@ -66,7 +70,8 @@ export default {
       prizeIndex,
       start,
       playResult,
-      dialog
+      dialog,
+      liwu
     });
     
     let config = reactive({
@@ -82,49 +87,49 @@ export default {
       {
         name: "2万",
         deg: 1,
-        coin: 20000,
+        coin: 8888,
         img:J6
       },
       {
         name: "5千",
         deg: 2,
-        coin: 5000,
+        coin: 5200,
         img:J1
       },
       {
         name: "2千",
         deg: 3,
-        coin: 2000,
+        coin: 6666,
         img:J3
       },
       {
         name: "3万",
         deg: 4,
-        coin: 30000,
+        coin: 13140,
         img:J5
       },
       {
         name: "1千",
         deg: 5,
-        coin: 1000,
+        coin: 80000,
         img:J7
       },
       {
         name: "1万",
         deg: 6,
-        coin: 10000,
+        coin: 9999,
         img:J8
       },
       {
         name: "1万",
         deg: 7,
-        coin: 10000,
+        coin: 22222,
         img:J2
       },
       {
         name: "3千",
         deg: 8,
-        coin: 3000,
+        coin: 8000,
         img:J4
       },
     ];
@@ -216,6 +221,13 @@ export default {
 };
 </script>
 <style scoped>
+
+.box-liwu{
+  position: absolute;
+    width: 154px;
+    bottom: -73px;
+    
+}
 .dial-mork-wrap {
   position: fixed;
   left: 0;
@@ -240,8 +252,8 @@ export default {
 }
 
 .dial-animate-wrap .dial-run {
-  width: 3rem;
-  height: 3rem;
+  width: 5rem;
+  height: 5rem;
   /* background: v-bind("'url(' + objImg.prizeIndex + ')'") no-repeat; */
 
   /* background-size: contain; */
@@ -252,7 +264,7 @@ export default {
   position: absolute;
   left: 0;
   right: 0;
-  top: 0;
+  top: 28%;
   bottom: 0;
   margin: auto;
   text-align: center;
@@ -291,7 +303,7 @@ export default {
 .modal{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   position: absolute;
 
@@ -305,6 +317,7 @@ export default {
   /* background-size: 100%; */
 }
 .model-img{
+  margin-top: 120px;
   position: relative;
   width: 100%;
 
@@ -319,7 +332,7 @@ export default {
   top: 50%;
   left: 50%;
 transform: translate(-50%,-50%);
-width: 70%;
+width: 45%;
 }
 
 .model-txt{

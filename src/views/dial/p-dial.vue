@@ -18,10 +18,10 @@ import { reactive } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
 import dialWrap from "./components/dial.vue";
-import bgBack from "@/assets/dial/back-2.jpg";
-import imgBack from "@/assets/dial/back.png";
-import prizeImg from "@/assets/dial/bg-box.png";
-import headBox from "@/assets/dial/head-box.png";
+import bgBack from "@/assets/dial2/back-2.jpg";
+import imgBack from "@/assets/dial2/back.png";
+import prizeImg from "@/assets/dial2/bg-box.png";
+import headBox from "@/assets/dial2/head-box.png";
 
 export default {
   components: { dialWrap },
@@ -65,10 +65,11 @@ export default {
 }
 header{
   display: flex;
-  margin-top: 20px;
+  margin-top: 76px;
 
 }
 .back{
+  margin-left: 50px;
   padding-left: 10px;
   width: 20%;
 
@@ -77,19 +78,22 @@ header{
   width:70%;
 }
 .box{
-  margin-bottom: 20px;
-  display: flex;
+  margin-left:10px;
+    display: flex;
     justify-content: center;
-    align-items: center;
-    width: 80%;
-    /* height: 80px; */
+    line-height: 18px;
+    /* align-items: center; */
+    
+    width: 45%;
+    height: 33px;
     z-index: 999;
     color: #fff;
-  
     font-size: 16px;
  
+    padding-right: 20px;
   background: v-bind("'url(' + imageObj.headBox + ')'") no-repeat;
-  background-size: 100%;
+  background-position: center;
+  background-size: 80%;
 
 }
 
