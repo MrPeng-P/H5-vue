@@ -1,6 +1,6 @@
 <script setup>
 import { useRouter, useRoute } from "vue-router";
-import bgBox from "@/assets/flop/back-1.jpg";
+import bgBox from "@/assets/flop/bg-1.jpg";
 
 
 import start from "@/assets/flop/play.png";

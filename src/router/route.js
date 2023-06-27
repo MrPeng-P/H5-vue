@@ -26,30 +26,30 @@ import {
 //     component: () => import('@/views/p-roate/p-over.vue'),
 // }]
 
-export const routes = [
-  {
-    path: "/",
-    name: "home",
-    component: () => import("@/views/dial/p-home.vue"),
-  },
-  {
-    path: "/dial",
-    name: "dial",
-    component: () => import("@/views/dial/p-dial.vue"),
-  },
-];
+// export const routes = [
+//   {
+//     path: "/",
+//     name: "home",
+//     component: () => import("@/views/dial/p-home.vue"),
+//   },
+//   {
+//     path: "/dial",
+//     name: "dial",
+//     component: () => import("@/views/dial/p-dial.vue"),
+//   },
+// ];
 
-// export const routes = [{
-//     path: '/',
-//     name: 'home',
-//     component: () => import('@/views/flop/p-home.vue'),
-// },
-// {
-//     path: '/flop',
-//     name: 'flop',
-//     component: () => import('@/views/flop/p-flop.vue'),
-// }
-// ]
+export const routes = [{
+    path: '/',
+    name: 'home',
+    component: () => import('@/views/flop/p-home.vue'),
+},
+{
+    path: '/flop',
+    name: 'flop',
+    component: () => import('@/views/flop/p-flop.vue'),
+}
+]
 
 const routerConfig = createRouter({
   // history: createWebHistory(), // ===>mode:"history"

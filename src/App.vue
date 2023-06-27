@@ -1,12 +1,32 @@
-<script setup>
+<script >
 // import pGame from './components/p-game.vue'
 // import pRoate from './views/p-roate/p-roate.vue'
+import { ref, nextTick, provide } from "vue";
+export default {
+  name: "App",
+  setup() {
+    // 局部组件刷新
+    const isRouterAlive = ref(true);
+    const reload = () => {
+      isRouterAlive.value = false;
+      nextTick(() => {
+        isRouterAlive.value = true;
+      });
+    };
+    provide("reload", reload);
+
+    return {
+      isRouterAlive,
+    };
+  },
+};
+
 
 </script>
 
 <template>
   <!-- <pGame /> -->
-  <router-view></router-view>
+  <router-view  v-if="isRouterAlive"></router-view>
   <!-- <pRoate></pRoate> -->
 </template>
 
