@@ -1,13 +1,13 @@
 <script setup>
 import { useRouter, useRoute } from "vue-router";
-import bgBox from "@/assets/flop/bg-1.jpg";
+import bgBox from "@/assets/flop2/bg-1.jpg";
 
 
-import start from "@/assets/flop/play.png";
+import begin from "@/assets/flop2/play.png";
 
 const imageObj = {
   bgBox,
-  start
+  begin
 };
 function routeAll() {
   const router = new useRouter();
@@ -22,14 +22,14 @@ const { goDetail } = routeAll();
 </script>
 
 <template>
-  <div class="container">
+  <div class="content">
     <div >
-      <img class="start" @click="goDetail()" :src="imageObj.start" alt="">
+      <img class="begin" @click="goDetail()" :src="imageObj.begin" alt="">
     </div>
   </div>
 </template>
 <style scoped>
-.container {
+.content {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,7 +39,7 @@ const { goDetail } = routeAll();
   background-size: cover;
   background-position: 45%;
 }
-.start{
+.begin{
   width: 150px;
 }
 

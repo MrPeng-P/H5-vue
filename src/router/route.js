@@ -4,14 +4,14 @@ import {
   createWebHistory,
   RouteRecordRaw,
 } from "vue-router";
-// export const routes = [
-//     {
-//       path: "/",
-//       name: "home",
-//       component: () => import("@/views/p-games.vue"),
-//     },
+export const routes = [
+    {
+      path: "/",
+      name: "home",
+      component: () => import("@/views/p-games.vue"),
+    },
    
-//   ];
+  ];
 // export const routes = [{
 //     path: '/',
 //     name: 'home',
@@ -39,17 +39,17 @@ import {
 //   },
 // ];
 
-export const routes = [{
-    path: '/',
-    name: 'home',
-    component: () => import('@/views/flop/p-home.vue'),
-},
-{
-    path: '/flop',
-    name: 'flop',
-    component: () => import('@/views/flop/p-flop.vue'),
-}
-]
+// export const routes = [{
+//     path: '/',
+//     name: 'home',
+//     component: () => import('@/views/flop/p-home.vue'),
+// },
+// {
+//     path: '/flop',
+//     name: 'flop',
+//     component: () => import('@/views/flop/p-flop.vue'),
+// }
+// ]
 
 const routerConfig = createRouter({
   // history: createWebHistory(), // ===>mode:"history"

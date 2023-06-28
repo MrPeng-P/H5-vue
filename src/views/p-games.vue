@@ -1,29 +1,27 @@
 <script>
 
-import dialog from "../assets/slot/dialog.png";
-import startImage from "../assets/slot/start.png";
-import bgImage from "../assets/slot/bg-2.jpg";
-import mainImage from "../assets/slot/bg-3.png";
-import bgItemImage from "../assets/slot/change.png";
-import contentBg from "../assets/slot/bg-4.png";
-import gpBg from "../assets/slot/back.png";
-import star from "../assets/slot/star.gif";
+import diaimage from "../assets/slot2/dialog.png";
+import playPic from "../assets/slot2/start.png";
+import bgPic from "../assets/slot2/bg-2.jpg";
+import bgAnyPic from "../assets/slot2/change.png";
+import boxBg from "../assets/slot2/bg-4.png";
+import backPic from "../assets/slot2/back.png";
+import star from "../assets/slot2/star.gif";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
   setup() {
     const className = "container";
     const cssConfig = reactive({
-      dialog,
-      bgItemImage,
-      startImage,
-      contentBg,
-      bgImage,
-      gpBg,
-      mainImage,
+      diaimage,
+      bgAnyPic,
+      playPic,
+      boxBg,
+      bgPic,
+      backPic,
       star
     });
-    const ItemList = [
+    const UseList = [
       {
         name: "item1",
         size: 11,
@@ -53,11 +51,11 @@ export default {
         }
         buttonStatus.value=false
         allMethods.clear();
-        const boxLists = ItemList.map((item) => {
+        const boxLists = UseList.map((item) => {
           return document.getElementById(item.name);
         });
-        const content = document.getElementById("content-he");
-        const box2 = document.getElementById("content");
+        const content = document.getElementById("boxa-he");
+        const box2 = document.getElementById("boxa");
         const coords = { x: 0, y: 0 }; // Start at (0, 0)
         const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to({ x: 0, y: (980 * content.clientHeight) / box2.clientHeight }, 100) // Move to (300, 200) in 1 second.
@@ -147,30 +145,30 @@ export default {
       open,
       start,
       cssConfig,
-      ItemList,
+      UseList,
       ...allMethods,
     };
   },
 };
 </script>
 <template>
-  <div v-show="!start" class="head-content">
+  <div v-show="!start" class="head-boxa">
     <div class="head-back" @click="close"></div>
   </div>
   <div :class="className">
     <!-- <img src="../assets/slot/bian.gif" alt=""> -->
-    <div v-if="start" class="start-bg"><img :src="cssConfig.mainImage" alt=""></div>
+    <!-- <div v-if="start" class="start-bg"><img :src="cssConfig.mainImage" alt=""></div> -->
     <div v-if="start" class="start" @click="start=false">
     
     </div>
 
-    <div v-else class="content" id="content">
-      <div class="content-he" id="content-he">
-        <div class="content-hidden">
+    <div v-else class="boxa" id="boxa">
+      <div class="boxa-he" id="boxa-he">
+        <div class="boxa-hidden">
           <div
-          class="content-item"
+          class="boxa-item"
           :id="item.name"
-          v-for="(item, index) in ItemList"
+          v-for="(item, index) in UseList"
         ></div>
         </div>
       </div>
@@ -181,14 +179,14 @@ export default {
       <div  v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
         <img class="model-star" :src="cssConfig.star" alt="">
-        <img  class="model-img" :src="cssConfig.dialog" alt="">
+        <img  class="model-img" :src="cssConfig.diaimage" alt="">
       </div>
     </Teleport>
   </div>
 </template>
 
 <style scoped>
-.head-content{
+.head-boxa{
   padding:20px 30px;
   position: fixed;
   z-index: 99;
@@ -200,20 +198,20 @@ export default {
 .head-back{
   width: 50px;
   height: 50px;
-  background: v-bind("'url(' + cssConfig.gpBg + ')'") no-repeat;
+  background: v-bind("'url(' + cssConfig.backPic + ')'") no-repeat;
   background-size: 100%;
   z-index: 999;
 }
 .start{
     width: 170px;
     height: 80px;
-  background: v-bind("'url(' + cssConfig.startImage + ')'") no-repeat;
+  background: v-bind("'url(' + cssConfig.playPic + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 
 }
 .container {
-  background: v-bind("'url(' + cssConfig.bgImage + ')'") no-repeat;
+  background: v-bind("'url(' + cssConfig.bgPic + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -223,7 +221,7 @@ export default {
   align-items: center;
 }
 
-.content {
+.boxa {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -232,9 +230,9 @@ export default {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background: v-bind("'url(' + cssConfig.contentBg + ')'") no-repeat;
-  background-size: 120%;
-  background-position: center 0;
+  background: v-bind("'url(' + cssConfig.boxBg + ')'") no-repeat;
+  background-size: 100%;
+    background-position: center 90px;
   color: #fff;
   font-weight: 600;
   font-size: 26;
@@ -245,11 +243,11 @@ export default {
     width: 159px;
     height: 80px;
   z-index: 999;
-  background: v-bind("'url(' + cssConfig.startImage + ')'") no-repeat;
+  background: v-bind("'url(' + cssConfig.playPic + ')'") no-repeat;
   background-size: 100%;
 }
-.content-he {
-    margin-top: 5.3rem;
+.boxa-he {
+    margin-top: 2rem;
     position: relative;
     width: 135%;
     height: 420px;
@@ -257,7 +255,7 @@ export default {
     justify-content: space-between;
     transform: scale(0.6);
 }
-.content-hidden{
+.boxa-hidden{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -266,28 +264,29 @@ export default {
   overflow: hidden;
 
 }
-.content-item {
+.boxa-item {
   
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + cssConfig.bgItemImage + ')'") ;
+  background: v-bind("'url(' + cssConfig.bgAnyPic + ')'") ;
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
 }
 
 .modal{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100vw;
-  height: 100vh;
-  z-index: 9999;
-  background-color: rgba(0, 0, 0, 0.5);
-  /* background: v-bind("'url(' + cssConfig.dialog + ')'") no-repeat; */
+  padding-top: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.5);
+  /* background: v-bind("'url(' + cssConfig.diaimage + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star{
@@ -295,7 +294,7 @@ export default {
     width: 50%;
 }
 .model-img{
-  width: 100%;
+  width: 80%;
 
 }
 
