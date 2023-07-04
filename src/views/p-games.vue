@@ -1,25 +1,25 @@
 <script>
 
-import dialogcontentimage from "../assets/slot4/dialog-content.png";
-import beginImage from "../assets/slot4/start.png";
-import backGroundImage from "../assets/slot4/backGround-1.jpg";
-import listAnyImage from "../assets/slot4/listAny.png";
-import bgAnyImage from "../assets/slot4/bg-4.png";
-import backImage from "../assets/slot4/return.png";
-// import star from "../assets/slot4/star.gif";
-// import football from "../assets/slot4/football.png";
+import congratulateimage from "../assets/slot5/Congratulate.png";
+import startImage from "../assets/slot5/start.png";
+import bgcImage from "../assets/slot5/backGround-1.jpg";
+import listImage from "../assets/slot5/listAny.png";
+import bgAImage from "../assets/slot5/bg-4.png";
+import backDTImage from "../assets/slot5/return.png";
+// import star from "../assets/slot5/star.gif";
+// import football from "../assets/slot5/football.png";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
   setup() {
     const className = "container";
     const cssConfig = reactive({
-      dialogcontentimage,
-      listAnyImage,
-      beginImage,
-      bgAnyImage,
-      backGroundImage,
-      backImage,
+      congratulateimage,
+      listImage,
+      startImage,
+      bgAImage,
+      bgcImage,
+      backDTImage,
     });
     const PSlotList = [
       {
@@ -34,7 +34,10 @@ export default {
         name: "item3",
         size: 11,
       },
-    
+      {
+        name: "item4",
+        size: 11,
+      },
     ];
       console.log('%c ..........111.........','color:#31ef0e',111)
     let timeOhter = 0;
@@ -55,8 +58,8 @@ export default {
         const boxLists = PSlotList.map((item) => {
           return document.getElementById(item.name);
         });
-        const content = document.getElementById("total-he");
-        const box2 = document.getElementById("total");
+        const content = document.getElementById("nump-he");
+        const box2 = document.getElementById("nump");
         const coords = { x: 0, y: 0 }; // Start at (0, 0)
         const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to({ x: 0, y: (1120 * content.clientHeight) / box2.clientHeight }, 100) // Move to (300, 200) in 1 second.
@@ -75,7 +78,12 @@ export default {
                 -coords.y + "px"
               );
             }
-         
+            if (timeOhter > 3000 && timeOhter <= 6000) {
+              boxLists[3].style.setProperty(
+                "background-position-y",
+                -coords.y + "px"
+              );
+            }
 
             if (timeOhter > 0 && timeOhter <= 3000) {
               boxLists[0].style.setProperty(
@@ -101,7 +109,7 @@ export default {
         let i = 0;
         let timeany = setInterval(() => {
           i++;
-          if (i > 5) {
+          if (i > 6) {
             open.value = true;
           
             tween.stop();
@@ -121,6 +129,12 @@ export default {
           }
           if (i == 5) {
             boxLists[2].style.setProperty(
+              "background-position-y",
+              -0-parseInt(Math.ceil(Math.random() * 1120) / 140) * 140 + "px"
+            );
+          }
+          if (i == 6) {
+            boxLists[3].style.setProperty(
               "background-position-y",
               -0-parseInt(Math.ceil(Math.random() * 1120) / 140) * 140 + "px"
             );
@@ -155,8 +169,8 @@ export default {
 };
 </script>
 <template>
-  <div v-show="!start" class="head-total">
-    <div class="head-back" @click="close"></div>
+  <div v-show="!start" class="topb-nump">
+    <div class="topb-back" @click="close"></div>
   </div>
   <div :class="className">
     <!-- <img src="../assets/slot/bian.gif" alt=""> -->
@@ -165,14 +179,14 @@ export default {
     
     </div>
 
-    <div v-else class="total" id="total">
+    <div v-else class="nump" id="nump">
 
-      <div class="total-he" id="total-he">
+      <div class="nump-he" id="nump-he">
 
-        <div class="total-hidden">
+        <div class="nump-hidden">
           
           <div
-          class="total-item"
+          class="nump-item"
           :id="item.name"
           v-for="(item, index) in PSlotList"
         ></div>
@@ -185,7 +199,7 @@ export default {
       <div  v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
         <!-- <img class="model-star" :src="cssConfig.star" alt=""> -->
-        <img  class="model-img" :src="cssConfig.dialogcontentimage" alt="">
+        <img  class="model-img" :src="cssConfig.congratulateimage" alt="">
       </div>
     </Teleport>
   </div>
@@ -198,7 +212,7 @@ export default {
 
   width: 280px;
 }
-.head-total{
+.topb-nump{
   padding:20px 30px;
   position: fixed;
   z-index: 99;
@@ -207,24 +221,25 @@ export default {
   height: 60px;
   
 }
-.head-back{
-  width: 50px;
-  height: 50px;
-  background: v-bind("'url(' + cssConfig.backImage + ')'") no-repeat;
+.topb-back{
+  margin-top: 30px;
+  width: 40px;
+    height: 40px;
+  background: v-bind("'url(' + cssConfig.backDTImage + ')'") no-repeat;
   background-size: 100%;
   z-index: 999;
 }
 .start{
   margin-top: -30%;
-    width: 230px;
+  width: 160px;
     height: 80px;
-  background: v-bind("'url(' + cssConfig.beginImage + ')'") no-repeat;
+  background: v-bind("'url(' + cssConfig.startImage + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 
 }
 .container {
-  background: v-bind("'url(' + cssConfig.backGroundImage + ')'") no-repeat;
+  background: v-bind("'url(' + cssConfig.bgcImage + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -234,7 +249,7 @@ export default {
   align-items: center;
 }
 
-.total {
+.nump {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -243,7 +258,7 @@ export default {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background: v-bind("'url(' + cssConfig.bgAnyImage + ')'") no-repeat;
+  background: v-bind("'url(' + cssConfig.bgAImage + ')'") no-repeat;
   background-size: 100%;
   background-position: center 100px;
   color: #fff;
@@ -253,23 +268,23 @@ export default {
 .buttons {
   /* position: absolute;
     top: 66%; */
-    width: 200px;
+    margin-top: -60px;
+    width: 150px;
     height: 80px;
   z-index: 999;
-  background: v-bind("'url(' + cssConfig.beginImage + ')'") no-repeat;
+  background: v-bind("'url(' + cssConfig.startImage + ')'") no-repeat;
   background-size: 100%;
 }
-.total-he {
-    position: relative;
-    margin-top: 22%;
-    width: 150%;
-    height: 420px;
+.nump-he {
+  position: relative;
+    margin-top: 9%;
+    width: 173%;
+    height: 138vw;
     display: flex;
     justify-content: space-between;
- 
-    transform: scale(0.6);
+    transform: scale(0.44);
 }
-.total-hidden{
+.nump-hidden{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -278,11 +293,11 @@ export default {
   overflow: hidden;
 
 }
-.total-item {
+.nump-item {
   
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + cssConfig.listAnyImage + ')'") ;
+  background: v-bind("'url(' + cssConfig.listImage + ')'") ;
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
@@ -300,7 +315,7 @@ export default {
     height: 100vh;
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.5);
-  /* background: v-bind("'url(' + cssConfig.dialogcontentimage + ')'") no-repeat; */
+  /* background: v-bind("'url(' + cssConfig.congratulateimage + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star{
