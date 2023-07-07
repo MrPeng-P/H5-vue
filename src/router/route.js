@@ -7,7 +7,7 @@ import {
 export const routes = [
     {
       path: "/",
-      name: "home",
+      name: "sea",
       component: () => import("@/views/p-games.vue"),
     },
    

@@ -1,13 +1,13 @@
 <script>
 
-import congratulatetree from "../assets/slot6/CongratulateTree.png";
-import startTree from "../assets/slot6/startTree.png";
-import backGroundTree from "../assets/slot6/backGroundTree.jpg";
-import listImage from "../assets/slot6/listAnyTree.png";
-import bgTree from "../assets/slot6/bg-Tree.png";
-import returnTree from "../assets/slot6/returnTree.png";
-// import star from "../assets/slot6/star.gif";
-// import football from "../assets/slot6/football.png";
+import congratulatetree from "../assets/slot7/dialogShen.png";
+import startTree from "../assets/slot7/buttonShen.png";
+import backGroundTree from "../assets/slot7/bgshen.jpg";
+import listImage from "../assets/slot7/listShen.png";
+import bgTree from "../assets/slot7/bgItemShen.png";
+import returnTree from "../assets/slot7/backShen.png";
+import star from "../assets/slot7/starShen.gif";
+// import football from "../assets/slot7/football.png";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
@@ -20,6 +20,7 @@ export default {
       bgTree,
       backGroundTree,
       returnTree,
+      star
     });
     const TreeList = [
       {
@@ -38,10 +39,7 @@ export default {
         name: "item4",
         size: 11,
       },
-      {
-        name: "item5",
-        size: 11,
-      },
+     
     ];
     let timeOhter = 0;
     let id;
@@ -53,7 +51,7 @@ export default {
         if(open.value){
           return
         }
-        if(!buttonStatus){
+        if(!buttonStatus.value){
           return
         }
         buttonStatus.value=false
@@ -87,12 +85,7 @@ export default {
                 -coords.y + "px"
               );
             }
-            if (timeOhter > 4000 && timeOhter <= 7000) {
-              boxLists[4].style.setProperty(
-                "background-position-y",
-                -coords.y + "px"
-              );
-            }
+         
             if (timeOhter > 0 && timeOhter <= 3000) {
               boxLists[0].style.setProperty(
                 "background-position-y",
@@ -117,7 +110,7 @@ export default {
         let i = 0;
         let timeany = setInterval(() => {
           i++;
-          if (i > 7) {
+          if (i > 6) {
             open.value = true;
           
             tween.stop();
@@ -147,12 +140,7 @@ export default {
               -0-parseInt(Math.ceil(Math.random() * 1120) / 140) * 140 + "px"
             );
           }
-          if (i == 7) {
-            boxLists[4].style.setProperty(
-              "background-position-y",
-              -0-parseInt(Math.ceil(Math.random() * 1120) / 140) * 140 + "px"
-            );
-          }
+       
         
         }, 1000);
       },
@@ -212,7 +200,7 @@ export default {
     <Teleport to="body">
       <div  v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="imgConfig.star" alt=""> -->
+        <img class="model-star" :src="imgConfig.star" alt="">
         <img  class="model-img" :src="imgConfig.congratulatetree" alt="">
       </div>
     </Teleport>
