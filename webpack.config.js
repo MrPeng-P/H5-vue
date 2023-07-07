@@ -3,12 +3,17 @@ const { VueLoaderPlugin } = require("vue-loader");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { DefinePlugin } = require("webpack");
 var JavaScriptObfuscator = require("webpack-obfuscator");
+
+const HtmlMinimizerPlugin = require("html-minimizer-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 module.exports = {
   entry: {
     path: "./src/main.js",
   },
   module: {
+   
     rules: [
+ 
       {
         test: /\.vue$/,
         use: "vue-loader",
@@ -21,9 +26,10 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/imgSea/[hash][ext]",
+          filename: "assets/imgniud/[hash][ext]",
         },
       },
+     
     ],
   },
   resolve: {
@@ -33,7 +39,7 @@ module.exports = {
     },
   },
   output: {
-    filename: "assets/seajs/sea-[hash].js",
+    filename: "assets/niuJs/niud-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [
@@ -106,5 +112,19 @@ module.exports = {
       },
       []
     ),
+    new HtmlMinimizerPlugin({
+      minimizerOptions: {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        removeEmptyAttributes: true,
+        minifyCSS: true,
+        // minifyJS: true,
+      },
+    }),
+   
   ],
+ 
 };
