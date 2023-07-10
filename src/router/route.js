@@ -4,14 +4,14 @@ import {
   createWebHistory,
   RouteRecordRaw,
 } from "vue-router";
-export const routes = [
-    {
-      path: "/",
-      name: "sea",
-      component: () => import("@/views/p-games.vue"),
-    },
+// export const routes = [
+//     {
+//       path: "/",
+//       name: "sea",
+//       component: () => import("@/views/p-games.vue"),
+//     },
    
-  ];
+//   ];
 // export const routes = [{
 //     path: '/',
 //     name: 'home',
@@ -26,18 +26,18 @@ export const routes = [
 //     component: () => import('@/views/p-roate/p-over.vue'),
 // }]
 
-// export const routes = [
-//   {
-//     path: "/",
-//     name: "home",
-//     component: () => import("@/views/dial/p-home.vue"),
-//   },
-//   {
-//     path: "/dial",
-//     name: "dial",
-//     component: () => import("@/views/dial/p-dial.vue"),
-//   },
-// ];
+export const routes = [
+  {
+    path: "/",
+    name: "home",
+    component: () => import("@/views/dial/p-home.vue"),
+  },
+  {
+    path: "/dial",
+    name: "dial",
+    component: () => import("@/views/dial/p-dial.vue"),
+  },
+];
 
 // export const routes = [{
 //     path: '/',

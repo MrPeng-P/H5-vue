@@ -1,28 +1,28 @@
 <script>
 
-import dialogniu from "../assets/slot8/dialogNiu.png";
-import playNiu from "../assets/slot8/playNiu.png";
-import boxNiu from "../assets/slot8/boxNiu.jpg";
-import anyNiu from "../assets/slot8/anyNiu.png";
-import anyBoxNiu from "../assets/slot8/anyBoxNiu.png";
-import backNiu from "../assets/slot8/backNiu.png";
-// import star from "../assets/slot8/starShen.gif";
-// import football from "../assets/slot8/football.png";
+import dialogfei from "../assets/slot9/dialogfei.png";
+import playfei from "../assets/slot9/playfei.png";
+import boxfei from "../assets/slot9/boxfei.jpg";
+import anyfei from "../assets/slot9/changefei.png";
+import anyBoxfei from "../assets/slot9/hefei.png";
+import backfei from "../assets/slot9/backfei.png";
+import star from "../assets/slot9/starfei.gif";
+// import football from "../assets/slot9/football.png";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
   setup() {
     const className = "container";
-    const niuConfig = reactive({
-      dialogniu,
-      anyNiu,
-      playNiu,
-      anyBoxNiu,
-      boxNiu,
-      backNiu,
-      // star
+    const feiConfig = reactive({
+      dialogfei,
+      anyfei,
+      playfei,
+      anyBoxfei,
+      boxfei,
+      backfei,
+      star
     });
-    const NiuList = [
+    const feiList = [
       {
         name: "item1",
         size: 11,
@@ -34,7 +34,11 @@ export default {
       {
         name: "item3",
         size: 11,
+      }, {
+        name: "item4",
+        size: 11,
       },
+     
      
      
     ];
@@ -53,11 +57,11 @@ export default {
         }
         buttonStatus.value=false
         allMethods.clear();
-        const boxLists = NiuList.map((item) => {
+        const boxLists = feiList.map((item) => {
           return document.getElementById(item.name);
         });
-        const content = document.getElementById("niup-he");
-        const box2 = document.getElementById("niup");
+        const content = document.getElementById("feip-he");
+        const box2 = document.getElementById("feip");
         const coords = { x: 0, y: 0 }; // Start at (0, 0)
         const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to({ x: 0, y: (1120 * content.clientHeight) / box2.clientHeight }, 100) // Move to (300, 200) in 1 second.
@@ -77,6 +81,14 @@ export default {
               );
             }
        
+            if (timeOhter > 3000 && timeOhter <= 6000) {
+              boxLists[3].style.setProperty(
+                "background-position-y",
+                -coords.y + "px"
+              );
+            }
+       
+         
          
             if (timeOhter > 0 && timeOhter <= 3000) {
               boxLists[0].style.setProperty(
@@ -102,7 +114,7 @@ export default {
         let i = 0;
         let timeany = setInterval(() => {
           i++;
-          if (i > 5) {
+          if (i > 6) {
             open.value = true;
           
             tween.stop();
@@ -126,7 +138,12 @@ export default {
               -0-parseInt(Math.ceil(Math.random() * 1120) / 140) * 140 + "px"
             );
           }
-         
+          if (i == 6) {
+            boxLists[3].style.setProperty(
+              "background-position-y",
+              -0-parseInt(Math.ceil(Math.random() * 1120) / 140) * 140 + "px"
+            );
+          }
        
         
         }, 1000);
@@ -150,34 +167,34 @@ export default {
       className,
       open,
       start,
-      niuConfig,
-      NiuList,
+      feiConfig,
+      feiList,
       ...allMethods,
     };
   },
 };
 </script>
 <template>
-  <div v-show="!start" class="niud-niup">
-    <div class="niud-back" @click="close"></div>
+  <div v-show="!start" class="feid-feip">
+    <div class="feid-back" @click="close"></div>
   </div>
   <div :class="className">
     <!-- <img src="../assets/slot/bian.gif" alt=""> -->
-    <!-- <div v-if="start" class="start-bg"><img :src="niuConfig.mainImage" alt=""></div> -->
+    <!-- <div v-if="start" class="start-bg"><img :src="feiConfig.mainImage" alt=""></div> -->
     <div v-if="start" class="start" @click="start=false">
     
     </div>
 
-    <div v-else class="niup" id="niup">
+    <div v-else class="feip" id="feip">
 
-      <div class="niup-he" id="niup-he">
+      <div class="feip-he" id="feip-he">
 
-        <div class="niup-hidden">
+        <div class="feip-hidden">
           
           <div
-          class="niup-item"
+          class="feip-item"
           :id="item.name"
-          v-for="(item, index) in NiuList"
+          v-for="(item, index) in feiList"
         ></div>
         </div>
       </div>
@@ -187,8 +204,8 @@ export default {
     <Teleport to="body">
       <div  v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
-        <img class="model-star" :src="niuConfig.star" alt="">
-        <img  class="model-img" :src="niuConfig.dialogniu" alt="">
+        <img class="model-star" :src="feiConfig.star" alt="">
+        <img  class="model-img" :src="feiConfig.dialogfei" alt="">
       </div>
     </Teleport>
   </div>
@@ -201,7 +218,7 @@ export default {
 
   width: 280px;
 }
-.niud-niup{
+.feid-feip{
   padding:20px 15px;
   position: fixed;
   z-index: 99;
@@ -210,11 +227,11 @@ export default {
   height: 60px;
   
 }
-.niud-back{
+.feid-back{
   margin-top: 20px;
     width: 50px;
     height: 50px;
-  background: v-bind("'url(' + niuConfig.backNiu + ')'") no-repeat;
+  background: v-bind("'url(' + feiConfig.backfei + ')'") no-repeat;
   background-size: 100%;
   z-index: 999;
 }
@@ -222,13 +239,13 @@ export default {
   margin-top: -30%;
   width: 160px;
     height: 80px;
-  background: v-bind("'url(' + niuConfig.playNiu + ')'") no-repeat;
+  background: v-bind("'url(' + feiConfig.playfei + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 
 }
 .container {
-  background: v-bind("'url(' + niuConfig.boxNiu + ')'") no-repeat;
+  background: v-bind("'url(' + feiConfig.boxfei + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -238,16 +255,16 @@ export default {
   align-items: center;
 }
 
-.niup {
+.feip {
   position: relative;
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
-  width: 100vw;
+  width: 90vw;
   height: 100vh;
   overflow: hidden;
-  background: v-bind("'url(' + niuConfig.anyBoxNiu + ')'") no-repeat;
+  background: v-bind("'url(' + feiConfig.anyBoxfei + ')'") no-repeat;
   background-size: 100%;
   background-position: center 100px;
   color: #fff;
@@ -257,23 +274,23 @@ export default {
 .buttons {
   /* position: absolute;
     top: 66%; */
-    margin-top: -60px;
+    /* margin-top: -60px; */
     width: 150px;
     height: 80px;
   z-index: 999;
-  background: v-bind("'url(' + niuConfig.playNiu + ')'") no-repeat;
+  background: v-bind("'url(' + feiConfig.playfei + ')'") no-repeat;
   background-size: 100%;
 }
-.niup-he {
+.feip-he {
   position: relative;
-    margin-top: 21%;
-    width: 190%;
+    margin-top: 26%;
+    width: 140%;
     height: 105vw;
     display: flex;
     justify-content: space-between;
-    transform: scale(0.45);
+    transform: scale(0.65);
 }
-.niup-hidden{
+.feip-hidden{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -282,11 +299,11 @@ export default {
   overflow: hidden;
 
 }
-.niup-item {
+.feip-item {
   
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + niuConfig.anyNiu + ')'") ;
+  background: v-bind("'url(' + feiConfig.anyfei + ')'") ;
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
@@ -304,7 +321,7 @@ export default {
     height: 100vh;
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.5);
-  /* background: v-bind("'url(' + niuConfig.dialogniu + ')'") no-repeat; */
+  /* background: v-bind("'url(' + feiConfig.dialogfei + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star{
