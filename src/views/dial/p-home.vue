@@ -1,13 +1,13 @@
 <script setup>
 import { useRouter, useRoute } from "vue-router";
-import bgBox from "@/assets/dial3/background-1.jpg";
+import fortressBg from "@/assets/dial4/fortressBg.jpg";
 
 
-import playImage from "@/assets/dial3/play.png";
+import fortressPlay from "@/assets/dial4/fortressPlay.png";
 
 const imageObj = {
-  bgBox,
-  playImage
+  fortressBg,
+  fortressPlay
 };
 function routeAll() {
   const router = new useRouter();
@@ -23,8 +23,8 @@ const { goDetail } = routeAll();
 
 <template>
   <div class="container">
-    <div class="playImage-box">
-      <img class="playImage" @click="goDetail()" :src="imageObj.playImage" alt="">
+    <div class="fortressPlay-box">
+      <img class="fortressPlay" @click="goDetail()" :src="imageObj.fortressPlay" alt="">
     </div>
   </div>
 </template>
@@ -35,14 +35,14 @@ const { goDetail } = routeAll();
   align-items: center;
   width: 100%;
   height: 100%;
-  background: v-bind("'url(' + imageObj.bgBox + ')'") no-repeat;
+  background: v-bind("'url(' + imageObj.fortressBg + ')'") no-repeat;
   background-size: cover;
   background-position: 45%;
 }
-.playImage-box{
+.fortressPlay-box{
   
 }
-.playImage{
+.fortressPlay{
   /* margin-top: -60%; */
   width: 150px;
 }

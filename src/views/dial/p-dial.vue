@@ -1,7 +1,7 @@
 <template>
-  <div class="dial-container">
+  <div class="fortress-container">
     <header >
-      <div class="back" @click="back"><img :src="imageObj.BackImage" alt=""></div>
+      <div class="back" @click="back"><img :src="imageObj.fortressBack" alt=""></div>
       <div class="box">
         <span class="box-txt">{{ stateData.coin }}</span>
       </div>
@@ -18,10 +18,10 @@ import { reactive } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
 import dialWrap from "./components/dial.vue";
-import background from "@/assets/dial3/background-1.jpg";
-import BackImage from "@/assets/dial3/back.png";
-import bgBoxImage from "@/assets/dial3/bg-box.png";
-import headImage from "@/assets/dial3/head-box.png";
+import fortressBg from "@/assets/dial4/fortressBg.jpg";
+import fortressBack from "@/assets/dial4/fortressBack.png";
+import fortressBox from "@/assets/dial4/fortressBox.png";
+import fortressTop from "@/assets/dial4/fortressTop.png";
 
 export default {
   components: { dialWrap },
@@ -29,13 +29,13 @@ export default {
   const router = new useRouter();
 
     const imageObj=reactive({
-      background,
-      headImage,
-      BackImage
+      fortressBg,
+      fortressTop,
+      fortressBack
     })
     const stateData = reactive({
       coin: 10000,
-      prize_img: bgBoxImage,
+      prize_img: fortressBox,
       
     });
     const allMethods={
@@ -56,10 +56,10 @@ export default {
 };
 </script>
 <style scoped>
-.dial-container {
+.fortress-container {
   width: 100%;
   height: 100%;
-  background: v-bind("'url(' + imageObj.background + ')'") no-repeat;
+  background: v-bind("'url(' + imageObj.fortressBg + ')'") no-repeat;
   background-size: cover;
   display: inline-block;
 }
@@ -85,13 +85,13 @@ header{
     /* align-items: center; */
     
     width: 60%;
-    height: 43px;
+    height: 40px;
     z-index: 999;
     color: #fff;
-    font-size: 14px;
+    font-size: 16px;
  
     padding-right: 20px;
-  background: v-bind("'url(' + imageObj.headImage + ')'") no-repeat;
+  background: v-bind("'url(' + imageObj.fortressTop + ')'") no-repeat;
   background-position: center;
   background-size: 80%;
 

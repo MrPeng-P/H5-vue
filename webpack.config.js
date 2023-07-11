@@ -26,7 +26,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/imgniud/[hash][ext]",
+          filename: "assets/imgfort/[hash][ext]",
         },
       },
      
@@ -39,7 +39,7 @@ module.exports = {
     },
   },
   output: {
-    filename: "assets/niuJs/niud-[hash].js",
+    filename: "assets/niuJs/fort-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [
