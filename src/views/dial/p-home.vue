@@ -1,13 +1,13 @@
 <script setup>
 import { useRouter, useRoute } from "vue-router";
-import bgBox from "@/assets/dial2/back-1.jpg";
+import bgBox from "@/assets/dial3/background-1.jpg";
 
 
-import start from "@/assets/dial2/play.png";
+import playImage from "@/assets/dial3/play.png";
 
 const imageObj = {
   bgBox,
-  start
+  playImage
 };
 function routeAll() {
   const router = new useRouter();
@@ -23,8 +23,8 @@ const { goDetail } = routeAll();
 
 <template>
   <div class="container">
-    <div class="start-box">
-      <img class="start" @click="goDetail()" :src="imageObj.start" alt="">
+    <div class="playImage-box">
+      <img class="playImage" @click="goDetail()" :src="imageObj.playImage" alt="">
     </div>
   </div>
 </template>
@@ -39,10 +39,10 @@ const { goDetail } = routeAll();
   background-size: cover;
   background-position: 45%;
 }
-.start-box{
+.playImage-box{
   
 }
-.start{
+.playImage{
   /* margin-top: -60%; */
   width: 150px;
 }

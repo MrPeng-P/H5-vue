@@ -23,7 +23,7 @@
         <!-- 12312 -->
         <div class="model-img">
           <img  class="model-bg" :src="objImg.dialog" alt="">
-          <img  class="model-item" :src="dialImg.dialImg.img" alt="">
+          <!-- <img  class="model-item" :src="dialImg.dialImg.img" alt=""> -->
         </div>
         <div class="model-txt">Congratulations on winning： {{  dialImg.dialImg.coin}}</div>
       </div>
@@ -33,19 +33,12 @@
 </template>
 <script>
 import { reactive, ref, computed } from "vue";
-import prizeIndex from "@/assets/dial2/prizeIndex.png";
-import start from "@/assets/dial2/play.png";
-import playResult from "@/assets/dial2/playResult.png";
-import dialog from "@/assets/dial2/dialog.png";
-import J1 from "@/assets/dial2/w1.png";
-import J2 from "@/assets/dial2/w2.png";
-import J3 from "@/assets/dial2/w3.png";
-import J4 from "@/assets/dial2/w4.png";
-import J5 from "@/assets/dial2/w5.png";
-import J6 from "@/assets/dial2/w6.png";
-import J7 from "@/assets/dial2/w7.png";
-import J8 from "@/assets/dial2/w8.png";
-import liwu from "@/assets/dial2/liwu.png";
+import prizeIndex from "@/assets/dial3/prizei.png";
+import start from "@/assets/dial3/play.png";
+import playResult from "@/assets/dial3/times.png";
+import dialog from "@/assets/dial3/boxDialog.png";
+
+import liwu from "@/assets/dial3/head.png";
 
 export default {
   props: {
@@ -84,72 +77,70 @@ export default {
       dialImg:{}
     })
     let dialList = [
+    {
+        name: "3千",
+        deg: 8,
+        coin: 20*3,
+      },
       {
         name: "2万",
         deg: 1,
-        coin: 8888,
-        img:J6
+        coin: 20*40,
       },
       {
         name: "5千",
         deg: 2,
-        coin: 5200,
-        img:J1
+        coin: 80*400,
       },
       {
         name: "2千",
         deg: 3,
-        coin: 6666,
-        img:J3
+        coin: 20*7,
       },
       {
         name: "3万",
         deg: 4,
-        coin: 13140,
-        img:J5
+        coin: 40*500,
       },
       {
         name: "1千",
         deg: 5,
-        coin: 80000,
-        img:J7
+        coin: 20*400,
       },
       {
         name: "1万",
         deg: 6,
-        coin: 9999,
-        img:J8
+        coin: 80*300,
       },
       {
         name: "1万",
         deg: 7,
-        coin: 22222,
-        img:J2
+        coin: 40*300,
       },
-      {
-        name: "3千",
-        deg: 8,
-        coin: 8000,
-        img:J4
-      },
+      
     ];
     let cricleAdd = ref(1);
     let drawIndex = ref(0);
     // 计算属性
     let rotateStyle = computed(() => {
       const _c = config;
-      return `
+      return !open.value?`
         -webkit-transition: transform ${_c.duration}ms ${_c.mode};
         transition: transform ${_c.duration}ms ${_c.mode};
         -webkit-transform: rotate(${rotateAngle.value}deg);
-            transform: rotate(${rotateAngle.value-22.5}deg);`;
+            transform: rotate(${rotateAngle.value-22.5}deg);`:`
+        -webkit-transition: transform ${0}ms ${_c.mode};
+        transition: transform ${0}ms ${_c.mode};
+        -webkit-transform: rotate(${0}deg);
+            transform: rotate(${-22.5}deg);`;
     });
     const allMethods = {
       openDialog:()=>{
+        rotateAngle.value=0
         open.value=false
       },
       async run() {
-        if (props.stateData.coin < 1000) {
+        if (props.stateData.coin < 60) {
           console.log("超级币不足");
           return;
         }
@@ -160,7 +151,7 @@ export default {
         emit("draw_fin", "start");
         //更新积分
         emit("changeCoin", {
-          coin: props.stateData.coin - 1000,
+          coin: props.stateData.coin - 60,
         });
         // this.$set(props.stateData, "coin", 0); // 更新数据，此处仅为示例，推荐使用 draw_fin方法的 start/fin 进行相应数据更新
         isrun.value = true;
@@ -184,13 +175,14 @@ export default {
           "恭喜中奖：" + dialItem[0].name
         );
         dialImg.dialImg={...dialItem[0]}
-        cricleAdd.value++;
+        // cricleAdd.value++;
         setTimeout(() => {
           emit("changeCoin", {
           coin: props.stateData.coin +dialItem[0].coin  ,
         });
         open.value=true
           isrun.value = false;
+   
           // rotateAngle.value=0
         }, config.duration);
       },
@@ -224,8 +216,10 @@ export default {
 
 .box-liwu{
   position: absolute;
-    width: 154px;
-    bottom: -73px;
+    top: -16%;
+    left: 50%;
+    width: 290px;
+    transform: translateX(-50%);
     
 }
 .dial-mork-wrap {
@@ -271,8 +265,9 @@ export default {
 }
 
 .dial-animate-wrap .dial-run img {
-  margin-top: -65%;
-  width: 37%;
+  margin-top: 87%;
+    width: 26%;
+    margin-left: 83%;
 }
 
 .dial-animate-wrap .dial-run div {
@@ -291,7 +286,7 @@ export default {
   line-height: 0.2rem;
 }
 .start {
-  margin: 10vh auto 0;
+  margin: 5vh  auto 0;
   width: 130px;
 }
 

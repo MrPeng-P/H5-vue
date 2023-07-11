@@ -1,7 +1,7 @@
 <template>
   <div class="dial-container">
     <header >
-      <div class="back" @click="back"><img :src="imageObj.imgBack" alt=""></div>
+      <div class="back" @click="back"><img :src="imageObj.BackImage" alt=""></div>
       <div class="box">
         <span class="box-txt">{{ stateData.coin }}</span>
       </div>
@@ -18,10 +18,10 @@ import { reactive } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
 import dialWrap from "./components/dial.vue";
-import bgBack from "@/assets/dial2/back-2.jpg";
-import imgBack from "@/assets/dial2/back.png";
-import prizeImg from "@/assets/dial2/bg-box.png";
-import headBox from "@/assets/dial2/head-box.png";
+import background from "@/assets/dial3/background-1.jpg";
+import BackImage from "@/assets/dial3/back.png";
+import bgBoxImage from "@/assets/dial3/bg-box.png";
+import headImage from "@/assets/dial3/head-box.png";
 
 export default {
   components: { dialWrap },
@@ -29,13 +29,13 @@ export default {
   const router = new useRouter();
 
     const imageObj=reactive({
-      bgBack,
-      headBox,
-      imgBack
+      background,
+      headImage,
+      BackImage
     })
     const stateData = reactive({
       coin: 10000,
-      prize_img: prizeImg,
+      prize_img: bgBoxImage,
       
     });
     const allMethods={
@@ -59,13 +59,13 @@ export default {
 .dial-container {
   width: 100%;
   height: 100%;
-  background: v-bind("'url(' + imageObj.bgBack + ')'") no-repeat;
+  background: v-bind("'url(' + imageObj.background + ')'") no-repeat;
   background-size: cover;
   display: inline-block;
 }
 header{
   display: flex;
-  margin-top: 76px;
+  margin-top: 20px;
 
 }
 .back{
@@ -84,14 +84,14 @@ header{
     line-height: 18px;
     /* align-items: center; */
     
-    width: 45%;
-    height: 33px;
+    width: 60%;
+    height: 43px;
     z-index: 999;
     color: #fff;
-    font-size: 16px;
+    font-size: 14px;
  
     padding-right: 20px;
-  background: v-bind("'url(' + imageObj.headBox + ')'") no-repeat;
+  background: v-bind("'url(' + imageObj.headImage + ')'") no-repeat;
   background-position: center;
   background-size: 80%;
 
@@ -104,7 +104,7 @@ header{
 section {
   width: 8.7rem;
   height: 8.7rem;
-  margin: 0 auto;
+  margin: 70px auto;
   z-index: 998;
   
 }
