@@ -1,29 +1,29 @@
 <template>
-  <div class="fortress-animate-wrap">
-    <div class="fortress-bg" :style="rotateStyle">
+  <div class="beach-animate-wrap">
+    <div class="beach-bg" :style="rotateStyle">
       <img :src="stateData.prize_img" alt="" />
     </div>
-    <div class="fortress-run" @click="run">
-      <img :src="objImg.fortressIndex" alt="" />
+    <div class="beach-run" @click="run">
+      <img :src="objImg.beachIndex" alt="" />
     </div>
-    <div class="fortress-mork-wrap" @touchmove.prevent.stop v-if="isrun"></div>
+    <div class="beach-mork-wrap" @touchmove.prevent.stop v-if="isrun"></div>
     <!-- 抽奖进行中，禁用页面所有操作 z-index: 99; -->
-  <img class="box-fortressHead" :src="objImg.fortressHead" alt="">
+  <img class="box-beachHead" :src="objImg.beachHead" alt="">
 
   </div>
   <div>
-    <img class="fortressPlay" @click="run" :src="objImg.fortressPlay" alt="" />
+    <img class="beachPlay" @click="run" :src="objImg.beachPlay" alt="" />
   </div>
   <div>
-    <img class="fortressPlay-result" :src="objImg.fortressTime" alt="" />
+    <img class="beachPlay-result" :src="objImg.beachTime" alt="" />
   </div>
   
   <Teleport to="body">
       <div  v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
         <div class="model-img">
-          <img  class="model-bg" :src="objImg.fortressDialog" alt="">
-          <img  class="model-item" :src="objImg.fortressStar" alt="">
+          <img  class="model-bg" :src="objImg.beachDialog" alt="">
+          <!-- <img  class="model-item" :src="objImg.beachStar" alt=""> -->
         </div>
         <div class="model-txt">Congratulations on winning： {{  dialImg.dialImg.coin}}</div>
       </div>
@@ -33,13 +33,13 @@
 </template>
 <script>
 import { reactive, ref, computed } from "vue";
-import fortressIndex from "@/assets/dial4/fortressIndex.png";
-import fortressPlay from "@/assets/dial4/fortressPlay.png";
-import fortressTime from "@/assets/dial4/fortressTime.png";
-import fortressDialog from "@/assets/dial4/fortressDialog.png";
+import beachIndex from "@/assets/dial5/beachIndex.png";
+import beachPlay from "@/assets/dial5/beachPlay.png";
+import beachTime from "@/assets/dial5/beachTime.png";
+import beachDialog from "@/assets/dial5/beachDialog.png";
 
-import fortressHead from "@/assets/dial4/fortressHead.png";
-import fortressStar from "@/assets/dial4/star.gif";
+import beachHead from "@/assets/dial5/beachHead.png";
+// import beachStar from "@/assets/dial5/star.gif";
 
 export default {
   props: {
@@ -61,12 +61,12 @@ export default {
     let open=ref(false)
     let rotateAngle = ref(0);
     const objImg = reactive({
-      fortressIndex,
-      fortressPlay,
-      fortressTime,
-      fortressDialog,
-      fortressHead,
-      fortressStar
+      beachIndex,
+      beachPlay,
+      beachTime,
+      beachDialog,
+      beachHead,
+      // beachStar
     });
     
     let config = reactive({
@@ -82,65 +82,56 @@ export default {
       {
         name: "p1",
         deg: 8,
-        coin: 1500,
+        coin: 10*5,
       },
       {
         name: "p2",
         deg: 1,
-        coin: 8000,
+        coin: 50*100,
       },
       {
         name: "p3",
         deg: 2,
-        coin: 1000,
+        coin: 3*10,
       },
       {
         name: "p4",
         deg: 3,
-        coin: 1000,
+        coin: 50*7,
       },
       {
         name: "p5",
         deg: 4,
-        coin: 3000,
+        coin: 3*5,
       },
       {
         name: "p6",
         deg: 5,
-        coin: 5000,
+        coin: 100*20,
       },
       {
         name: "p7",
         deg: 6,
-        coin: 1500,
+        coin: 10*2,
       },
       {
         name: "p8",
         deg: 7,
-        coin: -1000,
+        coin: 5*3,
       },
       {
         name: "p9",
         deg: 9,
-        coin: 1500,
+        coin: 30*50,
       },
 
 
       {
         name: "P10",
         deg: 10,
-        coin: 7000,
+        coin: 5*2,
       },
-      {
-        name: "p11",
-        deg: 11,
-        coin: 2000,
-      },
-      {
-        name: "p12",
-        deg: 12,
-        coin: 2000,
-      },
+     
     ];
     let cricleAdd = ref(1);
     let drawIndex = ref(0);
@@ -171,15 +162,15 @@ export default {
         config.circle = 5 + parseInt(Math.ceil(Math.random() * 100)) / 100;
         // const data = await this.goDraw()
         // 可以作为弹窗等信息展示
-        emit("draw_fin", "fortressPlay");
+        emit("draw_fin", "beachPlay");
         //更新积分
         emit("changeCoin", {
           coin: props.stateData.coin - 60,
         });
-        // this.$set(props.stateData, "coin", 0); // 更新数据，此处仅为示例，推荐使用 draw_fin方法的 fortressPlay/fin 进行相应数据更新
+        // this.$set(props.stateData, "coin", 0); // 更新数据，此处仅为示例，推荐使用 draw_fin方法的 beachPlay/fin 进行相应数据更新
         isrun.value = true;
         rotateAngle.value =
-          config.circle * 360 * cricleAdd.value - ( drawIndex.value * 30);
+          config.circle * 360 * cricleAdd.value - ( drawIndex.value * 36);
         // 圈数位置解析
         // this.config.circle * 360 * this.cricleAdd 顺时针总圈数/累积总圈数
         // 22.5 + this.drawIndex * 45 ===> (奖品位置 === this.drawIndex * 45) (指针中间位置 === 22.5)
@@ -238,7 +229,7 @@ export default {
 </script>
 <style scoped>
 
-.box-fortressHead{
+.box-beachHead{
   position: absolute;
     top: -16%;
     left: 50%;
@@ -246,7 +237,7 @@ export default {
     transform: translateX(-50%);
     
 }
-.fortress-mork-wrap {
+.beach-mork-wrap {
   position: fixed;
   left: 0;
   top: 0;
@@ -255,24 +246,24 @@ export default {
   z-index: 99;
 }
 
-.fortress-animate-wrap {
+.beach-animate-wrap {
   width: 100%;
   height: 100%;
   position: relative;
   /* overflow-y: hidden; */
 }
-.fortress-bg{
+.beach-bg{
   transform: rotate(23deg)
 }
-.fortress-animate-wrap .fortress-bg img {
+.beach-animate-wrap .beach-bg img {
   width: 100%;
   height: 100%;
 }
 
-.fortress-animate-wrap .fortress-run {
+.beach-animate-wrap .beach-run {
   width: 5rem;
   height: 5rem;
-  /* background: v-bind("'url(' + objImg.fortressIndex + ')'") no-repeat; */
+  /* background: v-bind("'url(' + objImg.beachIndex + ')'") no-repeat; */
 
   /* background-size: contain; */
   /* background-position: center -20px; */
@@ -288,13 +279,13 @@ export default {
   text-align: center;
 }
 
-.fortress-animate-wrap .fortress-run img {
-     margin-top: -127%;
-    width: 26%;
-    margin-left: 137%;
+.beach-animate-wrap .beach-run img {
+  margin-top: -86%;
+    width: 9%;
+
 }
 
-.fortress-animate-wrap .fortress-run div {
+.beach-animate-wrap .beach-run div {
   font-size: 0.3rem;
   font-weight: bold;
   color: #ff1717;
@@ -303,18 +294,18 @@ export default {
   padding-bottom: 0.21rem;
 }
 
-.fortress-animate-wrap .fortress-run p {
+.beach-animate-wrap .beach-run p {
   font-size: 0.2rem;
   font-weight: bold;
   color: #834f36;
   line-height: 0.2rem;
 }
-.fortressPlay {
+.beachPlay {
   margin: 5vh  auto 0;
   width: 130px;
 }
 
-.fortressPlay-result{
+.beachPlay-result{
   margin: 10px auto 0;
   width: 100px;
 }
@@ -344,6 +335,7 @@ export default {
 }
 .model-bg{
   margin: 0 auto;
+  margin-left: 23px;
   width: 85%;
 }
 .model-item{

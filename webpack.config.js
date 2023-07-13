@@ -26,7 +26,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/imgfort/[hash][ext]",
+          filename: "assets/imgbeach/[hash][ext]",
         },
       },
      
@@ -39,7 +39,7 @@ module.exports = {
     },
   },
   output: {
-    filename: "assets/niuJs/fort-[hash].js",
+    filename: "assets/niuJs/beach-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [
@@ -66,7 +66,6 @@ module.exports = {
         deadCodeInjection: true,
         deadCodeInjectionThreshold: 0.4,
         debugProtection: false,
-        debugProtectionInterval: 2000,
         disableConsoleOutput: true,
         domainLock: [],
         identifierNamesGenerator: "hexadecimal",

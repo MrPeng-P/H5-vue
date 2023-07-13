@@ -1,9 +1,9 @@
 <template>
-  <div class="fortress-container">
+  <div class="beach-container">
     <header >
-      <div class="back" @click="back"><img :src="imageObj.fortressBack" alt=""></div>
-      <div class="box">
-        <span class="box-txt">{{ stateData.coin }}</span>
+      <div class="back" @click="back"><img :src="imageObj.beachBack" alt=""></div>
+      <div class="beach">
+        <span class="beach-txt">{{ stateData.coin }}</span>
       </div>
     </header>
     <section>
@@ -18,10 +18,10 @@ import { reactive } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
 import dialWrap from "./components/dial.vue";
-import fortressBg from "@/assets/dial4/fortressBg.jpg";
-import fortressBack from "@/assets/dial4/fortressBack.png";
-import fortressBox from "@/assets/dial4/fortressBox.png";
-import fortressTop from "@/assets/dial4/fortressTop.png";
+import beachBg from "@/assets/dial5/beachBg.jpg";
+import beachBack from "@/assets/dial5/beachBack.png";
+import beachBox from "@/assets/dial5/beachBox.png";
+import beachTop from "@/assets/dial5/beachTop.png";
 
 export default {
   components: { dialWrap },
@@ -29,13 +29,13 @@ export default {
   const router = new useRouter();
 
     const imageObj=reactive({
-      fortressBg,
-      fortressTop,
-      fortressBack
+      beachBg,
+      beachTop,
+      beachBack
     })
     const stateData = reactive({
       coin: 10000,
-      prize_img: fortressBox,
+      prize_img: beachBox,
       
     });
     const allMethods={
@@ -56,10 +56,10 @@ export default {
 };
 </script>
 <style scoped>
-.fortress-container {
+.beach-container {
   width: 100%;
   height: 100%;
-  background: v-bind("'url(' + imageObj.fortressBg + ')'") no-repeat;
+  background: v-bind("'url(' + imageObj.beachBg + ')'") no-repeat;
   background-size: cover;
   display: inline-block;
 }
@@ -77,7 +77,7 @@ header{
 .back img{
   width:70%;
 }
-.box{
+.beach{
   margin-left:10px;
     display: flex;
     justify-content: center;
@@ -91,15 +91,15 @@ header{
     font-size: 16px;
  
     padding-right: 20px;
-  background: v-bind("'url(' + imageObj.fortressTop + ')'") no-repeat;
+  background: v-bind("'url(' + imageObj.beachTop + ')'") no-repeat;
   background-position: center;
   background-size: 80%;
 
 }
 
-.box-txt{
+.beach-txt{
   margin-top: 5.8%;
-    margin-right: -30%;
+  margin-right: -8%;
 }
 section {
   width: 8.7rem;

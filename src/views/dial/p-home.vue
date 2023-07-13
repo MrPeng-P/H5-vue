@@ -1,13 +1,13 @@
 <script setup>
 import { useRouter, useRoute } from "vue-router";
-import fortressBg from "@/assets/dial4/fortressBg.jpg";
+import beachBg from "@/assets/dial5/beachBg.jpg";
 
 
-import fortressPlay from "@/assets/dial4/fortressPlay.png";
+import beachPlay from "@/assets/dial5/beachPlay.png";
 
 const imageObj = {
-  fortressBg,
-  fortressPlay
+  beachBg,
+  beachPlay
 };
 function routeAll() {
   const router = new useRouter();
@@ -23,8 +23,8 @@ const { goDetail } = routeAll();
 
 <template>
   <div class="container">
-    <div class="fortressPlay-box">
-      <img class="fortressPlay" @click="goDetail()" :src="imageObj.fortressPlay" alt="">
+    <div class="beachPlay-box">
+      <img class="beachPlay" @click="goDetail()" :src="imageObj.beachPlay" alt="">
     </div>
   </div>
 </template>
@@ -35,14 +35,14 @@ const { goDetail } = routeAll();
   align-items: center;
   width: 100%;
   height: 100%;
-  background: v-bind("'url(' + imageObj.fortressBg + ')'") no-repeat;
+  background: v-bind("'url(' + imageObj.beachBg + ')'") no-repeat;
   background-size: cover;
   background-position: 45%;
 }
-.fortressPlay-box{
+.beachPlay-box{
   
 }
-.fortressPlay{
+.beachPlay{
   /* margin-top: -60%; */
   width: 150px;
 }
