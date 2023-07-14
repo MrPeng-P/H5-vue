@@ -26,7 +26,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/imgbeach/[hash][ext]",
+          filename: "assets/imgdining/[hash][ext]",
         },
       },
      
@@ -39,7 +39,7 @@ module.exports = {
     },
   },
   output: {
-    filename: "assets/niuJs/beach-[hash].js",
+    filename: "assets/diningJs/dining-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [

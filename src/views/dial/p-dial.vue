@@ -1,9 +1,9 @@
 <template>
-  <div class="beach-container">
+  <div class="dining-container">
     <header >
-      <div class="back" @click="back"><img :src="imageObj.beachBack" alt=""></div>
-      <div class="beach">
-        <span class="beach-txt">{{ stateData.coin }}</span>
+      <div class="back" @click="back"><img :src="imageObj.diningBack" alt=""></div>
+      <div class="dining">
+        <span class="dining-txt">{{ stateData.coin }}</span>
       </div>
     </header>
     <section>
@@ -18,10 +18,10 @@ import { reactive } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
 import dialWrap from "./components/dial.vue";
-import beachBg from "@/assets/dial5/beachBg.jpg";
-import beachBack from "@/assets/dial5/beachBack.png";
-import beachBox from "@/assets/dial5/beachBox.png";
-import beachTop from "@/assets/dial5/beachTop.png";
+import diningBg from "@/assets/dial6/diningBg.jpg";
+import diningBack from "@/assets/dial6/diningBack.png";
+import diningBox from "@/assets/dial6/diningBox.png";
+import diningTop from "@/assets/dial6/diningTop.png";
 
 export default {
   components: { dialWrap },
@@ -29,13 +29,13 @@ export default {
   const router = new useRouter();
 
     const imageObj=reactive({
-      beachBg,
-      beachTop,
-      beachBack
+      diningBg,
+      diningTop,
+      diningBack
     })
     const stateData = reactive({
       coin: 10000,
-      prize_img: beachBox,
+      prize_img: diningBox,
       
     });
     const allMethods={
@@ -56,10 +56,10 @@ export default {
 };
 </script>
 <style scoped>
-.beach-container {
+.dining-container {
   width: 100%;
   height: 100%;
-  background: v-bind("'url(' + imageObj.beachBg + ')'") no-repeat;
+  background: v-bind("'url(' + imageObj.diningBg + ')'") no-repeat;
   background-size: cover;
   display: inline-block;
 }
@@ -69,35 +69,34 @@ header{
 
 }
 .back{
-  margin-left: 50px;
-  padding-left: 10px;
-  width: 20%;
-
+  display: flex;
+    justify-content: center;
+    margin-left: 25px;
+    align-items: center;
+    /* padding-left: 10px; */
+    width: 20%;
 }
 .back img{
   width:70%;
 }
-.beach{
-  margin-left:10px;
+.dining{
+  margin-left: 87px;
     display: flex;
     justify-content: center;
-    line-height: 18px;
+    line-height: 58px;
     /* align-items: center; */
-    
-    width: 60%;
-    height: 40px;
+    width: 50%;
+    height: 76px;
     z-index: 999;
     color: #fff;
     font-size: 16px;
- 
-    padding-right: 20px;
-  background: v-bind("'url(' + imageObj.beachTop + ')'") no-repeat;
+  background: v-bind("'url(' + imageObj.diningTop + ')'") no-repeat;
   background-position: center;
   background-size: 80%;
 
 }
 
-.beach-txt{
+.dining-txt{
   margin-top: 5.8%;
   margin-right: -8%;
 }
