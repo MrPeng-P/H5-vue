@@ -1,28 +1,28 @@
 <template>
-  <div class="dining-animate-wrap">
-    <div class="dining-bg" :style="rotateStyle">
+  <div class="fruit-animate-wrap">
+    <div class="fruit-bg" :style="rotateStyle">
       <img :src="stateData.prize_img" alt="" />
     </div>
-    <div class="dining-run" @click="run">
-      <img :src="objImg.diningIndex" alt="" />
+    <div class="fruit-run" @click="run">
+      <img :src="objImg.fruitIndex" alt="" />
     </div>
-    <div class="dining-mork-wrap" @touchmove.prevent.stop v-if="isrun"></div>
+    <div class="fruit-mork-wrap" @touchmove.prevent.stop v-if="isrun"></div>
     <!-- 抽奖进行中，禁用页面所有操作 z-index: 99; -->
-    <img class="box-diningHead" :src="objImg.diningHead" alt="" />
+    <img class="box-fruitHead" :src="objImg.fruitHead" alt="" />
   </div>
   <div>
-    <img class="diningPlay" @click="run" :src="objImg.diningPlay" alt="" />
+    <img class="fruitPlay" @click="run" :src="objImg.fruitPlay" alt="" />
   </div>
   <div>
-    <img class="diningPlay-result" :src="objImg.diningTime" alt="" />
+    <img class="fruitPlay-result" :src="objImg.fruitTime" alt="" />
   </div>
 
   <Teleport to="body">
     <div v-if="open" class="modal" @click="openDialog">
       <!-- 12312 -->
       <div class="model-img">
-        <img class="model-bg" :src="objImg.diningDialog" alt="" />
-        <img  class="model-item" :src="objImg.diningStar" alt="">
+        <img class="model-bg" :src="objImg.fruitDialog" alt="" />
+        <img  class="model-item" :src="objImg.fruitStar" alt="">
       </div>
       <div class="model-txt">
         Congratulations on winning： {{ dialImg.dialImg.coin }}
@@ -32,13 +32,13 @@
 </template>
 <script>
 import { reactive, ref, computed, watchEffect } from "vue";
-import diningIndex from "@/assets/dial6/diningIndex.png";
-import diningPlay from "@/assets/dial6/diningPlay.png";
-import diningTime from "@/assets/dial6/diningTime.png";
-import diningDialog from "@/assets/dial6/diningDialog.png";
+import fruitIndex from "@/assets/dial7/fruitIndex.png";
+import fruitPlay from "@/assets/dial7/fruitPlay.png";
+import fruitTime from "@/assets/dial7/fruitTime.png";
+import fruitDialog from "@/assets/dial7/fruitDialog.png";
 
-import diningHead from "@/assets/dial6/diningHead.png";
-import diningStar from "@/assets/dial6/diningStar.gif";
+import fruitHead from "@/assets/dial7/fruitHead.png";
+import fruitStar from "@/assets/dial7/fruitStar.gif";
 
 export default {
   props: {
@@ -56,16 +56,16 @@ export default {
   setup(props, content) {
     const { emit } = content;
     let isrun = ref(false);
-    const rotateItem = 360 / 6; //每一项角度
+    const rotateItem = 360 / 10; //每一项角度
     let open = ref(false);
     let rotateAngle = ref(0);
     const objImg = reactive({
-      diningIndex,
-      diningPlay,
-      diningTime,
-      diningDialog,
-      diningHead,
-      diningStar
+      fruitIndex,
+      fruitPlay,
+      fruitTime,
+      fruitDialog,
+      fruitHead,
+      fruitStar
     });
 
     let config = reactive({
@@ -79,36 +79,54 @@ export default {
     let dialList = [
       {
         name: "p1",
-        deg: 8,
-        coin: 30 * 200,
+        deg: 1,
+        coin: 8 * 50,
       },
       {
         name: "p2",
-        deg: 1,
-        coin: 60 * 100,
+        deg: 2,
+        coin: 5 * 20,
       },
       {
         name: "p3",
-        deg: 2,
-        coin: 80 * 200,
+        deg: 3,
+        coin: 3 * 20,
       },
       {
         name: "p4",
-        deg: 3,
-        coin: 50 * 70,
+        deg: 4,
+        coin: 50 * 8,
       },
       {
         name: "p5",
-        deg: 4,
-        coin: 150 * 30,
+        deg: 5,
+        coin: 20 * 7,
       },
       {
         name: "p6",
-        deg: 5,
-        coin: 500 * 20,
+        deg: 6,
+        coin: 40 * 3,
       },
-    
-      
+      {
+        name: "p7",
+        deg: 7,
+        coin: 60 * 2,
+      },
+      {
+        name: "p8",
+        deg: 8,
+        coin: 5 * 30,
+      },
+      {
+        name: "p9",
+        deg: 9,
+        coin: 4 * 50,
+      },
+      {
+        name: "p10",
+        deg: 10,
+        coin: 5 * 2,
+      },
     ];
     let cricleAdd = ref(1);
     let drawIndex = ref(0);
@@ -151,7 +169,7 @@ export default {
         open.value = false;
       },
       async run() {
-        if (props.stateData.coin < 100) {
+        if (props.stateData.coin < 5) {
           console.log("超级币不足");
           return;
         }
@@ -159,15 +177,15 @@ export default {
         config.circle = 5 + parseInt(Math.ceil(Math.random() * 100)) / 100;
         // const data = await this.goDraw()
         // 可以作为弹窗等信息展示
-        emit("draw_fin", "diningPlay");
+        emit("draw_fin", "fruitPlay");
         //更新积分
         emit("changeCoin", {
-          coin: props.stateData.coin - 100,
+          coin: props.stateData.coin - 5,
         });
-        // this.$set(props.stateData, "coin", 0); // 更新数据，此处仅为示例，推荐使用 draw_fin方法的 diningPlay/fin 进行相应数据更新
+        // this.$set(props.stateData, "coin", 0); // 更新数据，此处仅为示例，推荐使用 draw_fin方法的 fruitPlay/fin 进行相应数据更新
         isrun.value = true;
         rotateAngle.value =
-          config.circle * 360 * cricleAdd.value - drawIndex.value * 60;
+          config.circle * 360 * cricleAdd.value - drawIndex.value * 36;
         // 圈数位置解析
         // this.config.circle * 360 * this.cricleAdd 顺时针总圈数/累积总圈数
         // 22.5 + this.drawIndex * 45 ===> (奖品位置 === this.drawIndex * 45) (指针中间位置 === 22.5)
@@ -224,14 +242,15 @@ export default {
 };
 </script>
 <style scoped>
-.box-diningHead {
+.box-fruitHead {
   position: absolute;
-  top: -16%;
-  left: 50%;
-  width: 290px;
-  transform: translateX(-50%);
+    top: -14%;
+    left: 50%;
+    width: 290px;
+    z-index: -1;
+    transform: translateX(-50%);
 }
-.dining-mork-wrap {
+.fruit-mork-wrap {
   position: fixed;
   left: 0;
   top: 0;
@@ -240,24 +259,25 @@ export default {
   z-index: 99;
 }
 
-.dining-animate-wrap {
+.fruit-animate-wrap {
   width: 100%;
   height: 100%;
   position: relative;
   /* overflow-y: hidden; */
+  z-index: 1;
 }
-.dining-bg {
+.fruit-bg {
   transform: rotate(23deg);
 }
-.dining-animate-wrap .dining-bg img {
+.fruit-animate-wrap .fruit-bg img {
   width: 100%;
   height: 100%;
 }
 
-.dining-animate-wrap .dining-run {
+.fruit-animate-wrap .fruit-run {
   width: 5rem;
   height: 5rem;
-  /* background: v-bind("'url(' + objImg.diningIndex + ')'") no-repeat; */
+  /* background: v-bind("'url(' + objImg.fruitIndex + ')'") no-repeat; */
 
   /* background-size: contain; */
   /* background-position: center -20px; */
@@ -273,12 +293,12 @@ export default {
   text-align: center;
 }
 
-.dining-animate-wrap .dining-run img {
+.fruit-animate-wrap .fruit-run img {
   margin-top: -86%;
   width: 9%;
 }
 
-.dining-animate-wrap .dining-run div {
+.fruit-animate-wrap .fruit-run div {
   font-size: 0.3rem;
   font-weight: bold;
   color: #ff1717;
@@ -287,18 +307,18 @@ export default {
   padding-bottom: 0.21rem;
 }
 
-.dining-animate-wrap .dining-run p {
+.fruit-animate-wrap .fruit-run p {
   font-size: 0.2rem;
   font-weight: bold;
   color: #834f36;
   line-height: 0.2rem;
 }
-.diningPlay {
+.fruitPlay {
   margin: 5vh auto 0;
   width: 130px;
 }
 
-.diningPlay-result {
+.fruitPlay-result {
   margin: 10px auto 0;
   width: 100px;
 }

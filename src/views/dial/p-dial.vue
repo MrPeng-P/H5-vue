@@ -1,9 +1,9 @@
 <template>
-  <div class="dining-container">
+  <div class="fruit-container">
     <header >
-      <div class="back" @click="back"><img :src="imageObj.diningBack" alt=""></div>
-      <div class="dining">
-        <span class="dining-txt">{{ stateData.coin }}</span>
+      <div class="back" @click="back"><img :src="imageObj.fruitBack" alt=""></div>
+      <div class="fruit">
+        <span class="fruit-txt">{{ stateData.coin }}</span>
       </div>
     </header>
     <section>
@@ -18,10 +18,10 @@ import { reactive } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
 import dialWrap from "./components/dial.vue";
-import diningBg from "@/assets/dial6/diningBg.jpg";
-import diningBack from "@/assets/dial6/diningBack.png";
-import diningBox from "@/assets/dial6/diningBox.png";
-import diningTop from "@/assets/dial6/diningTop.png";
+import fruitBg from "@/assets/dial7/fruitBg.jpg";
+import fruitBack from "@/assets/dial7/fruitBack.png";
+import fruitBox from "@/assets/dial7/fruitBox.png";
+import fruitTop from "@/assets/dial7/fruitTop.png";
 
 export default {
   components: { dialWrap },
@@ -29,13 +29,13 @@ export default {
   const router = new useRouter();
 
     const imageObj=reactive({
-      diningBg,
-      diningTop,
-      diningBack
+      fruitBg,
+      fruitTop,
+      fruitBack
     })
     const stateData = reactive({
       coin: 10000,
-      prize_img: diningBox,
+      prize_img: fruitBox,
       
     });
     const allMethods={
@@ -56,10 +56,10 @@ export default {
 };
 </script>
 <style scoped>
-.dining-container {
+.fruit-container {
   width: 100%;
   height: 100%;
-  background: v-bind("'url(' + imageObj.diningBg + ')'") no-repeat;
+  background: v-bind("'url(' + imageObj.fruitBg + ')'") no-repeat;
   background-size: cover;
   display: inline-block;
 }
@@ -79,24 +79,24 @@ header{
 .back img{
   width:70%;
 }
-.dining{
+.fruit{
   margin-left: 87px;
     display: flex;
     justify-content: center;
-    line-height: 58px;
+    line-height: 48px;
     /* align-items: center; */
     width: 50%;
     height: 76px;
     z-index: 999;
     color: #fff;
     font-size: 16px;
-  background: v-bind("'url(' + imageObj.diningTop + ')'") no-repeat;
+  background: v-bind("'url(' + imageObj.fruitTop + ')'") no-repeat;
   background-position: center;
   background-size: 80%;
 
 }
 
-.dining-txt{
+.fruit-txt{
   margin-top: 5.8%;
   margin-right: -8%;
 }

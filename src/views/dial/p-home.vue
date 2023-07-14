@@ -1,13 +1,13 @@
 <script setup>
 import { useRouter, useRoute } from "vue-router";
-import diningBg from "@/assets/dial6/diningBg.jpg";
+import fruitBg from "@/assets/dial7/fruitBg.jpg";
 
 
-import diningPlay from "@/assets/dial6/diningPlay.png";
+import fruitPlay from "@/assets/dial7/fruitPlay.png";
 
 const imageObj = {
-  diningBg,
-  diningPlay
+  fruitBg,
+  fruitPlay
 };
 function routeAll() {
   const router = new useRouter();
@@ -23,8 +23,8 @@ const { goDetail } = routeAll();
 
 <template>
   <div class="container">
-    <div class="diningPlay-box">
-      <img class="diningPlay" @click="goDetail()" :src="imageObj.diningPlay" alt="">
+    <div class="fruitPlay-box">
+      <img class="fruitPlay" @click="goDetail()" :src="imageObj.fruitPlay" alt="">
     </div>
   </div>
 </template>
@@ -35,14 +35,14 @@ const { goDetail } = routeAll();
   align-items: center;
   width: 100%;
   height: 100%;
-  background: v-bind("'url(' + imageObj.diningBg + ')'") no-repeat;
+  background: v-bind("'url(' + imageObj.fruitBg + ')'") no-repeat;
   background-size: cover;
   background-position: 45%;
 }
-.diningPlay-box{
+.fruitPlay-box{
   
 }
-.diningPlay{
+.fruitPlay{
   /* margin-top: -60%; */
   width: 150px;
 }
