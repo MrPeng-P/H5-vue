@@ -26,7 +26,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/imgfruit/[hash][ext]",
+          filename: "assets/imgoriginal/[hash][ext]",
         },
       },
      
@@ -39,10 +39,11 @@ module.exports = {
     },
   },
   output: {
-    filename: "assets/fruitJs/fruit-[hash].js",
+    filename: "assets/originalJs/original-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [
+    
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./index.html"),
