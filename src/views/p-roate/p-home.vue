@@ -1,13 +1,13 @@
 <script setup>
 import { useRouter, useRoute } from "vue-router";
-import bgTree from "@/assets/image-route/bg-tree.jpg";
+import lampBg from "@/assets/run4/lampBg.jpg";
 
 
-import imgStart from "@/assets/image-route/enter.png";
+import lampEnter from "@/assets/run4/lampEnter.png";
 
 const imageObj = {
-  bgTree,
-  imgStart
+  lampBg,
+  lampEnter
 };
 function routeAll() {
   const router = new useRouter();
@@ -25,7 +25,7 @@ const { goDetail } = routeAll();
 <template>
   <div class="container">
     <div >
-      <img class="start" @click="goDetail()" :src="imageObj.imgStart" alt="">
+      <img class="start" @click="goDetail()" :src="imageObj.lampEnter" alt="">
     </div>
   </div>
 </template>
@@ -36,12 +36,13 @@ const { goDetail } = routeAll();
   align-items: center;
   width: 100%;
   height: 100%;
-  background: v-bind("'url(' + imageObj.bgTree + ')'") no-repeat;
+  background: v-bind("'url(' + imageObj.lampBg + ')'") no-repeat;
   background-size: cover;
   background-position: 45%;
 }
 .start{
-  width: 150px;
+  margin-top: -90%;
+    width: 220px;
 }
 
 </style>

@@ -12,7 +12,7 @@ const imageObj = {
 function routeAll() {
   const router = new useRouter();
   function goDetail() {
-    router.push("/dial");
+    router.push("/original");
   }
   return {
     goDetail,

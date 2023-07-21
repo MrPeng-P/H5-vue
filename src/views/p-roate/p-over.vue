@@ -1,17 +1,19 @@
 <script setup>
 import { useRouter, useRoute } from "vue-router";
-import bgTree from "@/assets/image-route/bg-tree.jpg";
-import imgResult from "@/assets/image-route/result.png";
-import imgStart from "@/assets/image-route/enter.png";
-import imgHome from "@/assets/image-route/home.png";
-import imgAgain from "@/assets/image-route/again.png";
+import lampBg from "@/assets/run4/lampBg.jpg";
+import lampResult from "@/assets/run4/lampResult.png";
+import lampEnter from "@/assets/run4/lampEnter.png";
+import lampHome from "@/assets/run4/lampHome.png";
+import lampAgain from "@/assets/run4/lampAgain.png";
+// import lampStar from "@/assets/run4/lampStar.gif";
 
 const imageObj = {
-  bgTree,
-  imgStart,
-  imgResult,
-  imgHome,
-  imgAgain
+  lampBg,
+  lampEnter,
+  lampResult,
+  lampHome,
+  lampAgain,
+  // lampStar
 };
 function routeAll() {
   const router = new useRouter();
@@ -30,20 +32,22 @@ const { goDetail,goHome } = routeAll();
 </script>
 
 <template>
-  <div class="container">
-    <div class="container-box">
-      <div><img class="model-img" :src="imageObj.imgResult" alt="" /></div>
+  <div class="containerlamp">
+    <div class="containerlamp-box">
+      <div class="modellamp"><img class="modellamp-img" :src="imageObj.lampResult" alt="" />
+        <!-- <img class="starlamp-img" :src="imageObj.lampStar" alt="" /> -->
+      </div>
       <div class="button-list">
         <img
           class="start"
           @click="goHome()"
-          :src="imageObj.imgHome"
+          :src="imageObj.lampHome"
           alt=""
         />
         <img
           class="start"
           @click="goDetail()"
-          :src="imageObj.imgAgain"
+          :src="imageObj.lampAgain"
           alt=""
         />
       </div>
@@ -51,41 +55,52 @@ const { goDetail,goHome } = routeAll();
   </div>
 </template>
 <style scoped>
-.container {
+.containerlamp {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
-  background: v-bind("'url(' + imageObj.bgTree + ')'") no-repeat;
+  background: v-bind("'url(' + imageObj.lampBg + ')'") no-repeat;
   background-size: cover;
   background-position: 45%;
   /* background-color: rgba(0, 0, 0, 0.3); */
 }
-.container-box{
+.containerlamp-box{
+  padding-top: 20vh;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     flex-wrap: wrap;
     align-items: center;
   background-color: rgba(0, 0, 0, 0.3);
 
 }
-.model-img{
-    width: 300px;
+.modellamp{
+  position: relative;
+}
+.modellamp-img{
+    width: 350px;
+}
+
+.starlamp-img{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: 50%;
 }
 .start {
   width: 150px;
 }
 .button-list{
-    margin-top: 30px;
+  margin-top: 64px;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
 }
 .button-list img{
-    width: 100px;
+    width: 130px;
 }
 </style>

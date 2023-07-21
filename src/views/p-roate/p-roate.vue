@@ -2,29 +2,31 @@
 import { reactive, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
-import bgTree from "@/assets/image-route/bg-tree.jpg";
+import bgTree from "@/assets/run4/lampBg.jpg";
 
-import imgback from "@/assets/image-route/back.png";
-import play from "@/assets/image-route/play.png";
-import start from "@/assets/image-route/start.png";
-import center from "@/assets/image-route/center.png";
-import bgAuto from "@/assets/image-route/bg-auto.png";
-import auto1n from "@/assets/image-route/auto1.png";
-import auto2 from "@/assets/image-route/auto2.png";
-import auto3 from "@/assets/image-route/auto3.png";
-import auto4 from "@/assets/image-route/auto4.png";
-import auto5 from "@/assets/image-route/auto5.png";
-import auto6 from "@/assets/image-route/auto6.png";
-import auto7 from "@/assets/image-route/auto7.png";
-import auto8 from "@/assets/image-route/auto8.png";
-import auto9 from "@/assets/image-route/auto9.png";
-import auto10 from "@/assets/image-route/auto10.png";
-import auto11 from "@/assets/image-route/auto11.png";
-import auto12 from "@/assets/image-route/auto12.png";
+import imgback from "@/assets/run4/lampBack.png";
+import play from "@/assets/run4/lampPlay.png";
+import start from "@/assets/run4/lampStart.png";
+import center from "@/assets/run4/lampCenter.png";
+import bgAuto from "@/assets/run4/lampBgAuto.png";
+import lamp1n from "@/assets/run4/lamp1.png";
+import lamp2 from "@/assets/run4/lamp2.png";
+import lamp3 from "@/assets/run4/lamp3.png";
+import lamp4 from "@/assets/run4/lamp4.png";
+import lamp5 from "@/assets/run4/lamp5.png";
+import lamp6 from "@/assets/run4/lamp6.png";
+import lamp7 from "@/assets/run4/lamp7.png";
+import lamp8 from "@/assets/run4/lamp8.png";
+import lamp9 from "@/assets/run4/lamp9.png";
+import lamp10 from "@/assets/run4/lamp10.png";
+import lamp11 from "@/assets/run4/lamp11.png";
+import lamp12 from "@/assets/run4/lamp12.png";
+import lampBox from "@/assets/run4/lampBox.png";
 export default {
   setup() {
     let imageReat=reactive({
       bgAuto,
+      lampBox
     })
     const imageObj = {
       center,
@@ -32,18 +34,18 @@ export default {
       imgback,
       play,
       start,
-      auto1n,
-      auto2,
-      auto3,
-      auto4,
-      auto5,
-      auto6,
-      auto7,
-      auto8,
-      auto9,
-      auto10,
-      auto11,
-      auto12,
+      lamp1n,
+      lamp2,
+      lamp3,
+      lamp4,
+      lamp5,
+      lamp6,
+      lamp7,
+      lamp8,
+      lamp9,
+      lamp10,
+      lamp11,
+      lamp12,
     };
     const router = new useRouter();
     const open=ref(false)
@@ -64,67 +66,67 @@ export default {
     let obj = reactive({
       resultList: [
         {
-          prize_img: imageObj.auto1n,
+          prize_img: imageObj.lamp1n,
           prize_id: "c10",
           order: 1,
         },
         {
-          prize_img: imageObj.auto2,
+          prize_img: imageObj.lamp2,
           prize_id: "c20",
           order: 2,
         },
         {
-          prize_img: imageObj.auto3,
+          prize_img: imageObj.lamp3,
           prize_id: "c30",
           order: 3,
         },
         {
-          prize_img: imageObj.auto4,
+          prize_img: imageObj.lamp4,
           prize_id: "c30",
           order: 4,
         },
         {
-          prize_img: imageObj.auto12,
+          prize_img: imageObj.lamp12,
           prize_id: "c120",
           order: 12,
         },
         {
-          prize_img: imageObj.auto5,
+          prize_img: imageObj.lamp5,
           prize_id: "c50",
           order: 5,
         },
 
         { order: -9 },
         {
-          prize_img: imageObj.auto11,
+          prize_img: imageObj.lamp11,
           prize_id: "c110",
           order: 11,
         },
 
         {
-          prize_img: imageObj.auto6,
+          prize_img: imageObj.lamp6,
           prize_id: "c60",
           order: 6,
         },
 
         {
-          prize_img: imageObj.auto10,
+          prize_img: imageObj.lamp10,
           prize_id: "c100",
           order: 10,
         },
 
         {
-          prize_img: imageObj.auto9,
+          prize_img: imageObj.lamp9,
           prize_id: "c90",
           order: 9,
         },
         {
-          prize_img: imageObj.auto8,
+          prize_img: imageObj.lamp8,
           prize_id: "c80",
           order: 8,
         },
         {
-          prize_img: imageObj.auto7,
+          prize_img: imageObj.lamp7,
           prize_id: "c70",
           order: 7,
         },
@@ -249,11 +251,12 @@ export default {
 </script>
 
 <template>
-  <div class="sudoku-container">
-    <div class="sudoku-back" @click="goBack">
+  <div class="lamp-container">
+    <img class="lampBox" :src="imageReat.lampBox" alt="">
+    <div class="lamp-back" @click="goBack">
       <img :src="imageObj.imgback" alt="" />
     </div>
-    <div class="sudoku-wrap">
+    <div class="lamp-wrap">
       <ul>
         <li
           v-for="(item, index) in obj.resultList"
@@ -296,13 +299,19 @@ export default {
 <style scoped>
 /* @import url("@/assets/reset.css"); */
 .button-box{
-  margin-top: 10vh;
+  margin-top: 5vh;
   display: flex;
   justify-content: space-evenly;
 }
-
+.lampBox{
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+}
 .buttom-item{
-  width: 100px;
+  width: 130px;
 }
 .buttom-item img{
   width: 100%;
@@ -312,6 +321,8 @@ export default {
   width: 100%;
   height: 100%;
   background: rgb(0, 0, 0,0.3);
+
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -319,16 +330,16 @@ export default {
 .model-img{
   width: 90%;
 }
-.sudoku-back{
+.lamp-back{
   margin-top: 20px;
-  width: 100px;
+  width: 70px;
 }
-.sudoku-back img{
+.lamp-back img{
   margin-left: 20px;
   width: 80%;
   height: 80%;
 }
-.sudoku-container {
+.lamp-container {
   width:100vw;
   height: 100vh;
   display: inline-block;
@@ -337,37 +348,41 @@ export default {
   background-position: 45%;
 
 }
-.sudoku-container section {
-  margin: 0 auto;
+.lamp-container section {
+  margin: 0 lamp;
 }
-.sudoku-wrap {
+.lamp-wrap {
   position: relative;
   width: 100%;
   height: 400px;
-  margin: 20px auto;
+  margin: 20px lamp;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center center;
   /* background: v-bind("'url(' + imageObj.bgBox + ')'") no-repeat; */
+  /* background: v-bind("'url(' + imageReat.lampBox + ')'") no-repeat;
   background-size: 100%;
+
+  background-position: -50% 0; */
 }
-.sudoku-wrap ul {
+.lamp-wrap ul {
   position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  display: grid;
-  /* grid-row-gap: 4px;
-  grid-column-gap:4px; */
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 25% 25% 25% 25%;
-  width: 85vw;
-  height: 85vw;
-  margin: 0 auto;
-  background-color: rgb(0, 0, 0,0.3);
+    top: 17vh;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 25% 25% 25% 25%;
+    width: 82vw;
+    /* height: 67vw; */
+    margin: 0 lamp;
+    /* background-color: rgb(0, 0, 0,0.3); */
+    border-radius: 10px;
+  /* background-color: rgb(0, 0, 0,0.3); */
+  
   border-radius: 10px;
 }
-.sudoku-wrap ul li {
+.lamp-wrap ul li {
   
   width: 100%;
   height: 100%;
@@ -375,26 +390,26 @@ export default {
   position: relative;
 }
 
-.sudoku-wrap ul li:nth-child(7) {
+.lamp-wrap ul li:nth-child(7) {
   grid-column-start: 2;
   grid-column-end: 4;
   grid-row-start: 2;
   grid-row-end: 4;
 }
-.sudoku-wrap ul li:nth-child(3),
-.sudoku-wrap ul li:nth-child(6),
-.sudoku-wrap ul li:nth-child(9) {
+.lamp-wrap ul li:nth-child(3),
+.lamp-wrap ul li:nth-child(6),
+.lamp-wrap ul li:nth-child(9) {
   margin-right: 0;
 }
-.sudoku-wrap ul li:nth-child(7),
-.sudoku-wrap ul li:nth-child(8),
-.sudoku-wrap ul li:nth-child(9) {
+.lamp-wrap ul li:nth-child(7),
+.lamp-wrap ul li:nth-child(8),
+.lamp-wrap ul li:nth-child(9) {
   margin-bottom: 0;
 }
-.sudoku-wrap ul li img {
+.lamp-wrap ul li img {
   width: 100%;
 }
-.sudoku-wrap ul .start {
+.lamp-wrap ul .start {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -407,17 +422,17 @@ export default {
   background-size: 80% 80%;
   background-position: center center;
 }
-.sudoku-wrap ul li.xx .item-xx {
+.lamp-wrap ul li.xx .item-xx {
   width: 1rem;
   height: 1rem;
   line-height: 0.4rem;
-  margin: 0.2rem auto 0 auto;
+  margin: 0.2rem lamp 0 lamp;
   background-color: #041726;
   padding: 0.14rem 0.14rem 0.14rem 0.16rem;
   font-size: 0.33rem;
   color: #035d68;
 }
-.sudoku-wrap ul li.rw {
+.lamp-wrap ul li.rw {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -426,19 +441,20 @@ export default {
   background-size: 100% 100%;
   background-position: center center;
 }
-.sudoku-wrap ul li.rw .header {
+.lamp-wrap ul li.rw .header {
   height: 30%;
 }
-.sudoku-wrap ul li.rw img {
-  width: 87%;
-  height: 87%;
-  margin: 0 auto;
+.lamp-wrap ul li.rw img {
+  width: 76%;
+    height: 76%;
+  margin: 0 0 0 5px;
+
 }
-.sudoku-wrap ul li.rw .name {
+.lamp-wrap ul li.rw .name {
   width: 100%;
   height: 100%;
   line-height: 0.32rem;
-  margin: 0 auto;
+  margin: 0 lamp;
   text-align: center;
   font-size: 0.23rem;
   /* background-image: url("img/name_bg.png"); */
@@ -447,12 +463,20 @@ export default {
   background-position: center center;
   color: #00ffff;
 }
-.sudoku-wrap ul li.active{
+
+.lamp-wrap ul li.rw:nth-child(1) img,.lamp-wrap ul li.rw:nth-child(4) img,.lamp-wrap ul li.rw:nth-child(10) img,.lamp-wrap ul li.rw:nth-child(13) img{
+  margin-top: -10px;
+  margin-left: -10px;
+  width: 100%;
+  height: 100%;
+}
+
+.lamp-wrap ul li.active{
   background-image: v-bind("'url(' + imageReat.bgAuto + ')'") ;
-  background-size: cover;
+  background-size: 107%;
 
 }
-.sudoku-wrap ul li.active::after {
+.lamp-wrap ul li.active::after {
   content: " ";
   display: block;
   position: absolute;
@@ -463,7 +487,7 @@ export default {
   /* background-color: rgba(188, 133, 28, 0.3); */
 
 }
-.sudoku-wrap ul li.active .name {
+.lamp-wrap ul li.active .name {
   /* background-image: url('img/name_current_bg.png'); */
   /* background-repeat: no-repeat;
   background-size: 100% 100%;
