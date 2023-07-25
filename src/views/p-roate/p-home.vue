@@ -1,13 +1,13 @@
 <script setup>
 import { useRouter, useRoute } from "vue-router";
-import lampBg from "@/assets/run4/lampBg.jpg";
+import magicBg from "@/assets/run5/magicBg.jpg";
 
 
-import lampEnter from "@/assets/run4/lampEnter.png";
+import magicEnter from "@/assets/run5/magicEnter.png";
 
 const imageObj = {
-  lampBg,
-  lampEnter
+  magicBg,
+  magicEnter
 };
 function routeAll() {
   const router = new useRouter();
@@ -25,7 +25,7 @@ const { goDetail } = routeAll();
 <template>
   <div class="container">
     <div >
-      <img class="start" @click="goDetail()" :src="imageObj.lampEnter" alt="">
+      <img class="start" @click="goDetail()" :src="imageObj.magicEnter" alt="">
     </div>
   </div>
 </template>
@@ -36,7 +36,7 @@ const { goDetail } = routeAll();
   align-items: center;
   width: 100%;
   height: 100%;
-  background: v-bind("'url(' + imageObj.lampBg + ')'") no-repeat;
+  background: v-bind("'url(' + imageObj.magicBg + ')'") no-repeat;
   background-size: cover;
   background-position: 45%;
 }

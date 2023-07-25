@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 150px;
+            height: 150px;
+        }
+
+        /* 定义步长图片动画关键帧 */
+        @keyframes image-animation {
+            0% {
+                background-image: url('./dong/00001.png');
+            }
+
+            25% {
+                background-image: url('./dong/00004.png');
+            }
+
+            75% {
+                background-image: url('./dong/00008.png');
+            }
+
+            100% {
+                background-image: url('./dong/00012.png');
+            }
+        }
+
+        /* 设置动画元素样式和动画 */
+        .animation {
+            width: 150px;
+            height: 150px;
+            background-image: url('./dong/00001.png');
+            background-repeat: no-repeat;
+            animation: image-animation 2s steps(4) infinite;
+            /* 2秒钟的步长图片动画，5帧图片，无限循环 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box animation">
+
+    </div>
+</body>
+
+</html>

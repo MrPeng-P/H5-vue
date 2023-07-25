@@ -1,19 +1,19 @@
 <script setup>
 import { useRouter, useRoute } from "vue-router";
-import lampBg from "@/assets/run4/lampBg.jpg";
-import lampResult from "@/assets/run4/lampResult.png";
-import lampEnter from "@/assets/run4/lampEnter.png";
-import lampHome from "@/assets/run4/lampHome.png";
-import lampAgain from "@/assets/run4/lampAgain.png";
-// import lampStar from "@/assets/run4/lampStar.gif";
+import magicBg from "@/assets/run5/magicBg.jpg";
+import magicResult from "@/assets/run5/magicResult.png";
+import magicEnter from "@/assets/run5/magicEnter.png";
+import magicHome from "@/assets/run5/magicHome.png";
+import magicAgain from "@/assets/run5/magicAgain.png";
+// import magicStar from "@/assets/run5/magicStar.gif";
 
 const imageObj = {
-  lampBg,
-  lampEnter,
-  lampResult,
-  lampHome,
-  lampAgain,
-  // lampStar
+  magicBg,
+  magicEnter,
+  magicResult,
+  magicHome,
+  magicAgain,
+  // magicStar
 };
 function routeAll() {
   const router = new useRouter();
@@ -32,22 +32,22 @@ const { goDetail,goHome } = routeAll();
 </script>
 
 <template>
-  <div class="containerlamp">
-    <div class="containerlamp-box">
-      <div class="modellamp"><img class="modellamp-img" :src="imageObj.lampResult" alt="" />
-        <!-- <img class="starlamp-img" :src="imageObj.lampStar" alt="" /> -->
+  <div class="containermagic">
+    <div class="containermagic-box">
+      <div class="modelmagic"><img class="modelmagic-img" :src="imageObj.magicResult" alt="" />
+        <!-- <img class="starmagic-img" :src="imageObj.magicStar" alt="" /> -->
       </div>
       <div class="button-list">
         <img
           class="start"
           @click="goHome()"
-          :src="imageObj.lampHome"
+          :src="imageObj.magicHome"
           alt=""
         />
         <img
           class="start"
           @click="goDetail()"
-          :src="imageObj.lampAgain"
+          :src="imageObj.magicAgain"
           alt=""
         />
       </div>
@@ -55,18 +55,18 @@ const { goDetail,goHome } = routeAll();
   </div>
 </template>
 <style scoped>
-.containerlamp {
+.containermagic {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
-  background: v-bind("'url(' + imageObj.lampBg + ')'") no-repeat;
+  background: v-bind("'url(' + imageObj.magicBg + ')'") no-repeat;
   background-size: cover;
   background-position: 45%;
   /* background-color: rgba(0, 0, 0, 0.3); */
 }
-.containerlamp-box{
+.containermagic-box{
   padding-top: 20vh;
     width: 100%;
     height: 100%;
@@ -77,14 +77,14 @@ const { goDetail,goHome } = routeAll();
   background-color: rgba(0, 0, 0, 0.3);
 
 }
-.modellamp{
+.modelmagic{
   position: relative;
 }
-.modellamp-img{
+.modelmagic-img{
     width: 350px;
 }
 
-.starlamp-img{
+.starmagic-img{
   position: absolute;
   top: 0;
   left: 50%;
