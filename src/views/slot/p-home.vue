@@ -1,37 +1,35 @@
 <script>
-import playfood from "@/assets/slotN1/playfood2.png";
-import boxfood from "@/assets/slotN1/boxfood.jpg";
-import anyfood from "@/assets/slotN1/changefood.png";
-import anyBoxfood from "@/assets/slotN1/anyBoxfood.png";
-import backfood from "@/assets/slotN1/backfood.png";
-import seniorityfood from "@/assets/slotN1/seniorityfood.png";
-import countfood from "@/assets/slotN1/countfood.png";
-import rulefood from "@/assets/slotN1/rulefood.png";
-import ruleDialogfood from "@/assets/slotN1/ruleDialogfood.png";
-import resultfood from "@/assets/slotN1/resultfood.png";
+import playfrutas from "@/assets/slotN2/playfrutas2.png";
+import boxfrutas from "@/assets/slotN2/boxfrutas.jpg";
+import anyfrutas from "@/assets/slotN2/changefrutas.png";
+import anyBoxfrutas from "@/assets/slotN2/anyBoxfrutas.png";
+import backfrutas from "@/assets/slotN2/backfrutas.png";
+import seniorityfrutas from "@/assets/slotN2/seniorityfrutas.png";
+import countfrutas from "@/assets/slotN2/countfrutas.png";
+import rulefrutas from "@/assets/slotN2/rulefrutas.png";
+import ruleDialogfrutas from "@/assets/slotN2/ruleDialogfrutas.png";
+import resultfrutas from "@/assets/slotN2/resultfrutas.png";
+import headfrutas from "@/assets/slotN2/headfrutas.png";
 
-// import star from "@/assets/slotN1/starfood.gif";
+// import star from "@/assets/slotN2/starfrutas.gif";
 import { useRouter, useRoute } from "vue-router";
-import food1 from "@/assets/slotN1/food1.png";
-import food2 from "@/assets/slotN1/food2.png";
-import food3 from "@/assets/slotN1/food3.png";
-import food4 from "@/assets/slotN1/food4.png";
-import food5 from "@/assets/slotN1/food5.png";
-import food6 from "@/assets/slotN1/food6.png";
-import food7 from "@/assets/slotN1/food7.png";
-import food8 from "@/assets/slotN1/food8.png";
-import food9 from "@/assets/slotN1/food9.png";
-import food10 from "@/assets/slotN1/food10.png";
-import food11 from "@/assets/slotN1/food11.png";
-import foodDong from "@/assets/slotN1/dong.png";
-import animation1 from "@/assets/slotN1/dong/00001.png";
-import animation4 from "@/assets/slotN1/dong/00004.png";
-import animation8 from "@/assets/slotN1/dong/00008.png";
-import animation12 from "@/assets/slotN1/dong/00012.png";
+import frutas1 from "@/assets/slotN2/frutas1.png";
+import frutas2 from "@/assets/slotN2/frutas2.png";
+import frutas3 from "@/assets/slotN2/frutas3.png";
+import frutas4 from "@/assets/slotN2/frutas4.png";
+import frutas5 from "@/assets/slotN2/frutas5.png";
+import frutas6 from "@/assets/slotN2/frutas6.png";
+import frutas7 from "@/assets/slotN2/frutas7.png";
+import frutas8 from "@/assets/slotN2/frutas8.png";
+
+import animation1 from "@/assets/slotN2/dong/00001.png";
+import animation4 from "@/assets/slotN2/dong/00004.png";
+import animation8 from "@/assets/slotN2/dong/00008.png";
+import animation12 from "@/assets/slotN2/dong/00012.png";
 
 
 import { inject } from "vue";
-// import football from "@/assets/slotN1/football.png";
+// import football from "@/assets/slotN2/football.png";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
@@ -41,13 +39,13 @@ export default {
     let countValue = ref(1000);
     let useCount = ref(0);
     let arrCount=reactive([{
-        count:'2000',
+        count:'700',
         value:0
     },{
-        count:'3000',
+        count:'600',
         value:0
     },{
-        count:'5500',
+        count:'900',
         value:0
     }])
     countValue.value = sessionStorage.getItem("countValue")
@@ -57,26 +55,26 @@ export default {
     const router = new useRouter();
     // 随机生成 12 张图的数组
     let randomImages = [];
-    const foodConfig = reactive({
+    const frutasConfig = reactive({
+      headfrutas,
       animation1,
       animation4,
       animation8,
       animation12,
-      resultfood,
-      anyfood,
-      playfood,
-      anyBoxfood,
-      boxfood,
-      backfood,
+      resultfrutas,
+      anyfrutas,
+      playfrutas,
+      anyBoxfrutas,
+      boxfrutas,
+      backfrutas,
       //   star,
-      foodDong,
-      seniorityfood,
-      countfood,
-      rulefood,
-      ruleDialogfood,
-      resultfood
+      seniorityfrutas,
+      countfrutas,
+      rulefrutas,
+      ruleDialogfrutas,
+      resultfrutas
     });
-    const foodList = reactive([
+    const frutasList = reactive([
       {
         name: "item1",
         size: 4,
@@ -92,11 +90,11 @@ export default {
         size: 12,
         imgList: [],
       },
-      {
-        name: "item4",
-        size: 12,
-        imgList: [],
-      },
+      // {
+      //   name: "item4",
+      //   size: 12,
+      //   imgList: [],
+      // },
     ]);
     let timeOhter = 0;
     let id;
@@ -105,49 +103,44 @@ export default {
     let buttonStatus = ref(true);
     const images = [
       {
-        img: food1,
-        name:'food1',
-        className: "animation",
-        count: 2000,
+        img: frutas1,
+      
       },
       {
-        img: food2,
-        name:'food2',
-        className: "animation",
-        count: 3000,
+        img: frutas2,
+     
       },
       {
-        img: food3,
-        name:'food3',
-        className: "animation",
-        count: 5500,
+        img: frutas3,
+   
       },
       {
-        img: food4,
+        img: frutas4,
+        name:'frutas1',
+        className: "animation",
+        count: 700,
+      },
+      {
+        img: frutas5,
         
       },
       {
-        img: food5,
+        img: frutas6,
+        name:'frutas2',
+        className: "animation",
+        count: 600,
       },
       {
-        img: food6,
-      },
-      {
-        img: food7,
+        img: frutas7,
        
       },
       {
-        img: food8,
+        img: frutas8,
+        name:'frutas3',
+        className: "animation",
+        count: 900,
       },
-      {
-        img: food9,
-      },
-      {
-        img: food10,
-      },
-      {
-        img: food11,
-      },
+     
     ];
     const allMethods = {
       run: () => {
@@ -162,11 +155,11 @@ export default {
         buttonStatus.value = false;
 
         allMethods.clear();
-        const boxLists = foodList.map((item) => {
+        const boxLists = frutasList.map((item) => {
           return document.getElementById(item.name);
         });
         boxLists[0].style.setProperty("background-position-x", "center");
-        boxLists[0].querySelectorAll(".foodp-item-img").forEach((child) => {
+        boxLists[0].querySelectorAll(".frutasp-item-img").forEach((child) => {
           child.style.setProperty("display", "none");
         });
         // boxLists.forEach((item)=>{
@@ -179,8 +172,8 @@ export default {
         //       0+'px'
         //     );
         // })
-        const content = document.getElementById("foodp-he");
-        const box2 = document.getElementById("foodp");
+        const content = document.getElementById("frutasp-he");
+        const box2 = document.getElementById("frutasp");
         const coords = { x: 0, y: 0 }; // Start at (0, 0)
         const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to(
@@ -203,12 +196,12 @@ export default {
               );
             }
 
-            if (timeOhter > 3000 && timeOhter <= 6000) {
-              boxLists[3].style.setProperty(
-                "background-position-y",
-                -coords.y + "px"
-              );
-            }
+            // if (timeOhter > 3000 && timeOhter <= 6000) {
+            //   boxLists[3].style.setProperty(
+            //     "background-position-y",
+            //     -coords.y + "px"
+            //   );
+            // }
 
             if (timeOhter > 0 && timeOhter <= 3000) {
               boxLists[0].style.setProperty(
@@ -243,38 +236,37 @@ export default {
             tween.stop();
             clearInterval(timeany);
           }
-          if (i > 0 && i < 4) {
+          if (i > 0 && i < 3) {
             boxLists[i].style.setProperty("background-position-x", "center");
-            boxLists[i].querySelectorAll(".foodp-item-img").forEach((child) => {
+            boxLists[i].querySelectorAll(".frutasp-item-img").forEach((child) => {
               child.style.setProperty("display", "none");
             });
           }
           if (i == 3) {
             boxLists[0].style.setProperty("background-position-x", 200 + "px");
-            boxLists[0].querySelectorAll(".foodp-item-img").forEach((child) => {
+            boxLists[0].querySelectorAll(".frutasp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 4) {
             boxLists[1].style.setProperty("background-position-x", 200 + "px");
-            boxLists[1].querySelectorAll(".foodp-item-img").forEach((child) => {
+            boxLists[1].querySelectorAll(".frutasp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 5) {
-            console.log('%c ..........boxLists[2].style.........','color:#31ef0e',boxLists[2].clientWidth)
             boxLists[2].style.setProperty("background-position-x", 200 + "px");
-            boxLists[2].querySelectorAll(".foodp-item-img").forEach((child) => {
+            boxLists[2].querySelectorAll(".frutasp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
-          if (i == 6) {
+          // if (i == 6) {
             
-            boxLists[3].style.setProperty("background-position-x", 200 + "px");
-            boxLists[3].querySelectorAll(".foodp-item-img").forEach((child) => {
-              child.style.setProperty("display", "block");
-            });
-          }
+          //   boxLists[3].style.setProperty("background-position-x", 200 + "px");
+          //   boxLists[3].querySelectorAll(".frutasp-item-img").forEach((child) => {
+          //     child.style.setProperty("display", "block");
+          //   });
+          // }
         }, 1000);
       },
       clear: () => {
@@ -298,7 +290,7 @@ export default {
         // 定义 8 张图的数组
 
         // 定义需要生成的总图片数量
-        const totalImages = 16;
+        const totalImages = 9;
 
         while (randomImages.length < totalImages) {
           // 从原始图片数组中随机选择一张图片
@@ -309,7 +301,7 @@ export default {
           randomImages.push(randomImage);
         }
 
-        allMethods.assignImageList(foodList, randomImages);
+        allMethods.assignImageList(frutasList, randomImages);
       },
       // 随机生成图像列表
       shuffleArray(array) {
@@ -318,11 +310,11 @@ export default {
           [array[i], array[j]] = [array[j], array[i]];
         }
         array.forEach((item) => {
-            if(item.name=='food1'){
+            if(item.name=='frutas1'){
                 arrCount[0].value++
-            }else if(item.name=='food2'){
+            }else if(item.name=='frutas2'){
                 arrCount[1].value++
-            }else if(item.name=='food3'){
+            }else if(item.name=='frutas3'){
                 arrCount[2].value++
             }
           if (item.count) {
@@ -332,14 +324,14 @@ export default {
         return array;
       },
 
-      // 将图像列表分配给foodList
-      assignImageList(foodList, images) {
+      // 将图像列表分配给frutasList
+      assignImageList(frutasList, images) {
         const shuffledImages = allMethods.shuffleArray(images.slice()); // 避免修改原始数组
     
         let currentIndex = 0;
 
-        foodList.forEach((item) => {
-          const numImages = Math.min(item.size, 4);
+        frutasList.forEach((item) => {
+          const numImages = Math.min(item.size, 3);
           item.imgList = shuffledImages.slice(
             currentIndex,
             currentIndex + numImages
@@ -347,7 +339,7 @@ export default {
           currentIndex += numImages;
         });
 
-        return foodList;
+        return frutasList;
       },
       goSeniority:()=>{
         router.push('/list')
@@ -358,9 +350,9 @@ export default {
       className,
       open,
       start,
-      foodConfig,
+      frutasConfig,
       randomImages,
-      foodList,
+      frutasList,
       countValue,
       useCount,
       showRuleValue,
@@ -371,30 +363,31 @@ export default {
 };
 </script>
 <template>
-  <div class="foodd-foodp">
-    <div class="foodd-back" @click="close"></div>
-    <div class="food-count">
-        <img :src="foodConfig.countfood" alt="">
+  <div class="frutasd-frutasp">
+    <div class="frutasd-back" @click="close"></div>
+    <div class="frutas-count">
+        <img :src="frutasConfig.countfrutas" alt="">
         {{ countValue }}
     </div>
     
   </div>
   <div :class="className">
-    <div class="foodp" id="foodp">
-      <div class="foodp-he"  id="foodp-he">
-        <img class="food-rule" @click="showRule" :src="foodConfig.rulefood" alt="">
-        <div class="foodp-hidden">
+    <img class="headfrutas" :src="frutasConfig.headfrutas" alt="">
+    <div class="frutasp" id="frutasp">
+      <div class="frutasp-he"  id="frutasp-he">
+        <img class="frutas-rule" @click="showRule" :src="frutasConfig.rulefrutas" alt="">
+        <div class="frutasp-hidden">
           <div
-            class="foodp-item"
+            class="frutasp-item"
             :id="item.name"
-            v-for="(item, index) in foodList"
+            v-for="(item, index) in frutasList"
           >
             <div
               v-for="(imgItem, imgIndex) in item.imgList"
               :class="
                 imgItem.className
-                  ? 'foodp-item-img ' + imgItem.className
-                  : 'foodp-item-img'
+                  ? 'frutasp-item-img ' + imgItem.className
+                  : 'frutasp-item-img'
               "
             >
               <img :src="imgItem.img" alt="" />
@@ -402,7 +395,7 @@ export default {
           </div>
         </div>
       </div>
-      <div class="buttonfood-box">
+      <div class="buttonfrutas-box">
         <div class="buttons" @click="run"></div>
       <div class="buttons2" @click="goSeniority"></div>
       </div>
@@ -410,13 +403,13 @@ export default {
     <Teleport to="body">
       <div v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="foodConfig.star" alt="" /> -->
-        <img class="model-img-bg" :src="foodConfig.resultfood" alt="" />
-        <div class="modelfood-list">
-            <div class="modelfood-item" v-for="(item,index) in arrCount" :key="index">
+        <!-- <img class="model-star" :src="frutasConfig.star" alt="" /> -->
+        <img class="model-img-bg" :src="frutasConfig.resultfrutas" alt="" />
+        <div class="modelfrutas-list">
+            <div class="modelfrutas-item" v-for="(item,index) in arrCount" :key="index">
                 {{ item.count+'X'+item.value }}
             </div>
-            <div class="modelfood-total">{{ useCount }}</div>
+            <div class="modelfrutas-total">{{ useCount }}</div>
         </div>
     
       </div>
@@ -425,8 +418,8 @@ export default {
     <Teleport to="body">
       <div v-if="showRuleValue" class="modal" @click="showRule">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="foodConfig.star" alt="" /> -->
-        <img class="model-img" :src="foodConfig.ruleDialogfood" alt="" />
+        <!-- <img class="model-star" :src="frutasConfig.star" alt="" /> -->
+        <img class="model-img" :src="frutasConfig.ruleDialogfrutas" alt="" />
       </div>
     </Teleport>
   </div>
@@ -438,7 +431,7 @@ export default {
 
   width: 280px;
 }
-.foodd-foodp {
+.frutasd-frutasp {
     display: flex;
     align-items: center;
   padding: 60px 15px;
@@ -449,7 +442,7 @@ export default {
   height: 60px;
   color: #fff;
 }
-.food-count{
+.frutas-count{
     padding-right: 40px;
     width: 100%;
     position: relative;
@@ -459,18 +452,17 @@ export default {
     font-size: 16px;
 
 }
-.food-count img{
+.frutas-count img{
     position: absolute;
-    top: -16px;
+    top: -7px;
     right: 0px;
     z-index: -1;
     width: 150px;
 }
-.foodd-back {
-  margin-top: 20px;
+.frutasd-back {
   width: 50px;
   height: 50px;
-  background: v-bind("'url(' + foodConfig.backfood + ')'") no-repeat;
+  background: v-bind("'url(' + frutasConfig.backfrutas + ')'") no-repeat;
   background-size: 100%;
   z-index: 999;
 }
@@ -478,12 +470,14 @@ export default {
   margin-top: -30%;
   width: 160px;
   height: 80px;
-  background: v-bind("'url(' + foodConfig.playfood + ')'") no-repeat;
+  background: v-bind("'url(' + frutasConfig.playfrutas + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 }
 .container {
-  background: v-bind("'url(' + foodConfig.boxfood + ')'") no-repeat;
+  display: flex;
+  flex-direction: column;
+  background: v-bind("'url(' + frutasConfig.boxfrutas + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -493,7 +487,7 @@ export default {
   align-items: center;
 }
 
-.foodp {
+.frutasp {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -502,53 +496,53 @@ export default {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background: v-bind("'url(' + foodConfig.anyBoxfood + ')'") no-repeat;
+  background: v-bind("'url(' + frutasConfig.anyBoxfrutas + ')'") no-repeat;
   background-size: 100%;
-  background-position: center 136px;
+  background-position: center 0;
   color: #fff;
   font-weight: 600;
   font-size: 26;
 }
 
-.buttonfood-box{
-    margin-top: -60px;
+.buttonfrutas-box{
+    margin-top: -95px;
     display: flex;
     width: 100%;
     justify-content: space-evenly   ;
 }
 .buttons {
-
-  width: 120px;
+margin:0 0 0 40px;
+  width: 100px;
   height: 80px;
   z-index: 999;
-  background: v-bind("'url(' + foodConfig.playfood + ')'") no-repeat;
+  background: v-bind("'url(' + frutasConfig.playfrutas + ')'") no-repeat;
   background-size: 100%;
 }
 .buttons2 {
- 
-  width: 120px;
+  margin:0 40px 0 0;
+  width: 100px;
   height: 80px;
   z-index: 999;
-  background: v-bind("'url(' + foodConfig.seniorityfood + ')'") no-repeat;
+  background: v-bind("'url(' + frutasConfig.seniorityfrutas + ')'") no-repeat;
   background-size: 100%;
 }
 
-.foodp-he {
+.frutasp-he {
   position: relative;
-  margin-top: 9%;
-  width: 188%;
-  height: 138vw;
+  /* margin-top: 34%; */
+  width: 148%;
+  height: 106vw;
   display: flex;
   justify-content: space-between;
-  transform: scale(0.46);
+  transform: scale(0.4);
 }
 
-.food-rule{
-    position: absolute;
-    top: -60px;
-    right: -60px;
+.frutas-rule{
+  position: absolute;
+    top: -223px;
+    right: -129px;
 }
-.foodp-hidden {
+.frutasp-hidden {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -556,7 +550,7 @@ export default {
   height: 100%;
   overflow: hidden;
 }
-.foodp-item {
+.frutasp-item {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -564,12 +558,12 @@ export default {
 
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + foodConfig.anyfood + ')'");
+  background: v-bind("'url(' + frutasConfig.anyfrutas + ')'");
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
 }
-.foodp-item-img {
+.frutasp-item-img {
   position: relative;
 
   display: none;
@@ -577,7 +571,7 @@ export default {
   height: 120px;
  
 }
-.foodp-item-img img {
+.frutasp-item-img img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -597,7 +591,7 @@ export default {
   height: 100vh;
   z-index: 9999;
   background-color: rgba(0, 0, 0, 0.5);
-  /* background: v-bind("'url(' + foodConfig.dialogfood + ')'") no-repeat; */
+  /* background: v-bind("'url(' + frutasConfig.dialogfrutas + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star {
@@ -610,10 +604,10 @@ export default {
 }
 .model-img-bg{
   position: absolute;
-  left: 50%;
-  top: 38%;
-  transform: translate(-50%,-50%);
-  width: 90%;
+    left: 50%;
+    top: 38%;
+    transform: translate(-50%,-50%) rotate(29deg);
+    width: 90%;
 }
 
 .start-bg {
@@ -626,38 +620,44 @@ export default {
   width: 100%;
 }
 
-.modelfood-list{
-    position: absolute;
+.modelfrutas-list{
+  position: absolute;
     left: 60%;
-    top: 38%;
+    top: 29%;
     transform: translate(-50%, -50%);
     width: 103px;
     /* top: 102px; */
     color: #893412;
     font-size: 18px;
+    transform: rotate(7deg) translateX(-36px);
 }
-.modelfood-item{
-    margin-bottom: 8px;
+.modelfrutas-item{
+    margin-bottom: 21px;
 }
-.modelfood-total{
+.modelfrutas-total{
     padding: 7px 14px;   
+}
+
+.headfrutas{
+  margin-top: 10vh;
+  width: 80%;
 }
 /* 定义步长图片动画关键帧 */
 @keyframes image-animation {
   0% {
-                background-image: v-bind("'url(' + foodConfig.animation1 + ')'");
+                background-image: v-bind("'url(' + frutasConfig.animation1 + ')'");
             }
 
             25% {
-                background-image: v-bind("'url(' + foodConfig.animation4 + ')'");
+                background-image: v-bind("'url(' + frutasConfig.animation4 + ')'");
             }
 
             75% {
-                background-image: v-bind("'url(' + foodConfig.animation8 + ')'");
+                background-image: v-bind("'url(' + frutasConfig.animation8 + ')'");
             }
 
             100% {
-                background-image: v-bind("'url(' + foodConfig.animation12 + ')'");
+                background-image: v-bind("'url(' + frutasConfig.animation12 + ')'");
             }
 }
 
@@ -665,7 +665,6 @@ export default {
 .animation {
   width: 150px;
   height: 150px;
-  background-image: v-bind("'url(' + foodConfig.foodDong + ')'");
   background-repeat: no-repeat;
   background-position-y: center;
   /* background-size: cover; */

@@ -1,7 +1,7 @@
 <script>
 
-import playfood from "@/assets/slotN1/playfood.png";
-import boxfood from "@/assets/slotN1/boxfood.jpg";
+import playfrutas from "@/assets/slotN2/playfrutas.png";
+import boxfrutas from "@/assets/slotN2/boxfrutas.jpg";
 import { onMounted, reactive, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
@@ -9,9 +9,9 @@ export default {
   setup() {
     const router = new useRouter();
     const className = "container";
-    const foodConfig = reactive({
-      playfood,
-      boxfood,
+    const frutasConfig = reactive({
+      playfrutas,
+      boxfrutas,
     });
    
 
@@ -25,7 +25,7 @@ export default {
     });
     return {
         className,
-      foodConfig,
+      frutasConfig,
       ...allMethods,
     };
   },
@@ -46,13 +46,13 @@ export default {
     margin-top: -30%;
     width: 160px;
     height: 264px;
-  background: v-bind("'url(' + foodConfig.playfood + ')'") no-repeat;
+  background: v-bind("'url(' + frutasConfig.playfrutas + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 
 }
 .container {
-  background: v-bind("'url(' + foodConfig.boxfood + ')'") no-repeat;
+  background: v-bind("'url(' + frutasConfig.boxfrutas + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -63,7 +63,7 @@ export default {
 }
 
 
-.foodp-he {
+.frutasp-he {
   position: relative;
     margin-top: 26%;
     width: 140%;
@@ -72,7 +72,7 @@ export default {
     justify-content: space-between;
     transform: scale(0.65);
 }
-.foodp-hidden{
+.frutasp-hidden{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -81,11 +81,11 @@ export default {
   overflow: hidden;
 
 }
-.foodp-item {
+.frutasp-item {
   
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + foodConfig.anyfood + ')'") ;
+  background: v-bind("'url(' + frutasConfig.anyfrutas + ')'") ;
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
@@ -103,7 +103,7 @@ export default {
     height: 100vh;
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.5);
-  /* background: v-bind("'url(' + foodConfig.dialogfood + ')'") no-repeat; */
+  /* background: v-bind("'url(' + frutasConfig.dialogfrutas + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star{

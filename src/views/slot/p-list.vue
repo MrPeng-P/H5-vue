@@ -1,7 +1,7 @@
 <script>
-import homefood from "@/assets/slotN1/homefood.png";
-import againfood from "@/assets/slotN1/againfood.png";
-import listfood from "@/assets/slotN1/listfood.jpg";
+import homefrutas from "@/assets/slotN2/homefrutas.png";
+import againfrutas from "@/assets/slotN2/againfrutas.png";
+import listfrutas from "@/assets/slotN2/listfrutas.jpg";
 import { onMounted, reactive, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
@@ -9,10 +9,10 @@ export default {
   setup() {
     const router = new useRouter();
     const className = "container";
-    const foodConfig = reactive({
-      listfood,
-      homefood,
-      againfood,
+    const frutasConfig = reactive({
+      listfrutas,
+      homefrutas,
+      againfrutas,
     });
     const list = reactive([
       {
@@ -84,7 +84,7 @@ export default {
     return {
       list,
       className,
-      foodConfig,
+      frutasConfig,
       ...allMethods,
     };
   },
@@ -92,13 +92,13 @@ export default {
 </script>
 <template>
   <div :class="className">
-    <div class="listfood">
-      <div class="itemfood" v-for="(item, index) in list" :key="index">
-        <div class="food-name">{{ item.name }}</div>
-        <div class="food-count">{{ item.count }}</div>
+    <div class="listfrutas">
+      <div class="itemfrutas" v-for="(item, index) in list" :key="index">
+        <div class="frutas-name">{{ item.name }}</div>
+        <div class="frutas-count">{{ item.count }}</div>
       </div>
     </div>
-    <div class="buttonfood-box">
+    <div class="buttonfrutas-box">
       <div class="buttons" @click="goHome"></div>
       <div class="buttons2" @click="goStart"></div>
     </div>
@@ -110,7 +110,7 @@ export default {
 
 <style scoped>
 .container {
-  background: v-bind("'url(' + foodConfig.listfood + ')'") no-repeat;
+  background: v-bind("'url(' + frutasConfig.listfrutas + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -122,7 +122,7 @@ export default {
   font-size: 14px;
 }
 
-.buttonfood-box {
+.buttonfrutas-box {
   margin-bottom: 18vh;
   display: flex;
   width: 100%;
@@ -132,17 +132,17 @@ export default {
   width: 120px;
   height: 80px;
   z-index: 999;
-  background: v-bind("'url(' + foodConfig.homefood + ')'") no-repeat;
+  background: v-bind("'url(' + frutasConfig.homefrutas + ')'") no-repeat;
   background-size: 100%;
 }
 .buttons2 {
   width: 120px;
   height: 80px;
   z-index: 999;
-  background: v-bind("'url(' + foodConfig.againfood + ')'") no-repeat;
+  background: v-bind("'url(' + frutasConfig.againfrutas + ')'") no-repeat;
   background-size: 100%;
 }
-.foodp-he {
+.frutasp-he {
   position: relative;
   margin-top: 26%;
   width: 140%;
@@ -151,7 +151,7 @@ export default {
   justify-content: space-between;
   transform: scale(0.65);
 }
-.foodp-hidden {
+.frutasp-hidden {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -159,19 +159,19 @@ export default {
   height: 100%;
   overflow: hidden;
 }
-.foodp-item {
+.frutasp-item {
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + foodConfig.anyfood + ')'");
+  background: v-bind("'url(' + frutasConfig.anyfrutas + ')'");
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
 }
-.listfood {
+.listfrutas {
   margin-left: 20px;
   margin-top: 22px;
   position: absolute;
-  top: 50%;
+  top: 61%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
@@ -181,19 +181,19 @@ export default {
   align-items: center;
   text-align: left;
 }
-.itemfood {
-  margin-top: 20px;
+.itemfrutas {
+  margin-top: 24px;
   display: flex;
 }
 
-.food-name {
+.frutas-name {
   width: 80px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.food-count{
+.frutas-count{
   width: 50px;
 }
 </style>
