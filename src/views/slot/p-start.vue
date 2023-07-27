@@ -1,7 +1,7 @@
 <script>
 
-import playfrutas from "@/assets/slotN2/playfrutas.png";
-import boxfrutas from "@/assets/slotN2/boxfrutas.jpg";
+import playfructification from "@/assets/slotN3/playfructification.png";
+import boxfructification from "@/assets/slotN3/boxfructification.jpg";
 import { onMounted, reactive, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
@@ -9,9 +9,9 @@ export default {
   setup() {
     const router = new useRouter();
     const className = "container";
-    const frutasConfig = reactive({
-      playfrutas,
-      boxfrutas,
+    const fructificationConfig = reactive({
+      playfructification,
+      boxfructification,
     });
    
 
@@ -25,7 +25,7 @@ export default {
     });
     return {
         className,
-      frutasConfig,
+      fructificationConfig,
       ...allMethods,
     };
   },
@@ -43,16 +43,16 @@ export default {
 
 
 .start{
-    margin-top: -30%;
+    margin-top: -55%;
     width: 160px;
     height: 264px;
-  background: v-bind("'url(' + frutasConfig.playfrutas + ')'") no-repeat;
+  background: v-bind("'url(' + fructificationConfig.playfructification + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 
 }
 .container {
-  background: v-bind("'url(' + frutasConfig.boxfrutas + ')'") no-repeat;
+  background: v-bind("'url(' + fructificationConfig.boxfructification + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -63,7 +63,7 @@ export default {
 }
 
 
-.frutasp-he {
+.fructificationp-he {
   position: relative;
     margin-top: 26%;
     width: 140%;
@@ -72,7 +72,7 @@ export default {
     justify-content: space-between;
     transform: scale(0.65);
 }
-.frutasp-hidden{
+.fructificationp-hidden{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -81,11 +81,11 @@ export default {
   overflow: hidden;
 
 }
-.frutasp-item {
+.fructificationp-item {
   
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + frutasConfig.anyfrutas + ')'") ;
+  background: v-bind("'url(' + fructificationConfig.anyfructification + ')'") ;
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
@@ -103,7 +103,7 @@ export default {
     height: 100vh;
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.5);
-  /* background: v-bind("'url(' + frutasConfig.dialogfrutas + ')'") no-repeat; */
+  /* background: v-bind("'url(' + fructificationConfig.dialogfructification + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star{

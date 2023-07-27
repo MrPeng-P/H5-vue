@@ -1,35 +1,35 @@
 <script>
-import playfrutas from "@/assets/slotN2/playfrutas2.png";
-import boxfrutas from "@/assets/slotN2/boxfrutas.jpg";
-import anyfrutas from "@/assets/slotN2/changefrutas.png";
-import anyBoxfrutas from "@/assets/slotN2/anyBoxfrutas.png";
-import backfrutas from "@/assets/slotN2/backfrutas.png";
-import seniorityfrutas from "@/assets/slotN2/seniorityfrutas.png";
-import countfrutas from "@/assets/slotN2/countfrutas.png";
-import rulefrutas from "@/assets/slotN2/rulefrutas.png";
-import ruleDialogfrutas from "@/assets/slotN2/ruleDialogfrutas.png";
-import resultfrutas from "@/assets/slotN2/resultfrutas.png";
-import headfrutas from "@/assets/slotN2/headfrutas.png";
+import playfructification from "@/assets/slotN3/playfructification2.png";
+import boxfructification from "@/assets/slotN3/boxfructification.jpg";
+import anyfructification from "@/assets/slotN3/changefructification.png";
+import anyBoxfructification from "@/assets/slotN3/anyBoxfructification.png";
+import backfructification from "@/assets/slotN3/backfructification.png";
+import seniorityfructification from "@/assets/slotN3/seniorityfructification.png";
+import countfructification from "@/assets/slotN3/countfructification.png";
+// import rulefructification from "@/assets/slotN3/rulefructification.png";
+import ruleDialogfructification from "@/assets/slotN3/ruleDialogfructification.png";
+import resultfructification from "@/assets/slotN3/resultfructification.png";
+// import headfructification from "@/assets/slotN3/headfructification.png";
 
-// import star from "@/assets/slotN2/starfrutas.gif";
+// import star from "@/assets/slotN3/starfructification.gif";
 import { useRouter, useRoute } from "vue-router";
-import frutas1 from "@/assets/slotN2/frutas1.png";
-import frutas2 from "@/assets/slotN2/frutas2.png";
-import frutas3 from "@/assets/slotN2/frutas3.png";
-import frutas4 from "@/assets/slotN2/frutas4.png";
-import frutas5 from "@/assets/slotN2/frutas5.png";
-import frutas6 from "@/assets/slotN2/frutas6.png";
-import frutas7 from "@/assets/slotN2/frutas7.png";
-import frutas8 from "@/assets/slotN2/frutas8.png";
+import fructification1 from "@/assets/slotN3/fructification1.png";
+import fructification2 from "@/assets/slotN3/fructification2.png";
+import fructification3 from "@/assets/slotN3/fructification3.png";
+import fructification4 from "@/assets/slotN3/fructification4.png";
+import fructification5 from "@/assets/slotN3/fructification5.png";
+import fructification6 from "@/assets/slotN3/fructification6.png";
+import fructification7 from "@/assets/slotN3/fructification7.png";
+import fructification8 from "@/assets/slotN3/fructification8.png";
 
-import animation1 from "@/assets/slotN2/dong/00001.png";
-import animation4 from "@/assets/slotN2/dong/00004.png";
-import animation8 from "@/assets/slotN2/dong/00008.png";
-import animation12 from "@/assets/slotN2/dong/00012.png";
+import animation1 from "@/assets/slotN3/dong/00001.png";
+import animation4 from "@/assets/slotN3/dong/00004.png";
+import animation8 from "@/assets/slotN3/dong/00008.png";
+import animation12 from "@/assets/slotN3/dong/00012.png";
 
 
 import { inject } from "vue";
-// import football from "@/assets/slotN2/football.png";
+// import football from "@/assets/slotN3/football.png";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
@@ -39,13 +39,13 @@ export default {
     let countValue = ref(1000);
     let useCount = ref(0);
     let arrCount=reactive([{
-        count:'700',
+        count:'1000',
         value:0
     },{
-        count:'600',
+        count:'1800',
         value:0
     },{
-        count:'900',
+        count:'2200',
         value:0
     }])
     countValue.value = sessionStorage.getItem("countValue")
@@ -55,26 +55,26 @@ export default {
     const router = new useRouter();
     // 随机生成 12 张图的数组
     let randomImages = [];
-    const frutasConfig = reactive({
-      headfrutas,
+    const fructificationConfig = reactive({
+      // headfructification,
       animation1,
       animation4,
       animation8,
       animation12,
-      resultfrutas,
-      anyfrutas,
-      playfrutas,
-      anyBoxfrutas,
-      boxfrutas,
-      backfrutas,
+      resultfructification,
+      anyfructification,
+      playfructification,
+      anyBoxfructification,
+      boxfructification,
+      backfructification,
       //   star,
-      seniorityfrutas,
-      countfrutas,
-      rulefrutas,
-      ruleDialogfrutas,
-      resultfrutas
+      seniorityfructification,
+      countfructification,
+      // rulefructification,
+      ruleDialogfructification,
+      resultfructification
     });
-    const frutasList = reactive([
+    const fructificationList = reactive([
       {
         name: "item1",
         size: 4,
@@ -103,42 +103,42 @@ export default {
     let buttonStatus = ref(true);
     const images = [
       {
-        img: frutas1,
+        img: fructification1,
       
       },
       {
-        img: frutas2,
+        img: fructification2,
      
       },
       {
-        img: frutas3,
-   
-      },
-      {
-        img: frutas4,
-        name:'frutas1',
+        img: fructification3,
+        name:'fructification2',
         className: "animation",
-        count: 700,
+        count: 1800,
       },
       {
-        img: frutas5,
-        
-      },
-      {
-        img: frutas6,
-        name:'frutas2',
-        className: "animation",
-        count: 600,
-      },
-      {
-        img: frutas7,
+        img: fructification4,
        
       },
       {
-        img: frutas8,
-        name:'frutas3',
+        img: fructification5,
+        
+      },
+      {
+        img: fructification6,
+        name:'fructification1',
         className: "animation",
-        count: 900,
+        count: 1000,
+      },
+      {
+        img: fructification7,
+        name:'fructification3',
+        className: "animation",
+        count: 2200,
+      },
+      {
+        img: fructification8,
+
       },
      
     ];
@@ -155,11 +155,11 @@ export default {
         buttonStatus.value = false;
 
         allMethods.clear();
-        const boxLists = frutasList.map((item) => {
+        const boxLists = fructificationList.map((item) => {
           return document.getElementById(item.name);
         });
         boxLists[0].style.setProperty("background-position-x", "center");
-        boxLists[0].querySelectorAll(".frutasp-item-img").forEach((child) => {
+        boxLists[0].querySelectorAll(".fructificationp-item-img").forEach((child) => {
           child.style.setProperty("display", "none");
         });
         // boxLists.forEach((item)=>{
@@ -172,8 +172,8 @@ export default {
         //       0+'px'
         //     );
         // })
-        const content = document.getElementById("frutasp-he");
-        const box2 = document.getElementById("frutasp");
+        const content = document.getElementById("fructificationp-he");
+        const box2 = document.getElementById("fructificationp");
         const coords = { x: 0, y: 0 }; // Start at (0, 0)
         const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to(
@@ -238,32 +238,32 @@ export default {
           }
           if (i > 0 && i < 3) {
             boxLists[i].style.setProperty("background-position-x", "center");
-            boxLists[i].querySelectorAll(".frutasp-item-img").forEach((child) => {
+            boxLists[i].querySelectorAll(".fructificationp-item-img").forEach((child) => {
               child.style.setProperty("display", "none");
             });
           }
           if (i == 3) {
             boxLists[0].style.setProperty("background-position-x", 200 + "px");
-            boxLists[0].querySelectorAll(".frutasp-item-img").forEach((child) => {
+            boxLists[0].querySelectorAll(".fructificationp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 4) {
             boxLists[1].style.setProperty("background-position-x", 200 + "px");
-            boxLists[1].querySelectorAll(".frutasp-item-img").forEach((child) => {
+            boxLists[1].querySelectorAll(".fructificationp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 5) {
             boxLists[2].style.setProperty("background-position-x", 200 + "px");
-            boxLists[2].querySelectorAll(".frutasp-item-img").forEach((child) => {
+            boxLists[2].querySelectorAll(".fructificationp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           // if (i == 6) {
             
           //   boxLists[3].style.setProperty("background-position-x", 200 + "px");
-          //   boxLists[3].querySelectorAll(".frutasp-item-img").forEach((child) => {
+          //   boxLists[3].querySelectorAll(".fructificationp-item-img").forEach((child) => {
           //     child.style.setProperty("display", "block");
           //   });
           // }
@@ -276,7 +276,7 @@ export default {
       openDialog: () => {
         open.value = false;
         buttonStatus.value = true;
-        ceshi();
+        // ceshi();
       },
       showRule:()=>{
         showRuleValue.value= !showRuleValue.value
@@ -301,7 +301,7 @@ export default {
           randomImages.push(randomImage);
         }
 
-        allMethods.assignImageList(frutasList, randomImages);
+        allMethods.assignImageList(fructificationList, randomImages);
       },
       // 随机生成图像列表
       shuffleArray(array) {
@@ -310,11 +310,11 @@ export default {
           [array[i], array[j]] = [array[j], array[i]];
         }
         array.forEach((item) => {
-            if(item.name=='frutas1'){
+            if(item.name=='fructification1'){
                 arrCount[0].value++
-            }else if(item.name=='frutas2'){
+            }else if(item.name=='fructification2'){
                 arrCount[1].value++
-            }else if(item.name=='frutas3'){
+            }else if(item.name=='fructification3'){
                 arrCount[2].value++
             }
           if (item.count) {
@@ -324,13 +324,13 @@ export default {
         return array;
       },
 
-      // 将图像列表分配给frutasList
-      assignImageList(frutasList, images) {
+      // 将图像列表分配给fructificationList
+      assignImageList(fructificationList, images) {
         const shuffledImages = allMethods.shuffleArray(images.slice()); // 避免修改原始数组
     
         let currentIndex = 0;
 
-        frutasList.forEach((item) => {
+        fructificationList.forEach((item) => {
           const numImages = Math.min(item.size, 3);
           item.imgList = shuffledImages.slice(
             currentIndex,
@@ -339,7 +339,7 @@ export default {
           currentIndex += numImages;
         });
 
-        return frutasList;
+        return fructificationList;
       },
       goSeniority:()=>{
         router.push('/list')
@@ -350,9 +350,9 @@ export default {
       className,
       open,
       start,
-      frutasConfig,
+      fructificationConfig,
       randomImages,
-      frutasList,
+      fructificationList,
       countValue,
       useCount,
       showRuleValue,
@@ -363,31 +363,31 @@ export default {
 };
 </script>
 <template>
-  <div class="frutasd-frutasp">
-    <div class="frutasd-back" @click="close"></div>
-    <div class="frutas-count">
-        <img :src="frutasConfig.countfrutas" alt="">
+  <div class="fructificationd-fructificationp">
+    <div class="fructificationd-back" @click="close"></div>
+    <div class="fructification-count" @click="showRule">
+        <img :src="fructificationConfig.countfructification" alt="">
         {{ countValue }}
     </div>
     
   </div>
   <div :class="className">
-    <img class="headfrutas" :src="frutasConfig.headfrutas" alt="">
-    <div class="frutasp" id="frutasp">
-      <div class="frutasp-he"  id="frutasp-he">
-        <img class="frutas-rule" @click="showRule" :src="frutasConfig.rulefrutas" alt="">
-        <div class="frutasp-hidden">
+    <!-- <img class="headfructification" :src="fructificationConfig.headfructification" alt=""> -->
+    <div class="fructificationp" id="fructificationp">
+      <div class="fructificationp-he"  id="fructificationp-he">
+        <!-- <img class="fructification-rule" @click="showRule" :src="fructificationConfig.rulefructification" alt=""> -->
+        <div class="fructificationp-hidden">
           <div
-            class="frutasp-item"
+            class="fructificationp-item"
             :id="item.name"
-            v-for="(item, index) in frutasList"
+            v-for="(item, index) in fructificationList"
           >
             <div
               v-for="(imgItem, imgIndex) in item.imgList"
               :class="
                 imgItem.className
-                  ? 'frutasp-item-img ' + imgItem.className
-                  : 'frutasp-item-img'
+                  ? 'fructificationp-item-img ' + imgItem.className
+                  : 'fructificationp-item-img'
               "
             >
               <img :src="imgItem.img" alt="" />
@@ -395,7 +395,7 @@ export default {
           </div>
         </div>
       </div>
-      <div class="buttonfrutas-box">
+      <div class="buttonfructification-box">
         <div class="buttons" @click="run"></div>
       <div class="buttons2" @click="goSeniority"></div>
       </div>
@@ -403,13 +403,13 @@ export default {
     <Teleport to="body">
       <div v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="frutasConfig.star" alt="" /> -->
-        <img class="model-img-bg" :src="frutasConfig.resultfrutas" alt="" />
-        <div class="modelfrutas-list">
-            <div class="modelfrutas-item" v-for="(item,index) in arrCount" :key="index">
+        <!-- <img class="model-star" :src="fructificationConfig.star" alt="" /> -->
+        <img class="model-img-bg" :src="fructificationConfig.resultfructification" alt="" />
+        <div class="modelfructification-list">
+            <div class="modelfructification-item" v-for="(item,index) in arrCount" :key="index">
                 {{ item.count+'X'+item.value }}
             </div>
-            <div class="modelfrutas-total">{{ useCount }}</div>
+            <div class="modelfructification-total">{{ useCount }}</div>
         </div>
     
       </div>
@@ -418,8 +418,8 @@ export default {
     <Teleport to="body">
       <div v-if="showRuleValue" class="modal" @click="showRule">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="frutasConfig.star" alt="" /> -->
-        <img class="model-img" :src="frutasConfig.ruleDialogfrutas" alt="" />
+        <!-- <img class="model-star" :src="fructificationConfig.star" alt="" /> -->
+        <img class="model-img" :src="fructificationConfig.ruleDialogfructification" alt="" />
       </div>
     </Teleport>
   </div>
@@ -431,7 +431,8 @@ export default {
 
   width: 280px;
 }
-.frutasd-frutasp {
+.fructificationd-fructificationp {
+  margin-top: 10vh;
     display: flex;
     align-items: center;
   padding: 60px 15px;
@@ -442,8 +443,8 @@ export default {
   height: 60px;
   color: #fff;
 }
-.frutas-count{
-    padding-right: 40px;
+.fructification-count{
+  padding-right: 40px;
     width: 100%;
     position: relative;
     display: flex;
@@ -452,32 +453,34 @@ export default {
     font-size: 16px;
 
 }
-.frutas-count img{
-    position: absolute;
-    top: -7px;
-    right: 0px;
+.fructification-count img{
+  position: absolute;
+    top: -11px;
+    right: 1px;
     z-index: -1;
-    width: 150px;
+    width: 132px;
 }
-.frutasd-back {
-  width: 50px;
-  height: 50px;
-  background: v-bind("'url(' + frutasConfig.backfrutas + ')'") no-repeat;
-  background-size: 100%;
-  z-index: 999;
+.fructificationd-back {
+
+  background: v-bind("'url(' + fructificationConfig.backfructification + ')'") no-repeat;
+ 
+  width: 45px;
+    height: 46px;
+    background-size: 100%;
+    z-index: 999;
 }
 .start {
   margin-top: -30%;
   width: 160px;
   height: 80px;
-  background: v-bind("'url(' + frutasConfig.playfrutas + ')'") no-repeat;
+  background: v-bind("'url(' + fructificationConfig.playfructification + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 }
 .container {
   display: flex;
   flex-direction: column;
-  background: v-bind("'url(' + frutasConfig.boxfrutas + ')'") no-repeat;
+  background: v-bind("'url(' + fructificationConfig.boxfructification + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -487,7 +490,7 @@ export default {
   align-items: center;
 }
 
-.frutasp {
+.fructificationp {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -496,7 +499,7 @@ export default {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background: v-bind("'url(' + frutasConfig.anyBoxfrutas + ')'") no-repeat;
+  background: v-bind("'url(' + fructificationConfig.anyBoxfructification + ')'") no-repeat;
   background-size: 100%;
   background-position: center 0;
   color: #fff;
@@ -504,8 +507,8 @@ export default {
   font-size: 26;
 }
 
-.buttonfrutas-box{
-    margin-top: -95px;
+.buttonfructification-box{
+    margin-top: -70px;
     display: flex;
     width: 100%;
     justify-content: space-evenly   ;
@@ -515,7 +518,7 @@ margin:0 0 0 40px;
   width: 100px;
   height: 80px;
   z-index: 999;
-  background: v-bind("'url(' + frutasConfig.playfrutas + ')'") no-repeat;
+  background: v-bind("'url(' + fructificationConfig.playfructification + ')'") no-repeat;
   background-size: 100%;
 }
 .buttons2 {
@@ -523,26 +526,26 @@ margin:0 0 0 40px;
   width: 100px;
   height: 80px;
   z-index: 999;
-  background: v-bind("'url(' + frutasConfig.seniorityfrutas + ')'") no-repeat;
+  background: v-bind("'url(' + fructificationConfig.seniorityfructification + ')'") no-repeat;
   background-size: 100%;
 }
 
-.frutasp-he {
+.fructificationp-he {
   position: relative;
-  /* margin-top: 34%; */
-  width: 148%;
-  height: 106vw;
-  display: flex;
-  justify-content: space-between;
-  transform: scale(0.4);
+    margin-top: 21%;
+    width: 123%;
+    height: 112vw;
+    display: flex;
+    justify-content: space-between;
+    transform: scale(0.55);
 }
 
-.frutas-rule{
+.fructification-rule{
   position: absolute;
     top: -223px;
     right: -129px;
 }
-.frutasp-hidden {
+.fructificationp-hidden {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -550,7 +553,7 @@ margin:0 0 0 40px;
   height: 100%;
   overflow: hidden;
 }
-.frutasp-item {
+.fructificationp-item {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -558,12 +561,12 @@ margin:0 0 0 40px;
 
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + frutasConfig.anyfrutas + ')'");
+  background: v-bind("'url(' + fructificationConfig.anyfructification + ')'");
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
 }
-.frutasp-item-img {
+.fructificationp-item-img {
   position: relative;
 
   display: none;
@@ -571,13 +574,13 @@ margin:0 0 0 40px;
   height: 120px;
  
 }
-.frutasp-item-img img {
+.fructificationp-item-img img {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1.1);
   z-index: -1;
-  width: 80%;
+  width: 100%;
   height: 80%;
 }
 .modal {
@@ -590,8 +593,8 @@ margin:0 0 0 40px;
   width: 100vw;
   height: 100vh;
   z-index: 9999;
-  background-color: rgba(0, 0, 0, 0.5);
-  /* background: v-bind("'url(' + frutasConfig.dialogfrutas + ')'") no-repeat; */
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  /* background: v-bind("'url(' + fructificationConfig.dialogfructification + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star {
@@ -599,15 +602,18 @@ margin:0 0 0 40px;
   width: 50%;
 }
 .model-img {
-  width: 90%;
-  margin-top: 20vh;
+  position: absolute;
+    left: 48%;
+    top: 35%;
+    transform: translate(-50%,-50%);
+    width: 70%;
 }
 .model-img-bg{
   position: absolute;
-    left: 50%;
-    top: 38%;
-    transform: translate(-50%,-50%) rotate(29deg);
-    width: 90%;
+    left: 48%;
+    top: 35%;
+    transform: translate(-50%,-50%);
+    width: 70%;
 }
 
 .start-bg {
@@ -620,44 +626,45 @@ margin:0 0 0 40px;
   width: 100%;
 }
 
-.modelfrutas-list{
+.modelfructification-list{
   position: absolute;
-    left: 60%;
-    top: 29%;
+  left: 60%;
+    top: 39.5%;
+
     transform: translate(-50%, -50%);
     width: 103px;
     /* top: 102px; */
-    color: #893412;
-    font-size: 18px;
-    transform: rotate(7deg) translateX(-36px);
+    color: #fff;
+    font-size: 16px;
+    /* transform: rotate(7deg) translateX(-36px); */
 }
-.modelfrutas-item{
-    margin-bottom: 21px;
+.modelfructification-item{
+    margin-bottom: 11px;
 }
-.modelfrutas-total{
+.modelfructification-total{
     padding: 7px 14px;   
 }
 
-.headfrutas{
+.headfructification{
   margin-top: 10vh;
   width: 80%;
 }
 /* 定义步长图片动画关键帧 */
 @keyframes image-animation {
   0% {
-                background-image: v-bind("'url(' + frutasConfig.animation1 + ')'");
+                background-image: v-bind("'url(' + fructificationConfig.animation1 + ')'");
             }
 
             25% {
-                background-image: v-bind("'url(' + frutasConfig.animation4 + ')'");
+                background-image: v-bind("'url(' + fructificationConfig.animation4 + ')'");
             }
 
             75% {
-                background-image: v-bind("'url(' + frutasConfig.animation8 + ')'");
+                background-image: v-bind("'url(' + fructificationConfig.animation8 + ')'");
             }
 
             100% {
-                background-image: v-bind("'url(' + frutasConfig.animation12 + ')'");
+                background-image: v-bind("'url(' + fructificationConfig.animation12 + ')'");
             }
 }
 
@@ -671,7 +678,7 @@ margin:0 0 0 40px;
   /* 2秒钟的步长图片动画，5帧图片，无限循环 */
     background-position-y: center;
     background-position-x: center;
-    background-size:  140%;;
+    background-size:  99%;;
     
     animation: image-animation 2s steps(4) infinite;
 }

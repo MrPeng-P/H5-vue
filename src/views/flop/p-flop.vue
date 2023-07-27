@@ -1,29 +1,29 @@
 <script setup>
 import { onMounted, reactive, ref } from "vue";
-import bgBox from "@/assets/flop2/bg-2.jpg";
-import gui from "@/assets/flop2/gui.png";
-import box from "@/assets/flop2/box.png";
-import imgGui1 from "@/assets/flop2/pin1.png";
-import imgGui2 from "@/assets/flop2/pin2.png";
-import imgGui3 from "@/assets/flop2/pin3.png";
-import imgGui4 from "@/assets/flop2/pin4.png";
-import imgGui5 from "@/assets/flop2/pin5.png";
-import imgGui6 from "@/assets/flop2/pin6.png";
-import imgBack from "@/assets/flop2/back.png";
-import imgOver from "@/assets/flop2/over.png";
-import imgAgain from "@/assets/flop2/again.png";
-import useTime from "@/assets/flop2/use-time.png";
+import elvesBg from "@/assets/flop3/elvesBg.jpg";
+import elvesGui from "@/assets/flop3/elvesGui.png";
+// import box from "@/assets/flop3/box.png";
+import imgGui1 from "@/assets/flop3/elves1.png";
+import imgGui2 from "@/assets/flop3/elves2.png";
+import imgGui3 from "@/assets/flop3/elves3.png";
+import imgGui4 from "@/assets/flop3/elves4.png";
+import imgGui5 from "@/assets/flop3/elves5.png";
+// import imgGui6 from "@/assets/flop3/elves6.png";
+import elvesBack from "@/assets/flop3/elvesBack.png";
+import elvesOver from "@/assets/flop3/elvesOver.png";
+import elvesAgain from "@/assets/flop3/elvesAgain.png";
+import elvesTime from "@/assets/flop3/elvesTime.png";
 import { useRouter } from "vue-router";
 import { inject } from "vue";
 const ceshi = inject("reload");
 const imageObj = {
-  bgBox,
-  gui,
-  imgBack,
-  useTime,
-  imgOver,
-  imgAgain,
-  box
+  elvesBg,
+  elvesGui,
+  elvesBack,
+  elvesTime,
+  elvesOver,
+  elvesAgain,
+  // box
 };
 const flotList = [
   { name: "p-diamond", img: imgGui1 },
@@ -36,8 +36,8 @@ const flotList = [
   { name: "p-bolt", img: imgGui4 },
   { name: "p-P10", img: imgGui5 },
   { name: "p-P10", img: imgGui5 },
-  { name: "p-P6", img: imgGui6 },
-  { name: "p-P6", img: imgGui6 },
+  // { name: "p-P6", img: imgGui6 },
+  // { name: "p-P6", img: imgGui6 },
 ];
 const step = ref("");
 const setp = ref(true);
@@ -160,7 +160,7 @@ onMounted(async () => {
 <template>
   <div class="content">
     <div class="back-img" @click="goHome()">
-      <img :src="imageObj.imgBack" alt="" />
+      <img :src="imageObj.elvesBack" alt="" />
     </div>
     <ul class="flop-box">
       <li
@@ -181,13 +181,13 @@ onMounted(async () => {
     </ul>
     <div class="use-box">
       <div class="use-txt">{{ step }}</div>
-      <img class="use-time" :src="imageObj.useTime" alt="" />
+      <img class="use-time" :src="imageObj.elvesTime" alt="" />
     </div>
   </div>
   <Teleport to="body">
     <div v-if="!open" class="modal" @click="useFlot().openDialog()">
-      <img class="model-star" :src="imageObj.imgOver" alt="" />
-      <img class="model-img" :src="imageObj.imgAgain" alt="" />
+      <img class="model-star" :src="imageObj.elvesOver" alt="" />
+      <img class="model-img" :src="imageObj.elvesAgain" alt="" />
     </div>
   </Teleport>
 </template>
@@ -195,11 +195,19 @@ onMounted(async () => {
 .content {
   width: 100%;
   height: 100%;
-  background: v-bind("'url(' + imageObj.bgBox + ')'") no-repeat;
+  background: v-bind("'url(' + imageObj.elvesBg + ')'") no-repeat;
   background-size: 100% 100%;
 }
 .back-img {
-  padding: 0 20px 20px;
+  padding: 60px 20px 0px;
+}
+
+.flop-item:nth-child(1){
+  margin-left: 10px;
+  /* margin-left: 10%; */
+}
+.flop-item:nth-child(2){
+  margin-right: 10px;
 }
 .use-box {
   position: relative;
@@ -213,7 +221,7 @@ onMounted(async () => {
 .use-txt {
   display: flex;
   justify-content: center;
-  margin-right: 20px;
+  margin-right: -7px;
   width: 100px;
   text-align: center;
   font-size: 20px;
@@ -224,16 +232,16 @@ onMounted(async () => {
   width: 200px;
 }
 .back-img img {
-  width: 80px;
+  width: 55px;
 }
 .flop-box {
   padding: 66px 70px 26px 67px;
-  background: v-bind("'url(' + imageObj.box + ')'") no-repeat;
+  /* background: v-bind("'url(' + imageObj.box + ')'") no-repeat; */
   background-size: 100% 100%;
   width: 100%;
   height: 450px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   transform: scale(1.05);
 }
@@ -248,7 +256,9 @@ onMounted(async () => {
   transition: transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   transform: perspective(800px) rotateY(0) ;
   transform-style: preserve-3d;
-  transform-origin: left 0;
+  transform-origin: center 0;
+  background: v-bind("'url(' + imageObj.elvesGui + ')'") no-repeat;
+  background-size: 100% 100%;
 }
 
 
@@ -264,14 +274,13 @@ onMounted(async () => {
 }
 
 .active {
-  background: v-bind("'url(' + imageObj.gui + ')'") no-repeat;
-  background-size: 100% 100%;
+ 
 
   /* animation: vanish 1s forwards; */
   /* transform: perspective(800px) rotateY(180deg); */
   transition: transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  transform: perspective(800px) rotateY(180deg) translateX(-80px);
-  transform-origin: left 0;
+  transform:  rotateY(180deg);
+  transform-origin: center 0;
   transform-style: preserve-3d;
 }
 .backface {

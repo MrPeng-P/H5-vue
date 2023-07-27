@@ -24,7 +24,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/imgfrutas/[hash][ext]",
+          filename: "assets/imgelves/[hash][ext]",
         },
       },
     ],
@@ -36,7 +36,7 @@ module.exports = {
     },
   },
   output: {
-    filename: "assets/frutasJs/frutas-[hash].js",
+    filename: "assets/elvesJs/elves-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [
