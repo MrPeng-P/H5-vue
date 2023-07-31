@@ -1,13 +1,13 @@
 <script setup>
 import { useRouter, useRoute } from "vue-router";
-import assassinBg from "@/assets/flop4/assassinBg.jpg";
+import weirdBg from "@/assets/flop6/weirdBg.jpg";
 
 
-import assassinIn from "@/assets/flop4/assassinIn.png";
+import weirdIn from "@/assets/flop6/weirdIn.png";
 
 const imageObj = {
-  assassinBg,
-  assassinIn
+  weirdBg,
+  weirdIn
 };
 function routeAll() {
   const router = new useRouter();
@@ -24,7 +24,7 @@ const { goDetail } = routeAll();
 <template>
   <div class="content">
     <div >
-      <img class="assassinIn" @click="goDetail()" :src="imageObj.assassinIn" alt="">
+      <img class="weirdIn" @click="goDetail()" :src="imageObj.weirdIn" alt="">
     </div>
   </div>
 </template>
@@ -35,11 +35,11 @@ const { goDetail } = routeAll();
   align-items: center;
   width: 100%;
   height: 100%;
-  background: v-bind("'url(' + imageObj.assassinBg + ')'") no-repeat;
+  background: v-bind("'url(' + imageObj.weirdBg + ')'") no-repeat;
   background-size: 100% 100%;
   background-position: 45%;
 }
-.assassinIn{
+.weirdIn{
   width: 150px;
 }
 

@@ -89,10 +89,8 @@ export default {
 
 <template>
   <!-- <pGame /> -->
-  <div class="boxd" @click="lockLandscapeOrientation()">
     <router-view v-if="isRouterAlive"></router-view>
-    <button class="buttonsT" @click.stop="unlockOrientation()">非全屏</button>
-  </div>
+    <!-- <button class="buttonsT" @click.stop="unlockOrientation()">非全屏</button> -->
   <!-- <pRoate></pRoate> -->
 </template>
 

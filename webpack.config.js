@@ -3,11 +3,11 @@ const { VueLoaderPlugin } = require("vue-loader");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { DefinePlugin } = require("webpack");
 var JavaScriptObfuscator = require("webpack-obfuscator");
-const JunkCodePlugin = require('./junkCodePlugin');
+// const JunkCodePlugin = require("./junkCodePlugin");
 const HtmlMinimizerPlugin = require("html-minimizer-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-const { createProxyMiddleware } = require('http-proxy-middleware');
+const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
+const { createProxyMiddleware } = require("http-proxy-middleware");
 
 module.exports = {
   entry: {
@@ -27,7 +27,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/imgassassin/[hash][ext]",
+          filename: "assets/imgweirdIn/[hash][ext]",
         },
       },
     ],
@@ -39,11 +39,11 @@ module.exports = {
     },
   },
   output: {
-    filename: "assets/assassinJs/assassin-[hash].js",
+    filename: "assets/weirdInJs/weirdIn-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [
-    new JunkCodePlugin(),
+    // new JunkCodePlugin(),
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./index.html"),
@@ -53,87 +53,87 @@ module.exports = {
       __VUE_PROD_DEVTOOLS__: false,
       __VUE_OPTIONS_API__: false,
     }),
-    // new JavaScriptObfuscator(
-    //   {
-    //     compact: true,
-    //     controlFlowFlattening: true,
-    //     controlFlowFlatteningThreshold: 0.75,
-    //     numbersToExpressions: true,
-    //     simplify: true,
-    //     stringArrayShuffle: true,
-    //     splitStrings: true,
-    //     splitStringsChunkLength: 10,
-    //     rotateUnicodeArray: true,
-    //     deadCodeInjection: true,
-    //     deadCodeInjectionThreshold: 0.4,
-    //     debugProtection: false,
-    //     disableConsoleOutput: true,
-    //     domainLock: [],
-    //     identifierNamesGenerator: "hexadecimal",
-    //     identifiersPrefix: "",
-    //     inputFileName: "",
-    //     log: true,
-    //     renameGlobals: true,
-    //     reservedNames: [],
-    //     reservedStrings: [],
-    //     seed: 0,
-    //     selfDefending: true,
-    //     sourceMap: false,
-    //     sourceMapBaseUrl: "",
-    //     sourceMapFileName: "",
-    //     sourceMapMode: "separate",
-    //     stringArray: true,
-    //     stringArrayEncoding: ["base64"],
-    //     stringArrayThreshold: 0.75,
-    //     target: "browser",
-    //     transformObjectKeys: true,
-    //     unicodeEscapeSequence: true,
+    new JavaScriptObfuscator(
+      {
+        compact: true,
+        controlFlowFlattening: true,
+        controlFlowFlatteningThreshold: 0.75,
+        numbersToExpressions: true,
+        simplify: true,
+        stringArrayShuffle: true,
+        splitStrings: true,
+        splitStringsChunkLength: 10,
+        rotateUnicodeArray: true,
+        deadCodeInjection: true,
+        deadCodeInjectionThreshold: 0.4,
+        debugProtection: false,
+        disableConsoleOutput: true,
+        domainLock: [],
+        identifierNamesGenerator: "hexadecimal",
+        identifiersPrefix: "",
+        inputFileName: "",
+        log: true,
+        renameGlobals: true,
+        reservedNames: [],
+        reservedStrings: [],
+        seed: 0,
+        selfDefending: true,
+        sourceMap: false,
+        sourceMapBaseUrl: "",
+        sourceMapFileName: "",
+        sourceMapMode: "separate",
+        stringArray: true,
+        stringArrayEncoding: ["base64"],
+        stringArrayThreshold: 0.75,
+        target: "browser",
+        transformObjectKeys: true,
+        unicodeEscapeSequence: true,
 
-    //     domainLockRedirectUrl: "about:blank",
-    //     forceTransformStrings: [],
-    //     identifierNamesCache: null,
-    //     identifiersDictionary: [],
-    //     ignoreImports: true,
-    //     optionsPreset: "default",
-    //     renameProperties: false,
-    //     renamePropertiesMode: "safe",
-    //     sourceMapSourcesMode: "sources-content",
+        domainLockRedirectUrl: "about:blank",
+        forceTransformStrings: [],
+        identifierNamesCache: null,
+        identifiersDictionary: [],
+        ignoreImports: true,
+        optionsPreset: "default",
+        renameProperties: false,
+        renamePropertiesMode: "safe",
+        sourceMapSourcesMode: "sources-content",
 
-    //     stringArrayCallsTransform: true,
-    //     stringArrayCallsTransformThreshold: 0.5,
+        stringArrayCallsTransform: true,
+        stringArrayCallsTransformThreshold: 0.5,
 
-    //     stringArrayIndexesType: ["hexadecimal-number"],
-    //     stringArrayIndexShift: true,
-    //     stringArrayRotate: true,
-    //     stringArrayWrappersCount: 1,
-    //     stringArrayWrappersChainedCalls: true,
-    //     stringArrayWrappersParametersMaxCount: 2,
-    //     stringArrayWrappersType: "variable",
-    //   },
-    //   []
-    // ),
-    // new HtmlMinimizerPlugin({
-    //   minimizerOptions: {
-    //     collapseWhitespace: true,
-    //     removeComments: true,
-    //     removeRedundantAttributes: true,
-    //     removeScriptTypeAttributes: true,
-    //     removeStyleLinkTypeAttributes: true,
-    //     removeEmptyAttributes: true,
-    //     minifyCSS: true,
-    //     // minifyJS: true,
-    //   },
-    // }),
+        stringArrayIndexesType: ["hexadecimal-number"],
+        stringArrayIndexShift: true,
+        stringArrayRotate: true,
+        stringArrayWrappersCount: 1,
+        stringArrayWrappersChainedCalls: true,
+        stringArrayWrappersParametersMaxCount: 2,
+        stringArrayWrappersType: "variable",
+      },
+      []
+    ),
+    new HtmlMinimizerPlugin({
+      minimizerOptions: {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        removeEmptyAttributes: true,
+        minifyCSS: true,
+        // minifyJS: true,
+      },
+    }),
   ],
   devServer: {
     // ...其他 devServer 配置项...
 
     proxy: {
-      '/api': {
-        target: 'http://api.example.com', // 目标代理地址
+      "/api": {
+        target: "http://api.example.com", // 目标代理地址
         changeOrigin: true, // 设置请求头中的 Host 为 target，解决跨域问题
         pathRewrite: {
-          '^/api': '', // 将请求路径中的 /api 替换为空，实现代理转发
+          "^/api": "", // 将请求路径中的 /api 替换为空，实现代理转发
         },
       },
     },
