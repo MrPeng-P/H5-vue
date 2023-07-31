@@ -12,6 +12,7 @@ import weirdBack from "@/assets/flop6/weirdBack.png";
 import weirdOver from "@/assets/flop6/weirdOver.png";
 import weirdAgain from "@/assets/flop6/weirdAgain.png";
 import weirdTime from "@/assets/flop6/weirdTime.png";
+import weirdHead from "@/assets/flop6/weirdHead.png";
 import { useRouter } from "vue-router";
 import { inject } from "vue";
 const ceshi = inject("reload");
@@ -22,6 +23,7 @@ const imageObj = {
   weirdTime,
   weirdOver,
   weirdAgain,
+  weirdHead
   // box
 };
 const flotList = [
@@ -160,6 +162,7 @@ onMounted(async () => {
     <div class="back-img" @click="goHome()">
       <img :src="imageObj.weirdBack" alt="" />
     </div>
+    <img class="weirdHead" :src="imageObj.weirdHead" alt="">
     <ul class="weird-box">
       <li
         v-for="(item, index) in FlopData.boxList"
@@ -200,15 +203,15 @@ onMounted(async () => {
   padding:34px 20px ;
 }
 
-/* .weird-item:nth-child(1){
-  margin-left: 10px;
+.weird-item:nth-child(1){
+  margin-left: 50px;
 }
 .weird-item:nth-child(2){
-  margin-right: 10px;
-} */
-.weird-item:nth-child(2n){
-  margin:0 5px;
+  margin-right: 50px;
 }
+/* .weird-item:nth-child(2n){
+  margin:0 5px;
+} */
 .weird-box {
   position: relative;
 
@@ -226,6 +229,10 @@ onMounted(async () => {
     text-align: center;
     font-size: 26px;
 }
+.weirdHead{
+  margin: -60px 0 0 20%;
+width: 280px;
+}
 .weird-time {
   position: absolute;
 
@@ -239,7 +246,7 @@ onMounted(async () => {
   /* background: v-bind("'url(' + imageObj.box + ')'") no-repeat; */
   background-size: 100% 100%;
   width: 100%;
-  height: 450px;
+  height: 410px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
