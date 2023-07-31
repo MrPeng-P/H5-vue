@@ -3,7 +3,7 @@ const { VueLoaderPlugin } = require("vue-loader");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { DefinePlugin } = require("webpack");
 var JavaScriptObfuscator = require("webpack-obfuscator");
-// const JunkCodePlugin = require("./junkCodePlugin");
+const JunkCodePlugin = require("./junkCodePlugin");
 const HtmlMinimizerPlugin = require("html-minimizer-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
@@ -43,7 +43,7 @@ module.exports = {
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [
-    // new JunkCodePlugin(),
+    new JunkCodePlugin(),
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./index.html"),
@@ -125,17 +125,5 @@ module.exports = {
       },
     }),
   ],
-  devServer: {
-    // ...其他 devServer 配置项...
-
-    proxy: {
-      "/api": {
-        target: "http://api.example.com", // 目标代理地址
-        changeOrigin: true, // 设置请求头中的 Host 为 target，解决跨域问题
-        pathRewrite: {
-          "^/api": "", // 将请求路径中的 /api 替换为空，实现代理转发
-        },
-      },
-    },
-  },
+ 
 };
