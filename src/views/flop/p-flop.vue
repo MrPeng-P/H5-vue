@@ -1,28 +1,28 @@
 <script setup>
 import { onMounted, reactive, ref } from "vue";
-import elvesBg from "@/assets/flop3/elvesBg.jpg";
-import elvesGui from "@/assets/flop3/elvesGui.png";
-// import box from "@/assets/flop3/box.png";
-import imgGui1 from "@/assets/flop3/elves1.png";
-import imgGui2 from "@/assets/flop3/elves2.png";
-import imgGui3 from "@/assets/flop3/elves3.png";
-import imgGui4 from "@/assets/flop3/elves4.png";
-import imgGui5 from "@/assets/flop3/elves5.png";
-// import imgGui6 from "@/assets/flop3/elves6.png";
-import elvesBack from "@/assets/flop3/elvesBack.png";
-import elvesOver from "@/assets/flop3/elvesOver.png";
-import elvesAgain from "@/assets/flop3/elvesAgain.png";
-import elvesTime from "@/assets/flop3/elvesTime.png";
+import assassinBg from "@/assets/flop4/assassinBg.jpg";
+import assassinGui from "@/assets/flop4/assassinGui.jpg";
+// import box from "@/assets/flop4/box.png";
+import imgGui1 from "@/assets/flop4/assassin1.jpg";
+import imgGui2 from "@/assets/flop4/assassin2.jpg";
+import imgGui3 from "@/assets/flop4/assassin3.jpg";
+import imgGui4 from "@/assets/flop4/assassin4.jpg";
+import imgGui5 from "@/assets/flop4/assassin5.jpg";
+import imgGui6 from "@/assets/flop4/assassin6.jpg";
+import assassinBack from "@/assets/flop4/assassinBack.png";
+import assassinOver from "@/assets/flop4/assassinOver.png";
+import assassinAgain from "@/assets/flop4/assassinAgain.png";
+import assassinTime from "@/assets/flop4/assassinTime.png";
 import { useRouter } from "vue-router";
 import { inject } from "vue";
 const ceshi = inject("reload");
 const imageObj = {
-  elvesBg,
-  elvesGui,
-  elvesBack,
-  elvesTime,
-  elvesOver,
-  elvesAgain,
+  assassinBg,
+  assassinGui,
+  assassinBack,
+  assassinTime,
+  assassinOver,
+  assassinAgain,
   // box
 };
 const flotList = [
@@ -36,8 +36,8 @@ const flotList = [
   { name: "p-bolt", img: imgGui4 },
   { name: "p-P10", img: imgGui5 },
   { name: "p-P10", img: imgGui5 },
-  // { name: "p-P6", img: imgGui6 },
-  // { name: "p-P6", img: imgGui6 },
+  { name: "p-P6", img: imgGui6 },
+  { name: "p-P6", img: imgGui6 },
 ];
 const step = ref("");
 const setp = ref(true);
@@ -160,12 +160,12 @@ onMounted(async () => {
 <template>
   <div class="content">
     <div class="back-img" @click="goHome()">
-      <img :src="imageObj.elvesBack" alt="" />
+      <img :src="imageObj.assassinBack" alt="" />
     </div>
-    <ul class="flop-box">
+    <ul class="assassin-box">
       <li
         v-for="(item, index) in FlopData.boxList"
-        class="flop-item"
+        class="assassin-item"
         :class="
           FlopData.mattch.includes(index)
             ? 'mattch'
@@ -175,19 +175,19 @@ onMounted(async () => {
         "
         @click="useFlot().pclick(item, index)"
       >
-        <div class="backface"><img :src="item.img" alt="" /></div>
-        <div class="backface-bg"></div>
+        <div class="backassassin"><img :src="item.img" alt="" /></div>
+        <div class="backassassin-bg"></div>
       </li>
     </ul>
-    <div class="use-box">
-      <div class="use-txt">{{ step }}</div>
-      <img class="use-time" :src="imageObj.elvesTime" alt="" />
+    <div class="assassin-box">
+      <div class="assassin-txt">{{ step }}</div>
+      <img class="assassin-time" :src="imageObj.assassinTime" alt="" />
     </div>
   </div>
   <Teleport to="body">
-    <div v-if="!open" class="modal" @click="useFlot().openDialog()">
-      <img class="model-star" :src="imageObj.elvesOver" alt="" />
-      <img class="model-img" :src="imageObj.elvesAgain" alt="" />
+    <div v-if="!open" class="model-assassin" @click="useFlot().openDialog()">
+      <img class="model-assassin-star" :src="imageObj.assassinOver" alt="" />
+      <img class="model-assassin-img" :src="imageObj.assassinAgain" alt="" />
     </div>
   </Teleport>
 </template>
@@ -195,21 +195,23 @@ onMounted(async () => {
 .content {
   width: 100%;
   height: 100%;
-  background: v-bind("'url(' + imageObj.elvesBg + ')'") no-repeat;
+  background: v-bind("'url(' + imageObj.assassinBg + ')'") no-repeat;
   background-size: 100% 100%;
 }
 .back-img {
-  padding: 60px 20px 0px;
+  padding:34px 20px ;
 }
 
-.flop-item:nth-child(1){
+/* .assassin-item:nth-child(1){
   margin-left: 10px;
-  /* margin-left: 10%; */
 }
-.flop-item:nth-child(2){
+.assassin-item:nth-child(2){
   margin-right: 10px;
+} */
+.assassin-item:nth-child(2n){
+  margin:0 5px;
 }
-.use-box {
+.assassin-box {
   position: relative;
 
   margin-top: 20px;
@@ -218,24 +220,24 @@ onMounted(async () => {
   justify-content: center;
   color: #fff;
 }
-.use-txt {
+.assassin-txt {
   display: flex;
-  justify-content: center;
-  margin-right: -7px;
-  width: 100px;
-  text-align: center;
-  font-size: 20px;
+    justify-content: center;
+    margin-right: -23px;
+    width: 100px;
+    text-align: center;
+    font-size: 26px;
 }
-.use-time {
+.assassin-time {
   position: absolute;
 
-  width: 200px;
+  width: 287px;
 }
 .back-img img {
   width: 55px;
 }
-.flop-box {
-  padding: 66px 70px 26px 67px;
+.assassin-box {
+  /* padding: 66px 70px 26px 67px; */
   /* background: v-bind("'url(' + imageObj.box + ')'") no-repeat; */
   background-size: 100% 100%;
   width: 100%;
@@ -245,19 +247,19 @@ onMounted(async () => {
   flex-wrap: wrap;
   transform: scale(1.05);
 }
-.flop-item {
+.assassin-item {
   width: 27%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80px;
-  width: 80px;
+  height: 100px;
+    width: 100px;
 
   transition: transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   transform: perspective(800px) rotateY(0) ;
   transform-style: preserve-3d;
   transform-origin: center 0;
-  background: v-bind("'url(' + imageObj.elvesGui + ')'") no-repeat;
+  background: v-bind("'url(' + imageObj.assassinGui + ')'") no-repeat;
   background-size: 100% 100%;
 }
 
@@ -283,20 +285,20 @@ onMounted(async () => {
   transform-origin: center 0;
   transform-style: preserve-3d;
 }
-.backface {
+.backassassin {
   backface-visibility: hidden;
 }
 .mattch {
   /* background-color: aqua; */
 }
-.backface img {
+.backassassin img {
   width: 100%;
   height: 100%;
 }
-.backface-bg {
+.backassassin-bg {
 }
 
-.modal {
+.model-assassin {
   padding-top: 140px;
   display: flex;
   /* justify-content: center; */
@@ -312,11 +314,11 @@ onMounted(async () => {
   /* background: v-bind("'url(' + cssConfig.dialog + ')'") no-repeat; */
   /* background-size: 100%; */
 }
-.model-star {
+.model-assassin-star {
   /* position: absolute; */
   width: 80%;
 }
-.model-img {
+.model-assassin-img {
   margin-top: 20px;
   width: 60%;
 }
