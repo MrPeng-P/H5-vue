@@ -1,13 +1,13 @@
 <script setup>
 import { useRouter, useRoute } from "vue-router";
-import weirdBg from "@/assets/flop6/weirdBg.jpg";
+import kingdomBg from "@/assets/flop5/kingdomBg.jpg";
 
 
-import weirdIn from "@/assets/flop6/weirdIn.png";
+import kingdomIn from "@/assets/flop5/kingdomIn.png";
 
 const imageObj = {
-  weirdBg,
-  weirdIn
+  kingdomBg,
+  kingdomIn
 };
 function routeAll() {
   const router = new useRouter();
@@ -24,7 +24,7 @@ const { goDetail } = routeAll();
 <template>
   <div class="content">
     <div >
-      <img class="weirdIn" @click="goDetail()" :src="imageObj.weirdIn" alt="">
+      <img class="kingdomIn" @click="goDetail()" :src="imageObj.kingdomIn" alt="">
     </div>
   </div>
 </template>
@@ -35,11 +35,10 @@ const { goDetail } = routeAll();
   align-items: center;
   width: 100%;
   height: 100%;
-  background: v-bind("'url(' + imageObj.weirdBg + ')'") no-repeat;
-  background-size: 100% 100%;
-  background-position: 45%;
+  background: v-bind("'url(' + imageObj.kingdomBg + ')'") no-repeat;
+  background-size: cover;
 }
-.weirdIn{
+.kingdomIn{
   width: 150px;
 }
 

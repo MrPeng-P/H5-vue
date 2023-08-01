@@ -1,29 +1,29 @@
 <script setup>
 import { onMounted, reactive, ref } from "vue";
-import weirdBg from "@/assets/flop6/weirdBg.jpg";
-import weirdGui from "@/assets/flop6/weirdGui.jpg";
-// import box from "@/assets/flop6/box.png";
-import imgGui1 from "@/assets/flop6/weird1.jpg";
-import imgGui3 from "@/assets/flop6/weird3.jpg";
-import imgGui4 from "@/assets/flop6/weird4.jpg";
-import imgGui5 from "@/assets/flop6/weird5.jpg";
-import imgGui6 from "@/assets/flop6/weird6.jpg";
-import weirdBack from "@/assets/flop6/weirdBack.png";
-import weirdOver from "@/assets/flop6/weirdOver.png";
-import weirdAgain from "@/assets/flop6/weirdAgain.png";
-import weirdTime from "@/assets/flop6/weirdTime.png";
-import weirdHead from "@/assets/flop6/weirdHead.png";
+import kingdomBg from "@/assets/flop5/kingdomBg.jpg";
+import kingdomGui from "@/assets/flop5/kingdomGui.png";
+// import box from "@/assets/flop5/box.png";
+import imgGui1 from "@/assets/flop5/kingdom1.png";
+import imgGui3 from "@/assets/flop5/kingdom3.png";
+import imgGui4 from "@/assets/flop5/kingdom4.png";
+import imgGui5 from "@/assets/flop5/kingdom5.png";
+// import imgGui2 from "@/assets/flop5/kingdom2.png";
+import kingdomBack from "@/assets/flop5/kingdomBack.png";
+import kingdomOver from "@/assets/flop5/kingdomOver.png";
+import kingdomAgain from "@/assets/flop5/kingdomAgain.png";
+import kingdomTime from "@/assets/flop5/kingdomTime.png";
+// import kingdomHead from "@/assets/flop5/kingdomHead.png";
 import { useRouter } from "vue-router";
 import { inject } from "vue";
 const ceshi = inject("reload");
 const imageObj = {
-  weirdBg,
-  weirdGui,
-  weirdBack,
-  weirdTime,
-  weirdOver,
-  weirdAgain,
-  weirdHead
+  kingdomBg,
+  kingdomGui,
+  kingdomBack,
+  kingdomTime,
+  kingdomOver,
+  kingdomAgain,
+  // kingdomHead
   // box
 };
 const flotList = [
@@ -36,8 +36,7 @@ const flotList = [
   { name: "p-bolt", img: imgGui4 },
   { name: "p-P10", img: imgGui5 },
   { name: "p-P10", img: imgGui5 },
-  { name: "p-P6", img: imgGui6 },
-  { name: "p-P6", img: imgGui6 },
+
 ];
 const step = ref("");
 const setp = ref(true);
@@ -160,13 +159,13 @@ onMounted(async () => {
 <template>
   <div class="content">
     <div class="back-img" @click="goHome()">
-      <img :src="imageObj.weirdBack" alt="" />
+      <img :src="imageObj.kingdomBack" alt="" />
     </div>
-    <img class="weirdHead" :src="imageObj.weirdHead" alt="">
-    <ul class="weird-box">
+    <!-- <img class="kingdomHead" :src="imageObj.kingdomHead" alt=""> -->
+    <ul class="kingdom-box">
       <li
         v-for="(item, index) in FlopData.boxList"
-        class="weird-item"
+        class="kingdom-item"
         :class="
           FlopData.mattch.includes(index)
             ? 'mattch'
@@ -176,19 +175,19 @@ onMounted(async () => {
         "
         @click="useFlot().pclick(item, index)"
       >
-        <div class="backweird"><img :src="item.img" alt="" /></div>
-        <div class="backweird-bg"></div>
+        <div class="backkingdom"><img :src="item.img" alt="" /></div>
+        <div class="backkingdom-bg"></div>
       </li>
     </ul>
-    <div class="weird-box">
-      <div class="weird-txt">{{ step }}</div>
-      <img class="weird-time" :src="imageObj.weirdTime" alt="" />
+    <div class="kingdom-box">
+      <div class="kingdom-txt">{{ step }}</div>
+      <img class="kingdom-time" :src="imageObj.kingdomTime" alt="" />
     </div>
   </div>
   <Teleport to="body">
-    <div v-if="!open" class="model-weird" @click="useFlot().openDialog()">
-      <img class="model-weird-star" :src="imageObj.weirdOver" alt="" />
-      <img class="model-weird-img" :src="imageObj.weirdAgain" alt="" />
+    <div v-if="!open" class="model-kingdom" @click="useFlot().openDialog()">
+      <img class="model-kingdom-star" :src="imageObj.kingdomOver" alt="" />
+      <img class="model-kingdom-img" :src="imageObj.kingdomAgain" alt="" />
     </div>
   </Teleport>
 </template>
@@ -196,32 +195,35 @@ onMounted(async () => {
 .content {
   width: 100%;
   height: 100%;
-  background: v-bind("'url(' + imageObj.weirdBg + ')'") no-repeat;
-  background-size: 100% 100%;
+  padding-top: 20px;
+  background: v-bind("'url(' + imageObj.kingdomBg + ')'") no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column  ;
+  align-items: center;
+  box-sizing: border-box;
 }
 .back-img {
-  padding:34px 20px ;
+  position: absolute;
+  top: 34px;
+  left: 10%;
+  /* padding:34px 20px ;
+   */
 }
 
-.weird-item:nth-child(1){
-  margin-left: 50px;
-}
-.weird-item:nth-child(2){
-  margin-right: 50px;
-}
-/* .weird-item:nth-child(2n){
+
+/* .kingdom-item:nth-child(2n){
   margin:0 5px;
 } */
-.weird-box {
+.kingdom-box {
   position: relative;
 
-  margin-top: 20px;
   width: 100%;
   display: flex;
   justify-content: center;
   color: #fff;
 }
-.weird-txt {
+.kingdom-txt {
   display: flex;
     justify-content: center;
     margin-right: -23px;
@@ -229,45 +231,52 @@ onMounted(async () => {
     text-align: center;
     font-size: 26px;
 }
-.weirdHead{
+.kingdomHead{
   margin: -60px 0 0 20%;
 width: 280px;
 }
-.weird-time {
+.kingdom-time {
   position: absolute;
-
-  width: 287px;
+  
+  width: 270px;
 }
+
 .back-img img {
   width: 55px;
 }
-.weird-box {
+.kingdom-box {
   /* padding: 66px 70px 26px 67px; */
   /* background: v-bind("'url(' + imageObj.box + ')'") no-repeat; */
   background-size: 100% 100%;
-  width: 100%;
-  height: 410px;
+  width: 67%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  transform: scale(1.05);
+   /* transform: scale(0.6); */
+
 }
-.weird-item {
-  width: 27%;
+.kingdom-item {
+  margin-right: 4%;
+  margin-bottom: 1%;
+  width: 26%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px;
-    width: 100px;
+ 
 
   transition: transform 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   transform: perspective(800px) rotateY(0) ;
   transform-style: preserve-3d;
   transform-origin: center 0;
-  background: v-bind("'url(' + imageObj.weirdGui + ')'") no-repeat;
+  background: v-bind("'url(' + imageObj.kingdomGui + ')'") no-repeat;
   background-size: 100% 100%;
 }
-
+.kingdom-item:nth-child(1){
+  margin-left: 20%;
+}
+.kingdom-item:nth-child(2){
+  margin-right: 20%;
+}
 
 @keyframes vanish {
   0% {
@@ -290,21 +299,20 @@ width: 280px;
   transform-origin: center 0;
   transform-style: preserve-3d;
 }
-.backweird {
+.backkingdom {
   backface-visibility: hidden;
 }
 .mattch {
   /* background-color: aqua; */
 }
-.backweird img {
+.backkingdom img {
   width: 100%;
   height: 100%;
 }
-.backweird-bg {
+.backkingdom-bg {
 }
 
-.model-weird {
-  padding-top: 140px;
+.model-kingdom {
   display: flex;
   /* justify-content: center; */
   align-items: center;
@@ -319,12 +327,13 @@ width: 280px;
   /* background: v-bind("'url(' + cssConfig.dialog + ')'") no-repeat; */
   /* background-size: 100%; */
 }
-.model-weird-star {
+.model-kingdom-star {
   /* position: absolute; */
-  width: 80%;
+  margin-top: -3%;
+    width: 44%;
 }
-.model-weird-img {
+.model-kingdom-img {
   margin-top: 20px;
-  width: 60%;
+    width: 30%;
 }
 </style>

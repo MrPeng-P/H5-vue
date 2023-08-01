@@ -27,7 +27,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/imgweirdIn/[hash][ext]",
+          filename: "assets/imgkingdom/[hash][ext]",
         },
       },
     ],
@@ -39,7 +39,7 @@ module.exports = {
     },
   },
   output: {
-    filename: "assets/weirdInJs/weirdIn-[hash].js",
+    filename: "assets/kingdomJs/kingdom-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [
