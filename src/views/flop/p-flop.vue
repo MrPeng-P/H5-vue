@@ -1,34 +1,34 @@
 <script setup>
 import { onMounted, reactive, ref } from "vue";
-import kingdomBg from "@/assets/flop5/kingdomBg.jpg";
-import kingdomGui from "@/assets/flop5/kingdomGui.png";
-// import box from "@/assets/flop5/box.png";
-import imgGui1 from "@/assets/flop5/kingdom1.png";
-import imgGui3 from "@/assets/flop5/kingdom3.png";
-import imgGui4 from "@/assets/flop5/kingdom4.png";
-import imgGui5 from "@/assets/flop5/kingdom5.png";
-// import imgGui2 from "@/assets/flop5/kingdom2.png";
-import kingdomBack from "@/assets/flop5/kingdomBack.png";
-import kingdomOver from "@/assets/flop5/kingdomOver.png";
-import kingdomAgain from "@/assets/flop5/kingdomAgain.png";
-import kingdomTime from "@/assets/flop5/kingdomTime.png";
-// import kingdomHead from "@/assets/flop5/kingdomHead.png";
+import fantasyBg from "@/assets/flop7/fantasyBg.jpg";
+import fantasyGui from "@/assets/flop7/fantasyGui.jpg";
+// import box from "@/assets/flop7/box.png";
+// import imgGui1 from "@/assets/flop7/fantasy1.jpg";
+import imgGui3 from "@/assets/flop7/fantasy3.jpg";
+import imgGui4 from "@/assets/flop7/fantasy4.jpg";
+import imgGui5 from "@/assets/flop7/fantasy5.jpg";
+import imgGui2 from "@/assets/flop7/fantasy2.jpg";
+import fantasyBack from "@/assets/flop7/fantasyBack.png";
+import fantasyOver from "@/assets/flop7/fantasyOver.png";
+import fantasyAgain from "@/assets/flop7/fantasyAgain.png";
+import fantasyTime from "@/assets/flop7/fantasyTime.png";
+// import fantasyHead from "@/assets/flop7/fantasyHead.png";
 import { useRouter } from "vue-router";
 import { inject } from "vue";
 const ceshi = inject("reload");
 const imageObj = {
-  kingdomBg,
-  kingdomGui,
-  kingdomBack,
-  kingdomTime,
-  kingdomOver,
-  kingdomAgain,
-  // kingdomHead
+  fantasyBg,
+  fantasyGui,
+  fantasyBack,
+  fantasyTime,
+  fantasyOver,
+  fantasyAgain,
+  // fantasyHead
   // box
 };
 const flotList = [
-  { name: "p-diamond", img: imgGui1 },
-  { name: "p-diamond", img: imgGui1 },
+  // { name: "p-diamond", img: imgGui1 },
+  // { name: "p-diamond", img: imgGui1 },
 
   { name: "p-anchor", img: imgGui3 },
   { name: "p-anchor", img: imgGui3 },
@@ -36,7 +36,8 @@ const flotList = [
   { name: "p-bolt", img: imgGui4 },
   { name: "p-P10", img: imgGui5 },
   { name: "p-P10", img: imgGui5 },
-
+  { name: "p-P2", img: imgGui2 },
+  { name: "p-P2", img: imgGui2 },
 ];
 const step = ref("");
 const setp = ref(true);
@@ -159,13 +160,13 @@ onMounted(async () => {
 <template>
   <div class="content">
     <div class="back-img" @click="goHome()">
-      <img :src="imageObj.kingdomBack" alt="" />
+      <img :src="imageObj.fantasyBack" alt="" />
     </div>
-    <!-- <img class="kingdomHead" :src="imageObj.kingdomHead" alt=""> -->
-    <ul class="kingdom-box">
+    <!-- <img class="fantasyHead" :src="imageObj.fantasyHead" alt=""> -->
+    <ul class="fantasy-box">
       <li
         v-for="(item, index) in FlopData.boxList"
-        class="kingdom-item"
+        class="fantasy-item"
         :class="
           FlopData.mattch.includes(index)
             ? 'mattch'
@@ -175,19 +176,19 @@ onMounted(async () => {
         "
         @click="useFlot().pclick(item, index)"
       >
-        <div class="backkingdom"><img :src="item.img" alt="" /></div>
-        <div class="backkingdom-bg"></div>
+        <div class="backfantasy"><img :src="item.img" alt="" /></div>
+        <div class="backfantasy-bg"></div>
       </li>
     </ul>
-    <div class="kingdom-box">
-      <div class="kingdom-txt">{{ step }}</div>
-      <img class="kingdom-time" :src="imageObj.kingdomTime" alt="" />
+    <div class="fantasy-box">
+      <div class="fantasy-txt">{{ step }}</div>
+      <img class="fantasy-time" :src="imageObj.fantasyTime" alt="" />
     </div>
   </div>
   <Teleport to="body">
-    <div v-if="!open" class="model-kingdom" @click="useFlot().openDialog()">
-      <img class="model-kingdom-star" :src="imageObj.kingdomOver" alt="" />
-      <img class="model-kingdom-img" :src="imageObj.kingdomAgain" alt="" />
+    <div v-if="!open" class="model-fantasy" @click="useFlot().openDialog()">
+      <img class="model-fantasy-star" :src="imageObj.fantasyOver" alt="" />
+      <img class="model-fantasy-img" :src="imageObj.fantasyAgain" alt="" />
     </div>
   </Teleport>
 </template>
@@ -195,12 +196,12 @@ onMounted(async () => {
 .content {
   width: 100%;
   height: 100%;
-  padding-top: 20px;
-  background: v-bind("'url(' + imageObj.kingdomBg + ')'") no-repeat;
+  background: v-bind("'url(' + imageObj.fantasyBg + ')'") no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column  ;
   align-items: center;
+  justify-content: center;
   box-sizing: border-box;
 }
 .back-img {
@@ -212,10 +213,10 @@ onMounted(async () => {
 }
 
 
-/* .kingdom-item:nth-child(2n){
+/* .fantasy-item:nth-child(2n){
   margin:0 5px;
 } */
-.kingdom-box {
+.fantasy-box {
   position: relative;
 
   width: 100%;
@@ -223,19 +224,20 @@ onMounted(async () => {
   justify-content: center;
   color: #fff;
 }
-.kingdom-txt {
+.fantasy-txt {
   display: flex;
     justify-content: center;
     margin-right: -23px;
     width: 100px;
+    height: 31px;
     text-align: center;
     font-size: 26px;
 }
-.kingdomHead{
+.fantasyHead{
   margin: -60px 0 0 20%;
 width: 280px;
 }
-.kingdom-time {
+.fantasy-time {
   position: absolute;
   
   width: 270px;
@@ -244,7 +246,7 @@ width: 280px;
 .back-img img {
   width: 55px;
 }
-.kingdom-box {
+.fantasy-box {
   /* padding: 66px 70px 26px 67px; */
   /* background: v-bind("'url(' + imageObj.box + ')'") no-repeat; */
   background-size: 100% 100%;
@@ -255,7 +257,7 @@ width: 280px;
    /* transform: scale(0.6); */
 
 }
-.kingdom-item {
+.fantasy-item {
   margin-right: 4%;
   margin-bottom: 1%;
   width: 26%;
@@ -268,13 +270,13 @@ width: 280px;
   transform: perspective(800px) rotateY(0) ;
   transform-style: preserve-3d;
   transform-origin: center 0;
-  background: v-bind("'url(' + imageObj.kingdomGui + ')'") no-repeat;
+  background: v-bind("'url(' + imageObj.fantasyGui + ')'") no-repeat;
   background-size: 100% 100%;
 }
-.kingdom-item:nth-child(1){
+.fantasy-item:nth-child(1){
   margin-left: 20%;
 }
-.kingdom-item:nth-child(2){
+.fantasy-item:nth-child(2){
   margin-right: 20%;
 }
 
@@ -299,20 +301,20 @@ width: 280px;
   transform-origin: center 0;
   transform-style: preserve-3d;
 }
-.backkingdom {
+.backfantasy {
   backface-visibility: hidden;
 }
 .mattch {
   /* background-color: aqua; */
 }
-.backkingdom img {
+.backfantasy img {
   width: 100%;
   height: 100%;
 }
-.backkingdom-bg {
+.backfantasy-bg {
 }
 
-.model-kingdom {
+.model-fantasy {
   display: flex;
   /* justify-content: center; */
   align-items: center;
@@ -327,12 +329,12 @@ width: 280px;
   /* background: v-bind("'url(' + cssConfig.dialog + ')'") no-repeat; */
   /* background-size: 100%; */
 }
-.model-kingdom-star {
+.model-fantasy-star {
   /* position: absolute; */
   margin-top: -3%;
     width: 44%;
 }
-.model-kingdom-img {
+.model-fantasy-img {
   margin-top: 20px;
     width: 30%;
 }
