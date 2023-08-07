@@ -27,7 +27,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/imgfantasy/[hash][ext]",
+          filename: "assets/imgbeach/[hash][ext]",
         },
       },
     ],
@@ -39,11 +39,11 @@ module.exports = {
     },
   },
   output: {
-    filename: "assets/fantasyJs/fantasy-[hash].js",
+    filename: "assets/beachJs/beach-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [
-    new JunkCodePlugin(),
+    // new JunkCodePlugin(),
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./index.html"),

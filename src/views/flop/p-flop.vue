@@ -1,41 +1,41 @@
 <script setup>
 import { onMounted, reactive, ref } from "vue";
-import fantasyBg from "@/assets/flop7/fantasyBg.jpg";
-import fantasyGui from "@/assets/flop7/fantasyGui.jpg";
-// import box from "@/assets/flop7/box.png";
-// import imgGui1 from "@/assets/flop7/fantasy1.jpg";
-import imgGui3 from "@/assets/flop7/fantasy3.jpg";
-import imgGui4 from "@/assets/flop7/fantasy4.jpg";
-import imgGui5 from "@/assets/flop7/fantasy5.jpg";
-import imgGui2 from "@/assets/flop7/fantasy2.jpg";
-import fantasyBack from "@/assets/flop7/fantasyBack.png";
-import fantasyOver from "@/assets/flop7/fantasyOver.png";
-import fantasyAgain from "@/assets/flop7/fantasyAgain.png";
-import fantasyTime from "@/assets/flop7/fantasyTime.png";
-// import fantasyHead from "@/assets/flop7/fantasyHead.png";
+import beachBg from "@/assets/flop10/beachBg.jpg";
+import beachGui from "@/assets/flop10/beachGui.png";
+// import box from "@/assets/flop10/box.png";
+import imgGui1 from "@/assets/flop10/beach1.png";
+import imgGui3 from "@/assets/flop10/beach3.png";
+import imgGui4 from "@/assets/flop10/beach4.png";
+import imgGui5 from "@/assets/flop10/beach5.png";
+import imgGui2 from "@/assets/flop10/beach2.png";
+import beachBack from "@/assets/flop10/beachBack.png";
+import beachOver from "@/assets/flop10/beachOver.png";
+import beachAgain from "@/assets/flop10/beachAgain.png";
+import beachTime from "@/assets/flop10/beachTime.png";
+// import beachHead from "@/assets/flop10/beachHead.png";
 import { useRouter } from "vue-router";
 import { inject } from "vue";
 const ceshi = inject("reload");
 const imageObj = {
-  fantasyBg,
-  fantasyGui,
-  fantasyBack,
-  fantasyTime,
-  fantasyOver,
-  fantasyAgain,
-  // fantasyHead
+  beachBg,
+  beachGui,
+  beachBack,
+  beachTime,
+  beachOver,
+  beachAgain,
+  // beachHead
   // box
 };
 const flotList = [
-  // { name: "p-diamond", img: imgGui1 },
-  // { name: "p-diamond", img: imgGui1 },
+  { name: "p-diamond", img: imgGui5 },
+  { name: "p-diamond", img: imgGui5 },
 
   { name: "p-anchor", img: imgGui3 },
   { name: "p-anchor", img: imgGui3 },
-  { name: "p-bolt", img: imgGui4 },
-  { name: "p-bolt", img: imgGui4 },
-  { name: "p-P10", img: imgGui5 },
-  { name: "p-P10", img: imgGui5 },
+  { name: "p-bolt", img: imgGui1 },
+  { name: "p-bolt", img: imgGui1 },
+  { name: "p-P10", img: imgGui4 },
+  { name: "p-P10", img: imgGui4 },
   { name: "p-P2", img: imgGui2 },
   { name: "p-P2", img: imgGui2 },
 ];
@@ -160,13 +160,13 @@ onMounted(async () => {
 <template>
   <div class="content">
     <div class="back-img" @click="goHome()">
-      <img :src="imageObj.fantasyBack" alt="" />
+      <img :src="imageObj.beachBack" alt="" />
     </div>
-    <!-- <img class="fantasyHead" :src="imageObj.fantasyHead" alt=""> -->
-    <ul class="fantasy-box">
+    <!-- <img class="beachHead" :src="imageObj.beachHead" alt=""> -->
+    <ul class="beach-box">
       <li
         v-for="(item, index) in FlopData.boxList"
-        class="fantasy-item"
+        class="beach-item"
         :class="
           FlopData.mattch.includes(index)
             ? 'mattch'
@@ -176,19 +176,19 @@ onMounted(async () => {
         "
         @click="useFlot().pclick(item, index)"
       >
-        <div class="backfantasy"><img :src="item.img" alt="" /></div>
-        <div class="backfantasy-bg"></div>
+        <div class="backbeach"><img :src="item.img" alt="" /></div>
+        <div class="backbeach-bg"></div>
       </li>
     </ul>
-    <div class="fantasy-box">
-      <div class="fantasy-txt">{{ step }}</div>
-      <img class="fantasy-time" :src="imageObj.fantasyTime" alt="" />
+    <div class="beach-boxs">
+      <div class="beach-txt">{{ step }}</div>
+      <img class="beach-time" :src="imageObj.beachTime" alt="" />
     </div>
   </div>
   <Teleport to="body">
-    <div v-if="!open" class="model-fantasy" @click="useFlot().openDialog()">
-      <img class="model-fantasy-star" :src="imageObj.fantasyOver" alt="" />
-      <img class="model-fantasy-img" :src="imageObj.fantasyAgain" alt="" />
+    <div v-if="!open" class="model-beach" @click="useFlot().openDialog()">
+      <img class="model-beach-star" :src="imageObj.beachOver" alt="" />
+      <img class="model-beach-img" :src="imageObj.beachAgain" alt="" />
     </div>
   </Teleport>
 </template>
@@ -196,71 +196,72 @@ onMounted(async () => {
 .content {
   width: 100%;
   height: 100%;
-  background: v-bind("'url(' + imageObj.fantasyBg + ')'") no-repeat;
+  background: v-bind("'url(' + imageObj.beachBg + ')'") no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column  ;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   box-sizing: border-box;
 }
 .back-img {
   position: absolute;
   top: 34px;
-  left: 10%;
+  right: 15%;
   /* padding:34px 20px ;
    */
 }
 
 
-/* .fantasy-item:nth-child(2n){
+/* .beach-item:nth-child(2n){
   margin:0 5px;
 } */
-.fantasy-box {
-  position: relative;
-
+.beach-boxs {
+  position: absolute;
+  bottom: 25%;
   width: 100%;
   display: flex;
   justify-content: center;
   color: #fff;
 }
-.fantasy-txt {
+.beach-txt {
   display: flex;
     justify-content: center;
     margin-right: -23px;
     width: 100px;
-    height: 31px;
+    height: 80px;
     text-align: center;
     font-size: 26px;
 }
-.fantasyHead{
+.beachHead{
   margin: -60px 0 0 20%;
 width: 280px;
 }
-.fantasy-time {
+.beach-time {
   position: absolute;
   
-  width: 270px;
+  width:33%;
 }
 
 .back-img img {
   width: 55px;
 }
-.fantasy-box {
+.beach-box {
   /* padding: 66px 70px 26px 67px; */
   /* background: v-bind("'url(' + imageObj.box + ')'") no-repeat; */
   background-size: 100% 100%;
-  width: 67%;
+  width: 75%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
    /* transform: scale(0.6); */
 
 }
-.fantasy-item {
-  margin-right: 4%;
+.beach-item {
+  margin-right: 2%;
   margin-bottom: 1%;
-  width: 26%;
+  width: 20%;
+  height: 22vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -270,16 +271,32 @@ width: 280px;
   transform: perspective(800px) rotateY(0) ;
   transform-style: preserve-3d;
   transform-origin: center 0;
-  background: v-bind("'url(' + imageObj.fantasyGui + ')'") no-repeat;
+  background: v-bind("'url(' + imageObj.beachGui + ')'") no-repeat;
   background-size: 100% 100%;
 }
-.fantasy-item:nth-child(1){
-  margin-left: 20%;
+.beach-item:nth-child(1){
+  margin:0  40%;
 }
-.fantasy-item:nth-child(2){
-  margin-right: 20%;
+.beach-item:nth-child(2){
+  margin-top: -3%;
+  margin-left: 10%;
 }
-
+.beach-item:nth-child(4){
+  margin-top: -3%;
+  margin-right: 10%;
+}
+.beach-item:nth-child(5){
+  /* margin-top: -10%; */
+  margin-right: 46%;
+}
+.beach-item:nth-child(5){
+  /* margin-top: -10%; */
+  margin-right: 46%;
+}
+.beach-item:nth-child(n+5){
+  margin-bottom: 4%;
+  margin-top: -4%;
+}
 @keyframes vanish {
   0% {
     transform: rotateY(0deg);
@@ -301,20 +318,20 @@ width: 280px;
   transform-origin: center 0;
   transform-style: preserve-3d;
 }
-.backfantasy {
+.backbeach {
   backface-visibility: hidden;
 }
 .mattch {
   /* background-color: aqua; */
 }
-.backfantasy img {
+.backbeach img {
   width: 100%;
   height: 100%;
 }
-.backfantasy-bg {
+.backbeach-bg {
 }
 
-.model-fantasy {
+.model-beach {
   display: flex;
   /* justify-content: center; */
   align-items: center;
@@ -329,12 +346,12 @@ width: 280px;
   /* background: v-bind("'url(' + cssConfig.dialog + ')'") no-repeat; */
   /* background-size: 100%; */
 }
-.model-fantasy-star {
+.model-beach-star {
   /* position: absolute; */
   margin-top: -3%;
     width: 44%;
 }
-.model-fantasy-img {
+.model-beach-img {
   margin-top: 20px;
     width: 30%;
 }

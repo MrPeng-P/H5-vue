@@ -1,13 +1,13 @@
 <script setup>
 import { useRouter, useRoute } from "vue-router";
-import fantasyBg from "@/assets/flop7/fantasyBg.jpg";
+import beachBg from "@/assets/flop10/beachBg.jpg";
 
 
-import fantasyIn from "@/assets/flop7/fantasyIn.png";
+import beachIn from "@/assets/flop10/beachIn.png";
 
 const imageObj = {
-  fantasyBg,
-  fantasyIn
+  beachBg,
+  beachIn
 };
 function routeAll() {
   const router = new useRouter();
@@ -24,7 +24,7 @@ const { goDetail } = routeAll();
 <template>
   <div class="content">
     <div >
-      <img class="fantasyIn" @click="goDetail()" :src="imageObj.fantasyIn" alt="">
+      <img class="beachIn" @click="goDetail()" :src="imageObj.beachIn" alt="">
     </div>
   </div>
 </template>
@@ -35,10 +35,10 @@ const { goDetail } = routeAll();
   align-items: center;
   width: 100%;
   height: 100%;
-  background: v-bind("'url(' + imageObj.fantasyBg + ')'") no-repeat;
+  background: v-bind("'url(' + imageObj.beachBg + ')'") no-repeat;
   background-size: cover;
 }
-.fantasyIn{
+.beachIn{
   width: 254px;
 }
 

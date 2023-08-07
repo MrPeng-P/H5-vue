@@ -35,6 +35,8 @@ export default {
     const ceshi = inject("reload");
     const showRuleValue = ref(false);
     let countValue = ref(1000);
+    let magnification = ref(1); // 倍率
+    let playMAXCount=100
     let useCount = ref(0);
     let arrCount = reactive([
       {
@@ -118,7 +120,7 @@ export default {
         img: leopard3,
         name: "leopard2",
         className: "animation",
-        count: 1800,
+        count: 1800 * magnification.value,
       },
       {
         img: leopard4,
@@ -130,13 +132,13 @@ export default {
         img: leopard6,
         name: "leopard1",
         className: "animation",
-        count: 1000,
+        count: 1000 * magnification.value,
       },
       {
         img: leopard7,
         name: "leopard3",
         className: "animation",
-        count: 2200,
+        count: 2200 * magnification.value,
       },
     ];
     const allMethods = {
@@ -231,7 +233,6 @@ export default {
         let timeany = setInterval(() => {
           i++;
           if (i > 7) {
-           
             sessionStorage.setItem("countValue", countValue.value);
 
             open.value = true;
@@ -287,7 +288,7 @@ export default {
                 child.style.setProperty("display", "block");
               });
 
-              countValue.value += useCount.value;
+            countValue.value += useCount.value;
           }
         }, 1000);
       },
@@ -299,6 +300,18 @@ export default {
         open.value = false;
         buttonStatus.value = true;
         ceshi();
+      },
+      playMAX: () => {
+        // 模拟老虎机随机结果，0 表示压小，1 表示压大
+        const result = Math.floor(Math.random() * 2);
+
+        if (result === 0) {
+          // 压小，扣除金额
+          countValue.value -= playMAXCount;
+        } else {
+          // 压大，增加金额
+          countValue.countValue += playMAXCount;
+        }
       },
       showRule: () => {
         showRuleValue.value = !showRuleValue.value;
@@ -416,11 +429,7 @@ export default {
         <div class="leopardd-back" @click="close"></div>
       </div>
       <div class="leopard-count" @click="showRule">
-        <img
-          class="leopard-rule"
-          :src="leopardConfig.ruleleopard"
-          alt=""
-        />
+        <img class="leopard-rule" :src="leopardConfig.ruleleopard" alt="" />
         <img :src="leopardConfig.countleopard" alt="" />
         <div class="countValue">{{ countValue }}</div>
       </div>
@@ -565,13 +574,13 @@ export default {
 
 .leopardp-he {
   position: relative;
-    margin-right: 2%;
-    margin-top: -5%;
-    width: 107%;
-    height: 112vw;
-    display: flex;
-    justify-content: space-between;
-    transform: scale(0.5);
+  margin-right: 2%;
+  margin-top: -5%;
+  width: 107%;
+  height: 112vw;
+  display: flex;
+  justify-content: space-between;
+  transform: scale(0.5);
 }
 
 .leopardp-hidden {
@@ -631,10 +640,10 @@ export default {
 }
 .model-img {
   position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 76%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 76%;
 }
 .model-img-bg {
   position: absolute;
