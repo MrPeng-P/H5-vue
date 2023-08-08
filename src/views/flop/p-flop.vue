@@ -223,6 +223,7 @@ onMounted(async () => {
   display: flex;
   justify-content: center;
   color: #fff;
+  z-index: 1;
 }
 .beach-txt {
   display: flex;
@@ -255,6 +256,7 @@ width: 280px;
   justify-content: center;
   flex-wrap: wrap;
    /* transform: scale(0.6); */
+   z-index: 5;
 
 }
 .beach-item {
@@ -348,11 +350,11 @@ width: 280px;
 }
 .model-beach-star {
   /* position: absolute; */
-  margin-top: -3%;
-    width: 44%;
+  margin-top: 4%;
+    width: 36%;
 }
 .model-beach-img {
-  margin-top: 20px;
+  margin-top: 10px;
     width: 30%;
 }
 </style>

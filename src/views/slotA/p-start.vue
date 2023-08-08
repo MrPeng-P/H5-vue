@@ -1,7 +1,7 @@
 <script>
 
-import playleopard from "@/assets/slotN4/playleopard.png";
-import boxleopard from "@/assets/slotN4/boxleopard.jpg";
+import playIndian from "@/assets/slotA1/playIndian.png";
+import boxIndian from "@/assets/slotA1/boxIndian.jpg";
 import { onMounted, reactive, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
@@ -9,9 +9,9 @@ export default {
   setup() {
     const router = new useRouter();
     const className = "container";
-    const leopardConfig = reactive({
-      playleopard,
-      boxleopard,
+    const IndianConfig = reactive({
+      playIndian,
+      boxIndian,
     });
    
 
@@ -25,7 +25,7 @@ export default {
     });
     return {
         className,
-      leopardConfig,
+      IndianConfig,
       ...allMethods,
     };
   },
@@ -46,13 +46,13 @@ export default {
     margin-top: 36%;
     width: 160px;
     height: 264px;
-  background: v-bind("'url(' + leopardConfig.playleopard + ')'") no-repeat;
+  background: v-bind("'url(' + IndianConfig.playIndian + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 
 }
 .container {
-  background: v-bind("'url(' + leopardConfig.boxleopard + ')'") no-repeat;
+  background: v-bind("'url(' + IndianConfig.boxIndian + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -63,7 +63,7 @@ export default {
 }
 
 
-.leopardp-he {
+.Indianp-he {
   position: relative;
     margin-top: 26%;
     width: 140%;
@@ -72,7 +72,7 @@ export default {
     justify-content: space-between;
     transform: scale(0.65);
 }
-.leopardp-hidden{
+.Indianp-hidden{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -81,11 +81,11 @@ export default {
   overflow: hidden;
 
 }
-.leopardp-item {
+.Indianp-item {
   
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + leopardConfig.anyleopard + ')'") ;
+  background: v-bind("'url(' + IndianConfig.anyIndian + ')'") ;
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
@@ -103,7 +103,7 @@ export default {
     height: 100vh;
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.5);
-  /* background: v-bind("'url(' + leopardConfig.dialogleopard + ')'") no-repeat; */
+  /* background: v-bind("'url(' + IndianConfig.dialogIndian + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star{

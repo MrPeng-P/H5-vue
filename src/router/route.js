@@ -72,6 +72,27 @@ export const routes = [{
 //   },
 // ];
 
+// //复杂老虎机-简化
+// export const routes = [
+//   {
+//     path: "/",
+//     name: "startA",
+//     component: () => import("@/views/slotA/p-start.vue"),
+//   },
+
+//   {
+//     path: "/home",
+//     name: "homeA",
+//     component: () => import("@/views/slotA/p-home.vue"),
+//   },
+//   {
+//     path: "/list",
+//     name: "listA",
+//     component: () => import("@/views/slotA/p-list.vue"),
+//   },
+// ];
+
+
 const routerConfig = createRouter({
   // history: createWebHistory(), // ===>mode:"history"
   history: createWebHashHistory(), // ===>mode:"哈希"

@@ -1,33 +1,36 @@
 <script>
-import playleopard from "@/assets/slotN4/playleopard2.png";
-import boxleopard from "@/assets/slotN4/boxleopard.jpg";
-import anyleopard from "@/assets/slotN4/changeleopard.png";
-import anyBoxleopard from "@/assets/slotN4/anyBoxleopard.png";
-import backleopard from "@/assets/slotN4/backleopard.png";
-import seniorityleopard from "@/assets/slotN4/seniorityleopard.png";
-import countleopard from "@/assets/slotN4/countleopard.png";
-import ruleleopard from "@/assets/slotN4/ruleleopard.png";
-import ruleDialogleopard from "@/assets/slotN4/ruleDialogleopard.jpg";
-// import resultleopard from "@/assets/slotN4/resultleopard.png";
-// import headleopard from "@/assets/slotN4/headleopard.png";
+import playIndian from "@/assets/slotA1/playIndian2.png";
+import boxIndian from "@/assets/slotA1/boxIndian.jpg";
+import anyIndian from "@/assets/slotA1/changeIndian.png";
+import anyBoxIndian from "@/assets/slotA1/anyBoxIndian.png";
+import backIndian from "@/assets/slotA1/backIndian.png";
+import seniorityIndian from "@/assets/slotA1/seniorityIndian.png";
+// import countIndian from "@/assets/slotA1/countIndian.png";
+// import ruleIndian from "@/assets/slotA1/ruleIndian.png";
+// import ruleDialogIndian from "@/assets/slotA1/ruleDialogIndian.jpg";
+// import resultIndian from "@/assets/slotA1/resultIndian.png";
+// import headIndian from "@/assets/slotA1/headIndian.png";
 
-// import star from "@/assets/slotN4/starleopard.gif";
+// import star from "@/assets/slotA1/starIndian.gif";
 import { useRouter, useRoute } from "vue-router";
-import leopard1 from "@/assets/slotN4/leopard1.png";
-import leopard2 from "@/assets/slotN4/leopard2.png";
-import leopard3 from "@/assets/slotN4/leopard3.png";
-import leopard4 from "@/assets/slotN4/leopard4.png";
-import leopard5 from "@/assets/slotN4/leopard5.png";
-import leopard6 from "@/assets/slotN4/leopard6.png";
-import leopard7 from "@/assets/slotN4/leopard7.png";
+import Indian1 from "@/assets/slotA1/Indian1.jpg";
+import Indian2 from "@/assets/slotA1/Indian2.jpg";
+import Indian3 from "@/assets/slotA1/Indian3.jpg";
+import Indian4 from "@/assets/slotA1/Indian4.jpg";
+import Indian5 from "@/assets/slotA1/Indian5.jpg";
+import Indian6 from "@/assets/slotA1/Indian6.png";
+import Indian7 from "@/assets/slotA1/Indian7.png";
+import Indian8 from "@/assets/slotA1/Indian8.png";
+import Indian9 from "@/assets/slotA1/Indian9.png";
+import Indian10 from "@/assets/slotA1/Indian10.png";
 
-import animation1 from "@/assets/slotN4/dong/00001.png";
-import animation4 from "@/assets/slotN4/dong/00004.png";
-import animation8 from "@/assets/slotN4/dong/00008.png";
-import animation12 from "@/assets/slotN4/dong/00012.png";
+import animation1 from "@/assets/slotA1/dong/00001.png";
+import animation4 from "@/assets/slotA1/dong/00004.png";
+import animation8 from "@/assets/slotA1/dong/00008.png";
+import animation12 from "@/assets/slotA1/dong/00012.png";
 
 import { inject } from "vue";
-// import football from "@/assets/slotN4/football.png";
+// import football from "@/assets/slotA1/football.png";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
@@ -59,25 +62,25 @@ export default {
     const router = new useRouter();
     // 随机生成 12 张图的数组
     let randomImages = [];
-    const leopardConfig = reactive({
-      // headleopard,
+    const IndianConfig = reactive({
+      // headIndian,
       animation1,
       animation4,
       animation8,
       animation12,
-      anyleopard,
-      playleopard,
-      anyBoxleopard,
-      boxleopard,
-      backleopard,
+      anyIndian,
+      playIndian,
+      anyBoxIndian,
+      boxIndian,
+      backIndian,
       //   star,
-      seniorityleopard,
-      countleopard,
-      ruleleopard,
-      ruleDialogleopard,
-      // resultleopard
+      seniorityIndian,
+      // countIndian,
+      // ruleIndian,
+      // ruleDialogIndian,
+      // resultIndian
     });
-    const leopardList = reactive([
+    const IndianList = reactive([
       {
         name: "item1",
         size: 4,
@@ -111,34 +114,43 @@ export default {
     let buttonStatus = ref(true);
     const images = [
       {
-        img: leopard1,
+        img: Indian1,
       },
       {
-        img: leopard2,
+        img: Indian2,
       },
       {
-        img: leopard3,
-        name: "leopard2",
+        img: Indian3,
+        name: "Indian2",
         className: "animation",
         count: 1800 * magnification.value,
       },
       {
-        img: leopard4,
+        img: Indian4,
       },
       {
-        img: leopard5,
+        img: Indian5,
       },
       {
-        img: leopard6,
-        name: "leopard1",
+        img: Indian6,
+        name: "Indian1",
         className: "animation",
         count: 1000 * magnification.value,
       },
       {
-        img: leopard7,
-        name: "leopard3",
+        img: Indian7,
+        name: "Indian3",
         className: "animation",
         count: 2200 * magnification.value,
+      },
+      {
+        img: Indian8,
+      },
+      {
+        img: Indian8,
+      },
+      {
+        img: Indian10,
       },
     ];
     const allMethods = {
@@ -154,11 +166,11 @@ export default {
         buttonStatus.value = false;
 
         allMethods.clear();
-        const boxLists = leopardList.map((item) => {
+        const boxLists = IndianList.map((item) => {
           return document.getElementById(item.name);
         });
         boxLists[0].style.setProperty("background-position-x", "center");
-        boxLists[0].querySelectorAll(".leopardp-item-img").forEach((child) => {
+        boxLists[0].querySelectorAll(".Indianp-item-img").forEach((child) => {
           child.style.setProperty("display", "none");
         });
         // boxLists.forEach((item)=>{
@@ -171,8 +183,8 @@ export default {
         //       0+'px'
         //     );
         // })
-        const content = document.getElementById("leopardp-he");
-        const box2 = document.getElementById("leopardp");
+        const content = document.getElementById("Indianp-he");
+        const box2 = document.getElementById("Indianp");
         const coords = { x: 0, y: 0 }; // Start at (0, 0)
         const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to(
@@ -243,7 +255,7 @@ export default {
           if (i > 0 && i < 5) {
             boxLists[i].style.setProperty("background-position-x", "center");
             boxLists[i]
-              .querySelectorAll(".leopardp-item-img")
+              .querySelectorAll(".Indianp-item-img")
               .forEach((child) => {
                 child.style.setProperty("display", "none");
               });
@@ -251,7 +263,7 @@ export default {
           if (i == 3) {
             boxLists[0].style.setProperty("background-position-x", 200 + "px");
             boxLists[0]
-              .querySelectorAll(".leopardp-item-img")
+              .querySelectorAll(".Indianp-item-img")
               .forEach((child) => {
                 child.style.setProperty("display", "block");
               });
@@ -259,7 +271,7 @@ export default {
           if (i == 4) {
             boxLists[1].style.setProperty("background-position-x", 200 + "px");
             boxLists[1]
-              .querySelectorAll(".leopardp-item-img")
+              .querySelectorAll(".Indianp-item-img")
               .forEach((child) => {
                 child.style.setProperty("display", "block");
               });
@@ -267,7 +279,7 @@ export default {
           if (i == 5) {
             boxLists[2].style.setProperty("background-position-x", 200 + "px");
             boxLists[2]
-              .querySelectorAll(".leopardp-item-img")
+              .querySelectorAll(".Indianp-item-img")
               .forEach((child) => {
                 child.style.setProperty("display", "block");
               });
@@ -275,7 +287,7 @@ export default {
           if (i == 6) {
             boxLists[3].style.setProperty("background-position-x", 200 + "px");
             boxLists[3]
-              .querySelectorAll(".leopardp-item-img")
+              .querySelectorAll(".Indianp-item-img")
               .forEach((child) => {
                 child.style.setProperty("display", "block");
               });
@@ -283,7 +295,7 @@ export default {
           if (i == 7) {
             boxLists[4].style.setProperty("background-position-x", 200 + "px");
             boxLists[4]
-              .querySelectorAll(".leopardp-item-img")
+              .querySelectorAll(".Indianp-item-img")
               .forEach((child) => {
                 child.style.setProperty("display", "block");
               });
@@ -336,7 +348,7 @@ export default {
           randomImages.push(randomImage);
         }
 
-        allMethods.assignImageList(leopardList, randomImages);
+        allMethods.assignImageList(IndianList, randomImages);
       },
       // 随机生成图像列表
       shuffleArray(array) {
@@ -345,11 +357,11 @@ export default {
           [array[i], array[j]] = [array[j], array[i]];
         }
         array.forEach((item) => {
-          if (item.name == "leopard1") {
+          if (item.name == "Indian1") {
             arrCount[0].value++;
-          } else if (item.name == "leopard2") {
+          } else if (item.name == "Indian2") {
             arrCount[1].value++;
-          } else if (item.name == "leopard3") {
+          } else if (item.name == "Indian3") {
             arrCount[2].value++;
           }
           if (item.count) {
@@ -359,13 +371,13 @@ export default {
         return array;
       },
 
-      // 将图像列表分配给leopardList
-      assignImageList(leopardList, images) {
+      // 将图像列表分配给IndianList
+      assignImageList(IndianList, images) {
         const shuffledImages = allMethods.shuffleArray(images.slice()); // 避免修改原始数组
 
         let currentIndex = 0;
 
-        leopardList.forEach((item) => {
+        IndianList.forEach((item) => {
           const numImages = Math.min(item.size, 3);
           item.imgList = shuffledImages.slice(
             currentIndex,
@@ -373,7 +385,7 @@ export default {
           );
           currentIndex += numImages;
         });
-        return leopardList;
+        return IndianList;
       },
       goSeniority: () => {
         router.push("/list");
@@ -384,9 +396,9 @@ export default {
       className,
       open,
       start,
-      leopardConfig,
+      IndianConfig,
       randomImages,
-      leopardList,
+      IndianList,
       countValue,
       useCount,
       showRuleValue,
@@ -398,22 +410,22 @@ export default {
 </script>
 <template>
   <div :class="className">
-    <!-- <img class="headleopard" :src="leopardConfig.headleopard" alt=""> -->
-    <div class="leopardp" id="leopardp">
-      <div class="leopardp-he" id="leopardp-he">
-        <!-- <img class="leopard-rule" @click="showRule" :src="leopardConfig.ruleleopard" alt=""> -->
-        <div class="leopardp-hidden">
+    <!-- <img class="headIndian" :src="IndianConfig.headIndian" alt=""> -->
+    <div class="Indianp" id="Indianp">
+      <div class="Indianp-he" id="Indianp-he">
+        <!-- <img class="Indian-rule" @click="showRule" :src="IndianConfig.ruleIndian" alt=""> -->
+        <div class="Indianp-hidden">
           <div
-            class="leopardp-item"
+            class="Indianp-item"
             :id="item.name"
-            v-for="(item, index) in leopardList"
+            v-for="(item, index) in IndianList"
           >
             <div
               v-for="(imgItem, imgIndex) in item.imgList"
               :class="
                 imgItem.className
-                  ? 'leopardp-item-img ' + imgItem.className
-                  : 'leopardp-item-img'
+                  ? 'Indianp-item-img ' + imgItem.className
+                  : 'Indianp-item-img'
               "
             >
               <img :src="imgItem.img" alt="" />
@@ -421,43 +433,43 @@ export default {
           </div>
         </div>
       </div>
-      <div class="buttonleopard-box">
+      <div class="buttonIndian-box">
         <div class="buttons" @click="run"></div>
         <div class="buttons2" @click="goSeniority"></div>
       </div>
-      <div class="leopardd-leopardp">
-        <div class="leopardd-back" @click="close"></div>
+      <div class="Indiand-Indianp">
+        <div class="Indiand-back" @click="close"></div>
       </div>
-      <div class="leopard-count" @click="showRule">
-        <img class="leopard-rule" :src="leopardConfig.ruleleopard" alt="" />
-        <img :src="leopardConfig.countleopard" alt="" />
+      <div class="Indian-count" @click="showRule">
+        <!-- <img class="Indian-rule" :src="IndianConfig.ruleIndian" alt="" /> -->
+        <!-- <img :src="IndianConfig.countIndian" alt="" /> -->
         <div class="countValue">{{ countValue }}</div>
       </div>
     </div>
     <Teleport to="body">
       <div v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="leopardConfig.star" alt="" /> -->
-        <!-- <img class="model-img-bg" :src="leopardConfig.resultleopard" alt="" /> -->
-        <!-- <div class="modelleopard-list">
+        <!-- <img class="model-star" :src="IndianConfig.star" alt="" /> -->
+        <!-- <img class="model-img-bg" :src="IndianConfig.resultIndian" alt="" /> -->
+        <!-- <div class="modelIndian-list">
           <div
-            class="modelleopard-item"
+            class="modelIndian-item"
             v-for="(item, index) in arrCount"
             :key="index"
           >
             {{ item.count + "X" + item.value }}
           </div>
-          <div class="modelleopard-total">{{ useCount }}</div>
+          <div class="modelIndian-total">{{ useCount }}</div>
         </div> -->
       </div>
     </Teleport>
 
     <Teleport to="body">
-      <div v-if="showRuleValue" class="modal" @click="showRule">
+      <!-- <div v-if="showRuleValue" class="modal" @click="showRule"> -->
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="leopardConfig.star" alt="" /> -->
-        <img class="model-img" :src="leopardConfig.ruleDialogleopard" alt="" />
-      </div>
+        <!-- <img class="model-star" :src="IndianConfig.star" alt="" /> -->
+        <!-- <img class="model-img" :src="IndianConfig.ruleDialogIndian" alt="" /> -->
+      <!-- </div> -->
     </Teleport>
   </div>
 </template>
@@ -468,43 +480,44 @@ export default {
 
   width: 280px;
 }
-.leopardd-leopardp {
+.Indiand-Indianp {
   display: flex;
   align-items: center;
   /* padding: 60px 15px; */
   position: absolute;
   z-index: 99;
-  top: 0;
-  width: 80%;
-  height: 60px;
+  top: 12%;
+    right: 23%;
+
   color: #fff;
 }
-.leopard-count {
+.Indian-count {
   width: 100%;
   position: absolute;
-  bottom: 7%;
+  top: 15%;
   left: 28%;
   display: flex;
   font-size: 16px;
   z-index: 1;
 }
 .countValue {
-  margin: -4.5% 0 0 27%;
+  margin: 0 0 0 14%;
+
 }
-.leopard-count img {
+.Indian-count img {
   width: 54%;
   position: absolute;
   bottom: 0;
   z-index: -1;
 }
-.leopard-count .leopard-rule {
+.Indian-count .Indian-rule {
   position: absolute;
   left: -9%;
   width: 45px;
   height: 45px;
 }
-.leopardd-back {
-  background: v-bind("'url(' + leopardConfig.backleopard + ')'") no-repeat;
+.Indiand-back {
+  background: v-bind("'url(' + IndianConfig.backIndian + ')'") no-repeat;
 
   width: 36px;
   height: 42px;
@@ -515,14 +528,14 @@ export default {
   margin-top: -30%;
   width: 160px;
   height: 80px;
-  background: v-bind("'url(' + leopardConfig.playleopard + ')'") no-repeat;
+  background: v-bind("'url(' + IndianConfig.playIndian + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 }
 .container {
   display: flex;
   flex-direction: column;
-  background: v-bind("'url(' + leopardConfig.boxleopard + ')'") no-repeat;
+  background: v-bind("'url(' + IndianConfig.boxIndian + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -532,17 +545,17 @@ export default {
   align-items: center;
 }
 
-.leopardp {
+.Indianp {
   position: relative;
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
-  width: 90vw;
-  height: 90vh;
+  width: 100vw;
+    height: 100vh;
   overflow: hidden;
 
-  background: v-bind("'url(' + leopardConfig.anyBoxleopard + ')'") no-repeat;
+  background: v-bind("'url(' + IndianConfig.anyBoxIndian + ')'") no-repeat;
   background-size: 85%;
   background-position: center;
   color: #fff;
@@ -550,40 +563,45 @@ export default {
   font-size: 26;
 }
 
-.buttonleopard-box {
+.buttonIndian-box {
   position: absolute;
+  top: 15%;
   display: flex;
   width: 60%;
   justify-content: space-between;
 }
 .buttons {
-  margin-left: -4%;
-  width: 23%;
-  height: 44px;
+  margin-left: 9%;
+    width: 21%;
+    height: 24px;
   z-index: 999;
-  background: v-bind("'url(' + leopardConfig.playleopard + ')'") no-repeat;
+  background: v-bind("'url(' + IndianConfig.playIndian + ')'") no-repeat;
   background-size: 100% 100%;
 }
 .buttons2 {
-  width: 22%;
-  height: 44px;
+  margin-right: 12%;
+    width: 30%;
+    height: 24px;
   z-index: 999;
-  background: v-bind("'url(' + leopardConfig.seniorityleopard + ')'") no-repeat;
+  background: v-bind("'url(' + IndianConfig.seniorityIndian + ')'") no-repeat;
   background-size: 100% 100%;
 }
 
-.leopardp-he {
+.Indianp-he {
   position: relative;
   margin-right: 2%;
-  margin-top: -5%;
-  width: 107%;
+  /* margin-top: -5%; */
+  width:88%;
   height: 112vw;
   display: flex;
   justify-content: space-between;
   transform: scale(0.5);
 }
 
-.leopardp-hidden {
+.Indianp-hidden 
+{
+  margin-top: 2%;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -591,7 +609,7 @@ export default {
   height: 100%;
   overflow: hidden;
 }
-.leopardp-item {
+.Indianp-item {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -599,19 +617,20 @@ export default {
 
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + leopardConfig.anyleopard + ')'");
+  background: v-bind("'url(' + IndianConfig.anyIndian + ')'");
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
+  background-size: 85%;
 }
-.leopardp-item-img {
+.Indianp-item-img {
   position: relative;
 
   display: none;
   width: 120px;
   height: 120px;
 }
-.leopardp-item-img img {
+.Indianp-item-img img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -631,7 +650,7 @@ export default {
   height: 100vh;
   z-index: 9999;
   /* background-color: rgba(0, 0, 0, 0.5); */
-  /* background: v-bind("'url(' + leopardConfig.dialogleopard + ')'") no-repeat; */
+  /* background: v-bind("'url(' + IndianConfig.dialogIndian + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star {
@@ -663,7 +682,7 @@ export default {
   width: 100%;
 }
 
-.modelleopard-list {
+.modelIndian-list {
   position: absolute;
   left: 60%;
   top: 39.5%;
@@ -675,33 +694,33 @@ export default {
   font-size: 16px;
   /* transform: rotate(7deg) translateX(-36px); */
 }
-.modelleopard-item {
+.modelIndian-item {
   margin-bottom: 11px;
 }
-.modelleopard-total {
+.modelIndian-total {
   padding: 7px 14px;
 }
 
-.headleopard {
+.headIndian {
   margin-top: 10vh;
   width: 80%;
 }
 /* 定义步长图片动画关键帧 */
 @keyframes image-animation {
   0% {
-    background-image: v-bind("'url(' + leopardConfig.animation1 + ')'");
+    background-image: v-bind("'url(' + IndianConfig.animation1 + ')'");
   }
 
   25% {
-    background-image: v-bind("'url(' + leopardConfig.animation4 + ')'");
+    background-image: v-bind("'url(' + IndianConfig.animation4 + ')'");
   }
 
   75% {
-    background-image: v-bind("'url(' + leopardConfig.animation8 + ')'");
+    background-image: v-bind("'url(' + IndianConfig.animation8 + ')'");
   }
 
   100% {
-    background-image: v-bind("'url(' + leopardConfig.animation12 + ')'");
+    background-image: v-bind("'url(' + IndianConfig.animation12 + ')'");
   }
 }
 
