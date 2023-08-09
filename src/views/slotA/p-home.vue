@@ -1,36 +1,38 @@
 <script>
-import playIndian from "@/assets/slotA1/playIndian2.png";
-import boxIndian from "@/assets/slotA1/boxIndian.jpg";
-import anyIndian from "@/assets/slotA1/changeIndian.png";
-import anyBoxIndian from "@/assets/slotA1/anyBoxIndian.png";
-import backIndian from "@/assets/slotA1/backIndian.png";
-import seniorityIndian from "@/assets/slotA1/seniorityIndian.png";
-// import countIndian from "@/assets/slotA1/countIndian.png";
-// import ruleIndian from "@/assets/slotA1/ruleIndian.png";
-// import ruleDialogIndian from "@/assets/slotA1/ruleDialogIndian.jpg";
-// import resultIndian from "@/assets/slotA1/resultIndian.png";
-// import headIndian from "@/assets/slotA1/headIndian.png";
+import playcircus from "@/assets/slotA2/playcircus.png";
+import boxcircus from "@/assets/slotA2/boxcircus.jpg";
+import anycircus from "@/assets/slotA2/changecircus.png";
+import anyBoxcircus from "@/assets/slotA2/anyBoxcircus.png";
+import backcircus from "@/assets/slotA2/backcircus.png";
+import senioritycircus from "@/assets/slotA2/senioritycircus.png";
+// import countcircus from "@/assets/slotA2/countcircus.png";
+// import rulecircus from "@/assets/slotA2/rulecircus.png";
+// import ruleDialogcircus from "@/assets/slotA2/ruleDialogcircus.jpg";
+// import resultcircus from "@/assets/slotA2/resultcircus.png";
+// import headcircus from "@/assets/slotA2/headcircus.png";
 
-// import star from "@/assets/slotA1/starIndian.gif";
+// import star from "@/assets/slotA2/starcircus.gif";
 import { useRouter, useRoute } from "vue-router";
-import Indian1 from "@/assets/slotA1/Indian1.jpg";
-import Indian2 from "@/assets/slotA1/Indian2.jpg";
-import Indian3 from "@/assets/slotA1/Indian3.jpg";
-import Indian4 from "@/assets/slotA1/Indian4.jpg";
-import Indian5 from "@/assets/slotA1/Indian5.jpg";
-import Indian6 from "@/assets/slotA1/Indian6.png";
-import Indian7 from "@/assets/slotA1/Indian7.png";
-import Indian8 from "@/assets/slotA1/Indian8.png";
-import Indian9 from "@/assets/slotA1/Indian9.png";
-import Indian10 from "@/assets/slotA1/Indian10.png";
+import circus1 from "@/assets/slotA2/circus1.png";
+import circus2 from "@/assets/slotA2/circus2.png";
+import circus3 from "@/assets/slotA2/circus3.png";
+import circus4 from "@/assets/slotA2/circus4.png";
+import circus5 from "@/assets/slotA2/circus5.png";
+import circus6 from "@/assets/slotA2/circus6.png";
+import circus7 from "@/assets/slotA2/circus7.png";
+import circus8 from "@/assets/slotA2/circus8.png";
+import circus9 from "@/assets/slotA2/circus9.png";
+import circus10 from "@/assets/slotA2/circus10.png";
+import circus11 from "@/assets/slotA2/circus10.png";
+import circus12 from "@/assets/slotA2/circus10.png";
 
-import animation1 from "@/assets/slotA1/dong/00001.png";
-import animation4 from "@/assets/slotA1/dong/00004.png";
-import animation8 from "@/assets/slotA1/dong/00008.png";
-import animation12 from "@/assets/slotA1/dong/00012.png";
+import animation1 from "@/assets/slotA2/dong/00001.png";
+import animation4 from "@/assets/slotA2/dong/00004.png";
+import animation8 from "@/assets/slotA2/dong/00008.png";
+import animation12 from "@/assets/slotA2/dong/00012.png";
 
 import { inject } from "vue";
-// import football from "@/assets/slotA1/football.png";
+// import football from "@/assets/slotA2/football.png";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
@@ -62,25 +64,25 @@ export default {
     const router = new useRouter();
     // 随机生成 12 张图的数组
     let randomImages = [];
-    const IndianConfig = reactive({
-      // headIndian,
+    const circusConfig = reactive({
+      // headcircus,
       animation1,
       animation4,
       animation8,
       animation12,
-      anyIndian,
-      playIndian,
-      anyBoxIndian,
-      boxIndian,
-      backIndian,
+      anycircus,
+      playcircus,
+      anyBoxcircus,
+      boxcircus,
+      backcircus,
       //   star,
-      seniorityIndian,
-      // countIndian,
-      // ruleIndian,
-      // ruleDialogIndian,
-      // resultIndian
+      senioritycircus,
+      // countcircus,
+      // rulecircus,
+      // ruleDialogcircus,
+      // resultcircus
     });
-    const IndianList = reactive([
+    const circusList = reactive([
       {
         name: "item1",
         size: 4,
@@ -101,11 +103,7 @@ export default {
         size: 12,
         imgList: [],
       },
-      {
-        name: "item5",
-        size: 12,
-        imgList: [],
-      },
+      
     ]);
     let timeOhter = 0;
     let id;
@@ -114,43 +112,52 @@ export default {
     let buttonStatus = ref(true);
     const images = [
       {
-        img: Indian1,
-      },
-      {
-        img: Indian2,
-      },
-      {
-        img: Indian3,
-        name: "Indian2",
+        img: circus1,
+        name: "circus2",
         className: "animation",
         count: 1800 * magnification.value,
       },
       {
-        img: Indian4,
-      },
-      {
-        img: Indian5,
-      },
-      {
-        img: Indian6,
-        name: "Indian1",
+        img: circus2,
+        name: "circus1",
         className: "animation",
         count: 1000 * magnification.value,
       },
       {
-        img: Indian7,
-        name: "Indian3",
+        img: circus3,
+      
+      },
+      {
+        img: circus4,
+      },
+      {
+        img: circus5,
+      },
+      {
+        img: circus6,
+     
+      },
+      {
+        img: circus7,
+      
+      },
+      {
+        img: circus8,
+        name: "circus3",
         className: "animation",
         count: 2200 * magnification.value,
       },
       {
-        img: Indian8,
+        img: circus9,
       },
       {
-        img: Indian8,
+        img: circus10,
       },
       {
-        img: Indian10,
+        img: circus11,
+      },
+      {
+        img: circus12,
       },
     ];
     const allMethods = {
@@ -166,11 +173,11 @@ export default {
         buttonStatus.value = false;
 
         allMethods.clear();
-        const boxLists = IndianList.map((item) => {
+        const boxLists = circusList.map((item) => {
           return document.getElementById(item.name);
         });
         boxLists[0].style.setProperty("background-position-x", "center");
-        boxLists[0].querySelectorAll(".Indianp-item-img").forEach((child) => {
+        boxLists[0].querySelectorAll(".circusp-item-img").forEach((child) => {
           child.style.setProperty("display", "none");
         });
         // boxLists.forEach((item)=>{
@@ -183,14 +190,14 @@ export default {
         //       0+'px'
         //     );
         // })
-        const content = document.getElementById("Indianp-he");
-        const box2 = document.getElementById("Indianp");
+        const content = document.getElementById("circusp-he");
+        const box2 = document.getElementById("circusp");
         const coords = { x: 0, y: 0 }; // Start at (0, 0)
         const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to(
             { x: 0, y: (1120 * content.clientHeight) / box2.clientHeight },
             100
-          ) // Move to (300, 200) in 1 second.
+          ) // Move to (300, 600) in 1 second.
           .easing() // Use an easing function to make the animation smooth.
           .onUpdate(() => {
             if (timeOhter > 1000 && timeOhter <= 4000) {
@@ -214,12 +221,6 @@ export default {
               );
             }
 
-            if (timeOhter > 4000 && timeOhter <= 7000) {
-              boxLists[4].style.setProperty(
-                "background-position-y",
-                -coords.y + "px"
-              );
-            }
             if (timeOhter > 0 && timeOhter <= 3000) {
               boxLists[0].style.setProperty(
                 "background-position-y",
@@ -244,7 +245,7 @@ export default {
         let i = 0;
         let timeany = setInterval(() => {
           i++;
-          if (i > 7) {
+          if (i > 6) {
             sessionStorage.setItem("countValue", countValue.value);
 
             open.value = true;
@@ -252,56 +253,48 @@ export default {
             tween.stop();
             clearInterval(timeany);
           }
-          if (i > 0 && i < 5) {
+          if (i > 0 && i < 4) {
             boxLists[i].style.setProperty("background-position-x", "center");
             boxLists[i]
-              .querySelectorAll(".Indianp-item-img")
+              .querySelectorAll(".circusp-item-img")
               .forEach((child) => {
                 child.style.setProperty("display", "none");
               });
           }
           if (i == 3) {
-            boxLists[0].style.setProperty("background-position-x", 200 + "px");
+            boxLists[0].style.setProperty("background-position-x", 600 + "px");
             boxLists[0]
-              .querySelectorAll(".Indianp-item-img")
+              .querySelectorAll(".circusp-item-img")
               .forEach((child) => {
                 child.style.setProperty("display", "block");
               });
           }
           if (i == 4) {
-            boxLists[1].style.setProperty("background-position-x", 200 + "px");
+            boxLists[1].style.setProperty("background-position-x", 600 + "px");
             boxLists[1]
-              .querySelectorAll(".Indianp-item-img")
+              .querySelectorAll(".circusp-item-img")
               .forEach((child) => {
                 child.style.setProperty("display", "block");
               });
           }
           if (i == 5) {
-            boxLists[2].style.setProperty("background-position-x", 200 + "px");
+            boxLists[2].style.setProperty("background-position-x", 600 + "px");
             boxLists[2]
-              .querySelectorAll(".Indianp-item-img")
+              .querySelectorAll(".circusp-item-img")
               .forEach((child) => {
                 child.style.setProperty("display", "block");
               });
           }
           if (i == 6) {
-            boxLists[3].style.setProperty("background-position-x", 200 + "px");
+            boxLists[3].style.setProperty("background-position-x", 600 + "px");
             boxLists[3]
-              .querySelectorAll(".Indianp-item-img")
+              .querySelectorAll(".circusp-item-img")
               .forEach((child) => {
                 child.style.setProperty("display", "block");
               });
+              countValue.value += useCount.value;
           }
-          if (i == 7) {
-            boxLists[4].style.setProperty("background-position-x", 200 + "px");
-            boxLists[4]
-              .querySelectorAll(".Indianp-item-img")
-              .forEach((child) => {
-                child.style.setProperty("display", "block");
-              });
-
-            countValue.value += useCount.value;
-          }
+       
         }, 1000);
       },
       clear: () => {
@@ -348,7 +341,7 @@ export default {
           randomImages.push(randomImage);
         }
 
-        allMethods.assignImageList(IndianList, randomImages);
+        allMethods.assignImageList(circusList, randomImages);
       },
       // 随机生成图像列表
       shuffleArray(array) {
@@ -357,11 +350,11 @@ export default {
           [array[i], array[j]] = [array[j], array[i]];
         }
         array.forEach((item) => {
-          if (item.name == "Indian1") {
+          if (item.name == "circus1") {
             arrCount[0].value++;
-          } else if (item.name == "Indian2") {
+          } else if (item.name == "circus2") {
             arrCount[1].value++;
-          } else if (item.name == "Indian3") {
+          } else if (item.name == "circus3") {
             arrCount[2].value++;
           }
           if (item.count) {
@@ -371,13 +364,13 @@ export default {
         return array;
       },
 
-      // 将图像列表分配给IndianList
-      assignImageList(IndianList, images) {
+      // 将图像列表分配给circusList
+      assignImageList(circusList, images) {
         const shuffledImages = allMethods.shuffleArray(images.slice()); // 避免修改原始数组
 
         let currentIndex = 0;
 
-        IndianList.forEach((item) => {
+        circusList.forEach((item) => {
           const numImages = Math.min(item.size, 3);
           item.imgList = shuffledImages.slice(
             currentIndex,
@@ -385,7 +378,7 @@ export default {
           );
           currentIndex += numImages;
         });
-        return IndianList;
+        return circusList;
       },
       goSeniority: () => {
         router.push("/list");
@@ -396,9 +389,9 @@ export default {
       className,
       open,
       start,
-      IndianConfig,
+      circusConfig,
       randomImages,
-      IndianList,
+      circusList,
       countValue,
       useCount,
       showRuleValue,
@@ -410,22 +403,22 @@ export default {
 </script>
 <template>
   <div :class="className">
-    <!-- <img class="headIndian" :src="IndianConfig.headIndian" alt=""> -->
-    <div class="Indianp" id="Indianp">
-      <div class="Indianp-he" id="Indianp-he">
-        <!-- <img class="Indian-rule" @click="showRule" :src="IndianConfig.ruleIndian" alt=""> -->
-        <div class="Indianp-hidden">
+    <!-- <img class="headcircus" :src="circusConfig.headcircus" alt=""> -->
+    <div class="circusp" id="circusp">
+      <div class="circusp-he" id="circusp-he">
+        <!-- <img class="circus-rule" @click="showRule" :src="circusConfig.rulecircus" alt=""> -->
+        <div class="circusp-hidden">
           <div
-            class="Indianp-item"
+            class="circusp-item"
             :id="item.name"
-            v-for="(item, index) in IndianList"
+            v-for="(item, index) in circusList"
           >
             <div
               v-for="(imgItem, imgIndex) in item.imgList"
               :class="
                 imgItem.className
-                  ? 'Indianp-item-img ' + imgItem.className
-                  : 'Indianp-item-img'
+                  ? 'circusp-item-img ' + imgItem.className
+                  : 'circusp-item-img'
               "
             >
               <img :src="imgItem.img" alt="" />
@@ -433,43 +426,43 @@ export default {
           </div>
         </div>
       </div>
-      <div class="buttonIndian-box">
+      <div class="buttoncircus-box">
         <div class="buttons" @click="run"></div>
         <div class="buttons2" @click="goSeniority"></div>
       </div>
-      <div class="Indiand-Indianp">
-        <div class="Indiand-back" @click="close"></div>
+      <div class="circusd-circusp">
+        <div class="circusd-back" @click="close"></div>
       </div>
-      <div class="Indian-count" @click="showRule">
-        <!-- <img class="Indian-rule" :src="IndianConfig.ruleIndian" alt="" /> -->
-        <!-- <img :src="IndianConfig.countIndian" alt="" /> -->
+      <div class="circus-count" @click="showRule">
+        <!-- <img class="circus-rule" :src="circusConfig.rulecircus" alt="" /> -->
+        <!-- <img :src="circusConfig.countcircus" alt="" /> -->
         <div class="countValue">{{ countValue }}</div>
       </div>
     </div>
     <Teleport to="body">
       <div v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="IndianConfig.star" alt="" /> -->
-        <!-- <img class="model-img-bg" :src="IndianConfig.resultIndian" alt="" /> -->
-        <!-- <div class="modelIndian-list">
+        <!-- <img class="model-star" :src="circusConfig.star" alt="" /> -->
+        <!-- <img class="model-img-bg" :src="circusConfig.resultcircus" alt="" /> -->
+        <!-- <div class="modelcircus-list">
           <div
-            class="modelIndian-item"
+            class="modelcircus-item"
             v-for="(item, index) in arrCount"
             :key="index"
           >
             {{ item.count + "X" + item.value }}
           </div>
-          <div class="modelIndian-total">{{ useCount }}</div>
+          <div class="modelcircus-total">{{ useCount }}</div>
         </div> -->
       </div>
     </Teleport>
 
     <Teleport to="body">
-      <!-- <div v-if="showRuleValue" class="modal" @click="showRule"> -->
+      <div v-if="showRuleValue" class="modal" @click="showRule">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="IndianConfig.star" alt="" /> -->
-        <!-- <img class="model-img" :src="IndianConfig.ruleDialogIndian" alt="" /> -->
-      <!-- </div> -->
+        <!-- <img class="model-star" :src="circusConfig.star" alt="" /> -->
+        <!-- <img class="model-img" :src="circusConfig.ruleDialogcircus" alt="" /> -->
+      </div>
     </Teleport>
   </div>
 </template>
@@ -480,44 +473,43 @@ export default {
 
   width: 280px;
 }
-.Indiand-Indianp {
+.circusd-circusp {
   display: flex;
   align-items: center;
   /* padding: 60px 15px; */
   position: absolute;
-  z-index: 99;
-  top: 12%;
-    right: 23%;
-
-  color: #fff;
+    z-index: 99;
+    top: 5%;
+    left: 15%;
+    color: #fff;
 }
-.Indian-count {
+.circus-count {
   width: 100%;
-  position: absolute;
-  top: 15%;
-  left: 28%;
-  display: flex;
-  font-size: 16px;
-  z-index: 1;
+    position: absolute;
+    top: 63%;
+    left: 61%;
+    display: flex;
+    font-size: 16px;
+    z-index: 1;
 }
 .countValue {
   margin: 0 0 0 14%;
 
 }
-.Indian-count img {
+.circus-count img {
   width: 54%;
   position: absolute;
   bottom: 0;
   z-index: -1;
 }
-.Indian-count .Indian-rule {
+.circus-count .circus-rule {
   position: absolute;
   left: -9%;
   width: 45px;
   height: 45px;
 }
-.Indiand-back {
-  background: v-bind("'url(' + IndianConfig.backIndian + ')'") no-repeat;
+.circusd-back {
+  background: v-bind("'url(' + circusConfig.backcircus + ')'") no-repeat;
 
   width: 36px;
   height: 42px;
@@ -528,14 +520,14 @@ export default {
   margin-top: -30%;
   width: 160px;
   height: 80px;
-  background: v-bind("'url(' + IndianConfig.playIndian + ')'") no-repeat;
+  background: v-bind("'url(' + circusConfig.playcircus + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 }
 .container {
   display: flex;
   flex-direction: column;
-  background: v-bind("'url(' + IndianConfig.boxIndian + ')'") no-repeat;
+  background: v-bind("'url(' + circusConfig.boxcircus + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -545,7 +537,7 @@ export default {
   align-items: center;
 }
 
-.Indianp {
+.circusp {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -555,17 +547,18 @@ export default {
     height: 100vh;
   overflow: hidden;
 
-  background: v-bind("'url(' + IndianConfig.anyBoxIndian + ')'") no-repeat;
-  background-size: 85%;
-  background-position: center;
+  background: v-bind("'url(' + circusConfig.anyBoxcircus + ')'") no-repeat;
+  background-size: 75%;
+    background-position: center 0%;
+
   color: #fff;
   font-weight: 600;
   font-size: 26;
 }
 
-.buttonIndian-box {
+.buttoncircus-box {
   position: absolute;
-  top: 15%;
+  bottom: 1%;
   display: flex;
   width: 60%;
   justify-content: space-between;
@@ -573,34 +566,34 @@ export default {
 .buttons {
   margin-left: 9%;
     width: 21%;
-    height: 24px;
+    height: 40px;
   z-index: 999;
-  background: v-bind("'url(' + IndianConfig.playIndian + ')'") no-repeat;
+  background: v-bind("'url(' + circusConfig.playcircus + ')'") no-repeat;
   background-size: 100% 100%;
 }
 .buttons2 {
   margin-right: 12%;
     width: 30%;
-    height: 24px;
+    height: 40px;
   z-index: 999;
-  background: v-bind("'url(' + IndianConfig.seniorityIndian + ')'") no-repeat;
+  background: v-bind("'url(' + circusConfig.senioritycircus + ')'") no-repeat;
   background-size: 100% 100%;
 }
 
-.Indianp-he {
+.circusp-he {
   position: relative;
-  margin-right: 2%;
-  /* margin-top: -5%; */
-  width:88%;
-  height: 112vw;
-  display: flex;
-  justify-content: space-between;
-  transform: scale(0.5);
+    margin-right: 10%;
+    margin-top: -5%;
+    width: 81%;
+    height: 126vw;
+    display: flex;
+    justify-content: space-between;
+    transform: scale(0.65);
 }
 
-.Indianp-hidden 
+.circusp-hidden 
 {
-  margin-top: 2%;
+  /* margin-top: 2%; */
 
   display: flex;
   justify-content: space-between;
@@ -609,7 +602,7 @@ export default {
   height: 100%;
   overflow: hidden;
 }
-.Indianp-item {
+.circusp-item {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -617,27 +610,27 @@ export default {
 
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + IndianConfig.anyIndian + ')'");
+  background: v-bind("'url(' + circusConfig.anycircus + ')'");
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
-  background-size: 85%;
+  background-size: 66% 415%;
 }
-.Indianp-item-img {
+.circusp-item-img {
   position: relative;
 
   display: none;
-  width: 120px;
-  height: 120px;
+  width: 100%;
+    height: 100%;
 }
-.Indianp-item-img img {
+.circusp-item-img img {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1.1);
   z-index: -1;
-  width: 100%;
-  height: 80%;
+  width: 80%;
+    height: 80%;
 }
 .modal {
   display: flex;
@@ -650,7 +643,7 @@ export default {
   height: 100vh;
   z-index: 9999;
   /* background-color: rgba(0, 0, 0, 0.5); */
-  /* background: v-bind("'url(' + IndianConfig.dialogIndian + ')'") no-repeat; */
+  /* background: v-bind("'url(' + circusConfig.dialogcircus + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star {
@@ -682,7 +675,7 @@ export default {
   width: 100%;
 }
 
-.modelIndian-list {
+.modelcircus-list {
   position: absolute;
   left: 60%;
   top: 39.5%;
@@ -694,40 +687,40 @@ export default {
   font-size: 16px;
   /* transform: rotate(7deg) translateX(-36px); */
 }
-.modelIndian-item {
+.modelcircus-item {
   margin-bottom: 11px;
 }
-.modelIndian-total {
+.modelcircus-total {
   padding: 7px 14px;
 }
 
-.headIndian {
+.headcircus {
   margin-top: 10vh;
   width: 80%;
 }
 /* 定义步长图片动画关键帧 */
 @keyframes image-animation {
   0% {
-    background-image: v-bind("'url(' + IndianConfig.animation1 + ')'");
+    background-image: v-bind("'url(' + circusConfig.animation1 + ')'");
   }
 
   25% {
-    background-image: v-bind("'url(' + IndianConfig.animation4 + ')'");
+    background-image: v-bind("'url(' + circusConfig.animation4 + ')'");
   }
 
   75% {
-    background-image: v-bind("'url(' + IndianConfig.animation8 + ')'");
+    background-image: v-bind("'url(' + circusConfig.animation8 + ')'");
   }
 
   100% {
-    background-image: v-bind("'url(' + IndianConfig.animation12 + ')'");
+    background-image: v-bind("'url(' + circusConfig.animation12 + ')'");
   }
 }
 
 /* 设置动画元素样式和动画 */
 .animation {
-  width: 150px;
-  height: 150px;
+  width: 100%;
+    height: 100%;
   background-repeat: no-repeat;
   background-position-y: center;
   /* background-size: cover; */

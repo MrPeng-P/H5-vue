@@ -1,7 +1,7 @@
 <script>
 
-import playIndian from "@/assets/slotA1/playIndian.png";
-import boxIndian from "@/assets/slotA1/boxIndian.jpg";
+import playcircus from "@/assets/slotA2/playcircus.png";
+import boxcircus from "@/assets/slotA2/boxcircus.jpg";
 import { onMounted, reactive, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
@@ -9,9 +9,9 @@ export default {
   setup() {
     const router = new useRouter();
     const className = "container";
-    const IndianConfig = reactive({
-      playIndian,
-      boxIndian,
+    const circusConfig = reactive({
+      playcircus,
+      boxcircus,
     });
    
 
@@ -25,7 +25,7 @@ export default {
     });
     return {
         className,
-      IndianConfig,
+      circusConfig,
       ...allMethods,
     };
   },
@@ -43,16 +43,16 @@ export default {
 
 
 .start{
-    margin-top: 36%;
+    margin-top: 27%;
     width: 160px;
     height: 264px;
-  background: v-bind("'url(' + IndianConfig.playIndian + ')'") no-repeat;
+  background: v-bind("'url(' + circusConfig.playcircus + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 
 }
 .container {
-  background: v-bind("'url(' + IndianConfig.boxIndian + ')'") no-repeat;
+  background: v-bind("'url(' + circusConfig.boxcircus + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -63,7 +63,7 @@ export default {
 }
 
 
-.Indianp-he {
+.circusp-he {
   position: relative;
     margin-top: 26%;
     width: 140%;
@@ -72,7 +72,7 @@ export default {
     justify-content: space-between;
     transform: scale(0.65);
 }
-.Indianp-hidden{
+.circusp-hidden{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -81,11 +81,11 @@ export default {
   overflow: hidden;
 
 }
-.Indianp-item {
+.circusp-item {
   
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + IndianConfig.anyIndian + ')'") ;
+  background: v-bind("'url(' + circusConfig.anycircus + ')'") ;
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
@@ -103,7 +103,7 @@ export default {
     height: 100vh;
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.5);
-  /* background: v-bind("'url(' + IndianConfig.dialogIndian + ')'") no-repeat; */
+  /* background: v-bind("'url(' + circusConfig.dialogcircus + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star{

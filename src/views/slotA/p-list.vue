@@ -1,8 +1,8 @@
 <script>
-import homeIndian from "@/assets/slotA1/homeIndian.png";
-import againIndian from "@/assets/slotA1/againIndian.png";
-import listIndian from "@/assets/slotA1/listboxIndian.png";
-import boxIndian from "@/assets/slotA1/boxIndian.jpg";
+import homecircus from "@/assets/slotA2/homecircus.png";
+import againcircus from "@/assets/slotA2/againcircus.png";
+import listcircus from "@/assets/slotA2/listboxcircus.png";
+import boxcircus from "@/assets/slotA2/boxcircus.jpg";
 
 import { onMounted, reactive, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
@@ -11,20 +11,20 @@ export default {
   setup() {
     const router = new useRouter();
     const className = "container";
-    const IndianConfig = reactive({
-      listIndian,
-      homeIndian,
-      againIndian,
-      boxIndian,
+    const circusConfig = reactive({
+      listcircus,
+      homecircus,
+      againcircus,
+      boxcircus,
     });
     const list = reactive([
       {
-        name: "Ivanildo Indian",
-        count: "111B",
+        name: "Ivanildo circus",
+        count: "1101B",
       },
       {
-        name: "Jonas Indian",
-        count: "11B",
+        name: "Jonas circus",
+        count: "101B",
       },
       // {
       //   name: "Cássio Watanabe",
@@ -35,8 +35,8 @@ export default {
         count: sessionStorage.getItem('countValue')||1000,
       },
       {
-        name: "Lúcio Indian",
-        count: "15B",
+        name: "Lúcio circus",
+        count: "150B",
       },
     ]);
 
@@ -88,22 +88,22 @@ export default {
     return {
       list,
       className,
-      IndianConfig,
+      circusConfig,
       ...allMethods,
     };
   },
 };
 </script>
 <template>
-  <div class="Indian">
+  <div class="circus">
     <div :class="className">
-    <div class="listIndian">
-      <div class="itemIndian" v-for="(item, index) in list" :key="index">
-        <div class="Indian-name">{{ item.name }}</div>
-        <div class="Indian-count">{{ item.count }}</div>
+    <div class="listcircus">
+      <div class="itemcircus" v-for="(item, index) in list" :key="index">
+        <div class="circus-name">{{ item.name }}</div>
+        <div class="circus-count">{{ item.count }}</div>
       </div>
     </div>
-    <div class="buttonIndian-box">
+    <div class="buttoncircus-box">
       <div class="buttons" @click="goHome"></div>
       <div class="buttons2" @click="goStart"></div>
     </div>
@@ -115,10 +115,10 @@ export default {
 </template>
 
 <style scoped>
-.Indian{
+.circus{
   display: flex;
   flex-direction: column;
-  background: v-bind("'url(' + IndianConfig.boxIndian + ')'") no-repeat;
+  background: v-bind("'url(' + circusConfig.boxcircus + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -130,10 +130,11 @@ export default {
 }
 .container {
   position: relative;
-  background: v-bind("'url(' + IndianConfig.listIndian + ')'") no-repeat;
-  background-size: 100% 100%;
-  width: 77vw;
-  height: 90vh;
+  background: v-bind("'url(' + circusConfig.listcircus + ')'") no-repeat;
+  background-size: 75%;
+    background-position: center 0%;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -141,7 +142,7 @@ export default {
   font-size: 14px;
 }
 
-.buttonIndian-box {
+.buttoncircus-box {
   position: absolute;
   top: 0%;
     left: 11.5%;
@@ -150,27 +151,29 @@ export default {
 
 }
 .buttons {
-  margin: 11% 0 0 10%;
-    width: 13%;
-    height: 5.5%;
+  width: 13%;
+    height: 9.5%;
+    position: absolute;
+    left: 13.5%;
+    top: 89.5%;
 
     z-index: 999;
-  background: v-bind("'url(' + IndianConfig.homeIndian + ')'") no-repeat;
+  background: v-bind("'url(' + circusConfig.homecircus + ')'") no-repeat;
   
     background-size: 100% 100%;
 }
 .buttons2 {
-  width: 40.5%;
+  width: 20%;
+  height: 9.5%;
     position: absolute;
-    left: 16.5%;
-    top: 80%;
-    height: 9%;
+    left: 40.5%;
+    top: 89.5%;
     z-index: 999;
-  background: v-bind("'url(' + IndianConfig.againIndian + ')'") no-repeat;
+  background: v-bind("'url(' + circusConfig.againcircus + ')'") no-repeat;
 
     background-size: 100% 100%;
 }
-.Indianp-he {
+.circusp-he {
   position: relative;
   margin-top: 26%;
   width: 140%;
@@ -179,7 +182,7 @@ export default {
   justify-content: space-between;
   transform: scale(0.65);
 }
-.Indianp-hidden {
+.circusp-hidden {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -187,39 +190,39 @@ export default {
   height: 100%;
   overflow: hidden;
 }
-.Indianp-item {
+.circusp-item {
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + IndianConfig.anyIndian + ')'");
+  background: v-bind("'url(' + circusConfig.anycircus + ')'");
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
 }
-.listIndian {
+.listcircus {
   position: absolute;
     top: 61%;
-    left: 56%;
+    left: 54%;
     transform: translate(-50%, -50%);
     width: 100%;
-    height: 50vh;
+    height: 89vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: left;
 }
-.itemIndian {
-  margin-top: 15px;
+.itemcircus {
+  margin-top: 36px;
   display: flex;
 }
 
-.Indian-name {
-  width: 80px;
+.circus-name {
+  width: 177px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.Indian-count{
+.circus-count{
   width: 50px;
 }
 </style>

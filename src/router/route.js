@@ -40,17 +40,17 @@ import {
 // ];
 
 //翻牌
-export const routes = [{
-    path: '/',
-    name: 'home',
-    component: () => import('@/views/flop/p-home.vue'),
-},
-{
-    path: '/flop',
-    name: 'flop',
-    component: () => import('@/views/flop/p-flop.vue'),
-}
-]
+// export const routes = [{
+//     path: '/',
+//     name: 'home',
+//     component: () => import('@/views/flop/p-home.vue'),
+// },
+// {
+//     path: '/flop',
+//     name: 'flop',
+//     component: () => import('@/views/flop/p-flop.vue'),
+// }
+// ]
 
 // //复杂老虎机
 // export const routes = [
@@ -72,25 +72,25 @@ export const routes = [{
 //   },
 // ];
 
-// //复杂老虎机-简化
-// export const routes = [
-//   {
-//     path: "/",
-//     name: "startA",
-//     component: () => import("@/views/slotA/p-start.vue"),
-//   },
+//复杂老虎机-简化
+export const routes = [
+  {
+    path: "/",
+    name: "startA",
+    component: () => import("@/views/slotA/p-start.vue"),
+  },
 
-//   {
-//     path: "/home",
-//     name: "homeA",
-//     component: () => import("@/views/slotA/p-home.vue"),
-//   },
-//   {
-//     path: "/list",
-//     name: "listA",
-//     component: () => import("@/views/slotA/p-list.vue"),
-//   },
-// ];
+  {
+    path: "/home",
+    name: "homeA",
+    component: () => import("@/views/slotA/p-home.vue"),
+  },
+  {
+    path: "/list",
+    name: "listA",
+    component: () => import("@/views/slotA/p-list.vue"),
+  },
+];
 
 
 const routerConfig = createRouter({

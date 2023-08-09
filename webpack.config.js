@@ -27,7 +27,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/imgbeach/[hash][ext]",
+          filename: "assets/imgcircus/[hash][ext]",
         },
       },
     ],
@@ -39,7 +39,7 @@ module.exports = {
     },
   },
   output: {
-    filename: "assets/beachJs/beach-[hash].js",
+    filename: "assets/circusJs/circus-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [
