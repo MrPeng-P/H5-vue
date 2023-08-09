@@ -1,38 +1,38 @@
 <script>
-import playcircus from "@/assets/slotA2/playcircus.png";
-import boxcircus from "@/assets/slotA2/boxcircus.jpg";
-import anycircus from "@/assets/slotA2/changecircus.png";
-import anyBoxcircus from "@/assets/slotA2/anyBoxcircus.png";
-import backcircus from "@/assets/slotA2/backcircus.png";
-import senioritycircus from "@/assets/slotA2/senioritycircus.png";
-// import countcircus from "@/assets/slotA2/countcircus.png";
-// import rulecircus from "@/assets/slotA2/rulecircus.png";
-// import ruleDialogcircus from "@/assets/slotA2/ruleDialogcircus.jpg";
-// import resultcircus from "@/assets/slotA2/resultcircus.png";
-// import headcircus from "@/assets/slotA2/headcircus.png";
+import playglacier from "@/assets/slotA3/playglacier.png";
+import boxglacier from "@/assets/slotA3/boxglacier.jpg";
+import anyglacier from "@/assets/slotA3/changeglacier.png";
+import anyBoxglacier from "@/assets/slotA3/anyBoxglacier.png";
+import backglacier from "@/assets/slotA3/backglacier.png";
+import seniorityglacier from "@/assets/slotA3/seniorityglacier.png";
+// import countglacier from "@/assets/slotA3/countglacier.png";
+// import ruleglacier from "@/assets/slotA3/ruleglacier.png";
+// import ruleDialogglacier from "@/assets/slotA3/ruleDialogglacier.jpg";
+// import resultglacier from "@/assets/slotA3/resultglacier.png";
+// import headglacier from "@/assets/slotA3/headglacier.png";
 
-// import star from "@/assets/slotA2/starcircus.gif";
+// import star from "@/assets/slotA3/starglacier.gif";
 import { useRouter, useRoute } from "vue-router";
-import circus1 from "@/assets/slotA2/circus1.png";
-import circus2 from "@/assets/slotA2/circus2.png";
-import circus3 from "@/assets/slotA2/circus3.png";
-import circus4 from "@/assets/slotA2/circus4.png";
-import circus5 from "@/assets/slotA2/circus5.png";
-import circus6 from "@/assets/slotA2/circus6.png";
-import circus7 from "@/assets/slotA2/circus7.png";
-import circus8 from "@/assets/slotA2/circus8.png";
-import circus9 from "@/assets/slotA2/circus9.png";
-import circus10 from "@/assets/slotA2/circus10.png";
-import circus11 from "@/assets/slotA2/circus10.png";
-import circus12 from "@/assets/slotA2/circus10.png";
+import glacier1 from "@/assets/slotA3/glacier1.png";
+import glacier2 from "@/assets/slotA3/glacier2.png";
+import glacier3 from "@/assets/slotA3/glacier3.png";
+import glacier4 from "@/assets/slotA3/glacier4.png";
+import glacier5 from "@/assets/slotA3/glacier5.png";
+import glacier6 from "@/assets/slotA3/glacier6.png";
+import glacier7 from "@/assets/slotA3/glacier7.png";
+import glacier8 from "@/assets/slotA3/glacier8.png";
+import glacier9 from "@/assets/slotA3/glacier9.png";
+import glacier10 from "@/assets/slotA3/glacier10.png";
+import glacier11 from "@/assets/slotA3/glacier10.png";
+import glacier12 from "@/assets/slotA3/glacier10.png";
 
-import animation1 from "@/assets/slotA2/dong/00001.png";
-import animation4 from "@/assets/slotA2/dong/00004.png";
-import animation8 from "@/assets/slotA2/dong/00008.png";
-import animation12 from "@/assets/slotA2/dong/00012.png";
+// import animation1 from "@/assets/slotA3/dong/00001.png";
+// import animation4 from "@/assets/slotA3/dong/00004.png";
+// import animation8 from "@/assets/slotA3/dong/00008.png";
+// import animation12 from "@/assets/slotA3/dong/00012.png";
 
 import { inject } from "vue";
-// import football from "@/assets/slotA2/football.png";
+// import football from "@/assets/slotA3/football.png";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
@@ -64,25 +64,25 @@ export default {
     const router = new useRouter();
     // 随机生成 12 张图的数组
     let randomImages = [];
-    const circusConfig = reactive({
-      // headcircus,
-      animation1,
-      animation4,
-      animation8,
-      animation12,
-      anycircus,
-      playcircus,
-      anyBoxcircus,
-      boxcircus,
-      backcircus,
+    const glacierConfig = reactive({
+      // headglacier,
+      // animation1,
+      // animation4,
+      // animation8,
+      // animation12,
+      anyglacier,
+      playglacier,
+      anyBoxglacier,
+      boxglacier,
+      backglacier,
       //   star,
-      senioritycircus,
-      // countcircus,
-      // rulecircus,
-      // ruleDialogcircus,
-      // resultcircus
+      seniorityglacier,
+      // countglacier,
+      // ruleglacier,
+      // ruleDialogglacier,
+      // resultglacier
     });
-    const circusList = reactive([
+    const glacierList = reactive([
       {
         name: "item1",
         size: 4,
@@ -112,52 +112,52 @@ export default {
     let buttonStatus = ref(true);
     const images = [
       {
-        img: circus1,
-        name: "circus2",
+        img: glacier1,
+        name: "glacier2",
         className: "animation",
         count: 1800 * magnification.value,
       },
       {
-        img: circus2,
-        name: "circus1",
+        img: glacier2,
+        name: "glacier1",
         className: "animation",
         count: 1000 * magnification.value,
       },
       {
-        img: circus3,
+        img: glacier3,
       
       },
       {
-        img: circus4,
+        img: glacier4,
       },
       {
-        img: circus5,
+        img: glacier5,
       },
       {
-        img: circus6,
+        img: glacier6,
      
       },
       {
-        img: circus7,
+        img: glacier7,
       
       },
       {
-        img: circus8,
-        name: "circus3",
+        img: glacier8,
+        name: "glacier3",
         className: "animation",
         count: 2200 * magnification.value,
       },
       {
-        img: circus9,
+        img: glacier9,
       },
       {
-        img: circus10,
+        img: glacier10,
       },
       {
-        img: circus11,
+        img: glacier11,
       },
       {
-        img: circus12,
+        img: glacier12,
       },
     ];
     const allMethods = {
@@ -173,11 +173,11 @@ export default {
         buttonStatus.value = false;
 
         allMethods.clear();
-        const boxLists = circusList.map((item) => {
+        const boxLists = glacierList.map((item) => {
           return document.getElementById(item.name);
         });
         boxLists[0].style.setProperty("background-position-x", "center");
-        boxLists[0].querySelectorAll(".circusp-item-img").forEach((child) => {
+        boxLists[0].querySelectorAll(".glacierp-item-img").forEach((child) => {
           child.style.setProperty("display", "none");
         });
         // boxLists.forEach((item)=>{
@@ -190,8 +190,8 @@ export default {
         //       0+'px'
         //     );
         // })
-        const content = document.getElementById("circusp-he");
-        const box2 = document.getElementById("circusp");
+        const content = document.getElementById("glacierp-he");
+        const box2 = document.getElementById("glacierp");
         const coords = { x: 0, y: 0 }; // Start at (0, 0)
         const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to(
@@ -256,7 +256,7 @@ export default {
           if (i > 0 && i < 4) {
             boxLists[i].style.setProperty("background-position-x", "center");
             boxLists[i]
-              .querySelectorAll(".circusp-item-img")
+              .querySelectorAll(".glacierp-item-img")
               .forEach((child) => {
                 child.style.setProperty("display", "none");
               });
@@ -264,7 +264,7 @@ export default {
           if (i == 3) {
             boxLists[0].style.setProperty("background-position-x", 600 + "px");
             boxLists[0]
-              .querySelectorAll(".circusp-item-img")
+              .querySelectorAll(".glacierp-item-img")
               .forEach((child) => {
                 child.style.setProperty("display", "block");
               });
@@ -272,7 +272,7 @@ export default {
           if (i == 4) {
             boxLists[1].style.setProperty("background-position-x", 600 + "px");
             boxLists[1]
-              .querySelectorAll(".circusp-item-img")
+              .querySelectorAll(".glacierp-item-img")
               .forEach((child) => {
                 child.style.setProperty("display", "block");
               });
@@ -280,7 +280,7 @@ export default {
           if (i == 5) {
             boxLists[2].style.setProperty("background-position-x", 600 + "px");
             boxLists[2]
-              .querySelectorAll(".circusp-item-img")
+              .querySelectorAll(".glacierp-item-img")
               .forEach((child) => {
                 child.style.setProperty("display", "block");
               });
@@ -288,7 +288,7 @@ export default {
           if (i == 6) {
             boxLists[3].style.setProperty("background-position-x", 600 + "px");
             boxLists[3]
-              .querySelectorAll(".circusp-item-img")
+              .querySelectorAll(".glacierp-item-img")
               .forEach((child) => {
                 child.style.setProperty("display", "block");
               });
@@ -341,7 +341,7 @@ export default {
           randomImages.push(randomImage);
         }
 
-        allMethods.assignImageList(circusList, randomImages);
+        allMethods.assignImageList(glacierList, randomImages);
       },
       // 随机生成图像列表
       shuffleArray(array) {
@@ -350,11 +350,11 @@ export default {
           [array[i], array[j]] = [array[j], array[i]];
         }
         array.forEach((item) => {
-          if (item.name == "circus1") {
+          if (item.name == "glacier1") {
             arrCount[0].value++;
-          } else if (item.name == "circus2") {
+          } else if (item.name == "glacier2") {
             arrCount[1].value++;
-          } else if (item.name == "circus3") {
+          } else if (item.name == "glacier3") {
             arrCount[2].value++;
           }
           if (item.count) {
@@ -364,13 +364,13 @@ export default {
         return array;
       },
 
-      // 将图像列表分配给circusList
-      assignImageList(circusList, images) {
+      // 将图像列表分配给glacierList
+      assignImageList(glacierList, images) {
         const shuffledImages = allMethods.shuffleArray(images.slice()); // 避免修改原始数组
 
         let currentIndex = 0;
 
-        circusList.forEach((item) => {
+        glacierList.forEach((item) => {
           const numImages = Math.min(item.size, 3);
           item.imgList = shuffledImages.slice(
             currentIndex,
@@ -378,7 +378,7 @@ export default {
           );
           currentIndex += numImages;
         });
-        return circusList;
+        return glacierList;
       },
       goSeniority: () => {
         router.push("/list");
@@ -389,9 +389,9 @@ export default {
       className,
       open,
       start,
-      circusConfig,
+      glacierConfig,
       randomImages,
-      circusList,
+      glacierList,
       countValue,
       useCount,
       showRuleValue,
@@ -403,22 +403,22 @@ export default {
 </script>
 <template>
   <div :class="className">
-    <!-- <img class="headcircus" :src="circusConfig.headcircus" alt=""> -->
-    <div class="circusp" id="circusp">
-      <div class="circusp-he" id="circusp-he">
-        <!-- <img class="circus-rule" @click="showRule" :src="circusConfig.rulecircus" alt=""> -->
-        <div class="circusp-hidden">
+    <!-- <img class="headglacier" :src="glacierConfig.headglacier" alt=""> -->
+    <div class="glacierp" id="glacierp">
+      <div class="glacierp-he" id="glacierp-he">
+        <!-- <img class="glacier-rule" @click="showRule" :src="glacierConfig.ruleglacier" alt=""> -->
+        <div class="glacierp-hidden">
           <div
-            class="circusp-item"
+            class="glacierp-item"
             :id="item.name"
-            v-for="(item, index) in circusList"
+            v-for="(item, index) in glacierList"
           >
             <div
               v-for="(imgItem, imgIndex) in item.imgList"
               :class="
                 imgItem.className
-                  ? 'circusp-item-img ' + imgItem.className
-                  : 'circusp-item-img'
+                  ? 'glacierp-item-img ' + imgItem.className
+                  : 'glacierp-item-img'
               "
             >
               <img :src="imgItem.img" alt="" />
@@ -426,33 +426,33 @@ export default {
           </div>
         </div>
       </div>
-      <div class="buttoncircus-box">
+      <div class="buttonglacier-box">
         <div class="buttons" @click="run"></div>
         <div class="buttons2" @click="goSeniority"></div>
       </div>
-      <div class="circusd-circusp">
-        <div class="circusd-back" @click="close"></div>
+      <div class="glacierd-glacierp">
+        <div class="glacierd-back" @click="close"></div>
       </div>
-      <div class="circus-count" @click="showRule">
-        <!-- <img class="circus-rule" :src="circusConfig.rulecircus" alt="" /> -->
-        <!-- <img :src="circusConfig.countcircus" alt="" /> -->
+      <div class="glacier-count" @click="showRule">
+        <!-- <img class="glacier-rule" :src="glacierConfig.ruleglacier" alt="" /> -->
+        <!-- <img :src="glacierConfig.countglacier" alt="" /> -->
         <div class="countValue">{{ countValue }}</div>
       </div>
     </div>
     <Teleport to="body">
       <div v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="circusConfig.star" alt="" /> -->
-        <!-- <img class="model-img-bg" :src="circusConfig.resultcircus" alt="" /> -->
-        <!-- <div class="modelcircus-list">
+        <!-- <img class="model-star" :src="glacierConfig.star" alt="" /> -->
+        <!-- <img class="model-img-bg" :src="glacierConfig.resultglacier" alt="" /> -->
+        <!-- <div class="modelglacier-list">
           <div
-            class="modelcircus-item"
+            class="modelglacier-item"
             v-for="(item, index) in arrCount"
             :key="index"
           >
             {{ item.count + "X" + item.value }}
           </div>
-          <div class="modelcircus-total">{{ useCount }}</div>
+          <div class="modelglacier-total">{{ useCount }}</div>
         </div> -->
       </div>
     </Teleport>
@@ -460,8 +460,8 @@ export default {
     <Teleport to="body">
       <div v-if="showRuleValue" class="modal" @click="showRule">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="circusConfig.star" alt="" /> -->
-        <!-- <img class="model-img" :src="circusConfig.ruleDialogcircus" alt="" /> -->
+        <!-- <img class="model-star" :src="glacierConfig.star" alt="" /> -->
+        <!-- <img class="model-img" :src="glacierConfig.ruleDialogglacier" alt="" /> -->
       </div>
     </Teleport>
   </div>
@@ -473,17 +473,17 @@ export default {
 
   width: 280px;
 }
-.circusd-circusp {
+.glacierd-glacierp {
   display: flex;
   align-items: center;
   /* padding: 60px 15px; */
   position: absolute;
     z-index: 99;
-    top: 5%;
+    top: 11%;
     left: 15%;
     color: #fff;
 }
-.circus-count {
+.glacier-count {
   width: 100%;
     position: absolute;
     top: 63%;
@@ -493,23 +493,24 @@ export default {
     z-index: 1;
 }
 .countValue {
-  margin: 0 0 0 14%;
+  margin: 0 0 0 -41%;
+  color: #6a69ee;
 
 }
-.circus-count img {
+.glacier-count img {
   width: 54%;
   position: absolute;
   bottom: 0;
   z-index: -1;
 }
-.circus-count .circus-rule {
+.glacier-count .glacier-rule {
   position: absolute;
   left: -9%;
   width: 45px;
   height: 45px;
 }
-.circusd-back {
-  background: v-bind("'url(' + circusConfig.backcircus + ')'") no-repeat;
+.glacierd-back {
+  background: v-bind("'url(' + glacierConfig.backglacier + ')'") no-repeat;
 
   width: 36px;
   height: 42px;
@@ -520,14 +521,14 @@ export default {
   margin-top: -30%;
   width: 160px;
   height: 80px;
-  background: v-bind("'url(' + circusConfig.playcircus + ')'") no-repeat;
+  background: v-bind("'url(' + glacierConfig.playglacier + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 }
 .container {
   display: flex;
   flex-direction: column;
-  background: v-bind("'url(' + circusConfig.boxcircus + ')'") no-repeat;
+  background: v-bind("'url(' + glacierConfig.boxglacier + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -537,7 +538,7 @@ export default {
   align-items: center;
 }
 
-.circusp {
+.glacierp {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -547,28 +548,33 @@ export default {
     height: 100vh;
   overflow: hidden;
 
-  background: v-bind("'url(' + circusConfig.anyBoxcircus + ')'") no-repeat;
-  background-size: 75%;
-    background-position: center 0%;
+  background: v-bind("'url(' + glacierConfig.anyBoxglacier + ')'") no-repeat;
+  background-size: 70%;
+    background-position: center;
 
   color: #fff;
   font-weight: 600;
   font-size: 26;
 }
 
-.buttoncircus-box {
+.buttonglacier-box {
   position: absolute;
-  bottom: 1%;
+    top: 25%;
+    left: 0%;
   display: flex;
+  flex-direction: column;
+
   width: 60%;
+  height: 25%;
   justify-content: space-between;
 }
 .buttons {
   margin-left: 9%;
+
     width: 21%;
-    height: 40px;
+    height: 29px;
   z-index: 999;
-  background: v-bind("'url(' + circusConfig.playcircus + ')'") no-repeat;
+  background: v-bind("'url(' + glacierConfig.playglacier + ')'") no-repeat;
   background-size: 100% 100%;
 }
 .buttons2 {
@@ -576,13 +582,13 @@ export default {
     width: 30%;
     height: 40px;
   z-index: 999;
-  background: v-bind("'url(' + circusConfig.senioritycircus + ')'") no-repeat;
+  background: v-bind("'url(' + glacierConfig.seniorityglacier + ')'") no-repeat;
   background-size: 100% 100%;
 }
 
-.circusp-he {
+.glacierp-he {
   position: relative;
-    margin-right: 10%;
+    margin-right: -13%;
     margin-top: -5%;
     width: 81%;
     height: 126vw;
@@ -591,7 +597,7 @@ export default {
     transform: scale(0.65);
 }
 
-.circusp-hidden 
+.glacierp-hidden 
 {
   /* margin-top: 2%; */
 
@@ -602,7 +608,7 @@ export default {
   height: 100%;
   overflow: hidden;
 }
-.circusp-item {
+.glacierp-item {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -610,20 +616,20 @@ export default {
 
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + circusConfig.anycircus + ')'");
+  background: v-bind("'url(' + glacierConfig.anyglacier + ')'");
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
   background-size: 66% 415%;
 }
-.circusp-item-img {
+.glacierp-item-img {
   position: relative;
 
   display: none;
   width: 100%;
     height: 100%;
 }
-.circusp-item-img img {
+.glacierp-item-img img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -643,7 +649,7 @@ export default {
   height: 100vh;
   z-index: 9999;
   /* background-color: rgba(0, 0, 0, 0.5); */
-  /* background: v-bind("'url(' + circusConfig.dialogcircus + ')'") no-repeat; */
+  /* background: v-bind("'url(' + glacierConfig.dialogglacier + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star {
@@ -675,7 +681,7 @@ export default {
   width: 100%;
 }
 
-.modelcircus-list {
+.modelglacier-list {
   position: absolute;
   left: 60%;
   top: 39.5%;
@@ -687,33 +693,33 @@ export default {
   font-size: 16px;
   /* transform: rotate(7deg) translateX(-36px); */
 }
-.modelcircus-item {
+.modelglacier-item {
   margin-bottom: 11px;
 }
-.modelcircus-total {
+.modelglacier-total {
   padding: 7px 14px;
 }
 
-.headcircus {
+.headglacier {
   margin-top: 10vh;
   width: 80%;
 }
 /* 定义步长图片动画关键帧 */
 @keyframes image-animation {
   0% {
-    background-image: v-bind("'url(' + circusConfig.animation1 + ')'");
+    background-image: v-bind("'url(' + glacierConfig.animation1 + ')'");
   }
 
   25% {
-    background-image: v-bind("'url(' + circusConfig.animation4 + ')'");
+    background-image: v-bind("'url(' + glacierConfig.animation4 + ')'");
   }
 
   75% {
-    background-image: v-bind("'url(' + circusConfig.animation8 + ')'");
+    background-image: v-bind("'url(' + glacierConfig.animation8 + ')'");
   }
 
   100% {
-    background-image: v-bind("'url(' + circusConfig.animation12 + ')'");
+    background-image: v-bind("'url(' + glacierConfig.animation12 + ')'");
   }
 }
 
@@ -729,6 +735,6 @@ export default {
   background-position-x: center;
   background-size: 99%;
 
-  animation: image-animation 2s steps(4) infinite;
+  /* animation: image-animation 2s steps(4) infinite; */
 }
 </style>

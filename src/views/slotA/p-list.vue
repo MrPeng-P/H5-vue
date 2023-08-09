@@ -1,8 +1,8 @@
 <script>
-import homecircus from "@/assets/slotA2/homecircus.png";
-import againcircus from "@/assets/slotA2/againcircus.png";
-import listcircus from "@/assets/slotA2/listboxcircus.png";
-import boxcircus from "@/assets/slotA2/boxcircus.jpg";
+import homeglacier from "@/assets/slotA3/homeglacier.png";
+import againglacier from "@/assets/slotA3/againglacier.png";
+import listglacier from "@/assets/slotA3/listboxglacier.png";
+import boxglacier from "@/assets/slotA3/boxglacier.jpg";
 
 import { onMounted, reactive, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
@@ -11,19 +11,19 @@ export default {
   setup() {
     const router = new useRouter();
     const className = "container";
-    const circusConfig = reactive({
-      listcircus,
-      homecircus,
-      againcircus,
-      boxcircus,
+    const glacierConfig = reactive({
+      listglacier,
+      homeglacier,
+      againglacier,
+      boxglacier,
     });
     const list = reactive([
       {
-        name: "Ivanildo circus",
+        name: "Ivanildo glacier",
         count: "1101B",
       },
       {
-        name: "Jonas circus",
+        name: "Jonas glacier",
         count: "101B",
       },
       // {
@@ -35,7 +35,7 @@ export default {
         count: sessionStorage.getItem('countValue')||1000,
       },
       {
-        name: "Lúcio circus",
+        name: "Lúcio glacier",
         count: "150B",
       },
     ]);
@@ -88,22 +88,22 @@ export default {
     return {
       list,
       className,
-      circusConfig,
+      glacierConfig,
       ...allMethods,
     };
   },
 };
 </script>
 <template>
-  <div class="circus">
+  <div class="glacier">
     <div :class="className">
-    <div class="listcircus">
-      <div class="itemcircus" v-for="(item, index) in list" :key="index">
-        <div class="circus-name">{{ item.name }}</div>
-        <div class="circus-count">{{ item.count }}</div>
+    <div class="listglacier">
+      <div class="itemglacier" v-for="(item, index) in list" :key="index">
+        <div class="glacier-name">{{ item.name }}</div>
+        <div class="glacier-count">{{ item.count }}</div>
       </div>
     </div>
-    <div class="buttoncircus-box">
+    <div class="buttonglacier-box">
       <div class="buttons" @click="goHome"></div>
       <div class="buttons2" @click="goStart"></div>
     </div>
@@ -115,10 +115,10 @@ export default {
 </template>
 
 <style scoped>
-.circus{
+.glacier{
   display: flex;
   flex-direction: column;
-  background: v-bind("'url(' + circusConfig.boxcircus + ')'") no-repeat;
+  background: v-bind("'url(' + glacierConfig.boxglacier + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -130,19 +130,19 @@ export default {
 }
 .container {
   position: relative;
-  background: v-bind("'url(' + circusConfig.listcircus + ')'") no-repeat;
-  background-size: 75%;
-    background-position: center 0%;
+  background: v-bind("'url(' + glacierConfig.listglacier + ')'") no-repeat;
+  background-size: 70%;
+    background-position: center;
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  color: #fff;
+  color: #1d1d71;
   font-size: 14px;
 }
 
-.buttoncircus-box {
+.buttonglacier-box {
   position: absolute;
   top: 0%;
     left: 11.5%;
@@ -152,28 +152,27 @@ export default {
 }
 .buttons {
   width: 13%;
-    height: 9.5%;
+    height: 7.5%;
     position: absolute;
-    left: 13.5%;
-    top: 89.5%;
-
+    left: -6.5%;
+    top: 24.5%;
     z-index: 999;
-  background: v-bind("'url(' + circusConfig.homecircus + ')'") no-repeat;
+  background: v-bind("'url(' + glacierConfig.homeglacier + ')'") no-repeat;
   
     background-size: 100% 100%;
 }
 .buttons2 {
-  width: 20%;
-  height: 9.5%;
+  width: 18%;
+    height: 8.5%;
     position: absolute;
-    left: 40.5%;
-    top: 89.5%;
+    left: -11.5%;
+    top: 40.5%;
     z-index: 999;
-  background: v-bind("'url(' + circusConfig.againcircus + ')'") no-repeat;
+  background: v-bind("'url(' + glacierConfig.againglacier + ')'") no-repeat;
 
     background-size: 100% 100%;
 }
-.circusp-he {
+.glacierp-he {
   position: relative;
   margin-top: 26%;
   width: 140%;
@@ -182,7 +181,7 @@ export default {
   justify-content: space-between;
   transform: scale(0.65);
 }
-.circusp-hidden {
+.glacierp-hidden {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -190,39 +189,39 @@ export default {
   height: 100%;
   overflow: hidden;
 }
-.circusp-item {
+.glacierp-item {
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + circusConfig.anycircus + ')'");
+  background: v-bind("'url(' + glacierConfig.anyglacier + ')'");
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
 }
-.listcircus {
+.listglacier {
   position: absolute;
     top: 61%;
-    left: 54%;
+    left: 59%;
     transform: translate(-50%, -50%);
     width: 100%;
-    height: 89vh;
+    height: 82vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: left;
 }
-.itemcircus {
-  margin-top: 36px;
+.itemglacier {
+  margin-top: 30px;
   display: flex;
 }
 
-.circus-name {
+.glacier-name {
   width: 177px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.circus-count{
+.glacier-count{
   width: 50px;
 }
 </style>
