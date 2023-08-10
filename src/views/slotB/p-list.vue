@@ -1,8 +1,8 @@
 <script>
-import homeArt from "@/assets/slotA4/homeArt.png";
-import againArt from "@/assets/slotA4/againArt.png";
-import listArt from "@/assets/slotA4/listboxArt.png";
-import boxArt from "@/assets/slotA4/boxArt.jpg";
+import homeAlice from "@/assets/slotB1/homeAlice.png";
+import againAlice from "@/assets/slotB1/againAlice.png";
+import listAlice from "@/assets/slotB1/listboxAlice.png";
+import boxAlice from "@/assets/slotB1/boxAlice.jpg";
 
 import { onMounted, reactive, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
@@ -11,19 +11,19 @@ export default {
   setup() {
     const router = new useRouter();
     const className = "container";
-    const ArtConfig = reactive({
-      listArt,
-      homeArt,
-      againArt,
-      boxArt,
+    const AliceConfig = reactive({
+      listAlice,
+      homeAlice,
+      againAlice,
+      boxAlice,
     });
     const list = reactive([
       {
-        name: "Ivanildo Art",
+        name: "Ivanildo Alice",
         count: "1101B",
       },
       {
-        name: "Jonas Art",
+        name: "Jonas Alice",
         count: "101B",
       },
       // {
@@ -35,7 +35,7 @@ export default {
         count: sessionStorage.getItem('countValue')||1000,
       },
       {
-        name: "Lúcio Art",
+        name: "Lúcio Alice",
         count: "150B",
       },
     ]);
@@ -44,7 +44,7 @@ export default {
       goHome: () => {
         router.push("/");
       },
-      goStart: () => {
+      goStAlice: () => {
         router.push("/home");
       },
       parseCount: (count) => {
@@ -88,37 +88,37 @@ export default {
     return {
       list,
       className,
-      ArtConfig,
+      AliceConfig,
       ...allMethods,
     };
   },
 };
 </script>
 <template>
-  <div class="Art">
+  <div class="Alice">
     <div :class="className">
-    <div class="listArt">
-      <div class="itemArt" v-for="(item, index) in list" :key="index">
-        <div class="Art-name">{{ item.name }}</div>
-        <div class="Art-count">{{ item.count }}</div>
+    <div class="listAlice">
+      <div class="itemAlice" v-for="(item, index) in list" :key="index">
+        <div class="Alice-name">{{ item.name }}</div>
+        <div class="Alice-count">{{ item.count }}</div>
       </div>
     </div>
-    <div class="buttonArt-box">
+    <div class="buttonAlice-box">
       <div class="buttons" @click="goHome"></div>
-      <div class="buttons2" @click="goStart"></div>
+      <div class="buttons2" @click="goStAlice"></div>
     </div>
 
-    <!-- <div class="start" @click="goHome">
+    <!-- <div class="stAlice" @click="goHome">
     </div> -->
   </div>
   </div>
 </template>
 
 <style scoped>
-.Art{
+.Alice{
   display: flex;
   flex-direction: column;
-  background: v-bind("'url(' + ArtConfig.boxArt + ')'") no-repeat;
+  background: v-bind("'url(' + AliceConfig.boxAlice + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -130,7 +130,7 @@ export default {
 }
 .container {
   position: relative;
-  background: v-bind("'url(' + ArtConfig.listArt + ')'") no-repeat;
+  background: v-bind("'url(' + AliceConfig.listAlice + ')'") no-repeat;
   background-size: 62%;
   background-position: center 30%;
   width: 100vw;
@@ -142,7 +142,7 @@ export default {
   font-size: 14px;
 }
 
-.buttonArt-box {
+.buttonAlice-box {
   position: absolute;
     top: 65%;
     left: 11.5%;
@@ -157,7 +157,7 @@ export default {
     left: 20.5%;
     top: 22.5%;
     z-index: 999;
-  background: v-bind("'url(' + ArtConfig.homeArt + ')'") no-repeat;
+  background: v-bind("'url(' + AliceConfig.homeAlice + ')'") no-repeat;
   
     background-size: 100% 100%;
 }
@@ -168,11 +168,11 @@ export default {
     left: 39.5%;
     top: 22.5%;
     z-index: 999;
-  background: v-bind("'url(' + ArtConfig.againArt + ')'") no-repeat;
+  background: v-bind("'url(' + AliceConfig.againAlice + ')'") no-repeat;
 
     background-size: 100% 100%;
 }
-.Artp-he {
+.Alicep-he {
   position: relative;
   margin-top: 26%;
   width: 140%;
@@ -181,7 +181,7 @@ export default {
   justify-content: space-between;
   transform: scale(0.65);
 }
-.Artp-hidden {
+.Alicep-hidden {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -189,15 +189,15 @@ export default {
   height: 100%;
   overflow: hidden;
 }
-.Artp-item {
+.Alicep-item {
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + ArtConfig.anyArt + ')'");
+  background: v-bind("'url(' + AliceConfig.anyAlice + ')'");
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
 }
-.listArt {
+.listAlice {
   position: absolute;
     top: 72%;
     left: 57%;
@@ -209,19 +209,19 @@ export default {
     align-items: center;
     text-align: left;
 }
-.itemArt {
+.itemAlice {
   margin-top: 18px;
   display: flex;
 }
 
-.Art-name {
+.Alice-name {
   width: 150px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.Art-count{
+.Alice-count{
   width: 50px;
 }
 </style>

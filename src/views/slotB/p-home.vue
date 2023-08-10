@@ -1,33 +1,33 @@
 <script>
-import playArt from "@/assets/slotA4/playArt.png";
-import boxArt from "@/assets/slotA4/boxArt.jpg";
-import anyArt from "@/assets/slotA4/changeArt.png";
-import anyBoxArt from "@/assets/slotA4/anyBoxArt.png";
-import homeArt from "@/assets/slotA4/homeArt.png";
-import seniorityArt from "@/assets/slotA4/seniorityArt.png";
-import countArt from "@/assets/slotA4/countArt.png";
-// import ruleArt from "@/assets/slotA4/ruleArt.png";
-// import ruleDialogArt from "@/assets/slotA4/ruleDialogArt.jpg";
-// import resultArt from "@/assets/slotA4/resultArt.png";
-// import headArt from "@/assets/slotA4/headArt.png";
+import playAlice from "@/assets/slotB1/playAlice.png";
+import boxAlice from "@/assets/slotB1/boxAlice.jpg";
+import anyAlice from "@/assets/slotB1/changeAlice.png";
+import anyBoxAlice from "@/assets/slotB1/anyBoxAlice.png";
+import homeAlice from "@/assets/slotB1/homeAlice.png";
+import seniorityAlice from "@/assets/slotB1/seniorityAlice.png";
+import countAlice from "@/assets/slotB1/countAlice.png";
+// import ruleAlice from "@/assets/slotB1/ruleAlice.png";
+// import ruleDialogAlice from "@/assets/slotB1/ruleDialogAlice.jpg";
+// import resultAlice from "@/assets/slotB1/resultAlice.png";
+// import headAlice from "@/assets/slotB1/headAlice.png";
 
-// import star from "@/assets/slotA4/starArt.gif";
+// import star from "@/assets/slotB1/starAlice.gif";
 import { useRouter, useRoute } from "vue-router";
-import Art1 from "@/assets/slotA4/Art1.png";
-import Art2 from "@/assets/slotA4/Art2.png";
-import Art3 from "@/assets/slotA4/Art3.png";
-import Art4 from "@/assets/slotA4/Art4.png";
-import Art5 from "@/assets/slotA4/Art5.png";
-import Art6 from "@/assets/slotA4/Art6.png";
-import Art7 from "@/assets/slotA4/Art7.png";
+import Alice1 from "@/assets/slotB1/Alice1.png";
+import Alice2 from "@/assets/slotB1/Alice2.png";
+import Alice3 from "@/assets/slotB1/Alice3.png";
+import Alice4 from "@/assets/slotB1/Alice4.png";
+import Alice5 from "@/assets/slotB1/Alice5.png";
+import Alice6 from "@/assets/slotB1/Alice6.png";
+import Alice7 from "@/assets/slotB1/Alice7.png";
 
-// import animation1 from "@/assets/slotA4/dong/00001.png";
-// import animation4 from "@/assets/slotA4/dong/00004.png";
-// import animation8 from "@/assets/slotA4/dong/00008.png";
-// import animation12 from "@/assets/slotA4/dong/00012.png";
+// import animation1 from "@/assets/slotB1/dong/00001.png";
+// import animation4 from "@/assets/slotB1/dong/00004.png";
+// import animation8 from "@/assets/slotB1/dong/00008.png";
+// import animation12 from "@/assets/slotB1/dong/00012.png";
 
 import { inject } from "vue";
-// import football from "@/assets/slotA4/football.png";
+// import football from "@/assets/slotB1/football.png";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
@@ -59,25 +59,25 @@ export default {
     const router = new useRouter();
     // 随机生成 12 张图的数组
     let randomImages = [];
-    const ArtConfig = reactive({
-      // headArt,
+    const AliceConfig = reactive({
+      // headAlice,
       // animation1,
       // animation4,
       // animation8,
       // animation12,
-      anyArt,
-      playArt,
-      anyBoxArt,
-      boxArt,
-      homeArt,
+      anyAlice,
+      playAlice,
+      anyBoxAlice,
+      boxAlice,
+      homeAlice,
       //   star,
-      seniorityArt,
-      countArt,
-      // ruleArt,
-      // ruleDialogArt,
-      // resultArt
+      seniorityAlice,
+      countAlice,
+      // ruleAlice,
+      // ruleDialogAlice,
+      // resultAlice
     });
-    const ArtList = reactive([
+    const AliceList = reactive([
       {
         name: "item1",
         size: 4,
@@ -98,45 +98,45 @@ export default {
         size: 12,
         imgList: [],
       },
-      {
-        name: "item5",
-        size: 12,
-        imgList: [],
-      },
+      // {
+      //   name: "item5",
+      //   size: 12,
+      //   imgList: [],
+      // },
     ]);
     let timeOhter = 0;
     let id;
-    let start = ref(false);
+    let stAlice = ref(false);
     let open = ref(false);
     let buttonStatus = ref(true);
     const images = [
       {
-        img: Art1,
-        name: "Art2",
+        img: Alice1,
+        name: "Alice2",
         className: "animation",
         count: 1800 * magnification.value,
       },
       {
-        img: Art2,
-        name: "Art1",
+        img: Alice2,
+        name: "Alice1",
         className: "animation",
         count: 1000 * magnification.value,
       },
       {
-        img: Art3,
+        img: Alice3,
       },
       {
-        img: Art4,
+        img: Alice4,
       },
       {
-        img: Art5,
+        img: Alice5,
       },
       {
-        img: Art6,
+        img: Alice6,
       },
       {
-        img: Art7,
-        name: "Art3",
+        img: Alice7,
+        name: "Alice3",
         className: "animation",
         count: 2200 * magnification.value,
       },
@@ -154,11 +154,11 @@ export default {
         buttonStatus.value = false;
 
         allMethods.clear();
-        const boxLists = ArtList.map((item) => {
+        const boxLists = AliceList.map((item) => {
           return document.getElementById(item.name);
         });
         boxLists[0].style.setProperty("background-position-x", "center");
-        boxLists[0].querySelectorAll(".Artp-item-img").forEach((child) => {
+        boxLists[0].querySelectorAll(".Alicep-item-img").forEach((child) => {
           child.style.setProperty("display", "none");
         });
         // boxLists.forEach((item)=>{
@@ -171,9 +171,9 @@ export default {
         //       0+'px'
         //     );
         // })
-        const content = document.getElementById("Artp-he");
-        const box2 = document.getElementById("Artp");
-        const coords = { x: 0, y: 0 }; // Start at (0, 0)
+        const content = document.getElementById("Alicep-he");
+        const box2 = document.getElementById("Alicep");
+        const coords = { x: 0, y: 0 }; // StAlice at (0, 0)
         const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to(
             { x: 0, y: (1120 * content.clientHeight) / box2.clientHeight },
@@ -201,12 +201,12 @@ export default {
                 -coords.y + "px"
               );
             }
-            if (timeOhter > 4000 && timeOhter <= 7000) {
-              boxLists[4].style.setProperty(
-                "background-position-y",
-                -coords.y + "px"
-              );
-            }
+            // if (timeOhter > 4000 && timeOhter <= 7000) {
+            //   boxLists[4].style.setProperty(
+            //     "background-position-y",
+            //     -coords.y + "px"
+            //   );
+            // }
             if (timeOhter > 0 && timeOhter <= 3000) {
               boxLists[0].style.setProperty(
                 "background-position-y",
@@ -217,7 +217,7 @@ export default {
           .repeat(Infinity)
           .yoyo(false)
           .repeatDelay(0);
-        tween.start(); // Start the tween immediately.
+          tween.start(); // StAlice the tween immediately.
         let nowDate = window.performance.now();
         function animate(time) {
           timeOhter = time - nowDate;
@@ -231,7 +231,7 @@ export default {
         let i = 0;
         let timeany = setInterval(() => {
           i++;
-          if (i > 7) {
+          if (i > 6) {
             sessionStorage.setItem("countValue", countValue.value);
 
             open.value = true;
@@ -239,43 +239,44 @@ export default {
             tween.stop();
             clearInterval(timeany);
           }
-          if (i > 0 && i < 5) {
+          if (i > 0 && i < 4) {
             boxLists[i].style.setProperty("background-position-x", "center");
-            boxLists[i].querySelectorAll(".Artp-item-img").forEach((child) => {
+            boxLists[i].querySelectorAll(".Alicep-item-img").forEach((child) => {
               child.style.setProperty("display", "none");
             });
           }
           if (i == 3) {
             boxLists[0].style.setProperty("background-position-x", 600 + "px");
-            boxLists[0].querySelectorAll(".Artp-item-img").forEach((child) => {
+            boxLists[0].querySelectorAll(".Alicep-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 4) {
             boxLists[1].style.setProperty("background-position-x", 600 + "px");
-            boxLists[1].querySelectorAll(".Artp-item-img").forEach((child) => {
+            boxLists[1].querySelectorAll(".Alicep-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 5) {
             boxLists[2].style.setProperty("background-position-x", 600 + "px");
-            boxLists[2].querySelectorAll(".Artp-item-img").forEach((child) => {
+            boxLists[2].querySelectorAll(".Alicep-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 6) {
             boxLists[3].style.setProperty("background-position-x", 600 + "px");
-            boxLists[3].querySelectorAll(".Artp-item-img").forEach((child) => {
-              child.style.setProperty("display", "block");
-            });
-          }
-          if (i == 7) {
-            boxLists[4].style.setProperty("background-position-x", 600 + "px");
-            boxLists[4].querySelectorAll(".Artp-item-img").forEach((child) => {
+            boxLists[3].querySelectorAll(".Alicep-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
             countValue.value += useCount.value;
           }
+          // if (i == 7) {
+          //   boxLists[4].style.setProperty("background-position-x", 600 + "px");
+          //   boxLists[4].querySelectorAll(".Alicep-item-img").forEach((child) => {
+          //     child.style.setProperty("display", "block");
+          //   });
+          //   countValue.value += useCount.value;
+          // }
         }, 1000);
       },
       clear: () => {
@@ -322,7 +323,7 @@ export default {
           randomImages.push(randomImage);
         }
 
-        allMethods.assignImageList(ArtList, randomImages);
+        allMethods.assignImageList(AliceList, randomImages);
       },
       // 随机生成图像列表
       shuffleArray(array) {
@@ -331,11 +332,11 @@ export default {
           [array[i], array[j]] = [array[j], array[i]];
         }
         array.forEach((item) => {
-          if (item.name == "Art1") {
+          if (item.name == "Alice1") {
             arrCount[0].value++;
-          } else if (item.name == "Art2") {
+          } else if (item.name == "Alice2") {
             arrCount[1].value++;
-          } else if (item.name == "Art3") {
+          } else if (item.name == "Alice3") {
             arrCount[2].value++;
           }
           if (item.count) {
@@ -345,13 +346,13 @@ export default {
         return array;
       },
 
-      // 将图像列表分配给ArtList
-      assignImageList(ArtList, images) {
+      // 将图像列表分配给AliceList
+      assignImageList(AliceList, images) {
         const shuffledImages = allMethods.shuffleArray(images.slice()); // 避免修改原始数组
 
         let currentIndex = 0;
 
-        ArtList.forEach((item) => {
+        AliceList.forEach((item) => {
           const numImages = Math.min(item.size, 3);
           item.imgList = shuffledImages.slice(
             currentIndex,
@@ -359,7 +360,7 @@ export default {
           );
           currentIndex += numImages;
         });
-        return ArtList;
+        return AliceList;
       },
       goSeniority: () => {
         router.push("/list");
@@ -369,10 +370,10 @@ export default {
     return {
       className,
       open,
-      start,
-      ArtConfig,
+      stAlice,
+      AliceConfig,
       randomImages,
-      ArtList,
+      AliceList,
       countValue,
       useCount,
       showRuleValue,
@@ -384,22 +385,22 @@ export default {
 </script>
 <template>
   <div :class="className">
-    <!-- <img class="headArt" :src="ArtConfig.headArt" alt=""> -->
-    <div class="Artp" id="Artp">
-      <div class="Artp-he" id="Artp-he">
-        <!-- <img class="Art-rule" @click="showRule" :src="ArtConfig.ruleArt" alt=""> -->
-        <div class="Artp-hidden">
+    <!-- <img class="headAlice" :src="AliceConfig.headAlice" alt=""> -->
+    <div class="Alicep" id="Alicep">
+      <div class="Alicep-he" id="Alicep-he">
+        <!-- <img class="Alice-rule" @click="showRule" :src="AliceConfig.ruleAlice" alt=""> -->
+        <div class="Alicep-hidden">
           <div
-            class="Artp-item"
+            class="Alicep-item"
             :id="item.name"
-            v-for="(item, index) in ArtList"
+            v-for="(item, index) in AliceList"
           >
             <div
               v-for="(imgItem, imgIndex) in item.imgList"
               :class="
                 imgItem.className
-                  ? 'Artp-item-img ' + imgItem.className
-                  : 'Artp-item-img'
+                  ? 'Alicep-item-img ' + imgItem.className
+                  : 'Alicep-item-img'
               "
             >
               <img :src="imgItem.img" alt="" />
@@ -407,36 +408,36 @@ export default {
           </div>
         </div>
       </div>
-      <div class="buttonArt-box">
-        <div class="buttons" @click="run"></div>
-        <div class="buttonsArtBack" @click="close"></div>
+      <div class="buttonAlice-box">
+        <div class="buttons" @click="close"></div>
+        <div class="buttonsAliceBack" @click="run"></div>
 
-        <div class="buttons2" @click="goSeniority"></div>
+        <!-- <div class="buttons2" @click="goSeniority"></div> -->
 
-        <div class="Art-count" @click="showRule">
-          <!-- <img class="Art-rule" :src="ArtConfig.ruleArt" alt="" /> -->
-          <img :src="ArtConfig.countArt" alt="" />
+        <div class="Alice-count" @click="showRule">
+          <!-- <img class="Alice-rule" :src="AliceConfig.ruleAlice" alt="" /> -->
+          <img :src="AliceConfig.countAlice" alt="" />
           <div class="countValue">{{ countValue }}</div>
         </div>
       </div>
-      <div class="Artd-Artp">
-        <div class="Artd-back" @click="close"></div>
+      <div class="Aliced-Alicep">
+        <div class="Aliced-back" @click="close"></div>
       </div>
     </div>
     <Teleport to="body">
       <div v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="ArtConfig.star" alt="" /> -->
-        <!-- <img class="model-img-bg" :src="ArtConfig.resultArt" alt="" /> -->
-        <!-- <div class="modelArt-list">
+        <!-- <img class="model-star" :src="AliceConfig.star" alt="" /> -->
+        <!-- <img class="model-img-bg" :src="AliceConfig.resultAlice" alt="" /> -->
+        <!-- <div class="modelAlice-list">
           <div
-            class="modelArt-item"
+            class="modelAlice-item"
             v-for="(item, index) in arrCount"
             :key="index"
           >
             {{ item.count + "X" + item.value }}
           </div>
-          <div class="modelArt-total">{{ useCount }}</div>
+          <div class="modelAlice-total">{{ useCount }}</div>
         </div> -->
       </div>
     </Teleport>
@@ -444,8 +445,8 @@ export default {
     <Teleport to="body">
       <div v-if="showRuleValue" class="modal" @click="showRule">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="ArtConfig.star" alt="" /> -->
-        <!-- <img class="model-img" :src="ArtConfig.ruleDialogArt" alt="" /> -->
+        <!-- <img class="model-star" :src="AliceConfig.star" alt="" /> -->
+        <!-- <img class="model-img" :src="AliceConfig.ruleDialogAlice" alt="" /> -->
       </div>
     </Teleport>
   </div>
@@ -457,7 +458,7 @@ export default {
 
   width: 280px;
 }
-.Artd-Artp {
+.Aliced-Alicep {
   display: flex;
   align-items: center;
   /* padding: 60px 15px; */
@@ -472,39 +473,39 @@ export default {
   color: #fff;
 }
 
-.Art-count img {
+.Alice-count img {
   width: 100%;
   position: absolute;
   height: 100%;
   /* top: -16%; */
   z-index: -1;
 }
-.Art-count .Art-rule {
+.Alice-count .Alice-rule {
   position: absolute;
   left: -9%;
   width: 45px;
   height: 45px;
 }
-.Artd-back {
-  /* background: v-bind("'url(' + ArtConfig.homeArt + ')'") no-repeat; */
+.Aliced-back {
+  /* background: v-bind("'url(' + AliceConfig.homeAlice + ')'") no-repeat; */
 
   width: 36px;
   height: 42px;
   background-size: 100%;
   z-index: 999;
 }
-.start {
+.stAlice {
   margin-top: -30%;
   width: 160px;
   height: 80px;
-  background: v-bind("'url(' + ArtConfig.playArt + ')'") no-repeat;
+  background: v-bind("'url(' + AliceConfig.playAlice + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 }
 .container {
   display: flex;
   flex-direction: column;
-  background: v-bind("'url(' + ArtConfig.boxArt + ')'") no-repeat;
+  background: v-bind("'url(' + AliceConfig.boxAlice + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -514,17 +515,17 @@ export default {
   align-items: center;
 }
 
-.Artp {
+.Alicep {
   position: relative;
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
   overflow: hidden;
 
-  background: v-bind("'url(' + ArtConfig.anyBoxArt + ')'") no-repeat;
+  background: v-bind("'url(' + AliceConfig.anyBoxAlice + ')'") no-repeat;
   background-size: 62%;
   background-position: center 30%;
 
@@ -533,7 +534,7 @@ export default {
   font-size: 26;
 }
 
-.buttonArt-box {
+.buttonAlice-box {
   position: absolute;
   top: 10%;
   left: 10%;
@@ -544,7 +545,7 @@ export default {
   height: 25%;
   /* justify-content: space-between; */
 }
-.Art-count {
+.Alice-count {
   position: relative;
   width: 36%;
   height: 40%;
@@ -565,7 +566,7 @@ export default {
   width: 25%;
   height: 40%;
   z-index: 999;
-  background: v-bind("'url(' + ArtConfig.playArt + ')'") no-repeat;
+  background: v-bind("'url(' + AliceConfig.homeAlice + ')'") no-repeat;
   background-size: 100% 100%;
 }
 .buttons2 {
@@ -576,10 +577,10 @@ export default {
   width: 30%;
   height: 40%;
   z-index: 999;
-  background: v-bind("'url(' + ArtConfig.seniorityArt + ')'") no-repeat;
+  background: v-bind("'url(' + AliceConfig.seniorityAlice + ')'") no-repeat;
   background-size: 100% 100%;
 }
-.buttonsArtBack{
+.buttonsAliceBack{
   /* margin-left: 27%;
     margin-bottom: -58%; */
     margin-left:2%;
@@ -587,10 +588,10 @@ export default {
     width: 25%;
   height: 40%;
   z-index: 999;
-  background: v-bind("'url(' + ArtConfig.homeArt + ')'") no-repeat;
+  background: v-bind("'url(' + AliceConfig.playAlice + ')'") no-repeat;
   background-size: 100% 100%;
 }
-.Artp-he {
+.Alicep-he {
   position: relative;
   margin-right: 0%;
   margin-top: 4%;
@@ -601,9 +602,10 @@ export default {
   transform: scale(0.65);
 }
 
-.Artp-hidden {
+.Alicep-hidden {
   /* margin-top: 2%; */
-
+  margin-left: 1%;
+  margin-top: -1%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -611,7 +613,7 @@ export default {
   height: 100%;
   overflow: hidden;
 }
-.Artp-item {
+.Alicep-item {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -619,20 +621,20 @@ export default {
 
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + ArtConfig.anyArt + ')'");
+  background: v-bind("'url(' + AliceConfig.anyAlice + ')'");
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
-  background-size: 94% 248%;
+  background-size: 88% 272%;
 }
-.Artp-item-img {
+.Alicep-item-img {
   position: relative;
 
   display: none;
   width: 100%;
   height: 100%;
 }
-.Artp-item-img img {
+.Alicep-item-img img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -644,7 +646,7 @@ export default {
 .modal {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: flex-stAlice;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -652,7 +654,7 @@ export default {
   height: 100vh;
   z-index: 9999;
   /* background-color: rgba(0, 0, 0, 0.5); */
-  /* background: v-bind("'url(' + ArtConfig.dialogArt + ')'") no-repeat; */
+  /* background: v-bind("'url(' + AliceConfig.dialogAlice + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star {
@@ -674,17 +676,17 @@ export default {
   width: 70%;
 }
 
-.start-bg {
+.stAlice-bg {
   position: absolute;
 
   top: 0;
   z-index: 1;
 }
-.start-bg img {
+.stAlice-bg img {
   width: 100%;
 }
 
-.modelArt-list {
+.modelAlice-list {
   position: absolute;
   left: 60%;
   top: 39.5%;
@@ -696,33 +698,33 @@ export default {
   font-size: 16px;
   /* transform: rotate(7deg) translateX(-36px); */
 }
-.modelArt-item {
+.modelAlice-item {
   margin-bottom: 11px;
 }
-.modelArt-total {
+.modelAlice-total {
   padding: 7px 14px;
 }
 
-.headArt {
+.headAlice {
   margin-top: 10vh;
   width: 80%;
 }
 /* 定义步长图片动画关键帧 */
 @keyframes image-animation {
   0% {
-    background-image: v-bind("'url(' + ArtConfig.animation1 + ')'");
+    background-image: v-bind("'url(' + AliceConfig.animation1 + ')'");
   }
 
   25% {
-    background-image: v-bind("'url(' + ArtConfig.animation4 + ')'");
+    background-image: v-bind("'url(' + AliceConfig.animation4 + ')'");
   }
 
   75% {
-    background-image: v-bind("'url(' + ArtConfig.animation8 + ')'");
+    background-image: v-bind("'url(' + AliceConfig.animation8 + ')'");
   }
 
   100% {
-    background-image: v-bind("'url(' + ArtConfig.animation12 + ')'");
+    background-image: v-bind("'url(' + AliceConfig.animation12 + ')'");
   }
 }
 

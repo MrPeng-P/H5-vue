@@ -1,7 +1,7 @@
 <script>
 
-import playArt from "@/assets/slotA4/playArt2.png";
-import boxArt from "@/assets/slotA4/boxArt.jpg";
+import playAlice from "@/assets/slotB1/playAlice2.png";
+import boxAlice from "@/assets/slotB1/boxAlice.jpg";
 import { onMounted, reactive, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
@@ -9,9 +9,9 @@ export default {
   setup() {
     const router = new useRouter();
     const className = "container";
-    const ArtConfig = reactive({
-      playArt,
-      boxArt,
+    const AliceConfig = reactive({
+      playAlice,
+      boxAlice,
     });
    
 
@@ -25,7 +25,7 @@ export default {
     });
     return {
         className,
-      ArtConfig,
+      AliceConfig,
       ...allMethods,
     };
   },
@@ -34,7 +34,7 @@ export default {
 <template>
   
   <div :class="className">
-    <div class="start" @click="goHome">
+    <div class="stAlice" @click="goHome">
     </div>
   </div>
 </template>
@@ -42,17 +42,17 @@ export default {
 <style scoped>
 
 
-.start{
+.stAlice{
   margin-top: 9%;
     width: 280px;
     height: 252px;
-  background: v-bind("'url(' + ArtConfig.playArt + ')'") no-repeat;
+  background: v-bind("'url(' + AliceConfig.playAlice + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 
 }
 .container {
-  background: v-bind("'url(' + ArtConfig.boxArt + ')'") no-repeat;
+  background: v-bind("'url(' + AliceConfig.boxAlice + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -63,7 +63,7 @@ export default {
 }
 
 
-.Artp-he {
+.Alicep-he {
   position: relative;
     margin-top: 26%;
     width: 140%;
@@ -72,7 +72,7 @@ export default {
     justify-content: space-between;
     transform: scale(0.65);
 }
-.Artp-hidden{
+.Alicep-hidden{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -81,11 +81,11 @@ export default {
   overflow: hidden;
 
 }
-.Artp-item {
+.Alicep-item {
   
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + ArtConfig.anyArt + ')'") ;
+  background: v-bind("'url(' + AliceConfig.anyAlice + ')'") ;
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
@@ -95,7 +95,7 @@ export default {
   padding-top: 155px;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-stAlice;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -103,7 +103,7 @@ export default {
     height: 100vh;
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.5);
-  /* background: v-bind("'url(' + ArtConfig.dialogArt + ')'") no-repeat; */
+  /* background: v-bind("'url(' + AliceConfig.dialogAlice + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star{
@@ -115,12 +115,12 @@ export default {
 
 }
 
-.start-bg{
+.stAlice-bg{
     position: absolute;
     top: 0;
     z-index: 1;
 }
-.start-bg img{
+.stAlice-bg img{
     width: 100%;
 }
 </style>

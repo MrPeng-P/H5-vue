@@ -95,20 +95,20 @@ import {
 export const routes = [
   {
     path: "/",
-    name: "startA",
+    name: "startB",
     component: () => import("@/views/slotB/p-start.vue"),
   },
 
   {
     path: "/home",
-    name: "homeA",
+    name: "homeB",
     component: () => import("@/views/slotB/p-home.vue"),
   },
-  {
-    path: "/list",
-    name: "listA",
-    component: () => import("@/views/slotB/p-list.vue"),
-  },
+  // {
+  //   path: "/list",
+  //   name: "listA",
+  //   component: () => import("@/views/slotB/p-list.vue"),
+  // },
 ];
 
 
