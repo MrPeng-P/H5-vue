@@ -73,22 +73,41 @@ import {
 // ];
 
 //复杂老虎机-简化
+// export const routes = [
+//   {
+//     path: "/",
+//     name: "startA",
+//     component: () => import("@/views/slotA/p-start.vue"),
+//   },
+
+//   {
+//     path: "/home",
+//     name: "homeA",
+//     component: () => import("@/views/slotA/p-home.vue"),
+//   },
+//   {
+//     path: "/list",
+//     name: "listA",
+//     component: () => import("@/views/slotA/p-list.vue"),
+//   },
+// ];
+//复杂老虎机-简化-横排滚动
 export const routes = [
   {
     path: "/",
     name: "startA",
-    component: () => import("@/views/slotA/p-start.vue"),
+    component: () => import("@/views/slotB/p-start.vue"),
   },
 
   {
     path: "/home",
     name: "homeA",
-    component: () => import("@/views/slotA/p-home.vue"),
+    component: () => import("@/views/slotB/p-home.vue"),
   },
   {
     path: "/list",
     name: "listA",
-    component: () => import("@/views/slotA/p-list.vue"),
+    component: () => import("@/views/slotB/p-list.vue"),
   },
 ];
 
