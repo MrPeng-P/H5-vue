@@ -1,7 +1,7 @@
 <script>
 
-import playAlice from "@/assets/slotB1/playAlice2.png";
-import boxAlice from "@/assets/slotB1/boxAlice.jpg";
+import playwisdom from "@/assets/slotB2/playwisdom2.png";
+import boxwisdom from "@/assets/slotB2/boxwisdom.jpg";
 import { onMounted, reactive, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
@@ -9,9 +9,9 @@ export default {
   setup() {
     const router = new useRouter();
     const className = "container";
-    const AliceConfig = reactive({
-      playAlice,
-      boxAlice,
+    const wisdomConfig = reactive({
+      playwisdom,
+      boxwisdom,
     });
    
 
@@ -25,7 +25,7 @@ export default {
     });
     return {
         className,
-      AliceConfig,
+      wisdomConfig,
       ...allMethods,
     };
   },
@@ -34,7 +34,7 @@ export default {
 <template>
   
   <div :class="className">
-    <div class="stAlice" @click="goHome">
+    <div class="stwisdom" @click="goHome">
     </div>
   </div>
 </template>
@@ -42,17 +42,17 @@ export default {
 <style scoped>
 
 
-.stAlice{
-  margin-top: 9%;
+.stwisdom{
+  margin-top: 20%;
     width: 280px;
     height: 252px;
-  background: v-bind("'url(' + AliceConfig.playAlice + ')'") no-repeat;
+  background: v-bind("'url(' + wisdomConfig.playwisdom + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 
 }
 .container {
-  background: v-bind("'url(' + AliceConfig.boxAlice + ')'") no-repeat;
+  background: v-bind("'url(' + wisdomConfig.boxwisdom + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -63,7 +63,7 @@ export default {
 }
 
 
-.Alicep-he {
+.wisdomp-he {
   position: relative;
     margin-top: 26%;
     width: 140%;
@@ -72,7 +72,7 @@ export default {
     justify-content: space-between;
     transform: scale(0.65);
 }
-.Alicep-hidden{
+.wisdomp-hidden{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -81,11 +81,11 @@ export default {
   overflow: hidden;
 
 }
-.Alicep-item {
+.wisdomp-item {
   
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + AliceConfig.anyAlice + ')'") ;
+  background: v-bind("'url(' + wisdomConfig.anywisdom + ')'") ;
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
@@ -95,7 +95,7 @@ export default {
   padding-top: 155px;
     display: flex;
     justify-content: center;
-    align-items: flex-stAlice;
+    align-items: flex-stwisdom;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -103,7 +103,7 @@ export default {
     height: 100vh;
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.5);
-  /* background: v-bind("'url(' + AliceConfig.dialogAlice + ')'") no-repeat; */
+  /* background: v-bind("'url(' + wisdomConfig.dialogwisdom + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star{
@@ -115,12 +115,12 @@ export default {
 
 }
 
-.stAlice-bg{
+.stwisdom-bg{
     position: absolute;
     top: 0;
     z-index: 1;
 }
-.stAlice-bg img{
+.stwisdom-bg img{
     width: 100%;
 }
 </style>

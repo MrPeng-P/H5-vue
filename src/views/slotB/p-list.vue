@@ -1,8 +1,8 @@
 <script>
-import homeAlice from "@/assets/slotB1/homeAlice.png";
-import againAlice from "@/assets/slotB1/againAlice.png";
-import listAlice from "@/assets/slotB1/listboxAlice.png";
-import boxAlice from "@/assets/slotB1/boxAlice.jpg";
+import homewisdom from "@/assets/slotB2/homewisdom.png";
+import againwisdom from "@/assets/slotB2/againwisdom.png";
+import listwisdom from "@/assets/slotB2/listboxwisdom.png";
+import boxwisdom from "@/assets/slotB2/boxwisdom.jpg";
 
 import { onMounted, reactive, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
@@ -11,19 +11,19 @@ export default {
   setup() {
     const router = new useRouter();
     const className = "container";
-    const AliceConfig = reactive({
-      listAlice,
-      homeAlice,
-      againAlice,
-      boxAlice,
+    const wisdomConfig = reactive({
+      listwisdom,
+      homewisdom,
+      againwisdom,
+      boxwisdom,
     });
     const list = reactive([
       {
-        name: "Ivanildo Alice",
+        name: "Ivanildo wisdom",
         count: "1101B",
       },
       {
-        name: "Jonas Alice",
+        name: "Jonas wisdom",
         count: "101B",
       },
       // {
@@ -35,7 +35,7 @@ export default {
         count: sessionStorage.getItem('countValue')||1000,
       },
       {
-        name: "Lúcio Alice",
+        name: "Lúcio wisdom",
         count: "150B",
       },
     ]);
@@ -44,7 +44,7 @@ export default {
       goHome: () => {
         router.push("/");
       },
-      goStAlice: () => {
+      goStwisdom: () => {
         router.push("/home");
       },
       parseCount: (count) => {
@@ -88,37 +88,37 @@ export default {
     return {
       list,
       className,
-      AliceConfig,
+      wisdomConfig,
       ...allMethods,
     };
   },
 };
 </script>
 <template>
-  <div class="Alice">
+  <div class="wisdom">
     <div :class="className">
-    <div class="listAlice">
-      <div class="itemAlice" v-for="(item, index) in list" :key="index">
-        <div class="Alice-name">{{ item.name }}</div>
-        <div class="Alice-count">{{ item.count }}</div>
+    <div class="listwisdom">
+      <div class="itemwisdom" v-for="(item, index) in list" :key="index">
+        <div class="wisdom-name">{{ item.name }}</div>
+        <div class="wisdom-count">{{ item.count }}</div>
       </div>
     </div>
-    <div class="buttonAlice-box">
+    <div class="buttonwisdom-box">
       <div class="buttons" @click="goHome"></div>
-      <div class="buttons2" @click="goStAlice"></div>
+      <div class="buttons2" @click="goStwisdom"></div>
     </div>
 
-    <!-- <div class="stAlice" @click="goHome">
+    <!-- <div class="stwisdom" @click="goHome">
     </div> -->
   </div>
   </div>
 </template>
 
 <style scoped>
-.Alice{
+.wisdom{
   display: flex;
   flex-direction: column;
-  background: v-bind("'url(' + AliceConfig.boxAlice + ')'") no-repeat;
+  background: v-bind("'url(' + wisdomConfig.boxwisdom + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -130,7 +130,7 @@ export default {
 }
 .container {
   position: relative;
-  background: v-bind("'url(' + AliceConfig.listAlice + ')'") no-repeat;
+  background: v-bind("'url(' + wisdomConfig.listwisdom + ')'") no-repeat;
   background-size: 62%;
   background-position: center 30%;
   width: 100vw;
@@ -142,7 +142,7 @@ export default {
   font-size: 14px;
 }
 
-.buttonAlice-box {
+.buttonwisdom-box {
   position: absolute;
     top: 65%;
     left: 11.5%;
@@ -157,7 +157,7 @@ export default {
     left: 20.5%;
     top: 22.5%;
     z-index: 999;
-  background: v-bind("'url(' + AliceConfig.homeAlice + ')'") no-repeat;
+  background: v-bind("'url(' + wisdomConfig.homewisdom + ')'") no-repeat;
   
     background-size: 100% 100%;
 }
@@ -168,11 +168,11 @@ export default {
     left: 39.5%;
     top: 22.5%;
     z-index: 999;
-  background: v-bind("'url(' + AliceConfig.againAlice + ')'") no-repeat;
+  background: v-bind("'url(' + wisdomConfig.againwisdom + ')'") no-repeat;
 
     background-size: 100% 100%;
 }
-.Alicep-he {
+.wisdomp-he {
   position: relative;
   margin-top: 26%;
   width: 140%;
@@ -181,7 +181,7 @@ export default {
   justify-content: space-between;
   transform: scale(0.65);
 }
-.Alicep-hidden {
+.wisdomp-hidden {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -189,15 +189,15 @@ export default {
   height: 100%;
   overflow: hidden;
 }
-.Alicep-item {
+.wisdomp-item {
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + AliceConfig.anyAlice + ')'");
+  background: v-bind("'url(' + wisdomConfig.anywisdom + ')'");
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
 }
-.listAlice {
+.listwisdom {
   position: absolute;
     top: 72%;
     left: 57%;
@@ -209,19 +209,19 @@ export default {
     align-items: center;
     text-align: left;
 }
-.itemAlice {
+.itemwisdom {
   margin-top: 18px;
   display: flex;
 }
 
-.Alice-name {
+.wisdom-name {
   width: 150px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.Alice-count{
+.wisdom-count{
   width: 50px;
 }
 </style>
