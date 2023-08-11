@@ -27,7 +27,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/imgwild/[hash][ext]",
+          filename: "assets/imgbuffalo/[hash][ext]",
         },
       },
     ],
@@ -39,7 +39,7 @@ module.exports = {
     },
   },
   output: {
-    filename: "assets/wildJs/wild-[hash].js",
+    filename: "assets/buffaloJs/buffalo-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [

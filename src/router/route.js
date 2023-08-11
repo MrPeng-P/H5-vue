@@ -73,39 +73,39 @@ import {
 // ];
 
 //复杂老虎机-简化
-export const routes = [
-  {
-    path: "/",
-    name: "startA",
-    component: () => import("@/views/slotA/p-start.vue"),
-  },
-
-  {
-    path: "/home",
-    name: "homeA",
-    component: () => import("@/views/slotA/p-home.vue"),
-  },
-  {
-    path: "/list",
-    name: "listA",
-    component: () => import("@/views/slotA/p-list.vue"),
-  },
-];
-//复杂老虎机-简化-五排行
 // export const routes = [
 //   {
 //     path: "/",
-//     name: "startB",
-//     component: () => import("@/views/slotB/p-start.vue"),
+//     name: "startA",
+//     component: () => import("@/views/slotA/p-start.vue"),
 //   },
 
 //   {
 //     path: "/home",
-//     name: "homeB",
-//     component: () => import("@/views/slotB/p-home.vue"),
+//     name: "homeA",
+//     component: () => import("@/views/slotA/p-home.vue"),
 //   },
-
+//   {
+//     path: "/list",
+//     name: "listA",
+//     component: () => import("@/views/slotA/p-list.vue"),
+//   },
 // ];
+//复杂老虎机-简化-五排行
+export const routes = [
+  {
+    path: "/",
+    name: "startB",
+    component: () => import("@/views/slotB/p-start.vue"),
+  },
+
+  {
+    path: "/home",
+    name: "homeB",
+    component: () => import("@/views/slotB/p-home.vue"),
+  },
+
+];
 //复杂老虎机-简化-横排滚动-wu排行
 // export const routes = [
 //   {
@@ -119,11 +119,7 @@ export const routes = [
 //     name: "homeB",
 //     component: () => import("@/views/slotC/p-home.vue"),
 //   },
-  // {
-  //   path: "/list",
-  //   name: "listA",
-  //   component: () => import("@/views/slotB/p-list.vue"),
-  // },
+  
 // ];
 
 
