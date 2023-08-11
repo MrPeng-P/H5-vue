@@ -39,7 +39,7 @@ module.exports = {
     },
   },
   output: {
-    filename: "assets/buffaloJs/buffalo-[hash].js",
+    filename: "assets/buffaloJs/myth-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [

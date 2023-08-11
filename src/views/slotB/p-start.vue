@@ -1,7 +1,7 @@
 <script>
 
-import playwisdom from "@/assets/slotB2/playwisdom2.png";
-import boxwisdom from "@/assets/slotB2/boxwisdom.jpg";
+import playmyth from "@/assets/slotB3/playmyth2.png";
+import boxmyth from "@/assets/slotB3/boxmyth.jpg";
 import { onMounted, reactive, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
@@ -9,9 +9,9 @@ export default {
   setup() {
     const router = new useRouter();
     const className = "container";
-    const wisdomConfig = reactive({
-      playwisdom,
-      boxwisdom,
+    const mythConfig = reactive({
+      playmyth,
+      boxmyth,
     });
    
 
@@ -25,7 +25,7 @@ export default {
     });
     return {
         className,
-      wisdomConfig,
+      mythConfig,
       ...allMethods,
     };
   },
@@ -33,8 +33,8 @@ export default {
 </script>
 <template>
   
-  <div :class="className">
-    <div class="stwisdom" @click="goHome">
+  <div :class="className" @click="goHome">
+    <div class="stmyth" >
     </div>
   </div>
 </template>
@@ -42,17 +42,17 @@ export default {
 <style scoped>
 
 
-.stwisdom{
-  margin-top: 20%;
-    width: 280px;
+.stmyth{
+  margin-top: 4%;
+    width: 50%;
     height: 252px;
-  background: v-bind("'url(' + wisdomConfig.playwisdom + ')'") no-repeat;
+  background: v-bind("'url(' + mythConfig.playmyth + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 
 }
 .container {
-  background: v-bind("'url(' + wisdomConfig.boxwisdom + ')'") no-repeat;
+  background: v-bind("'url(' + mythConfig.boxmyth + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -63,7 +63,7 @@ export default {
 }
 
 
-.wisdomp-he {
+.mythp-he {
   position: relative;
     margin-top: 26%;
     width: 140%;
@@ -72,7 +72,7 @@ export default {
     justify-content: space-between;
     transform: scale(0.65);
 }
-.wisdomp-hidden{
+.mythp-hidden{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -81,11 +81,11 @@ export default {
   overflow: hidden;
 
 }
-.wisdomp-item {
+.mythp-item {
   
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + wisdomConfig.anywisdom + ')'") ;
+  background: v-bind("'url(' + mythConfig.anymyth + ')'") ;
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
@@ -95,7 +95,7 @@ export default {
   padding-top: 155px;
     display: flex;
     justify-content: center;
-    align-items: flex-stwisdom;
+    align-items: flex-stmyth;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -103,7 +103,7 @@ export default {
     height: 100vh;
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.5);
-  /* background: v-bind("'url(' + wisdomConfig.dialogwisdom + ')'") no-repeat; */
+  /* background: v-bind("'url(' + mythConfig.dialogmyth + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star{
@@ -115,12 +115,12 @@ export default {
 
 }
 
-.stwisdom-bg{
+.stmyth-bg{
     position: absolute;
     top: 0;
     z-index: 1;
 }
-.stwisdom-bg img{
+.stmyth-bg img{
     width: 100%;
 }
 </style>

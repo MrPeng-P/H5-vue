@@ -1,33 +1,33 @@
 <script>
-import playwisdom from "@/assets/slotB2/playwisdom.jpg";
-import boxwisdom from "@/assets/slotB2/bgwisdom.jpg";
-import anywisdom from "@/assets/slotB2/changewisdom.png";
-import anyBoxwisdom from "@/assets/slotB2/anyBoxwisdom.jpg";
-import homewisdom from "@/assets/slotB2/homewisdom.jpg";
-// import senioritywisdom from "@/assets/slotB2/senioritywisdom.png";
-import countwisdom from "@/assets/slotB2/countwisdom.jpg";
-// import rulewisdom from "@/assets/slotB2/rulewisdom.png";
-// import ruleDialogwisdom from "@/assets/slotB2/ruleDialogwisdom.jpg";
-// import resultwisdom from "@/assets/slotB2/resultwisdom.png";
-// import headwisdom from "@/assets/slotB2/headwisdom.png";
+import playmyth from "@/assets/slotB3/playmyth.png";
+import boxmyth from "@/assets/slotB3/boxmyth.jpg";
+import anymyth from "@/assets/slotB3/changemyth.png";
+import anyBoxmyth from "@/assets/slotB3/anyBoxmyth.png";
+import homemyth from "@/assets/slotB3/homemyth.png";
+// import senioritymyth from "@/assets/slotB3/senioritymyth.png";
+import countmyth from "@/assets/slotB3/countmyth.png";
+// import rulemyth from "@/assets/slotB3/rulemyth.png";
+// import ruleDialogmyth from "@/assets/slotB3/ruleDialogmyth.jpg";
+// import resultmyth from "@/assets/slotB3/resultmyth.png";
+// import headmyth from "@/assets/slotB3/headmyth.png";
 
-// import star from "@/assets/slotB2/starwisdom.gif";
+// import star from "@/assets/slotB3/starmyth.gif";
 import { useRouter, useRoute } from "vue-router";
-import wisdom1 from "@/assets/slotB2/wisdom1.png";
-import wisdom2 from "@/assets/slotB2/wisdom2.png";
-import wisdom3 from "@/assets/slotB2/wisdom3.png";
-import wisdom4 from "@/assets/slotB2/wisdom4.png";
-import wisdom5 from "@/assets/slotB2/wisdom5.png";
-import wisdom6 from "@/assets/slotB2/wisdom6.png";
-import wisdom7 from "@/assets/slotB2/wisdom7.png";
+import myth1 from "@/assets/slotB3/myth1.png";
+import myth2 from "@/assets/slotB3/myth2.png";
+import myth3 from "@/assets/slotB3/myth3.png";
+import myth4 from "@/assets/slotB3/myth4.png";
+import myth5 from "@/assets/slotB3/myth5.png";
+import myth6 from "@/assets/slotB3/myth6.png";
+import myth7 from "@/assets/slotB3/myth7.png";
 
-// import animation1 from "@/assets/slotB2/dong/00001.png";
-// import animation4 from "@/assets/slotB2/dong/00004.png";
-// import animation8 from "@/assets/slotB2/dong/00008.png";
-// import animation12 from "@/assets/slotB2/dong/00012.png";
+// import animation1 from "@/assets/slotB3/dong/00001.png";
+// import animation4 from "@/assets/slotB3/dong/00004.png";
+// import animation8 from "@/assets/slotB3/dong/00008.png";
+// import animation12 from "@/assets/slotB3/dong/00012.png";
 
 import { inject } from "vue";
-// import football from "@/assets/slotB2/football.png";
+// import football from "@/assets/slotB3/football.png";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
@@ -59,25 +59,25 @@ export default {
     const router = new useRouter();
     // 随机生成 12 张图的数组
     let randomImages = [];
-    const wisdomConfig = reactive({
-      // headwisdom,
+    const mythConfig = reactive({
+      // headmyth,
       // animation1,
       // animation4,
       // animation8,
       // animation12,
-      anywisdom,
-      playwisdom,
-      anyBoxwisdom,
-      boxwisdom,
-      homewisdom,
+      anymyth,
+      playmyth,
+      anyBoxmyth,
+      boxmyth,
+      homemyth,
       //   star,
-      // senioritywisdom,
-      countwisdom,
-      // rulewisdom,
-      // ruleDialogwisdom,
-      // resultwisdom
+      // senioritymyth,
+      countmyth,
+      // rulemyth,
+      // ruleDialogmyth,
+      // resultmyth
     });
-    const wisdomList = reactive([
+    const mythList = reactive([
       {
         name: "item1",
         size: 4,
@@ -98,45 +98,45 @@ export default {
         size: 12,
         imgList: [],
       },
-      {
-        name: "item5",
-        size: 12,
-        imgList: [],
-      },
+      // {
+      //   name: "item5",
+      //   size: 12,
+      //   imgList: [],
+      // },
     ]);
     let timeOhter = 0;
     let id;
-    let stwisdom = ref(false);
+    let stmyth = ref(false);
     let open = ref(false);
     let buttonStatus = ref(true);
     const images = [
       {
-        img: wisdom1,
-        name: "wisdom2",
+        img: myth1,
+        name: "myth2",
         className: "animation",
         count: 1800 * magnification.value,
       },
       {
-        img: wisdom2,
-        name: "wisdom1",
+        img: myth2,
+        name: "myth1",
         className: "animation",
         count: 1000 * magnification.value,
       },
       {
-        img: wisdom3,
+        img: myth3,
       },
       {
-        img: wisdom4,
+        img: myth4,
       },
       {
-        img: wisdom5,
+        img: myth5,
       },
       {
-        img: wisdom6,
+        img: myth6,
       },
       {
-        img: wisdom7,
-        name: "wisdom3",
+        img: myth7,
+        name: "myth3",
         className: "animation",
         count: 2200 * magnification.value,
       },
@@ -154,11 +154,11 @@ export default {
         buttonStatus.value = false;
 
         allMethods.clear();
-        const boxLists = wisdomList.map((item) => {
+        const boxLists = mythList.map((item) => {
           return document.getElementById(item.name);
         });
         boxLists[0].style.setProperty("background-position-x", "center");
-        boxLists[0].querySelectorAll(".wisdomp-item-img").forEach((child) => {
+        boxLists[0].querySelectorAll(".mythp-item-img").forEach((child) => {
           child.style.setProperty("display", "none");
         });
         // boxLists.forEach((item)=>{
@@ -171,9 +171,9 @@ export default {
         //       0+'px'
         //     );
         // })
-        const content = document.getElementById("wisdomp-he");
-        const box2 = document.getElementById("wisdomp");
-        const coords = { x: 0, y: 0 }; // Stwisdom at (0, 0)
+        const content = document.getElementById("mythp-he");
+        const box2 = document.getElementById("mythp");
+        const coords = { x: 0, y: 0 }; // Stmyth at (0, 0)
         const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to(
             { x: 0, y: (1120 * content.clientHeight) / box2.clientHeight },
@@ -201,12 +201,12 @@ export default {
                 -coords.y + "px"
               );
             }
-            if (timeOhter > 4000 && timeOhter <= 7000) {
-              boxLists[4].style.setProperty(
-                "background-position-y",
-                -coords.y + "px"
-              );
-            }
+            // if (timeOhter > 4000 && timeOhter <= 7000) {
+            //   boxLists[4].style.setProperty(
+            //     "background-position-y",
+            //     -coords.y + "px"
+            //   );
+            // }
             if (timeOhter > 0 && timeOhter <= 3000) {
               boxLists[0].style.setProperty(
                 "background-position-y",
@@ -217,7 +217,7 @@ export default {
           .repeat(Infinity)
           .yoyo(false)
           .repeatDelay(0);
-          tween.start(); // Stwisdom the tween immediately.
+          tween.start(); // Stmyth the tween immediately.
         let nowDate = window.performance.now();
         function animate(time) {
           timeOhter = time - nowDate;
@@ -231,7 +231,7 @@ export default {
         let i = 0;
         let timeany = setInterval(() => {
           i++;
-          if (i > 7) {
+          if (i > 6) {
             sessionStorage.setItem("countValue", countValue.value);
 
             open.value = true;
@@ -241,42 +241,42 @@ export default {
           }
           if (i > 0 && i < 4) {
             boxLists[i].style.setProperty("background-position-x", "center");
-            boxLists[i].querySelectorAll(".wisdomp-item-img").forEach((child) => {
+            boxLists[i].querySelectorAll(".mythp-item-img").forEach((child) => {
               child.style.setProperty("display", "none");
             });
           }
           if (i == 3) {
             boxLists[0].style.setProperty("background-position-x", 600 + "px");
-            boxLists[0].querySelectorAll(".wisdomp-item-img").forEach((child) => {
+            boxLists[0].querySelectorAll(".mythp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 4) {
             boxLists[1].style.setProperty("background-position-x", 600 + "px");
-            boxLists[1].querySelectorAll(".wisdomp-item-img").forEach((child) => {
+            boxLists[1].querySelectorAll(".mythp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 5) {
             boxLists[2].style.setProperty("background-position-x", 600 + "px");
-            boxLists[2].querySelectorAll(".wisdomp-item-img").forEach((child) => {
+            boxLists[2].querySelectorAll(".mythp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 6) {
             boxLists[3].style.setProperty("background-position-x", 600 + "px");
-            boxLists[3].querySelectorAll(".wisdomp-item-img").forEach((child) => {
-              child.style.setProperty("display", "block");
-            });
-            // countValue.value += useCount.value;
-          }
-          if (i == 7) {
-            boxLists[4].style.setProperty("background-position-x", 600 + "px");
-            boxLists[4].querySelectorAll(".wisdomp-item-img").forEach((child) => {
+            boxLists[3].querySelectorAll(".mythp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
             countValue.value += useCount.value;
           }
+          // if (i == 7) {
+          //   boxLists[4].style.setProperty("background-position-x", 600 + "px");
+          //   boxLists[4].querySelectorAll(".mythp-item-img").forEach((child) => {
+          //     child.style.setProperty("display", "block");
+          //   });
+          //   countValue.value += useCount.value;
+          // }
         }, 1000);
       },
       clear: () => {
@@ -323,7 +323,7 @@ export default {
           randomImages.push(randomImage);
         }
 
-        allMethods.assignImageList(wisdomList, randomImages);
+        allMethods.assignImageList(mythList, randomImages);
       },
       // 随机生成图像列表
       shuffleArray(array) {
@@ -332,11 +332,11 @@ export default {
           [array[i], array[j]] = [array[j], array[i]];
         }
         array.forEach((item) => {
-          if (item.name == "wisdom1") {
+          if (item.name == "myth1") {
             arrCount[0].value++;
-          } else if (item.name == "wisdom2") {
+          } else if (item.name == "myth2") {
             arrCount[1].value++;
-          } else if (item.name == "wisdom3") {
+          } else if (item.name == "myth3") {
             arrCount[2].value++;
           }
           if (item.count) {
@@ -346,13 +346,13 @@ export default {
         return array;
       },
 
-      // 将图像列表分配给wisdomList
-      assignImageList(wisdomList, images) {
+      // 将图像列表分配给mythList
+      assignImageList(mythList, images) {
         const shuffledImages = allMethods.shuffleArray(images.slice()); // 避免修改原始数组
 
         let currentIndex = 0;
 
-        wisdomList.forEach((item) => {
+        mythList.forEach((item) => {
           const numImages = Math.min(item.size, 3);
           item.imgList = shuffledImages.slice(
             currentIndex,
@@ -360,7 +360,7 @@ export default {
           );
           currentIndex += numImages;
         });
-        return wisdomList;
+        return mythList;
       },
       goSeniority: () => {
         router.push("/list");
@@ -370,10 +370,10 @@ export default {
     return {
       className,
       open,
-      stwisdom,
-      wisdomConfig,
+      stmyth,
+      mythConfig,
       randomImages,
-      wisdomList,
+      mythList,
       countValue,
       useCount,
       showRuleValue,
@@ -385,22 +385,22 @@ export default {
 </script>
 <template>
   <div :class="className">
-    <!-- <img class="headwisdom" :src="wisdomConfig.headwisdom" alt=""> -->
-    <div class="wisdomp" id="wisdomp">
-      <div class="wisdomp-he" id="wisdomp-he">
-        <!-- <img class="wisdom-rule" @click="showRule" :src="wisdomConfig.rulewisdom" alt=""> -->
-        <div class="wisdomp-hidden">
+    <!-- <img class="headmyth" :src="mythConfig.headmyth" alt=""> -->
+    <div class="mythp" id="mythp">
+      <div class="mythp-he" id="mythp-he">
+        <!-- <img class="myth-rule" @click="showRule" :src="mythConfig.rulemyth" alt=""> -->
+        <div class="mythp-hidden">
           <div
-            class="wisdomp-item"
+            class="mythp-item"
             :id="item.name"
-            v-for="(item, index) in wisdomList"
+            v-for="(item, index) in mythList"
           >
             <div
               v-for="(imgItem, imgIndex) in item.imgList"
               :class="
                 imgItem.className
-                  ? 'wisdomp-item-img ' + imgItem.className
-                  : 'wisdomp-item-img'
+                  ? 'mythp-item-img ' + imgItem.className
+                  : 'mythp-item-img'
               "
             >
               <img :src="imgItem.img" alt="" />
@@ -408,36 +408,36 @@ export default {
           </div>
         </div>
       </div>
-      <div class="buttonwisdom-box">
+      <div class="buttonmyth-box">
         <div class="buttons" @click="close"></div>
-        <div class="buttonswisdomBack" @click="run"></div>
+        <div class="buttonsmythBack" @click="run"></div>
 
         <!-- <div class="buttons2" @click="goSeniority"></div> -->
 
-        <div class="wisdom-count" @click="showRule">
-          <!-- <img class="wisdom-rule" :src="wisdomConfig.rulewisdom" alt="" /> -->
-          <img :src="wisdomConfig.countwisdom" alt="" />
+        <div class="myth-count" @click="showRule">
+          <!-- <img class="myth-rule" :src="mythConfig.rulemyth" alt="" /> -->
+          <img :src="mythConfig.countmyth" alt="" />
           <div class="countValue">{{ countValue }}</div>
         </div>
       </div>
-      <div class="wisdomd-wisdomp">
-        <div class="wisdomd-back" @click="close"></div>
+      <div class="mythd-mythp">
+        <div class="mythd-back" @click="close"></div>
       </div>
     </div>
     <Teleport to="body">
       <div v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="wisdomConfig.star" alt="" /> -->
-        <!-- <img class="model-img-bg" :src="wisdomConfig.resultwisdom" alt="" /> -->
-        <!-- <div class="modelwisdom-list">
+        <!-- <img class="model-star" :src="mythConfig.star" alt="" /> -->
+        <!-- <img class="model-img-bg" :src="mythConfig.resultmyth" alt="" /> -->
+        <!-- <div class="modelmyth-list">
           <div
-            class="modelwisdom-item"
+            class="modelmyth-item"
             v-for="(item, index) in arrCount"
             :key="index"
           >
             {{ item.count + "X" + item.value }}
           </div>
-          <div class="modelwisdom-total">{{ useCount }}</div>
+          <div class="modelmyth-total">{{ useCount }}</div>
         </div> -->
       </div>
     </Teleport>
@@ -445,8 +445,8 @@ export default {
     <Teleport to="body">
       <div v-if="showRuleValue" class="modal" @click="showRule">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="wisdomConfig.star" alt="" /> -->
-        <!-- <img class="model-img" :src="wisdomConfig.ruleDialogwisdom" alt="" /> -->
+        <!-- <img class="model-star" :src="mythConfig.star" alt="" /> -->
+        <!-- <img class="model-img" :src="mythConfig.ruleDialogmyth" alt="" /> -->
       </div>
     </Teleport>
   </div>
@@ -458,7 +458,7 @@ export default {
 
   width: 280px;
 }
-.wisdomd-wisdomp {
+.mythd-mythp {
   display: flex;
   align-items: center;
   /* padding: 60px 15px; */
@@ -469,43 +469,44 @@ export default {
   color: #fff;
 }
 .countValue {
-  margin: 0 0 0 6%;
-  color: #fff;
+  margin: 0 0 0 37%;
+    color: #d23d1e;
+    font-size: 18px;
 }
 
-.wisdom-count img {
+.myth-count img {
   width: 100%;
   position: absolute;
   height: 100%;
   /* top: -16%; */
   z-index: -1;
 }
-.wisdom-count .wisdom-rule {
+.myth-count .myth-rule {
   position: absolute;
   left: -9%;
   width: 45px;
   height: 45px;
 }
-.wisdomd-back {
-  /* background: v-bind("'url(' + wisdomConfig.homewisdom + ')'") no-repeat; */
+.mythd-back {
+  /* background: v-bind("'url(' + mythConfig.homemyth + ')'") no-repeat; */
 
   width: 36px;
   height: 42px;
   background-size: 100%;
   z-index: 999;
 }
-.stwisdom {
+.stmyth {
   margin-top: -30%;
   width: 160px;
   height: 80px;
-  background: v-bind("'url(' + wisdomConfig.playwisdom + ')'") no-repeat;
+  background: v-bind("'url(' + mythConfig.playmyth + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 }
 .container {
   display: flex;
   flex-direction: column;
-  background: v-bind("'url(' + wisdomConfig.boxwisdom + ')'") no-repeat;
+  background: v-bind("'url(' + mythConfig.boxmyth + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -515,7 +516,7 @@ export default {
   align-items: center;
 }
 
-.wisdomp {
+.mythp {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -525,19 +526,19 @@ export default {
   /* height: 100vh; */
   overflow: hidden;
 
-  background: v-bind("'url(' + wisdomConfig.anyBoxwisdom + ')'") no-repeat;
-  background-size: auto 100%;
-  background-position: center ;
+  background: v-bind("'url(' + mythConfig.anyBoxmyth + ')'") no-repeat;
+  background-size: 70%;
+  background-position: center 28%;
 
   color: #fff;
   font-weight: 600;
   font-size: 26;
 }
 
-.buttonwisdom-box {
+.buttonmyth-box {
   position: absolute;
-  top: 1%;
-    left: 12%;
+  top: 5%;
+    left: 17%;
   display: flex;
   /* flex-direction: column; */
 
@@ -545,10 +546,10 @@ export default {
   height: 25%;
   /* justify-content: space-between; */
 }
-.wisdom-count {
+.myth-count {
   position: relative;
-  width: 70%;
-    height: 50%;
+  width: 49%;
+    height: 46%;
     margin-left: 2%;
     margin-right: -23%;
     margin-top: 60.5%;
@@ -561,11 +562,11 @@ export default {
 
 .buttons {
   margin-left: 9%;
-
-  width: 25%;
-  height: 42%;
+    margin-top: 61%;
+    width: 18%;
+    height: 43%;
   z-index: 999;
-  background: v-bind("'url(' + wisdomConfig.homewisdom + ')'") no-repeat;
+  background: v-bind("'url(' + mythConfig.homemyth + ')'") no-repeat;
   background-size: 100% 100%;
 }
 .buttons2 {
@@ -576,21 +577,21 @@ export default {
   width: 30%;
   height: 40%;
   z-index: 999;
-  /* background: v-bind("'url(' + wisdomConfig.senioritywisdom + ')'") no-repeat; */
+  /* background: v-bind("'url(' + mythConfig.senioritymyth + ')'") no-repeat; */
   background-size: 100% 100%;
 }
-.buttonswisdomBack{
+.buttonsmythBack{
   /* margin-left: 27%;
     margin-bottom: -58%; */
-    margin-left: -7%;
+    margin-left: 2%;
     margin-top: 60.5%;
     width: 19%;
     height: 48.5%;
   z-index: 999;
-  background: v-bind("'url(' + wisdomConfig.playwisdom + ')'") no-repeat;
+  background: v-bind("'url(' + mythConfig.playmyth + ')'") no-repeat;
   background-size: 100% 100%;
 }
-.wisdomp-he {
+.mythp-he {
   position: relative;
   margin-right: 0%;
   margin-top: 4%;
@@ -598,12 +599,12 @@ export default {
   height: 43vw;
   display: flex;
   justify-content: space-between;
-  transform: scale(0.65);
+  transform: scale(0.72);
 }
 
-.wisdomp-hidden {
+.mythp-hidden {
   /* margin-top: 2%; */
-  margin-left: 1%;
+  /* margin-left: 1%; */
   margin-top: -7%;
   display: flex;
   justify-content: space-between;
@@ -612,7 +613,7 @@ export default {
   height: 100%;
   overflow: hidden;
 }
-.wisdomp-item {
+.mythp-item {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -620,20 +621,23 @@ export default {
 
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + wisdomConfig.anywisdom + ')'");
+  background: v-bind("'url(' + mythConfig.anymyth + ')'");
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
-  background-size: 88% 241%;
+  background-size: 92% 272%;
 }
-.wisdomp-item-img {
+.mythp-item:nth-child(2){
+  margin-right: 20%;
+}
+.mythp-item-img {
   position: relative;
 
   display: none;
   width: 100%;
   height: 100%;
 }
-.wisdomp-item-img img {
+.mythp-item-img img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -645,7 +649,7 @@ export default {
 .modal {
   display: flex;
   justify-content: center;
-  align-items: flex-stwisdom;
+  align-items: flex-stmyth;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -653,7 +657,7 @@ export default {
   height: 100vh;
   z-index: 9999;
   /* background-color: rgba(0, 0, 0, 0.5); */
-  /* background: v-bind("'url(' + wisdomConfig.dialogwisdom + ')'") no-repeat; */
+  /* background: v-bind("'url(' + mythConfig.dialogmyth + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star {
@@ -675,17 +679,17 @@ export default {
   width: 70%;
 }
 
-.stwisdom-bg {
+.stmyth-bg {
   position: absolute;
 
   top: 0;
   z-index: 1;
 }
-.stwisdom-bg img {
+.stmyth-bg img {
   width: 100%;
 }
 
-.modelwisdom-list {
+.modelmyth-list {
   position: absolute;
   left: 60%;
   top: 39.5%;
@@ -697,33 +701,33 @@ export default {
   font-size: 16px;
   /* transform: rotate(7deg) translateX(-36px); */
 }
-.modelwisdom-item {
+.modelmyth-item {
   margin-bottom: 11px;
 }
-.modelwisdom-total {
+.modelmyth-total {
   padding: 7px 14px;
 }
 
-.headwisdom {
+.headmyth {
   margin-top: 10vh;
   width: 80%;
 }
 /* 定义步长图片动画关键帧 */
 @keyframes image-animation {
   0% {
-    background-image: v-bind("'url(' + wisdomConfig.animation1 + ')'");
+    background-image: v-bind("'url(' + mythConfig.animation1 + ')'");
   }
 
   25% {
-    background-image: v-bind("'url(' + wisdomConfig.animation4 + ')'");
+    background-image: v-bind("'url(' + mythConfig.animation4 + ')'");
   }
 
   75% {
-    background-image: v-bind("'url(' + wisdomConfig.animation8 + ')'");
+    background-image: v-bind("'url(' + mythConfig.animation8 + ')'");
   }
 
   100% {
-    background-image: v-bind("'url(' + wisdomConfig.animation12 + ')'");
+    background-image: v-bind("'url(' + mythConfig.animation12 + ')'");
   }
 }
 
