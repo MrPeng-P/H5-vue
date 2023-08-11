@@ -27,7 +27,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/imgAlice/[hash][ext]",
+          filename: "assets/imgwild/[hash][ext]",
         },
       },
     ],
@@ -39,7 +39,7 @@ module.exports = {
     },
   },
   output: {
-    filename: "assets/AliceJs/wisdom-[hash].js",
+    filename: "assets/wildJs/wild-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [

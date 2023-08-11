@@ -1,8 +1,8 @@
 <script>
-import homewild from "@/assets/slotA5/homewild.png";
-import againwild from "@/assets/slotA5/againwild.jpg";
-import listwild from "@/assets/slotA5/listboxwild.png";
-import boxwild from "@/assets/slotA5/boxwild.jpg";
+import homewisdom from "@/assets/slotB2/homewisdom.png";
+import againwisdom from "@/assets/slotB2/againwisdom.png";
+import listwisdom from "@/assets/slotB2/listboxwisdom.png";
+import boxwisdom from "@/assets/slotB2/boxwisdom.jpg";
 
 import { onMounted, reactive, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
@@ -11,20 +11,20 @@ export default {
   setup() {
     const router = new useRouter();
     const className = "container";
-    const wildConfig = reactive({
-      listwild,
-      homewild,
-      againwild,
-      boxwild,
+    const wisdomConfig = reactive({
+      listwisdom,
+      homewisdom,
+      againwisdom,
+      boxwisdom,
     });
     const list = reactive([
       {
-        name: "joe wild",
-        count: "1221B",
+        name: "Ivanildo wisdom",
+        count: "1101B",
       },
       {
-        name: "Jonas wild",
-        count: "121",
+        name: "Jonas wisdom",
+        count: "101B",
       },
       // {
       //   name: "Cássio Watanabe",
@@ -35,8 +35,8 @@ export default {
         count: sessionStorage.getItem('countValue')||1000,
       },
       {
-        name: "deYou wild",
-        count: "152B",
+        name: "Lúcio wisdom",
+        count: "150B",
       },
     ]);
 
@@ -44,7 +44,7 @@ export default {
       goHome: () => {
         router.push("/");
       },
-      goStwild: () => {
+      goStwisdom: () => {
         router.push("/home");
       },
       parseCount: (count) => {
@@ -88,37 +88,37 @@ export default {
     return {
       list,
       className,
-      wildConfig,
+      wisdomConfig,
       ...allMethods,
     };
   },
 };
 </script>
 <template>
-  <div class="wild">
+  <div class="wisdom">
     <div :class="className">
-    <div class="listwild">
-      <div class="itemwild" v-for="(item, index) in list" :key="index">
-        <div class="wild-name">{{ item.name }}</div>
-        <div class="wild-count">{{ item.count }}</div>
+    <div class="listwisdom">
+      <div class="itemwisdom" v-for="(item, index) in list" :key="index">
+        <div class="wisdom-name">{{ item.name }}</div>
+        <div class="wisdom-count">{{ item.count }}</div>
       </div>
     </div>
-    <div class="buttonwild-box">
+    <div class="buttonwisdom-box">
       <div class="buttons" @click="goHome"></div>
-      <div class="buttons2" @click="goStwild"></div>
+      <div class="buttons2" @click="goStwisdom"></div>
     </div>
 
-    <!-- <div class="stwild" @click="goHome">
+    <!-- <div class="stwisdom" @click="goHome">
     </div> -->
   </div>
   </div>
 </template>
 
 <style scoped>
-.wild{
+.wisdom{
   display: flex;
   flex-direction: column;
-  background: v-bind("'url(' + wildConfig.boxwild + ')'") no-repeat;
+  background: v-bind("'url(' + wisdomConfig.boxwisdom + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -130,7 +130,7 @@ export default {
 }
 .container {
   position: relative;
-  background: v-bind("'url(' + wildConfig.listwild + ')'") no-repeat;
+  background: v-bind("'url(' + wisdomConfig.listwisdom + ')'") no-repeat;
   background-size: 62%;
   background-position: center 30%;
   width: 100vw;
@@ -142,22 +142,22 @@ export default {
   font-size: 14px;
 }
 
-.buttonwild-box {
+.buttonwisdom-box {
   position: absolute;
-  top: 0%;
-    left: 0%;
+    top: 65%;
+    left: 11.5%;
     width: 100%;
     height: 100%;
 
 }
 .buttons {
-  width: 5%;
-    height: 8.5%;
+  width: 13%;
+    height: 9.5%;
     position: absolute;
-    left: 18.5%;
-    top: 9.5%;
+    left: 20.5%;
+    top: 22.5%;
     z-index: 999;
-  background: v-bind("'url(' + wildConfig.homewild + ')'") no-repeat;
+  background: v-bind("'url(' + wisdomConfig.homewisdom + ')'") no-repeat;
   
     background-size: 100% 100%;
 }
@@ -165,14 +165,14 @@ export default {
   width: 18%;
     height: 9.5%;
     position: absolute;
-    left: 42.5%;
-    top: 86.5%;
+    left: 39.5%;
+    top: 22.5%;
     z-index: 999;
-  background: v-bind("'url(' + wildConfig.againwild + ')'") no-repeat;
+  background: v-bind("'url(' + wisdomConfig.againwisdom + ')'") no-repeat;
 
     background-size: 100% 100%;
 }
-.wildp-he {
+.wisdomp-he {
   position: relative;
   margin-top: 26%;
   width: 140%;
@@ -181,7 +181,7 @@ export default {
   justify-content: space-between;
   transform: scale(0.65);
 }
-.wildp-hidden {
+.wisdomp-hidden {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -189,15 +189,15 @@ export default {
   height: 100%;
   overflow: hidden;
 }
-.wildp-item {
+.wisdomp-item {
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + wildConfig.anywild + ')'");
+  background: v-bind("'url(' + wisdomConfig.anywisdom + ')'");
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
 }
-.listwild {
+.listwisdom {
   position: absolute;
     top: 72%;
     left: 57%;
@@ -209,19 +209,19 @@ export default {
     align-items: center;
     text-align: left;
 }
-.itemwild {
-  margin-top: 21px;
+.itemwisdom {
+  margin-top: 18px;
   display: flex;
 }
 
-.wild-name {
+.wisdom-name {
   width: 150px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.wild-count{
+.wisdom-count{
   width: 50px;
 }
 </style>

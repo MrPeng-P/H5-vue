@@ -1,34 +1,33 @@
 <script>
-import playwild from "@/assets/slotA5/playwild.jpg";
-import boxwild from "@/assets/slotA5/boxwild.jpg";
-import anywild from "@/assets/slotA5/changewild.png";
-import anyBoxwild from "@/assets/slotA5/anyBoxwild.png";
-import homewild from "@/assets/slotA5/homewild.png";
-import senioritywild from "@/assets/slotA5/senioritywild.jpg";
-import countwild from "@/assets/slotA5/countwild.jpg";
-// import rulewild from "@/assets/slotA5/rulewild.png";
-// import ruleDialogwild from "@/assets/slotA5/ruleDialogwild.jpg";
-// import resultwild from "@/assets/slotA5/resultwild.png";
-// import headwild from "@/assets/slotA5/headwild.png";
+import playwisdom from "@/assets/slotB2/playwisdom.jpg";
+import boxwisdom from "@/assets/slotB2/bgwisdom.jpg";
+import anywisdom from "@/assets/slotB2/changeHwisdom.png";
+import anyBoxwisdom from "@/assets/slotB2/anyBoxwisdom.jpg";
+import homewisdom from "@/assets/slotB2/homewisdom.jpg";
+// import senioritywisdom from "@/assets/slotB2/senioritywisdom.png";
+import countwisdom from "@/assets/slotB2/countwisdom.jpg";
+// import rulewisdom from "@/assets/slotB2/rulewisdom.png";
+// import ruleDialogwisdom from "@/assets/slotB2/ruleDialogwisdom.jpg";
+// import resultwisdom from "@/assets/slotB2/resultwisdom.png";
+// import headwisdom from "@/assets/slotB2/headwisdom.png";
 
-// import star from "@/assets/slotA5/starwild.gif";
+// import star from "@/assets/slotB2/starwisdom.gif";
 import { useRouter, useRoute } from "vue-router";
-import wild1 from "@/assets/slotA5/wild1.png";
-import wild2 from "@/assets/slotA5/wild2.png";
-import wild3 from "@/assets/slotA5/wild3.png";
-import wild4 from "@/assets/slotA5/wild4.png";
-import wild5 from "@/assets/slotA5/wild5.png";
-import wild6 from "@/assets/slotA5/wild6.png";
-import wild7 from "@/assets/slotA5/wild7.png";
-import wild8 from "@/assets/slotA5/wild8.png";
+import wisdom1 from "@/assets/slotB2/wisdom1.png";
+import wisdom2 from "@/assets/slotB2/wisdom2.png";
+import wisdom3 from "@/assets/slotB2/wisdom3.png";
+import wisdom4 from "@/assets/slotB2/wisdom4.png";
+import wisdom5 from "@/assets/slotB2/wisdom5.png";
+import wisdom6 from "@/assets/slotB2/wisdom6.png";
+import wisdom7 from "@/assets/slotB2/wisdom7.png";
 
-// import animation1 from "@/assets/slotA5/dong/00001.png";
-// import animation4 from "@/assets/slotA5/dong/00004.png";
-// import animation8 from "@/assets/slotA5/dong/00008.png";
-// import animation12 from "@/assets/slotA5/dong/00012.png";
+// import animation1 from "@/assets/slotB2/dong/00001.png";
+// import animation4 from "@/assets/slotB2/dong/00004.png";
+// import animation8 from "@/assets/slotB2/dong/00008.png";
+// import animation12 from "@/assets/slotB2/dong/00012.png";
 
 import { inject } from "vue";
-// import football from "@/assets/slotA5/football.png";
+// import football from "@/assets/slotB2/football.png";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
@@ -60,45 +59,45 @@ export default {
     const router = new useRouter();
     // 随机生成 12 张图的数组
     let randomImages = [];
-    const wildConfig = reactive({
-      // headwild,
+    const wisdomConfig = reactive({
+      // headwisdom,
       // animation1,
       // animation4,
       // animation8,
       // animation12,
-      anywild,
-      playwild,
-      anyBoxwild,
-      boxwild,
-      homewild,
+      anywisdom,
+      playwisdom,
+      anyBoxwisdom,
+      boxwisdom,
+      homewisdom,
       //   star,
-      senioritywild,
-      countwild,
-      // rulewild,
-      // ruleDialogwild,
-      // resultwild
+      // senioritywisdom,
+      countwisdom,
+      // rulewisdom,
+      // ruleDialogwisdom,
+      // resultwisdom
     });
-    const wildList = reactive([
+    const wisdomList = reactive([
       {
         name: "item1",
-        size: 4,
+        size: 5,
         imgList: [],
       },
       {
         name: "item2",
-        size: 8,
+        size: 10,
         imgList: [],
       },
       {
         name: "item3",
-        size: 12,
+        size: 15,
         imgList: [],
       },
-      {
-        name: "item4",
-        size: 12,
-        imgList: [],
-      },
+      // {
+      //   name: "item4",
+      //   size: 12,
+      //   imgList: [],
+      // },
       // {
       //   name: "item5",
       //   size: 12,
@@ -107,42 +106,39 @@ export default {
     ]);
     let timeOhter = 0;
     let id;
-    let stwild = ref(false);
+    let stwisdom = ref(false);
     let open = ref(false);
     let buttonStatus = ref(true);
     const images = [
       {
-        img: wild1,
-        name: "wild2",
+        img: wisdom1,
+        name: "wisdom2",
         className: "animation",
         count: 1800 * magnification.value,
       },
       {
-        img: wild2,
-        name: "wild1",
+        img: wisdom2,
+        name: "wisdom1",
         className: "animation",
         count: 1000 * magnification.value,
       },
       {
-        img: wild3,
+        img: wisdom3,
       },
       {
-        img: wild4,
+        img: wisdom4,
       },
       {
-        img: wild5,
+        img: wisdom5,
       },
       {
-        img: wild6,
+        img: wisdom6,
       },
       {
-        img: wild7,
-        name: "wild3",
+        img: wisdom7,
+        name: "wisdom3",
         className: "animation",
         count: 2200 * magnification.value,
-      },
-      {
-        img: wild8,
       },
     ];
     const allMethods = {
@@ -158,11 +154,11 @@ export default {
         buttonStatus.value = false;
 
         allMethods.clear();
-        const boxLists = wildList.map((item) => {
+        const boxLists = wisdomList.map((item) => {
           return document.getElementById(item.name);
         });
-        boxLists[0].style.setProperty("background-position-x", "center");
-        boxLists[0].querySelectorAll(".wildp-item-img").forEach((child) => {
+        boxLists[0].style.setProperty("background-position-y", "center");
+        boxLists[0].querySelectorAll(".wisdomp-item-img").forEach((child) => {
           child.style.setProperty("display", "none");
         });
         // boxLists.forEach((item)=>{
@@ -175,53 +171,53 @@ export default {
         //       0+'px'
         //     );
         // })
-        const content = document.getElementById("wildp-he");
-        const box2 = document.getElementById("wildp");
-        const coords = { x: 0, y: 0 }; // Stwild at (0, 0)
+        const content = document.getElementById("wisdomp-he");
+        const box2 = document.getElementById("wisdomp");
+        const coords = { x: 0, y: 0 }; // Stwisdom at (0, 0)
         const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to(
-            { x: 0, y: (1120 * content.clientHeight) / box2.clientHeight },
+            { x: (1120 * content.clientWidth) / box2.clientWidth, y: 0 },
             100
           ) // Move to (300, 600) in 1 second.
           .easing() // Use an easing function to make the animation smooth.
           .onUpdate(() => {
             if (timeOhter > 1000 && timeOhter <= 4000) {
               boxLists[1].style.setProperty(
-                "background-position-y",
-                -coords.y + "px"
+                "background-position-x",
+                -coords.x + "px"
               );
             }
 
             if (timeOhter > 2000 && timeOhter <= 5000) {
               boxLists[2].style.setProperty(
-                "background-position-y",
-                -coords.y + "px"
+                "background-position-x",
+                -coords.x + "px"
               );
             }
 
-            if (timeOhter > 3000 && timeOhter <= 6000) {
-              boxLists[3].style.setProperty(
-                "background-position-y",
-                -coords.y + "px"
-              );
-            }
+            // if (timeOhter > 3000 && timeOhter <= 6000) {
+            //   boxLists[3].style.setProperty(
+            //     "background-position-y",
+            //     -coords.x + "px"
+            //   );
+            // }
             // if (timeOhter > 4000 && timeOhter <= 7000) {
             //   boxLists[4].style.setProperty(
             //     "background-position-y",
-            //     -coords.y + "px"
+            //     -coords.x + "px"
             //   );
             // }
             if (timeOhter > 0 && timeOhter <= 3000) {
               boxLists[0].style.setProperty(
-                "background-position-y",
-                -coords.y + "px"
+                "background-position-x",
+                -coords.x + "px"
               );
             }
           })
           .repeat(Infinity)
           .yoyo(false)
           .repeatDelay(0);
-        tween.start(); // Stwild the tween immediately.
+          tween.start(); // Stwisdom the tween immediately.
         let nowDate = window.performance.now();
         function animate(time) {
           timeOhter = time - nowDate;
@@ -235,7 +231,7 @@ export default {
         let i = 0;
         let timeany = setInterval(() => {
           i++;
-          if (i > 6) {
+          if (i > 5) {
             sessionStorage.setItem("countValue", countValue.value);
 
             open.value = true;
@@ -243,43 +239,44 @@ export default {
             tween.stop();
             clearInterval(timeany);
           }
-          if (i > 0 && i < 4) {
-            boxLists[i].style.setProperty("background-position-x", "center");
-            boxLists[i].querySelectorAll(".wildp-item-img").forEach((child) => {
+          if (i > 0 && i < 3) {
+            boxLists[i].style.setProperty("background-position-y", "center");
+            boxLists[i].querySelectorAll(".wisdomp-item-img").forEach((child) => {
               child.style.setProperty("display", "none");
             });
           }
           if (i == 3) {
-            boxLists[0].style.setProperty("background-position-x", 600 + "px");
-            boxLists[0].querySelectorAll(".wildp-item-img").forEach((child) => {
+            boxLists[0].style.setProperty("background-position-y", 600 + "px");
+            boxLists[0].querySelectorAll(".wisdomp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 4) {
-            boxLists[1].style.setProperty("background-position-x", 600 + "px");
-            boxLists[1].querySelectorAll(".wildp-item-img").forEach((child) => {
+            boxLists[1].style.setProperty("background-position-y", 600 + "px");
+            boxLists[1].querySelectorAll(".wisdomp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 5) {
-            boxLists[2].style.setProperty("background-position-x", 600 + "px");
-            boxLists[2].querySelectorAll(".wildp-item-img").forEach((child) => {
+            boxLists[2].style.setProperty("background-position-y", 600 + "px");
+            boxLists[2].querySelectorAll(".wisdomp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
+            countValue.value += useCount.value;
           }
-          if (i == 6) {
-            boxLists[3].style.setProperty("background-position-x", 600 + "px");
-            boxLists[3].querySelectorAll(".wildp-item-img").forEach((child) => {
-              child.style.setProperty("display", "block");
-              countValue.value += useCount.value;
-            });
-          }
-          // if (i == 7) {
-          //   boxLists[4].style.setProperty("background-position-x", 600 + "px");
-          //   boxLists[4].querySelectorAll(".wildp-item-img").forEach((child) => {
+          // if (i == 6) {
+          //   boxLists[3].style.setProperty("background-position-x", 600 + "px");
+          //   boxLists[3].querySelectorAll(".wisdomp-item-img").forEach((child) => {
           //     child.style.setProperty("display", "block");
           //   });
-          //   countValue.value += useCount.value;
+          //   // countValue.value += useCount.value;
+          // }
+          // if (i == 7) {
+          //   boxLists[4].style.setProperty("background-position-x", 600 + "px");
+          //   boxLists[4].querySelectorAll(".wisdomp-item-img").forEach((child) => {
+          //     child.style.setProperty("display", "block");
+          //   });
+            
           // }
         }, 1000);
       },
@@ -316,7 +313,7 @@ export default {
         // 定义 8 张图的数组
 
         // 定义需要生成的总图片数量
-        const totalImages = 12;
+        const totalImages = 15;
 
         while (randomImages.length < totalImages) {
           // 从原始图片数组中随机选择一张图片
@@ -327,7 +324,7 @@ export default {
           randomImages.push(randomImage);
         }
 
-        allMethods.assignImageList(wildList, randomImages);
+        allMethods.assignImageList(wisdomList, randomImages);
       },
       // 随机生成图像列表
       shuffleArray(array) {
@@ -336,11 +333,11 @@ export default {
           [array[i], array[j]] = [array[j], array[i]];
         }
         array.forEach((item) => {
-          if (item.name == "wild1") {
+          if (item.name == "wisdom1") {
             arrCount[0].value++;
-          } else if (item.name == "wild2") {
+          } else if (item.name == "wisdom2") {
             arrCount[1].value++;
-          } else if (item.name == "wild3") {
+          } else if (item.name == "wisdom3") {
             arrCount[2].value++;
           }
           if (item.count) {
@@ -350,21 +347,21 @@ export default {
         return array;
       },
 
-      // 将图像列表分配给wildList
-      assignImageList(wildList, images) {
+      // 将图像列表分配给wisdomList
+      assignImageList(wisdomList, images) {
         const shuffledImages = allMethods.shuffleArray(images.slice()); // 避免修改原始数组
-
+        console.log('%c ..........shuffledImages.........','color:#31ef0e',shuffledImages)
         let currentIndex = 0;
-
-        wildList.forEach((item) => {
-          const numImages = Math.min(item.size, 3);
+        wisdomList.forEach((item) => {
+          const numImages = Math.min(item.size, 5);
           item.imgList = shuffledImages.slice(
             currentIndex,
             currentIndex + numImages
           );
           currentIndex += numImages;
         });
-        return wildList;
+        console.log('%c ..........wisdomList.........','color:#31ef0e',wisdomList)
+        return wisdomList;
       },
       goSeniority: () => {
         router.push("/list");
@@ -374,10 +371,10 @@ export default {
     return {
       className,
       open,
-      stwild,
-      wildConfig,
+      stwisdom,
+      wisdomConfig,
       randomImages,
-      wildList,
+      wisdomList,
       countValue,
       useCount,
       showRuleValue,
@@ -389,22 +386,22 @@ export default {
 </script>
 <template>
   <div :class="className">
-    <!-- <img class="headwild" :src="wildConfig.headwild" alt=""> -->
-    <div class="wildp" id="wildp">
-      <div class="wildp-he" id="wildp-he">
-        <!-- <img class="wild-rule" @click="showRule" :src="wildConfig.rulewild" alt=""> -->
-        <div class="wildp-hidden">
+    <!-- <img class="headwisdom" :src="wisdomConfig.headwisdom" alt=""> -->
+    <div class="wisdomp" id="wisdomp">
+      <div class="wisdomp-he" id="wisdomp-he">
+        <!-- <img class="wisdom-rule" @click="showRule" :src="wisdomConfig.rulewisdom" alt=""> -->
+        <div class="wisdomp-hidden">
           <div
-            class="wildp-item"
+            class="wisdomp-item"
             :id="item.name"
-            v-for="(item, index) in wildList"
+            v-for="(item, index) in wisdomList"
           >
             <div
               v-for="(imgItem, imgIndex) in item.imgList"
               :class="
                 imgItem.className
-                  ? 'wildp-item-img ' + imgItem.className
-                  : 'wildp-item-img'
+                  ? 'wisdomp-item-img ' + imgItem.className
+                  : 'wisdomp-item-img'
               "
             >
               <img :src="imgItem.img" alt="" />
@@ -412,36 +409,36 @@ export default {
           </div>
         </div>
       </div>
-      <div class="buttonwild-box">
+      <div class="buttonwisdom-box">
         <div class="buttons" @click="close"></div>
-        <div class="buttonswildBack"   @click="run"></div>
+        <div class="buttonswisdomBack" @click="run"></div>
 
-        <div class="buttons2" @click="goSeniority"></div>
+        <!-- <div class="buttons2" @click="goSeniority"></div> -->
 
-        <div class="wild-count" @click="showRule">
-          <!-- <img class="wild-rule" :src="wildConfig.rulewild" alt="" /> -->
-          <img :src="wildConfig.countwild" alt="" />
+        <div class="wisdom-count" @click="showRule">
+          <!-- <img class="wisdom-rule" :src="wisdomConfig.rulewisdom" alt="" /> -->
+          <img :src="wisdomConfig.countwisdom" alt="" />
           <div class="countValue">{{ countValue }}</div>
         </div>
       </div>
-      <div class="wildd-wildp">
-        <div class="wildd-back" @click="close"></div>
+      <div class="wisdomd-wisdomp">
+        <div class="wisdomd-back" @click="close"></div>
       </div>
     </div>
     <Teleport to="body">
       <div v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="wildConfig.star" alt="" /> -->
-        <!-- <img class="model-img-bg" :src="wildConfig.resultwild" alt="" /> -->
-        <!-- <div class="modelwild-list">
+        <!-- <img class="model-star" :src="wisdomConfig.star" alt="" /> -->
+        <!-- <img class="model-img-bg" :src="wisdomConfig.resultwisdom" alt="" /> -->
+        <!-- <div class="modelwisdom-list">
           <div
-            class="modelwild-item"
+            class="modelwisdom-item"
             v-for="(item, index) in arrCount"
             :key="index"
           >
             {{ item.count + "X" + item.value }}
           </div>
-          <div class="modelwild-total">{{ useCount }}</div>
+          <div class="modelwisdom-total">{{ useCount }}</div>
         </div> -->
       </div>
     </Teleport>
@@ -449,8 +446,8 @@ export default {
     <Teleport to="body">
       <div v-if="showRuleValue" class="modal" @click="showRule">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="wildConfig.star" alt="" /> -->
-        <!-- <img class="model-img" :src="wildConfig.ruleDialogwild" alt="" /> -->
+        <!-- <img class="model-star" :src="wisdomConfig.star" alt="" /> -->
+        <!-- <img class="model-img" :src="wisdomConfig.ruleDialogwisdom" alt="" /> -->
       </div>
     </Teleport>
   </div>
@@ -462,7 +459,7 @@ export default {
 
   width: 280px;
 }
-.wildd-wildp {
+.wisdomd-wisdomp {
   display: flex;
   align-items: center;
   /* padding: 60px 15px; */
@@ -477,39 +474,39 @@ export default {
   color: #fff;
 }
 
-.wild-count img {
+.wisdom-count img {
   width: 100%;
   position: absolute;
   height: 100%;
   /* top: -16%; */
   z-index: -1;
 }
-.wild-count .wild-rule {
+.wisdom-count .wisdom-rule {
   position: absolute;
   left: -9%;
   width: 45px;
   height: 45px;
 }
-.wildd-back {
-  /* background: v-bind("'url(' + wildConfig.homewild + ')'") no-repeat; */
+.wisdomd-back {
+  /* background: v-bind("'url(' + wisdomConfig.homewisdom + ')'") no-repeat; */
 
   width: 36px;
   height: 42px;
   background-size: 100%;
   z-index: 999;
 }
-.stwild {
+.stwisdom {
   margin-top: -30%;
   width: 160px;
   height: 80px;
-  background: v-bind("'url(' + wildConfig.playwild + ')'") no-repeat;
+  background: v-bind("'url(' + wisdomConfig.playwisdom + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 }
 .container {
   display: flex;
   flex-direction: column;
-  background: v-bind("'url(' + wildConfig.boxwild + ')'") no-repeat;
+  background: v-bind("'url(' + wisdomConfig.boxwisdom + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -519,29 +516,29 @@ export default {
   align-items: center;
 }
 
-.wildp {
+.wisdomp {
   position: relative;
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
   overflow: hidden;
 
-  background: v-bind("'url(' + wildConfig.anyBoxwild + ')'") no-repeat;
-  background-size: 62%;
-  background-position: center 30%;
+  background: v-bind("'url(' + wisdomConfig.anyBoxwisdom + ')'") no-repeat;
+  background-size: auto 100%;
+  background-position: center ;
 
   color: #fff;
   font-weight: 600;
   font-size: 26;
 }
 
-.buttonwild-box {
+.buttonwisdom-box {
   position: absolute;
-  top: 10%;
-    left: 18%;
+  top: 1%;
+    left: 12%;
   display: flex;
   /* flex-direction: column; */
 
@@ -549,28 +546,27 @@ export default {
   height: 25%;
   /* justify-content: space-between; */
 }
-.wild-count {
+.wisdom-count {
   position: relative;
-    width: 30%;
-    height: 40%;
-    margin-right: -46%;
-    margin-top: -2%;
-  /* margin-left: 84%;
-  margin-bottom: -46%; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  z-index: 1;
+  width: 70%;
+    height: 50%;
+    margin-left: 2%;
+    margin-right: -23%;
+    margin-top: 60.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    z-index: 1;
 }
 
 .buttons {
-  margin-right: 12%;
-    width: 9%;
-    height: 35%;
-  z-index: 999;
-  background: v-bind("'url(' + wildConfig.homewild + ')'") no-repeat;
+  margin-left: 9%;
 
+  width: 25%;
+  height: 42%;
+  z-index: 999;
+  background: v-bind("'url(' + wisdomConfig.homewisdom + ')'") no-repeat;
   background-size: 100% 100%;
 }
 .buttons2 {
@@ -581,25 +577,24 @@ export default {
   width: 30%;
   height: 40%;
   z-index: 999;
-  background: v-bind("'url(' + wildConfig.senioritywild + ')'") no-repeat;
+  /* background: v-bind("'url(' + wisdomConfig.senioritywisdom + ')'") no-repeat; */
   background-size: 100% 100%;
 }
-.buttonswildBack{
+.buttonswisdomBack{
   /* margin-left: 27%;
     margin-bottom: -58%; */
-    margin-left:2%;
-    margin-top: 60%;
-    width: 25%;
-  height: 40%;
+    margin-left: -7%;
+    margin-top: 60.5%;
+    width: 19%;
+    height: 48.5%;
   z-index: 999;
-  background: v-bind("'url(' + wildConfig.playwild + ')'") no-repeat;
-
+  background: v-bind("'url(' + wisdomConfig.playwisdom + ')'") no-repeat;
   background-size: 100% 100%;
 }
-.wildp-he {
+.wisdomp-he {
   position: relative;
-  margin-right: -1%;
-    margin-top: 3%;
+  margin-right: 0%;
+  margin-top: 4%;
   width: 80%;
   height: 43vw;
   display: flex;
@@ -607,38 +602,39 @@ export default {
   transform: scale(0.65);
 }
 
-.wildp-hidden {
+.wisdomp-hidden {
   /* margin-top: 2%; */
-
+  margin-left: 1%;
+  margin-top: -7%;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
-.wildp-item {
+.wisdomp-item {
   display: flex;
   align-items: center;
-  flex-direction: column;
   justify-content: space-around;
 
-  height: 100%;
+  width: 100%;
   flex: 1;
-  background: v-bind("'url(' + wildConfig.anywild + ')'");
-  background-position-x: center;
-  background-position-y: -0px;
-  background-repeat-x: no-repeat;
-  background-size: 80% 265%;
+  background: v-bind("'url(' + wisdomConfig.anywisdom + ')'");
+  /* background-position-x: 0px; */
+    background-position-y: center;
+    background-repeat-y: no-repeat;
+    background-size: 160% 88%;
 }
-.wildp-item-img {
+.wisdomp-item-img {
   position: relative;
 
   display: none;
   width: 100%;
   height: 100%;
 }
-.wildp-item-img img {
+.wisdomp-item-img img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -650,7 +646,7 @@ export default {
 .modal {
   display: flex;
   justify-content: center;
-  align-items: flex-stwild;
+  align-items: flex-stwisdom;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -658,7 +654,7 @@ export default {
   height: 100vh;
   z-index: 9999;
   /* background-color: rgba(0, 0, 0, 0.5); */
-  /* background: v-bind("'url(' + wildConfig.dialogwild + ')'") no-repeat; */
+  /* background: v-bind("'url(' + wisdomConfig.dialogwisdom + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star {
@@ -680,17 +676,17 @@ export default {
   width: 70%;
 }
 
-.stwild-bg {
+.stwisdom-bg {
   position: absolute;
 
   top: 0;
   z-index: 1;
 }
-.stwild-bg img {
+.stwisdom-bg img {
   width: 100%;
 }
 
-.modelwild-list {
+.modelwisdom-list {
   position: absolute;
   left: 60%;
   top: 39.5%;
@@ -702,33 +698,33 @@ export default {
   font-size: 16px;
   /* transform: rotate(7deg) translateX(-36px); */
 }
-.modelwild-item {
+.modelwisdom-item {
   margin-bottom: 11px;
 }
-.modelwild-total {
+.modelwisdom-total {
   padding: 7px 14px;
 }
 
-.headwild {
+.headwisdom {
   margin-top: 10vh;
   width: 80%;
 }
 /* 定义步长图片动画关键帧 */
 @keyframes image-animation {
   0% {
-    background-image: v-bind("'url(' + wildConfig.animation1 + ')'");
+    background-image: v-bind("'url(' + wisdomConfig.animation1 + ')'");
   }
 
   25% {
-    background-image: v-bind("'url(' + wildConfig.animation4 + ')'");
+    background-image: v-bind("'url(' + wisdomConfig.animation4 + ')'");
   }
 
   75% {
-    background-image: v-bind("'url(' + wildConfig.animation8 + ')'");
+    background-image: v-bind("'url(' + wisdomConfig.animation8 + ')'");
   }
 
   100% {
-    background-image: v-bind("'url(' + wildConfig.animation12 + ')'");
+    background-image: v-bind("'url(' + wisdomConfig.animation12 + ')'");
   }
 }
 
