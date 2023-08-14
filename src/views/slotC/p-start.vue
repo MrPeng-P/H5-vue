@@ -1,7 +1,7 @@
 <script>
 
-import playgeisha from "@/assets/slotC3/playgeisha2.png";
-import boxgeisha from "@/assets/slotC3/boxgeisha.jpg";
+// import playOurLady from "@/assets/slotC4/playOurLady2.jpg";
+import boxOurLady from "@/assets/slotC4/playOurLady2.jpg";
 import { onMounted, reactive, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
@@ -9,9 +9,9 @@ export default {
   setup() {
     const router = new useRouter();
     const className = "container";
-    const geishaConfig = reactive({
-      playgeisha,
-      boxgeisha,
+    const OurLadyConfig = reactive({
+      // playOurLady,
+      boxOurLady,
     });
    
 
@@ -25,7 +25,7 @@ export default {
     });
     return {
         className,
-      geishaConfig,
+      OurLadyConfig,
       ...allMethods,
     };
   },
@@ -34,7 +34,7 @@ export default {
 <template>
   
   <div :class="className">
-    <div class="stgeisha" @click="goHome">
+    <div class="stOurLady" @click="goHome">
     </div>
   </div>
 </template>
@@ -42,17 +42,17 @@ export default {
 <style scoped>
 
 
-.stgeisha{
+.stOurLady{
   margin-top: 14%;
     width: 280px;
     height: 252px;
-  background: v-bind("'url(' + geishaConfig.playgeisha + ')'") no-repeat;
+  /* background: v-bind("'url(' + OurLadyConfig.playOurLady + ')'") no-repeat; */
   background-size: 100%;
   z-index: 99;
 
 }
 .container {
-  background: v-bind("'url(' + geishaConfig.boxgeisha + ')'") no-repeat;
+  background: v-bind("'url(' + OurLadyConfig.boxOurLady + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -63,7 +63,7 @@ export default {
 }
 
 
-.geishap-he {
+.OurLadyp-he {
   position: relative;
     margin-top: 26%;
     width: 140%;
@@ -72,7 +72,7 @@ export default {
     justify-content: space-between;
     transform: scale(0.65);
 }
-.geishap-hidden{
+.OurLadyp-hidden{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -81,11 +81,11 @@ export default {
   overflow: hidden;
 
 }
-.geishap-item {
+.OurLadyp-item {
   
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + geishaConfig.anygeisha + ')'") ;
+  background: v-bind("'url(' + OurLadyConfig.anyOurLady + ')'") ;
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
@@ -95,7 +95,7 @@ export default {
   padding-top: 155px;
     display: flex;
     justify-content: center;
-    align-items: flex-stgeisha;
+    align-items: flex-stOurLady;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -103,7 +103,7 @@ export default {
     height: 100vh;
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.5);
-  /* background: v-bind("'url(' + geishaConfig.dialoggeisha + ')'") no-repeat; */
+  /* background: v-bind("'url(' + OurLadyConfig.dialogOurLady + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star{
@@ -115,12 +115,12 @@ export default {
 
 }
 
-.stgeisha-bg{
+.stOurLady-bg{
     position: absolute;
     top: 0;
     z-index: 1;
 }
-.stgeisha-bg img{
+.stOurLady-bg img{
     width: 100%;
 }
 </style>
