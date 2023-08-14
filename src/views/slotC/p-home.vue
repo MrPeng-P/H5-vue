@@ -1,35 +1,35 @@
 <script>
-import playbuffalo from "@/assets/slotC1/playbuffalo.png";
-import boxbuffalo from "@/assets/slotC1/boxbuffalo.jpg";
-import anybuffalo from "@/assets/slotC1/changeHbuffalo.png";
-import changeDbuffalo from "@/assets/slotC1/changeDbuffalo.png";
-import anyBoxbuffalo from "@/assets/slotC1/anyBoxbuffalo.png";
-import homebuffalo from "@/assets/slotC1/homebuffalo.png";
+import playlisa from "@/assets/slotC2/playlisa.png";
+import boxlisa from "@/assets/slotC2/boxlisa.jpg";
+import anylisa from "@/assets/slotC2/changeHlisa.png";
+import changeDlisa from "@/assets/slotC2/changeDlisa.png";
+import anyBoxlisa from "@/assets/slotC2/anyBoxlisa.png";
+import homelisa from "@/assets/slotC2/homelisa.png";
 
-// import senioritybuffalo from "@/assets/slotC1/senioritybuffalo.png";
-import countbuffalo from "@/assets/slotC1/countbuffalo.png";
-// import rulebuffalo from "@/assets/slotC1/rulebuffalo.png";
-// import ruleDialogbuffalo from "@/assets/slotC1/ruleDialogbuffalo.jpg";
-// import resultbuffalo from "@/assets/slotC1/resultbuffalo.png";
-// import headbuffalo from "@/assets/slotC1/headbuffalo.png";
+// import senioritylisa from "@/assets/slotC2/senioritylisa.png";
+import countlisa from "@/assets/slotC2/countlisa.png";
+// import rulelisa from "@/assets/slotC2/rulelisa.png";
+// import ruleDialoglisa from "@/assets/slotC2/ruleDialoglisa.jpg";
+// import resultlisa from "@/assets/slotC2/resultlisa.png";
+// import headlisa from "@/assets/slotC2/headlisa.png";
 
-// import star from "@/assets/slotC1/starbuffalo.gif";
+// import star from "@/assets/slotC2/starlisa.gif";
 import { useRouter, useRoute } from "vue-router";
-import buffalo1 from "@/assets/slotC1/buffalo1.png";
-import buffalo2 from "@/assets/slotC1/buffalo2.png";
-import buffalo3 from "@/assets/slotC1/buffalo3.png";
-import buffalo4 from "@/assets/slotC1/buffalo4.png";
-import buffalo5 from "@/assets/slotC1/buffalo5.png";
-import buffalo6 from "@/assets/slotC1/buffalo6.png";
-import buffalo7 from "@/assets/slotC1/buffalo7.png";
+import lisa1 from "@/assets/slotC2/lisa1.png";
+import lisa2 from "@/assets/slotC2/lisa2.png";
+import lisa3 from "@/assets/slotC2/lisa3.png";
+import lisa4 from "@/assets/slotC2/lisa4.png";
+import lisa5 from "@/assets/slotC2/lisa5.png";
+import lisa6 from "@/assets/slotC2/lisa6.png";
+import lisa7 from "@/assets/slotC2/lisa7.png";
 
-// import animation1 from "@/assets/slotC1/dong/00001.png";
-// import animation4 from "@/assets/slotC1/dong/00004.png";
-// import animation8 from "@/assets/slotC1/dong/00008.png";
-// import animation12 from "@/assets/slotC1/dong/00012.png";
+// import animation1 from "@/assets/slotC2/dong/00001.png";
+// import animation4 from "@/assets/slotC2/dong/00004.png";
+// import animation8 from "@/assets/slotC2/dong/00008.png";
+// import animation12 from "@/assets/slotC2/dong/00012.png";
 
 import { inject } from "vue";
-// import football from "@/assets/slotC1/football.png";
+// import football from "@/assets/slotC2/football.png";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
@@ -61,26 +61,26 @@ export default {
     const router = new useRouter();
     // 随机生成 12 张图的数组
     let randomImages = [];
-    const buffaloConfig = reactive({
-      // headbuffalo,
+    const lisaConfig = reactive({
+      // headlisa,
       // animation1,
       // animation4,
       // animation8,
       // animation12,
-      changeDbuffalo,
-      anybuffalo,
-      playbuffalo,
-      anyBoxbuffalo,
-      boxbuffalo,
-      homebuffalo,
+      changeDlisa,
+      anylisa,
+      playlisa,
+      anyBoxlisa,
+      boxlisa,
+      homelisa,
       //   star,
-      // senioritybuffalo,
-      countbuffalo,
-      // rulebuffalo,
-      // ruleDialogbuffalo,
-      // resultbuffalo
+      // senioritylisa,
+      countlisa,
+      // rulelisa,
+      // ruleDialoglisa,
+      // resultlisa
     });
-    const buffaloList = reactive([
+    const lisaList = reactive([
       {
         name: "item1",
         size: 5,
@@ -109,37 +109,37 @@ export default {
     ]);
     let timeOhter = 0;
     let id;
-    let stbuffalo = ref(false);
+    let stlisa = ref(false);
     let open = ref(false);
     let buttonStatus = ref(true);
     const images = [
       {
-        img: buffalo1,
-        name: "buffalo2",
+        img: lisa1,
+        name: "lisa2",
         className: "animation",
         count: 1800 * magnification.value,
       },
       {
-        img: buffalo2,
-        name: "buffalo1",
+        img: lisa2,
+        name: "lisa1",
         className: "animation",
         count: 1000 * magnification.value,
       },
       {
-        img: buffalo3,
+        img: lisa3,
       },
       {
-        img: buffalo4,
+        img: lisa4,
       },
       {
-        img: buffalo5,
+        img: lisa5,
       },
       {
-        img: buffalo6,
+        img: lisa6,
       },
       {
-        img: buffalo7,
-        name: "buffalo3",
+        img: lisa7,
+        name: "lisa3",
         className: "animation",
         count: 2200 * magnification.value,
       },
@@ -157,11 +157,11 @@ export default {
         buttonStatus.value = false;
 
         allMethods.clear();
-        const boxLists = buffaloList.map((item) => {
+        const boxLists = lisaList.map((item) => {
           return document.getElementById(item.name);
         });
         boxLists[0].style.setProperty("background-position-y", "center");
-        boxLists[0].querySelectorAll(".buffalop-item-img").forEach((child) => {
+        boxLists[0].querySelectorAll(".lisap-item-img").forEach((child) => {
           child.style.setProperty("display", "none");
         });
         // boxLists.forEach((item)=>{
@@ -174,9 +174,9 @@ export default {
         //       0+'px'
         //     );
         // })
-        const content = document.getElementById("buffalop-he");
-        const box2 = document.getElementById("buffalop");
-        const coords = { x: 0, y: 0 }; // Stbuffalo at (0, 0)
+        const content = document.getElementById("lisap-he");
+        const box2 = document.getElementById("lisap");
+        const coords = { x: 0, y: 0 }; // Stlisa at (0, 0)
         const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to(
             { x: (1120 * content.clientWidth) / box2.clientWidth, y: 0 },
@@ -191,7 +191,7 @@ export default {
                 "background-position-x",
                 -coords.x + "px"
               );
-              boxLists[1].classList.toggle('buffalop-itemD');
+              boxLists[1].classList.toggle('lisap-itemD');
             }
 
             if (timeOhter > 2000 && timeOhter <= 5000) {
@@ -199,7 +199,7 @@ export default {
                 "background-position-x",
                 -coords.x + "px"
               );
-              boxLists[2].classList.toggle('buffalop-itemD');
+              boxLists[2].classList.toggle('lisap-itemD');
             }
 
             // if (timeOhter > 3000 && timeOhter <= 6000) {
@@ -219,13 +219,13 @@ export default {
                 "background-position-x",
                 -coords.x + "px"
               );
-              boxLists[0].classList.toggle('buffalop-itemD');
+              boxLists[0].classList.toggle('lisap-itemD');
             }
           })
           .repeat(Infinity)
           .yoyo(false)
           .repeatDelay(0);
-          tween.start(); // Stbuffalo the tween immediately.
+          tween.start(); // Stlisa the tween immediately.
         let nowDate = window.performance.now();
         function animate(time) {
           timeOhter = time - nowDate;
@@ -251,28 +251,28 @@ export default {
     
 
             boxLists[i].style.setProperty("background-position-y", "center");
-            boxLists[i].querySelectorAll(".buffalop-item-img").forEach((child) => {
+            boxLists[i].querySelectorAll(".lisap-item-img").forEach((child) => {
               child.style.setProperty("display", "none");
             });
            
           }
           if (i == 3) {
             boxLists[0].style.setProperty("background-position-y", 600 + "px");
-            boxLists[0].querySelectorAll(".buffalop-item-img").forEach((child) => {
+            boxLists[0].querySelectorAll(".lisap-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
            
           }
           if (i == 4) {
             boxLists[1].style.setProperty("background-position-y", 600 + "px");
-            boxLists[1].querySelectorAll(".buffalop-item-img").forEach((child) => {
+            boxLists[1].querySelectorAll(".lisap-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           
           }
           if (i == 5) {
             boxLists[2].style.setProperty("background-position-y", 600 + "px");
-            boxLists[2].querySelectorAll(".buffalop-item-img").forEach((child) => {
+            boxLists[2].querySelectorAll(".lisap-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           
@@ -280,14 +280,14 @@ export default {
           }
           // if (i == 6) {
           //   boxLists[3].style.setProperty("background-position-x", 600 + "px");
-          //   boxLists[3].querySelectorAll(".buffalop-item-img").forEach((child) => {
+          //   boxLists[3].querySelectorAll(".lisap-item-img").forEach((child) => {
           //     child.style.setProperty("display", "block");
           //   });
           //   // countValue.value += useCount.value;
           // }
           // if (i == 7) {
           //   boxLists[4].style.setProperty("background-position-x", 600 + "px");
-          //   boxLists[4].querySelectorAll(".buffalop-item-img").forEach((child) => {
+          //   boxLists[4].querySelectorAll(".lisap-item-img").forEach((child) => {
           //     child.style.setProperty("display", "block");
           //   });
             
@@ -338,7 +338,7 @@ export default {
           randomImages.push(randomImage);
         }
 
-        allMethods.assignImageList(buffaloList, randomImages);
+        allMethods.assignImageList(lisaList, randomImages);
       },
       // 随机生成图像列表
       shuffleArray(array) {
@@ -347,11 +347,11 @@ export default {
           [array[i], array[j]] = [array[j], array[i]];
         }
         array.forEach((item) => {
-          if (item.name == "buffalo1") {
+          if (item.name == "lisa1") {
             arrCount[0].value++;
-          } else if (item.name == "buffalo2") {
+          } else if (item.name == "lisa2") {
             arrCount[1].value++;
-          } else if (item.name == "buffalo3") {
+          } else if (item.name == "lisa3") {
             arrCount[2].value++;
           }
           if (item.count) {
@@ -361,12 +361,12 @@ export default {
         return array;
       },
 
-      // 将图像列表分配给buffaloList
-      assignImageList(buffaloList, images) {
+      // 将图像列表分配给lisaList
+      assignImageList(lisaList, images) {
         const shuffledImages = allMethods.shuffleArray(images.slice()); // 避免修改原始数组
         console.log('%c ..........shuffledImages.........','color:#31ef0e',shuffledImages)
         let currentIndex = 0;
-        buffaloList.forEach((item) => {
+        lisaList.forEach((item) => {
           const numImages = Math.min(item.size, 5);
           item.imgList = shuffledImages.slice(
             currentIndex,
@@ -374,8 +374,8 @@ export default {
           );
           currentIndex += numImages;
         });
-        console.log('%c ..........buffaloList.........','color:#31ef0e',buffaloList)
-        return buffaloList;
+        console.log('%c ..........lisaList.........','color:#31ef0e',lisaList)
+        return lisaList;
       },
       goSeniority: () => {
         router.push("/list");
@@ -385,10 +385,10 @@ export default {
     return {
       className,
       open,
-      stbuffalo,
-      buffaloConfig,
+      stlisa,
+      lisaConfig,
       randomImages,
-      buffaloList,
+      lisaList,
       countValue,
       useCount,
       showRuleValue,
@@ -400,22 +400,22 @@ export default {
 </script>
 <template>
   <div :class="className">
-    <!-- <img class="headbuffalo" :src="buffaloConfig.headbuffalo" alt=""> -->
-    <div class="buffalop" id="buffalop">
-      <div class="buffalop-he" id="buffalop-he">
-        <!-- <img class="buffalo-rule" @click="showRule" :src="buffaloConfig.rulebuffalo" alt=""> -->
-        <div class="buffalop-hidden">
+    <!-- <img class="headlisa" :src="lisaConfig.headlisa" alt=""> -->
+    <div class="lisap" id="lisap">
+      <div class="lisap-he" id="lisap-he">
+        <!-- <img class="lisa-rule" @click="showRule" :src="lisaConfig.rulelisa" alt=""> -->
+        <div class="lisap-hidden">
           <div
-            class="buffalop-item"
+            class="lisap-item"
             :id="item.name"
-            v-for="(item, index) in buffaloList"
+            v-for="(item, index) in lisaList"
           >
             <div
               v-for="(imgItem, imgIndex) in item.imgList"
               :class="
                 imgItem.className
-                  ? 'buffalop-item-img ' + imgItem.className
-                  : 'buffalop-item-img'
+                  ? 'lisap-item-img ' + imgItem.className
+                  : 'lisap-item-img'
               "
             >
               <img :src="imgItem.img" alt="" />
@@ -423,36 +423,36 @@ export default {
           </div>
         </div>
       </div>
-      <div class="buttonbuffalo-box">
+      <div class="buttonlisa-box">
         <div class="buttons" @click="close"></div>
-        <div class="buttonsbuffaloBack" @click="run"></div>
+        <div class="buttonslisaBack" @click="run"></div>
 
         <!-- <div class="buttons2" @click="goSeniority"></div> -->
 
-        <div class="buffalo-count" @click="showRule">
-          <!-- <img class="buffalo-rule" :src="buffaloConfig.rulebuffalo" alt="" /> -->
-          <img :src="buffaloConfig.countbuffalo" alt="" />
+        <div class="lisa-count" @click="showRule">
+          <!-- <img class="lisa-rule" :src="lisaConfig.rulelisa" alt="" /> -->
+          <img :src="lisaConfig.countlisa" alt="" />
           <div class="countValue">{{ countValue }}</div>
         </div>
       </div>
-      <div class="buffalod-buffalop">
-        <div class="buffalod-back" @click="close"></div>
+      <div class="lisad-lisap">
+        <div class="lisad-back" @click="close"></div>
       </div>
     </div>
     <Teleport to="body">
       <div v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="buffaloConfig.star" alt="" /> -->
-        <!-- <img class="model-img-bg" :src="buffaloConfig.resultbuffalo" alt="" /> -->
-        <!-- <div class="modelbuffalo-list">
+        <!-- <img class="model-star" :src="lisaConfig.star" alt="" /> -->
+        <!-- <img class="model-img-bg" :src="lisaConfig.resultlisa" alt="" /> -->
+        <!-- <div class="modellisa-list">
           <div
-            class="modelbuffalo-item"
+            class="modellisa-item"
             v-for="(item, index) in arrCount"
             :key="index"
           >
             {{ item.count + "X" + item.value }}
           </div>
-          <div class="modelbuffalo-total">{{ useCount }}</div>
+          <div class="modellisa-total">{{ useCount }}</div>
         </div> -->
       </div>
     </Teleport>
@@ -460,8 +460,8 @@ export default {
     <Teleport to="body">
       <div v-if="showRuleValue" class="modal" @click="showRule">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="buffaloConfig.star" alt="" /> -->
-        <!-- <img class="model-img" :src="buffaloConfig.ruleDialogbuffalo" alt="" /> -->
+        <!-- <img class="model-star" :src="lisaConfig.star" alt="" /> -->
+        <!-- <img class="model-img" :src="lisaConfig.ruleDialoglisa" alt="" /> -->
       </div>
     </Teleport>
   </div>
@@ -473,7 +473,7 @@ export default {
 
   width: 280px;
 }
-.buffalod-buffalop {
+.lisad-lisap {
   display: flex;
   align-items: center;
   /* padding: 60px 15px; */
@@ -488,39 +488,39 @@ export default {
   color: #fff;
 }
 
-.buffalo-count img {
+.lisa-count img {
   width: 100%;
   position: absolute;
   height: 100%;
   /* top: -16%; */
   z-index: -1;
 }
-.buffalo-count .buffalo-rule {
+.lisa-count .lisa-rule {
   position: absolute;
   left: -9%;
   width: 45px;
   height: 45px;
 }
-.buffalod-back {
-  /* background: v-bind("'url(' + buffaloConfig.homebuffalo + ')'") no-repeat; */
+.lisad-back {
+  /* background: v-bind("'url(' + lisaConfig.homelisa + ')'") no-repeat; */
 
   width: 36px;
   height: 42px;
   background-size: 100%;
   z-index: 999;
 }
-.stbuffalo {
+.stlisa {
   margin-top: -30%;
   width: 160px;
   height: 80px;
-  background: v-bind("'url(' + buffaloConfig.playbuffalo + ')'") no-repeat;
+  background: v-bind("'url(' + lisaConfig.playlisa + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 }
 .container {
   display: flex;
   flex-direction: column;
-  background: v-bind("'url(' + buffaloConfig.boxbuffalo + ')'") no-repeat;
+  background: v-bind("'url(' + lisaConfig.boxlisa + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -530,7 +530,7 @@ export default {
   align-items: center;
 }
 
-.buffalop {
+.lisap {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -540,7 +540,7 @@ export default {
   /* height: 100vh; */
   overflow: hidden;
 
-  background: v-bind("'url(' + buffaloConfig.anyBoxbuffalo + ')'") no-repeat;
+  background: v-bind("'url(' + lisaConfig.anyBoxlisa + ')'") no-repeat;
   background-size: 72%;
     background-position: center 6%;
 
@@ -549,7 +549,7 @@ export default {
   font-size: 26;
 }
 
-.buttonbuffalo-box {
+.buttonlisa-box {
   position: absolute;
   top: 8%;
     left: 12%;
@@ -560,7 +560,7 @@ export default {
   height: 25%;
   /* justify-content: space-between; */
 }
-.buffalo-count {
+.lisa-count {
   position: relative;
   width: 70%;
     height: 50%;
@@ -577,10 +577,10 @@ export default {
 .buttons {
   margin-left: 9%;
     margin-top: -2%;
-    width: 12%;
+    width: 9%;
     height: 40%;
   z-index: 999;
-  background: v-bind("'url(' + buffaloConfig.homebuffalo + ')'") no-repeat;
+  background: v-bind("'url(' + lisaConfig.homelisa + ')'") no-repeat;
   background-size: 100% 100%;
 }
 .buttons2 {
@@ -591,10 +591,10 @@ export default {
   width: 30%;
   height: 40%;
   z-index: 999;
-  /* background: v-bind("'url(' + buffaloConfig.senioritybuffalo + ')'") no-repeat; */
+  /* background: v-bind("'url(' + lisaConfig.senioritylisa + ')'") no-repeat; */
   background-size: 100% 100%;
 }
-.buttonsbuffaloBack{
+.buttonslisaBack{
   /* margin-left: 27%;
     margin-bottom: -58%; */
     margin-left: -7%;
@@ -602,10 +602,10 @@ export default {
     width: 19%;
     height: 48.5%;
   z-index: 999;
-  background: v-bind("'url(' + buffaloConfig.playbuffalo + ')'") no-repeat;
+  background: v-bind("'url(' + lisaConfig.playlisa + ')'") no-repeat;
   background-size: 100% 100%;
 }
-.buffalop-he {
+.lisap-he {
   position: relative;
   margin-right: 0%;
   margin-top: 4%;
@@ -616,46 +616,47 @@ export default {
   transform: scale(0.65);
 }
 
-.buffalop-hidden {
+.lisap-hidden {
   /* margin-top: 2%; */
   margin-left: 1%;
-  margin-top: -7%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 118%;
-  overflow: hidden;
+    margin-top: -9%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 109%;
+    overflow: hidden;
 }
-.buffalop-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-
-  width: 100%;
-  flex: 1;
-  background: v-bind("'url(' + buffaloConfig.anybuffalo + ')'");
-  /* background-position-x: 0px; */
-    background-position-y: center;
-    background-repeat-y: no-repeat;
-    background-size: 160% 88%;
-}
-
-.buffalop-itemD {
+.lisap-item {
   display: flex;
   align-items: center;
   justify-content: space-around;
 
   width: 100%;
   flex: 1;
-  background: v-bind("'url(' + buffaloConfig.changeDbuffalo + ')'");
+  background: v-bind("'url(' + lisaConfig.anylisa + ')'");
+  /* background-position-x: 0px; */
+    background-position-y: center;
+    background-repeat-y: no-repeat;
+    background-size: 141% 76%;
+
+}
+
+.lisap-itemD {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  width: 100%;
+  flex: 1;
+  background: v-bind("'url(' + lisaConfig.changeDlisa + ')'");
   /* background-position-x: 0px; */
     background-position-y: center;
     background-repeat-y: no-repeat;
     background-size: 160% 88%;
 }
-.buffalop-item-img {
+.lisap-item-img {
   position: relative;
 
   display: none;
@@ -663,7 +664,7 @@ export default {
   height: 100%;
   
 }
-.buffalop-item-img img {
+.lisap-item-img img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -675,7 +676,7 @@ export default {
 .modal {
   display: flex;
   justify-content: center;
-  align-items: flex-stbuffalo;
+  align-items: flex-stlisa;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -683,7 +684,7 @@ export default {
   height: 100vh;
   z-index: 9999;
   /* background-color: rgba(0, 0, 0, 0.5); */
-  /* background: v-bind("'url(' + buffaloConfig.dialogbuffalo + ')'") no-repeat; */
+  /* background: v-bind("'url(' + lisaConfig.dialoglisa + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star {
@@ -705,17 +706,17 @@ export default {
   width: 70%;
 }
 
-.stbuffalo-bg {
+.stlisa-bg {
   position: absolute;
 
   top: 0;
   z-index: 1;
 }
-.stbuffalo-bg img {
+.stlisa-bg img {
   width: 100%;
 }
 
-.modelbuffalo-list {
+.modellisa-list {
   position: absolute;
   left: 60%;
   top: 39.5%;
@@ -727,14 +728,14 @@ export default {
   font-size: 16px;
   /* transform: rotate(7deg) translateX(-36px); */
 }
-.modelbuffalo-item {
+.modellisa-item {
   margin-bottom: 11px;
 }
-.modelbuffalo-total {
+.modellisa-total {
   padding: 7px 14px;
 }
 
-.headbuffalo {
+.headlisa {
   margin-top: 10vh;
   width: 80%;
 }
@@ -742,19 +743,19 @@ export default {
 @keyframes image-animation {
   0% {
    
-    background-image: v-bind("'url(' + buffaloConfig.animation1 + ')'");
+    background-image: v-bind("'url(' + lisaConfig.animation1 + ')'");
   }
 
   25% {
-    background-image: v-bind("'url(' + buffaloConfig.animation4 + ')'");
+    background-image: v-bind("'url(' + lisaConfig.animation4 + ')'");
   }
 
   75% {
-    background-image: v-bind("'url(' + buffaloConfig.animation8 + ')'");
+    background-image: v-bind("'url(' + lisaConfig.animation8 + ')'");
   }
 
   100% {
-    background-image: v-bind("'url(' + buffaloConfig.animation12 + ')'");
+    background-image: v-bind("'url(' + lisaConfig.animation12 + ')'");
   }
 }
 

@@ -1,7 +1,7 @@
 <script>
 
-import playbuffalo from "@/assets/slotC1/playbuffalo2.png";
-import boxbuffalo from "@/assets/slotC1/boxbuffalo.jpg";
+import playlisa from "@/assets/slotC2/playlisa2.png";
+import boxlisa from "@/assets/slotC2/boxlisa.jpg";
 import { onMounted, reactive, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
@@ -9,9 +9,9 @@ export default {
   setup() {
     const router = new useRouter();
     const className = "container";
-    const buffaloConfig = reactive({
-      playbuffalo,
-      boxbuffalo,
+    const lisaConfig = reactive({
+      playlisa,
+      boxlisa,
     });
    
 
@@ -25,7 +25,7 @@ export default {
     });
     return {
         className,
-      buffaloConfig,
+      lisaConfig,
       ...allMethods,
     };
   },
@@ -34,7 +34,7 @@ export default {
 <template>
   
   <div :class="className">
-    <div class="stbuffalo" @click="goHome">
+    <div class="stlisa" @click="goHome">
     </div>
   </div>
 </template>
@@ -42,17 +42,17 @@ export default {
 <style scoped>
 
 
-.stbuffalo{
-  margin-top: 20%;
+.stlisa{
+  margin-top: 14%;
     width: 280px;
     height: 252px;
-  background: v-bind("'url(' + buffaloConfig.playbuffalo + ')'") no-repeat;
+  background: v-bind("'url(' + lisaConfig.playlisa + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 
 }
 .container {
-  background: v-bind("'url(' + buffaloConfig.boxbuffalo + ')'") no-repeat;
+  background: v-bind("'url(' + lisaConfig.boxlisa + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -63,7 +63,7 @@ export default {
 }
 
 
-.buffalop-he {
+.lisap-he {
   position: relative;
     margin-top: 26%;
     width: 140%;
@@ -72,7 +72,7 @@ export default {
     justify-content: space-between;
     transform: scale(0.65);
 }
-.buffalop-hidden{
+.lisap-hidden{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -81,11 +81,11 @@ export default {
   overflow: hidden;
 
 }
-.buffalop-item {
+.lisap-item {
   
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + buffaloConfig.anybuffalo + ')'") ;
+  background: v-bind("'url(' + lisaConfig.anylisa + ')'") ;
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
@@ -95,7 +95,7 @@ export default {
   padding-top: 155px;
     display: flex;
     justify-content: center;
-    align-items: flex-stbuffalo;
+    align-items: flex-stlisa;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -103,7 +103,7 @@ export default {
     height: 100vh;
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.5);
-  /* background: v-bind("'url(' + buffaloConfig.dialogbuffalo + ')'") no-repeat; */
+  /* background: v-bind("'url(' + lisaConfig.dialoglisa + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star{
@@ -115,12 +115,12 @@ export default {
 
 }
 
-.stbuffalo-bg{
+.stlisa-bg{
     position: absolute;
     top: 0;
     z-index: 1;
 }
-.stbuffalo-bg img{
+.stlisa-bg img{
     width: 100%;
 }
 </style>
