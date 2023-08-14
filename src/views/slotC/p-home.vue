@@ -1,35 +1,36 @@
 <script>
-import playlisa from "@/assets/slotC2/playlisa.png";
-import boxlisa from "@/assets/slotC2/boxlisa.jpg";
-import anylisa from "@/assets/slotC2/changeHlisa.png";
-import changeDlisa from "@/assets/slotC2/changeDlisa.png";
-import anyBoxlisa from "@/assets/slotC2/anyBoxlisa.png";
-import homelisa from "@/assets/slotC2/homelisa.png";
+import playgeisha from "@/assets/slotC3/playgeisha.png";
+import boxgeisha from "@/assets/slotC3/boxgeisha.jpg";
+import anygeisha from "@/assets/slotC3/changeHgeisha.png";
+import changeDgeisha from "@/assets/slotC3/changeDgeisha.png";
+import anyBoxgeisha from "@/assets/slotC3/anyBoxgeisha.png";
+import homegeisha from "@/assets/slotC3/homegeisha.png";
 
-// import senioritylisa from "@/assets/slotC2/senioritylisa.png";
-import countlisa from "@/assets/slotC2/countlisa.png";
-// import rulelisa from "@/assets/slotC2/rulelisa.png";
-// import ruleDialoglisa from "@/assets/slotC2/ruleDialoglisa.jpg";
-// import resultlisa from "@/assets/slotC2/resultlisa.png";
-// import headlisa from "@/assets/slotC2/headlisa.png";
+// import senioritygeisha from "@/assets/slotC3/senioritygeisha.png";
+import countgeisha from "@/assets/slotC3/countgeisha.png";
+// import rulegeisha from "@/assets/slotC3/rulegeisha.png";
+// import ruleDialoggeisha from "@/assets/slotC3/ruleDialoggeisha.jpg";
+// import resultgeisha from "@/assets/slotC3/resultgeisha.png";
+// import headgeisha from "@/assets/slotC3/headgeisha.png";
 
-// import star from "@/assets/slotC2/starlisa.gif";
+// import star from "@/assets/slotC3/stargeisha.gif";
 import { useRouter, useRoute } from "vue-router";
-import lisa1 from "@/assets/slotC2/lisa1.png";
-import lisa2 from "@/assets/slotC2/lisa2.png";
-import lisa3 from "@/assets/slotC2/lisa3.png";
-import lisa4 from "@/assets/slotC2/lisa4.png";
-import lisa5 from "@/assets/slotC2/lisa5.png";
-import lisa6 from "@/assets/slotC2/lisa6.png";
-import lisa7 from "@/assets/slotC2/lisa7.png";
+import geisha1 from "@/assets/slotC3/geisha1.png";
+import geisha2 from "@/assets/slotC3/geisha2.png";
+import geisha3 from "@/assets/slotC3/geisha3.png";
+import geisha4 from "@/assets/slotC3/geisha4.png";
+import geisha5 from "@/assets/slotC3/geisha5.png";
+import geisha6 from "@/assets/slotC3/geisha6.png";
+import geisha7 from "@/assets/slotC3/geisha7.png";
+import geisha8 from "@/assets/slotC3/geisha8.png";
 
-// import animation1 from "@/assets/slotC2/dong/00001.png";
-// import animation4 from "@/assets/slotC2/dong/00004.png";
-// import animation8 from "@/assets/slotC2/dong/00008.png";
-// import animation12 from "@/assets/slotC2/dong/00012.png";
+// import animation1 from "@/assets/slotC3/dong/00001.png";
+// import animation4 from "@/assets/slotC3/dong/00004.png";
+// import animation8 from "@/assets/slotC3/dong/00008.png";
+// import animation12 from "@/assets/slotC3/dong/00012.png";
 
 import { inject } from "vue";
-// import football from "@/assets/slotC2/football.png";
+// import football from "@/assets/slotC3/football.png";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
@@ -61,26 +62,26 @@ export default {
     const router = new useRouter();
     // 随机生成 12 张图的数组
     let randomImages = [];
-    const lisaConfig = reactive({
-      // headlisa,
+    const geishaConfig = reactive({
+      // headgeisha,
       // animation1,
       // animation4,
       // animation8,
       // animation12,
-      changeDlisa,
-      anylisa,
-      playlisa,
-      anyBoxlisa,
-      boxlisa,
-      homelisa,
+      changeDgeisha,
+      anygeisha,
+      playgeisha,
+      anyBoxgeisha,
+      boxgeisha,
+      homegeisha,
       //   star,
-      // senioritylisa,
-      countlisa,
-      // rulelisa,
-      // ruleDialoglisa,
-      // resultlisa
+      // senioritygeisha,
+      countgeisha,
+      // rulegeisha,
+      // ruleDialoggeisha,
+      // resultgeisha
     });
-    const lisaList = reactive([
+    const geishaList = reactive([
       {
         name: "item1",
         size: 5,
@@ -109,39 +110,42 @@ export default {
     ]);
     let timeOhter = 0;
     let id;
-    let stlisa = ref(false);
+    let stgeisha = ref(false);
     let open = ref(false);
     let buttonStatus = ref(true);
     const images = [
       {
-        img: lisa1,
-        name: "lisa2",
+        img: geisha1,
+        name: "geisha2",
         className: "animation",
         count: 1800 * magnification.value,
       },
       {
-        img: lisa2,
-        name: "lisa1",
+        img: geisha2,
+        name: "geisha1",
         className: "animation",
         count: 1000 * magnification.value,
       },
       {
-        img: lisa3,
+        img: geisha3,
       },
       {
-        img: lisa4,
+        img: geisha4,
       },
       {
-        img: lisa5,
+        img: geisha5,
       },
       {
-        img: lisa6,
+        img: geisha6,
       },
       {
-        img: lisa7,
-        name: "lisa3",
+        img: geisha7,
+        name: "geisha3",
         className: "animation",
         count: 2200 * magnification.value,
+      },
+      {
+        img: geisha8,
       },
     ];
     const allMethods = {
@@ -157,11 +161,11 @@ export default {
         buttonStatus.value = false;
 
         allMethods.clear();
-        const boxLists = lisaList.map((item) => {
+        const boxLists = geishaList.map((item) => {
           return document.getElementById(item.name);
         });
         boxLists[0].style.setProperty("background-position-y", "center");
-        boxLists[0].querySelectorAll(".lisap-item-img").forEach((child) => {
+        boxLists[0].querySelectorAll(".geishap-item-img").forEach((child) => {
           child.style.setProperty("display", "none");
         });
         // boxLists.forEach((item)=>{
@@ -174,9 +178,9 @@ export default {
         //       0+'px'
         //     );
         // })
-        const content = document.getElementById("lisap-he");
-        const box2 = document.getElementById("lisap");
-        const coords = { x: 0, y: 0 }; // Stlisa at (0, 0)
+        const content = document.getElementById("geishap-he");
+        const box2 = document.getElementById("geishap");
+        const coords = { x: 0, y: 0 }; // Stgeisha at (0, 0)
         const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to(
             { x: (1120 * content.clientWidth) / box2.clientWidth, y: 0 },
@@ -191,7 +195,7 @@ export default {
                 "background-position-x",
                 -coords.x + "px"
               );
-              boxLists[1].classList.toggle('lisap-itemD');
+              boxLists[1].classList.toggle('geishap-itemD');
             }
 
             if (timeOhter > 2000 && timeOhter <= 5000) {
@@ -199,7 +203,7 @@ export default {
                 "background-position-x",
                 -coords.x + "px"
               );
-              boxLists[2].classList.toggle('lisap-itemD');
+              boxLists[2].classList.toggle('geishap-itemD');
             }
 
             // if (timeOhter > 3000 && timeOhter <= 6000) {
@@ -219,13 +223,13 @@ export default {
                 "background-position-x",
                 -coords.x + "px"
               );
-              boxLists[0].classList.toggle('lisap-itemD');
+              boxLists[0].classList.toggle('geishap-itemD');
             }
           })
           .repeat(Infinity)
           .yoyo(false)
           .repeatDelay(0);
-          tween.start(); // Stlisa the tween immediately.
+          tween.start(); // Stgeisha the tween immediately.
         let nowDate = window.performance.now();
         function animate(time) {
           timeOhter = time - nowDate;
@@ -251,28 +255,28 @@ export default {
     
 
             boxLists[i].style.setProperty("background-position-y", "center");
-            boxLists[i].querySelectorAll(".lisap-item-img").forEach((child) => {
+            boxLists[i].querySelectorAll(".geishap-item-img").forEach((child) => {
               child.style.setProperty("display", "none");
             });
            
           }
           if (i == 3) {
             boxLists[0].style.setProperty("background-position-y", 600 + "px");
-            boxLists[0].querySelectorAll(".lisap-item-img").forEach((child) => {
+            boxLists[0].querySelectorAll(".geishap-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
            
           }
           if (i == 4) {
             boxLists[1].style.setProperty("background-position-y", 600 + "px");
-            boxLists[1].querySelectorAll(".lisap-item-img").forEach((child) => {
+            boxLists[1].querySelectorAll(".geishap-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           
           }
           if (i == 5) {
             boxLists[2].style.setProperty("background-position-y", 600 + "px");
-            boxLists[2].querySelectorAll(".lisap-item-img").forEach((child) => {
+            boxLists[2].querySelectorAll(".geishap-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           
@@ -280,14 +284,14 @@ export default {
           }
           // if (i == 6) {
           //   boxLists[3].style.setProperty("background-position-x", 600 + "px");
-          //   boxLists[3].querySelectorAll(".lisap-item-img").forEach((child) => {
+          //   boxLists[3].querySelectorAll(".geishap-item-img").forEach((child) => {
           //     child.style.setProperty("display", "block");
           //   });
           //   // countValue.value += useCount.value;
           // }
           // if (i == 7) {
           //   boxLists[4].style.setProperty("background-position-x", 600 + "px");
-          //   boxLists[4].querySelectorAll(".lisap-item-img").forEach((child) => {
+          //   boxLists[4].querySelectorAll(".geishap-item-img").forEach((child) => {
           //     child.style.setProperty("display", "block");
           //   });
             
@@ -338,7 +342,7 @@ export default {
           randomImages.push(randomImage);
         }
 
-        allMethods.assignImageList(lisaList, randomImages);
+        allMethods.assignImageList(geishaList, randomImages);
       },
       // 随机生成图像列表
       shuffleArray(array) {
@@ -347,11 +351,11 @@ export default {
           [array[i], array[j]] = [array[j], array[i]];
         }
         array.forEach((item) => {
-          if (item.name == "lisa1") {
+          if (item.name == "geisha1") {
             arrCount[0].value++;
-          } else if (item.name == "lisa2") {
+          } else if (item.name == "geisha2") {
             arrCount[1].value++;
-          } else if (item.name == "lisa3") {
+          } else if (item.name == "geisha3") {
             arrCount[2].value++;
           }
           if (item.count) {
@@ -361,12 +365,12 @@ export default {
         return array;
       },
 
-      // 将图像列表分配给lisaList
-      assignImageList(lisaList, images) {
+      // 将图像列表分配给geishaList
+      assignImageList(geishaList, images) {
         const shuffledImages = allMethods.shuffleArray(images.slice()); // 避免修改原始数组
         console.log('%c ..........shuffledImages.........','color:#31ef0e',shuffledImages)
         let currentIndex = 0;
-        lisaList.forEach((item) => {
+        geishaList.forEach((item) => {
           const numImages = Math.min(item.size, 5);
           item.imgList = shuffledImages.slice(
             currentIndex,
@@ -374,8 +378,8 @@ export default {
           );
           currentIndex += numImages;
         });
-        console.log('%c ..........lisaList.........','color:#31ef0e',lisaList)
-        return lisaList;
+        console.log('%c ..........geishaList.........','color:#31ef0e',geishaList)
+        return geishaList;
       },
       goSeniority: () => {
         router.push("/list");
@@ -385,10 +389,10 @@ export default {
     return {
       className,
       open,
-      stlisa,
-      lisaConfig,
+      stgeisha,
+      geishaConfig,
       randomImages,
-      lisaList,
+      geishaList,
       countValue,
       useCount,
       showRuleValue,
@@ -400,22 +404,22 @@ export default {
 </script>
 <template>
   <div :class="className">
-    <!-- <img class="headlisa" :src="lisaConfig.headlisa" alt=""> -->
-    <div class="lisap" id="lisap">
-      <div class="lisap-he" id="lisap-he">
-        <!-- <img class="lisa-rule" @click="showRule" :src="lisaConfig.rulelisa" alt=""> -->
-        <div class="lisap-hidden">
+    <!-- <img class="headgeisha" :src="geishaConfig.headgeisha" alt=""> -->
+    <div class="geishap" id="geishap">
+      <div class="geishap-he" id="geishap-he">
+        <!-- <img class="geisha-rule" @click="showRule" :src="geishaConfig.rulegeisha" alt=""> -->
+        <div class="geishap-hidden">
           <div
-            class="lisap-item"
+            class="geishap-item"
             :id="item.name"
-            v-for="(item, index) in lisaList"
+            v-for="(item, index) in geishaList"
           >
             <div
               v-for="(imgItem, imgIndex) in item.imgList"
               :class="
                 imgItem.className
-                  ? 'lisap-item-img ' + imgItem.className
-                  : 'lisap-item-img'
+                  ? 'geishap-item-img ' + imgItem.className
+                  : 'geishap-item-img'
               "
             >
               <img :src="imgItem.img" alt="" />
@@ -423,36 +427,36 @@ export default {
           </div>
         </div>
       </div>
-      <div class="buttonlisa-box">
+      <div class="buttongeisha-box">
         <div class="buttons" @click="close"></div>
-        <div class="buttonslisaBack" @click="run"></div>
+        <div class="buttonsgeishaBack" @click="run"></div>
 
         <!-- <div class="buttons2" @click="goSeniority"></div> -->
 
-        <div class="lisa-count" @click="showRule">
-          <!-- <img class="lisa-rule" :src="lisaConfig.rulelisa" alt="" /> -->
-          <img :src="lisaConfig.countlisa" alt="" />
+        <div class="geisha-count" @click="showRule">
+          <!-- <img class="geisha-rule" :src="geishaConfig.rulegeisha" alt="" /> -->
+          <img :src="geishaConfig.countgeisha" alt="" />
           <div class="countValue">{{ countValue }}</div>
         </div>
       </div>
-      <div class="lisad-lisap">
-        <div class="lisad-back" @click="close"></div>
+      <div class="geishad-geishap">
+        <div class="geishad-back" @click="close"></div>
       </div>
     </div>
     <Teleport to="body">
       <div v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="lisaConfig.star" alt="" /> -->
-        <!-- <img class="model-img-bg" :src="lisaConfig.resultlisa" alt="" /> -->
-        <!-- <div class="modellisa-list">
+        <!-- <img class="model-star" :src="geishaConfig.star" alt="" /> -->
+        <!-- <img class="model-img-bg" :src="geishaConfig.resultgeisha" alt="" /> -->
+        <!-- <div class="modelgeisha-list">
           <div
-            class="modellisa-item"
+            class="modelgeisha-item"
             v-for="(item, index) in arrCount"
             :key="index"
           >
             {{ item.count + "X" + item.value }}
           </div>
-          <div class="modellisa-total">{{ useCount }}</div>
+          <div class="modelgeisha-total">{{ useCount }}</div>
         </div> -->
       </div>
     </Teleport>
@@ -460,8 +464,8 @@ export default {
     <Teleport to="body">
       <div v-if="showRuleValue" class="modal" @click="showRule">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="lisaConfig.star" alt="" /> -->
-        <!-- <img class="model-img" :src="lisaConfig.ruleDialoglisa" alt="" /> -->
+        <!-- <img class="model-star" :src="geishaConfig.star" alt="" /> -->
+        <!-- <img class="model-img" :src="geishaConfig.ruleDialoggeisha" alt="" /> -->
       </div>
     </Teleport>
   </div>
@@ -473,7 +477,7 @@ export default {
 
   width: 280px;
 }
-.lisad-lisap {
+.geishad-geishap {
   display: flex;
   align-items: center;
   /* padding: 60px 15px; */
@@ -488,39 +492,39 @@ export default {
   color: #fff;
 }
 
-.lisa-count img {
+.geisha-count img {
   width: 100%;
   position: absolute;
   height: 100%;
   /* top: -16%; */
   z-index: -1;
 }
-.lisa-count .lisa-rule {
+.geisha-count .geisha-rule {
   position: absolute;
   left: -9%;
   width: 45px;
   height: 45px;
 }
-.lisad-back {
-  /* background: v-bind("'url(' + lisaConfig.homelisa + ')'") no-repeat; */
+.geishad-back {
+  /* background: v-bind("'url(' + geishaConfig.homegeisha + ')'") no-repeat; */
 
   width: 36px;
   height: 42px;
   background-size: 100%;
   z-index: 999;
 }
-.stlisa {
+.stgeisha {
   margin-top: -30%;
   width: 160px;
   height: 80px;
-  background: v-bind("'url(' + lisaConfig.playlisa + ')'") no-repeat;
+  background: v-bind("'url(' + geishaConfig.playgeisha + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 }
 .container {
   display: flex;
   flex-direction: column;
-  background: v-bind("'url(' + lisaConfig.boxlisa + ')'") no-repeat;
+  background: v-bind("'url(' + geishaConfig.boxgeisha + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -530,7 +534,7 @@ export default {
   align-items: center;
 }
 
-.lisap {
+.geishap {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -540,8 +544,8 @@ export default {
   /* height: 100vh; */
   overflow: hidden;
 
-  background: v-bind("'url(' + lisaConfig.anyBoxlisa + ')'") no-repeat;
-  background-size: 72%;
+  background: v-bind("'url(' + geishaConfig.anyBoxgeisha + ')'") no-repeat;
+  background-size: 65%;
     background-position: center 6%;
 
   color: #fff;
@@ -549,9 +553,9 @@ export default {
   font-size: 26;
 }
 
-.buttonlisa-box {
+.buttongeisha-box {
   position: absolute;
-  top: 8%;
+  top: 6%;
     left: 12%;
   display: flex;
   /* flex-direction: column; */
@@ -560,7 +564,7 @@ export default {
   height: 25%;
   /* justify-content: space-between; */
 }
-.lisa-count {
+.geisha-count {
   position: relative;
   width: 70%;
     height: 50%;
@@ -580,7 +584,7 @@ export default {
     width: 9%;
     height: 40%;
   z-index: 999;
-  background: v-bind("'url(' + lisaConfig.homelisa + ')'") no-repeat;
+  background: v-bind("'url(' + geishaConfig.homegeisha + ')'") no-repeat;
   background-size: 100% 100%;
 }
 .buttons2 {
@@ -591,21 +595,21 @@ export default {
   width: 30%;
   height: 40%;
   z-index: 999;
-  /* background: v-bind("'url(' + lisaConfig.senioritylisa + ')'") no-repeat; */
+  /* background: v-bind("'url(' + geishaConfig.senioritygeisha + ')'") no-repeat; */
   background-size: 100% 100%;
 }
-.buttonslisaBack{
+.buttonsgeishaBack{
   /* margin-left: 27%;
     margin-bottom: -58%; */
-    margin-left: -7%;
+    margin-left: 0%;
     margin-top: 60.5%;
     width: 19%;
     height: 48.5%;
   z-index: 999;
-  background: v-bind("'url(' + lisaConfig.playlisa + ')'") no-repeat;
+  background: v-bind("'url(' + geishaConfig.playgeisha + ')'") no-repeat;
   background-size: 100% 100%;
 }
-.lisap-he {
+.geishap-he {
   position: relative;
   margin-right: 0%;
   margin-top: 4%;
@@ -616,7 +620,7 @@ export default {
   transform: scale(0.65);
 }
 
-.lisap-hidden {
+.geishap-hidden {
   /* margin-top: 2%; */
   margin-left: 1%;
     margin-top: -9%;
@@ -628,35 +632,35 @@ export default {
     height: 109%;
     overflow: hidden;
 }
-.lisap-item {
+.geishap-item {
   display: flex;
   align-items: center;
   justify-content: space-around;
 
   width: 100%;
   flex: 1;
-  background: v-bind("'url(' + lisaConfig.anylisa + ')'");
+  background: v-bind("'url(' + geishaConfig.anygeisha + ')'");
   /* background-position-x: 0px; */
     background-position-y: center;
     background-repeat-y: no-repeat;
-    background-size: 141% 76%;
+    background-size: 157% 83%;
 
 }
 
-.lisap-itemD {
+.geishap-itemD {
   display: flex;
   align-items: center;
   justify-content: space-around;
 
   width: 100%;
   flex: 1;
-  background: v-bind("'url(' + lisaConfig.changeDlisa + ')'");
+  background: v-bind("'url(' + geishaConfig.changeDgeisha + ')'");
   /* background-position-x: 0px; */
     background-position-y: center;
     background-repeat-y: no-repeat;
     background-size: 160% 88%;
 }
-.lisap-item-img {
+.geishap-item-img {
   position: relative;
 
   display: none;
@@ -664,7 +668,7 @@ export default {
   height: 100%;
   
 }
-.lisap-item-img img {
+.geishap-item-img img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -676,7 +680,7 @@ export default {
 .modal {
   display: flex;
   justify-content: center;
-  align-items: flex-stlisa;
+  align-items: flex-stgeisha;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -684,7 +688,7 @@ export default {
   height: 100vh;
   z-index: 9999;
   /* background-color: rgba(0, 0, 0, 0.5); */
-  /* background: v-bind("'url(' + lisaConfig.dialoglisa + ')'") no-repeat; */
+  /* background: v-bind("'url(' + geishaConfig.dialoggeisha + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star {
@@ -706,17 +710,17 @@ export default {
   width: 70%;
 }
 
-.stlisa-bg {
+.stgeisha-bg {
   position: absolute;
 
   top: 0;
   z-index: 1;
 }
-.stlisa-bg img {
+.stgeisha-bg img {
   width: 100%;
 }
 
-.modellisa-list {
+.modelgeisha-list {
   position: absolute;
   left: 60%;
   top: 39.5%;
@@ -728,14 +732,14 @@ export default {
   font-size: 16px;
   /* transform: rotate(7deg) translateX(-36px); */
 }
-.modellisa-item {
+.modelgeisha-item {
   margin-bottom: 11px;
 }
-.modellisa-total {
+.modelgeisha-total {
   padding: 7px 14px;
 }
 
-.headlisa {
+.headgeisha {
   margin-top: 10vh;
   width: 80%;
 }
@@ -743,19 +747,19 @@ export default {
 @keyframes image-animation {
   0% {
    
-    background-image: v-bind("'url(' + lisaConfig.animation1 + ')'");
+    background-image: v-bind("'url(' + geishaConfig.animation1 + ')'");
   }
 
   25% {
-    background-image: v-bind("'url(' + lisaConfig.animation4 + ')'");
+    background-image: v-bind("'url(' + geishaConfig.animation4 + ')'");
   }
 
   75% {
-    background-image: v-bind("'url(' + lisaConfig.animation8 + ')'");
+    background-image: v-bind("'url(' + geishaConfig.animation8 + ')'");
   }
 
   100% {
-    background-image: v-bind("'url(' + lisaConfig.animation12 + ')'");
+    background-image: v-bind("'url(' + geishaConfig.animation12 + ')'");
   }
 }
 
