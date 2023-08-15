@@ -4,6 +4,7 @@
 		"build": "webpack --mode=production"
 	},
 	"dependencies": {
+		"@effortlessmotion/html-webpack-inline-source-plugin": "^1.0.3",
 		"@tweenjs/tween.js": "^20.0.3",
 		"amfe-flexible": "^2.2.1",
 		"copy-webpack-plugin": "^11.0.0",

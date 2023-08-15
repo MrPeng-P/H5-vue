@@ -1,33 +1,33 @@
 <script>
-import playmyth from "@/assets/slotB3/playmyth.png";
-import boxmyth from "@/assets/slotB3/boxmyth.jpg";
-import anymyth from "@/assets/slotB3/changemyth.png";
-import anyBoxmyth from "@/assets/slotB3/anyBoxmyth.png";
-import homemyth from "@/assets/slotB3/homemyth.png";
-// import senioritymyth from "@/assets/slotB3/senioritymyth.png";
-import countmyth from "@/assets/slotB3/countmyth.png";
-// import rulemyth from "@/assets/slotB3/rulemyth.png";
-// import ruleDialogmyth from "@/assets/slotB3/ruleDialogmyth.jpg";
-// import resultmyth from "@/assets/slotB3/resultmyth.png";
-// import headmyth from "@/assets/slotB3/headmyth.png";
+import playbronze from "@/assets/slotB5/playbronze.png";
+import boxbronze from "@/assets/slotB5/boxbronze.jpg";
+import anybronze from "@/assets/slotB5/changebronze.png";
+import anyBoxbronze from "@/assets/slotB5/anyBoxbronze.png";
+import homebronze from "@/assets/slotB5/homebronze.png";
+// import senioritybronze from "@/assets/slotB5/senioritybronze.png";
+import countbronze from "@/assets/slotB5/countbronze.png";
+// import rulebronze from "@/assets/slotB5/rulebronze.png";
+// import ruleDialogbronze from "@/assets/slotB5/ruleDialogbronze.jpg";
+// import resultbronze from "@/assets/slotB5/resultbronze.png";
+// import headbronze from "@/assets/slotB5/headbronze.png";
 
-// import star from "@/assets/slotB3/starmyth.gif";
+// import star from "@/assets/slotB5/starbronze.gif";
 import { useRouter, useRoute } from "vue-router";
-import myth1 from "@/assets/slotB3/myth1.png";
-import myth2 from "@/assets/slotB3/myth2.png";
-import myth3 from "@/assets/slotB3/myth3.png";
-import myth4 from "@/assets/slotB3/myth4.png";
-import myth5 from "@/assets/slotB3/myth5.png";
-import myth6 from "@/assets/slotB3/myth6.png";
-import myth7 from "@/assets/slotB3/myth7.png";
+import bronze1 from "@/assets/slotB5/bronze1.png";
+import bronze2 from "@/assets/slotB5/bronze2.png";
+import bronze3 from "@/assets/slotB5/bronze3.png";
+import bronze4 from "@/assets/slotB5/bronze4.png";
+import bronze5 from "@/assets/slotB5/bronze5.png";
+import bronze6 from "@/assets/slotB5/bronze6.png";
+import bronze7 from "@/assets/slotB5/bronze7.png";
 
-// import animation1 from "@/assets/slotB3/dong/00001.png";
-// import animation4 from "@/assets/slotB3/dong/00004.png";
-// import animation8 from "@/assets/slotB3/dong/00008.png";
-// import animation12 from "@/assets/slotB3/dong/00012.png";
+// import animation1 from "@/assets/slotB5/dong/00001.png";
+// import animation4 from "@/assets/slotB5/dong/00004.png";
+// import animation8 from "@/assets/slotB5/dong/00008.png";
+// import animation12 from "@/assets/slotB5/dong/00012.png";
 
 import { inject } from "vue";
-// import football from "@/assets/slotB3/football.png";
+// import football from "@/assets/slotB5/football.png";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
@@ -59,25 +59,25 @@ export default {
     const router = new useRouter();
     // 随机生成 12 张图的数组
     let randomImages = [];
-    const mythConfig = reactive({
-      // headmyth,
+    const bronzeConfig = reactive({
+      // headbronze,
       // animation1,
       // animation4,
       // animation8,
       // animation12,
-      anymyth,
-      playmyth,
-      anyBoxmyth,
-      boxmyth,
-      homemyth,
+      anybronze,
+      playbronze,
+      anyBoxbronze,
+      boxbronze,
+      homebronze,
       //   star,
-      // senioritymyth,
-      countmyth,
-      // rulemyth,
-      // ruleDialogmyth,
-      // resultmyth
+      // senioritybronze,
+      countbronze,
+      // rulebronze,
+      // ruleDialogbronze,
+      // resultbronze
     });
-    const mythList = reactive([
+    const bronzeList = reactive([
       {
         name: "item1",
         size: 4,
@@ -106,37 +106,37 @@ export default {
     ]);
     let timeOhter = 0;
     let id;
-    let stmyth = ref(false);
+    let stbronze = ref(false);
     let open = ref(false);
     let buttonStatus = ref(true);
     const images = [
       {
-        img: myth1,
-        name: "myth2",
+        img: bronze1,
+        name: "bronze2",
         className: "animation",
         count: 1800 * magnification.value,
       },
       {
-        img: myth2,
-        name: "myth1",
+        img: bronze2,
+        name: "bronze1",
         className: "animation",
         count: 1000 * magnification.value,
       },
       {
-        img: myth3,
+        img: bronze3,
       },
       {
-        img: myth4,
+        img: bronze4,
       },
       {
-        img: myth5,
+        img: bronze5,
       },
       {
-        img: myth6,
+        img: bronze6,
       },
       {
-        img: myth7,
-        name: "myth3",
+        img: bronze7,
+        name: "bronze3",
         className: "animation",
         count: 2200 * magnification.value,
       },
@@ -154,11 +154,11 @@ export default {
         buttonStatus.value = false;
 
         allMethods.clear();
-        const boxLists = mythList.map((item) => {
+        const boxLists = bronzeList.map((item) => {
           return document.getElementById(item.name);
         });
         boxLists[0].style.setProperty("background-position-x", "center");
-        boxLists[0].querySelectorAll(".mythp-item-img").forEach((child) => {
+        boxLists[0].querySelectorAll(".bronzep-item-img").forEach((child) => {
           child.style.setProperty("display", "none");
         });
         // boxLists.forEach((item)=>{
@@ -171,9 +171,9 @@ export default {
         //       0+'px'
         //     );
         // })
-        const content = document.getElementById("mythp-he");
-        const box2 = document.getElementById("mythp");
-        const coords = { x: 0, y: 0 }; // Stmyth at (0, 0)
+        const content = document.getElementById("bronzep-he");
+        const box2 = document.getElementById("bronzep");
+        const coords = { x: 0, y: 0 }; // Stbronze at (0, 0)
         const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to(
             { x: 0, y: (1120 * content.clientHeight) / box2.clientHeight },
@@ -217,7 +217,7 @@ export default {
           .repeat(Infinity)
           .yoyo(false)
           .repeatDelay(0);
-          tween.start(); // Stmyth the tween immediately.
+          tween.start(); // Stbronze the tween immediately.
         let nowDate = window.performance.now();
         function animate(time) {
           timeOhter = time - nowDate;
@@ -241,38 +241,38 @@ export default {
           }
           if (i > 0 && i < 4) {
             boxLists[i].style.setProperty("background-position-x", "center");
-            boxLists[i].querySelectorAll(".mythp-item-img").forEach((child) => {
+            boxLists[i].querySelectorAll(".bronzep-item-img").forEach((child) => {
               child.style.setProperty("display", "none");
             });
           }
           if (i == 3) {
             boxLists[0].style.setProperty("background-position-x", 600 + "px");
-            boxLists[0].querySelectorAll(".mythp-item-img").forEach((child) => {
+            boxLists[0].querySelectorAll(".bronzep-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 4) {
             boxLists[1].style.setProperty("background-position-x", 600 + "px");
-            boxLists[1].querySelectorAll(".mythp-item-img").forEach((child) => {
+            boxLists[1].querySelectorAll(".bronzep-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 5) {
             boxLists[2].style.setProperty("background-position-x", 600 + "px");
-            boxLists[2].querySelectorAll(".mythp-item-img").forEach((child) => {
+            boxLists[2].querySelectorAll(".bronzep-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 6) {
             boxLists[3].style.setProperty("background-position-x", 600 + "px");
-            boxLists[3].querySelectorAll(".mythp-item-img").forEach((child) => {
+            boxLists[3].querySelectorAll(".bronzep-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
             countValue.value += useCount.value;
           }
           // if (i == 7) {
           //   boxLists[4].style.setProperty("background-position-x", 600 + "px");
-          //   boxLists[4].querySelectorAll(".mythp-item-img").forEach((child) => {
+          //   boxLists[4].querySelectorAll(".bronzep-item-img").forEach((child) => {
           //     child.style.setProperty("display", "block");
           //   });
           //   countValue.value += useCount.value;
@@ -323,7 +323,7 @@ export default {
           randomImages.push(randomImage);
         }
 
-        allMethods.assignImageList(mythList, randomImages);
+        allMethods.assignImageList(bronzeList, randomImages);
       },
       // 随机生成图像列表
       shuffleArray(array) {
@@ -332,11 +332,11 @@ export default {
           [array[i], array[j]] = [array[j], array[i]];
         }
         array.forEach((item) => {
-          if (item.name == "myth1") {
+          if (item.name == "bronze1") {
             arrCount[0].value++;
-          } else if (item.name == "myth2") {
+          } else if (item.name == "bronze2") {
             arrCount[1].value++;
-          } else if (item.name == "myth3") {
+          } else if (item.name == "bronze3") {
             arrCount[2].value++;
           }
           if (item.count) {
@@ -346,13 +346,13 @@ export default {
         return array;
       },
 
-      // 将图像列表分配给mythList
-      assignImageList(mythList, images) {
+      // 将图像列表分配给bronzeList
+      assignImageList(bronzeList, images) {
         const shuffledImages = allMethods.shuffleArray(images.slice()); // 避免修改原始数组
 
         let currentIndex = 0;
 
-        mythList.forEach((item) => {
+        bronzeList.forEach((item) => {
           const numImages = Math.min(item.size, 3);
           item.imgList = shuffledImages.slice(
             currentIndex,
@@ -360,7 +360,7 @@ export default {
           );
           currentIndex += numImages;
         });
-        return mythList;
+        return bronzeList;
       },
       goSeniority: () => {
         router.push("/list");
@@ -370,10 +370,10 @@ export default {
     return {
       className,
       open,
-      stmyth,
-      mythConfig,
+      stbronze,
+      bronzeConfig,
       randomImages,
-      mythList,
+      bronzeList,
       countValue,
       useCount,
       showRuleValue,
@@ -385,22 +385,22 @@ export default {
 </script>
 <template>
   <div :class="className">
-    <!-- <img class="headmyth" :src="mythConfig.headmyth" alt=""> -->
-    <div class="mythp" id="mythp">
-      <div class="mythp-he" id="mythp-he">
-        <!-- <img class="myth-rule" @click="showRule" :src="mythConfig.rulemyth" alt=""> -->
-        <div class="mythp-hidden">
+    <!-- <img class="headbronze" :src="bronzeConfig.headbronze" alt=""> -->
+    <div class="bronzep" id="bronzep">
+      <div class="bronzep-he" id="bronzep-he">
+        <!-- <img class="bronze-rule" @click="showRule" :src="bronzeConfig.rulebronze" alt=""> -->
+        <div class="bronzep-hidden">
           <div
-            class="mythp-item"
+            class="bronzep-item"
             :id="item.name"
-            v-for="(item, index) in mythList"
+            v-for="(item, index) in bronzeList"
           >
             <div
               v-for="(imgItem, imgIndex) in item.imgList"
               :class="
                 imgItem.className
-                  ? 'mythp-item-img ' + imgItem.className
-                  : 'mythp-item-img'
+                  ? 'bronzep-item-img ' + imgItem.className
+                  : 'bronzep-item-img'
               "
             >
               <img :src="imgItem.img" alt="" />
@@ -408,36 +408,36 @@ export default {
           </div>
         </div>
       </div>
-      <div class="buttonmyth-box">
+      <div class="buttonbronze-box">
         <div class="buttons" @click="close"></div>
-        <div class="buttonsmythBack" @click="run"></div>
+        <div class="buttonsbronzeBack" @click="run"></div>
 
         <!-- <div class="buttons2" @click="goSeniority"></div> -->
 
-        <div class="myth-count" @click="showRule">
-          <!-- <img class="myth-rule" :src="mythConfig.rulemyth" alt="" /> -->
-          <img :src="mythConfig.countmyth" alt="" />
+        <div class="bronze-count" @click="showRule">
+          <!-- <img class="bronze-rule" :src="bronzeConfig.rulebronze" alt="" /> -->
+          <img :src="bronzeConfig.countbronze" alt="" />
           <div class="countValue">{{ countValue }}</div>
         </div>
       </div>
-      <div class="mythd-mythp">
-        <div class="mythd-back" @click="close"></div>
+      <div class="bronzed-bronzep">
+        <div class="bronzed-back" @click="close"></div>
       </div>
     </div>
     <Teleport to="body">
       <div v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="mythConfig.star" alt="" /> -->
-        <!-- <img class="model-img-bg" :src="mythConfig.resultmyth" alt="" /> -->
-        <!-- <div class="modelmyth-list">
+        <!-- <img class="model-star" :src="bronzeConfig.star" alt="" /> -->
+        <!-- <img class="model-img-bg" :src="bronzeConfig.resultbronze" alt="" /> -->
+        <!-- <div class="modelbronze-list">
           <div
-            class="modelmyth-item"
+            class="modelbronze-item"
             v-for="(item, index) in arrCount"
             :key="index"
           >
             {{ item.count + "X" + item.value }}
           </div>
-          <div class="modelmyth-total">{{ useCount }}</div>
+          <div class="modelbronze-total">{{ useCount }}</div>
         </div> -->
       </div>
     </Teleport>
@@ -445,8 +445,8 @@ export default {
     <Teleport to="body">
       <div v-if="showRuleValue" class="modal" @click="showRule">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="mythConfig.star" alt="" /> -->
-        <!-- <img class="model-img" :src="mythConfig.ruleDialogmyth" alt="" /> -->
+        <!-- <img class="model-star" :src="bronzeConfig.star" alt="" /> -->
+        <!-- <img class="model-img" :src="bronzeConfig.ruleDialogbronze" alt="" /> -->
       </div>
     </Teleport>
   </div>
@@ -458,7 +458,7 @@ export default {
 
   width: 280px;
 }
-.mythd-mythp {
+.bronzed-bronzep {
   display: flex;
   align-items: center;
   /* padding: 60px 15px; */
@@ -470,43 +470,43 @@ export default {
 }
 .countValue {
   margin: 0 0 0 37%;
-    color: #d23d1e;
+    color: #ff8dfc;
     font-size: 18px;
 }
 
-.myth-count img {
+.bronze-count img {
   width: 100%;
   position: absolute;
   height: 100%;
   /* top: -16%; */
   z-index: -1;
 }
-.myth-count .myth-rule {
+.bronze-count .bronze-rule {
   position: absolute;
   left: -9%;
   width: 45px;
   height: 45px;
 }
-.mythd-back {
-  /* background: v-bind("'url(' + mythConfig.homemyth + ')'") no-repeat; */
+.bronzed-back {
+  /* background: v-bind("'url(' + bronzeConfig.homebronze + ')'") no-repeat; */
 
   width: 36px;
   height: 42px;
   background-size: 100%;
   z-index: 999;
 }
-.stmyth {
+.stbronze {
   margin-top: -30%;
   width: 160px;
   height: 80px;
-  background: v-bind("'url(' + mythConfig.playmyth + ')'") no-repeat;
+  background: v-bind("'url(' + bronzeConfig.playbronze + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 }
 .container {
   display: flex;
   flex-direction: column;
-  background: v-bind("'url(' + mythConfig.boxmyth + ')'") no-repeat;
+  background: v-bind("'url(' + bronzeConfig.boxbronze + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -516,7 +516,7 @@ export default {
   align-items: center;
 }
 
-.mythp {
+.bronzep {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -526,16 +526,16 @@ export default {
   /* height: 100vh; */
   overflow: hidden;
 
-  background: v-bind("'url(' + mythConfig.anyBoxmyth + ')'") no-repeat;
-  background-size: 70%;
-  background-position: center 28%;
+  background: v-bind("'url(' + bronzeConfig.anyBoxbronze + ')'") no-repeat;
+  background-size: 78%;
+    background-position: center 5%;
 
   color: #fff;
   font-weight: 600;
   font-size: 26;
 }
 
-.buttonmyth-box {
+.buttonbronze-box {
   position: absolute;
   top: 5%;
     left: 17%;
@@ -546,7 +546,7 @@ export default {
   height: 25%;
   /* justify-content: space-between; */
 }
-.myth-count {
+.bronze-count {
   position: relative;
   width: 49%;
     height: 46%;
@@ -566,7 +566,7 @@ export default {
     width: 18%;
     height: 43%;
   z-index: 999;
-  background: v-bind("'url(' + mythConfig.homemyth + ')'") no-repeat;
+  background: v-bind("'url(' + bronzeConfig.homebronze + ')'") no-repeat;
   background-size: 100% 100%;
 }
 .buttons2 {
@@ -577,32 +577,32 @@ export default {
   width: 30%;
   height: 40%;
   z-index: 999;
-  /* background: v-bind("'url(' + mythConfig.senioritymyth + ')'") no-repeat; */
+  /* background: v-bind("'url(' + bronzeConfig.senioritybronze + ')'") no-repeat; */
   background-size: 100% 100%;
 }
-.buttonsmythBack{
+.buttonsbronzeBack{
   /* margin-left: 27%;
     margin-bottom: -58%; */
     margin-left: 2%;
     margin-top: 60.5%;
     width: 19%;
-    height: 48.5%;
+    height: 43.5%;
   z-index: 999;
-  background: v-bind("'url(' + mythConfig.playmyth + ')'") no-repeat;
+  background: v-bind("'url(' + bronzeConfig.playbronze + ')'") no-repeat;
   background-size: 100% 100%;
 }
-.mythp-he {
+.bronzep-he {
   position: relative;
   margin-right: 0%;
   margin-top: 4%;
-  width: 80%;
+  width: 76%;
   height: 43vw;
   display: flex;
   justify-content: space-between;
   transform: scale(0.72);
 }
 
-.mythp-hidden {
+.bronzep-hidden {
   /* margin-top: 2%; */
   /* margin-left: 1%; */
   margin-top: -7%;
@@ -613,7 +613,7 @@ export default {
   height: 100%;
   overflow: hidden;
 }
-.mythp-item {
+.bronzep-item {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -621,23 +621,23 @@ export default {
 
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + mythConfig.anymyth + ')'");
+  background: v-bind("'url(' + bronzeConfig.anybronze + ')'");
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
-  background-size: 92% 272%;
+  background-size: 86% 245%;
 }
-.mythp-item:nth-child(2){
+.bronzep-item:nth-child(2){
   margin-right: 20%;
 }
-.mythp-item-img {
+.bronzep-item-img {
   position: relative;
 
   display: none;
   width: 100%;
   height: 100%;
 }
-.mythp-item-img img {
+.bronzep-item-img img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -649,7 +649,7 @@ export default {
 .modal {
   display: flex;
   justify-content: center;
-  align-items: flex-stmyth;
+  align-items: flex-stbronze;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -657,7 +657,7 @@ export default {
   height: 100vh;
   z-index: 9999;
   /* background-color: rgba(0, 0, 0, 0.5); */
-  /* background: v-bind("'url(' + mythConfig.dialogmyth + ')'") no-repeat; */
+  /* background: v-bind("'url(' + bronzeConfig.dialogbronze + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star {
@@ -679,17 +679,17 @@ export default {
   width: 70%;
 }
 
-.stmyth-bg {
+.stbronze-bg {
   position: absolute;
 
   top: 0;
   z-index: 1;
 }
-.stmyth-bg img {
+.stbronze-bg img {
   width: 100%;
 }
 
-.modelmyth-list {
+.modelbronze-list {
   position: absolute;
   left: 60%;
   top: 39.5%;
@@ -701,33 +701,33 @@ export default {
   font-size: 16px;
   /* transform: rotate(7deg) translateX(-36px); */
 }
-.modelmyth-item {
+.modelbronze-item {
   margin-bottom: 11px;
 }
-.modelmyth-total {
+.modelbronze-total {
   padding: 7px 14px;
 }
 
-.headmyth {
+.headbronze {
   margin-top: 10vh;
   width: 80%;
 }
 /* 定义步长图片动画关键帧 */
 @keyframes image-animation {
   0% {
-    background-image: v-bind("'url(' + mythConfig.animation1 + ')'");
+    background-image: v-bind("'url(' + bronzeConfig.animation1 + ')'");
   }
 
   25% {
-    background-image: v-bind("'url(' + mythConfig.animation4 + ')'");
+    background-image: v-bind("'url(' + bronzeConfig.animation4 + ')'");
   }
 
   75% {
-    background-image: v-bind("'url(' + mythConfig.animation8 + ')'");
+    background-image: v-bind("'url(' + bronzeConfig.animation8 + ')'");
   }
 
   100% {
-    background-image: v-bind("'url(' + mythConfig.animation12 + ')'");
+    background-image: v-bind("'url(' + bronzeConfig.animation12 + ')'");
   }
 }
 
