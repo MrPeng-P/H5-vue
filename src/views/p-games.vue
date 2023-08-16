@@ -1,28 +1,28 @@
 <script>
 
-import dialogfei from "../assets/slot9/dialogfei.png";
-import playfei from "../assets/slot9/playfei.png";
-import boxfei from "../assets/slot9/boxfei.jpg";
-import anyfei from "../assets/slot9/changefei.png";
-import anyBoxfei from "../assets/slot9/hefei.png";
-import backfei from "../assets/slot9/backfei.png";
-import star from "../assets/slot9/starfei.gif";
-// import football from "../assets/slot9/football.png";
+import dialogneon from "../assets/slot10/dialogneon.png";
+import playneon from "../assets/slot10/playneon.png";
+import boxneon from "../assets/slot10/boxneon.jpg";
+import anyneon from "../assets/slot10/changeneon.png";
+import anyBoxneon from "../assets/slot10/heneon.png";
+import backneon from "../assets/slot10/backneon.png";
+// import star from "../assets/slot10/starneon.gif";
+// import football from "../assets/slot10/football.png";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
   setup() {
     const className = "container";
-    const feiConfig = reactive({
-      dialogfei,
-      anyfei,
-      playfei,
-      anyBoxfei,
-      boxfei,
-      backfei,
-      star
+    const neonConfig = reactive({
+      dialogneon,
+      anyneon,
+      playneon,
+      anyBoxneon,
+      boxneon,
+      backneon,
+      // star
     });
-    const feiList = [
+    const neonList = [
       {
         name: "item1",
         size: 11,
@@ -57,14 +57,14 @@ export default {
         }
         buttonStatus.value=false
         allMethods.clear();
-        const boxLists = feiList.map((item) => {
+        const boxLists = neonList.map((item) => {
           return document.getElementById(item.name);
         });
-        const content = document.getElementById("feip-he");
-        const box2 = document.getElementById("feip");
+        const content = document.getElementById("neonp-he");
+        const box2 = document.getElementById("neonp");
         const coords = { x: 0, y: 0 }; // Start at (0, 0)
         const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
-          .to({ x: 0, y: (1120 * content.clientHeight) / box2.clientHeight }, 100) // Move to (300, 200) in 1 second.
+          .to({ x: 0, y: (1404 * content.clientHeight) / box2.clientHeight }, 100) // Move to (300, 200) in 1 second.
           .easing() // Use an easing function to make the animation smooth.
           .onUpdate(() => {
             if (timeOhter > 1000 && timeOhter <= 4000) {
@@ -123,25 +123,25 @@ export default {
           if (i == 3) {
             boxLists[0].style.setProperty(
               "background-position-y",
-              -0-parseInt(Math.ceil(Math.random() * 1120) / 140) * 140 + "px"
+              -0-parseInt(Math.ceil(Math.random() * 1404) / 156) * 156 + "px"
             );
           }
           if (i == 4) {
             boxLists[1].style.setProperty(
               "background-position-y",
-              -0-parseInt(Math.ceil(Math.random() * 1120) / 140) * 140 + "px"
+              -0-parseInt(Math.ceil(Math.random() * 1404) / 156) * 156 + "px"
             );
           }
           if (i == 5) {
             boxLists[2].style.setProperty(
               "background-position-y",
-              -0-parseInt(Math.ceil(Math.random() * 1120) / 140) * 140 + "px"
+              -0-parseInt(Math.ceil(Math.random() * 1404) / 156) * 156 + "px"
             );
           }
           if (i == 6) {
             boxLists[3].style.setProperty(
               "background-position-y",
-              -0-parseInt(Math.ceil(Math.random() * 1120) / 140) * 140 + "px"
+              -0-parseInt(Math.ceil(Math.random() * 1404) / 156) * 156 + "px"
             );
           }
        
@@ -167,34 +167,34 @@ export default {
       className,
       open,
       start,
-      feiConfig,
-      feiList,
+      neonConfig,
+      neonList,
       ...allMethods,
     };
   },
 };
 </script>
 <template>
-  <div v-show="!start" class="feid-feip">
-    <div class="feid-back" @click="close"></div>
+  <div v-show="!start" class="neond-neonp">
+    <div class="neond-back" @click="close"></div>
   </div>
   <div :class="className">
     <!-- <img src="../assets/slot/bian.gif" alt=""> -->
-    <!-- <div v-if="start" class="start-bg"><img :src="feiConfig.mainImage" alt=""></div> -->
+    <!-- <div v-if="start" class="start-bg"><img :src="neonConfig.mainImage" alt=""></div> -->
     <div v-if="start" class="start" @click="start=false">
     
     </div>
 
-    <div v-else class="feip" id="feip">
+    <div v-else class="neonp" id="neonp">
 
-      <div class="feip-he" id="feip-he">
+      <div class="neonp-he" id="neonp-he">
 
-        <div class="feip-hidden">
+        <div class="neonp-hidden">
           
           <div
-          class="feip-item"
+          class="neonp-item"
           :id="item.name"
-          v-for="(item, index) in feiList"
+          v-for="(item, index) in neonList"
         ></div>
         </div>
       </div>
@@ -204,8 +204,8 @@ export default {
     <Teleport to="body">
       <div  v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
-        <img class="model-star" :src="feiConfig.star" alt="">
-        <img  class="model-img" :src="feiConfig.dialogfei" alt="">
+        <!-- <img class="model-star" :src="neonConfig.star" alt=""> -->
+        <img  class="model-img" :src="neonConfig.dialogneon" alt="">
       </div>
     </Teleport>
   </div>
@@ -218,7 +218,7 @@ export default {
 
   width: 280px;
 }
-.feid-feip{
+.neond-neonp{
   padding:20px 15px;
   position: fixed;
   z-index: 99;
@@ -227,11 +227,11 @@ export default {
   height: 60px;
   
 }
-.feid-back{
+.neond-back{
   margin-top: 20px;
     width: 50px;
     height: 50px;
-  background: v-bind("'url(' + feiConfig.backfei + ')'") no-repeat;
+  background: v-bind("'url(' + neonConfig.backneon + ')'") no-repeat;
   background-size: 100%;
   z-index: 999;
 }
@@ -239,13 +239,13 @@ export default {
   margin-top: -30%;
   width: 160px;
     height: 80px;
-  background: v-bind("'url(' + feiConfig.playfei + ')'") no-repeat;
+  background: v-bind("'url(' + neonConfig.playneon + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 
 }
 .container {
-  background: v-bind("'url(' + feiConfig.boxfei + ')'") no-repeat;
+  background: v-bind("'url(' + neonConfig.boxneon + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -255,7 +255,7 @@ export default {
   align-items: center;
 }
 
-.feip {
+.neonp {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -264,7 +264,7 @@ export default {
   width: 90vw;
   height: 100vh;
   overflow: hidden;
-  background: v-bind("'url(' + feiConfig.anyBoxfei + ')'") no-repeat;
+  background: v-bind("'url(' + neonConfig.anyBoxneon + ')'") no-repeat;
   background-size: 100%;
   background-position: center 100px;
   color: #fff;
@@ -278,19 +278,19 @@ export default {
     width: 150px;
     height: 80px;
   z-index: 999;
-  background: v-bind("'url(' + feiConfig.playfei + ')'") no-repeat;
+  background: v-bind("'url(' + neonConfig.playneon + ')'") no-repeat;
   background-size: 100%;
 }
-.feip-he {
+.neonp-he {
   position: relative;
-    margin-top: 26%;
-    width: 140%;
-    height: 105vw;
+    margin-top: 28%;
+    width: 162%;
+    height: 116vw;
     display: flex;
     justify-content: space-between;
-    transform: scale(0.65);
+    transform: scale(0.55);
 }
-.feip-hidden{
+.neonp-hidden{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -299,11 +299,11 @@ export default {
   overflow: hidden;
 
 }
-.feip-item {
+.neonp-item {
   
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + feiConfig.anyfei + ')'") ;
+  background: v-bind("'url(' + neonConfig.anyneon + ')'") ;
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
@@ -321,7 +321,7 @@ export default {
     height: 100vh;
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.5);
-  /* background: v-bind("'url(' + feiConfig.dialogfei + ')'") no-repeat; */
+  /* background: v-bind("'url(' + neonConfig.dialogneon + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star{

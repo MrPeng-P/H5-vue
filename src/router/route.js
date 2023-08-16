@@ -72,7 +72,7 @@ import {
 //   },
 // ];
 
-//复杂老虎机-简化
+// 复杂老虎机-简化
 // export const routes = [
 //   {
 //     path: "/",
@@ -91,7 +91,7 @@ import {
 //     component: () => import("@/views/slotA/p-list.vue"),
 //   },
 // ];
-//复杂老虎机-简化-五排行
+// 复杂老虎机-简化-五排行
 import start from "@/views/slotB/p-start.vue"
 import home from "@/views/slotB/p-home.vue"
 export const routes = [
