@@ -1,33 +1,34 @@
 <script>
-import playEgyptian from "@/assets/slotB6/playEgyptian.jpg";
-import boxEgyptian from "@/assets/slotB6/boxEgyptian.jpg";
-import anyEgyptian from "@/assets/slotB6/changeEgyptian.png";
-import anyBoxEgyptian from "@/assets/slotB6/anyBoxEgyptian.png";
-import homeEgyptian from "@/assets/slotB6/homeEgyptian.png";
-// import seniorityEgyptian from "@/assets/slotB6/seniorityEgyptian.png";
-import countEgyptian from "@/assets/slotB6/countEgyptian.png";
-// import ruleEgyptian from "@/assets/slotB6/ruleEgyptian.png";
-// import ruleDialogEgyptian from "@/assets/slotB6/ruleDialogEgyptian.jpg";
-// import resultEgyptian from "@/assets/slotB6/resultEgyptian.png";
-// import headEgyptian from "@/assets/slotB6/headEgyptian.png";
+import playthegods from "@/assets/slotB7/playthegods.png";
+import playthegods3 from "@/assets/slotB7/playthegods3.png";
+import boxthegods from "@/assets/slotB7/boxthegods.jpg";
+import anythegods from "@/assets/slotB7/changethegods.png";
+import anyBoxthegods from "@/assets/slotB7/anyBoxthegods.png";
+import homethegods from "@/assets/slotB7/homethegods.png";
+// import senioritythegods from "@/assets/slotB7/senioritythegods.png";
+import countthegods from "@/assets/slotB7/countthegods.png";
+// import rulethegods from "@/assets/slotB7/rulethegods.png";
+// import ruleDialogthegods from "@/assets/slotB7/ruleDialogthegods.jpg";
+// import resultthegods from "@/assets/slotB7/resultthegods.png";
+// import headthegods from "@/assets/slotB7/headthegods.png";
 
-// import star from "@/assets/slotB6/starEgyptian.gif";
+// import star from "@/assets/slotB7/starthegods.gif";
 import { useRouter, useRoute } from "vue-router";
-import Egyptian1 from "@/assets/slotB6/Egyptian1.png";
-import Egyptian2 from "@/assets/slotB6/Egyptian2.png";
-import Egyptian3 from "@/assets/slotB6/Egyptian3.png";
-import Egyptian4 from "@/assets/slotB6/Egyptian4.png";
-import Egyptian5 from "@/assets/slotB6/Egyptian5.png";
-import Egyptian6 from "@/assets/slotB6/Egyptian6.png";
-import Egyptian7 from "@/assets/slotB6/Egyptian7.png";
+import thegods1 from "@/assets/slotB7/thegods1.png";
+import thegods2 from "@/assets/slotB7/thegods2.png";
+import thegods3 from "@/assets/slotB7/thegods3.png";
+import thegods4 from "@/assets/slotB7/thegods4.png";
+import thegods5 from "@/assets/slotB7/thegods5.png";
+import thegods6 from "@/assets/slotB7/thegods6.png";
+import thegods7 from "@/assets/slotB7/thegods7.png";
 
-// import animation1 from "@/assets/slotB6/dong/00001.png";
-// import animation4 from "@/assets/slotB6/dong/00004.png";
-// import animation8 from "@/assets/slotB6/dong/00008.png";
-// import animation12 from "@/assets/slotB6/dong/00012.png";
+// import animation1 from "@/assets/slotB7/dong/00001.png";
+// import animation4 from "@/assets/slotB7/dong/00004.png";
+// import animation8 from "@/assets/slotB7/dong/00008.png";
+// import animation12 from "@/assets/slotB7/dong/00012.png";
 
 import { inject } from "vue";
-// import football from "@/assets/slotB6/football.png";
+// import football from "@/assets/slotB7/football.png";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
@@ -59,25 +60,26 @@ export default {
     const router = new useRouter();
     // 随机生成 12 张图的数组
     let randomImages = [];
-    const EgyptianConfig = reactive({
-      // headEgyptian,
+    const thegodsConfig = reactive({
+      // headthegods,
       // animation1,
       // animation4,
       // animation8,
       // animation12,
-      anyEgyptian,
-      playEgyptian,
-      anyBoxEgyptian,
-      boxEgyptian,
-      homeEgyptian,
+      anythegods,
+      playthegods,
+      playthegods3,
+      anyBoxthegods,
+      boxthegods,
+      homethegods,
       //   star,
-      // seniorityEgyptian,
-      countEgyptian,
-      // ruleEgyptian,
-      // ruleDialogEgyptian,
-      // resultEgyptian
+      // senioritythegods,
+      countthegods,
+      // rulethegods,
+      // ruleDialogthegods,
+      // resultthegods
     });
-    const EgyptianList = reactive([
+    const thegodsList = reactive([
       {
         name: "item1",
         size: 4,
@@ -106,59 +108,60 @@ export default {
     ]);
     let timeOhter = 0;
     let id;
-    let stEgyptian = ref(false);
+    let stthegods = ref(false);
     let open = ref(false);
     let buttonStatus = ref(true);
     const images = [
       {
-        img: Egyptian1,
-        name: "Egyptian2",
+        img: thegods1,
+        name: "thegods2",
         className: "animation",
         count: 1800 * magnification.value,
       },
       {
-        img: Egyptian2,
-        name: "Egyptian1",
+        img: thegods2,
+        name: "thegods1",
         className: "animation",
         count: 1000 * magnification.value,
       },
       {
-        img: Egyptian3,
+        img: thegods3,
       },
       {
-        img: Egyptian4,
+        img: thegods4,
       },
       {
-        img: Egyptian5,
+        img: thegods5,
       },
       {
-        img: Egyptian6,
+        img: thegods6,
       },
       {
-        img: Egyptian7,
-        name: "Egyptian3",
+        img: thegods7,
+        name: "thegods3",
         className: "animation",
         count: 2200 * magnification.value,
       },
     ];
     const allMethods = {
-      run: () => {
+      run: (value) => {
+        let magn=value||1;
         if (open.value) {
           return;
         }
         if (!buttonStatus.value) {
           return;
         }
-        countValue.value -= 100;
+        countValue.value -= 100*magn;
         allMethods.randomImg();
         buttonStatus.value = false;
 
         allMethods.clear();
-        const boxLists = EgyptianList.map((item) => {
+        const boxLists = thegodsList.map((item) => {
           return document.getElementById(item.name);
         });
         boxLists[0].style.setProperty("background-position-x", "center");
-        boxLists[0].querySelectorAll(".Egyptianp-item-img").forEach((child) => {
+        boxLists[0].querySelectorAll(".thegodsp-item-img").forEach((child) => {
           child.style.setProperty("display", "none");
         });
         // boxLists.forEach((item)=>{
@@ -171,9 +174,9 @@ export default {
         //       0+'px'
         //     );
         // })
-        const content = document.getElementById("Egyptianp-he");
-        const box2 = document.getElementById("Egyptianp");
-        const coords = { x: 0, y: 0 }; // StEgyptian at (0, 0)
+        const content = document.getElementById("thegodsp-he");
+        const box2 = document.getElementById("thegodsp");
+        const coords = { x: 0, y: 0 }; // Stthegods at (0, 0)
         const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to(
             { x: 0, y: (1120 * content.clientHeight) / box2.clientHeight },
@@ -217,7 +220,7 @@ export default {
           .repeat(Infinity)
           .yoyo(false)
           .repeatDelay(0);
-          tween.start(); // StEgyptian the tween immediately.
+          tween.start(); // Stthegods the tween immediately.
         let nowDate = window.performance.now();
         function animate(time) {
           timeOhter = time - nowDate;
@@ -241,38 +244,38 @@ export default {
           }
           if (i > 0 && i < 4) {
             boxLists[i].style.setProperty("background-position-x", "center");
-            boxLists[i].querySelectorAll(".Egyptianp-item-img").forEach((child) => {
+            boxLists[i].querySelectorAll(".thegodsp-item-img").forEach((child) => {
               child.style.setProperty("display", "none");
             });
           }
           if (i == 3) {
             boxLists[0].style.setProperty("background-position-x", 600 + "px");
-            boxLists[0].querySelectorAll(".Egyptianp-item-img").forEach((child) => {
+            boxLists[0].querySelectorAll(".thegodsp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 4) {
             boxLists[1].style.setProperty("background-position-x", 600 + "px");
-            boxLists[1].querySelectorAll(".Egyptianp-item-img").forEach((child) => {
+            boxLists[1].querySelectorAll(".thegodsp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 5) {
             boxLists[2].style.setProperty("background-position-x", 600 + "px");
-            boxLists[2].querySelectorAll(".Egyptianp-item-img").forEach((child) => {
+            boxLists[2].querySelectorAll(".thegodsp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 6) {
             boxLists[3].style.setProperty("background-position-x", 600 + "px");
-            boxLists[3].querySelectorAll(".Egyptianp-item-img").forEach((child) => {
+            boxLists[3].querySelectorAll(".thegodsp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
-            countValue.value += useCount.value;
+            countValue.value += useCount.value*magn;
           }
           // if (i == 7) {
           //   boxLists[4].style.setProperty("background-position-x", 600 + "px");
-          //   boxLists[4].querySelectorAll(".Egyptianp-item-img").forEach((child) => {
+          //   boxLists[4].querySelectorAll(".thegodsp-item-img").forEach((child) => {
           //     child.style.setProperty("display", "block");
           //   });
           //   countValue.value += useCount.value;
@@ -323,7 +326,7 @@ export default {
           randomImages.push(randomImage);
         }
 
-        allMethods.assignImageList(EgyptianList, randomImages);
+        allMethods.assignImageList(thegodsList, randomImages);
       },
       // 随机生成图像列表
       shuffleArray(array) {
@@ -332,11 +335,11 @@ export default {
           [array[i], array[j]] = [array[j], array[i]];
         }
         array.forEach((item) => {
-          if (item.name == "Egyptian1") {
+          if (item.name == "thegods1") {
             arrCount[0].value++;
-          } else if (item.name == "Egyptian2") {
+          } else if (item.name == "thegods2") {
             arrCount[1].value++;
-          } else if (item.name == "Egyptian3") {
+          } else if (item.name == "thegods3") {
             arrCount[2].value++;
           }
           if (item.count) {
@@ -346,13 +349,13 @@ export default {
         return array;
       },
 
-      // 将图像列表分配给EgyptianList
-      assignImageList(EgyptianList, images) {
+      // 将图像列表分配给thegodsList
+      assignImageList(thegodsList, images) {
         const shuffledImages = allMethods.shuffleArray(images.slice()); // 避免修改原始数组
 
         let currentIndex = 0;
 
-        EgyptianList.forEach((item) => {
+        thegodsList.forEach((item) => {
           const numImages = Math.min(item.size, 3);
           item.imgList = shuffledImages.slice(
             currentIndex,
@@ -360,7 +363,7 @@ export default {
           );
           currentIndex += numImages;
         });
-        return EgyptianList;
+        return thegodsList;
       },
       goSeniority: () => {
         router.push("/list");
@@ -370,10 +373,10 @@ export default {
     return {
       className,
       open,
-      stEgyptian,
-      EgyptianConfig,
+      stthegods,
+      thegodsConfig,
       randomImages,
-      EgyptianList,
+      thegodsList,
       countValue,
       useCount,
       showRuleValue,
@@ -385,22 +388,22 @@ export default {
 </script>
 <template>
   <div :class="className">
-    <!-- <img class="headEgyptian" :src="EgyptianConfig.headEgyptian" alt=""> -->
-    <div class="Egyptianp" id="Egyptianp">
-      <div class="Egyptianp-he" id="Egyptianp-he">
-        <!-- <img class="Egyptian-rule" @click="showRule" :src="EgyptianConfig.ruleEgyptian" alt=""> -->
-        <div class="Egyptianp-hidden">
+    <!-- <img class="headthegods" :src="thegodsConfig.headthegods" alt=""> -->
+    <div class="thegodsp" id="thegodsp">
+      <div class="thegodsp-he" id="thegodsp-he">
+        <!-- <img class="thegods-rule" @click="showRule" :src="thegodsConfig.rulethegods" alt=""> -->
+        <div class="thegodsp-hidden">
           <div
-            class="Egyptianp-item"
+            class="thegodsp-item"
             :id="item.name"
-            v-for="(item, index) in EgyptianList"
+            v-for="(item, index) in thegodsList"
           >
             <div
               v-for="(imgItem, imgIndex) in item.imgList"
               :class="
                 imgItem.className
-                  ? 'Egyptianp-item-img ' + imgItem.className
-                  : 'Egyptianp-item-img'
+                  ? 'thegodsp-item-img ' + imgItem.className
+                  : 'thegodsp-item-img'
               "
             >
               <img :src="imgItem.img" alt="" />
@@ -408,36 +411,38 @@ export default {
           </div>
         </div>
       </div>
-      <div class="buttonEgyptian-box">
-        <div class="buttons" @click="close"></div>
-        <div class="buttonsEgyptianBack" @click="run"></div>
+      <div class="buttonthegods-box">
+        <div class="buttonsthegods2" @click="run(2)"></div>
+       
+        <div class="buttonsthegodsBack" @click="run()"></div>
 
         <!-- <div class="buttons2" @click="goSeniority"></div> -->
 
-        <div class="Egyptian-count" @click="showRule">
-          <!-- <img class="Egyptian-rule" :src="EgyptianConfig.ruleEgyptian" alt="" /> -->
-          <img :src="EgyptianConfig.countEgyptian" alt="" />
+        <div class="thegods-count" @click="showRule">
+          <!-- <img class="thegods-rule" :src="thegodsConfig.rulethegods" alt="" /> -->
+          <img :src="thegodsConfig.countthegods" alt="" />
           <div class="countValue">{{ countValue }}</div>
         </div>
+        <div class="buttons" @click="close"></div>
       </div>
-      <div class="Egyptiand-Egyptianp">
-        <div class="Egyptiand-back" @click="close"></div>
+      <div class="thegodsd-thegodsp">
+        <div class="thegodsd-back" @click="close"></div>
       </div>
     </div>
     <Teleport to="body">
       <div v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="EgyptianConfig.star" alt="" /> -->
-        <!-- <img class="model-img-bg" :src="EgyptianConfig.resultEgyptian" alt="" /> -->
-        <!-- <div class="modelEgyptian-list">
+        <!-- <img class="model-star" :src="thegodsConfig.star" alt="" /> -->
+        <!-- <img class="model-img-bg" :src="thegodsConfig.resultthegods" alt="" /> -->
+        <!-- <div class="modelthegods-list">
           <div
-            class="modelEgyptian-item"
+            class="modelthegods-item"
             v-for="(item, index) in arrCount"
             :key="index"
           >
             {{ item.count + "X" + item.value }}
           </div>
-          <div class="modelEgyptian-total">{{ useCount }}</div>
+          <div class="modelthegods-total">{{ useCount }}</div>
         </div> -->
       </div>
     </Teleport>
@@ -445,8 +450,8 @@ export default {
     <Teleport to="body">
       <div v-if="showRuleValue" class="modal" @click="showRule">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="EgyptianConfig.star" alt="" /> -->
-        <!-- <img class="model-img" :src="EgyptianConfig.ruleDialogEgyptian" alt="" /> -->
+        <!-- <img class="model-star" :src="thegodsConfig.star" alt="" /> -->
+        <!-- <img class="model-img" :src="thegodsConfig.ruleDialogthegods" alt="" /> -->
       </div>
     </Teleport>
   </div>
@@ -458,7 +463,7 @@ export default {
 
   width: 280px;
 }
-.Egyptiand-Egyptianp {
+.thegodsd-thegodsp {
   display: flex;
   align-items: center;
   /* padding: 60px 15px; */
@@ -470,43 +475,43 @@ export default {
 }
 .countValue {
   margin: 0 0 0 37%;
-    color: ;
+    color: #750000;
     font-size: 18px;
 }
 
-.Egyptian-count img {
+.thegods-count img {
   width: 100%;
   position: absolute;
   height: 100%;
   /* top: -16%; */
   z-index: -1;
 }
-.Egyptian-count .Egyptian-rule {
+.thegods-count .thegods-rule {
   position: absolute;
   left: -9%;
   width: 45px;
   height: 45px;
 }
-.Egyptiand-back {
-  /* background: v-bind("'url(' + EgyptianConfig.homeEgyptian + ')'") no-repeat; */
+.thegodsd-back {
+  /* background: v-bind("'url(' + thegodsConfig.homethegods + ')'") no-repeat; */
 
   width: 36px;
   height: 42px;
   background-size: 100%;
   z-index: 999;
 }
-.stEgyptian {
+.stthegods {
   margin-top: -30%;
   width: 160px;
   height: 80px;
-  background: v-bind("'url(' + EgyptianConfig.playEgyptian + ')'") no-repeat;
+  background: v-bind("'url(' + thegodsConfig.playthegods + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 }
 .container {
   display: flex;
   flex-direction: column;
-  background: v-bind("'url(' + EgyptianConfig.boxEgyptian + ')'") no-repeat;
+  background: v-bind("'url(' + thegodsConfig.boxthegods + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -516,7 +521,7 @@ export default {
   align-items: center;
 }
 
-.Egyptianp {
+.thegodsp {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -526,8 +531,8 @@ export default {
   /* height: 100vh; */
   overflow: hidden;
 
-  background: v-bind("'url(' + EgyptianConfig.anyBoxEgyptian + ')'") no-repeat;
-  background-size: 75%;
+  background: v-bind("'url(' + thegodsConfig.anyBoxthegods + ')'") no-repeat;
+  background-size: 65%;
     background-position: center 5%;
 
   color: #fff;
@@ -535,7 +540,7 @@ export default {
   font-size: 26;
 }
 
-.buttonEgyptian-box {
+.buttonthegods-box {
   position: absolute;
   top: 5%;
     left: 17%;
@@ -546,13 +551,13 @@ export default {
   height: 25%;
   /* justify-content: space-between; */
 }
-.Egyptian-count {
+.thegods-count {
   position: relative;
-  width: 49%;
-    height: 46%;
+  width: 46%;
+    height: 45%;
     margin-left: 2%;
     margin-right: -23%;
-    margin-top: 60.5%;
+    margin-top: 65%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -561,50 +566,61 @@ export default {
 }
 
 .buttons {
-  margin-left: -5%;
+  margin-left: 13%;
     margin-top: -1%;
-    margin-right: 20%;
     width: 14%;
     width: 9%;
     height: 43%;
   z-index: 999;
-  background: v-bind("'url(' + EgyptianConfig.homeEgyptian + ')'") no-repeat;
+  background: v-bind("'url(' + thegodsConfig.homethegods + ')'") no-repeat;
   background-size: 100% 100%;
 }
 .buttons2 {
   /* margin-left: 53%;
   margin-bottom: -57%; */
-  margin-left:2%;
-  margin-top: 60%;
+  margin-left: 14%;
+    margin-top: -1%;
+    margin-right: 0%;
   width: 30%;
   height: 40%;
   z-index: 999;
-  /* background: v-bind("'url(' + EgyptianConfig.seniorityEgyptian + ')'") no-repeat; */
+  /* background: v-bind("'url(' + thegodsConfig.senioritythegods + ')'") no-repeat; */
   background-size: 100% 100%;
 }
-.buttonsEgyptianBack{
-  /* margin-left: 27%;
-    margin-bottom: -58%; */
-    margin-left: 2%;
-    margin-top: 60.5%;
-    width: 19%;
-    height: 43.5%;  
+.buttonsthegodsBack{
+  position: absolute;
+    /* margin-left: 7%; */
+    top: 288%;
+    left: 46.5%;
+    /* margin-top: 56.5%; */
+    width: 17%;
+    height: 42.5%;
   z-index: 999;
-  background: v-bind("'url(' + EgyptianConfig.playEgyptian + ')'") no-repeat;
+  background: v-bind("'url(' + thegodsConfig.playthegods + ')'") no-repeat;
   background-size: 100% 100%;
 }
-.Egyptianp-he {
+
+.buttonsthegods2{
+  margin-left: 10%;
+    margin-top: 65.5%;
+    width: 42%;
+    height: 39.5%;
+  z-index: 999;
+  background: v-bind("'url(' + thegodsConfig.playthegods3 + ')'") no-repeat;
+  background-size: 100% 100%;
+}
+.thegodsp-he {
   position: relative;
   margin-right: 0%;
-  margin-top: 4%;
-  width: 76%;
-  height: 43vw;
+    margin-top: 5%;
+    width: 72%;
+    height: 43vw;
   display: flex;
   justify-content: space-between;
   transform: scale(0.72);
 }
 
-.Egyptianp-hidden {
+.thegodsp-hidden {
   /* margin-top: 2%; */
   /* margin-left: 1%; */
   margin-top: -4%;
@@ -615,7 +631,7 @@ export default {
   height: 100%;
   overflow: hidden;
 }
-.Egyptianp-item {
+.thegodsp-item {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -623,23 +639,23 @@ export default {
 
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + EgyptianConfig.anyEgyptian + ')'");
+  background: v-bind("'url(' + thegodsConfig.anythegods + ')'");
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
-  background-size:91% 270%;
+  background-size: 91% 240%;
 }
-.Egyptianp-item:nth-child(2){
+.thegodsp-item:nth-child(2){
   margin-right: 20%;
 }
-.Egyptianp-item-img {
+.thegodsp-item-img {
   position: relative;
 
   display: none;
   width: 100%;
   height: 100%;
 }
-.Egyptianp-item-img img {
+.thegodsp-item-img img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -651,7 +667,7 @@ export default {
 .modal {
   display: flex;
   justify-content: center;
-  align-items: flex-stEgyptian;
+  align-items: flex-stthegods;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -659,7 +675,7 @@ export default {
   height: 100vh;
   z-index: 9999;
   /* background-color: rgba(0, 0, 0, 0.5); */
-  /* background: v-bind("'url(' + EgyptianConfig.dialogEgyptian + ')'") no-repeat; */
+  /* background: v-bind("'url(' + thegodsConfig.dialogthegods + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star {
@@ -681,17 +697,17 @@ export default {
   width: 70%;
 }
 
-.stEgyptian-bg {
+.stthegods-bg {
   position: absolute;
 
   top: 0;
   z-index: 1;
 }
-.stEgyptian-bg img {
+.stthegods-bg img {
   width: 100%;
 }
 
-.modelEgyptian-list {
+.modelthegods-list {
   position: absolute;
   left: 60%;
   top: 39.5%;
@@ -703,33 +719,33 @@ export default {
   font-size: 16px;
   /* transform: rotate(7deg) translateX(-36px); */
 }
-.modelEgyptian-item {
+.modelthegods-item {
   margin-bottom: 11px;
 }
-.modelEgyptian-total {
+.modelthegods-total {
   padding: 7px 14px;
 }
 
-.headEgyptian {
+.headthegods {
   margin-top: 10vh;
   width: 80%;
 }
 /* 定义步长图片动画关键帧 */
 @keyframes image-animation {
   0% {
-    background-image: v-bind("'url(' + EgyptianConfig.animation1 + ')'");
+    background-image: v-bind("'url(' + thegodsConfig.animation1 + ')'");
   }
 
   25% {
-    background-image: v-bind("'url(' + EgyptianConfig.animation4 + ')'");
+    background-image: v-bind("'url(' + thegodsConfig.animation4 + ')'");
   }
 
   75% {
-    background-image: v-bind("'url(' + EgyptianConfig.animation8 + ')'");
+    background-image: v-bind("'url(' + thegodsConfig.animation8 + ')'");
   }
 
   100% {
-    background-image: v-bind("'url(' + EgyptianConfig.animation12 + ')'");
+    background-image: v-bind("'url(' + thegodsConfig.animation12 + ')'");
   }
 }
 
