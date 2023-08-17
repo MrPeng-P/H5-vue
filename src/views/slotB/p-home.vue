@@ -1,34 +1,34 @@
 <script>
-import playthegods from "@/assets/slotB7/playthegods.png";
-import playthegods3 from "@/assets/slotB7/playthegods3.png";
-import boxthegods from "@/assets/slotB7/boxthegods.jpg";
-import anythegods from "@/assets/slotB7/changethegods.png";
-import anyBoxthegods from "@/assets/slotB7/anyBoxthegods.png";
-import homethegods from "@/assets/slotB7/homethegods.png";
-// import senioritythegods from "@/assets/slotB7/senioritythegods.png";
-import countthegods from "@/assets/slotB7/countthegods.png";
-// import rulethegods from "@/assets/slotB7/rulethegods.png";
-// import ruleDialogthegods from "@/assets/slotB7/ruleDialogthegods.jpg";
-// import resultthegods from "@/assets/slotB7/resultthegods.png";
-// import headthegods from "@/assets/slotB7/headthegods.png";
+import playOaks from "@/assets/slotB8/playOaks.png";
+import playOaks3 from "@/assets/slotB8/playOaks3.png";
+import boxOaks from "@/assets/slotB8/boxOaks.jpg";
+import anyOaks from "@/assets/slotB8/changeOaks.png";
+import anyBoxOaks from "@/assets/slotB8/anyBoxOaks.png";
+import homeOaks from "@/assets/slotB8/homeOaks.png";
+// import seniorityOaks from "@/assets/slotB8/seniorityOaks.png";
+import countOaks from "@/assets/slotB8/countOaks.png";
+// import ruleOaks from "@/assets/slotB8/ruleOaks.png";
+// import ruleDialogOaks from "@/assets/slotB8/ruleDialogOaks.jpg";
+// import resultOaks from "@/assets/slotB8/resultOaks.png";
+// import headOaks from "@/assets/slotB8/headOaks.png";
 
-// import star from "@/assets/slotB7/starthegods.gif";
+// import star from "@/assets/slotB8/starOaks.gif";
 import { useRouter, useRoute } from "vue-router";
-import thegods1 from "@/assets/slotB7/thegods1.png";
-import thegods2 from "@/assets/slotB7/thegods2.png";
-import thegods3 from "@/assets/slotB7/thegods3.png";
-import thegods4 from "@/assets/slotB7/thegods4.png";
-import thegods5 from "@/assets/slotB7/thegods5.png";
-import thegods6 from "@/assets/slotB7/thegods6.png";
-import thegods7 from "@/assets/slotB7/thegods7.png";
+import Oaks1 from "@/assets/slotB8/Oaks1.png";
+import Oaks2 from "@/assets/slotB8/Oaks2.png";
+import Oaks3 from "@/assets/slotB8/Oaks3.png";
+import Oaks4 from "@/assets/slotB8/Oaks4.png";
+import Oaks5 from "@/assets/slotB8/Oaks5.png";
+import Oaks6 from "@/assets/slotB8/Oaks6.png";
+import Oaks7 from "@/assets/slotB8/Oaks7.png";
 
-// import animation1 from "@/assets/slotB7/dong/00001.png";
-// import animation4 from "@/assets/slotB7/dong/00004.png";
-// import animation8 from "@/assets/slotB7/dong/00008.png";
-// import animation12 from "@/assets/slotB7/dong/00012.png";
+// import animation1 from "@/assets/slotB8/dong/00001.png";
+// import animation4 from "@/assets/slotB8/dong/00004.png";
+// import animation8 from "@/assets/slotB8/dong/00008.png";
+// import animation12 from "@/assets/slotB8/dong/00012.png";
 
 import { inject } from "vue";
-// import football from "@/assets/slotB7/football.png";
+// import football from "@/assets/slotB8/football.png";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
@@ -60,26 +60,26 @@ export default {
     const router = new useRouter();
     // 随机生成 12 张图的数组
     let randomImages = [];
-    const thegodsConfig = reactive({
-      // headthegods,
+    const OaksConfig = reactive({
+      // headOaks,
       // animation1,
       // animation4,
       // animation8,
       // animation12,
-      anythegods,
-      playthegods,
-      playthegods3,
-      anyBoxthegods,
-      boxthegods,
-      homethegods,
+      anyOaks,
+      playOaks,
+      playOaks3,
+      anyBoxOaks,
+      boxOaks,
+      homeOaks,
       //   star,
-      // senioritythegods,
-      countthegods,
-      // rulethegods,
-      // ruleDialogthegods,
-      // resultthegods
+      // seniorityOaks,
+      countOaks,
+      // ruleOaks,
+      // ruleDialogOaks,
+      // resultOaks
     });
-    const thegodsList = reactive([
+    const OaksList = reactive([
       {
         name: "item1",
         size: 4,
@@ -108,37 +108,37 @@ export default {
     ]);
     let timeOhter = 0;
     let id;
-    let stthegods = ref(false);
+    let stOaks = ref(false);
     let open = ref(false);
     let buttonStatus = ref(true);
     const images = [
       {
-        img: thegods1,
-        name: "thegods2",
+        img: Oaks1,
+        name: "Oaks2",
         className: "animation",
         count: 1800 * magnification.value,
       },
       {
-        img: thegods2,
-        name: "thegods1",
+        img: Oaks2,
+        name: "Oaks1",
         className: "animation",
         count: 1000 * magnification.value,
       },
       {
-        img: thegods3,
+        img: Oaks3,
       },
       {
-        img: thegods4,
+        img: Oaks4,
       },
       {
-        img: thegods5,
+        img: Oaks5,
       },
       {
-        img: thegods6,
+        img: Oaks6,
       },
       {
-        img: thegods7,
-        name: "thegods3",
+        img: Oaks7,
+        name: "Oaks3",
         className: "animation",
         count: 2200 * magnification.value,
       },
@@ -157,11 +157,11 @@ export default {
         buttonStatus.value = false;
 
         allMethods.clear();
-        const boxLists = thegodsList.map((item) => {
+        const boxLists = OaksList.map((item) => {
           return document.getElementById(item.name);
         });
         boxLists[0].style.setProperty("background-position-x", "center");
-        boxLists[0].querySelectorAll(".thegodsp-item-img").forEach((child) => {
+        boxLists[0].querySelectorAll(".Oaksp-item-img").forEach((child) => {
           child.style.setProperty("display", "none");
         });
         // boxLists.forEach((item)=>{
@@ -174,9 +174,9 @@ export default {
         //       0+'px'
         //     );
         // })
-        const content = document.getElementById("thegodsp-he");
-        const box2 = document.getElementById("thegodsp");
-        const coords = { x: 0, y: 0 }; // Stthegods at (0, 0)
+        const content = document.getElementById("Oaksp-he");
+        const box2 = document.getElementById("Oaksp");
+        const coords = { x: 0, y: 0 }; // StOaks at (0, 0)
         const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to(
             { x: 0, y: (1120 * content.clientHeight) / box2.clientHeight },
@@ -220,7 +220,7 @@ export default {
           .repeat(Infinity)
           .yoyo(false)
           .repeatDelay(0);
-          tween.start(); // Stthegods the tween immediately.
+          tween.start(); // StOaks the tween immediately.
         let nowDate = window.performance.now();
         function animate(time) {
           timeOhter = time - nowDate;
@@ -244,38 +244,38 @@ export default {
           }
           if (i > 0 && i < 4) {
             boxLists[i].style.setProperty("background-position-x", "center");
-            boxLists[i].querySelectorAll(".thegodsp-item-img").forEach((child) => {
+            boxLists[i].querySelectorAll(".Oaksp-item-img").forEach((child) => {
               child.style.setProperty("display", "none");
             });
           }
           if (i == 3) {
             boxLists[0].style.setProperty("background-position-x", 600 + "px");
-            boxLists[0].querySelectorAll(".thegodsp-item-img").forEach((child) => {
+            boxLists[0].querySelectorAll(".Oaksp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 4) {
             boxLists[1].style.setProperty("background-position-x", 600 + "px");
-            boxLists[1].querySelectorAll(".thegodsp-item-img").forEach((child) => {
+            boxLists[1].querySelectorAll(".Oaksp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 5) {
             boxLists[2].style.setProperty("background-position-x", 600 + "px");
-            boxLists[2].querySelectorAll(".thegodsp-item-img").forEach((child) => {
+            boxLists[2].querySelectorAll(".Oaksp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 6) {
             boxLists[3].style.setProperty("background-position-x", 600 + "px");
-            boxLists[3].querySelectorAll(".thegodsp-item-img").forEach((child) => {
+            boxLists[3].querySelectorAll(".Oaksp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
             countValue.value += useCount.value*magn;
           }
           // if (i == 7) {
           //   boxLists[4].style.setProperty("background-position-x", 600 + "px");
-          //   boxLists[4].querySelectorAll(".thegodsp-item-img").forEach((child) => {
+          //   boxLists[4].querySelectorAll(".Oaksp-item-img").forEach((child) => {
           //     child.style.setProperty("display", "block");
           //   });
           //   countValue.value += useCount.value;
@@ -326,7 +326,7 @@ export default {
           randomImages.push(randomImage);
         }
 
-        allMethods.assignImageList(thegodsList, randomImages);
+        allMethods.assignImageList(OaksList, randomImages);
       },
       // 随机生成图像列表
       shuffleArray(array) {
@@ -335,11 +335,11 @@ export default {
           [array[i], array[j]] = [array[j], array[i]];
         }
         array.forEach((item) => {
-          if (item.name == "thegods1") {
+          if (item.name == "Oaks1") {
             arrCount[0].value++;
-          } else if (item.name == "thegods2") {
+          } else if (item.name == "Oaks2") {
             arrCount[1].value++;
-          } else if (item.name == "thegods3") {
+          } else if (item.name == "Oaks3") {
             arrCount[2].value++;
           }
           if (item.count) {
@@ -349,13 +349,13 @@ export default {
         return array;
       },
 
-      // 将图像列表分配给thegodsList
-      assignImageList(thegodsList, images) {
+      // 将图像列表分配给OaksList
+      assignImageList(OaksList, images) {
         const shuffledImages = allMethods.shuffleArray(images.slice()); // 避免修改原始数组
 
         let currentIndex = 0;
 
-        thegodsList.forEach((item) => {
+        OaksList.forEach((item) => {
           const numImages = Math.min(item.size, 3);
           item.imgList = shuffledImages.slice(
             currentIndex,
@@ -363,7 +363,7 @@ export default {
           );
           currentIndex += numImages;
         });
-        return thegodsList;
+        return OaksList;
       },
       goSeniority: () => {
         router.push("/list");
@@ -373,10 +373,10 @@ export default {
     return {
       className,
       open,
-      stthegods,
-      thegodsConfig,
+      stOaks,
+      OaksConfig,
       randomImages,
-      thegodsList,
+      OaksList,
       countValue,
       useCount,
       showRuleValue,
@@ -388,22 +388,22 @@ export default {
 </script>
 <template>
   <div :class="className">
-    <!-- <img class="headthegods" :src="thegodsConfig.headthegods" alt=""> -->
-    <div class="thegodsp" id="thegodsp">
-      <div class="thegodsp-he" id="thegodsp-he">
-        <!-- <img class="thegods-rule" @click="showRule" :src="thegodsConfig.rulethegods" alt=""> -->
-        <div class="thegodsp-hidden">
+    <!-- <img class="headOaks" :src="OaksConfig.headOaks" alt=""> -->
+    <div class="Oaksp" id="Oaksp">
+      <div class="Oaksp-he" id="Oaksp-he">
+        <!-- <img class="Oaks-rule" @click="showRule" :src="OaksConfig.ruleOaks" alt=""> -->
+        <div class="Oaksp-hidden">
           <div
-            class="thegodsp-item"
+            class="Oaksp-item"
             :id="item.name"
-            v-for="(item, index) in thegodsList"
+            v-for="(item, index) in OaksList"
           >
             <div
               v-for="(imgItem, imgIndex) in item.imgList"
               :class="
                 imgItem.className
-                  ? 'thegodsp-item-img ' + imgItem.className
-                  : 'thegodsp-item-img'
+                  ? 'Oaksp-item-img ' + imgItem.className
+                  : 'Oaksp-item-img'
               "
             >
               <img :src="imgItem.img" alt="" />
@@ -411,38 +411,39 @@ export default {
           </div>
         </div>
       </div>
-      <div class="buttonthegods-box">
-        <div class="buttonsthegods2" @click="run(2)"></div>
+      <div class="buttonOaks-box">
+        <div class="buttons" @click="close"></div>
+
+        <div class="buttonsOaks2" @click="run(2)"></div>
        
-        <div class="buttonsthegodsBack" @click="run()"></div>
+        <div class="buttonsOaksBack" @click="run()"></div>
 
         <!-- <div class="buttons2" @click="goSeniority"></div> -->
 
-        <div class="thegods-count" @click="showRule">
-          <!-- <img class="thegods-rule" :src="thegodsConfig.rulethegods" alt="" /> -->
-          <img :src="thegodsConfig.countthegods" alt="" />
+        <div class="Oaks-count" @click="showRule">
+          <!-- <img class="Oaks-rule" :src="OaksConfig.ruleOaks" alt="" /> -->
+          <img :src="OaksConfig.countOaks" alt="" />
           <div class="countValue">{{ countValue }}</div>
         </div>
-        <div class="buttons" @click="close"></div>
       </div>
-      <div class="thegodsd-thegodsp">
-        <div class="thegodsd-back" @click="close"></div>
+      <div class="Oaksd-Oaksp">
+        <div class="Oaksd-back" @click="close"></div>
       </div>
     </div>
     <Teleport to="body">
       <div v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="thegodsConfig.star" alt="" /> -->
-        <!-- <img class="model-img-bg" :src="thegodsConfig.resultthegods" alt="" /> -->
-        <!-- <div class="modelthegods-list">
+        <!-- <img class="model-star" :src="OaksConfig.star" alt="" /> -->
+        <!-- <img class="model-img-bg" :src="OaksConfig.resultOaks" alt="" /> -->
+        <!-- <div class="modelOaks-list">
           <div
-            class="modelthegods-item"
+            class="modelOaks-item"
             v-for="(item, index) in arrCount"
             :key="index"
           >
             {{ item.count + "X" + item.value }}
           </div>
-          <div class="modelthegods-total">{{ useCount }}</div>
+          <div class="modelOaks-total">{{ useCount }}</div>
         </div> -->
       </div>
     </Teleport>
@@ -450,8 +451,8 @@ export default {
     <Teleport to="body">
       <div v-if="showRuleValue" class="modal" @click="showRule">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="thegodsConfig.star" alt="" /> -->
-        <!-- <img class="model-img" :src="thegodsConfig.ruleDialogthegods" alt="" /> -->
+        <!-- <img class="model-star" :src="OaksConfig.star" alt="" /> -->
+        <!-- <img class="model-img" :src="OaksConfig.ruleDialogOaks" alt="" /> -->
       </div>
     </Teleport>
   </div>
@@ -463,7 +464,7 @@ export default {
 
   width: 280px;
 }
-.thegodsd-thegodsp {
+.Oaksd-Oaksp {
   display: flex;
   align-items: center;
   /* padding: 60px 15px; */
@@ -475,43 +476,43 @@ export default {
 }
 .countValue {
   margin: 0 0 0 37%;
-    color: #750000;
+    color: #FFF;
     font-size: 18px;
 }
 
-.thegods-count img {
+.Oaks-count img {
   width: 100%;
   position: absolute;
   height: 100%;
   /* top: -16%; */
   z-index: -1;
 }
-.thegods-count .thegods-rule {
+.Oaks-count .Oaks-rule {
   position: absolute;
   left: -9%;
   width: 45px;
   height: 45px;
 }
-.thegodsd-back {
-  /* background: v-bind("'url(' + thegodsConfig.homethegods + ')'") no-repeat; */
+.Oaksd-back {
+  /* background: v-bind("'url(' + OaksConfig.homeOaks + ')'") no-repeat; */
 
   width: 36px;
   height: 42px;
   background-size: 100%;
   z-index: 999;
 }
-.stthegods {
+.stOaks {
   margin-top: -30%;
   width: 160px;
   height: 80px;
-  background: v-bind("'url(' + thegodsConfig.playthegods + ')'") no-repeat;
+  background: v-bind("'url(' + OaksConfig.playOaks + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 }
 .container {
   display: flex;
   flex-direction: column;
-  background: v-bind("'url(' + thegodsConfig.boxthegods + ')'") no-repeat;
+  background: v-bind("'url(' + OaksConfig.boxOaks + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -521,7 +522,7 @@ export default {
   align-items: center;
 }
 
-.thegodsp {
+.Oaksp {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -531,7 +532,7 @@ export default {
   /* height: 100vh; */
   overflow: hidden;
 
-  background: v-bind("'url(' + thegodsConfig.anyBoxthegods + ')'") no-repeat;
+  background: v-bind("'url(' + OaksConfig.anyBoxOaks + ')'") no-repeat;
   background-size: 65%;
     background-position: center 5%;
 
@@ -540,7 +541,7 @@ export default {
   font-size: 26;
 }
 
-.buttonthegods-box {
+.buttonOaks-box {
   position: absolute;
   top: 5%;
     left: 17%;
@@ -551,7 +552,7 @@ export default {
   height: 25%;
   /* justify-content: space-between; */
 }
-.thegods-count {
+.Oaks-count {
   position: relative;
   width: 46%;
     height: 45%;
@@ -566,28 +567,27 @@ export default {
 }
 
 .buttons {
-  margin-left: 13%;
     margin-top: -1%;
     width: 14%;
     width: 9%;
     height: 43%;
   z-index: 999;
-  background: v-bind("'url(' + thegodsConfig.homethegods + ')'") no-repeat;
+  background: v-bind("'url(' + OaksConfig.homeOaks + ')'") no-repeat;
   background-size: 100% 100%;
 }
 .buttons2 {
   /* margin-left: 53%;
   margin-bottom: -57%; */
-  margin-left: 14%;
+  /* margin-left: 4%; */
     margin-top: -1%;
     margin-right: 0%;
   width: 30%;
   height: 40%;
   z-index: 999;
-  /* background: v-bind("'url(' + thegodsConfig.senioritythegods + ')'") no-repeat; */
+  /* background: v-bind("'url(' + OaksConfig.seniorityOaks + ')'") no-repeat; */
   background-size: 100% 100%;
 }
-.buttonsthegodsBack{
+.buttonsOaksBack{
   position: absolute;
     /* margin-left: 7%; */
     top: 288%;
@@ -596,20 +596,20 @@ export default {
     width: 17%;
     height: 42.5%;
   z-index: 999;
-  background: v-bind("'url(' + thegodsConfig.playthegods + ')'") no-repeat;
+  background: v-bind("'url(' + OaksConfig.playOaks + ')'") no-repeat;
   background-size: 100% 100%;
 }
 
-.buttonsthegods2{
-  margin-left: 10%;
+.buttonsOaks2{
+  margin-left: 4%;
     margin-top: 65.5%;
     width: 42%;
     height: 39.5%;
   z-index: 999;
-  background: v-bind("'url(' + thegodsConfig.playthegods3 + ')'") no-repeat;
+  background: v-bind("'url(' + OaksConfig.playOaks3 + ')'") no-repeat;
   background-size: 100% 100%;
 }
-.thegodsp-he {
+.Oaksp-he {
   position: relative;
   margin-right: 0%;
     margin-top: 5%;
@@ -620,7 +620,7 @@ export default {
   transform: scale(0.72);
 }
 
-.thegodsp-hidden {
+.Oaksp-hidden {
   /* margin-top: 2%; */
   /* margin-left: 1%; */
   margin-top: -4%;
@@ -631,7 +631,7 @@ export default {
   height: 100%;
   overflow: hidden;
 }
-.thegodsp-item {
+.Oaksp-item {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -639,23 +639,23 @@ export default {
 
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + thegodsConfig.anythegods + ')'");
+  background: v-bind("'url(' + OaksConfig.anyOaks + ')'");
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
-  background-size: 91% 240%;
+  background-size:104% 271%;;
 }
-.thegodsp-item:nth-child(2){
+.Oaksp-item:nth-child(2){
   margin-right: 20%;
 }
-.thegodsp-item-img {
+.Oaksp-item-img {
   position: relative;
 
   display: none;
   width: 100%;
   height: 100%;
 }
-.thegodsp-item-img img {
+.Oaksp-item-img img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -667,7 +667,7 @@ export default {
 .modal {
   display: flex;
   justify-content: center;
-  align-items: flex-stthegods;
+  align-items: flex-stOaks;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -675,7 +675,7 @@ export default {
   height: 100vh;
   z-index: 9999;
   /* background-color: rgba(0, 0, 0, 0.5); */
-  /* background: v-bind("'url(' + thegodsConfig.dialogthegods + ')'") no-repeat; */
+  /* background: v-bind("'url(' + OaksConfig.dialogOaks + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star {
@@ -697,17 +697,17 @@ export default {
   width: 70%;
 }
 
-.stthegods-bg {
+.stOaks-bg {
   position: absolute;
 
   top: 0;
   z-index: 1;
 }
-.stthegods-bg img {
+.stOaks-bg img {
   width: 100%;
 }
 
-.modelthegods-list {
+.modelOaks-list {
   position: absolute;
   left: 60%;
   top: 39.5%;
@@ -719,33 +719,33 @@ export default {
   font-size: 16px;
   /* transform: rotate(7deg) translateX(-36px); */
 }
-.modelthegods-item {
+.modelOaks-item {
   margin-bottom: 11px;
 }
-.modelthegods-total {
+.modelOaks-total {
   padding: 7px 14px;
 }
 
-.headthegods {
+.headOaks {
   margin-top: 10vh;
   width: 80%;
 }
 /* 定义步长图片动画关键帧 */
 @keyframes image-animation {
   0% {
-    background-image: v-bind("'url(' + thegodsConfig.animation1 + ')'");
+    background-image: v-bind("'url(' + OaksConfig.animation1 + ')'");
   }
 
   25% {
-    background-image: v-bind("'url(' + thegodsConfig.animation4 + ')'");
+    background-image: v-bind("'url(' + OaksConfig.animation4 + ')'");
   }
 
   75% {
-    background-image: v-bind("'url(' + thegodsConfig.animation8 + ')'");
+    background-image: v-bind("'url(' + OaksConfig.animation8 + ')'");
   }
 
   100% {
-    background-image: v-bind("'url(' + thegodsConfig.animation12 + ')'");
+    background-image: v-bind("'url(' + OaksConfig.animation12 + ')'");
   }
 }
 

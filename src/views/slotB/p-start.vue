@@ -1,7 +1,7 @@
 <script>
 
-import playthegods from "@/assets/slotB7/playthegods2.png";
-import boxthegods from "@/assets/slotB7/boxthegods.jpg";
+import playOaks from "@/assets/slotB8/playOaks2.png";
+import boxOaks from "@/assets/slotB8/boxOaks.jpg";
 import { onMounted, reactive, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
@@ -9,9 +9,9 @@ export default {
   setup() {
     const router = new useRouter();
     const className = "container";
-    const thegodsConfig = reactive({
-      playthegods,
-      boxthegods,
+    const OaksConfig = reactive({
+      playOaks,
+      boxOaks,
     });
    
 
@@ -25,7 +25,7 @@ export default {
     });
     return {
         className,
-      thegodsConfig,
+      OaksConfig,
       ...allMethods,
     };
   },
@@ -34,7 +34,7 @@ export default {
 <template>
   
   <div :class="className" @click="goHome">
-    <div class="stthegods" >
+    <div class="stOaks" >
     </div>
   </div>
 </template>
@@ -42,17 +42,17 @@ export default {
 <style scoped>
 
 
-.stthegods{
+.stOaks{
   margin-top: 4%;
-    width: 50%;
+    width: 65%;
     height: 252px;
-  background: v-bind("'url(' + thegodsConfig.playthegods + ')'") no-repeat;
+  background: v-bind("'url(' + OaksConfig.playOaks + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 
 }
 .container {
-  background: v-bind("'url(' + thegodsConfig.boxthegods + ')'") no-repeat;
+  background: v-bind("'url(' + OaksConfig.boxOaks + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -63,7 +63,7 @@ export default {
 }
 
 
-.thegodsp-he {
+.Oaksp-he {
   position: relative;
     margin-top: 26%;
     width: 140%;
@@ -72,7 +72,7 @@ export default {
     justify-content: space-between;
     transform: scale(0.65);
 }
-.thegodsp-hidden{
+.Oaksp-hidden{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -81,11 +81,11 @@ export default {
   overflow: hidden;
 
 }
-.thegodsp-item {
+.Oaksp-item {
   
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + thegodsConfig.anythegods + ')'") ;
+  background: v-bind("'url(' + OaksConfig.anyOaks + ')'") ;
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
@@ -95,7 +95,7 @@ export default {
   padding-top: 155px;
     display: flex;
     justify-content: center;
-    align-items: flex-stthegods;
+    align-items: flex-stOaks;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -103,7 +103,7 @@ export default {
     height: 100vh;
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.5);
-  /* background: v-bind("'url(' + thegodsConfig.dialogthegods + ')'") no-repeat; */
+  /* background: v-bind("'url(' + OaksConfig.dialogOaks + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star{
@@ -115,12 +115,12 @@ export default {
 
 }
 
-.stthegods-bg{
+.stOaks-bg{
     position: absolute;
     top: 0;
     z-index: 1;
 }
-.stthegods-bg img{
+.stOaks-bg img{
     width: 100%;
 }
 </style>
