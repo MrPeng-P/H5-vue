@@ -1,34 +1,34 @@
 <script>
-import playOaks from "@/assets/slotB8/playOaks.png";
-import playOaks3 from "@/assets/slotB8/playOaks3.png";
-import boxOaks from "@/assets/slotB8/boxOaks.jpg";
-import anyOaks from "@/assets/slotB8/changeOaks.png";
-import anyBoxOaks from "@/assets/slotB8/anyBoxOaks.png";
-import homeOaks from "@/assets/slotB8/homeOaks.png";
-// import seniorityOaks from "@/assets/slotB8/seniorityOaks.png";
-import countOaks from "@/assets/slotB8/countOaks.png";
-// import ruleOaks from "@/assets/slotB8/ruleOaks.png";
-// import ruleDialogOaks from "@/assets/slotB8/ruleDialogOaks.jpg";
-// import resultOaks from "@/assets/slotB8/resultOaks.png";
-// import headOaks from "@/assets/slotB8/headOaks.png";
+import playrunes from "@/assets/slotB9/playrunes.png";
+import playrunes3 from "@/assets/slotB9/playrunes3.png";
+import boxrunes from "@/assets/slotB9/boxrunes.jpg";
+import anyrunes from "@/assets/slotB9/changerunes.png";
+import anyBoxrunes from "@/assets/slotB9/anyBoxrunes.png";
+import homerunes from "@/assets/slotB9/homerunes.png";
+// import seniorityrunes from "@/assets/slotB9/seniorityrunes.png";
+import countrunes from "@/assets/slotB9/countrunes.png";
+// import rulerunes from "@/assets/slotB9/rulerunes.png";
+// import ruleDialogrunes from "@/assets/slotB9/ruleDialogrunes.jpg";
+// import resultrunes from "@/assets/slotB9/resultrunes.png";
+// import headrunes from "@/assets/slotB9/headrunes.png";
 
-// import star from "@/assets/slotB8/starOaks.gif";
+// import star from "@/assets/slotB9/starrunes.gif";
 import { useRouter, useRoute } from "vue-router";
-import Oaks1 from "@/assets/slotB8/Oaks1.png";
-import Oaks2 from "@/assets/slotB8/Oaks2.png";
-import Oaks3 from "@/assets/slotB8/Oaks3.png";
-import Oaks4 from "@/assets/slotB8/Oaks4.png";
-import Oaks5 from "@/assets/slotB8/Oaks5.png";
-import Oaks6 from "@/assets/slotB8/Oaks6.png";
-import Oaks7 from "@/assets/slotB8/Oaks7.png";
+import runes1 from "@/assets/slotB9/runes1.png";
+import runes2 from "@/assets/slotB9/runes2.png";
+import runes3 from "@/assets/slotB9/runes3.png";
+import runes4 from "@/assets/slotB9/runes4.png";
+import runes5 from "@/assets/slotB9/runes5.png";
+import runes6 from "@/assets/slotB9/runes6.png";
+import runes7 from "@/assets/slotB9/runes7.png";
 
-// import animation1 from "@/assets/slotB8/dong/00001.png";
-// import animation4 from "@/assets/slotB8/dong/00004.png";
-// import animation8 from "@/assets/slotB8/dong/00008.png";
-// import animation12 from "@/assets/slotB8/dong/00012.png";
+// import animation1 from "@/assets/slotB9/dong/00001.png";
+// import animation4 from "@/assets/slotB9/dong/00004.png";
+// import animation8 from "@/assets/slotB9/dong/00008.png";
+// import animation12 from "@/assets/slotB9/dong/00012.png";
 
 import { inject } from "vue";
-// import football from "@/assets/slotB8/football.png";
+// import football from "@/assets/slotB9/football.png";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
@@ -60,26 +60,26 @@ export default {
     const router = new useRouter();
     // 随机生成 12 张图的数组
     let randomImages = [];
-    const OaksConfig = reactive({
-      // headOaks,
+    const runesConfig = reactive({
+      // headrunes,
       // animation1,
       // animation4,
       // animation8,
       // animation12,
-      anyOaks,
-      playOaks,
-      playOaks3,
-      anyBoxOaks,
-      boxOaks,
-      homeOaks,
+      anyrunes,
+      playrunes,
+      playrunes3,
+      anyBoxrunes,
+      boxrunes,
+      homerunes,
       //   star,
-      // seniorityOaks,
-      countOaks,
-      // ruleOaks,
-      // ruleDialogOaks,
-      // resultOaks
+      // seniorityrunes,
+      countrunes,
+      // rulerunes,
+      // ruleDialogrunes,
+      // resultrunes
     });
-    const OaksList = reactive([
+    const runesList = reactive([
       {
         name: "item1",
         size: 4,
@@ -108,37 +108,37 @@ export default {
     ]);
     let timeOhter = 0;
     let id;
-    let stOaks = ref(false);
+    let strunes = ref(false);
     let open = ref(false);
     let buttonStatus = ref(true);
     const images = [
       {
-        img: Oaks1,
-        name: "Oaks2",
+        img: runes1,
+        name: "runes2",
         className: "animation",
         count: 1800 * magnification.value,
       },
       {
-        img: Oaks2,
-        name: "Oaks1",
+        img: runes2,
+        name: "runes1",
         className: "animation",
         count: 1000 * magnification.value,
       },
       {
-        img: Oaks3,
+        img: runes3,
       },
       {
-        img: Oaks4,
+        img: runes4,
       },
       {
-        img: Oaks5,
+        img: runes5,
       },
       {
-        img: Oaks6,
+        img: runes6,
       },
       {
-        img: Oaks7,
-        name: "Oaks3",
+        img: runes7,
+        name: "runes3",
         className: "animation",
         count: 2200 * magnification.value,
       },
@@ -157,11 +157,11 @@ export default {
         buttonStatus.value = false;
 
         allMethods.clear();
-        const boxLists = OaksList.map((item) => {
+        const boxLists = runesList.map((item) => {
           return document.getElementById(item.name);
         });
         boxLists[0].style.setProperty("background-position-x", "center");
-        boxLists[0].querySelectorAll(".Oaksp-item-img").forEach((child) => {
+        boxLists[0].querySelectorAll(".runesp-item-img").forEach((child) => {
           child.style.setProperty("display", "none");
         });
         // boxLists.forEach((item)=>{
@@ -174,9 +174,9 @@ export default {
         //       0+'px'
         //     );
         // })
-        const content = document.getElementById("Oaksp-he");
-        const box2 = document.getElementById("Oaksp");
-        const coords = { x: 0, y: 0 }; // StOaks at (0, 0)
+        const content = document.getElementById("runesp-he");
+        const box2 = document.getElementById("runesp");
+        const coords = { x: 0, y: 0 }; // Strunes at (0, 0)
         const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to(
             { x: 0, y: (1120 * content.clientHeight) / box2.clientHeight },
@@ -220,7 +220,7 @@ export default {
           .repeat(Infinity)
           .yoyo(false)
           .repeatDelay(0);
-          tween.start(); // StOaks the tween immediately.
+          tween.start(); // Strunes the tween immediately.
         let nowDate = window.performance.now();
         function animate(time) {
           timeOhter = time - nowDate;
@@ -244,38 +244,38 @@ export default {
           }
           if (i > 0 && i < 4) {
             boxLists[i].style.setProperty("background-position-x", "center");
-            boxLists[i].querySelectorAll(".Oaksp-item-img").forEach((child) => {
+            boxLists[i].querySelectorAll(".runesp-item-img").forEach((child) => {
               child.style.setProperty("display", "none");
             });
           }
           if (i == 3) {
             boxLists[0].style.setProperty("background-position-x", 600 + "px");
-            boxLists[0].querySelectorAll(".Oaksp-item-img").forEach((child) => {
+            boxLists[0].querySelectorAll(".runesp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 4) {
             boxLists[1].style.setProperty("background-position-x", 600 + "px");
-            boxLists[1].querySelectorAll(".Oaksp-item-img").forEach((child) => {
+            boxLists[1].querySelectorAll(".runesp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 5) {
             boxLists[2].style.setProperty("background-position-x", 600 + "px");
-            boxLists[2].querySelectorAll(".Oaksp-item-img").forEach((child) => {
+            boxLists[2].querySelectorAll(".runesp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 6) {
             boxLists[3].style.setProperty("background-position-x", 600 + "px");
-            boxLists[3].querySelectorAll(".Oaksp-item-img").forEach((child) => {
+            boxLists[3].querySelectorAll(".runesp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
             countValue.value += useCount.value*magn;
           }
           // if (i == 7) {
           //   boxLists[4].style.setProperty("background-position-x", 600 + "px");
-          //   boxLists[4].querySelectorAll(".Oaksp-item-img").forEach((child) => {
+          //   boxLists[4].querySelectorAll(".runesp-item-img").forEach((child) => {
           //     child.style.setProperty("display", "block");
           //   });
           //   countValue.value += useCount.value;
@@ -326,7 +326,7 @@ export default {
           randomImages.push(randomImage);
         }
 
-        allMethods.assignImageList(OaksList, randomImages);
+        allMethods.assignImageList(runesList, randomImages);
       },
       // 随机生成图像列表
       shuffleArray(array) {
@@ -335,11 +335,11 @@ export default {
           [array[i], array[j]] = [array[j], array[i]];
         }
         array.forEach((item) => {
-          if (item.name == "Oaks1") {
+          if (item.name == "runes1") {
             arrCount[0].value++;
-          } else if (item.name == "Oaks2") {
+          } else if (item.name == "runes2") {
             arrCount[1].value++;
-          } else if (item.name == "Oaks3") {
+          } else if (item.name == "runes3") {
             arrCount[2].value++;
           }
           if (item.count) {
@@ -349,13 +349,13 @@ export default {
         return array;
       },
 
-      // 将图像列表分配给OaksList
-      assignImageList(OaksList, images) {
+      // 将图像列表分配给runesList
+      assignImageList(runesList, images) {
         const shuffledImages = allMethods.shuffleArray(images.slice()); // 避免修改原始数组
 
         let currentIndex = 0;
 
-        OaksList.forEach((item) => {
+        runesList.forEach((item) => {
           const numImages = Math.min(item.size, 3);
           item.imgList = shuffledImages.slice(
             currentIndex,
@@ -363,7 +363,7 @@ export default {
           );
           currentIndex += numImages;
         });
-        return OaksList;
+        return runesList;
       },
       goSeniority: () => {
         router.push("/list");
@@ -373,10 +373,10 @@ export default {
     return {
       className,
       open,
-      stOaks,
-      OaksConfig,
+      strunes,
+      runesConfig,
       randomImages,
-      OaksList,
+      runesList,
       countValue,
       useCount,
       showRuleValue,
@@ -388,22 +388,22 @@ export default {
 </script>
 <template>
   <div :class="className">
-    <!-- <img class="headOaks" :src="OaksConfig.headOaks" alt=""> -->
-    <div class="Oaksp" id="Oaksp">
-      <div class="Oaksp-he" id="Oaksp-he">
-        <!-- <img class="Oaks-rule" @click="showRule" :src="OaksConfig.ruleOaks" alt=""> -->
-        <div class="Oaksp-hidden">
+    <!-- <img class="headrunes" :src="runesConfig.headrunes" alt=""> -->
+    <div class="runesp" id="runesp">
+      <div class="runesp-he" id="runesp-he">
+        <!-- <img class="runes-rule" @click="showRule" :src="runesConfig.rulerunes" alt=""> -->
+        <div class="runesp-hidden">
           <div
-            class="Oaksp-item"
+            class="runesp-item"
             :id="item.name"
-            v-for="(item, index) in OaksList"
+            v-for="(item, index) in runesList"
           >
             <div
               v-for="(imgItem, imgIndex) in item.imgList"
               :class="
                 imgItem.className
-                  ? 'Oaksp-item-img ' + imgItem.className
-                  : 'Oaksp-item-img'
+                  ? 'runesp-item-img ' + imgItem.className
+                  : 'runesp-item-img'
               "
             >
               <img :src="imgItem.img" alt="" />
@@ -411,39 +411,39 @@ export default {
           </div>
         </div>
       </div>
-      <div class="buttonOaks-box">
+      <div class="buttonrunes-box">
         <div class="buttons" @click="close"></div>
 
-        <div class="buttonsOaks2" @click="run(2)"></div>
+        <div class="buttonsrunes2" @click="run(2)"></div>
        
-        <div class="buttonsOaksBack" @click="run()"></div>
+        <div class="buttonsrunesBack" @click="run()"></div>
 
         <!-- <div class="buttons2" @click="goSeniority"></div> -->
 
-        <div class="Oaks-count" @click="showRule">
-          <!-- <img class="Oaks-rule" :src="OaksConfig.ruleOaks" alt="" /> -->
-          <img :src="OaksConfig.countOaks" alt="" />
+        <div class="runes-count" @click="showRule">
+          <!-- <img class="runes-rule" :src="runesConfig.rulerunes" alt="" /> -->
+          <img :src="runesConfig.countrunes" alt="" />
           <div class="countValue">{{ countValue }}</div>
         </div>
       </div>
-      <div class="Oaksd-Oaksp">
-        <div class="Oaksd-back" @click="close"></div>
+      <div class="runesd-runesp">
+        <div class="runesd-back" @click="close"></div>
       </div>
     </div>
     <Teleport to="body">
       <div v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="OaksConfig.star" alt="" /> -->
-        <!-- <img class="model-img-bg" :src="OaksConfig.resultOaks" alt="" /> -->
-        <!-- <div class="modelOaks-list">
+        <!-- <img class="model-star" :src="runesConfig.star" alt="" /> -->
+        <!-- <img class="model-img-bg" :src="runesConfig.resultrunes" alt="" /> -->
+        <!-- <div class="modelrunes-list">
           <div
-            class="modelOaks-item"
+            class="modelrunes-item"
             v-for="(item, index) in arrCount"
             :key="index"
           >
             {{ item.count + "X" + item.value }}
           </div>
-          <div class="modelOaks-total">{{ useCount }}</div>
+          <div class="modelrunes-total">{{ useCount }}</div>
         </div> -->
       </div>
     </Teleport>
@@ -451,8 +451,8 @@ export default {
     <Teleport to="body">
       <div v-if="showRuleValue" class="modal" @click="showRule">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="OaksConfig.star" alt="" /> -->
-        <!-- <img class="model-img" :src="OaksConfig.ruleDialogOaks" alt="" /> -->
+        <!-- <img class="model-star" :src="runesConfig.star" alt="" /> -->
+        <!-- <img class="model-img" :src="runesConfig.ruleDialogrunes" alt="" /> -->
       </div>
     </Teleport>
   </div>
@@ -464,7 +464,7 @@ export default {
 
   width: 280px;
 }
-.Oaksd-Oaksp {
+.runesd-runesp {
   display: flex;
   align-items: center;
   /* padding: 60px 15px; */
@@ -480,39 +480,39 @@ export default {
     font-size: 18px;
 }
 
-.Oaks-count img {
+.runes-count img {
   width: 100%;
   position: absolute;
   height: 100%;
   /* top: -16%; */
   z-index: -1;
 }
-.Oaks-count .Oaks-rule {
+.runes-count .runes-rule {
   position: absolute;
   left: -9%;
   width: 45px;
   height: 45px;
 }
-.Oaksd-back {
-  /* background: v-bind("'url(' + OaksConfig.homeOaks + ')'") no-repeat; */
+.runesd-back {
+  /* background: v-bind("'url(' + runesConfig.homerunes + ')'") no-repeat; */
 
   width: 36px;
   height: 42px;
   background-size: 100%;
   z-index: 999;
 }
-.stOaks {
+.strunes {
   margin-top: -30%;
   width: 160px;
   height: 80px;
-  background: v-bind("'url(' + OaksConfig.playOaks + ')'") no-repeat;
+  background: v-bind("'url(' + runesConfig.playrunes + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 }
 .container {
   display: flex;
   flex-direction: column;
-  background: v-bind("'url(' + OaksConfig.boxOaks + ')'") no-repeat;
+  background: v-bind("'url(' + runesConfig.boxrunes + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -522,7 +522,7 @@ export default {
   align-items: center;
 }
 
-.Oaksp {
+.runesp {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -532,8 +532,8 @@ export default {
   /* height: 100vh; */
   overflow: hidden;
 
-  background: v-bind("'url(' + OaksConfig.anyBoxOaks + ')'") no-repeat;
-  background-size: 65%;
+  background: v-bind("'url(' + runesConfig.anyBoxrunes + ')'") no-repeat;
+  background-size: 60%;
     background-position: center 5%;
 
   color: #fff;
@@ -541,7 +541,7 @@ export default {
   font-size: 26;
 }
 
-.buttonOaks-box {
+.buttonrunes-box {
   position: absolute;
   top: 5%;
     left: 17%;
@@ -552,13 +552,13 @@ export default {
   height: 25%;
   /* justify-content: space-between; */
 }
-.Oaks-count {
+.runes-count {
   position: relative;
   width: 46%;
     height: 45%;
     margin-left: 2%;
     margin-right: -23%;
-    margin-top: 65%;
+    margin-top: 64%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -567,12 +567,13 @@ export default {
 }
 
 .buttons {
+  margin-left: 5%;
     margin-top: -1%;
-    width: 14%;
-    width: 9%;
+    width: 12%;
+
     height: 43%;
   z-index: 999;
-  background: v-bind("'url(' + OaksConfig.homeOaks + ')'") no-repeat;
+  background: v-bind("'url(' + runesConfig.homerunes + ')'") no-repeat;
   background-size: 100% 100%;
 }
 .buttons2 {
@@ -584,43 +585,45 @@ export default {
   width: 30%;
   height: 40%;
   z-index: 999;
-  /* background: v-bind("'url(' + OaksConfig.seniorityOaks + ')'") no-repeat; */
+  /* background: v-bind("'url(' + runesConfig.seniorityrunes + ')'") no-repeat; */
   background-size: 100% 100%;
 }
-.buttonsOaksBack{
+.buttonsrunesBack{
   position: absolute;
     /* margin-left: 7%; */
-    top: 288%;
-    left: 46.5%;
+    top: -7%;
+    left: 87.5%;
     /* margin-top: 56.5%; */
     width: 17%;
     height: 42.5%;
   z-index: 999;
-  background: v-bind("'url(' + OaksConfig.playOaks + ')'") no-repeat;
+  background: v-bind("'url(' + runesConfig.playrunes + ')'") no-repeat;
   background-size: 100% 100%;
 }
 
-.buttonsOaks2{
-  margin-left: 4%;
-    margin-top: 65.5%;
+.buttonsrunes2{
+  
+  margin-left: -5%;
+    margin-top: 64%;
     width: 42%;
-    height: 39.5%;
+    height: 44.5%;
+
   z-index: 999;
-  background: v-bind("'url(' + OaksConfig.playOaks3 + ')'") no-repeat;
+  background: v-bind("'url(' + runesConfig.playrunes3 + ')'") no-repeat;
   background-size: 100% 100%;
 }
-.Oaksp-he {
+.runesp-he {
   position: relative;
   margin-right: 0%;
     margin-top: 5%;
-    width: 72%;
+    width: 65%;
     height: 43vw;
   display: flex;
   justify-content: space-between;
   transform: scale(0.72);
 }
 
-.Oaksp-hidden {
+.runesp-hidden {
   /* margin-top: 2%; */
   /* margin-left: 1%; */
   margin-top: -4%;
@@ -631,7 +634,7 @@ export default {
   height: 100%;
   overflow: hidden;
 }
-.Oaksp-item {
+.runesp-item {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -639,23 +642,23 @@ export default {
 
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + OaksConfig.anyOaks + ')'");
+  background: v-bind("'url(' + runesConfig.anyrunes + ')'");
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
-  background-size:104% 271%;;
+  background-size:104% 232%;
 }
-.Oaksp-item:nth-child(2){
+.runesp-item:nth-child(2){
   margin-right: 20%;
 }
-.Oaksp-item-img {
+.runesp-item-img {
   position: relative;
 
   display: none;
   width: 100%;
   height: 100%;
 }
-.Oaksp-item-img img {
+.runesp-item-img img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -667,7 +670,7 @@ export default {
 .modal {
   display: flex;
   justify-content: center;
-  align-items: flex-stOaks;
+  align-items: flex-strunes;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -675,7 +678,7 @@ export default {
   height: 100vh;
   z-index: 9999;
   /* background-color: rgba(0, 0, 0, 0.5); */
-  /* background: v-bind("'url(' + OaksConfig.dialogOaks + ')'") no-repeat; */
+  /* background: v-bind("'url(' + runesConfig.dialogrunes + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star {
@@ -697,17 +700,17 @@ export default {
   width: 70%;
 }
 
-.stOaks-bg {
+.strunes-bg {
   position: absolute;
 
   top: 0;
   z-index: 1;
 }
-.stOaks-bg img {
+.strunes-bg img {
   width: 100%;
 }
 
-.modelOaks-list {
+.modelrunes-list {
   position: absolute;
   left: 60%;
   top: 39.5%;
@@ -719,33 +722,33 @@ export default {
   font-size: 16px;
   /* transform: rotate(7deg) translateX(-36px); */
 }
-.modelOaks-item {
+.modelrunes-item {
   margin-bottom: 11px;
 }
-.modelOaks-total {
+.modelrunes-total {
   padding: 7px 14px;
 }
 
-.headOaks {
+.headrunes {
   margin-top: 10vh;
   width: 80%;
 }
 /* 定义步长图片动画关键帧 */
 @keyframes image-animation {
   0% {
-    background-image: v-bind("'url(' + OaksConfig.animation1 + ')'");
+    background-image: v-bind("'url(' + runesConfig.animation1 + ')'");
   }
 
   25% {
-    background-image: v-bind("'url(' + OaksConfig.animation4 + ')'");
+    background-image: v-bind("'url(' + runesConfig.animation4 + ')'");
   }
 
   75% {
-    background-image: v-bind("'url(' + OaksConfig.animation8 + ')'");
+    background-image: v-bind("'url(' + runesConfig.animation8 + ')'");
   }
 
   100% {
-    background-image: v-bind("'url(' + OaksConfig.animation12 + ')'");
+    background-image: v-bind("'url(' + runesConfig.animation12 + ')'");
   }
 }
 
