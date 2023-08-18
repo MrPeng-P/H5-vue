@@ -1,36 +1,36 @@
 <script>
-import playOurLady from "@/assets/slotC4/playOurLady.png";
-import boxOurLady from "@/assets/slotC4/boxOurLady.jpg";
-import anyOurLady from "@/assets/slotC4/changeHOurLady.png";
-import changeDOurLady from "@/assets/slotC4/changeDOurLady.png";
-import anyBoxOurLady from "@/assets/slotC4/anyBoxOurLady.png";
-import homeOurLady from "@/assets/slotC4/homeOurLady.png";
+import playuniverse from "@/assets/slotC5/playuniverse.png";
+import boxuniverse from "@/assets/slotC5/boxuniverse.jpg";
+import anyuniverse from "@/assets/slotC5/changeHuniverse.png";
+import changeDuniverse from "@/assets/slotC5/changeDuniverse.png";
+import anyBoxuniverse from "@/assets/slotC5/anyBoxuniverse.png";
+import homeuniverse from "@/assets/slotC5/homeuniverse.png";
 
-// import seniorityOurLady from "@/assets/slotC4/seniorityOurLady.png";
-import countOurLady from "@/assets/slotC4/countOurLady.png";
-// import ruleOurLady from "@/assets/slotC4/ruleOurLady.png";
-// import ruleDialogOurLady from "@/assets/slotC4/ruleDialogOurLady.jpg";
-// import resultOurLady from "@/assets/slotC4/resultOurLady.png";
-// import headOurLady from "@/assets/slotC4/headOurLady.png";
+// import seniorityuniverse from "@/assets/slotC5/seniorityuniverse.png";
+import countuniverse from "@/assets/slotC5/countuniverse.png";
+// import ruleuniverse from "@/assets/slotC5/ruleuniverse.png";
+// import ruleDialoguniverse from "@/assets/slotC5/ruleDialoguniverse.jpg";
+// import resultuniverse from "@/assets/slotC5/resultuniverse.png";
+// import headuniverse from "@/assets/slotC5/headuniverse.png";
 
-// import star from "@/assets/slotC4/starOurLady.gif";
+// import star from "@/assets/slotC5/staruniverse.gif";
 import { useRouter, useRoute } from "vue-router";
-import OurLady1 from "@/assets/slotC4/OurLady1.png";
-import OurLady2 from "@/assets/slotC4/OurLady2.png";
-import OurLady3 from "@/assets/slotC4/OurLady3.png";
-import OurLady4 from "@/assets/slotC4/OurLady4.png";
-import OurLady5 from "@/assets/slotC4/OurLady5.png";
-import OurLady6 from "@/assets/slotC4/OurLady6.png";
-import OurLady7 from "@/assets/slotC4/OurLady7.png";
-import OurLady8 from "@/assets/slotC4/OurLady8.png";
+import universe1 from "@/assets/slotC5/universe1.png";
+import universe2 from "@/assets/slotC5/universe2.png";
+import universe3 from "@/assets/slotC5/universe3.png";
+import universe4 from "@/assets/slotC5/universe4.png";
+import universe5 from "@/assets/slotC5/universe5.png";
+import universe6 from "@/assets/slotC5/universe6.png";
+// import universe7 from "@/assets/slotC5/universe7.png";
+// import universe8 from "@/assets/slotC5/universe8.png";
 
-// import animation1 from "@/assets/slotC4/dong/00001.png";
-// import animation4 from "@/assets/slotC4/dong/00004.png";
-// import animation8 from "@/assets/slotC4/dong/00008.png";
-// import animation12 from "@/assets/slotC4/dong/00012.png";
+// import animation1 from "@/assets/slotC5/dong/00001.png";
+// import animation4 from "@/assets/slotC5/dong/00004.png";
+// import animation8 from "@/assets/slotC5/dong/00008.png";
+// import animation12 from "@/assets/slotC5/dong/00012.png";
 
 import { inject } from "vue";
-// import football from "@/assets/slotC4/football.png";
+// import football from "@/assets/slotC5/football.png";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
@@ -62,26 +62,26 @@ export default {
     const router = new useRouter();
     // 随机生成 12 张图的数组
     let randomImages = [];
-    const OurLadyConfig = reactive({
-      // headOurLady,
+    const universeConfig = reactive({
+      // headuniverse,
       // animation1,
       // animation4,
       // animation8,
       // animation12,
-      changeDOurLady,
-      anyOurLady,
-      playOurLady,
-      anyBoxOurLady,
-      boxOurLady,
-      homeOurLady,
+      changeDuniverse,
+      anyuniverse,
+      playuniverse,
+      anyBoxuniverse,
+      boxuniverse,
+      homeuniverse,
       //   star,
-      // seniorityOurLady,
-      countOurLady,
-      // ruleOurLady,
-      // ruleDialogOurLady,
-      // resultOurLady
+      // seniorityuniverse,
+      countuniverse,
+      // ruleuniverse,
+      // ruleDialoguniverse,
+      // resultuniverse
     });
-    const OurLadyList = reactive([
+    const universeList = reactive([
       {
         name: "item1",
         size: 5,
@@ -110,43 +110,44 @@ export default {
     ]);
     let timeOhter = 0;
     let id;
-    let stOurLady = ref(false);
+    let stuniverse = ref(false);
     let open = ref(false);
     let buttonStatus = ref(true);
     const images = [
       {
-        img: OurLady1,
-        name: "OurLady2",
+        img: universe1,
+        name: "universe2",
         className: "animation",
         count: 1800 * magnification.value,
       },
       {
-        img: OurLady2,
-        name: "OurLady1",
+        img: universe2,
+        name: "universe1",
         className: "animation",
         count: 1000 * magnification.value,
       },
       {
-        img: OurLady3,
+        img: universe3,
       },
       {
-        img: OurLady4,
+        img: universe4,
       },
       {
-        img: OurLady5,
+        img: universe5,
       },
       {
-        img: OurLady6,
-      },
-      {
-        img: OurLady7,
-        name: "OurLady3",
+        img: universe6,
+        name: "universe3",
         className: "animation",
         count: 2200 * magnification.value,
       },
-      {
-        img: OurLady8,
-      },
+      // {
+      //   img: universe7,
+   
+      // },
+      // {
+      //   img: universe8,
+      // },
     ];
     const allMethods = {
       run: () => {
@@ -161,11 +162,11 @@ export default {
         buttonStatus.value = false;
 
         allMethods.clear();
-        const boxLists = OurLadyList.map((item) => {
+        const boxLists = universeList.map((item) => {
           return document.getElementById(item.name);
         });
         boxLists[0].style.setProperty("background-position-y", "center");
-        boxLists[0].querySelectorAll(".OurLadyp-item-img").forEach((child) => {
+        boxLists[0].querySelectorAll(".universep-item-img").forEach((child) => {
           child.style.setProperty("display", "none");
         });
         // boxLists.forEach((item)=>{
@@ -178,9 +179,9 @@ export default {
         //       0+'px'
         //     );
         // })
-        const content = document.getElementById("OurLadyp-he");
-        const box2 = document.getElementById("OurLadyp");
-        const coords = { x: 0, y: 0 }; // StOurLady at (0, 0)
+        const content = document.getElementById("universep-he");
+        const box2 = document.getElementById("universep");
+        const coords = { x: 0, y: 0 }; // Stuniverse at (0, 0)
         const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to(
             { x: (1120 * content.clientWidth) / box2.clientWidth, y: 0 },
@@ -195,7 +196,7 @@ export default {
                 "background-position-x",
                 -coords.x + "px"
               );
-              boxLists[1].classList.toggle('OurLadyp-itemD');
+              boxLists[1].classList.toggle('universep-itemD');
             }
 
             if (timeOhter > 2000 && timeOhter <= 5000) {
@@ -203,7 +204,7 @@ export default {
                 "background-position-x",
                 -coords.x + "px"
               );
-              boxLists[2].classList.toggle('OurLadyp-itemD');
+              boxLists[2].classList.toggle('universep-itemD');
             }
 
             // if (timeOhter > 3000 && timeOhter <= 6000) {
@@ -223,13 +224,13 @@ export default {
                 "background-position-x",
                 -coords.x + "px"
               );
-              boxLists[0].classList.toggle('OurLadyp-itemD');
+              boxLists[0].classList.toggle('universep-itemD');
             }
           })
           .repeat(Infinity)
           .yoyo(false)
           .repeatDelay(0);
-          tween.start(); // StOurLady the tween immediately.
+          tween.start(); // Stuniverse the tween immediately.
         let nowDate = window.performance.now();
         function animate(time) {
           timeOhter = time - nowDate;
@@ -255,28 +256,28 @@ export default {
     
 
             boxLists[i].style.setProperty("background-position-y", "center");
-            boxLists[i].querySelectorAll(".OurLadyp-item-img").forEach((child) => {
+            boxLists[i].querySelectorAll(".universep-item-img").forEach((child) => {
               child.style.setProperty("display", "none");
             });
            
           }
           if (i == 3) {
             boxLists[0].style.setProperty("background-position-y", 600 + "px");
-            boxLists[0].querySelectorAll(".OurLadyp-item-img").forEach((child) => {
+            boxLists[0].querySelectorAll(".universep-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
            
           }
           if (i == 4) {
             boxLists[1].style.setProperty("background-position-y", 600 + "px");
-            boxLists[1].querySelectorAll(".OurLadyp-item-img").forEach((child) => {
+            boxLists[1].querySelectorAll(".universep-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           
           }
           if (i == 5) {
             boxLists[2].style.setProperty("background-position-y", 600 + "px");
-            boxLists[2].querySelectorAll(".OurLadyp-item-img").forEach((child) => {
+            boxLists[2].querySelectorAll(".universep-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           
@@ -284,14 +285,14 @@ export default {
           }
           // if (i == 6) {
           //   boxLists[3].style.setProperty("background-position-x", 600 + "px");
-          //   boxLists[3].querySelectorAll(".OurLadyp-item-img").forEach((child) => {
+          //   boxLists[3].querySelectorAll(".universep-item-img").forEach((child) => {
           //     child.style.setProperty("display", "block");
           //   });
           //   // countValue.value += useCount.value;
           // }
           // if (i == 7) {
           //   boxLists[4].style.setProperty("background-position-x", 600 + "px");
-          //   boxLists[4].querySelectorAll(".OurLadyp-item-img").forEach((child) => {
+          //   boxLists[4].querySelectorAll(".universep-item-img").forEach((child) => {
           //     child.style.setProperty("display", "block");
           //   });
             
@@ -342,7 +343,7 @@ export default {
           randomImages.push(randomImage);
         }
 
-        allMethods.assignImageList(OurLadyList, randomImages);
+        allMethods.assignImageList(universeList, randomImages);
       },
       // 随机生成图像列表
       shuffleArray(array) {
@@ -351,11 +352,11 @@ export default {
           [array[i], array[j]] = [array[j], array[i]];
         }
         array.forEach((item) => {
-          if (item.name == "OurLady1") {
+          if (item.name == "universe1") {
             arrCount[0].value++;
-          } else if (item.name == "OurLady2") {
+          } else if (item.name == "universe2") {
             arrCount[1].value++;
-          } else if (item.name == "OurLady3") {
+          } else if (item.name == "universe3") {
             arrCount[2].value++;
           }
           if (item.count) {
@@ -365,12 +366,12 @@ export default {
         return array;
       },
 
-      // 将图像列表分配给OurLadyList
-      assignImageList(OurLadyList, images) {
+      // 将图像列表分配给universeList
+      assignImageList(universeList, images) {
         const shuffledImages = allMethods.shuffleArray(images.slice()); // 避免修改原始数组
         console.log('%c ..........shuffledImages.........','color:#31ef0e',shuffledImages)
         let currentIndex = 0;
-        OurLadyList.forEach((item) => {
+        universeList.forEach((item) => {
           const numImages = Math.min(item.size, 5);
           item.imgList = shuffledImages.slice(
             currentIndex,
@@ -378,8 +379,8 @@ export default {
           );
           currentIndex += numImages;
         });
-        console.log('%c ..........OurLadyList.........','color:#31ef0e',OurLadyList)
-        return OurLadyList;
+        console.log('%c ..........universeList.........','color:#31ef0e',universeList)
+        return universeList;
       },
       goSeniority: () => {
         router.push("/list");
@@ -389,10 +390,10 @@ export default {
     return {
       className,
       open,
-      stOurLady,
-      OurLadyConfig,
+      stuniverse,
+      universeConfig,
       randomImages,
-      OurLadyList,
+      universeList,
       countValue,
       useCount,
       showRuleValue,
@@ -404,22 +405,22 @@ export default {
 </script>
 <template>
   <div :class="className">
-    <!-- <img class="headOurLady" :src="OurLadyConfig.headOurLady" alt=""> -->
-    <div class="OurLadyp" id="OurLadyp">
-      <div class="OurLadyp-he" id="OurLadyp-he">
-        <!-- <img class="OurLady-rule" @click="showRule" :src="OurLadyConfig.ruleOurLady" alt=""> -->
-        <div class="OurLadyp-hidden">
+    <!-- <img class="headuniverse" :src="universeConfig.headuniverse" alt=""> -->
+    <div class="universep" id="universep">
+      <div class="universep-he" id="universep-he">
+        <!-- <img class="universe-rule" @click="showRule" :src="universeConfig.ruleuniverse" alt=""> -->
+        <div class="universep-hidden">
           <div
-            class="OurLadyp-item"
+            class="universep-item"
             :id="item.name"
-            v-for="(item, index) in OurLadyList"
+            v-for="(item, index) in universeList"
           >
             <div
               v-for="(imgItem, imgIndex) in item.imgList"
               :class="
                 imgItem.className
-                  ? 'OurLadyp-item-img ' + imgItem.className
-                  : 'OurLadyp-item-img'
+                  ? 'universep-item-img ' + imgItem.className
+                  : 'universep-item-img'
               "
             >
               <img :src="imgItem.img" alt="" />
@@ -427,36 +428,36 @@ export default {
           </div>
         </div>
       </div>
-      <div class="buttonOurLady-box">
+      <div class="buttonuniverse-box">
         <div class="buttons" @click="close"></div>
-        <div class="buttonsOurLadyBack" @click="run"></div>
+        <div class="buttonsuniverseBack" @click="run"></div>
 
         <!-- <div class="buttons2" @click="goSeniority"></div> -->
 
-        <div class="OurLady-count" @click="showRule">
-          <!-- <img class="OurLady-rule" :src="OurLadyConfig.ruleOurLady" alt="" /> -->
-          <img :src="OurLadyConfig.countOurLady" alt="" />
+        <div class="universe-count" @click="showRule">
+          <!-- <img class="universe-rule" :src="universeConfig.ruleuniverse" alt="" /> -->
+          <img :src="universeConfig.countuniverse" alt="" />
           <div class="countValue">{{ countValue }}</div>
         </div>
       </div>
-      <div class="OurLadyd-OurLadyp">
-        <div class="OurLadyd-back" @click="close"></div>
+      <div class="universed-universep">
+        <div class="universed-back" @click="close"></div>
       </div>
     </div>
     <Teleport to="body">
       <div v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="OurLadyConfig.star" alt="" /> -->
-        <!-- <img class="model-img-bg" :src="OurLadyConfig.resultOurLady" alt="" /> -->
-        <!-- <div class="modelOurLady-list">
+        <!-- <img class="model-star" :src="universeConfig.star" alt="" /> -->
+        <!-- <img class="model-img-bg" :src="universeConfig.resultuniverse" alt="" /> -->
+        <!-- <div class="modeluniverse-list">
           <div
-            class="modelOurLady-item"
+            class="modeluniverse-item"
             v-for="(item, index) in arrCount"
             :key="index"
           >
             {{ item.count + "X" + item.value }}
           </div>
-          <div class="modelOurLady-total">{{ useCount }}</div>
+          <div class="modeluniverse-total">{{ useCount }}</div>
         </div> -->
       </div>
     </Teleport>
@@ -464,8 +465,8 @@ export default {
     <Teleport to="body">
       <div v-if="showRuleValue" class="modal" @click="showRule">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="OurLadyConfig.star" alt="" /> -->
-        <!-- <img class="model-img" :src="OurLadyConfig.ruleDialogOurLady" alt="" /> -->
+        <!-- <img class="model-star" :src="universeConfig.star" alt="" /> -->
+        <!-- <img class="model-img" :src="universeConfig.ruleDialoguniverse" alt="" /> -->
       </div>
     </Teleport>
   </div>
@@ -477,7 +478,7 @@ export default {
 
   width: 280px;
 }
-.OurLadyd-OurLadyp {
+.universed-universep {
   display: flex;
   align-items: center;
   /* padding: 60px 15px; */
@@ -488,43 +489,43 @@ export default {
   color: #fff;
 }
 .countValue {
-  margin: 0 0 0 40%;
+  margin: 0 0 0 75%;
   color: #fff;
 }
 
-.OurLady-count img {
+.universe-count img {
   width: 100%;
   position: absolute;
   height: 100%;
   /* top: -16%; */
   z-index: -1;
 }
-.OurLady-count .OurLady-rule {
+.universe-count .universe-rule {
   position: absolute;
   left: -9%;
   width: 45px;
   height: 45px;
 }
-.OurLadyd-back {
-  /* background: v-bind("'url(' + OurLadyConfig.homeOurLady + ')'") no-repeat; */
+.universed-back {
+  /* background: v-bind("'url(' + universeConfig.homeuniverse + ')'") no-repeat; */
 
   width: 36px;
   height: 42px;
   background-size: 100%;
   z-index: 999;
 }
-.stOurLady {
+.stuniverse {
   margin-top: -30%;
   width: 160px;
   height: 80px;
-  background: v-bind("'url(' + OurLadyConfig.playOurLady + ')'") no-repeat;
+  background: v-bind("'url(' + universeConfig.playuniverse + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 }
 .container {
   display: flex;
   flex-direction: column;
-  background: v-bind("'url(' + OurLadyConfig.boxOurLady + ')'") no-repeat;
+  background: v-bind("'url(' + universeConfig.boxuniverse + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -534,7 +535,7 @@ export default {
   align-items: center;
 }
 
-.OurLadyp {
+.universep {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -544,8 +545,8 @@ export default {
   /* height: 100vh; */
   overflow: hidden;
 
-  background: v-bind("'url(' + OurLadyConfig.anyBoxOurLady + ')'") no-repeat;
-  background-size: 65%;
+  background: v-bind("'url(' + universeConfig.anyBoxuniverse + ')'") no-repeat;
+  background-size: 63%;
     background-position: center 6%;
 
   color: #fff;
@@ -553,7 +554,7 @@ export default {
   font-size: 26;
 }
 
-.buttonOurLady-box {
+.buttonuniverse-box {
   position: absolute;
   top: 6%;
     left: 12%;
@@ -564,17 +565,17 @@ export default {
   height: 25%;
   /* justify-content: space-between; */
 }
-.OurLady-count {
+.universe-count {
   position: relative;
-  width: 60%;
-    height: 50%;
+  width: 51%;
+    height: 67%;
     margin-left: 2%;
     margin-right: -23%;
-    margin-top: 26.5%;
+    margin-top: 23.5%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
+    font-size: 34px;
     z-index: 1;
 }
 
@@ -582,9 +583,9 @@ export default {
   margin-left: 9%;
     margin-top: -2%;
     width: 9%;
-    height: 40%;
+    height: 48%;
   z-index: 999;
-  background: v-bind("'url(' + OurLadyConfig.homeOurLady + ')'") no-repeat;
+  background: v-bind("'url(' + universeConfig.homeuniverse + ')'") no-repeat;
   background-size: 100% 100%;
 }
 .buttons2 {
@@ -595,32 +596,32 @@ export default {
   width: 30%;
   height: 40%;
   z-index: 999;
-  /* background: v-bind("'url(' + OurLadyConfig.seniorityOurLady + ')'") no-repeat; */
+  /* background: v-bind("'url(' + universeConfig.seniorityuniverse + ')'") no-repeat; */
   background-size: 100% 100%;
 }
-.buttonsOurLadyBack{
+.buttonsuniverseBack{
   /* margin-left: 27%;
     margin-bottom: -58%; */
     margin-left: 7%;
-    margin-top: 26.5%;
+    margin-top: 23.5%;
     width: 19%;
-    height: 48.5%;
+    height: 57.5%;
   z-index: 999;
-  background: v-bind("'url(' + OurLadyConfig.playOurLady + ')'") no-repeat;
+  background: v-bind("'url(' + universeConfig.playuniverse + ')'") no-repeat;
   background-size: 100% 100%;
 }
-.OurLadyp-he {
+.universep-he {
   position: relative;
   margin-right: 0%;
   margin-top: 4%;
   width: 80%;
-  height: 43vw;
-  display: flex;
-  justify-content: space-between;
-  transform: scale(0.65);
+  height: 39vw;
+    display: flex;
+    justify-content: space-between;
+    transform: scale(0.6);
 }
 
-.OurLadyp-hidden {
+.universep-hidden {
   /* margin-top: 2%; */
   margin-left: 1%;
     margin-top: -9%;
@@ -632,37 +633,37 @@ export default {
     height: 143%;
     overflow: hidden;
 }
-.OurLadyp-item {
+.universep-item {
   display: flex;
   align-items: center;
   justify-content: space-around;
 
   width: 100%;
   flex: 1;
-  background: v-bind("'url(' + OurLadyConfig.anyOurLady + ')'");
+  background: v-bind("'url(' + universeConfig.anyuniverse + ')'");
   /* background-position-x: 0px; */
     background-position-y: center;
     background-repeat-y: no-repeat;
-    background-size: 157% 83%;
+    background-size: 136% 90%;
 
 }
-.OurLadyp-item:nth-child(1){
+.universep-item:nth-child(1){
   margin-bottom: 20%;
 }
-.OurLadyp-itemD {
+.universep-itemD {
   display: flex;
   align-items: center;
   justify-content: space-around;
 
   width: 100%;
   flex: 1;
-  background: v-bind("'url(' + OurLadyConfig.changeDOurLady + ')'");
+  background: v-bind("'url(' + universeConfig.changeDuniverse + ')'");
   /* background-position-x: 0px; */
     background-position-y: center;
     background-repeat-y: no-repeat;
     background-size: 160% 88%;
 }
-.OurLadyp-item-img {
+.universep-item-img {
   position: relative;
 
   display: none;
@@ -670,7 +671,7 @@ export default {
   height: 100%;
   
 }
-.OurLadyp-item-img img {
+.universep-item-img img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -682,7 +683,7 @@ export default {
 .modal {
   display: flex;
   justify-content: center;
-  align-items: flex-stOurLady;
+  align-items: flex-stuniverse;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -690,7 +691,7 @@ export default {
   height: 100vh;
   z-index: 9999;
   /* background-color: rgba(0, 0, 0, 0.5); */
-  /* background: v-bind("'url(' + OurLadyConfig.dialogOurLady + ')'") no-repeat; */
+  /* background: v-bind("'url(' + universeConfig.dialoguniverse + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star {
@@ -712,17 +713,17 @@ export default {
   width: 70%;
 }
 
-.stOurLady-bg {
+.stuniverse-bg {
   position: absolute;
 
   top: 0;
   z-index: 1;
 }
-.stOurLady-bg img {
+.stuniverse-bg img {
   width: 100%;
 }
 
-.modelOurLady-list {
+.modeluniverse-list {
   position: absolute;
   left: 60%;
   top: 39.5%;
@@ -734,14 +735,14 @@ export default {
   font-size: 16px;
   /* transform: rotate(7deg) translateX(-36px); */
 }
-.modelOurLady-item {
+.modeluniverse-item {
   margin-bottom: 11px;
 }
-.modelOurLady-total {
+.modeluniverse-total {
   padding: 7px 14px;
 }
 
-.headOurLady {
+.headuniverse {
   margin-top: 10vh;
   width: 80%;
 }
@@ -749,19 +750,19 @@ export default {
 @keyframes image-animation {
   0% {
    
-    background-image: v-bind("'url(' + OurLadyConfig.animation1 + ')'");
+    background-image: v-bind("'url(' + universeConfig.animation1 + ')'");
   }
 
   25% {
-    background-image: v-bind("'url(' + OurLadyConfig.animation4 + ')'");
+    background-image: v-bind("'url(' + universeConfig.animation4 + ')'");
   }
 
   75% {
-    background-image: v-bind("'url(' + OurLadyConfig.animation8 + ')'");
+    background-image: v-bind("'url(' + universeConfig.animation8 + ')'");
   }
 
   100% {
-    background-image: v-bind("'url(' + OurLadyConfig.animation12 + ')'");
+    background-image: v-bind("'url(' + universeConfig.animation12 + ')'");
   }
 }
 
