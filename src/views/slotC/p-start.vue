@@ -1,7 +1,7 @@
 <script>
 
-// import playDragon from "@/assets/slotC6/playDragon2.png";
-import boxDragon from "@/assets/slotC6/boxDragon.jpg";
+import playfruitparty from "@/assets/slotC8/playfruitparty2.png";
+import boxfruitparty from "@/assets/slotC8/boxfruitparty.jpg";
 import { onMounted, reactive, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
@@ -9,9 +9,9 @@ export default {
   setup() {
     const router = new useRouter();
     const className = "container";
-    const DragonConfig = reactive({
-      // playDragon,
-      boxDragon,
+    const fruitpartyConfig = reactive({
+      playfruitparty,
+      boxfruitparty,
     });
    
 
@@ -25,7 +25,7 @@ export default {
     });
     return {
         className,
-      DragonConfig,
+      fruitpartyConfig,
       ...allMethods,
     };
   },
@@ -34,7 +34,7 @@ export default {
 <template>
   
   <div :class="className">
-    <div class="stDragon" @click="goHome">
+    <div class="stfruitparty" @click="goHome">
     </div>
   </div>
 </template>
@@ -42,17 +42,17 @@ export default {
 <style scoped>
 
 
-.stDragon{
+.stfruitparty{
   margin-top: 14%;
     width: 280px;
     height: 252px;
-  /* background: v-bind("'url(' + DragonConfig.playDragon + ')'") no-repeat; */
+  background: v-bind("'url(' + fruitpartyConfig.playfruitparty + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 
 }
 .container {
-  background: v-bind("'url(' + DragonConfig.boxDragon + ')'") no-repeat;
+  background: v-bind("'url(' + fruitpartyConfig.boxfruitparty + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -63,7 +63,7 @@ export default {
 }
 
 
-.Dragonp-he {
+.fruitpartyp-he {
   position: relative;
     margin-top: 26%;
     width: 140%;
@@ -72,7 +72,7 @@ export default {
     justify-content: space-between;
     transform: scale(0.65);
 }
-.Dragonp-hidden{
+.fruitpartyp-hidden{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -81,11 +81,11 @@ export default {
   overflow: hidden;
 
 }
-.Dragonp-item {
+.fruitpartyp-item {
   
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + DragonConfig.anyDragon + ')'") ;
+  background: v-bind("'url(' + fruitpartyConfig.anyfruitparty + ')'") ;
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
@@ -95,7 +95,7 @@ export default {
   padding-top: 155px;
     display: flex;
     justify-content: center;
-    align-items: flex-stDragon;
+    align-items: flex-stfruitparty;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -103,7 +103,7 @@ export default {
     height: 100vh;
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.5);
-  /* background: v-bind("'url(' + DragonConfig.dialogDragon + ')'") no-repeat; */
+  /* background: v-bind("'url(' + fruitpartyConfig.dialogfruitparty + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star{
@@ -115,12 +115,12 @@ export default {
 
 }
 
-.stDragon-bg{
+.stfruitparty-bg{
     position: absolute;
     top: 0;
     z-index: 1;
 }
-.stDragon-bg img{
+.stfruitparty-bg img{
     width: 100%;
 }
 </style>

@@ -8,7 +8,7 @@ const HtmlMinimizerPlugin = require("html-minimizer-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 const { createProxyMiddleware } = require("http-proxy-middleware");
-
+const MyPlugin = require('./MyPlugin');
 module.exports = {
   entry: {
     path: "./src/main.js",
@@ -27,9 +27,20 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/imgDragon/[hash][ext]",
+          filename: "assets/imgfruitparty/[hash][ext]",
         },
       },
+        // {
+      //   test: /\.js$/,
+      //   exclude: /node_modules/,
+      //   use: {
+      //     loader: 'babel-loader',
+      //     options: {
+      //       presets: ['@babel/preset-env'],
+      //       plugins: [require.resolve('./MyPlugin.js')],
+      //     },
+      //   },
+      // },
     ],
   },
   resolve: {
@@ -38,8 +49,9 @@ module.exports = {
       "@": path.resolve("src"),
     },
   },
+
   output: {
-    filename: "assets/DragonJs/Dragon-[hash].js",
+    filename: "assets/fruitpartyJs/fruitparty-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [
@@ -53,6 +65,7 @@ module.exports = {
       __VUE_PROD_DEVTOOLS__: false,
       __VUE_OPTIONS_API__: false,
     }),
+    
     new JavaScriptObfuscator(
       {
         compact: true,
@@ -66,7 +79,7 @@ module.exports = {
         rotateUnicodeArray: true,
         deadCodeInjection: true,
         deadCodeInjectionThreshold: 0.4,
-        debugProtection: false,
+        debugProtection: true,
         disableConsoleOutput: true,
         domainLock: [],
         identifierNamesGenerator: "hexadecimal",
