@@ -1,36 +1,36 @@
 <script>
-import playuniverse from "@/assets/slotC5/playuniverse.png";
-import boxuniverse from "@/assets/slotC5/boxuniverse.jpg";
-import anyuniverse from "@/assets/slotC5/changeHuniverse.png";
-import changeDuniverse from "@/assets/slotC5/changeDuniverse.png";
-import anyBoxuniverse from "@/assets/slotC5/anyBoxuniverse.png";
-import homeuniverse from "@/assets/slotC5/homeuniverse.png";
+import playDragon from "@/assets/slotC6/playDragon.png";
+import boxDragon from "@/assets/slotC6/boxDragon.jpg";
+import anyDragon from "@/assets/slotC6/changeHDragon.png";
+import changeDDragon from "@/assets/slotC6/changeDDragon.png";
+import anyBoxDragon from "@/assets/slotC6/anyBoxDragon.png";
+import homeDragon from "@/assets/slotC6/homeDragon.png";
 
-// import seniorityuniverse from "@/assets/slotC5/seniorityuniverse.png";
-import countuniverse from "@/assets/slotC5/countuniverse.png";
-// import ruleuniverse from "@/assets/slotC5/ruleuniverse.png";
-// import ruleDialoguniverse from "@/assets/slotC5/ruleDialoguniverse.jpg";
-// import resultuniverse from "@/assets/slotC5/resultuniverse.png";
-// import headuniverse from "@/assets/slotC5/headuniverse.png";
+// import seniorityDragon from "@/assets/slotC6/seniorityDragon.png";
+import countDragon from "@/assets/slotC6/countDragon.png";
+// import ruleDragon from "@/assets/slotC6/ruleDragon.png";
+// import ruleDialogDragon from "@/assets/slotC6/ruleDialogDragon.jpg";
+// import resultDragon from "@/assets/slotC6/resultDragon.png";
+// import headDragon from "@/assets/slotC6/headDragon.png";
 
-// import star from "@/assets/slotC5/staruniverse.gif";
+// import star from "@/assets/slotC6/starDragon.gif";
 import { useRouter, useRoute } from "vue-router";
-import universe1 from "@/assets/slotC5/universe1.png";
-import universe2 from "@/assets/slotC5/universe2.png";
-import universe3 from "@/assets/slotC5/universe3.png";
-import universe4 from "@/assets/slotC5/universe4.png";
-import universe5 from "@/assets/slotC5/universe5.png";
-import universe6 from "@/assets/slotC5/universe6.png";
-// import universe7 from "@/assets/slotC5/universe7.png";
-// import universe8 from "@/assets/slotC5/universe8.png";
+import Dragon1 from "@/assets/slotC6/Dragon1.png";
+import Dragon2 from "@/assets/slotC6/Dragon2.png";
+import Dragon3 from "@/assets/slotC6/Dragon3.png";
+import Dragon4 from "@/assets/slotC6/Dragon4.png";
+import Dragon5 from "@/assets/slotC6/Dragon5.png";
+import Dragon6 from "@/assets/slotC6/Dragon6.png";
+// import Dragon7 from "@/assets/slotC6/Dragon7.png";
+// import Dragon8 from "@/assets/slotC6/Dragon8.png";
 
-// import animation1 from "@/assets/slotC5/dong/00001.png";
-// import animation4 from "@/assets/slotC5/dong/00004.png";
-// import animation8 from "@/assets/slotC5/dong/00008.png";
-// import animation12 from "@/assets/slotC5/dong/00012.png";
+// import animation1 from "@/assets/slotC6/dong/00001.png";
+// import animation4 from "@/assets/slotC6/dong/00004.png";
+// import animation8 from "@/assets/slotC6/dong/00008.png";
+// import animation12 from "@/assets/slotC6/dong/00012.png";
 
 import { inject } from "vue";
-// import football from "@/assets/slotC5/football.png";
+// import football from "@/assets/slotC6/football.png";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
@@ -62,26 +62,26 @@ export default {
     const router = new useRouter();
     // 随机生成 12 张图的数组
     let randomImages = [];
-    const universeConfig = reactive({
-      // headuniverse,
+    const DragonConfig = reactive({
+      // headDragon,
       // animation1,
       // animation4,
       // animation8,
       // animation12,
-      changeDuniverse,
-      anyuniverse,
-      playuniverse,
-      anyBoxuniverse,
-      boxuniverse,
-      homeuniverse,
+      changeDDragon,
+      anyDragon,
+      playDragon,
+      anyBoxDragon,
+      boxDragon,
+      homeDragon,
       //   star,
-      // seniorityuniverse,
-      countuniverse,
-      // ruleuniverse,
-      // ruleDialoguniverse,
-      // resultuniverse
+      // seniorityDragon,
+      countDragon,
+      // ruleDragon,
+      // ruleDialogDragon,
+      // resultDragon
     });
-    const universeList = reactive([
+    const DragonList = reactive([
       {
         name: "item1",
         size: 5,
@@ -110,43 +110,43 @@ export default {
     ]);
     let timeOhter = 0;
     let id;
-    let stuniverse = ref(false);
+    let stDragon = ref(false);
     let open = ref(false);
     let buttonStatus = ref(true);
     const images = [
       {
-        img: universe1,
-        name: "universe2",
+        img: Dragon1,
+        name: "Dragon2",
         className: "animation",
         count: 1800 * magnification.value,
       },
       {
-        img: universe2,
-        name: "universe1",
+        img: Dragon2,
+        name: "Dragon1",
         className: "animation",
         count: 1000 * magnification.value,
       },
       {
-        img: universe3,
+        img: Dragon3,
       },
       {
-        img: universe4,
+        img: Dragon4,
       },
       {
-        img: universe5,
+        img: Dragon5,
       },
       {
-        img: universe6,
-        name: "universe3",
+        img: Dragon6,
+        name: "Dragon3",
         className: "animation",
         count: 2200 * magnification.value,
       },
       // {
-      //   img: universe7,
+      //   img: Dragon7,
    
       // },
       // {
-      //   img: universe8,
+      //   img: Dragon8,
       // },
     ];
     const allMethods = {
@@ -162,11 +162,11 @@ export default {
         buttonStatus.value = false;
 
         allMethods.clear();
-        const boxLists = universeList.map((item) => {
+        const boxLists = DragonList.map((item) => {
           return document.getElementById(item.name);
         });
         boxLists[0].style.setProperty("background-position-y", "center");
-        boxLists[0].querySelectorAll(".universep-item-img").forEach((child) => {
+        boxLists[0].querySelectorAll(".Dragonp-item-img").forEach((child) => {
           child.style.setProperty("display", "none");
         });
         // boxLists.forEach((item)=>{
@@ -179,9 +179,9 @@ export default {
         //       0+'px'
         //     );
         // })
-        const content = document.getElementById("universep-he");
-        const box2 = document.getElementById("universep");
-        const coords = { x: 0, y: 0 }; // Stuniverse at (0, 0)
+        const content = document.getElementById("Dragonp-he");
+        const box2 = document.getElementById("Dragonp");
+        const coords = { x: 0, y: 0 }; // StDragon at (0, 0)
         const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to(
             { x: (1120 * content.clientWidth) / box2.clientWidth, y: 0 },
@@ -196,7 +196,7 @@ export default {
                 "background-position-x",
                 -coords.x + "px"
               );
-              boxLists[1].classList.toggle('universep-itemD');
+              boxLists[1].classList.toggle('Dragonp-itemD');
             }
 
             if (timeOhter > 2000 && timeOhter <= 5000) {
@@ -204,7 +204,7 @@ export default {
                 "background-position-x",
                 -coords.x + "px"
               );
-              boxLists[2].classList.toggle('universep-itemD');
+              boxLists[2].classList.toggle('Dragonp-itemD');
             }
 
             // if (timeOhter > 3000 && timeOhter <= 6000) {
@@ -224,13 +224,13 @@ export default {
                 "background-position-x",
                 -coords.x + "px"
               );
-              boxLists[0].classList.toggle('universep-itemD');
+              boxLists[0].classList.toggle('Dragonp-itemD');
             }
           })
           .repeat(Infinity)
           .yoyo(false)
           .repeatDelay(0);
-          tween.start(); // Stuniverse the tween immediately.
+          tween.start(); // StDragon the tween immediately.
         let nowDate = window.performance.now();
         function animate(time) {
           timeOhter = time - nowDate;
@@ -256,28 +256,28 @@ export default {
     
 
             boxLists[i].style.setProperty("background-position-y", "center");
-            boxLists[i].querySelectorAll(".universep-item-img").forEach((child) => {
+            boxLists[i].querySelectorAll(".Dragonp-item-img").forEach((child) => {
               child.style.setProperty("display", "none");
             });
            
           }
           if (i == 3) {
             boxLists[0].style.setProperty("background-position-y", 600 + "px");
-            boxLists[0].querySelectorAll(".universep-item-img").forEach((child) => {
+            boxLists[0].querySelectorAll(".Dragonp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
            
           }
           if (i == 4) {
             boxLists[1].style.setProperty("background-position-y", 600 + "px");
-            boxLists[1].querySelectorAll(".universep-item-img").forEach((child) => {
+            boxLists[1].querySelectorAll(".Dragonp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           
           }
           if (i == 5) {
             boxLists[2].style.setProperty("background-position-y", 600 + "px");
-            boxLists[2].querySelectorAll(".universep-item-img").forEach((child) => {
+            boxLists[2].querySelectorAll(".Dragonp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           
@@ -285,14 +285,14 @@ export default {
           }
           // if (i == 6) {
           //   boxLists[3].style.setProperty("background-position-x", 600 + "px");
-          //   boxLists[3].querySelectorAll(".universep-item-img").forEach((child) => {
+          //   boxLists[3].querySelectorAll(".Dragonp-item-img").forEach((child) => {
           //     child.style.setProperty("display", "block");
           //   });
           //   // countValue.value += useCount.value;
           // }
           // if (i == 7) {
           //   boxLists[4].style.setProperty("background-position-x", 600 + "px");
-          //   boxLists[4].querySelectorAll(".universep-item-img").forEach((child) => {
+          //   boxLists[4].querySelectorAll(".Dragonp-item-img").forEach((child) => {
           //     child.style.setProperty("display", "block");
           //   });
             
@@ -343,7 +343,7 @@ export default {
           randomImages.push(randomImage);
         }
 
-        allMethods.assignImageList(universeList, randomImages);
+        allMethods.assignImageList(DragonList, randomImages);
       },
       // 随机生成图像列表
       shuffleArray(array) {
@@ -352,11 +352,11 @@ export default {
           [array[i], array[j]] = [array[j], array[i]];
         }
         array.forEach((item) => {
-          if (item.name == "universe1") {
+          if (item.name == "Dragon1") {
             arrCount[0].value++;
-          } else if (item.name == "universe2") {
+          } else if (item.name == "Dragon2") {
             arrCount[1].value++;
-          } else if (item.name == "universe3") {
+          } else if (item.name == "Dragon3") {
             arrCount[2].value++;
           }
           if (item.count) {
@@ -366,12 +366,12 @@ export default {
         return array;
       },
 
-      // 将图像列表分配给universeList
-      assignImageList(universeList, images) {
+      // 将图像列表分配给DragonList
+      assignImageList(DragonList, images) {
         const shuffledImages = allMethods.shuffleArray(images.slice()); // 避免修改原始数组
         console.log('%c ..........shuffledImages.........','color:#31ef0e',shuffledImages)
         let currentIndex = 0;
-        universeList.forEach((item) => {
+        DragonList.forEach((item) => {
           const numImages = Math.min(item.size, 5);
           item.imgList = shuffledImages.slice(
             currentIndex,
@@ -379,8 +379,8 @@ export default {
           );
           currentIndex += numImages;
         });
-        console.log('%c ..........universeList.........','color:#31ef0e',universeList)
-        return universeList;
+        console.log('%c ..........DragonList.........','color:#31ef0e',DragonList)
+        return DragonList;
       },
       goSeniority: () => {
         router.push("/list");
@@ -390,10 +390,10 @@ export default {
     return {
       className,
       open,
-      stuniverse,
-      universeConfig,
+      stDragon,
+      DragonConfig,
       randomImages,
-      universeList,
+      DragonList,
       countValue,
       useCount,
       showRuleValue,
@@ -405,22 +405,22 @@ export default {
 </script>
 <template>
   <div :class="className">
-    <!-- <img class="headuniverse" :src="universeConfig.headuniverse" alt=""> -->
-    <div class="universep" id="universep">
-      <div class="universep-he" id="universep-he">
-        <!-- <img class="universe-rule" @click="showRule" :src="universeConfig.ruleuniverse" alt=""> -->
-        <div class="universep-hidden">
+    <!-- <img class="headDragon" :src="DragonConfig.headDragon" alt=""> -->
+    <div class="Dragonp" id="Dragonp">
+      <div class="Dragonp-he" id="Dragonp-he">
+        <!-- <img class="Dragon-rule" @click="showRule" :src="DragonConfig.ruleDragon" alt=""> -->
+        <div class="Dragonp-hidden">
           <div
-            class="universep-item"
+            class="Dragonp-item"
             :id="item.name"
-            v-for="(item, index) in universeList"
+            v-for="(item, index) in DragonList"
           >
             <div
               v-for="(imgItem, imgIndex) in item.imgList"
               :class="
                 imgItem.className
-                  ? 'universep-item-img ' + imgItem.className
-                  : 'universep-item-img'
+                  ? 'Dragonp-item-img ' + imgItem.className
+                  : 'Dragonp-item-img'
               "
             >
               <img :src="imgItem.img" alt="" />
@@ -428,36 +428,37 @@ export default {
           </div>
         </div>
       </div>
-      <div class="buttonuniverse-box">
-        <div class="buttons" @click="close"></div>
-        <div class="buttonsuniverseBack" @click="run"></div>
+      <div class="buttonDragon-box">
+        
+        <div class="buttonsDragonBack" @click="run"></div>
 
         <!-- <div class="buttons2" @click="goSeniority"></div> -->
-
-        <div class="universe-count" @click="showRule">
-          <!-- <img class="universe-rule" :src="universeConfig.ruleuniverse" alt="" /> -->
-          <img :src="universeConfig.countuniverse" alt="" />
+        <div class="Dragon-count" @click="showRule">
+          <!-- <img class="Dragon-rule" :src="DragonConfig.ruleDragon" alt="" /> -->
+          <img :src="DragonConfig.countDragon" alt="" />
           <div class="countValue">{{ countValue }}</div>
         </div>
+        <div class="buttons" @click="close"></div>
+
       </div>
-      <div class="universed-universep">
-        <div class="universed-back" @click="close"></div>
+      <div class="Dragond-Dragonp">
+        <div class="Dragond-back" @click="close"></div>
       </div>
     </div>
     <Teleport to="body">
       <div v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="universeConfig.star" alt="" /> -->
-        <!-- <img class="model-img-bg" :src="universeConfig.resultuniverse" alt="" /> -->
-        <!-- <div class="modeluniverse-list">
+        <!-- <img class="model-star" :src="DragonConfig.star" alt="" /> -->
+        <!-- <img class="model-img-bg" :src="DragonConfig.resultDragon" alt="" /> -->
+        <!-- <div class="modelDragon-list">
           <div
-            class="modeluniverse-item"
+            class="modelDragon-item"
             v-for="(item, index) in arrCount"
             :key="index"
           >
             {{ item.count + "X" + item.value }}
           </div>
-          <div class="modeluniverse-total">{{ useCount }}</div>
+          <div class="modelDragon-total">{{ useCount }}</div>
         </div> -->
       </div>
     </Teleport>
@@ -465,8 +466,8 @@ export default {
     <Teleport to="body">
       <div v-if="showRuleValue" class="modal" @click="showRule">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="universeConfig.star" alt="" /> -->
-        <!-- <img class="model-img" :src="universeConfig.ruleDialoguniverse" alt="" /> -->
+        <!-- <img class="model-star" :src="DragonConfig.star" alt="" /> -->
+        <!-- <img class="model-img" :src="DragonConfig.ruleDialogDragon" alt="" /> -->
       </div>
     </Teleport>
   </div>
@@ -478,7 +479,7 @@ export default {
 
   width: 280px;
 }
-.universed-universep {
+.Dragond-Dragonp {
   display: flex;
   align-items: center;
   /* padding: 60px 15px; */
@@ -489,43 +490,43 @@ export default {
   color: #fff;
 }
 .countValue {
-  margin: 0 0 0 75%;
+  margin: 0 0 0 46%;
   color: #fff;
 }
 
-.universe-count img {
+.Dragon-count img {
   width: 100%;
   position: absolute;
   height: 100%;
   /* top: -16%; */
   z-index: -1;
 }
-.universe-count .universe-rule {
+.Dragon-count .Dragon-rule {
   position: absolute;
   left: -9%;
   width: 45px;
   height: 45px;
 }
-.universed-back {
-  /* background: v-bind("'url(' + universeConfig.homeuniverse + ')'") no-repeat; */
+.Dragond-back {
+  /* background: v-bind("'url(' + DragonConfig.homeDragon + ')'") no-repeat; */
 
   width: 36px;
   height: 42px;
   background-size: 100%;
   z-index: 999;
 }
-.stuniverse {
+.stDragon {
   margin-top: -30%;
   width: 160px;
   height: 80px;
-  background: v-bind("'url(' + universeConfig.playuniverse + ')'") no-repeat;
+  background: v-bind("'url(' + DragonConfig.playDragon + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 }
 .container {
   display: flex;
   flex-direction: column;
-  background: v-bind("'url(' + universeConfig.boxuniverse + ')'") no-repeat;
+  background: v-bind("'url(' + DragonConfig.boxDragon + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -535,7 +536,7 @@ export default {
   align-items: center;
 }
 
-.universep {
+.Dragonp {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -545,7 +546,7 @@ export default {
   /* height: 100vh; */
   overflow: hidden;
 
-  background: v-bind("'url(' + universeConfig.anyBoxuniverse + ')'") no-repeat;
+  background: v-bind("'url(' + DragonConfig.anyBoxDragon + ')'") no-repeat;
   background-size: 63%;
     background-position: center 6%;
 
@@ -554,38 +555,38 @@ export default {
   font-size: 26;
 }
 
-.buttonuniverse-box {
+.buttonDragon-box {
   position: absolute;
   top: 6%;
     left: 12%;
   display: flex;
   /* flex-direction: column; */
 
-  width: 60%;
-  height: 25%;
+  width: 90%;
+    height: 25%;
   /* justify-content: space-between; */
 }
-.universe-count {
+.Dragon-count {
   position: relative;
-  width: 51%;
-    height: 67%;
+  width: 35%;
+    height: 51%;
     margin-left: 2%;
     margin-right: -23%;
-    margin-top: 23.5%;
+    margin-top: 27%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 34px;
+    font-size: 20px;
     z-index: 1;
 }
 
 .buttons {
-  margin-left: 9%;
+  margin-left: 25%;
     margin-top: -2%;
-    width: 9%;
-    height: 48%;
+    width: 7%;
+    height: 46%;
   z-index: 999;
-  background: v-bind("'url(' + universeConfig.homeuniverse + ')'") no-repeat;
+  background: v-bind("'url(' + DragonConfig.homeDragon + ')'") no-repeat;
   background-size: 100% 100%;
 }
 .buttons2 {
@@ -596,21 +597,21 @@ export default {
   width: 30%;
   height: 40%;
   z-index: 999;
-  /* background: v-bind("'url(' + universeConfig.seniorityuniverse + ')'") no-repeat; */
+  /* background: v-bind("'url(' + DragonConfig.seniorityDragon + ')'") no-repeat; */
   background-size: 100% 100%;
 }
-.buttonsuniverseBack{
+.buttonsDragonBack{
   /* margin-left: 27%;
     margin-bottom: -58%; */
-    margin-left: 7%;
-    margin-top: 23.5%;
-    width: 19%;
-    height: 57.5%;
+    margin-left: 15%;
+    margin-top: 26.5%;
+    width: 16%;
+    height: 53.5%;
   z-index: 999;
-  background: v-bind("'url(' + universeConfig.playuniverse + ')'") no-repeat;
+  background: v-bind("'url(' + DragonConfig.playDragon + ')'") no-repeat;
   background-size: 100% 100%;
 }
-.universep-he {
+.Dragonp-he {
   position: relative;
   margin-right: 0%;
   margin-top: 4%;
@@ -621,7 +622,7 @@ export default {
     transform: scale(0.6);
 }
 
-.universep-hidden {
+.Dragonp-hidden {
   /* margin-top: 2%; */
   margin-left: 1%;
     margin-top: -9%;
@@ -633,37 +634,37 @@ export default {
     height: 143%;
     overflow: hidden;
 }
-.universep-item {
+.Dragonp-item {
   display: flex;
   align-items: center;
   justify-content: space-around;
 
   width: 100%;
   flex: 1;
-  background: v-bind("'url(' + universeConfig.anyuniverse + ')'");
+  background: v-bind("'url(' + DragonConfig.anyDragon + ')'");
   /* background-position-x: 0px; */
     background-position-y: center;
     background-repeat-y: no-repeat;
-    background-size: 136% 90%;
+    background-size: 147% 90%;
 
 }
-.universep-item:nth-child(1){
+.Dragonp-item:nth-child(2){
   margin-bottom: 20%;
 }
-.universep-itemD {
+.Dragonp-itemD {
   display: flex;
   align-items: center;
   justify-content: space-around;
 
   width: 100%;
   flex: 1;
-  background: v-bind("'url(' + universeConfig.changeDuniverse + ')'");
+  background: v-bind("'url(' + DragonConfig.changeDDragon + ')'");
   /* background-position-x: 0px; */
     background-position-y: center;
     background-repeat-y: no-repeat;
     background-size: 160% 88%;
 }
-.universep-item-img {
+.Dragonp-item-img {
   position: relative;
 
   display: none;
@@ -671,7 +672,7 @@ export default {
   height: 100%;
   
 }
-.universep-item-img img {
+.Dragonp-item-img img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -683,7 +684,7 @@ export default {
 .modal {
   display: flex;
   justify-content: center;
-  align-items: flex-stuniverse;
+  align-items: flex-stDragon;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -691,7 +692,7 @@ export default {
   height: 100vh;
   z-index: 9999;
   /* background-color: rgba(0, 0, 0, 0.5); */
-  /* background: v-bind("'url(' + universeConfig.dialoguniverse + ')'") no-repeat; */
+  /* background: v-bind("'url(' + DragonConfig.dialogDragon + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star {
@@ -713,17 +714,17 @@ export default {
   width: 70%;
 }
 
-.stuniverse-bg {
+.stDragon-bg {
   position: absolute;
 
   top: 0;
   z-index: 1;
 }
-.stuniverse-bg img {
+.stDragon-bg img {
   width: 100%;
 }
 
-.modeluniverse-list {
+.modelDragon-list {
   position: absolute;
   left: 60%;
   top: 39.5%;
@@ -735,14 +736,14 @@ export default {
   font-size: 16px;
   /* transform: rotate(7deg) translateX(-36px); */
 }
-.modeluniverse-item {
+.modelDragon-item {
   margin-bottom: 11px;
 }
-.modeluniverse-total {
+.modelDragon-total {
   padding: 7px 14px;
 }
 
-.headuniverse {
+.headDragon {
   margin-top: 10vh;
   width: 80%;
 }
@@ -750,19 +751,19 @@ export default {
 @keyframes image-animation {
   0% {
    
-    background-image: v-bind("'url(' + universeConfig.animation1 + ')'");
+    background-image: v-bind("'url(' + DragonConfig.animation1 + ')'");
   }
 
   25% {
-    background-image: v-bind("'url(' + universeConfig.animation4 + ')'");
+    background-image: v-bind("'url(' + DragonConfig.animation4 + ')'");
   }
 
   75% {
-    background-image: v-bind("'url(' + universeConfig.animation8 + ')'");
+    background-image: v-bind("'url(' + DragonConfig.animation8 + ')'");
   }
 
   100% {
-    background-image: v-bind("'url(' + universeConfig.animation12 + ')'");
+    background-image: v-bind("'url(' + DragonConfig.animation12 + ')'");
   }
 }
 
