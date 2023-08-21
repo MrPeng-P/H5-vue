@@ -8,7 +8,6 @@ const HtmlMinimizerPlugin = require("html-minimizer-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 const { createProxyMiddleware } = require("http-proxy-middleware");
-const MyPlugin = require('./MyPlugin');
 module.exports = {
   entry: {
     path: "./src/main.js",
@@ -27,19 +26,19 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/imgfruitparty/[hash][ext]",
+          filename: "assets/imgcastle/[hash][ext]",
         },
       },
         // {
-      //   test: /\.js$/,
-      //   exclude: /node_modules/,
-      //   use: {
-      //     loader: 'babel-loader',
-      //     options: {
-      //       presets: ['@babel/preset-env'],
-      //       plugins: [require.resolve('./MyPlugin.js')],
-      //     },
-      //   },
+        // test: /\.js$/,
+        // exclude: /node_modules/,
+        // use: {
+        //   loader: 'babel-loader',
+        //   options: {
+        //     presets: ['@babel/preset-env'],
+        //     plugins: [require.resolve('./MyPlugin.js')],
+        //   },
+        // },
       // },
     ],
   },
@@ -51,7 +50,7 @@ module.exports = {
   },
 
   output: {
-    filename: "assets/fruitpartyJs/fruitparty-[hash].js",
+    filename: "assets/castleJs/castle-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [
