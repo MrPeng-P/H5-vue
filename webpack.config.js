@@ -50,7 +50,7 @@ module.exports = {
   },
 
   output: {
-    filename: "assets/castleJs/castle-[hash].js",
+    filename: "assets/castleJs/golf-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [

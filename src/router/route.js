@@ -109,22 +109,36 @@ import {
 
 // ];
 //复杂老虎机-简化-横排滚动-wu排行
+// export const routes = [
+//   {
+//     path: "/",
+//     name: "startC",
+//     component: () => import("@/views/slotC/p-start.vue"),
+//   },
+
+//   {
+//     path: "/home",
+//     name: "homeC",
+//     component: () => import("@/views/slotC/p-home.vue"),
+//   },
+  
+// ];
+
+//复杂老虎机-简化-横排滚动-wu排行
 export const routes = [
   {
     path: "/",
-    name: "startC",
-    component: () => import("@/views/slotC/p-start.vue"),
+    name: "startD",
+    component: () => import("@/views/slotD/p-start.vue"),
   },
 
   {
     path: "/home",
-    name: "homeC",
-    component: () => import("@/views/slotC/p-home.vue"),
+    name: "homeD",
+    component: () => import("@/views/slotD/p-home.vue"),
   },
   
 ];
-
-
 const routerConfig = createRouter({
   // history: createWebHistory(), // ===>mode:"history"
   history: createWebHashHistory(), // ===>mode:"哈希"

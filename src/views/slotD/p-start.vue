@@ -1,7 +1,7 @@
 <script>
 
-import playcastle from "@/assets/slotC9/playcastle2.png";
-import boxcastle from "@/assets/slotC9/boxcastle.jpg";
+import playgolf from "@/assets/slotD1/playgolf2.png";
+import boxgolf from "@/assets/slotD1/boxgolf.jpg";
 import { onMounted, reactive, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
@@ -9,9 +9,9 @@ export default {
   setup() {
     const router = new useRouter();
     const className = "container";
-    const castleConfig = reactive({
-      playcastle,
-      boxcastle,
+    const golfConfig = reactive({
+      playgolf,
+      boxgolf,
     });
    
 
@@ -25,7 +25,7 @@ export default {
     });
     return {
         className,
-      castleConfig,
+      golfConfig,
       ...allMethods,
     };
   },
@@ -34,7 +34,7 @@ export default {
 <template>
   
   <div :class="className">
-    <div class="stcastle" @click="goHome">
+    <div class="stgolf" @click="goHome">
     </div>
   </div>
 </template>
@@ -42,17 +42,17 @@ export default {
 <style scoped>
 
 
-.stcastle{
+.stgolf{
   margin-top: 14%;
     width: 280px;
     height: 252px;
-  background: v-bind("'url(' + castleConfig.playcastle + ')'") no-repeat;
+  background: v-bind("'url(' + golfConfig.playgolf + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 
 }
 .container {
-  background: v-bind("'url(' + castleConfig.boxcastle + ')'") no-repeat;
+  background: v-bind("'url(' + golfConfig.boxgolf + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -63,7 +63,7 @@ export default {
 }
 
 
-.castlep-he {
+.golfp-he {
   position: relative;
     margin-top: 26%;
     width: 140%;
@@ -72,7 +72,7 @@ export default {
     justify-content: space-between;
     transform: scale(0.65);
 }
-.castlep-hidden{
+.golfp-hidden{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -81,11 +81,11 @@ export default {
   overflow: hidden;
 
 }
-.castlep-item {
+.golfp-item {
   
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + castleConfig.anycastle + ')'") ;
+  background: v-bind("'url(' + golfConfig.anygolf + ')'") ;
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
@@ -95,7 +95,7 @@ export default {
   padding-top: 155px;
     display: flex;
     justify-content: center;
-    align-items: flex-stcastle;
+    align-items: flex-stgolf;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -103,7 +103,7 @@ export default {
     height: 100vh;
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.5);
-  /* background: v-bind("'url(' + castleConfig.dialogcastle + ')'") no-repeat; */
+  /* background: v-bind("'url(' + golfConfig.dialoggolf + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star{
@@ -115,12 +115,12 @@ export default {
 
 }
 
-.stcastle-bg{
+.stgolf-bg{
     position: absolute;
     top: 0;
     z-index: 1;
 }
-.stcastle-bg img{
+.stgolf-bg img{
     width: 100%;
 }
 </style>
