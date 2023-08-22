@@ -1,7 +1,7 @@
 <script>
 
-import playgem from "@/assets/slotD5/playgem2.png";
-import boxgem from "@/assets/slotD5/boxgem.jpg";
+import playinvention from "@/assets/slotD6/playinvention2.png";
+import boxinvention from "@/assets/slotD6/boxinvention.jpg";
 import { onMounted, reactive, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
@@ -9,9 +9,9 @@ export default {
   setup() {
     const router = new useRouter();
     const className = "container";
-    const gemConfig = reactive({
-      playgem,
-      boxgem,
+    const inventionConfig = reactive({
+      playinvention,
+      boxinvention,
     });
    
 
@@ -25,7 +25,7 @@ export default {
     });
     return {
         className,
-      gemConfig,
+      inventionConfig,
       ...allMethods,
     };
   },
@@ -34,7 +34,7 @@ export default {
 <template>
   
   <div :class="className">
-    <div class="stgem" @click="goHome">
+    <div class="stinvention" @click="goHome">
     </div>
   </div>
 </template>
@@ -42,18 +42,18 @@ export default {
 <style scoped>
 
 
-.stgem{
+.stinvention{
   margin-top: -2%;
     width: 36%;
 
     height: 252px;
-  background: v-bind("'url(' + gemConfig.playgem + ')'") no-repeat;
+  background: v-bind("'url(' + inventionConfig.playinvention + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 
 }        
 .container {
-  background: v-bind("'url(' + gemConfig.boxgem + ')'") no-repeat;
+  background: v-bind("'url(' + inventionConfig.boxinvention + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -64,7 +64,7 @@ export default {
 }
 
 
-.gemp-he {
+.inventionp-he {
   position: relative;
     margin-top: 26%;
     width: 140%;
@@ -73,7 +73,7 @@ export default {
     justify-content: space-between;
     transform: scale(0.65);
 }
-.gemp-hidden{
+.inventionp-hidden{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -82,11 +82,11 @@ export default {
   overflow: hidden;
 
 }
-.gemp-item {
+.inventionp-item {
   
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + gemConfig.anygem + ')'") ;
+  background: v-bind("'url(' + inventionConfig.anyinvention + ')'") ;
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
@@ -96,7 +96,7 @@ export default {
   padding-top: 155px;
     display: flex;
     justify-content: center;
-    align-items: flex-stgem;
+    align-items: flex-stinvention;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -104,7 +104,7 @@ export default {
     height: 100vh;
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.5);
-  /* background: v-bind("'url(' + gemConfig.dialoggem + ')'") no-repeat; */
+  /* background: v-bind("'url(' + inventionConfig.dialoginvention + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star{
@@ -116,12 +116,12 @@ export default {
 
 }
 
-.stgem-bg{
+.stinvention-bg{
     position: absolute;
     top: 0;
     z-index: 1;
 }
-.stgem-bg img{
+.stinvention-bg img{
     width: 100%;
 }
 </style>

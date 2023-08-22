@@ -26,7 +26,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/imggem/[hash][ext]",
+          filename: "assets/imginvention/[hash][ext]",
         },
       },
         // {
@@ -50,7 +50,7 @@ module.exports = {
   },
 
   output: {
-    filename: "assets/gemJs/gem-[hash].js",
+    filename: "assets/inventionJs/invention-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [

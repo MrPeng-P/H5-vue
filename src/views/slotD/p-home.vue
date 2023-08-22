@@ -1,40 +1,40 @@
 <script>
-import playgem from "@/assets/slotD5/playgem.png";
-// import playgem3 from "@/assets/slotD5/playgem3.png";
-import playgem2 from "@/assets/slotD5/playgem2.png";
-import boxgem from "@/assets/slotD5/boxgem.jpg";
-import anygem from "@/assets/slotD5/changeHgem.png";
-import changeDgem from "@/assets/slotD5/changeDgem.png";
-import changeMgem from "@/assets/slotD5/changeMgem.png";
-import changeSgem from "@/assets/slotD5/changeSgem.png";
-import anyBoxgem from "@/assets/slotD5/anyBoxgem.jpg";
-import homegem from "@/assets/slotD5/homegem.png";
+import playinvention from "@/assets/slotD6/playinvention.png";
+// import playinvention3 from "@/assets/slotD6/playinvention3.png";
+import playinvention2 from "@/assets/slotD6/playinvention2.png";
+import boxinvention from "@/assets/slotD6/boxinvention.jpg";
+import anyinvention from "@/assets/slotD6/changeHinvention.png";
+import changeDinvention from "@/assets/slotD6/changeDinvention.png";
+import changeMinvention from "@/assets/slotD6/changeMinvention.png";
+import changeSinvention from "@/assets/slotD6/changeSinvention.png";
+import anyBoxinvention from "@/assets/slotD6/anyBoxinvention.jpg";
+import homeinvention from "@/assets/slotD6/homeinvention.png";
 
-// import senioritygem from "@/assets/slotD5/senioritygem.png";
-import countgem from "@/assets/slotD5/countgem.png";
-// import rulegem from "@/assets/slotD5/rulegem.png";
-// import ruleDialoggem from "@/assets/slotD5/ruleDialoggem.jpg";
-// import resultgem from "@/assets/slotD5/resultgem.png";
-// import headgem from "@/assets/slotD5/headgem.png";
+// import seniorityinvention from "@/assets/slotD6/seniorityinvention.png";
+import countinvention from "@/assets/slotD6/countinvention.png";
+// import ruleinvention from "@/assets/slotD6/ruleinvention.png";
+// import ruleDialoginvention from "@/assets/slotD6/ruleDialoginvention.jpg";
+// import resultinvention from "@/assets/slotD6/resultinvention.png";
+// import headinvention from "@/assets/slotD6/headinvention.png";
 
-// import star from "@/assets/slotD5/stargem.gif";
+// import star from "@/assets/slotD6/starinvention.gif";
 import { useRouter, useRoute } from "vue-router";
-import gem1 from "@/assets/slotD5/gem1.png";
-import gem2 from "@/assets/slotD5/gem2.png";
-import gem3 from "@/assets/slotD5/gem3.png";
-import gem4 from "@/assets/slotD5/gem4.png";
-import gem5 from "@/assets/slotD5/gem5.png";
-import gem6 from "@/assets/slotD5/gem6.png";
-import gem7 from "@/assets/slotD5/gem7.png";
-// import gem8 from "@/assets/slotD5/gem8.png";
+import invention1 from "@/assets/slotD6/invention1.png";
+import invention2 from "@/assets/slotD6/invention2.png";
+import invention3 from "@/assets/slotD6/invention3.png";
+import invention4 from "@/assets/slotD6/invention4.png";
+import invention5 from "@/assets/slotD6/invention5.png";
+import invention6 from "@/assets/slotD6/invention6.png";
+import invention7 from "@/assets/slotD6/invention7.png";
+// import invention8 from "@/assets/slotD6/invention8.png";
 
-// import animation1 from "@/assets/slotD5/dong/00001.png";
-// import animation4 from "@/assets/slotD5/dong/00004.png";
-// import animation8 from "@/assets/slotD5/dong/00008.png";
-// import animation12 from "@/assets/slotD5/dong/00012.png";
+// import animation1 from "@/assets/slotD6/dong/00001.png";
+// import animation4 from "@/assets/slotD6/dong/00004.png";
+// import animation8 from "@/assets/slotD6/dong/00008.png";
+// import animation12 from "@/assets/slotD6/dong/00012.png";
 
 import { inject } from "vue";
-// import football from "@/assets/slotD5/football.png";
+// import football from "@/assets/slotD6/football.png";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
@@ -66,30 +66,30 @@ export default {
     const router = new useRouter();
     // 随机生成 12 张图的数组
     let randomImages = [];
-    const gemConfig = reactive({
-      // headgem,
+    const inventionConfig = reactive({
+      // headinvention,
       // animation1,
       // animation4,
       // animation8,
       // animation12,
-      changeSgem,
-      changeDgem,
-      changeMgem,
-      anygem,
-      playgem,
-      anyBoxgem,
-      playgem2,
-      // playgem3,
-      boxgem,
-      homegem,
+      changeSinvention,
+      changeDinvention,
+      changeMinvention,
+      anyinvention,
+      playinvention,
+      anyBoxinvention,
+      playinvention2,
+      // playinvention3,
+      boxinvention,
+      homeinvention,
       //   star,
-      // senioritygem,
-      countgem,
-      // rulegem,
-      // ruleDialoggem,
-      // resultgem
+      // seniorityinvention,
+      countinvention,
+      // ruleinvention,
+      // ruleDialoginvention,
+      // resultinvention
     });
-    const gemList = reactive([
+    const inventionList = reactive([
       {
         name: "item1",
         size: 5,
@@ -123,43 +123,43 @@ export default {
     ]);
     let timeOhter = 0;
     let id;
-    let stgem = ref(false);
+    let stinvention = ref(false);
     let open = ref(false);
     let buttonStatus = ref(true);
     const images = [
       {
-        img: gem1,
-        name: "gem2",
+        img: invention1,
+        name: "invention2",
         className: "animation",
         count: 1800 * magnification.value,
       },
       {
-        img: gem2,
-        name: "gem1",
+        img: invention2,
+        name: "invention1",
         className: "animation",
         count: 1000 * magnification.value,
       },
       {
-        img: gem3,
+        img: invention3,
       },
       {
-        img: gem4,
+        img: invention4,
       },
       {
-        img: gem5,
+        img: invention5,
       },
       {
-        img: gem6,
-        name: "gem3",
+        img: invention6,
+        name: "invention3",
         className: "animation",
         count: 2200 * magnification.value,
       },
       {
-        img: gem7,
+        img: invention7,
 
       },
       // {
-      //   img: gem8,
+      //   img: invention8,
       // },
     ];
     const allMethods = {
@@ -176,11 +176,11 @@ export default {
         buttonStatus.value = false;
 
         allMethods.clear();
-        const boxLists = gemList.map((item) => {
+        const boxLists = inventionList.map((item) => {
           return document.getElementById(item.name);
         });
         boxLists[0].style.setProperty("background-position-y", "center");
-        boxLists[0].querySelectorAll(".gemp-item-img").forEach((child) => {
+        boxLists[0].querySelectorAll(".inventionp-item-img").forEach((child) => {
           child.style.setProperty("display", "none");
         });
         // boxLists.forEach((item)=>{
@@ -193,26 +193,26 @@ export default {
         //       0+'px'
         //     );
         // })
-        const content = document.getElementById("gemp-he");
-        const box2 = document.getElementById("gemp");
-        const coords = { x: 0, y: 0 }; // Stgem at (0, 0)
+        const content = document.getElementById("inventionp-he");
+        const box2 = document.getElementById("inventionp");
+        const coords = { x: 0, y: 0 }; // Stinvention at (0, 0)
         const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to({ x: (1120 * content.clientWidth) / box2.clientWidth, y: 0 }, 100) // Move to (300, 600) in 1 second.
           .easing() // Use an easing function to make the animation smooth.
           .onUpdate(() => {
-            if (timeOhter > 0 && timeOhter <= gemList.length*1000) {
+            if (timeOhter > 0 && timeOhter <= inventionList.length*1000) {
               boxLists[0].style.setProperty(
                 "background-position-x",
                 -coords.x + "px"
               );
-              boxLists[0].classList.toggle("gemp-itemD");
+              boxLists[0].classList.toggle("inventionp-itemD");
             }
            
           })
           .repeat(Infinity)
           .yoyo(false)
           .repeatDelay(0);
-        tween.start(); // Stgem the tween immediately.
+        tween.start(); // Stinvention the tween immediately.
         const tween2 = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to({ x: 0, y: (1120 * content.clientHeight) / box2.clientHeight }, 100) // Move to (300, 600) in 1 second.
           .easing() // Use an easing function to make the animation smooth.
@@ -223,7 +223,7 @@ export default {
                 "background-position-y",
                 -coords.y + "px"
               );
-              boxLists[1].classList.toggle("gemp-itemM");
+              boxLists[1].classList.toggle("inventionp-itemM");
 
             }
 
@@ -232,7 +232,7 @@ export default {
                 "background-position-y",
                 -coords.y + "px"
               );
-              boxLists[2].classList.toggle("gemp-itemM");
+              boxLists[2].classList.toggle("inventionp-itemM");
               
             }
 
@@ -241,27 +241,27 @@ export default {
                 "background-position-y",
                 -coords.y + "px"
               );
-              boxLists[3].classList.toggle("gemp-itemM");
+              boxLists[3].classList.toggle("inventionp-itemM");
             }
             if (timeOhter > 4000 && timeOhter <= 7000) {
               boxLists[4].style.setProperty(
                 "background-position-y",
                 -coords.y + "px"
               );
-              boxLists[4].classList.toggle("gemp-itemM");
+              boxLists[4].classList.toggle("inventionp-itemM");
             }
             if (timeOhter > 5000 && timeOhter <= 8000) {
               boxLists[5].style.setProperty(
                 "background-position-y",
                 -coords.y + "px"
               );
-              boxLists[5].classList.toggle("gemp-itemM");
+              boxLists[5].classList.toggle("inventionp-itemM");
             }
           })
           .repeat(Infinity)
           .yoyo(false)
           .repeatDelay(0);
-        tween2.start(); // Stgem the tween immediately.
+        tween2.start(); // Stinvention the tween immediately.
         let nowDate = window.performance.now();
         function animate(time) {
           timeOhter = time - nowDate;
@@ -275,7 +275,7 @@ export default {
         let i = 0;
         let timeany = setInterval(() => {
           i++;
-          if (i > gemList.length+2) {
+          if (i > inventionList.length+2) {
             sessionStorage.setItem("countValue", countValue.value);
 
             open.value = true;
@@ -283,7 +283,7 @@ export default {
             tween.stop();
             clearInterval(timeany);
           }
-          if (i > 0 && i < gemList.length) {
+          if (i > 0 && i < inventionList.length) {
             if(i==1){
             boxLists[i].style.setProperty("background-position-y", "center");
 
@@ -292,7 +292,7 @@ export default {
 
             }
             boxLists[i]
-              .querySelectorAll(".gemp-item-img")
+              .querySelectorAll(".inventionp-item-img")
               .forEach((child) => {
                 child.style.setProperty("display", "none");
               });
@@ -300,7 +300,7 @@ export default {
           if (i == 3) {
             boxLists[0].style.setProperty("background-position-y", 600 + "px");
             boxLists[0]
-              .querySelectorAll(".gemp-item-img")
+              .querySelectorAll(".inventionp-item-img")
               .forEach((child) => {
                 child.style.setProperty("display", "block");
               });
@@ -308,7 +308,7 @@ export default {
           if (i == 4) {
             boxLists[1].style.setProperty("background-position-x", 600 + "px");
             boxLists[1]
-              .querySelectorAll(".gemp-item-img")
+              .querySelectorAll(".inventionp-item-img")
               .forEach((child) => {
                 child.style.setProperty("display", "block");
               });
@@ -316,7 +316,7 @@ export default {
           if (i == 5) {
             boxLists[2].style.setProperty("background-position-x", 600 + "px");
             boxLists[2]
-              .querySelectorAll(".gemp-item-img")
+              .querySelectorAll(".inventionp-item-img")
               .forEach((child) => {
                 child.style.setProperty("display", "block");
               });
@@ -324,20 +324,20 @@ export default {
           }
           if (i == 6) {
             boxLists[3].style.setProperty("background-position-x", 600 + "px");
-            boxLists[3].querySelectorAll(".gemp-item-img").forEach((child) => {
+            boxLists[3].querySelectorAll(".inventionp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
             // countValue.value += useCount.value;
           }
           if (i == 7) {
             boxLists[4].style.setProperty("background-position-x", 600 + "px");
-            boxLists[4].querySelectorAll(".gemp-item-img").forEach((child) => {
+            boxLists[4].querySelectorAll(".inventionp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 8) {
             boxLists[5].style.setProperty("background-position-x", 600 + "px");
-            boxLists[5].querySelectorAll(".gemp-item-img").forEach((child) => {
+            boxLists[5].querySelectorAll(".inventionp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
             countValue.value += useCount.value*magn;
@@ -388,7 +388,7 @@ export default {
           randomImages.push(randomImage);
         }
 
-        allMethods.assignImageList(gemList, randomImages);
+        allMethods.assignImageList(inventionList, randomImages);
       },
       // 随机生成图像列表
       shuffleArray(array) {
@@ -397,11 +397,11 @@ export default {
           [array[i], array[j]] = [array[j], array[i]];
         }
         array.forEach((item) => {
-          if (item.name == "gem1") {
+          if (item.name == "invention1") {
             arrCount[0].value++;
-          } else if (item.name == "gem2") {
+          } else if (item.name == "invention2") {
             arrCount[1].value++;
-          } else if (item.name == "gem3") {
+          } else if (item.name == "invention3") {
             arrCount[2].value++;
           }
           if (item.count) {
@@ -411,8 +411,8 @@ export default {
         return array;
       },
 
-      // 将图像列表分配给gemList
-      assignImageList(gemList, images) {
+      // 将图像列表分配给inventionList
+      assignImageList(inventionList, images) {
         const shuffledImages = allMethods.shuffleArray(images.slice()); // 避免修改原始数组
         console.log(
           "%c ..........shuffledImages.........",
@@ -420,7 +420,7 @@ export default {
           shuffledImages
         );
         let currentIndex = 0;
-        gemList.forEach((item) => {
+        inventionList.forEach((item) => {
           const numImages = Math.min(item.size, 5);
           item.imgList = shuffledImages.slice(
             currentIndex,
@@ -429,11 +429,11 @@ export default {
           currentIndex += numImages;
         });
         console.log(
-          "%c ..........gemList.........",
+          "%c ..........inventionList.........",
           "color:#31ef0e",
-          gemList
+          inventionList
         );
-        return gemList;
+        return inventionList;
       },
       goSeniority: () => {
         router.push("/list");
@@ -443,10 +443,10 @@ export default {
     return {
       className,
       open,
-      stgem,
-      gemConfig,
+      stinvention,
+      inventionConfig,
       randomImages,
-      gemList,
+      inventionList,
       countValue,
       useCount,
       showRuleValue,
@@ -458,22 +458,22 @@ export default {
 </script>
 <template>
   <div :class="className">
-    <!-- <img class="headgem" :src="gemConfig.playgem2" alt=""> -->
-    <div class="gemp" id="gemp">
-      <div class="gemp-he" id="gemp-he">
-        <!-- <img class="gem-rule" @click="showRule" :src="gemConfig.rulegem" alt=""> -->
-        <div class="gemp-hidden">
+    <!-- <img class="headinvention" :src="inventionConfig.playinvention2" alt=""> -->
+    <div class="inventionp" id="inventionp">
+      <div class="inventionp-he" id="inventionp-he">
+        <!-- <img class="invention-rule" @click="showRule" :src="inventionConfig.ruleinvention" alt=""> -->
+        <div class="inventionp-hidden">
           <div
-            class="gemp-item"
+            class="inventionp-item"
             :id="item.name"
-            v-for="(item, index) in gemList"
+            v-for="(item, index) in inventionList"
           >
             <div
               v-for="(imgItem, imgIndex) in item.imgList"
               :class="
                 imgItem.className
-                  ? 'gemp-item-img ' + imgItem.className
-                  : 'gemp-item-img'
+                  ? 'inventionp-item-img ' + imgItem.className
+                  : 'inventionp-item-img'
               "
             >
               <img :src="imgItem.img" alt="" />
@@ -481,37 +481,37 @@ export default {
           </div>
         </div>
       </div>
-      <div class="buttongem-box">
+      <div class="buttoninvention-box">
 
-        <div class="buttonsgemBack" @click="close"></div>
+        <div class="buttonsinventionBack" @click="close"></div>
         <div class="buttons" @click="run()"></div>
         <!-- <div class="buttons2" @click="run()"></div> -->
-        <div class="gem-count" @click="showRule">
-          <!-- <img class="gem-rule" :src="gemConfig.rulegem" alt="" /> -->
-          <img :src="gemConfig.countgem" alt="" />
+        <div class="invention-count" @click="showRule">
+          <!-- <img class="invention-rule" :src="inventionConfig.ruleinvention" alt="" /> -->
+          <img :src="inventionConfig.countinvention" alt="" />
           <div class="countValue">{{ countValue }}</div>
         </div>
         
         
       </div>
-      <div class="gemd-gemp">
-        <div class="gemd-back" @click="close"></div>
+      <div class="inventiond-inventionp">
+        <div class="inventiond-back" @click="close"></div>
       </div>
     </div>
     <Teleport to="body">
       <div v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="gemConfig.star" alt="" /> -->
-        <!-- <img class="model-img-bg" :src="gemConfig.resultgem" alt="" /> -->
-        <!-- <div class="modelgem-list">
+        <!-- <img class="model-star" :src="inventionConfig.star" alt="" /> -->
+        <!-- <img class="model-img-bg" :src="inventionConfig.resultinvention" alt="" /> -->
+        <!-- <div class="modelinvention-list">
           <div
-            class="modelgem-item"
+            class="modelinvention-item"
             v-for="(item, index) in arrCount"
             :key="index"
           >
             {{ item.count + "X" + item.value }}
           </div>
-          <div class="modelgem-total">{{ useCount }}</div>
+          <div class="modelinvention-total">{{ useCount }}</div>
         </div> -->
       </div>
     </Teleport>
@@ -519,8 +519,8 @@ export default {
     <Teleport to="body">
       <div v-if="showRuleValue" class="modal" @click="showRule">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="gemConfig.star" alt="" /> -->
-        <!-- <img class="model-img" :src="gemConfig.ruleDialoggem" alt="" /> -->
+        <!-- <img class="model-star" :src="inventionConfig.star" alt="" /> -->
+        <!-- <img class="model-img" :src="inventionConfig.ruleDialoginvention" alt="" /> -->
       </div>
     </Teleport>
   </div>
@@ -532,7 +532,7 @@ export default {
 
   width: 280px;
 }
-.gemd-gemp {
+.inventiond-inventionp {
   display: flex;
   align-items: center;
   /* padding: 60px 15px; */
@@ -547,39 +547,39 @@ export default {
   color: #890000;
 }
 
-.gem-count img {
+.invention-count img {
   width: 100%;
   position: absolute;
   height: 100%;
   /* top: -16%; */
   z-index: -1;
 }
-.gem-count .gem-rule {
+.invention-count .invention-rule {
   position: absolute;
   left: -9%;
   width: 45px;
   height: 45px;
 }
-.gemd-back {
-  /* background: v-bind("'url(' + gemConfig.homegem + ')'") no-repeat; */
+.inventiond-back {
+  /* background: v-bind("'url(' + inventionConfig.homeinvention + ')'") no-repeat; */
 
   width: 36px;
   height: 42px;
   background-size: 100%;
   z-index: 999;
 }
-.stgem {
+.stinvention {
   margin-top: -30%;
   width: 160px;
   height: 80px;
-  background: v-bind("'url(' + gemConfig.playgem + ')'") no-repeat;
+  background: v-bind("'url(' + inventionConfig.playinvention + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 }
 .container {
   display: flex;
   flex-direction: column;
-  background: v-bind("'url(' + gemConfig.boxgem + ')'") no-repeat;
+  background: v-bind("'url(' + inventionConfig.boxinvention + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -589,7 +589,7 @@ export default {
   align-items: center;
 }
 
-.gemp {
+.inventionp {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -599,7 +599,7 @@ export default {
   /* height: 100vh; */
   /* overflow: hidden; */
 
-  background: v-bind("'url(' + gemConfig.anyBoxgem + ')'") no-repeat;
+  background: v-bind("'url(' + inventionConfig.anyBoxinvention + ')'") no-repeat;
   background-size: auto 100%;
     background-position: center ;
 
@@ -608,7 +608,7 @@ export default {
   font-size: 26;
 }
 
-.buttongem-box {
+.buttoninvention-box {
   position: absolute;
   top: 0%;
   left: 12%;
@@ -619,7 +619,7 @@ export default {
   height: 25%;
   /* justify-content: space-between; */
 }
-.gem-count {
+.invention-count {
   position: relative;
   width: 49%;
     height: 47%;
@@ -642,7 +642,7 @@ export default {
 
 
   z-index: 999;
-  background: v-bind("'url(' + gemConfig.playgem + ')'") no-repeat;
+  background: v-bind("'url(' + inventionConfig.playinvention + ')'") no-repeat;
   background-size: 100% 100%;
 }
 .buttons2 {
@@ -650,20 +650,20 @@ export default {
     height: 47%;
     margin-left: 3%;
     margin-top: 41.5%;
-  /* background: v-bind("'url(' + gemConfig.playgem3 + ')'") no-repeat; */
+  /* background: v-bind("'url(' + inventionConfig.playinvention3 + ')'") no-repeat; */
   background-size: 100% 100%;
 }
-.buttonsgemBack {
+.buttonsinventionBack {
   margin-left: 3.5%;
     margin-top: 0;
     width: 18%;
     height: 47.5%;
 
   z-index: 999;
-  background: v-bind("'url(' + gemConfig.homegem  + ')'") no-repeat;
+  background: v-bind("'url(' + inventionConfig.homeinvention  + ')'") no-repeat;
   background-size: 100% 100%;
 }
-.gemp-he {
+.inventionp-he {
   position: relative;
   margin-right: 0%;
   margin-top: 7%;
@@ -675,10 +675,10 @@ export default {
     transform: scale(0.6);
 }
 
-.gemp-hidden {
+.inventionp-hidden {
   /* margin-top: 2%; */
   margin-left: 1%;
-  margin-top: -14%;
+  margin-top: -16%;
   display: flex;
   flex-wrap: wrap;
   /* justify-content: space-between; */
@@ -687,7 +687,7 @@ export default {
   height: 132%;
 }
 
-.gemp-item {
+.inventionp-item {
  
   display: flex;
   align-items: center;
@@ -695,18 +695,18 @@ export default {
   flex-direction: column;
   width: 20%;
   height: 56%;
-  background: v-bind("'url(' + gemConfig.changeSgem + ')'");
+  background: v-bind("'url(' + inventionConfig.changeSinvention + ')'");
   /* background-position-x: 0px; */
   background-position-x: center;
   background-repeat-x: no-repeat;
   background-position-y: -10px;
-    background-size:73% 459%;
+    background-size: 73% 422%;
 
 }
-/* .gemp-item:nth-child(3){
+/* .inventionp-item:nth-child(3){
   margin-right: 20%;
 } */
-.gemp-item:nth-child(1) {
+.inventionp-item:nth-child(1) {
   /* margin-bottom: 20%; */
   display: flex;
   align-items: center;
@@ -714,46 +714,46 @@ export default {
   flex-direction:row;
   width: 100%;
   height: 30%;
-  background-image: v-bind("'url(' + gemConfig.anygem + ')'");
+  background-image: v-bind("'url(' + inventionConfig.anyinvention + ')'");
   background-position-y: center;
   background-repeat-y: no-repeat;
   background-position-x: 11px;
-  background-size: 161% 80%;
+  background-size: 161% 73%
 }
-.gemp-hidden .gemp-itemD {
+.inventionp-hidden .inventionp-itemD {
   display: flex;
   align-items: center;
   justify-content: space-around;
   width: 100%;
   height: 30%;
-  background-image: v-bind("'url(' + gemConfig.changeDgem + ')'");
+  background-image: v-bind("'url(' + inventionConfig.changeDinvention + ')'");
   background-position-y: center;
   background-repeat-y: no-repeat;
   background-position-x: 11px;
-  background-size: 161% 80%;
+  background-size: 161% 73%
 }
-.gemp-itemM{
+.inventionp-itemM{
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
   width: 20%;
   height: 56%;
-  background: v-bind("'url(' + gemConfig.changeMgem + ')'");
+  background: v-bind("'url(' + inventionConfig.changeMinvention + ')'");
   /* background-position-x: 0px; */
   background-position-x: center;
   background-repeat-x: no-repeat;
   background-position-y: -10px;
-    background-size: 73% 459%;
+    background-size: 73% 422%;
 }
-.gemp-item-img {
+.inventionp-item-img {
   position: relative;
 
   display: none;
   width: 100%;
   height: 100%;
 }
-.gemp-item-img img {
+.inventionp-item-img img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -765,7 +765,7 @@ export default {
 .modal {
   display: flex;
   justify-content: center;
-  align-items: flex-stgem;
+  align-items: flex-stinvention;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -773,7 +773,7 @@ export default {
   height: 100vh;
   z-index: 9999;
   /* background-color: rgba(0, 0, 0, 0.5); */
-  /* background: v-bind("'url(' + gemConfig.dialoggem + ')'") no-repeat; */
+  /* background: v-bind("'url(' + inventionConfig.dialoginvention + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star {
@@ -795,17 +795,17 @@ export default {
   width: 70%;
 }
 
-.stgem-bg {
+.stinvention-bg {
   position: absolute;
 
   top: 0;
   z-index: 1;
 }
-.stgem-bg img {
+.stinvention-bg img {
   width: 100%;
 }
 
-.modelgem-list {
+.modelinvention-list {
   position: absolute;
   left: 60%;
   top: 39.5%;
@@ -817,14 +817,14 @@ export default {
   font-size: 16px;
   /* transform: rotate(7deg) translateX(-36px); */
 }
-.modelgem-item {
+.modelinvention-item {
   margin-bottom: 11px;
 }
-.modelgem-total {
+.modelinvention-total {
   padding: 7px 14px;
 }
 
-.headgem {
+.headinvention {
   position: absolute;
     top: -0;
 
@@ -833,19 +833,19 @@ export default {
 /* 定义步长图片动画关键帧 */
 @keyframes image-animation {
   0% {
-    background-image: v-bind("'url(' + gemConfig.animation1 + ')'");
+    background-image: v-bind("'url(' + inventionConfig.animation1 + ')'");
   }
 
   25% {
-    background-image: v-bind("'url(' + gemConfig.animation4 + ')'");
+    background-image: v-bind("'url(' + inventionConfig.animation4 + ')'");
   }
 
   75% {
-    background-image: v-bind("'url(' + gemConfig.animation8 + ')'");
+    background-image: v-bind("'url(' + inventionConfig.animation8 + ')'");
   }
 
   100% {
-    background-image: v-bind("'url(' + gemConfig.animation12 + ')'");
+    background-image: v-bind("'url(' + inventionConfig.animation12 + ')'");
   }
 }
 
