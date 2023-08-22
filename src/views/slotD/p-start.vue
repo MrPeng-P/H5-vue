@@ -1,7 +1,7 @@
 <script>
 
-import playgolf from "@/assets/slotD1/playgolf2.png";
-import boxgolf from "@/assets/slotD1/boxgolf.jpg";
+import playgem from "@/assets/slotD5/playgem2.png";
+import boxgem from "@/assets/slotD5/boxgem.jpg";
 import { onMounted, reactive, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
@@ -9,9 +9,9 @@ export default {
   setup() {
     const router = new useRouter();
     const className = "container";
-    const golfConfig = reactive({
-      playgolf,
-      boxgolf,
+    const gemConfig = reactive({
+      playgem,
+      boxgem,
     });
    
 
@@ -25,7 +25,7 @@ export default {
     });
     return {
         className,
-      golfConfig,
+      gemConfig,
       ...allMethods,
     };
   },
@@ -34,7 +34,7 @@ export default {
 <template>
   
   <div :class="className">
-    <div class="stgolf" @click="goHome">
+    <div class="stgem" @click="goHome">
     </div>
   </div>
 </template>
@@ -42,17 +42,18 @@ export default {
 <style scoped>
 
 
-.stgolf{
-  margin-top: 14%;
-    width: 280px;
+.stgem{
+  margin-top: -2%;
+    width: 36%;
+
     height: 252px;
-  background: v-bind("'url(' + golfConfig.playgolf + ')'") no-repeat;
+  background: v-bind("'url(' + gemConfig.playgem + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 
 }
 .container {
-  background: v-bind("'url(' + golfConfig.boxgolf + ')'") no-repeat;
+  background: v-bind("'url(' + gemConfig.boxgem + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -63,7 +64,7 @@ export default {
 }
 
 
-.golfp-he {
+.gemp-he {
   position: relative;
     margin-top: 26%;
     width: 140%;
@@ -72,7 +73,7 @@ export default {
     justify-content: space-between;
     transform: scale(0.65);
 }
-.golfp-hidden{
+.gemp-hidden{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -81,11 +82,11 @@ export default {
   overflow: hidden;
 
 }
-.golfp-item {
+.gemp-item {
   
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + golfConfig.anygolf + ')'") ;
+  background: v-bind("'url(' + gemConfig.anygem + ')'") ;
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
@@ -95,7 +96,7 @@ export default {
   padding-top: 155px;
     display: flex;
     justify-content: center;
-    align-items: flex-stgolf;
+    align-items: flex-stgem;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -103,7 +104,7 @@ export default {
     height: 100vh;
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.5);
-  /* background: v-bind("'url(' + golfConfig.dialoggolf + ')'") no-repeat; */
+  /* background: v-bind("'url(' + gemConfig.dialoggem + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star{
@@ -115,12 +116,12 @@ export default {
 
 }
 
-.stgolf-bg{
+.stgem-bg{
     position: absolute;
     top: 0;
     z-index: 1;
 }
-.stgolf-bg img{
+.stgem-bg img{
     width: 100%;
 }
 </style>
