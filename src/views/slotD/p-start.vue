@@ -51,7 +51,7 @@ export default {
   background-size: 100%;
   z-index: 99;
 
-}
+}        
 .container {
   background: v-bind("'url(' + gemConfig.boxgem + ')'") no-repeat;
   background-size: cover;

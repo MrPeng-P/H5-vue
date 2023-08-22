@@ -585,7 +585,7 @@ export default {
   width: 100%;
   height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: center 2%;
   align-items: center;
 }
 
@@ -596,12 +596,12 @@ export default {
   /* justify-content: center; */
   align-items: center;
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
   /* overflow: hidden; */
 
   background: v-bind("'url(' + gemConfig.anyBoxgem + ')'") no-repeat;
   background-size: auto 100%;
-    background-position: center;
+    background-position: center ;
 
   color: #fff;
   font-weight: 600;
@@ -621,10 +621,10 @@ export default {
 }
 .gem-count {
   position: relative;
-  width: 55%;
+  width: 49%;
     height: 47%;
-    margin-left: 3%;
-    margin-top: 49.5%;
+    margin-left: 0%;
+    margin-top: 43.2%;
 
 
   display: flex;
@@ -635,8 +635,8 @@ export default {
 }
 
 .buttons {
-  margin-left: -4.5%;
-    margin-top: 49.5%;
+  margin-left: -5%;
+    margin-top: 43%;
     width: 15%;
     height: 49%;
 
@@ -654,7 +654,7 @@ export default {
   background-size: 100% 100%;
 }
 .buttonsgemBack {
-  margin-left: -0.5%;
+  margin-left: 3.5%;
     margin-top: 0;
     width: 18%;
     height: 47.5%;
@@ -669,10 +669,10 @@ export default {
   margin-top: 7%;
     width: 95%;
     width: 95%;
-    height: 47vw;
+    height: 42vw;
     display: flex;
     justify-content: space-between;
-    transform: scale(0.67);
+    transform: scale(0.6);
 }
 
 .gemp-hidden {
