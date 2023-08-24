@@ -1,40 +1,40 @@
 <script>
-import playsage from "@/assets/slotD7/playsage.png";
-// import playsage3 from "@/assets/slotD7/playsage3.png";
-import playsage2 from "@/assets/slotD7/playsage2.png";
-import boxsage from "@/assets/slotD7/boxsage.jpg";
-import anysage from "@/assets/slotD7/changeHsage.png";
-import changeDsage from "@/assets/slotD7/changeDsage.png";
-import changeMsage from "@/assets/slotD7/changeMsage.png";
-import changeSsage from "@/assets/slotD7/changeSsage.png";
-import anyBoxsage from "@/assets/slotD7/anyBoxsage.jpg";
-import homesage from "@/assets/slotD7/homesage.png";
+import playjackpot from "@/assets/slotD12/playjackpot.png";
+// import playjackpot3 from "@/assets/slotD12/playjackpot3.png";
+import playjackpot2 from "@/assets/slotD12/playjackpot2.jpg";
+import boxjackpot from "@/assets/slotD12/playjackpot2.jpg";
+import anyjackpot from "@/assets/slotD12/changeHjackpot.png";
+import changeDjackpot from "@/assets/slotD12/changeDjackpot.png";
+import changeMjackpot from "@/assets/slotD12/changeMjackpot.png";
+import changeSjackpot from "@/assets/slotD12/changeSjackpot.png";
+import anyBoxjackpot from "@/assets/slotD12/anyBoxjackpot.jpg";
+import homejackpot from "@/assets/slotD12/homejackpot.png";
 
-// import senioritysage from "@/assets/slotD7/senioritysage.png";
-import countsage from "@/assets/slotD7/countsage.png";
-// import rulesage from "@/assets/slotD7/rulesage.png";
-// import ruleDialogsage from "@/assets/slotD7/ruleDialogsage.jpg";
-// import resultsage from "@/assets/slotD7/resultsage.png";
-// import headsage from "@/assets/slotD7/headsage.png";
+// import seniorityjackpot from "@/assets/slotD12/seniorityjackpot.png";
+import countjackpot from "@/assets/slotD12/countjackpot.png";
+// import rulejackpot from "@/assets/slotD12/rulejackpot.png";
+// import ruleDialogjackpot from "@/assets/slotD12/ruleDialogjackpot.jpg";
+// import resultjackpot from "@/assets/slotD12/resultjackpot.png";
+// import headjackpot from "@/assets/slotD12/headjackpot.png";
 
-// import star from "@/assets/slotD7/starsage.gif";
+// import star from "@/assets/slotD12/starjackpot.gif";
 import { useRouter, useRoute } from "vue-router";
-import sage1 from "@/assets/slotD7/sage1.png";
-import sage2 from "@/assets/slotD7/sage2.png";
-import sage3 from "@/assets/slotD7/sage3.png";
-import sage4 from "@/assets/slotD7/sage4.png";
-import sage5 from "@/assets/slotD7/sage5.png";
-import sage6 from "@/assets/slotD7/sage6.png";
-import sage7 from "@/assets/slotD7/sage7.png";
-// import sage8 from "@/assets/slotD7/sage8.png";
+import jackpot1 from "@/assets/slotD12/jackpot1.png";
+import jackpot2 from "@/assets/slotD12/jackpot2.png";
+import jackpot3 from "@/assets/slotD12/jackpot3.png";
+import jackpot4 from "@/assets/slotD12/jackpot4.png";
+import jackpot5 from "@/assets/slotD12/jackpot5.png";
+import jackpot6 from "@/assets/slotD12/jackpot6.png";
+import jackpot7 from "@/assets/slotD12/jackpot7.png";
+// import jackpot8 from "@/assets/slotD12/jackpot8.png";
 
-// import animation1 from "@/assets/slotD7/dong/00001.png";
-// import animation4 from "@/assets/slotD7/dong/00004.png";
-// import animation8 from "@/assets/slotD7/dong/00008.png";
-// import animation12 from "@/assets/slotD7/dong/00012.png";
+// import animation1 from "@/assets/slotD12/dong/00001.png";
+// import animation4 from "@/assets/slotD12/dong/00004.png";
+// import animation8 from "@/assets/slotD12/dong/00008.png";
+// import animation12 from "@/assets/slotD12/dong/00012.png";
 
 import { inject } from "vue";
-// import football from "@/assets/slotD7/football.png";
+// import football from "@/assets/slotD12/football.png";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
@@ -66,30 +66,30 @@ export default {
     const router = new useRouter();
     // 随机生成 12 张图的数组
     let randomImages = [];
-    const sageConfig = reactive({
-      // headsage,
+    const jackpotConfig = reactive({
+      // headjackpot,
       // animation1,
       // animation4,
       // animation8,
       // animation12,
-      changeSsage,
-      changeDsage,
-      changeMsage,
-      anysage,
-      playsage,
-      anyBoxsage,
-      playsage2,
-      // playsage3,
-      boxsage,
-      homesage,
+      changeSjackpot,
+      changeDjackpot,
+      changeMjackpot,
+      anyjackpot,
+      playjackpot,
+      anyBoxjackpot,
+      playjackpot2,
+      // playjackpot3,
+      boxjackpot,
+      homejackpot,
       //   star,
-      // senioritysage,
-      countsage,
-      // rulesage,
-      // ruleDialogsage,
-      // resultsage
+      // seniorityjackpot,
+      countjackpot,
+      // rulejackpot,
+      // ruleDialogjackpot,
+      // resultjackpot
     });
-    const sageList = reactive([
+    const jackpotList = reactive([
       {
         name: "item1",
         size: 2,
@@ -123,43 +123,43 @@ export default {
     ]);
     let timeOhter = 0;
     let id;
-    let stsage = ref(false);
+    let stjackpot = ref(false);
     let open = ref(false);
     let buttonStatus = ref(true);
     const images = [
       {
-        img: sage1,
-        name: "sage2",
+        img: jackpot1,
+        name: "jackpot2",
         className: "animation",
         count: 1800 * magnification.value,
       },
       {
-        img: sage2,
-        name: "sage1",
+        img: jackpot2,
+        name: "jackpot1",
         className: "animation",
         count: 1000 * magnification.value,
       },
       {
-        img: sage3,
+        img: jackpot3,
       },
       {
-        img: sage4,
+        img: jackpot4,
       },
       {
-        img: sage5,
+        img: jackpot5,
       },
       {
-        img: sage6,
-        name: "sage3",
+        img: jackpot6,
+        name: "jackpot3",
         className: "animation",
         count: 2200 * magnification.value,
       },
       {
-        img: sage7,
+        img: jackpot7,
 
       },
       // {
-      //   img: sage8,
+      //   img: jackpot8,
       // },
     ];
     const allMethods = {
@@ -176,11 +176,11 @@ export default {
         buttonStatus.value = false;
 
         allMethods.clear();
-        const boxLists = sageList.map((item) => {
+        const boxLists = jackpotList.map((item) => {
           return document.getElementById(item.name);
         });
         boxLists[0].style.setProperty("background-position-y", "center");
-        boxLists[0].querySelectorAll(".sagep-item-img").forEach((child) => {
+        boxLists[0].querySelectorAll(".jackpotp-item-img").forEach((child) => {
           child.style.setProperty("display", "none");
         });
         // boxLists.forEach((item)=>{
@@ -193,37 +193,37 @@ export default {
         //       0+'px'
         //     );
         // })
-        const content = document.getElementById("sagep-he");
-        const box2 = document.getElementById("sagep");
-        const coords = { x: 0, y: 0 }; // Stsage at (0, 0)
+        const content = document.getElementById("jackpotp-he");
+        const box2 = document.getElementById("jackpotp");
+        const coords = { x: 0, y: 0 }; // Stjackpot at (0, 0)
         const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to({ x: (1120 * content.clientWidth) / box2.clientWidth, y: 0 }, 100) // Move to (300, 600) in 1 second.
           .easing() // Use an easing function to make the animation smooth.
           .onUpdate(() => {
-            if (timeOhter > 5000 && timeOhter <= 8000) {
+            if (timeOhter > 5000 && timeOhter <= 8000 ) {
               boxLists[5].style.setProperty(
                 "background-position-x",
                 -coords.x + "px"
               );
-              boxLists[5].classList.toggle("sagep-itemD");
+              boxLists[5].classList.toggle("jackpotp-itemD");
             }
            
           })
           .repeat(Infinity)
           .yoyo(false)
           .repeatDelay(0);
-        tween.start(); // Stsage the tween immediately.
+        tween.start(); // Stjackpot the tween immediately.
         const tween2 = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to({ x: 0, y: (1120 * content.clientHeight) / box2.clientHeight }, 100) // Move to (300, 600) in 1 second.
           .easing() // Use an easing function to make the animation smooth.
           .onUpdate(() => {
           
-            if (timeOhter > 1000 && timeOhter <= 4000) {
+            if (timeOhter > 1000 && timeOhter <= 4000 ) {
               boxLists[1].style.setProperty(
                 "background-position-y",
                 -coords.y + "px"
               );
-              boxLists[1].classList.toggle("sagep-itemM");
+              boxLists[1].classList.toggle("jackpotp-itemM");
 
             }
 
@@ -232,7 +232,7 @@ export default {
                 "background-position-y",
                 -coords.y + "px"
               );
-              boxLists[2].classList.toggle("sagep-itemM");
+              boxLists[2].classList.toggle("jackpotp-itemM");
               
             }
 
@@ -241,27 +241,27 @@ export default {
                 "background-position-y",
                 -coords.y + "px"
               );
-              boxLists[3].classList.toggle("sagep-itemM");
+              boxLists[3].classList.toggle("jackpotp-itemM");
             }
             if (timeOhter > 4000 && timeOhter <= 7000) {
               boxLists[4].style.setProperty(
                 "background-position-y",
                 -coords.y + "px"
               );
-              boxLists[4].classList.toggle("sagep-itemM");
+              boxLists[4].classList.toggle("jackpotp-itemM");
             }
-            if (timeOhter > 0 && timeOhter <= sageList.length*1000) {
+            if (timeOhter > 0 && timeOhter <= jackpotList.length*1000) {
               boxLists[0].style.setProperty(
                 "background-position-y",
                 -coords.y + "px"
               );
-              boxLists[0].classList.toggle("sagep-itemM");
+              boxLists[0].classList.toggle("jackpotp-itemM");
             }
           })
           .repeat(Infinity)
           .yoyo(false)
           .repeatDelay(0);
-        tween2.start(); // Stsage the tween immediately.
+        tween2.start(); // Stjackpot the tween immediately.
         let nowDate = window.performance.now();
         function animate(time) {
           timeOhter = time - nowDate;
@@ -275,7 +275,7 @@ export default {
         let i = 0;
         let timeany = setInterval(() => {
           i++;
-          if (i > sageList.length+2) {
+          if (i > jackpotList.length+2) {
             sessionStorage.setItem("countValue", countValue.value);
 
             open.value = true;
@@ -283,8 +283,8 @@ export default {
             tween.stop();
             clearInterval(timeany);
           }
-          if (i > 0 && i < sageList.length) {
-            if(i==6){
+          if (i > 0 && i < jackpotList.length) {
+            if(i==5){
             boxLists[i].style.setProperty("background-position-y", "center");
 
             }else{
@@ -292,7 +292,7 @@ export default {
 
             }
             boxLists[i]
-              .querySelectorAll(".sagep-item-img")
+              .querySelectorAll(".jackpotp-item-img")
               .forEach((child) => {
                 child.style.setProperty("display", "none");
               });
@@ -300,7 +300,7 @@ export default {
           if (i == 3) {
             boxLists[0].style.setProperty("background-position-x", 600 + "px");
             boxLists[0]
-              .querySelectorAll(".sagep-item-img")
+              .querySelectorAll(".jackpotp-item-img")
               .forEach((child) => {
                 child.style.setProperty("display", "block");
               });
@@ -308,7 +308,7 @@ export default {
           if (i == 4) {
             boxLists[1].style.setProperty("background-position-x", 600 + "px");
             boxLists[1]
-              .querySelectorAll(".sagep-item-img")
+              .querySelectorAll(".jackpotp-item-img")
               .forEach((child) => {
                 child.style.setProperty("display", "block");
               });
@@ -316,7 +316,7 @@ export default {
           if (i == 5) {
             boxLists[2].style.setProperty("background-position-x", 600 + "px");
             boxLists[2]
-              .querySelectorAll(".sagep-item-img")
+              .querySelectorAll(".jackpotp-item-img")
               .forEach((child) => {
                 child.style.setProperty("display", "block");
               });
@@ -324,20 +324,20 @@ export default {
           }
           if (i == 6) {
             boxLists[3].style.setProperty("background-position-x", 600 + "px");
-            boxLists[3].querySelectorAll(".sagep-item-img").forEach((child) => {
+            boxLists[3].querySelectorAll(".jackpotp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
             // countValue.value += useCount.value;
           }
           if (i == 7) {
             boxLists[4].style.setProperty("background-position-x", 600 + "px");
-            boxLists[4].querySelectorAll(".sagep-item-img").forEach((child) => {
+            boxLists[4].querySelectorAll(".jackpotp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 8) {
             boxLists[5].style.setProperty("background-position-y", 600 + "px");
-            boxLists[5].querySelectorAll(".sagep-item-img").forEach((child) => {
+            boxLists[5].querySelectorAll(".jackpotp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
             countValue.value += useCount.value*magn;
@@ -388,7 +388,7 @@ export default {
           randomImages.push(randomImage);
         }
 
-        allMethods.assignImageList(sageList, randomImages);
+        allMethods.assignImageList(jackpotList, randomImages);
       },
       // 随机生成图像列表
       shuffleArray(array) {
@@ -397,11 +397,11 @@ export default {
           [array[i], array[j]] = [array[j], array[i]];
         }
         array.forEach((item) => {
-          if (item.name == "sage1") {
+          if (item.name == "jackpot1") {
             arrCount[0].value++;
-          } else if (item.name == "sage2") {
+          } else if (item.name == "jackpot2") {
             arrCount[1].value++;
-          } else if (item.name == "sage3") {
+          } else if (item.name == "jackpot3") {
             arrCount[2].value++;
           }
           if (item.count) {
@@ -411,8 +411,8 @@ export default {
         return array;
       },
 
-      // 将图像列表分配给sageList
-      assignImageList(sageList, images) {
+      // 将图像列表分配给jackpotList
+      assignImageList(jackpotList, images) {
         const shuffledImages = allMethods.shuffleArray(images.slice()); // 避免修改原始数组
         console.log(
           "%c ..........shuffledImages.........",
@@ -420,7 +420,7 @@ export default {
           shuffledImages
         );
         let currentIndex = 0;
-        sageList.forEach((item) => {
+        jackpotList.forEach((item) => {
           const numImages = Math.min(item.size, 5);
           item.imgList = shuffledImages.slice(
             currentIndex,
@@ -429,11 +429,11 @@ export default {
           currentIndex += numImages;
         });
         console.log(
-          "%c ..........sageList.........",
+          "%c ..........jackpotList.........",
           "color:#31ef0e",
-          sageList
+          jackpotList
         );
-        return sageList;
+        return jackpotList;
       },
       goSeniority: () => {
         router.push("/list");
@@ -443,10 +443,10 @@ export default {
     return {
       className,
       open,
-      stsage,
-      sageConfig,
+      stjackpot,
+      jackpotConfig,
       randomImages,
-      sageList,
+      jackpotList,
       countValue,
       useCount,
       showRuleValue,
@@ -458,22 +458,22 @@ export default {
 </script>
 <template>
   <div :class="className">
-    <!-- <img class="headsage" :src="sageConfig.playsage2" alt=""> -->
-    <div class="sagep" id="sagep">
-      <div class="sagep-he" id="sagep-he">
-        <!-- <img class="sage-rule" @click="showRule" :src="sageConfig.rulesage" alt=""> -->
-        <div class="sagep-hidden">
+    <!-- <img class="headjackpot" :src="jackpotConfig.playjackpot2" alt=""> -->
+    <div class="jackpotp" id="jackpotp">
+      <div class="jackpotp-he" id="jackpotp-he">
+        <!-- <img class="jackpot-rule" @click="showRule" :src="jackpotConfig.rulejackpot" alt=""> -->
+        <div class="jackpotp-hidden">
           <div
-            class="sagep-item"
+            class="jackpotp-item"
             :id="item.name"
-            v-for="(item, index) in sageList"
+            v-for="(item, index) in jackpotList"
           >
             <div
               v-for="(imgItem, imgIndex) in item.imgList"
               :class="
                 imgItem.className
-                  ? 'sagep-item-img ' + imgItem.className
-                  : 'sagep-item-img'
+                  ? 'jackpotp-item-img ' + imgItem.className
+                  : 'jackpotp-item-img'
               "
             >
               <img :src="imgItem.img" alt="" />
@@ -481,37 +481,37 @@ export default {
           </div>
         </div>
       </div>
-      <div class="buttonsage-box">
+      <div class="buttonjackpot-box">
 
-        <div class="buttonssageBack" @click="close"></div>
+        <div class="buttonsjackpotBack" @click="close"></div>
         <div class="buttons" @click="run()"></div>
         <!-- <div class="buttons2" @click="run()"></div> -->
-        <div class="sage-count" @click="showRule">
-          <!-- <img class="sage-rule" :src="sageConfig.rulesage" alt="" /> -->
-          <img :src="sageConfig.countsage" alt="" />
+        <div class="jackpot-count" @click="showRule">
+          <!-- <img class="jackpot-rule" :src="jackpotConfig.rulejackpot" alt="" /> -->
+          <img :src="jackpotConfig.countjackpot" alt="" />
           <div class="countValue">{{ countValue }}</div>
         </div>
         
         
       </div>
-      <div class="saged-sagep">
-        <div class="saged-back" @click="close"></div>
+      <div class="jackpotd-jackpotp">
+        <div class="jackpotd-back" @click="close"></div>
       </div>
     </div>
     <Teleport to="body">
       <div v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="sageConfig.star" alt="" /> -->
-        <!-- <img class="model-img-bg" :src="sageConfig.resultsage" alt="" /> -->
-        <!-- <div class="modelsage-list">
+        <!-- <img class="model-star" :src="jackpotConfig.star" alt="" /> -->
+        <!-- <img class="model-img-bg" :src="jackpotConfig.resultjackpot" alt="" /> -->
+        <!-- <div class="modeljackpot-list">
           <div
-            class="modelsage-item"
+            class="modeljackpot-item"
             v-for="(item, index) in arrCount"
             :key="index"
           >
             {{ item.count + "X" + item.value }}
           </div>
-          <div class="modelsage-total">{{ useCount }}</div>
+          <div class="modeljackpot-total">{{ useCount }}</div>
         </div> -->
       </div>
     </Teleport>
@@ -519,8 +519,8 @@ export default {
     <Teleport to="body">
       <div v-if="showRuleValue" class="modal" @click="showRule">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="sageConfig.star" alt="" /> -->
-        <!-- <img class="model-img" :src="sageConfig.ruleDialogsage" alt="" /> -->
+        <!-- <img class="model-star" :src="jackpotConfig.star" alt="" /> -->
+        <!-- <img class="model-img" :src="jackpotConfig.ruleDialogjackpot" alt="" /> -->
       </div>
     </Teleport>
   </div>
@@ -532,7 +532,7 @@ export default {
 
   width: 280px;
 }
-.saged-sagep {
+.jackpotd-jackpotp {
   display: flex;
   align-items: center;
   /* padding: 60px 15px; */
@@ -544,42 +544,42 @@ export default {
 }
 .countValue {
   margin: 0 0 0 46%;
-  color: #890000;
+  color: #ffffff;
 }
 
-.sage-count img {
+.jackpot-count img {
   width: 100%;
   position: absolute;
   height: 100%;
   /* top: -16%; */
   z-index: -1;
 }
-.sage-count .sage-rule {
+.jackpot-count .jackpot-rule {
   position: absolute;
   left: -9%;
   width: 45px;
   height: 45px;
 }
-.saged-back {
-  /* background: v-bind("'url(' + sageConfig.homesage + ')'") no-repeat; */
+.jackpotd-back {
+  /* background: v-bind("'url(' + jackpotConfig.homejackpot + ')'") no-repeat; */
 
   width: 36px;
   height: 42px;
   background-size: 100%;
   z-index: 999;
 }
-.stsage {
+.stjackpot {
   margin-top: -30%;
   width: 160px;
   height: 80px;
-  background: v-bind("'url(' + sageConfig.playsage + ')'") no-repeat;
+  background: v-bind("'url(' + jackpotConfig.playjackpot + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 }
 .container {
   display: flex;
   flex-direction: column;
-  background: v-bind("'url(' + sageConfig.boxsage + ')'") no-repeat;
+  background: v-bind("'url(' + jackpotConfig.boxjackpot + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -589,7 +589,7 @@ export default {
   align-items: center;
 }
 
-.sagep {
+.jackpotp {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -599,16 +599,16 @@ export default {
   /* height: 100vh; */
   /* overflow: hidden; */
 
-  background: v-bind("'url(' + sageConfig.anyBoxsage + ')'") no-repeat;
-  background-size: auto 100%;
-    background-position: center ;
+  background: v-bind("'url(' + jackpotConfig.anyBoxjackpot + ')'") no-repeat;
+  background-size: auto 99%;
+    background-position: center -10%;
 
   color: #fff;
   font-weight: 600;
   font-size: 26;
 }
 
-.buttonsage-box {
+.buttonjackpot-box {
   position: absolute;
   top: 0%;
   left: 12%;
@@ -619,13 +619,12 @@ export default {
   height: 25%;
   /* justify-content: space-between; */
 }
-.sage-count {
+.jackpot-count {
   position: relative;
-  width: 47%;
-    height: 47%;
-    margin-left: 3%;
-    margin-top: 43.2%;
-
+  width: 40%;
+    height: 45%;
+    margin-left: 1.5%;
+    margin-top: 31.7%;
 
   display: flex;
   align-items: center;
@@ -635,13 +634,15 @@ export default {
 }
 
 .buttons {
+
   margin-left: -4%;
-    margin-top: 43%;
+    margin-top: 31.6%;
     width: 13%;
-    height: 49%;
+    height: 46%;
+
 
   z-index: 999;
-  background: v-bind("'url(' + sageConfig.playsage + ')'") no-repeat;
+  background: v-bind("'url(' + jackpotConfig.playjackpot + ')'") no-repeat;
   background-size: 100% 100%;
 }
 .buttons2 {
@@ -649,20 +650,20 @@ export default {
     height: 47%;
     margin-left: 3%;
     margin-top: 41.5%;
-  /* background: v-bind("'url(' + sageConfig.playsage3 + ')'") no-repeat; */
+  /* background: v-bind("'url(' + jackpotConfig.playjackpot3 + ')'") no-repeat; */
   background-size: 100% 100%;
 }
-.buttonssageBack {
-  margin-left: 3.5%;
+.buttonsjackpotBack {
+  margin-left: 4.5%;
     margin-top: 0;
-    width: 17%;
-    height: 46.5%;
+    width: 16%;
+    height: 47.5%;
 
   z-index: 999;
-  background: v-bind("'url(' + sageConfig.homesage  + ')'") no-repeat;
+  background: v-bind("'url(' + jackpotConfig.homejackpot  + ')'") no-repeat;
   background-size: 100% 100%;
 }
-.sagep-he {
+.jackpotp-he {
   position: relative;
   margin-right: 0%;
   margin-top: 7%;
@@ -674,19 +675,19 @@ export default {
     transform: scale(0.6);
 }
 
-.sagep-hidden {
+.jackpotp-hidden {
   /* margin-top: 2%; */
   margin-left: 1%;
-  margin-top:-12%;
+  margin-top: -16%;
   display: flex;
   flex-wrap: wrap;
   /* justify-content: space-between; */
   /* align-items: center; */
   width: 100%;
-  height: 132%;
+  height: 146%;
 }
 
-.sagep-item {
+.jackpotp-item {
  
   display: flex;
   align-items: center;
@@ -694,7 +695,7 @@ export default {
   flex-direction: column;
   width: 20%;
   height: 56%;
-  background: v-bind("'url(' + sageConfig.changeSsage + ')'");
+  background: v-bind("'url(' + jackpotConfig.changeSjackpot + ')'");
   /* background-position-x: 0px; */
   background-position-x: center;
   background-repeat-x: no-repeat;
@@ -702,69 +703,71 @@ export default {
     background-size: 73% 422%;
 
 }
-/* .sagep-item:nth-child(3){
+/* .jackpotp-item:nth-child(3){
   margin-right: 20%;
 } */
-.sagep-item:nth-child(6) {
+.jackpotp-item:nth-child(6) {
   /* margin-bottom: 20%; */
+  margin-top: 15%;
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-direction:row;
   width: 100%;
   height: 30%;
-  background-image: v-bind("'url(' + sageConfig.anysage + ')'");
+  background-image: v-bind("'url(' + jackpotConfig.anyjackpot + ')'");
   background-position-y: center;
   background-repeat-y: no-repeat;
   background-position-x: 11px;
   background-size: 161% 73%
 }
-.sagep-hidden .sagep-itemD {
+.jackpotp-hidden .jackpotp-itemD {
+  margin-top: 15%;
   display: flex;
   align-items: center;
   justify-content: space-around;
   width: 100%;
   height: 30%;
-  background-image: v-bind("'url(' + sageConfig.changeDsage + ')'");
+  background-image: v-bind("'url(' + jackpotConfig.changeDjackpot + ')'");
   background-position-y: center;
   background-repeat-y: no-repeat;
   background-position-x: 11px;
   background-size: 161% 73%
 }
-.sagep-itemM{
+.jackpotp-itemM{
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
   width: 20%;
   height: 56%;
-  background: v-bind("'url(' + sageConfig.changeMsage + ')'");
+  background: v-bind("'url(' + jackpotConfig.changeMjackpot + ')'");
   /* background-position-x: 0px; */
   background-position-x: center;
   background-repeat-x: no-repeat;
   background-position-y: -10px;
     background-size: 73% 422%;
 }
-.sagep-item-img {
+.jackpotp-item-img {
   position: relative;
 
   display: none;
   width: 100%;
   height: 100%;
 }
-.sagep-item-img img {
+.jackpotp-item-img img {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1.1);
   z-index: -1;
-  width: 80%;
-  height: 80%;
+  width: 70%;
+  height: 70%;
 }
 .modal {
   display: flex;
   justify-content: center;
-  align-items: flex-stsage;
+  align-items: flex-stjackpot;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -772,7 +775,7 @@ export default {
   height: 100vh;
   z-index: 9999;
   /* background-color: rgba(0, 0, 0, 0.5); */
-  /* background: v-bind("'url(' + sageConfig.dialogsage + ')'") no-repeat; */
+  /* background: v-bind("'url(' + jackpotConfig.dialogjackpot + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star {
@@ -794,17 +797,17 @@ export default {
   width: 70%;
 }
 
-.stsage-bg {
+.stjackpot-bg {
   position: absolute;
 
   top: 0;
   z-index: 1;
 }
-.stsage-bg img {
+.stjackpot-bg img {
   width: 100%;
 }
 
-.modelsage-list {
+.modeljackpot-list {
   position: absolute;
   left: 60%;
   top: 39.5%;
@@ -816,14 +819,14 @@ export default {
   font-size: 16px;
   /* transform: rotate(7deg) translateX(-36px); */
 }
-.modelsage-item {
+.modeljackpot-item {
   margin-bottom: 11px;
 }
-.modelsage-total {
+.modeljackpot-total {
   padding: 7px 14px;
 }
 
-.headsage {
+.headjackpot {
   position: absolute;
     top: -0;
 
@@ -832,19 +835,19 @@ export default {
 /* 定义步长图片动画关键帧 */
 @keyframes image-animation {
   0% {
-    background-image: v-bind("'url(' + sageConfig.animation1 + ')'");
+    background-image: v-bind("'url(' + jackpotConfig.animation1 + ')'");
   }
 
   25% {
-    background-image: v-bind("'url(' + sageConfig.animation4 + ')'");
+    background-image: v-bind("'url(' + jackpotConfig.animation4 + ')'");
   }
 
   75% {
-    background-image: v-bind("'url(' + sageConfig.animation8 + ')'");
+    background-image: v-bind("'url(' + jackpotConfig.animation8 + ')'");
   }
 
   100% {
-    background-image: v-bind("'url(' + sageConfig.animation12 + ')'");
+    background-image: v-bind("'url(' + jackpotConfig.animation12 + ')'");
   }
 }
 
