@@ -1,40 +1,40 @@
 <script>
-import playbluer from "@/assets/slotD11/playbluer.png";
-// import playbluer3 from "@/assets/slotD11/playbluer3.png";
-import playbluer2 from "@/assets/slotD11/playbluer2.jpg";
-import boxbluer from "@/assets/slotD11/playbluer2.jpg";
-import anybluer from "@/assets/slotD11/changeHbluer.png";
-import changeDbluer from "@/assets/slotD11/changeDbluer.png";
-import changeMbluer from "@/assets/slotD11/changeMbluer.png";
-import changeSbluer from "@/assets/slotD11/changeSbluer.png";
-import anyBoxbluer from "@/assets/slotD11/anyBoxbluer.jpg";
-import homebluer from "@/assets/slotD11/homebluer.png";
+import playbluer from "@/assets/slotD10/playbluer.png";
+// import playbluer3 from "@/assets/slotD10/playbluer3.png";
+import playbluer2 from "@/assets/slotD10/playbluer2.jpg";
+import boxbluer from "@/assets/slotD10/playbluer2.jpg";
+import anybluer from "@/assets/slotD10/changeHbluer.png";
+import changeDbluer from "@/assets/slotD10/changeDbluer.png";
+import changeMbluer from "@/assets/slotD10/changeMbluer.png";
+import changeSbluer from "@/assets/slotD10/changeSbluer.png";
+import anyBoxbluer from "@/assets/slotD10/anyBoxbluer.jpg";
+import homebluer from "@/assets/slotD10/homebluer.png";
 
-// import senioritybluer from "@/assets/slotD11/senioritybluer.png";
-import countbluer from "@/assets/slotD11/countbluer.png";
-// import rulebluer from "@/assets/slotD11/rulebluer.png";
-// import ruleDialogbluer from "@/assets/slotD11/ruleDialogbluer.jpg";
-// import resultbluer from "@/assets/slotD11/resultbluer.png";
-// import headbluer from "@/assets/slotD11/headbluer.png";
+// import senioritybluer from "@/assets/slotD10/senioritybluer.png";
+import countbluer from "@/assets/slotD10/countbluer.png";
+// import rulebluer from "@/assets/slotD10/rulebluer.png";
+// import ruleDialogbluer from "@/assets/slotD10/ruleDialogbluer.jpg";
+// import resultbluer from "@/assets/slotD10/resultbluer.png";
+// import headbluer from "@/assets/slotD10/headbluer.png";
 
-// import star from "@/assets/slotD11/starbluer.gif";
+// import star from "@/assets/slotD10/starbluer.gif";
 import { useRouter, useRoute } from "vue-router";
-import bluer1 from "@/assets/slotD11/bluer1.png";
-import bluer2 from "@/assets/slotD11/bluer2.png";
-import bluer3 from "@/assets/slotD11/bluer3.png";
-import bluer4 from "@/assets/slotD11/bluer4.png";
-import bluer5 from "@/assets/slotD11/bluer5.png";
-import bluer6 from "@/assets/slotD11/bluer6.png";
-import bluer7 from "@/assets/slotD11/bluer7.png";
-// import bluer8 from "@/assets/slotD11/bluer8.png";
+import bluer1 from "@/assets/slotD10/bluer1.png";
+import bluer2 from "@/assets/slotD10/bluer2.png";
+import bluer3 from "@/assets/slotD10/bluer3.png";
+import bluer4 from "@/assets/slotD10/bluer4.png";
+import bluer5 from "@/assets/slotD10/bluer5.png";
+import bluer6 from "@/assets/slotD10/bluer6.png";
+import bluer7 from "@/assets/slotD10/bluer7.png";
+// import bluer8 from "@/assets/slotD10/bluer8.png";
 
-// import animation1 from "@/assets/slotD11/dong/00001.png";
-// import animation4 from "@/assets/slotD11/dong/00004.png";
-// import animation8 from "@/assets/slotD11/dong/00008.png";
-// import animation12 from "@/assets/slotD11/dong/00012.png";
+// import animation1 from "@/assets/slotD10/dong/00001.png";
+// import animation4 from "@/assets/slotD10/dong/00004.png";
+// import animation8 from "@/assets/slotD10/dong/00008.png";
+// import animation12 from "@/assets/slotD10/dong/00012.png";
 
 import { inject } from "vue";
-// import football from "@/assets/slotD11/football.png";
+// import football from "@/assets/slotD10/football.png";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
