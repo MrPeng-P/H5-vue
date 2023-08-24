@@ -1,40 +1,40 @@
 <script>
-import playlubricating from "@/assets/slotD9/playlubricating.png";
-// import playlubricating3 from "@/assets/slotD9/playlubricating3.png";
-import playlubricating2 from "@/assets/slotD9/playlubricating2.jpg";
-import boxlubricating from "@/assets/slotD9/playlubricating2.jpg";
-import anylubricating from "@/assets/slotD9/changeHlubricating.png";
-import changeDlubricating from "@/assets/slotD9/changeDlubricating.png";
-import changeMlubricating from "@/assets/slotD9/changeMlubricating.png";
-import changeSlubricating from "@/assets/slotD9/changeSlubricating.png";
-import anyBoxlubricating from "@/assets/slotD9/anyBoxlubricating.png";
-import homelubricating from "@/assets/slotD9/homelubricating.png";
+import playlubricating from "@/assets/slotD8/playlubricating.png";
+// import playlubricating3 from "@/assets/slotD8/playlubricating3.png";
+import playlubricating2 from "@/assets/slotD8/playlubricating2.jpg";
+import boxlubricating from "@/assets/slotD8/playlubricating2.jpg";
+import anylubricating from "@/assets/slotD8/changeHlubricating.png";
+import changeDlubricating from "@/assets/slotD8/changeDlubricating.png";
+import changeMlubricating from "@/assets/slotD8/changeMlubricating.png";
+import changeSlubricating from "@/assets/slotD8/changeSlubricating.png";
+import anyBoxlubricating from "@/assets/slotD8/anyBoxlubricating.jpg";
+import homelubricating from "@/assets/slotD8/homelubricating.png";
 
-// import senioritylubricating from "@/assets/slotD9/senioritylubricating.png";
-import countlubricating from "@/assets/slotD9/countlubricating.png";
-// import rulelubricating from "@/assets/slotD9/rulelubricating.png";
-// import ruleDialoglubricating from "@/assets/slotD9/ruleDialoglubricating.jpg";
-// import resultlubricating from "@/assets/slotD9/resultlubricating.png";
-// import headlubricating from "@/assets/slotD9/headlubricating.png";
+// import senioritylubricating from "@/assets/slotD8/senioritylubricating.png";
+import countlubricating from "@/assets/slotD8/countlubricating.png";
+// import rulelubricating from "@/assets/slotD8/rulelubricating.png";
+// import ruleDialoglubricating from "@/assets/slotD8/ruleDialoglubricating.jpg";
+// import resultlubricating from "@/assets/slotD8/resultlubricating.png";
+// import headlubricating from "@/assets/slotD8/headlubricating.png";
 
-// import star from "@/assets/slotD9/starlubricating.gif";
+// import star from "@/assets/slotD8/starlubricating.gif";
 import { useRouter, useRoute } from "vue-router";
-import lubricating1 from "@/assets/slotD9/lubricating1.png";
-import lubricating2 from "@/assets/slotD9/lubricating2.png";
-import lubricating3 from "@/assets/slotD9/lubricating3.png";
-import lubricating4 from "@/assets/slotD9/lubricating4.png";
-import lubricating5 from "@/assets/slotD9/lubricating5.png";
-import lubricating6 from "@/assets/slotD9/lubricating6.png";
-import lubricating7 from "@/assets/slotD9/lubricating7.png";
-// import lubricating8 from "@/assets/slotD9/lubricating8.png";
+import lubricating1 from "@/assets/slotD8/lubricating1.png";
+import lubricating2 from "@/assets/slotD8/lubricating2.png";
+import lubricating3 from "@/assets/slotD8/lubricating3.png";
+import lubricating4 from "@/assets/slotD8/lubricating4.png";
+import lubricating5 from "@/assets/slotD8/lubricating5.png";
+import lubricating6 from "@/assets/slotD8/lubricating6.png";
+import lubricating7 from "@/assets/slotD8/lubricating7.png";
+// import lubricating8 from "@/assets/slotD8/lubricating8.png";
 
-// import animation1 from "@/assets/slotD9/dong/00001.png";
-// import animation4 from "@/assets/slotD9/dong/00004.png";
-// import animation8 from "@/assets/slotD9/dong/00008.png";
-// import animation12 from "@/assets/slotD9/dong/00012.png";
+// import animation1 from "@/assets/slotD8/dong/00001.png";
+// import animation4 from "@/assets/slotD8/dong/00004.png";
+// import animation8 from "@/assets/slotD8/dong/00008.png";
+// import animation12 from "@/assets/slotD8/dong/00012.png";
 
 import { inject } from "vue";
-// import football from "@/assets/slotD9/football.png";
+// import football from "@/assets/slotD8/football.png";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
@@ -600,8 +600,8 @@ export default {
   /* overflow: hidden; */
 
   background: v-bind("'url(' + lubricatingConfig.anyBoxlubricating + ')'") no-repeat;
-  background-size: auto 82%;
-    background-position: center -10%;
+  background-size: auto 100%;
+    background-position: center ;
 
   color: #fff;
   font-weight: 600;
@@ -621,10 +621,10 @@ export default {
 }
 .lubricating-count {
   position: relative;
-  width: 43%;
-    height: 45%;
+  width: 49%;
+    height: 47%;
     margin-left: 1.5%;
-    margin-top: 43.7%;
+    margin-top: 44.2%;
 
   display: flex;
   align-items: center;
@@ -637,8 +637,8 @@ export default {
 
   margin-left: -4%;
     margin-top: 43.6%;
-    width: 13%;
-    height: 46%;
+    width: 14%;
+    height: 49%;
 
 
   z-index: 999;
@@ -759,8 +759,8 @@ export default {
   left: 50%;
   transform: translate(-50%, -50%) scale(1.1);
   z-index: -1;
-  width: 70%;
-  height: 70%;
+  width: 80%;
+  height: 80%;
 }
 .modal {
   display: flex;
