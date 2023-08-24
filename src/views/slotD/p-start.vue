@@ -1,7 +1,7 @@
 <script>
 
-// import playjackpot from "@/assets/slotD12/playjackpot2.png";
-import boxjackpot from "@/assets/slotD12/playjackpot2.jpg";
+// import playicehouse from "@/assets/slotD11/playicehouse2.png";
+import boxicehouse from "@/assets/slotD11/playicehouse2.jpg";
 import { onMounted, reactive, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
@@ -9,9 +9,9 @@ export default {
   setup() {
     const router = new useRouter();
     const className = "container";
-    const jackpotConfig = reactive({
-      // playjackpot,
-      boxjackpot,
+    const icehouseConfig = reactive({
+      // playicehouse,
+      boxicehouse,
     });
    
 
@@ -25,7 +25,7 @@ export default {
     });
     return {
         className,
-      jackpotConfig,
+      icehouseConfig,
       ...allMethods,
     };
   },
@@ -34,7 +34,7 @@ export default {
 <template>
   
   <div :class="className" @click="goHome">
-    <div class="stjackpot" >
+    <div class="sticehouse" >
     </div>
   </div>
 </template>
@@ -42,18 +42,18 @@ export default {
 <style scoped>
 
 
-.stjackpot{
+.sticehouse{
   margin-top: -2%;
     width: 36%;
 
     height: 252px;
-  /* background: v-bind("'url(' + jackpotConfig.playjackpot + ')'") no-repeat; */
+  /* background: v-bind("'url(' + icehouseConfig.playicehouse + ')'") no-repeat; */
   background-size: 100%;
   z-index: 99;
 
 }        
 .container {
-  background: v-bind("'url(' + jackpotConfig.boxjackpot + ')'") no-repeat;
+  background: v-bind("'url(' + icehouseConfig.boxicehouse + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -64,7 +64,7 @@ export default {
 }
 
 
-.jackpotp-he {
+.icehousep-he {
   position: relative;
     margin-top: 26%;
     width: 140%;
@@ -73,7 +73,7 @@ export default {
     justify-content: space-between;
     transform: scale(0.65);
 }
-.jackpotp-hidden{
+.icehousep-hidden{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -82,11 +82,11 @@ export default {
   overflow: hidden;
 
 }
-.jackpotp-item {
+.icehousep-item {
   
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + jackpotConfig.anyjackpot + ')'") ;
+  background: v-bind("'url(' + icehouseConfig.anyicehouse + ')'") ;
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
@@ -96,7 +96,7 @@ export default {
   padding-top: 155px;
     display: flex;
     justify-content: center;
-    align-items: flex-stjackpot;
+    align-items: flex-sticehouse;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -104,7 +104,7 @@ export default {
     height: 100vh;
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.5);
-  /* background: v-bind("'url(' + jackpotConfig.dialogjackpot + ')'") no-repeat; */
+  /* background: v-bind("'url(' + icehouseConfig.dialogicehouse + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star{
@@ -116,12 +116,12 @@ export default {
 
 }
 
-.stjackpot-bg{
+.sticehouse-bg{
     position: absolute;
     top: 0;
     z-index: 1;
 }
-.stjackpot-bg img{
+.sticehouse-bg img{
     width: 100%;
 }
 </style>
