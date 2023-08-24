@@ -1,40 +1,40 @@
 <script>
-import playlubricating from "@/assets/slotD8/playlubricating.png";
-// import playlubricating3 from "@/assets/slotD8/playlubricating3.png";
-import playlubricating2 from "@/assets/slotD8/playlubricating2.jpg";
-import boxlubricating from "@/assets/slotD8/playlubricating2.jpg";
-import anylubricating from "@/assets/slotD8/changeHlubricating.png";
-import changeDlubricating from "@/assets/slotD8/changeDlubricating.png";
-import changeMlubricating from "@/assets/slotD8/changeMlubricating.png";
-import changeSlubricating from "@/assets/slotD8/changeSlubricating.png";
-import anyBoxlubricating from "@/assets/slotD8/anyBoxlubricating.jpg";
-import homelubricating from "@/assets/slotD8/homelubricating.png";
+import playbooks from "@/assets/slotD13/playbooks.png";
+// import playbooks3 from "@/assets/slotD13/playbooks3.png";
+import playbooks2 from "@/assets/slotD13/playbooks2.jpg";
+import boxbooks from "@/assets/slotD13/playbooks2.jpg";
+import anybooks from "@/assets/slotD13/changeHbooks.png";
+import changeDbooks from "@/assets/slotD13/changeDbooks.png";
+import changeMbooks from "@/assets/slotD13/changeMbooks.png";
+import changeSbooks from "@/assets/slotD13/changeSbooks.png";
+import anyBoxbooks from "@/assets/slotD13/anyBoxbooks.jpg";
+import homebooks from "@/assets/slotD13/homebooks.png";
 
-// import senioritylubricating from "@/assets/slotD8/senioritylubricating.png";
-import countlubricating from "@/assets/slotD8/countlubricating.png";
-// import rulelubricating from "@/assets/slotD8/rulelubricating.png";
-// import ruleDialoglubricating from "@/assets/slotD8/ruleDialoglubricating.jpg";
-// import resultlubricating from "@/assets/slotD8/resultlubricating.png";
-// import headlubricating from "@/assets/slotD8/headlubricating.png";
+// import senioritybooks from "@/assets/slotD13/senioritybooks.png";
+import countbooks from "@/assets/slotD13/countbooks.png";
+// import rulebooks from "@/assets/slotD13/rulebooks.png";
+// import ruleDialogbooks from "@/assets/slotD13/ruleDialogbooks.jpg";
+// import resultbooks from "@/assets/slotD13/resultbooks.png";
+// import headbooks from "@/assets/slotD13/headbooks.png";
 
-// import star from "@/assets/slotD8/starlubricating.gif";
+// import star from "@/assets/slotD13/starbooks.gif";
 import { useRouter, useRoute } from "vue-router";
-import lubricating1 from "@/assets/slotD8/lubricating1.png";
-import lubricating2 from "@/assets/slotD8/lubricating2.png";
-import lubricating3 from "@/assets/slotD8/lubricating3.png";
-import lubricating4 from "@/assets/slotD8/lubricating4.png";
-import lubricating5 from "@/assets/slotD8/lubricating5.png";
-import lubricating6 from "@/assets/slotD8/lubricating6.png";
-import lubricating7 from "@/assets/slotD8/lubricating7.png";
-// import lubricating8 from "@/assets/slotD8/lubricating8.png";
+import books1 from "@/assets/slotD13/books1.png";
+import books2 from "@/assets/slotD13/books2.png";
+import books3 from "@/assets/slotD13/books3.png";
+import books4 from "@/assets/slotD13/books4.png";
+import books5 from "@/assets/slotD13/books5.png";
+import books6 from "@/assets/slotD13/books6.png";
+import books7 from "@/assets/slotD13/books7.png";
+// import books8 from "@/assets/slotD13/books8.png";
 
-// import animation1 from "@/assets/slotD8/dong/00001.png";
-// import animation4 from "@/assets/slotD8/dong/00004.png";
-// import animation8 from "@/assets/slotD8/dong/00008.png";
-// import animation12 from "@/assets/slotD8/dong/00012.png";
+// import animation1 from "@/assets/slotD13/dong/00001.png";
+// import animation4 from "@/assets/slotD13/dong/00004.png";
+// import animation8 from "@/assets/slotD13/dong/00008.png";
+// import animation12 from "@/assets/slotD13/dong/00012.png";
 
 import { inject } from "vue";
-// import football from "@/assets/slotD8/football.png";
+// import football from "@/assets/slotD13/football.png";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
@@ -66,30 +66,30 @@ export default {
     const router = new useRouter();
     // 随机生成 12 张图的数组
     let randomImages = [];
-    const lubricatingConfig = reactive({
-      // headlubricating,
+    const booksConfig = reactive({
+      // headbooks,
       // animation1,
       // animation4,
       // animation8,
       // animation12,
-      changeSlubricating,
-      changeDlubricating,
-      changeMlubricating,
-      anylubricating,
-      playlubricating,
-      anyBoxlubricating,
-      playlubricating2,
-      // playlubricating3,
-      boxlubricating,
-      homelubricating,
+      changeSbooks,
+      changeDbooks,
+      changeMbooks,
+      anybooks,
+      playbooks,
+      anyBoxbooks,
+      playbooks2,
+      // playbooks3,
+      boxbooks,
+      homebooks,
       //   star,
-      // senioritylubricating,
-      countlubricating,
-      // rulelubricating,
-      // ruleDialoglubricating,
-      // resultlubricating
+      // senioritybooks,
+      countbooks,
+      // rulebooks,
+      // ruleDialogbooks,
+      // resultbooks
     });
-    const lubricatingList = reactive([
+    const booksList = reactive([
       {
         name: "item1",
         size: 2,
@@ -123,43 +123,43 @@ export default {
     ]);
     let timeOhter = 0;
     let id;
-    let stlubricating = ref(false);
+    let stbooks = ref(false);
     let open = ref(false);
     let buttonStatus = ref(true);
     const images = [
       {
-        img: lubricating1,
-        name: "lubricating2",
+        img: books1,
+        name: "books2",
         className: "animation",
         count: 1800 * magnification.value,
       },
       {
-        img: lubricating2,
-        name: "lubricating1",
+        img: books2,
+        name: "books1",
         className: "animation",
         count: 1000 * magnification.value,
       },
       {
-        img: lubricating3,
+        img: books3,
       },
       {
-        img: lubricating4,
+        img: books4,
       },
       {
-        img: lubricating5,
+        img: books5,
       },
       {
-        img: lubricating6,
-        name: "lubricating3",
+        img: books6,
+        name: "books3",
         className: "animation",
         count: 2200 * magnification.value,
       },
       {
-        img: lubricating7,
+        img: books7,
 
       },
       // {
-      //   img: lubricating8,
+      //   img: books8,
       // },
     ];
     const allMethods = {
@@ -176,11 +176,11 @@ export default {
         buttonStatus.value = false;
 
         allMethods.clear();
-        const boxLists = lubricatingList.map((item) => {
+        const boxLists = booksList.map((item) => {
           return document.getElementById(item.name);
         });
         boxLists[0].style.setProperty("background-position-y", "center");
-        boxLists[0].querySelectorAll(".lubricatingp-item-img").forEach((child) => {
+        boxLists[0].querySelectorAll(".booksp-item-img").forEach((child) => {
           child.style.setProperty("display", "none");
         });
         // boxLists.forEach((item)=>{
@@ -193,9 +193,9 @@ export default {
         //       0+'px'
         //     );
         // })
-        const content = document.getElementById("lubricatingp-he");
-        const box2 = document.getElementById("lubricatingp");
-        const coords = { x: 0, y: 0 }; // Stlubricating at (0, 0)
+        const content = document.getElementById("booksp-he");
+        const box2 = document.getElementById("booksp");
+        const coords = { x: 0, y: 0 }; // Stbooks at (0, 0)
         const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to({ x: (1120 * content.clientWidth) / box2.clientWidth, y: 0 }, 100) // Move to (300, 600) in 1 second.
           .easing() // Use an easing function to make the animation smooth.
@@ -205,14 +205,14 @@ export default {
                 "background-position-x",
                 -coords.x + "px"
               );
-              boxLists[5].classList.toggle("lubricatingp-itemD");
+              boxLists[5].classList.toggle("booksp-itemD");
             }
            
           })
           .repeat(Infinity)
           .yoyo(false)
           .repeatDelay(0);
-        tween.start(); // Stlubricating the tween immediately.
+        tween.start(); // Stbooks the tween immediately.
         const tween2 = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to({ x: 0, y: (1120 * content.clientHeight) / box2.clientHeight }, 100) // Move to (300, 600) in 1 second.
           .easing() // Use an easing function to make the animation smooth.
@@ -223,7 +223,7 @@ export default {
                 "background-position-y",
                 -coords.y + "px"
               );
-              boxLists[1].classList.toggle("lubricatingp-itemM");
+              boxLists[1].classList.toggle("booksp-itemM");
 
             }
 
@@ -232,7 +232,7 @@ export default {
                 "background-position-y",
                 -coords.y + "px"
               );
-              boxLists[2].classList.toggle("lubricatingp-itemM");
+              boxLists[2].classList.toggle("booksp-itemM");
               
             }
 
@@ -241,27 +241,27 @@ export default {
                 "background-position-y",
                 -coords.y + "px"
               );
-              boxLists[3].classList.toggle("lubricatingp-itemM");
+              boxLists[3].classList.toggle("booksp-itemM");
             }
             if (timeOhter > 4000 && timeOhter <= 7000) {
               boxLists[4].style.setProperty(
                 "background-position-y",
                 -coords.y + "px"
               );
-              boxLists[4].classList.toggle("lubricatingp-itemM");
+              boxLists[4].classList.toggle("booksp-itemM");
             }
-            if (timeOhter > 0 && timeOhter <= lubricatingList.length*1000) {
+            if (timeOhter > 0 && timeOhter <= booksList.length*1000) {
               boxLists[0].style.setProperty(
                 "background-position-y",
                 -coords.y + "px"
               );
-              boxLists[0].classList.toggle("lubricatingp-itemM");
+              boxLists[0].classList.toggle("booksp-itemM");
             }
           })
           .repeat(Infinity)
           .yoyo(false)
           .repeatDelay(0);
-        tween2.start(); // Stlubricating the tween immediately.
+        tween2.start(); // Stbooks the tween immediately.
         let nowDate = window.performance.now();
         function animate(time) {
           timeOhter = time - nowDate;
@@ -275,7 +275,7 @@ export default {
         let i = 0;
         let timeany = setInterval(() => {
           i++;
-          if (i > lubricatingList.length+2) {
+          if (i > booksList.length+2) {
             sessionStorage.setItem("countValue", countValue.value);
 
             open.value = true;
@@ -283,7 +283,7 @@ export default {
             tween.stop();
             clearInterval(timeany);
           }
-          if (i > 0 && i < lubricatingList.length) {
+          if (i > 0 && i < booksList.length) {
             if(i==5){
             boxLists[i].style.setProperty("background-position-y", "center");
 
@@ -292,7 +292,7 @@ export default {
 
             }
             boxLists[i]
-              .querySelectorAll(".lubricatingp-item-img")
+              .querySelectorAll(".booksp-item-img")
               .forEach((child) => {
                 child.style.setProperty("display", "none");
               });
@@ -300,7 +300,7 @@ export default {
           if (i == 3) {
             boxLists[0].style.setProperty("background-position-x", 600 + "px");
             boxLists[0]
-              .querySelectorAll(".lubricatingp-item-img")
+              .querySelectorAll(".booksp-item-img")
               .forEach((child) => {
                 child.style.setProperty("display", "block");
               });
@@ -308,7 +308,7 @@ export default {
           if (i == 4) {
             boxLists[1].style.setProperty("background-position-x", 600 + "px");
             boxLists[1]
-              .querySelectorAll(".lubricatingp-item-img")
+              .querySelectorAll(".booksp-item-img")
               .forEach((child) => {
                 child.style.setProperty("display", "block");
               });
@@ -316,7 +316,7 @@ export default {
           if (i == 5) {
             boxLists[2].style.setProperty("background-position-x", 600 + "px");
             boxLists[2]
-              .querySelectorAll(".lubricatingp-item-img")
+              .querySelectorAll(".booksp-item-img")
               .forEach((child) => {
                 child.style.setProperty("display", "block");
               });
@@ -324,20 +324,20 @@ export default {
           }
           if (i == 6) {
             boxLists[3].style.setProperty("background-position-x", 600 + "px");
-            boxLists[3].querySelectorAll(".lubricatingp-item-img").forEach((child) => {
+            boxLists[3].querySelectorAll(".booksp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
             // countValue.value += useCount.value;
           }
           if (i == 7) {
             boxLists[4].style.setProperty("background-position-x", 600 + "px");
-            boxLists[4].querySelectorAll(".lubricatingp-item-img").forEach((child) => {
+            boxLists[4].querySelectorAll(".booksp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 8) {
             boxLists[5].style.setProperty("background-position-y", 600 + "px");
-            boxLists[5].querySelectorAll(".lubricatingp-item-img").forEach((child) => {
+            boxLists[5].querySelectorAll(".booksp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
             countValue.value += useCount.value*magn;
@@ -388,7 +388,7 @@ export default {
           randomImages.push(randomImage);
         }
 
-        allMethods.assignImageList(lubricatingList, randomImages);
+        allMethods.assignImageList(booksList, randomImages);
       },
       // 随机生成图像列表
       shuffleArray(array) {
@@ -397,11 +397,11 @@ export default {
           [array[i], array[j]] = [array[j], array[i]];
         }
         array.forEach((item) => {
-          if (item.name == "lubricating1") {
+          if (item.name == "books1") {
             arrCount[0].value++;
-          } else if (item.name == "lubricating2") {
+          } else if (item.name == "books2") {
             arrCount[1].value++;
-          } else if (item.name == "lubricating3") {
+          } else if (item.name == "books3") {
             arrCount[2].value++;
           }
           if (item.count) {
@@ -411,8 +411,8 @@ export default {
         return array;
       },
 
-      // 将图像列表分配给lubricatingList
-      assignImageList(lubricatingList, images) {
+      // 将图像列表分配给booksList
+      assignImageList(booksList, images) {
         const shuffledImages = allMethods.shuffleArray(images.slice()); // 避免修改原始数组
         console.log(
           "%c ..........shuffledImages.........",
@@ -420,7 +420,7 @@ export default {
           shuffledImages
         );
         let currentIndex = 0;
-        lubricatingList.forEach((item) => {
+        booksList.forEach((item) => {
           const numImages = Math.min(item.size, 5);
           item.imgList = shuffledImages.slice(
             currentIndex,
@@ -429,11 +429,11 @@ export default {
           currentIndex += numImages;
         });
         console.log(
-          "%c ..........lubricatingList.........",
+          "%c ..........booksList.........",
           "color:#31ef0e",
-          lubricatingList
+          booksList
         );
-        return lubricatingList;
+        return booksList;
       },
       goSeniority: () => {
         router.push("/list");
@@ -443,10 +443,10 @@ export default {
     return {
       className,
       open,
-      stlubricating,
-      lubricatingConfig,
+      stbooks,
+      booksConfig,
       randomImages,
-      lubricatingList,
+      booksList,
       countValue,
       useCount,
       showRuleValue,
@@ -458,22 +458,22 @@ export default {
 </script>
 <template>
   <div :class="className">
-    <!-- <img class="headlubricating" :src="lubricatingConfig.playlubricating2" alt=""> -->
-    <div class="lubricatingp" id="lubricatingp">
-      <div class="lubricatingp-he" id="lubricatingp-he">
-        <!-- <img class="lubricating-rule" @click="showRule" :src="lubricatingConfig.rulelubricating" alt=""> -->
-        <div class="lubricatingp-hidden">
+    <!-- <img class="headbooks" :src="booksConfig.playbooks2" alt=""> -->
+    <div class="booksp" id="booksp">
+      <div class="booksp-he" id="booksp-he">
+        <!-- <img class="books-rule" @click="showRule" :src="booksConfig.rulebooks" alt=""> -->
+        <div class="booksp-hidden">
           <div
-            class="lubricatingp-item"
+            class="booksp-item"
             :id="item.name"
-            v-for="(item, index) in lubricatingList"
+            v-for="(item, index) in booksList"
           >
             <div
               v-for="(imgItem, imgIndex) in item.imgList"
               :class="
                 imgItem.className
-                  ? 'lubricatingp-item-img ' + imgItem.className
-                  : 'lubricatingp-item-img'
+                  ? 'booksp-item-img ' + imgItem.className
+                  : 'booksp-item-img'
               "
             >
               <img :src="imgItem.img" alt="" />
@@ -481,37 +481,37 @@ export default {
           </div>
         </div>
       </div>
-      <div class="buttonlubricating-box">
+      <div class="buttonbooks-box">
 
-        <div class="buttonslubricatingBack" @click="close"></div>
+        <div class="buttonsbooksBack" @click="close"></div>
         <div class="buttons" @click="run()"></div>
         <!-- <div class="buttons2" @click="run()"></div> -->
-        <div class="lubricating-count" @click="showRule">
-          <!-- <img class="lubricating-rule" :src="lubricatingConfig.rulelubricating" alt="" /> -->
-          <img :src="lubricatingConfig.countlubricating" alt="" />
+        <div class="books-count" @click="showRule">
+          <!-- <img class="books-rule" :src="booksConfig.rulebooks" alt="" /> -->
+          <img :src="booksConfig.countbooks" alt="" />
           <div class="countValue">{{ countValue }}</div>
         </div>
         
         
       </div>
-      <div class="lubricatingd-lubricatingp">
-        <div class="lubricatingd-back" @click="close"></div>
+      <div class="booksd-booksp">
+        <div class="booksd-back" @click="close"></div>
       </div>
     </div>
     <Teleport to="body">
       <div v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="lubricatingConfig.star" alt="" /> -->
-        <!-- <img class="model-img-bg" :src="lubricatingConfig.resultlubricating" alt="" /> -->
-        <!-- <div class="modellubricating-list">
+        <!-- <img class="model-star" :src="booksConfig.star" alt="" /> -->
+        <!-- <img class="model-img-bg" :src="booksConfig.resultbooks" alt="" /> -->
+        <!-- <div class="modelbooks-list">
           <div
-            class="modellubricating-item"
+            class="modelbooks-item"
             v-for="(item, index) in arrCount"
             :key="index"
           >
             {{ item.count + "X" + item.value }}
           </div>
-          <div class="modellubricating-total">{{ useCount }}</div>
+          <div class="modelbooks-total">{{ useCount }}</div>
         </div> -->
       </div>
     </Teleport>
@@ -519,8 +519,8 @@ export default {
     <Teleport to="body">
       <div v-if="showRuleValue" class="modal" @click="showRule">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="lubricatingConfig.star" alt="" /> -->
-        <!-- <img class="model-img" :src="lubricatingConfig.ruleDialoglubricating" alt="" /> -->
+        <!-- <img class="model-star" :src="booksConfig.star" alt="" /> -->
+        <!-- <img class="model-img" :src="booksConfig.ruleDialogbooks" alt="" /> -->
       </div>
     </Teleport>
   </div>
@@ -532,7 +532,7 @@ export default {
 
   width: 280px;
 }
-.lubricatingd-lubricatingp {
+.booksd-booksp {
   display: flex;
   align-items: center;
   /* padding: 60px 15px; */
@@ -544,42 +544,42 @@ export default {
 }
 .countValue {
   margin: 0 0 0 46%;
-  color: #ffe650;
+  color: #ffffff;
 }
 
-.lubricating-count img {
+.books-count img {
   width: 100%;
   position: absolute;
   height: 100%;
   /* top: -16%; */
   z-index: -1;
 }
-.lubricating-count .lubricating-rule {
+.books-count .books-rule {
   position: absolute;
   left: -9%;
   width: 45px;
   height: 45px;
 }
-.lubricatingd-back {
-  /* background: v-bind("'url(' + lubricatingConfig.homelubricating + ')'") no-repeat; */
+.booksd-back {
+  /* background: v-bind("'url(' + booksConfig.homebooks + ')'") no-repeat; */
 
   width: 36px;
   height: 42px;
   background-size: 100%;
   z-index: 999;
 }
-.stlubricating {
+.stbooks {
   margin-top: -30%;
   width: 160px;
   height: 80px;
-  background: v-bind("'url(' + lubricatingConfig.playlubricating + ')'") no-repeat;
+  background: v-bind("'url(' + booksConfig.playbooks + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 }
 .container {
   display: flex;
   flex-direction: column;
-  background: v-bind("'url(' + lubricatingConfig.boxlubricating + ')'") no-repeat;
+  background: v-bind("'url(' + booksConfig.boxbooks + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -589,7 +589,7 @@ export default {
   align-items: center;
 }
 
-.lubricatingp {
+.booksp {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -599,16 +599,16 @@ export default {
   /* height: 100vh; */
   /* overflow: hidden; */
 
-  background: v-bind("'url(' + lubricatingConfig.anyBoxlubricating + ')'") no-repeat;
-  background-size: auto 100%;
-    background-position: center ;
+  background: v-bind("'url(' + booksConfig.anyBoxbooks + ')'") no-repeat;
+  background-size: auto 99%;
+    background-position: center -10%;
 
   color: #fff;
   font-weight: 600;
   font-size: 26;
 }
 
-.buttonlubricating-box {
+.buttonbooks-box {
   position: absolute;
   top: 0%;
   left: 12%;
@@ -619,12 +619,12 @@ export default {
   height: 25%;
   /* justify-content: space-between; */
 }
-.lubricating-count {
+.books-count {
   position: relative;
-  width: 49%;
-    height: 47%;
+  width: 40%;
+    height: 45%;
     margin-left: 1.5%;
-    margin-top: 44.2%;
+    margin-top: 31.7%;
 
   display: flex;
   align-items: center;
@@ -636,13 +636,13 @@ export default {
 .buttons {
 
   margin-left: -4%;
-    margin-top: 43.6%;
-    width: 14%;
-    height: 49%;
+    margin-top: 31.6%;
+    width: 13%;
+    height: 46%;
 
 
   z-index: 999;
-  background: v-bind("'url(' + lubricatingConfig.playlubricating + ')'") no-repeat;
+  background: v-bind("'url(' + booksConfig.playbooks + ')'") no-repeat;
   background-size: 100% 100%;
 }
 .buttons2 {
@@ -650,20 +650,20 @@ export default {
     height: 47%;
     margin-left: 3%;
     margin-top: 41.5%;
-  /* background: v-bind("'url(' + lubricatingConfig.playlubricating3 + ')'") no-repeat; */
+  /* background: v-bind("'url(' + booksConfig.playbooks3 + ')'") no-repeat; */
   background-size: 100% 100%;
 }
-.buttonslubricatingBack {
+.buttonsbooksBack {
   margin-left: 4.5%;
     margin-top: 0;
     width: 16%;
     height: 47.5%;
 
   z-index: 999;
-  background: v-bind("'url(' + lubricatingConfig.homelubricating  + ')'") no-repeat;
+  background: v-bind("'url(' + booksConfig.homebooks  + ')'") no-repeat;
   background-size: 100% 100%;
 }
-.lubricatingp-he {
+.booksp-he {
   position: relative;
   margin-right: 0%;
   margin-top: 7%;
@@ -675,7 +675,7 @@ export default {
     transform: scale(0.6);
 }
 
-.lubricatingp-hidden {
+.booksp-hidden {
   /* margin-top: 2%; */
   margin-left: 1%;
   margin-top: -16%;
@@ -687,7 +687,7 @@ export default {
   height: 146%;
 }
 
-.lubricatingp-item {
+.booksp-item {
  
   display: flex;
   align-items: center;
@@ -695,7 +695,7 @@ export default {
   flex-direction: column;
   width: 20%;
   height: 56%;
-  background: v-bind("'url(' + lubricatingConfig.changeSlubricating + ')'");
+  background: v-bind("'url(' + booksConfig.changeSbooks + ')'");
   /* background-position-x: 0px; */
   background-position-x: center;
   background-repeat-x: no-repeat;
@@ -703,69 +703,71 @@ export default {
     background-size: 73% 422%;
 
 }
-/* .lubricatingp-item:nth-child(3){
+/* .booksp-item:nth-child(3){
   margin-right: 20%;
 } */
-.lubricatingp-item:nth-child(6) {
+.booksp-item:nth-child(6) {
   /* margin-bottom: 20%; */
+  margin-top: 15%;
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-direction:row;
   width: 100%;
   height: 30%;
-  background-image: v-bind("'url(' + lubricatingConfig.anylubricating + ')'");
+  background-image: v-bind("'url(' + booksConfig.anybooks + ')'");
   background-position-y: center;
   background-repeat-y: no-repeat;
   background-position-x: 11px;
   background-size: 161% 73%
 }
-.lubricatingp-hidden .lubricatingp-itemD {
+.booksp-hidden .booksp-itemD {
+  margin-top: 15%;
   display: flex;
   align-items: center;
   justify-content: space-around;
   width: 100%;
   height: 30%;
-  background-image: v-bind("'url(' + lubricatingConfig.changeDlubricating + ')'");
+  background-image: v-bind("'url(' + booksConfig.changeDbooks + ')'");
   background-position-y: center;
   background-repeat-y: no-repeat;
   background-position-x: 11px;
   background-size: 161% 73%
 }
-.lubricatingp-itemM{
+.booksp-itemM{
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
   width: 20%;
   height: 56%;
-  background: v-bind("'url(' + lubricatingConfig.changeMlubricating + ')'");
+  background: v-bind("'url(' + booksConfig.changeMbooks + ')'");
   /* background-position-x: 0px; */
   background-position-x: center;
   background-repeat-x: no-repeat;
   background-position-y: -10px;
     background-size: 73% 422%;
 }
-.lubricatingp-item-img {
+.booksp-item-img {
   position: relative;
 
   display: none;
   width: 100%;
   height: 100%;
 }
-.lubricatingp-item-img img {
+.booksp-item-img img {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1.1);
   z-index: -1;
-  width: 80%;
-  height: 80%;
+  width: 70%;
+  height: 70%;
 }
 .modal {
   display: flex;
   justify-content: center;
-  align-items: flex-stlubricating;
+  align-items: flex-stbooks;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -773,7 +775,7 @@ export default {
   height: 100vh;
   z-index: 9999;
   /* background-color: rgba(0, 0, 0, 0.5); */
-  /* background: v-bind("'url(' + lubricatingConfig.dialoglubricating + ')'") no-repeat; */
+  /* background: v-bind("'url(' + booksConfig.dialogbooks + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star {
@@ -795,17 +797,17 @@ export default {
   width: 70%;
 }
 
-.stlubricating-bg {
+.stbooks-bg {
   position: absolute;
 
   top: 0;
   z-index: 1;
 }
-.stlubricating-bg img {
+.stbooks-bg img {
   width: 100%;
 }
 
-.modellubricating-list {
+.modelbooks-list {
   position: absolute;
   left: 60%;
   top: 39.5%;
@@ -817,14 +819,14 @@ export default {
   font-size: 16px;
   /* transform: rotate(7deg) translateX(-36px); */
 }
-.modellubricating-item {
+.modelbooks-item {
   margin-bottom: 11px;
 }
-.modellubricating-total {
+.modelbooks-total {
   padding: 7px 14px;
 }
 
-.headlubricating {
+.headbooks {
   position: absolute;
     top: -0;
 
@@ -833,19 +835,19 @@ export default {
 /* 定义步长图片动画关键帧 */
 @keyframes image-animation {
   0% {
-    background-image: v-bind("'url(' + lubricatingConfig.animation1 + ')'");
+    background-image: v-bind("'url(' + booksConfig.animation1 + ')'");
   }
 
   25% {
-    background-image: v-bind("'url(' + lubricatingConfig.animation4 + ')'");
+    background-image: v-bind("'url(' + booksConfig.animation4 + ')'");
   }
 
   75% {
-    background-image: v-bind("'url(' + lubricatingConfig.animation8 + ')'");
+    background-image: v-bind("'url(' + booksConfig.animation8 + ')'");
   }
 
   100% {
-    background-image: v-bind("'url(' + lubricatingConfig.animation12 + ')'");
+    background-image: v-bind("'url(' + booksConfig.animation12 + ')'");
   }
 }
 

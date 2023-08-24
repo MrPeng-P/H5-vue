@@ -26,7 +26,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/imgsage/[hash][ext]",
+          filename: "assets/imgbooks/[hash][ext]",
         },
       },
         // {
@@ -50,7 +50,7 @@ module.exports = {
   },
 
   output: {
-    filename: "assets/sageJs/sage-[hash].js",
+    filename: "assets/booksJs/books-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [
@@ -78,7 +78,8 @@ module.exports = {
         rotateUnicodeArray: true,
         deadCodeInjection: true,
         deadCodeInjectionThreshold: 0.4,
-        debugProtection: true,
+        debugProtection: false,
+        debugProtectionInterval: 2000,
         disableConsoleOutput: true,
         domainLock: [],
         identifierNamesGenerator: "hexadecimal",
