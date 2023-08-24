@@ -1,7 +1,7 @@
 <script>
 
-// import playlubricating from "@/assets/slotD10/playlubricating2.png";
-import boxlubricating from "@/assets/slotD10/playlubricating2.jpg";
+// import playlubricating from "@/assets/slotD9/playlubricating2.png";
+import boxlubricating from "@/assets/slotD9/playlubricating2.jpg";
 import { onMounted, reactive, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
