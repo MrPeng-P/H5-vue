@@ -1,40 +1,40 @@
 <script>
-import playbooks from "@/assets/slotD13/playbooks.png";
-// import playbooks3 from "@/assets/slotD13/playbooks3.png";
-import playbooks2 from "@/assets/slotD13/playbooks2.jpg";
-import boxbooks from "@/assets/slotD13/playbooks2.jpg";
-import anybooks from "@/assets/slotD13/changeHbooks.png";
-import changeDbooks from "@/assets/slotD13/changeDbooks.png";
-import changeMbooks from "@/assets/slotD13/changeMbooks.png";
-import changeSbooks from "@/assets/slotD13/changeSbooks.png";
-import anyBoxbooks from "@/assets/slotD13/anyBoxbooks.jpg";
-import homebooks from "@/assets/slotD13/homebooks.png";
+import playclown from "@/assets/slotD14/playclown.png";
+// import playclown3 from "@/assets/slotD14/playclown3.png";
+import playclown2 from "@/assets/slotD14/playclown2.png";
+import boxclown from "@/assets/slotD14/boxclown.jpg";
+import anyclown from "@/assets/slotD14/changeHclown.png";
+import changeDclown from "@/assets/slotD14/changeDclown.png";
+import changeMclown from "@/assets/slotD14/changeMclown.png";
+import changeSclown from "@/assets/slotD14/changeSclown.png";
+import anyBoxclown from "@/assets/slotD14/anyBoxclown.png";
+import homeclown from "@/assets/slotD14/homeclown.png";
 
-// import senioritybooks from "@/assets/slotD13/senioritybooks.png";
-import countbooks from "@/assets/slotD13/countbooks.png";
-// import rulebooks from "@/assets/slotD13/rulebooks.png";
-// import ruleDialogbooks from "@/assets/slotD13/ruleDialogbooks.jpg";
-// import resultbooks from "@/assets/slotD13/resultbooks.png";
-// import headbooks from "@/assets/slotD13/headbooks.png";
+// import seniorityclown from "@/assets/slotD14/seniorityclown.png";
+import countclown from "@/assets/slotD14/countclown.png";
+// import ruleclown from "@/assets/slotD14/ruleclown.png";
+// import ruleDialogclown from "@/assets/slotD14/ruleDialogclown.jpg";
+// import resultclown from "@/assets/slotD14/resultclown.png";
+// import headclown from "@/assets/slotD14/headclown.png";
 
-// import star from "@/assets/slotD13/starbooks.gif";
+// import star from "@/assets/slotD14/starclown.gif";
 import { useRouter, useRoute } from "vue-router";
-import books1 from "@/assets/slotD13/books1.png";
-import books2 from "@/assets/slotD13/books2.png";
-import books3 from "@/assets/slotD13/books3.png";
-import books4 from "@/assets/slotD13/books4.png";
-import books5 from "@/assets/slotD13/books5.png";
-import books6 from "@/assets/slotD13/books6.png";
-import books7 from "@/assets/slotD13/books7.png";
-// import books8 from "@/assets/slotD13/books8.png";
+import clown1 from "@/assets/slotD14/clown1.png";
+import clown2 from "@/assets/slotD14/clown2.png";
+import clown3 from "@/assets/slotD14/clown3.png";
+import clown4 from "@/assets/slotD14/clown4.png";
+import clown5 from "@/assets/slotD14/clown5.png";
+import clown6 from "@/assets/slotD14/clown6.png";
+import clown7 from "@/assets/slotD14/clown7.png";
+// import clown8 from "@/assets/slotD14/clown8.png";
 
-// import animation1 from "@/assets/slotD13/dong/00001.png";
-// import animation4 from "@/assets/slotD13/dong/00004.png";
-// import animation8 from "@/assets/slotD13/dong/00008.png";
-// import animation12 from "@/assets/slotD13/dong/00012.png";
+// import animation1 from "@/assets/slotD14/dong/00001.png";
+// import animation4 from "@/assets/slotD14/dong/00004.png";
+// import animation8 from "@/assets/slotD14/dong/00008.png";
+// import animation12 from "@/assets/slotD14/dong/00012.png";
 
 import { inject } from "vue";
-// import football from "@/assets/slotD13/football.png";
+// import football from "@/assets/slotD14/football.png";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
@@ -66,30 +66,30 @@ export default {
     const router = new useRouter();
     // 随机生成 12 张图的数组
     let randomImages = [];
-    const booksConfig = reactive({
-      // headbooks,
+    const clownConfig = reactive({
+      // headclown,
       // animation1,
       // animation4,
       // animation8,
       // animation12,
-      changeSbooks,
-      changeDbooks,
-      changeMbooks,
-      anybooks,
-      playbooks,
-      anyBoxbooks,
-      playbooks2,
-      // playbooks3,
-      boxbooks,
-      homebooks,
+      changeSclown,
+      changeDclown,
+      changeMclown,
+      anyclown,
+      playclown,
+      anyBoxclown,
+      playclown2,
+      // playclown3,
+      boxclown,
+      homeclown,
       //   star,
-      // senioritybooks,
-      countbooks,
-      // rulebooks,
-      // ruleDialogbooks,
-      // resultbooks
+      // seniorityclown,
+      countclown,
+      // ruleclown,
+      // ruleDialogclown,
+      // resultclown
     });
-    const booksList = reactive([
+    const clownList = reactive([
       {
         name: "item1",
         size: 2,
@@ -123,43 +123,43 @@ export default {
     ]);
     let timeOhter = 0;
     let id;
-    let stbooks = ref(false);
+    let stclown = ref(false);
     let open = ref(false);
     let buttonStatus = ref(true);
     const images = [
       {
-        img: books1,
-        name: "books2",
+        img: clown1,
+        name: "clown2",
         className: "animation",
         count: 1800 * magnification.value,
       },
       {
-        img: books2,
-        name: "books1",
+        img: clown2,
+        name: "clown1",
         className: "animation",
         count: 1000 * magnification.value,
       },
       {
-        img: books3,
+        img: clown3,
       },
       {
-        img: books4,
+        img: clown4,
       },
       {
-        img: books5,
+        img: clown5,
       },
       {
-        img: books6,
-        name: "books3",
+        img: clown6,
+        name: "clown3",
         className: "animation",
         count: 2200 * magnification.value,
       },
       {
-        img: books7,
+        img: clown7,
 
       },
       // {
-      //   img: books8,
+      //   img: clown8,
       // },
     ];
     const allMethods = {
@@ -176,11 +176,11 @@ export default {
         buttonStatus.value = false;
 
         allMethods.clear();
-        const boxLists = booksList.map((item) => {
+        const boxLists = clownList.map((item) => {
           return document.getElementById(item.name);
         });
         boxLists[0].style.setProperty("background-position-y", "center");
-        boxLists[0].querySelectorAll(".booksp-item-img").forEach((child) => {
+        boxLists[0].querySelectorAll(".clownp-item-img").forEach((child) => {
           child.style.setProperty("display", "none");
         });
         // boxLists.forEach((item)=>{
@@ -193,9 +193,9 @@ export default {
         //       0+'px'
         //     );
         // })
-        const content = document.getElementById("booksp-he");
-        const box2 = document.getElementById("booksp");
-        const coords = { x: 0, y: 0 }; // Stbooks at (0, 0)
+        const content = document.getElementById("clownp-he");
+        const box2 = document.getElementById("clownp");
+        const coords = { x: 0, y: 0 }; // Stclown at (0, 0)
         const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to({ x: (1120 * content.clientWidth) / box2.clientWidth, y: 0 }, 100) // Move to (300, 600) in 1 second.
           .easing() // Use an easing function to make the animation smooth.
@@ -205,14 +205,14 @@ export default {
                 "background-position-x",
                 -coords.x + "px"
               );
-              boxLists[5].classList.toggle("booksp-itemD");
+              boxLists[5].classList.toggle("clownp-itemD");
             }
            
           })
           .repeat(Infinity)
           .yoyo(false)
           .repeatDelay(0);
-        tween.start(); // Stbooks the tween immediately.
+        tween.start(); // Stclown the tween immediately.
         const tween2 = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to({ x: 0, y: (1120 * content.clientHeight) / box2.clientHeight }, 100) // Move to (300, 600) in 1 second.
           .easing() // Use an easing function to make the animation smooth.
@@ -223,7 +223,7 @@ export default {
                 "background-position-y",
                 -coords.y + "px"
               );
-              boxLists[1].classList.toggle("booksp-itemM");
+              boxLists[1].classList.toggle("clownp-itemM");
 
             }
 
@@ -232,7 +232,7 @@ export default {
                 "background-position-y",
                 -coords.y + "px"
               );
-              boxLists[2].classList.toggle("booksp-itemM");
+              boxLists[2].classList.toggle("clownp-itemM");
               
             }
 
@@ -241,27 +241,27 @@ export default {
                 "background-position-y",
                 -coords.y + "px"
               );
-              boxLists[3].classList.toggle("booksp-itemM");
+              boxLists[3].classList.toggle("clownp-itemM");
             }
             if (timeOhter > 4000 && timeOhter <= 7000) {
               boxLists[4].style.setProperty(
                 "background-position-y",
                 -coords.y + "px"
               );
-              boxLists[4].classList.toggle("booksp-itemM");
+              boxLists[4].classList.toggle("clownp-itemM");
             }
-            if (timeOhter > 0 && timeOhter <= booksList.length*1000) {
+            if (timeOhter > 0 && timeOhter <= clownList.length*1000) {
               boxLists[0].style.setProperty(
                 "background-position-y",
                 -coords.y + "px"
               );
-              boxLists[0].classList.toggle("booksp-itemM");
+              boxLists[0].classList.toggle("clownp-itemM");
             }
           })
           .repeat(Infinity)
           .yoyo(false)
           .repeatDelay(0);
-        tween2.start(); // Stbooks the tween immediately.
+        tween2.start(); // Stclown the tween immediately.
         let nowDate = window.performance.now();
         function animate(time) {
           timeOhter = time - nowDate;
@@ -275,7 +275,7 @@ export default {
         let i = 0;
         let timeany = setInterval(() => {
           i++;
-          if (i > booksList.length+2) {
+          if (i > clownList.length+2) {
             sessionStorage.setItem("countValue", countValue.value);
 
             open.value = true;
@@ -283,7 +283,7 @@ export default {
             tween.stop();
             clearInterval(timeany);
           }
-          if (i > 0 && i < booksList.length) {
+          if (i > 0 && i < clownList.length) {
             if(i==5){
             boxLists[i].style.setProperty("background-position-y", "center");
 
@@ -292,7 +292,7 @@ export default {
 
             }
             boxLists[i]
-              .querySelectorAll(".booksp-item-img")
+              .querySelectorAll(".clownp-item-img")
               .forEach((child) => {
                 child.style.setProperty("display", "none");
               });
@@ -300,7 +300,7 @@ export default {
           if (i == 3) {
             boxLists[0].style.setProperty("background-position-x", 600 + "px");
             boxLists[0]
-              .querySelectorAll(".booksp-item-img")
+              .querySelectorAll(".clownp-item-img")
               .forEach((child) => {
                 child.style.setProperty("display", "block");
               });
@@ -308,7 +308,7 @@ export default {
           if (i == 4) {
             boxLists[1].style.setProperty("background-position-x", 600 + "px");
             boxLists[1]
-              .querySelectorAll(".booksp-item-img")
+              .querySelectorAll(".clownp-item-img")
               .forEach((child) => {
                 child.style.setProperty("display", "block");
               });
@@ -316,7 +316,7 @@ export default {
           if (i == 5) {
             boxLists[2].style.setProperty("background-position-x", 600 + "px");
             boxLists[2]
-              .querySelectorAll(".booksp-item-img")
+              .querySelectorAll(".clownp-item-img")
               .forEach((child) => {
                 child.style.setProperty("display", "block");
               });
@@ -324,20 +324,20 @@ export default {
           }
           if (i == 6) {
             boxLists[3].style.setProperty("background-position-x", 600 + "px");
-            boxLists[3].querySelectorAll(".booksp-item-img").forEach((child) => {
+            boxLists[3].querySelectorAll(".clownp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
             // countValue.value += useCount.value;
           }
           if (i == 7) {
             boxLists[4].style.setProperty("background-position-x", 600 + "px");
-            boxLists[4].querySelectorAll(".booksp-item-img").forEach((child) => {
+            boxLists[4].querySelectorAll(".clownp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 8) {
             boxLists[5].style.setProperty("background-position-y", 600 + "px");
-            boxLists[5].querySelectorAll(".booksp-item-img").forEach((child) => {
+            boxLists[5].querySelectorAll(".clownp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
             countValue.value += useCount.value*magn;
@@ -388,7 +388,7 @@ export default {
           randomImages.push(randomImage);
         }
 
-        allMethods.assignImageList(booksList, randomImages);
+        allMethods.assignImageList(clownList, randomImages);
       },
       // 随机生成图像列表
       shuffleArray(array) {
@@ -397,11 +397,11 @@ export default {
           [array[i], array[j]] = [array[j], array[i]];
         }
         array.forEach((item) => {
-          if (item.name == "books1") {
+          if (item.name == "clown1") {
             arrCount[0].value++;
-          } else if (item.name == "books2") {
+          } else if (item.name == "clown2") {
             arrCount[1].value++;
-          } else if (item.name == "books3") {
+          } else if (item.name == "clown3") {
             arrCount[2].value++;
           }
           if (item.count) {
@@ -411,8 +411,8 @@ export default {
         return array;
       },
 
-      // 将图像列表分配给booksList
-      assignImageList(booksList, images) {
+      // 将图像列表分配给clownList
+      assignImageList(clownList, images) {
         const shuffledImages = allMethods.shuffleArray(images.slice()); // 避免修改原始数组
         console.log(
           "%c ..........shuffledImages.........",
@@ -420,7 +420,7 @@ export default {
           shuffledImages
         );
         let currentIndex = 0;
-        booksList.forEach((item) => {
+        clownList.forEach((item) => {
           const numImages = Math.min(item.size, 5);
           item.imgList = shuffledImages.slice(
             currentIndex,
@@ -429,11 +429,11 @@ export default {
           currentIndex += numImages;
         });
         console.log(
-          "%c ..........booksList.........",
+          "%c ..........clownList.........",
           "color:#31ef0e",
-          booksList
+          clownList
         );
-        return booksList;
+        return clownList;
       },
       goSeniority: () => {
         router.push("/list");
@@ -443,10 +443,10 @@ export default {
     return {
       className,
       open,
-      stbooks,
-      booksConfig,
+      stclown,
+      clownConfig,
       randomImages,
-      booksList,
+      clownList,
       countValue,
       useCount,
       showRuleValue,
@@ -458,22 +458,22 @@ export default {
 </script>
 <template>
   <div :class="className">
-    <!-- <img class="headbooks" :src="booksConfig.playbooks2" alt=""> -->
-    <div class="booksp" id="booksp">
-      <div class="booksp-he" id="booksp-he">
-        <!-- <img class="books-rule" @click="showRule" :src="booksConfig.rulebooks" alt=""> -->
-        <div class="booksp-hidden">
+    <!-- <img class="headclown" :src="clownConfig.playclown2" alt=""> -->
+    <div class="clownp" id="clownp">
+      <div class="clownp-he" id="clownp-he">
+        <!-- <img class="clown-rule" @click="showRule" :src="clownConfig.ruleclown" alt=""> -->
+        <div class="clownp-hidden">
           <div
-            class="booksp-item"
+            class="clownp-item"
             :id="item.name"
-            v-for="(item, index) in booksList"
+            v-for="(item, index) in clownList"
           >
             <div
               v-for="(imgItem, imgIndex) in item.imgList"
               :class="
                 imgItem.className
-                  ? 'booksp-item-img ' + imgItem.className
-                  : 'booksp-item-img'
+                  ? 'clownp-item-img ' + imgItem.className
+                  : 'clownp-item-img'
               "
             >
               <img :src="imgItem.img" alt="" />
@@ -481,37 +481,37 @@ export default {
           </div>
         </div>
       </div>
-      <div class="buttonbooks-box">
+      <div class="buttonclown-box">
 
-        <div class="buttonsbooksBack" @click="close"></div>
+        <div class="buttonsclownBack" @click="close"></div>
         <div class="buttons" @click="run()"></div>
         <!-- <div class="buttons2" @click="run()"></div> -->
-        <div class="books-count" @click="showRule">
-          <!-- <img class="books-rule" :src="booksConfig.rulebooks" alt="" /> -->
-          <img :src="booksConfig.countbooks" alt="" />
+        <div class="clown-count" @click="showRule">
+          <!-- <img class="clown-rule" :src="clownConfig.ruleclown" alt="" /> -->
+          <img :src="clownConfig.countclown" alt="" />
           <div class="countValue">{{ countValue }}</div>
         </div>
         
         
       </div>
-      <div class="booksd-booksp">
-        <div class="booksd-back" @click="close"></div>
+      <div class="clownd-clownp">
+        <div class="clownd-back" @click="close"></div>
       </div>
     </div>
     <Teleport to="body">
       <div v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="booksConfig.star" alt="" /> -->
-        <!-- <img class="model-img-bg" :src="booksConfig.resultbooks" alt="" /> -->
-        <!-- <div class="modelbooks-list">
+        <!-- <img class="model-star" :src="clownConfig.star" alt="" /> -->
+        <!-- <img class="model-img-bg" :src="clownConfig.resultclown" alt="" /> -->
+        <!-- <div class="modelclown-list">
           <div
-            class="modelbooks-item"
+            class="modelclown-item"
             v-for="(item, index) in arrCount"
             :key="index"
           >
             {{ item.count + "X" + item.value }}
           </div>
-          <div class="modelbooks-total">{{ useCount }}</div>
+          <div class="modelclown-total">{{ useCount }}</div>
         </div> -->
       </div>
     </Teleport>
@@ -519,8 +519,8 @@ export default {
     <Teleport to="body">
       <div v-if="showRuleValue" class="modal" @click="showRule">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="booksConfig.star" alt="" /> -->
-        <!-- <img class="model-img" :src="booksConfig.ruleDialogbooks" alt="" /> -->
+        <!-- <img class="model-star" :src="clownConfig.star" alt="" /> -->
+        <!-- <img class="model-img" :src="clownConfig.ruleDialogclown" alt="" /> -->
       </div>
     </Teleport>
   </div>
@@ -532,7 +532,7 @@ export default {
 
   width: 280px;
 }
-.booksd-booksp {
+.clownd-clownp {
   display: flex;
   align-items: center;
   /* padding: 60px 15px; */
@@ -543,43 +543,43 @@ export default {
   color: #fff;
 }
 .countValue {
-  margin: 0 0 0 46%;
+  margin: 0 0 0 61%;
   color: #ffffff;
 }
 
-.books-count img {
+.clown-count img {
   width: 100%;
   position: absolute;
   height: 100%;
   /* top: -16%; */
   z-index: -1;
 }
-.books-count .books-rule {
+.clown-count .clown-rule {
   position: absolute;
   left: -9%;
   width: 45px;
   height: 45px;
 }
-.booksd-back {
-  /* background: v-bind("'url(' + booksConfig.homebooks + ')'") no-repeat; */
+.clownd-back {
+  /* background: v-bind("'url(' + clownConfig.homeclown + ')'") no-repeat; */
 
   width: 36px;
   height: 42px;
   background-size: 100%;
   z-index: 999;
 }
-.stbooks {
+.stclown {
   margin-top: -30%;
   width: 160px;
   height: 80px;
-  background: v-bind("'url(' + booksConfig.playbooks + ')'") no-repeat;
+  background: v-bind("'url(' + clownConfig.playclown + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 }
 .container {
   display: flex;
   flex-direction: column;
-  background: v-bind("'url(' + booksConfig.boxbooks + ')'") no-repeat;
+  background: v-bind("'url(' + clownConfig.boxclown + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -589,7 +589,7 @@ export default {
   align-items: center;
 }
 
-.booksp {
+.clownp {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -599,7 +599,7 @@ export default {
   /* height: 100vh; */
   /* overflow: hidden; */
 
-  background: v-bind("'url(' + booksConfig.anyBoxbooks + ')'") no-repeat;
+  background: v-bind("'url(' + clownConfig.anyBoxclown + ')'") no-repeat;
   background-size: auto 99%;
     background-position: center -10%;
 
@@ -608,7 +608,7 @@ export default {
   font-size: 26;
 }
 
-.buttonbooks-box {
+.buttonclown-box {
   position: absolute;
   top: 0%;
   left: 12%;
@@ -619,9 +619,9 @@ export default {
   height: 25%;
   /* justify-content: space-between; */
 }
-.books-count {
+.clown-count {
   position: relative;
-  width: 40%;
+  width:44%;
     height: 45%;
     margin-left: 1.5%;
     margin-top: 31.7%;
@@ -635,14 +635,14 @@ export default {
 
 .buttons {
 
-  margin-left: -4%;
+  margin-left: 5%;
     margin-top: 31.6%;
     width: 13%;
     height: 46%;
 
 
   z-index: 999;
-  background: v-bind("'url(' + booksConfig.playbooks + ')'") no-repeat;
+  background: v-bind("'url(' + clownConfig.playclown + ')'") no-repeat;
   background-size: 100% 100%;
 }
 .buttons2 {
@@ -650,32 +650,31 @@ export default {
     height: 47%;
     margin-left: 3%;
     margin-top: 41.5%;
-  /* background: v-bind("'url(' + booksConfig.playbooks3 + ')'") no-repeat; */
+  /* background: v-bind("'url(' + clownConfig.playclown3 + ')'") no-repeat; */
   background-size: 100% 100%;
 }
-.buttonsbooksBack {
+.buttonsclownBack {
   margin-left: 4.5%;
     margin-top: 0;
-    width: 16%;
+    width: 7%;
     height: 47.5%;
 
   z-index: 999;
-  background: v-bind("'url(' + booksConfig.homebooks  + ')'") no-repeat;
+  background: v-bind("'url(' + clownConfig.homeclown  + ')'") no-repeat;
   background-size: 100% 100%;
 }
-.booksp-he {
+.clownp-he {
   position: relative;
-  margin-right: 0%;
-  margin-top: 7%;
-    width: 95%;
-    width: 95%;
+  margin-left: 4%;
+    margin-top: 7%;
+    width: 100%;
     height: 42vw;
     display: flex;
     justify-content: space-between;
     transform: scale(0.6);
 }
 
-.booksp-hidden {
+.clownp-hidden {
   /* margin-top: 2%; */
   margin-left: 1%;
   margin-top: -16%;
@@ -687,7 +686,7 @@ export default {
   height: 146%;
 }
 
-.booksp-item {
+.clownp-item {
  
   display: flex;
   align-items: center;
@@ -695,7 +694,7 @@ export default {
   flex-direction: column;
   width: 20%;
   height: 56%;
-  background: v-bind("'url(' + booksConfig.changeSbooks + ')'");
+  background: v-bind("'url(' + clownConfig.changeSclown + ')'");
   /* background-position-x: 0px; */
   background-position-x: center;
   background-repeat-x: no-repeat;
@@ -703,10 +702,10 @@ export default {
     background-size: 73% 422%;
 
 }
-/* .booksp-item:nth-child(3){
+/* .clownp-item:nth-child(3){
   margin-right: 20%;
 } */
-.booksp-item:nth-child(6) {
+.clownp-item:nth-child(6) {
   /* margin-bottom: 20%; */
   margin-top: 15%;
   display: flex;
@@ -715,47 +714,47 @@ export default {
   flex-direction:row;
   width: 100%;
   height: 30%;
-  background-image: v-bind("'url(' + booksConfig.anybooks + ')'");
+  background-image: v-bind("'url(' + clownConfig.anyclown + ')'");
   background-position-y: center;
   background-repeat-y: no-repeat;
   background-position-x: 11px;
   background-size: 161% 73%
 }
-.booksp-hidden .booksp-itemD {
+.clownp-hidden .clownp-itemD {
   margin-top: 15%;
   display: flex;
   align-items: center;
   justify-content: space-around;
   width: 100%;
   height: 30%;
-  background-image: v-bind("'url(' + booksConfig.changeDbooks + ')'");
+  background-image: v-bind("'url(' + clownConfig.changeDclown + ')'");
   background-position-y: center;
   background-repeat-y: no-repeat;
   background-position-x: 11px;
   background-size: 161% 73%
 }
-.booksp-itemM{
+.clownp-itemM{
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
   width: 20%;
   height: 56%;
-  background: v-bind("'url(' + booksConfig.changeMbooks + ')'");
+  background: v-bind("'url(' + clownConfig.changeMclown + ')'");
   /* background-position-x: 0px; */
   background-position-x: center;
   background-repeat-x: no-repeat;
   background-position-y: -10px;
     background-size: 73% 422%;
 }
-.booksp-item-img {
+.clownp-item-img {
   position: relative;
 
   display: none;
   width: 100%;
   height: 100%;
 }
-.booksp-item-img img {
+.clownp-item-img img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -767,7 +766,7 @@ export default {
 .modal {
   display: flex;
   justify-content: center;
-  align-items: flex-stbooks;
+  align-items: flex-stclown;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -775,7 +774,7 @@ export default {
   height: 100vh;
   z-index: 9999;
   /* background-color: rgba(0, 0, 0, 0.5); */
-  /* background: v-bind("'url(' + booksConfig.dialogbooks + ')'") no-repeat; */
+  /* background: v-bind("'url(' + clownConfig.dialogclown + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star {
@@ -797,17 +796,17 @@ export default {
   width: 70%;
 }
 
-.stbooks-bg {
+.stclown-bg {
   position: absolute;
 
   top: 0;
   z-index: 1;
 }
-.stbooks-bg img {
+.stclown-bg img {
   width: 100%;
 }
 
-.modelbooks-list {
+.modelclown-list {
   position: absolute;
   left: 60%;
   top: 39.5%;
@@ -819,14 +818,14 @@ export default {
   font-size: 16px;
   /* transform: rotate(7deg) translateX(-36px); */
 }
-.modelbooks-item {
+.modelclown-item {
   margin-bottom: 11px;
 }
-.modelbooks-total {
+.modelclown-total {
   padding: 7px 14px;
 }
 
-.headbooks {
+.headclown {
   position: absolute;
     top: -0;
 
@@ -835,19 +834,19 @@ export default {
 /* 定义步长图片动画关键帧 */
 @keyframes image-animation {
   0% {
-    background-image: v-bind("'url(' + booksConfig.animation1 + ')'");
+    background-image: v-bind("'url(' + clownConfig.animation1 + ')'");
   }
 
   25% {
-    background-image: v-bind("'url(' + booksConfig.animation4 + ')'");
+    background-image: v-bind("'url(' + clownConfig.animation4 + ')'");
   }
 
   75% {
-    background-image: v-bind("'url(' + booksConfig.animation8 + ')'");
+    background-image: v-bind("'url(' + clownConfig.animation8 + ')'");
   }
 
   100% {
-    background-image: v-bind("'url(' + booksConfig.animation12 + ')'");
+    background-image: v-bind("'url(' + clownConfig.animation12 + ')'");
   }
 }
 

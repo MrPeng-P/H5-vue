@@ -92,19 +92,18 @@ import {
 //   },
 // ];
 // 复杂老虎机-简化-五排行
-// import start from "@/views/slotB/p-start.vue"
-// import home from "@/views/slotB/p-home.vue"
+
 // export const routes = [
 //   {
 //     path: "/",
 //     name: "startB",
-//     component: start,
+//     component: () => import("@/views/slotB/p-start.vue"),
 //   },
 
 //   {
 //     path: "/home",
 //     name: "homeB",
-//     component: home,
+//     component: () => import("@/views/slotB/p-home.vue"),
 //   },
 
 // ];

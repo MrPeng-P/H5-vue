@@ -1,7 +1,7 @@
 <script>
 
-// import playbooks from "@/assets/slotD13/playbooks2.png";
-import boxbooks from "@/assets/slotD13/playbooks2.jpg";
+import playclown from "@/assets/slotD14/playclown2.png";
+import boxclown from "@/assets/slotD14/boxclown.jpg";
 import { onMounted, reactive, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
@@ -9,9 +9,9 @@ export default {
   setup() {
     const router = new useRouter();
     const className = "container";
-    const booksConfig = reactive({
-      // playbooks,
-      boxbooks,
+    const clownConfig = reactive({
+      playclown,
+      boxclown,
     });
    
 
@@ -25,7 +25,7 @@ export default {
     });
     return {
         className,
-      booksConfig,
+      clownConfig,
       ...allMethods,
     };
   },
@@ -34,7 +34,7 @@ export default {
 <template>
   
   <div :class="className" @click="goHome">
-    <div class="stbooks" >
+    <div class="stclown" >
     </div>
   </div>
 </template>
@@ -42,29 +42,29 @@ export default {
 <style scoped>
 
 
-.stbooks{
+.stclown{
   margin-top: -2%;
     width: 36%;
 
     height: 252px;
-  /* background: v-bind("'url(' + booksConfig.playbooks + ')'") no-repeat; */
+  background: v-bind("'url(' + clownConfig.playclown + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 
 }        
 .container {
-  background: v-bind("'url(' + booksConfig.boxbooks + ')'") no-repeat;
+  background: v-bind("'url(' + clownConfig.boxclown + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
   height: 100vh;
   display: flex;
-  justify-content: center 2%;
+  justify-content: center;
   align-items: center;
 }
 
 
-.booksp-he {
+.clownp-he {
   position: relative;
     margin-top: 26%;
     width: 140%;
@@ -73,7 +73,7 @@ export default {
     justify-content: space-between;
     transform: scale(0.65);
 }
-.booksp-hidden{
+.clownp-hidden{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -82,11 +82,11 @@ export default {
   overflow: hidden;
 
 }
-.booksp-item {
+.clownp-item {
   
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + booksConfig.anybooks + ')'") ;
+  background: v-bind("'url(' + clownConfig.anyclown + ')'") ;
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
@@ -96,7 +96,7 @@ export default {
   padding-top: 155px;
     display: flex;
     justify-content: center;
-    align-items: flex-stbooks;
+    align-items: flex-stclown;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -104,7 +104,7 @@ export default {
     height: 100vh;
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.5);
-  /* background: v-bind("'url(' + booksConfig.dialogbooks + ')'") no-repeat; */
+  /* background: v-bind("'url(' + clownConfig.dialogclown + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star{
@@ -116,12 +116,12 @@ export default {
 
 }
 
-.stbooks-bg{
+.stclown-bg{
     position: absolute;
     top: 0;
     z-index: 1;
 }
-.stbooks-bg img{
+.stclown-bg img{
     width: 100%;
 }
 </style>

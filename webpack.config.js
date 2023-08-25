@@ -26,7 +26,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/imgbooks/[hash][ext]",
+          filename: "assets/imgclown/[hash][ext]",
         },
       },
         // {
@@ -50,7 +50,7 @@ module.exports = {
   },
 
   output: {
-    filename: "assets/booksJs/books-[hash].js",
+    filename: "assets/clownJs/clown-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [
