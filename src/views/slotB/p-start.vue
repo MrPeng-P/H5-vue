@@ -1,7 +1,7 @@
 <script>
 
-import playrunes from "@/assets/slotB9/playrunes2.png";
-import boxrunes from "@/assets/slotB9/boxrunes.jpg";
+import playdesert from "@/assets/slotB10/playdesert.png";
+import boxdesert from "@/assets/slotB10/boxdesert.jpg";
 import { onMounted, reactive, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
@@ -9,9 +9,9 @@ export default {
   setup() {
     const router = new useRouter();
     const className = "container";
-    const runesConfig = reactive({
-      playrunes,
-      boxrunes,
+    const desertConfig = reactive({
+      playdesert,
+      boxdesert,
     });
    
 
@@ -25,7 +25,7 @@ export default {
     });
     return {
         className,
-      runesConfig,
+      desertConfig,
       ...allMethods,
     };
   },
@@ -34,7 +34,7 @@ export default {
 <template>
   
   <div :class="className" @click="goHome">
-    <div class="strunes" >
+    <div class="stdesert" >
     </div>
   </div>
 </template>
@@ -42,17 +42,17 @@ export default {
 <style scoped>
 
 
-.strunes{
-  margin-top: 4%;
-    width: 54%;
+.stdesert{
+  margin-top: 27%;
+    width: 30%;
     height: 252px;
-  background: v-bind("'url(' + runesConfig.playrunes + ')'") no-repeat;
+  background: v-bind("'url(' + desertConfig.playdesert + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 
 }
 .container {
-  background: v-bind("'url(' + runesConfig.boxrunes + ')'") no-repeat;
+  background: v-bind("'url(' + desertConfig.boxdesert + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -63,7 +63,7 @@ export default {
 }
 
 
-.runesp-he {
+.desertp-he {
   position: relative;
     margin-top: 26%;
     width: 140%;
@@ -72,7 +72,7 @@ export default {
     justify-content: space-between;
     transform: scale(0.65);
 }
-.runesp-hidden{
+.desertp-hidden{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -81,11 +81,11 @@ export default {
   overflow: hidden;
 
 }
-.runesp-item {
+.desertp-item {
   
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + runesConfig.anyrunes + ')'") ;
+  background: v-bind("'url(' + desertConfig.anydesert + ')'") ;
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
@@ -95,7 +95,7 @@ export default {
   padding-top: 155px;
     display: flex;
     justify-content: center;
-    align-items: flex-strunes;
+    align-items: flex-stdesert;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -103,7 +103,7 @@ export default {
     height: 100vh;
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.5);
-  /* background: v-bind("'url(' + runesConfig.dialogrunes + ')'") no-repeat; */
+  /* background: v-bind("'url(' + desertConfig.dialogdesert + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star{
@@ -115,12 +115,12 @@ export default {
 
 }
 
-.strunes-bg{
+.stdesert-bg{
     position: absolute;
     top: 0;
     z-index: 1;
 }
-.strunes-bg img{
+.stdesert-bg img{
     width: 100%;
 }
 </style>

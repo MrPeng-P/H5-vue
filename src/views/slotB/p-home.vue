@@ -1,34 +1,37 @@
 <script>
-import playrunes from "@/assets/slotB9/playrunes.png";
-import playrunes3 from "@/assets/slotB9/playrunes3.png";
-import boxrunes from "@/assets/slotB9/boxrunes.jpg";
-import anyrunes from "@/assets/slotB9/changerunes.png";
-import anyBoxrunes from "@/assets/slotB9/anyBoxrunes.png";
-import homerunes from "@/assets/slotB9/homerunes.png";
-// import seniorityrunes from "@/assets/slotB9/seniorityrunes.png";
-import countrunes from "@/assets/slotB9/countrunes.png";
-// import rulerunes from "@/assets/slotB9/rulerunes.png";
-// import ruleDialogrunes from "@/assets/slotB9/ruleDialogrunes.jpg";
-// import resultrunes from "@/assets/slotB9/resultrunes.png";
-// import headrunes from "@/assets/slotB9/headrunes.png";
+import playdesert from "@/assets/slotB10/playdesert.png";
+import playdesert2 from "@/assets/slotB10/playdesert2.png";
+// import playdesert3 from "@/assets/slotB10/playdesert3.png";
+import boxdesert from "@/assets/slotB10/boxdesert.jpg";
+import anydesert from "@/assets/slotB10/changedesert.png";
+import anyBoxdesert from "@/assets/slotB10/anyBoxdesert.png";
+import homedesert from "@/assets/slotB10/homedesert.png";
+import againdesert from "@/assets/slotB10/againdesert.png";
+// import countdesert from "@/assets/slotB10/countdesert.png";
+// import ruledesert from "@/assets/slotB10/ruledesert.png";
+// import ruleDialogdesert from "@/assets/slotB10/ruleDialogdesert.jpg";
+// import resultdesert from "@/assets/slotB10/resultdesert.png";
+// import headdesert from "@/assets/slotB10/headdesert.png";
 
-// import star from "@/assets/slotB9/starrunes.gif";
+// import star from "@/assets/slotB10/stardesert.gif";
 import { useRouter, useRoute } from "vue-router";
-import runes1 from "@/assets/slotB9/runes1.png";
-import runes2 from "@/assets/slotB9/runes2.png";
-import runes3 from "@/assets/slotB9/runes3.png";
-import runes4 from "@/assets/slotB9/runes4.png";
-import runes5 from "@/assets/slotB9/runes5.png";
-import runes6 from "@/assets/slotB9/runes6.png";
-import runes7 from "@/assets/slotB9/runes7.png";
+import desert1 from "@/assets/slotB10/desert1.png";
+import desert2 from "@/assets/slotB10/desert2.png";
+import desert3 from "@/assets/slotB10/desert3.png";
+import desert4 from "@/assets/slotB10/desert4.png";
+import desert5 from "@/assets/slotB10/desert5.png";
+import desert6 from "@/assets/slotB10/desert6.png";
+import desert8 from "@/assets/slotB10/desert8.jpg";
+import desert7 from "@/assets/slotB10/desert7.jpg";
+import desert9 from "@/assets/slotB10/desert9.jpg";
 
-// import animation1 from "@/assets/slotB9/dong/00001.png";
-// import animation4 from "@/assets/slotB9/dong/00004.png";
-// import animation8 from "@/assets/slotB9/dong/00008.png";
-// import animation12 from "@/assets/slotB9/dong/00012.png";
+// import animation1 from "@/assets/slotB10/dong/00001.png";
+// import animation4 from "@/assets/slotB10/dong/00004.png";
+// import animation8 from "@/assets/slotB10/dong/00008.png";
+// import animation12 from "@/assets/slotB10/dong/00012.png";
 
 import { inject } from "vue";
-// import football from "@/assets/slotB9/football.png";
+// import football from "@/assets/slotB10/football.png";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
@@ -60,26 +63,28 @@ export default {
     const router = new useRouter();
     // 随机生成 12 张图的数组
     let randomImages = [];
-    const runesConfig = reactive({
-      // headrunes,
+    const desertConfig = reactive({
+      // headdesert,
       // animation1,
       // animation4,
       // animation8,
       // animation12,
-      anyrunes,
-      playrunes,
-      playrunes3,
-      anyBoxrunes,
-      boxrunes,
-      homerunes,
+      anydesert,
+      playdesert,
+      playdesert2,
+      // playdesert3,
+      againdesert,
+      anyBoxdesert,
+      boxdesert,
+      homedesert,
       //   star,
-      // seniorityrunes,
-      countrunes,
-      // rulerunes,
-      // ruleDialogrunes,
-      // resultrunes
+      // senioritydesert,
+      // countdesert,
+      // ruledesert,
+      // ruleDialogdesert,
+      // resultdesert
     });
-    const runesList = reactive([
+    const desertList = reactive([
       {
         name: "item1",
         size: 4,
@@ -108,37 +113,37 @@ export default {
     ]);
     let timeOhter = 0;
     let id;
-    let strunes = ref(false);
+    let stdesert = ref(false);
     let open = ref(false);
     let buttonStatus = ref(true);
     const images = [
       {
-        img: runes1,
-        name: "runes2",
+        img: desert1,
+        name: "desert2",
         className: "animation",
         count: 1800 * magnification.value,
       },
       {
-        img: runes2,
-        name: "runes1",
+        img: desert2,
+        name: "desert1",
         className: "animation",
         count: 1000 * magnification.value,
       },
       {
-        img: runes3,
+        img: desert3,
       },
       {
-        img: runes4,
+        img: desert4,
       },
       {
-        img: runes5,
+        img: desert5,
       },
       {
-        img: runes6,
+        img: desert6,
       },
       {
-        img: runes7,
-        name: "runes3",
+        img: desert7,
+        name: "desert3",
         className: "animation",
         count: 2200 * magnification.value,
       },
@@ -157,11 +162,11 @@ export default {
         buttonStatus.value = false;
 
         allMethods.clear();
-        const boxLists = runesList.map((item) => {
+        const boxLists = desertList.map((item) => {
           return document.getElementById(item.name);
         });
         boxLists[0].style.setProperty("background-position-x", "center");
-        boxLists[0].querySelectorAll(".runesp-item-img").forEach((child) => {
+        boxLists[0].querySelectorAll(".desertp-item-img").forEach((child) => {
           child.style.setProperty("display", "none");
         });
         // boxLists.forEach((item)=>{
@@ -174,9 +179,9 @@ export default {
         //       0+'px'
         //     );
         // })
-        const content = document.getElementById("runesp-he");
-        const box2 = document.getElementById("runesp");
-        const coords = { x: 0, y: 0 }; // Strunes at (0, 0)
+        const content = document.getElementById("desertp-he");
+        const box2 = document.getElementById("desertp");
+        const coords = { x: 0, y: 0 }; // Stdesert at (0, 0)
         const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to(
             { x: 0, y: (1120 * content.clientHeight) / box2.clientHeight },
@@ -220,7 +225,7 @@ export default {
           .repeat(Infinity)
           .yoyo(false)
           .repeatDelay(0);
-          tween.start(); // Strunes the tween immediately.
+          tween.start(); // Stdesert the tween immediately.
         let nowDate = window.performance.now();
         function animate(time) {
           timeOhter = time - nowDate;
@@ -244,38 +249,38 @@ export default {
           }
           if (i > 0 && i < 4) {
             boxLists[i].style.setProperty("background-position-x", "center");
-            boxLists[i].querySelectorAll(".runesp-item-img").forEach((child) => {
+            boxLists[i].querySelectorAll(".desertp-item-img").forEach((child) => {
               child.style.setProperty("display", "none");
             });
           }
           if (i == 3) {
             boxLists[0].style.setProperty("background-position-x", 600 + "px");
-            boxLists[0].querySelectorAll(".runesp-item-img").forEach((child) => {
+            boxLists[0].querySelectorAll(".desertp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 4) {
             boxLists[1].style.setProperty("background-position-x", 600 + "px");
-            boxLists[1].querySelectorAll(".runesp-item-img").forEach((child) => {
+            boxLists[1].querySelectorAll(".desertp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 5) {
             boxLists[2].style.setProperty("background-position-x", 600 + "px");
-            boxLists[2].querySelectorAll(".runesp-item-img").forEach((child) => {
+            boxLists[2].querySelectorAll(".desertp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 6) {
             boxLists[3].style.setProperty("background-position-x", 600 + "px");
-            boxLists[3].querySelectorAll(".runesp-item-img").forEach((child) => {
+            boxLists[3].querySelectorAll(".desertp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
             countValue.value += useCount.value*magn;
           }
           // if (i == 7) {
           //   boxLists[4].style.setProperty("background-position-x", 600 + "px");
-          //   boxLists[4].querySelectorAll(".runesp-item-img").forEach((child) => {
+          //   boxLists[4].querySelectorAll(".desertp-item-img").forEach((child) => {
           //     child.style.setProperty("display", "block");
           //   });
           //   countValue.value += useCount.value;
@@ -326,7 +331,7 @@ export default {
           randomImages.push(randomImage);
         }
 
-        allMethods.assignImageList(runesList, randomImages);
+        allMethods.assignImageList(desertList, randomImages);
       },
       // 随机生成图像列表
       shuffleArray(array) {
@@ -335,11 +340,11 @@ export default {
           [array[i], array[j]] = [array[j], array[i]];
         }
         array.forEach((item) => {
-          if (item.name == "runes1") {
+          if (item.name == "desert1") {
             arrCount[0].value++;
-          } else if (item.name == "runes2") {
+          } else if (item.name == "desert2") {
             arrCount[1].value++;
-          } else if (item.name == "runes3") {
+          } else if (item.name == "desert3") {
             arrCount[2].value++;
           }
           if (item.count) {
@@ -349,13 +354,13 @@ export default {
         return array;
       },
 
-      // 将图像列表分配给runesList
-      assignImageList(runesList, images) {
+      // 将图像列表分配给desertList
+      assignImageList(desertList, images) {
         const shuffledImages = allMethods.shuffleArray(images.slice()); // 避免修改原始数组
 
         let currentIndex = 0;
 
-        runesList.forEach((item) => {
+        desertList.forEach((item) => {
           const numImages = Math.min(item.size, 3);
           item.imgList = shuffledImages.slice(
             currentIndex,
@@ -363,7 +368,7 @@ export default {
           );
           currentIndex += numImages;
         });
-        return runesList;
+        return desertList;
       },
       goSeniority: () => {
         router.push("/list");
@@ -373,10 +378,10 @@ export default {
     return {
       className,
       open,
-      strunes,
-      runesConfig,
+      stdesert,
+      desertConfig,
       randomImages,
-      runesList,
+      desertList,
       countValue,
       useCount,
       showRuleValue,
@@ -388,22 +393,22 @@ export default {
 </script>
 <template>
   <div :class="className">
-    <!-- <img class="headrunes" :src="runesConfig.headrunes" alt=""> -->
-    <div class="runesp" id="runesp">
-      <div class="runesp-he" id="runesp-he">
-        <!-- <img class="runes-rule" @click="showRule" :src="runesConfig.rulerunes" alt=""> -->
-        <div class="runesp-hidden">
+    <!-- <img class="headdesert" :src="desertConfig.headdesert" alt=""> -->
+    <div class="desertp" id="desertp">
+      <div class="desertp-he" id="desertp-he">
+        <!-- <img class="desert-rule" @click="showRule" :src="desertConfig.ruledesert" alt=""> -->
+        <div class="desertp-hidden">
           <div
-            class="runesp-item"
+            class="desertp-item"
             :id="item.name"
-            v-for="(item, index) in runesList"
+            v-for="(item, index) in desertList"
           >
             <div
               v-for="(imgItem, imgIndex) in item.imgList"
               :class="
                 imgItem.className
-                  ? 'runesp-item-img ' + imgItem.className
-                  : 'runesp-item-img'
+                  ? 'desertp-item-img ' + imgItem.className
+                  : 'desertp-item-img'
               "
             >
               <img :src="imgItem.img" alt="" />
@@ -411,39 +416,39 @@ export default {
           </div>
         </div>
       </div>
-      <div class="buttonrunes-box">
+      <div class="buttondesert-box">
         <div class="buttons" @click="close"></div>
 
-        <div class="buttonsrunes2" @click="run(2)"></div>
+        <div class="buttonsdesert2" @click="run()"></div>
        
-        <div class="buttonsrunesBack" @click="run()"></div>
+        <div class="buttonsdesertBack" @click="run()"></div>
 
         <!-- <div class="buttons2" @click="goSeniority"></div> -->
 
-        <div class="runes-count" @click="showRule">
-          <!-- <img class="runes-rule" :src="runesConfig.rulerunes" alt="" /> -->
-          <img :src="runesConfig.countrunes" alt="" />
+        <div class="desert-count" @click="showRule">
+          <!-- <img class="desert-rule" :src="desertConfig.ruledesert" alt="" /> -->
+          <!-- <img :src="desertConfig.countdesert" alt="" /> -->
           <div class="countValue">{{ countValue }}</div>
         </div>
       </div>
-      <div class="runesd-runesp">
-        <div class="runesd-back" @click="close"></div>
+      <div class="desertd-desertp">
+        <div class="desertd-back" @click="close"></div>
       </div>
     </div>
     <Teleport to="body">
       <div v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="runesConfig.star" alt="" /> -->
-        <!-- <img class="model-img-bg" :src="runesConfig.resultrunes" alt="" /> -->
-        <!-- <div class="modelrunes-list">
+        <!-- <img class="model-star" :src="desertConfig.star" alt="" /> -->
+        <!-- <img class="model-img-bg" :src="desertConfig.resultdesert" alt="" /> -->
+        <!-- <div class="modeldesert-list">
           <div
-            class="modelrunes-item"
+            class="modeldesert-item"
             v-for="(item, index) in arrCount"
             :key="index"
           >
             {{ item.count + "X" + item.value }}
           </div>
-          <div class="modelrunes-total">{{ useCount }}</div>
+          <div class="modeldesert-total">{{ useCount }}</div>
         </div> -->
       </div>
     </Teleport>
@@ -451,8 +456,8 @@ export default {
     <Teleport to="body">
       <div v-if="showRuleValue" class="modal" @click="showRule">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="runesConfig.star" alt="" /> -->
-        <!-- <img class="model-img" :src="runesConfig.ruleDialogrunes" alt="" /> -->
+        <!-- <img class="model-star" :src="desertConfig.star" alt="" /> -->
+        <!-- <img class="model-img" :src="desertConfig.ruleDialogdesert" alt="" /> -->
       </div>
     </Teleport>
   </div>
@@ -464,7 +469,7 @@ export default {
 
   width: 280px;
 }
-.runesd-runesp {
+.desertd-desertp {
   display: flex;
   align-items: center;
   /* padding: 60px 15px; */
@@ -480,39 +485,39 @@ export default {
     font-size: 18px;
 }
 
-.runes-count img {
+.desert-count img {
   width: 100%;
   position: absolute;
   height: 100%;
   /* top: -16%; */
   z-index: -1;
 }
-.runes-count .runes-rule {
+.desert-count .desert-rule {
   position: absolute;
   left: -9%;
   width: 45px;
   height: 45px;
 }
-.runesd-back {
-  /* background: v-bind("'url(' + runesConfig.homerunes + ')'") no-repeat; */
+.desertd-back {
+  /* background: v-bind("'url(' + desertConfig.homedesert + ')'") no-repeat; */
 
   width: 36px;
   height: 42px;
   background-size: 100%;
   z-index: 999;
 }
-.strunes {
+.stdesert {
   margin-top: -30%;
   width: 160px;
   height: 80px;
-  background: v-bind("'url(' + runesConfig.playrunes + ')'") no-repeat;
+  background: v-bind("'url(' + desertConfig.playdesert + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 }
 .container {
   display: flex;
   flex-direction: column;
-  background: v-bind("'url(' + runesConfig.boxrunes + ')'") no-repeat;
+  background: v-bind("'url(' + desertConfig.boxdesert + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -522,7 +527,7 @@ export default {
   align-items: center;
 }
 
-.runesp {
+.desertp {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -532,16 +537,16 @@ export default {
   /* height: 100vh; */
   overflow: hidden;
 
-  background: v-bind("'url(' + runesConfig.anyBoxrunes + ')'") no-repeat;
-  background-size: 60%;
-    background-position: center 5%;
+  background: v-bind("'url(' + desertConfig.anyBoxdesert + ')'") no-repeat;
+  background-size: 65%;
+    background-position: center 45%;
 
   color: #fff;
   font-weight: 600;
   font-size: 26;
 }
 
-.buttonrunes-box {
+.buttondesert-box {
   position: absolute;
   top: 5%;
     left: 17%;
@@ -552,13 +557,15 @@ export default {
   height: 25%;
   /* justify-content: space-between; */
 }
-.runes-count {
+.desert-count {
   position: relative;
   width: 46%;
     height: 45%;
-    margin-left: 2%;
-    margin-right: -23%;
-    margin-top: 64%;
+
+    margin-left: -30%;
+    /* margin-right: -25%; */
+    margin-top: 52%;
+ 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -573,7 +580,7 @@ export default {
 
     height: 43%;
   z-index: 999;
-  background: v-bind("'url(' + runesConfig.homerunes + ')'") no-repeat;
+  background: v-bind("'url(' + desertConfig.homedesert + ')'") no-repeat;
   background-size: 100% 100%;
 }
 .buttons2 {
@@ -585,23 +592,21 @@ export default {
   width: 30%;
   height: 40%;
   z-index: 999;
-  /* background: v-bind("'url(' + runesConfig.seniorityrunes + ')'") no-repeat; */
+  /* background: v-bind("'url(' + desertConfig.senioritydesert + ')'") no-repeat; */
   background-size: 100% 100%;
 }
-.buttonsrunesBack{
+.buttonsdesertBack{
   position: absolute;
-    /* margin-left: 7%; */
-    top: -7%;
-    left: 87.5%;
-    /* margin-top: 56.5%; */
-    width: 17%;
-    height: 42.5%;
+  left: 65.5%;
+    margin-top: 64%;
+    width: 38%;
+    height: 45.5%;
   z-index: 999;
-  background: v-bind("'url(' + runesConfig.playrunes + ')'") no-repeat;
+  background: v-bind("'url(' + desertConfig.againdesert + ')'") no-repeat;
   background-size: 100% 100%;
 }
 
-.buttonsrunes2{
+.buttonsdesert2{
   
   margin-left: -5%;
     margin-top: 64%;
@@ -609,21 +614,21 @@ export default {
     height: 44.5%;
 
   z-index: 999;
-  background: v-bind("'url(' + runesConfig.playrunes3 + ')'") no-repeat;
+  background: v-bind("'url(' + desertConfig.playdesert2 + ')'") no-repeat;
   background-size: 100% 100%;
 }
-.runesp-he {
+.desertp-he {
   position: relative;
-  margin-right: 0%;
+    margin-right: 0%;
     margin-top: 5%;
-    width: 65%;
+    width: 71%;
     height: 43vw;
-  display: flex;
-  justify-content: space-between;
-  transform: scale(0.72);
+    display: flex;
+    justify-content: space-between;
+    transform: scale(0.8);
 }
 
-.runesp-hidden {
+.desertp-hidden {
   /* margin-top: 2%; */
   /* margin-left: 1%; */
   margin-top: -4%;
@@ -634,7 +639,7 @@ export default {
   height: 100%;
   overflow: hidden;
 }
-.runesp-item {
+.desertp-item {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -642,23 +647,23 @@ export default {
 
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + runesConfig.anyrunes + ')'");
+  background: v-bind("'url(' + desertConfig.anydesert + ')'");
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
-  background-size:104% 232%;
+  background-size: 83% 238%;
 }
-.runesp-item:nth-child(2){
+.desertp-item:nth-child(2){
   margin-right: 20%;
 }
-.runesp-item-img {
+.desertp-item-img {
   position: relative;
 
   display: none;
   width: 100%;
   height: 100%;
 }
-.runesp-item-img img {
+.desertp-item-img img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -670,7 +675,7 @@ export default {
 .modal {
   display: flex;
   justify-content: center;
-  align-items: flex-strunes;
+  align-items: flex-stdesert;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -678,7 +683,7 @@ export default {
   height: 100vh;
   z-index: 9999;
   /* background-color: rgba(0, 0, 0, 0.5); */
-  /* background: v-bind("'url(' + runesConfig.dialogrunes + ')'") no-repeat; */
+  /* background: v-bind("'url(' + desertConfig.dialogdesert + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star {
@@ -700,17 +705,17 @@ export default {
   width: 70%;
 }
 
-.strunes-bg {
+.stdesert-bg {
   position: absolute;
 
   top: 0;
   z-index: 1;
 }
-.strunes-bg img {
+.stdesert-bg img {
   width: 100%;
 }
 
-.modelrunes-list {
+.modeldesert-list {
   position: absolute;
   left: 60%;
   top: 39.5%;
@@ -722,33 +727,33 @@ export default {
   font-size: 16px;
   /* transform: rotate(7deg) translateX(-36px); */
 }
-.modelrunes-item {
+.modeldesert-item {
   margin-bottom: 11px;
 }
-.modelrunes-total {
+.modeldesert-total {
   padding: 7px 14px;
 }
 
-.headrunes {
+.headdesert {
   margin-top: 10vh;
   width: 80%;
 }
 /* 定义步长图片动画关键帧 */
 @keyframes image-animation {
   0% {
-    background-image: v-bind("'url(' + runesConfig.animation1 + ')'");
+    background-image: v-bind("'url(' + desertConfig.animation1 + ')'");
   }
 
   25% {
-    background-image: v-bind("'url(' + runesConfig.animation4 + ')'");
+    background-image: v-bind("'url(' + desertConfig.animation4 + ')'");
   }
 
   75% {
-    background-image: v-bind("'url(' + runesConfig.animation8 + ')'");
+    background-image: v-bind("'url(' + desertConfig.animation8 + ')'");
   }
 
   100% {
-    background-image: v-bind("'url(' + runesConfig.animation12 + ')'");
+    background-image: v-bind("'url(' + desertConfig.animation12 + ')'");
   }
 }
 
