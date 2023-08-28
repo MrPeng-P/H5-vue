@@ -26,7 +26,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/imgdesert/[hash][ext]",
+          filename: "assets/imgkingdomRise/[hash][ext]",
         },
       },
         // {
@@ -50,7 +50,7 @@ module.exports = {
   },
 
   output: {
-    filename: "assets/desertJs/desert-[hash].js",
+    filename: "assets/kingdomRiseJs/kingdomRise-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [
