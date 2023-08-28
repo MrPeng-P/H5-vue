@@ -1,29 +1,27 @@
 <script>
-import playdesert from "@/assets/slotE1/playdesert.png";
-import playdesert2 from "@/assets/slotE1/playdesert2.png";
-// import playdesert3 from "@/assets/slotE1/playdesert3.png";
-import boxdesert from "@/assets/slotE1/boxdesert.jpg";
-import anydesert from "@/assets/slotE1/changedesert.png";
-import anyBoxdesert from "@/assets/slotE1/anyBoxdesert.png";
-import homedesert from "@/assets/slotE1/homedesert.png";
-import againdesert from "@/assets/slotE1/againdesert.png";
-// import countdesert from "@/assets/slotE1/countdesert.png";
-// import ruledesert from "@/assets/slotE1/ruledesert.png";
-// import ruleDialogdesert from "@/assets/slotE1/ruleDialogdesert.jpg";
-// import resultdesert from "@/assets/slotE1/resultdesert.png";
-// import headdesert from "@/assets/slotE1/headdesert.png";
+import playwakeup from "@/assets/slotE1/playwakeup.png";
+// import playwakeup2 from "@/assets/slotE1/playwakeup2.png";
+// import playwakeup3 from "@/assets/slotE1/playwakeup3.png";
+import boxwakeup from "@/assets/slotE1/boxwakeup.jpg";
+import anywakeup from "@/assets/slotE1/changeHwakeup.png";
+import anyBoxwakeup from "@/assets/slotE1/anyBoxwakeup.jpg";
+import homewakeup from "@/assets/slotE1/homewakeup.png";
+// import againwakeup from "@/assets/slotE1/againwakeup.png";
+import countwakeup from "@/assets/slotE1/countwakeup.png";
+// import rulewakeup from "@/assets/slotE1/rulewakeup.png";
+// import ruleDialogwakeup from "@/assets/slotE1/ruleDialogwakeup.jpg";
+// import resultwakeup from "@/assets/slotE1/resultwakeup.png";
+// import headwakeup from "@/assets/slotE1/headwakeup.png";
 
-// import star from "@/assets/slotE1/stardesert.gif";
+// import star from "@/assets/slotE1/starwakeup.gif";
 import { useRouter, useRoute } from "vue-router";
-import desert1 from "@/assets/slotE1/desert1.png";
-import desert2 from "@/assets/slotE1/desert2.png";
-import desert3 from "@/assets/slotE1/desert3.png";
-import desert4 from "@/assets/slotE1/desert4.png";
-import desert5 from "@/assets/slotE1/desert5.png";
-import desert6 from "@/assets/slotE1/desert6.png";
-import desert8 from "@/assets/slotE1/desert8.jpg";
-import desert7 from "@/assets/slotE1/desert7.jpg";
-import desert9 from "@/assets/slotE1/desert9.jpg";
+import wakeup1 from "@/assets/slotE1/wakeup1.png";
+import wakeup2 from "@/assets/slotE1/wakeup2.png";
+import wakeup3 from "@/assets/slotE1/wakeup3.png";
+import wakeup4 from "@/assets/slotE1/wakeup4.png";
+import wakeup5 from "@/assets/slotE1/wakeup5.png";
+import wakeup6 from "@/assets/slotE1/wakeup6.png";
+import wakeup7 from "@/assets/slotE1/wakeup7.png";
 
 // import animation1 from "@/assets/slotE1/dong/00001.png";
 // import animation4 from "@/assets/slotE1/dong/00004.png";
@@ -63,87 +61,87 @@ export default {
     const router = new useRouter();
     // 随机生成 12 张图的数组
     let randomImages = [];
-    const desertConfig = reactive({
-      // headdesert,
+    const wakeupConfig = reactive({
+      // headwakeup,
       // animation1,
       // animation4,
       // animation8,
       // animation12,
-      anydesert,
-      playdesert,
-      playdesert2,
-      // playdesert3,
-      againdesert,
-      anyBoxdesert,
-      boxdesert,
-      homedesert,
+      anywakeup,
+      playwakeup,
+      // playwakeup2,
+      // playwakeup3,
+      // againwakeup,
+      anyBoxwakeup,
+      boxwakeup,
+      homewakeup,
       //   star,
-      // senioritydesert,
-      // countdesert,
-      // ruledesert,
-      // ruleDialogdesert,
-      // resultdesert
+      // senioritywakeup,
+      countwakeup,
+      // rulewakeup,
+      // ruleDialogwakeup,
+      // resultwakeup
     });
-    const desertList = reactive([
+    const wakeupList = reactive([
       {
         name: "item1",
-        size: 4,
+        size: 1,
         imgList: [],
       },
       {
         name: "item2",
-        size: 8,
+        size: 3,
         imgList: [],
       },
       {
         name: "item3",
-        size: 12,
+        size: 5,
         imgList: [],
       },
       {
         name: "item4",
-        size: 12,
+        size: 3,
         imgList: [],
       },
-      // {
-      //   name: "item5",
-      //   size: 12,
-      //   imgList: [],
-      // },
+      {
+        name: "item5",
+        size: 1,
+        imgList: [],
+      },
     ]);
     let timeOhter = 0;
     let id;
-    let stdesert = ref(false);
+    let stwakeup = ref(false);
     let open = ref(false);
     let buttonStatus = ref(true);
     const images = [
       {
-        img: desert1,
-        name: "desert2",
+        img: wakeup1,
+        name: "wakeup2",
         className: "animation",
         count: 1800 * magnification.value,
       },
       {
-        img: desert2,
-        name: "desert1",
+        img: wakeup2,
+        name: "wakeup1",
         className: "animation",
         count: 1000 * magnification.value,
       },
       {
-        img: desert3,
+        img: wakeup3,
       },
       {
-        img: desert4,
+        img: wakeup4,
       },
       {
-        img: desert5,
+        img: wakeup5,
       },
       {
-        img: desert6,
+        img: wakeup6,
       },
       {
-        img: desert7,
-        name: "desert3",
+        img: wakeup7,
+        name: "wakeup3",
         className: "animation",
         count: 2200 * magnification.value,
       },
@@ -162,11 +160,11 @@ export default {
         buttonStatus.value = false;
 
         allMethods.clear();
-        const boxLists = desertList.map((item) => {
+        const boxLists = wakeupList.map((item) => {
           return document.getElementById(item.name);
         });
         boxLists[0].style.setProperty("background-position-x", "center");
-        boxLists[0].querySelectorAll(".desertp-item-img").forEach((child) => {
+        boxLists[0].querySelectorAll(".wakeupp-item-img").forEach((child) => {
           child.style.setProperty("display", "none");
         });
         // boxLists.forEach((item)=>{
@@ -179,9 +177,9 @@ export default {
         //       0+'px'
         //     );
         // })
-        const content = document.getElementById("desertp-he");
-        const box2 = document.getElementById("desertp");
-        const coords = { x: 0, y: 0 }; // Stdesert at (0, 0)
+        const content = document.getElementById("wakeupp-he");
+        const box2 = document.getElementById("wakeupp");
+        const coords = { x: 0, y: 0 }; // Stwakeup at (0, 0)
         const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to(
             { x: 0, y: (1120 * content.clientHeight) / box2.clientHeight },
@@ -209,12 +207,12 @@ export default {
                 -coords.y + "px"
               );
             }
-            // if (timeOhter > 4000 && timeOhter <= 7000) {
-            //   boxLists[4].style.setProperty(
-            //     "background-position-y",
-            //     -coords.y + "px"
-            //   );
-            // }
+            if (timeOhter > 4000 && timeOhter <= 7000) {
+              boxLists[4].style.setProperty(
+                "background-position-y",
+                -coords.y + "px"
+              );
+            }
             if (timeOhter > 0 && timeOhter <= 3000) {
               boxLists[0].style.setProperty(
                 "background-position-y",
@@ -225,7 +223,7 @@ export default {
           .repeat(Infinity)
           .yoyo(false)
           .repeatDelay(0);
-          tween.start(); // Stdesert the tween immediately.
+          tween.start(); // Stwakeup the tween immediately.
         let nowDate = window.performance.now();
         function animate(time) {
           timeOhter = time - nowDate;
@@ -239,7 +237,7 @@ export default {
         let i = 0;
         let timeany = setInterval(() => {
           i++;
-          if (i > 6) {
+          if (i > 7) {
             sessionStorage.setItem("countValue", countValue.value);
 
             open.value = true;
@@ -249,42 +247,42 @@ export default {
           }
           if (i > 0 && i < 4) {
             boxLists[i].style.setProperty("background-position-x", "center");
-            boxLists[i].querySelectorAll(".desertp-item-img").forEach((child) => {
+            boxLists[i].querySelectorAll(".wakeupp-item-img").forEach((child) => {
               child.style.setProperty("display", "none");
             });
           }
           if (i == 3) {
             boxLists[0].style.setProperty("background-position-x", 600 + "px");
-            boxLists[0].querySelectorAll(".desertp-item-img").forEach((child) => {
+            boxLists[0].querySelectorAll(".wakeupp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 4) {
             boxLists[1].style.setProperty("background-position-x", 600 + "px");
-            boxLists[1].querySelectorAll(".desertp-item-img").forEach((child) => {
+            boxLists[1].querySelectorAll(".wakeupp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 5) {
             boxLists[2].style.setProperty("background-position-x", 600 + "px");
-            boxLists[2].querySelectorAll(".desertp-item-img").forEach((child) => {
+            boxLists[2].querySelectorAll(".wakeupp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 6) {
             boxLists[3].style.setProperty("background-position-x", 600 + "px");
-            boxLists[3].querySelectorAll(".desertp-item-img").forEach((child) => {
+            boxLists[3].querySelectorAll(".wakeupp-item-img").forEach((child) => {
+              child.style.setProperty("display", "block");
+            });
+            // countValue.value += useCount.value*magn;
+          }
+          if (i == 7) {
+            boxLists[4].style.setProperty("background-position-x", 600 + "px");
+            boxLists[4].querySelectorAll(".wakeupp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
             countValue.value += useCount.value*magn;
           }
-          // if (i == 7) {
-          //   boxLists[4].style.setProperty("background-position-x", 600 + "px");
-          //   boxLists[4].querySelectorAll(".desertp-item-img").forEach((child) => {
-          //     child.style.setProperty("display", "block");
-          //   });
-          //   countValue.value += useCount.value;
-          // }
         }, 1000);
       },
       clear: () => {
@@ -331,7 +329,7 @@ export default {
           randomImages.push(randomImage);
         }
 
-        allMethods.assignImageList(desertList, randomImages);
+        allMethods.assignImageList(wakeupList, randomImages);
       },
       // 随机生成图像列表
       shuffleArray(array) {
@@ -340,11 +338,11 @@ export default {
           [array[i], array[j]] = [array[j], array[i]];
         }
         array.forEach((item) => {
-          if (item.name == "desert1") {
+          if (item.name == "wakeup1") {
             arrCount[0].value++;
-          } else if (item.name == "desert2") {
+          } else if (item.name == "wakeup2") {
             arrCount[1].value++;
-          } else if (item.name == "desert3") {
+          } else if (item.name == "wakeup3") {
             arrCount[2].value++;
           }
           if (item.count) {
@@ -354,21 +352,21 @@ export default {
         return array;
       },
 
-      // 将图像列表分配给desertList
-      assignImageList(desertList, images) {
+      // 将图像列表分配给wakeupList
+      assignImageList(wakeupList, images) {
         const shuffledImages = allMethods.shuffleArray(images.slice()); // 避免修改原始数组
 
         let currentIndex = 0;
 
-        desertList.forEach((item) => {
-          const numImages = Math.min(item.size, 3);
+        wakeupList.forEach((item) => {
+          const numImages = Math.min(item.size, 5);
           item.imgList = shuffledImages.slice(
             currentIndex,
             currentIndex + numImages
           );
           currentIndex += numImages;
         });
-        return desertList;
+        return wakeupList;
       },
       goSeniority: () => {
         router.push("/list");
@@ -378,10 +376,10 @@ export default {
     return {
       className,
       open,
-      stdesert,
-      desertConfig,
+      stwakeup,
+      wakeupConfig,
       randomImages,
-      desertList,
+      wakeupList,
       countValue,
       useCount,
       showRuleValue,
@@ -393,62 +391,64 @@ export default {
 </script>
 <template>
   <div :class="className">
-    <!-- <img class="headdesert" :src="desertConfig.headdesert" alt=""> -->
-    <div class="desertp" id="desertp">
-      <div class="desertp-he" id="desertp-he">
-        <!-- <img class="desert-rule" @click="showRule" :src="desertConfig.ruledesert" alt=""> -->
-        <div class="desertp-hidden">
+    <!-- <img class="headwakeup" :src="wakeupConfig.headwakeup" alt=""> -->
+    <div class="wakeupp" id="wakeupp">
+      <div class="wakeupp-he" id="wakeupp-he">
+        <!-- <img class="wakeup-rule" @click="showRule" :src="wakeupConfig.rulewakeup" alt=""> -->
+        <div class="wakeupp-hidden">
           <div
-            class="desertp-item"
-            :id="item.name"
-            v-for="(item, index) in desertList"
+            class="wakeupp-item-box"
+           
+            v-for="(item, index) in wakeupList"
           >
+           <div class="wakeupp-item"  :id="item.name">
             <div
               v-for="(imgItem, imgIndex) in item.imgList"
               :class="
                 imgItem.className
-                  ? 'desertp-item-img ' + imgItem.className
-                  : 'desertp-item-img'
+                  ? 'wakeupp-item-img ' + imgItem.className
+                  : 'wakeupp-item-img'
               "
             >
               <img :src="imgItem.img" alt="" />
             </div>
+           </div>
           </div>
         </div>
       </div>
-      <div class="buttondesert-box">
+      <div class="buttonwakeup-box">
         <div class="buttons" @click="close"></div>
 
-        <div class="buttonsdesert2" @click="run()"></div>
+        <div class="buttonswakeup2" @click="run()"></div>
        
-        <div class="buttonsdesertBack" @click="run()"></div>
+        <div class="buttonswakeupBack" @click="run()"></div>
 
         <!-- <div class="buttons2" @click="goSeniority"></div> -->
 
-        <div class="desert-count" @click="showRule">
-          <!-- <img class="desert-rule" :src="desertConfig.ruledesert" alt="" /> -->
-          <!-- <img :src="desertConfig.countdesert" alt="" /> -->
+        <div class="wakeup-count" @click="showRule">
+          <!-- <img class="wakeup-rule" :src="wakeupConfig.rulewakeup" alt="" /> -->
+          <img :src="wakeupConfig.countwakeup" alt="" />
           <div class="countValue">{{ countValue }}</div>
         </div>
       </div>
-      <div class="desertd-desertp">
-        <div class="desertd-back" @click="close"></div>
+      <div class="wakeupd-wakeupp">
+        <div class="wakeupd-back" @click="close"></div>
       </div>
     </div>
     <Teleport to="body">
       <div v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="desertConfig.star" alt="" /> -->
-        <!-- <img class="model-img-bg" :src="desertConfig.resultdesert" alt="" /> -->
-        <!-- <div class="modeldesert-list">
+        <!-- <img class="model-star" :src="wakeupConfig.star" alt="" /> -->
+        <!-- <img class="model-img-bg" :src="wakeupConfig.resultwakeup" alt="" /> -->
+        <!-- <div class="modelwakeup-list">
           <div
-            class="modeldesert-item"
+            class="modelwakeup-item"
             v-for="(item, index) in arrCount"
             :key="index"
           >
             {{ item.count + "X" + item.value }}
           </div>
-          <div class="modeldesert-total">{{ useCount }}</div>
+          <div class="modelwakeup-total">{{ useCount }}</div>
         </div> -->
       </div>
     </Teleport>
@@ -456,8 +456,8 @@ export default {
     <Teleport to="body">
       <div v-if="showRuleValue" class="modal" @click="showRule">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="desertConfig.star" alt="" /> -->
-        <!-- <img class="model-img" :src="desertConfig.ruleDialogdesert" alt="" /> -->
+        <!-- <img class="model-star" :src="wakeupConfig.star" alt="" /> -->
+        <!-- <img class="model-img" :src="wakeupConfig.ruleDialogwakeup" alt="" /> -->
       </div>
     </Teleport>
   </div>
@@ -469,7 +469,7 @@ export default {
 
   width: 280px;
 }
-.desertd-desertp {
+.wakeupd-wakeupp {
   display: flex;
   align-items: center;
   /* padding: 60px 15px; */
@@ -480,44 +480,45 @@ export default {
   color: #fff;
 }
 .countValue {
-  margin: 0 0 0 37%;
+  margin: 0% 0 -68%;
     color: #FFF;
     font-size: 18px;
+    transform: rotateZ(90deg);
 }
 
-.desert-count img {
+.wakeup-count img {
   width: 100%;
   position: absolute;
   height: 100%;
   /* top: -16%; */
   z-index: -1;
 }
-.desert-count .desert-rule {
+.wakeup-count .wakeup-rule {
   position: absolute;
   left: -9%;
   width: 45px;
   height: 45px;
 }
-.desertd-back {
-  /* background: v-bind("'url(' + desertConfig.homedesert + ')'") no-repeat; */
+.wakeupd-back {
+  /* background: v-bind("'url(' + wakeupConfig.homewakeup + ')'") no-repeat; */
 
   width: 36px;
   height: 42px;
   background-size: 100%;
   z-index: 999;
 }
-.stdesert {
+.stwakeup {
   margin-top: -30%;
   width: 160px;
   height: 80px;
-  background: v-bind("'url(' + desertConfig.playdesert + ')'") no-repeat;
+  background: v-bind("'url(' + wakeupConfig.playwakeup + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 }
 .container {
   display: flex;
   flex-direction: column;
-  background: v-bind("'url(' + desertConfig.boxdesert + ')'") no-repeat;
+  background: v-bind("'url(' + wakeupConfig.boxwakeup + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -527,7 +528,7 @@ export default {
   align-items: center;
 }
 
-.desertp {
+.wakeupp {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -537,35 +538,32 @@ export default {
   /* height: 100vh; */
   overflow: hidden;
 
-  background: v-bind("'url(' + desertConfig.anyBoxdesert + ')'") no-repeat;
-  background-size: 65%;
-    background-position: center 45%;
+  background: v-bind("'url(' + wakeupConfig.anyBoxwakeup + ')'") no-repeat;
+  background-size: 100%;
+    background-position: center 0%;
 
   color: #fff;
   font-weight: 600;
   font-size: 26;
 }
 
-.buttondesert-box {
+.buttonwakeup-box {
   position: absolute;
   top: 5%;
     left: 17%;
   display: flex;
   /* flex-direction: column; */
 
-  width: 60%;
-  height: 25%;
+  width: 88%;
+    height: 25%;
   /* justify-content: space-between; */
 }
-.desert-count {
+.wakeup-count {
   position: relative;
-  width: 46%;
-    height: 45%;
-
-    margin-left: -30%;
-    /* margin-right: -25%; */
-    margin-top: 52%;
- 
+  width: 6%;
+    height: 203%;
+    margin-left: -6%;
+    margin-top: 21%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -574,13 +572,13 @@ export default {
 }
 
 .buttons {
-  margin-left: 5%;
+  margin-left: 1%;
     margin-top: -1%;
-    width: 12%;
+    width: 7%;
 
     height: 43%;
   z-index: 999;
-  background: v-bind("'url(' + desertConfig.homedesert + ')'") no-repeat;
+  background: v-bind("'url(' + wakeupConfig.homewakeup + ')'") no-repeat;
   background-size: 100% 100%;
 }
 .buttons2 {
@@ -592,32 +590,30 @@ export default {
   width: 30%;
   height: 40%;
   z-index: 999;
-  /* background: v-bind("'url(' + desertConfig.senioritydesert + ')'") no-repeat; */
+  /* background: v-bind("'url(' + wakeupConfig.senioritywakeup + ')'") no-repeat; */
   background-size: 100% 100%;
 }
-.buttonsdesertBack{
+.buttonswakeupBack{
   position: absolute;
   left: 65.5%;
     margin-top: 64%;
     width: 38%;
     height: 45.5%;
   z-index: 999;
-  background: v-bind("'url(' + desertConfig.againdesert + ')'") no-repeat;
+  /* background: v-bind("'url(' + wakeupConfig.againwakeup + ')'") no-repeat; */
   background-size: 100% 100%;
 }
 
-.buttonsdesert2{
-  
-  margin-left: -5%;
-    margin-top: 64%;
-    width: 42%;
-    height: 44.5%;
-
+.buttonswakeup2{
+  margin-left: 65%;
+    margin-top: 8%;
+    width: 6%;
+    height: 88.5%;
   z-index: 999;
-  background: v-bind("'url(' + desertConfig.playdesert2 + ')'") no-repeat;
+  background: v-bind("'url(' + wakeupConfig.playwakeup + ')'") no-repeat;
   background-size: 100% 100%;
 }
-.desertp-he {
+.wakeupp-he {
   position: relative;
     margin-right: 0%;
     margin-top: 5%;
@@ -628,7 +624,7 @@ export default {
     transform: scale(0.8);
 }
 
-.desertp-hidden {
+.wakeupp-hidden {
   /* margin-top: 2%; */
   /* margin-left: 1%; */
   margin-top: -4%;
@@ -636,10 +632,41 @@ export default {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: 190%;
+    transform: rotateZ(57deg) translate(-13vw,-11vw);
+
   overflow: hidden;
 }
-.desertp-item {
+.wakeupp-item-box{
+  height: 100%;
+  flex: 1;
+ 
+    overflow: hidden;
+}
+
+.wakeupp-item-box:nth-child(1),.wakeupp-item-box:nth-child(5){
+  height:20%;
+  transform: translateY(16vw);
+  .wakeupp-item{
+    background-size: 76% 783%;
+
+  }
+}
+.wakeupp-item-box:nth-child(5){
+  transform: translate(3vw,-10vw);
+}
+.wakeupp-item-box:nth-child(2),.wakeupp-item-box:nth-child(4){
+  transform: translate(-2vw,8vw);
+  height: 60%;
+  .wakeupp-item{
+    background-size: 76% 266%;
+
+  }
+}
+.wakeupp-item-box:nth-child(4){
+  transform: translate(1vw,-5vw);
+}
+.wakeupp-item {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -647,35 +674,35 @@ export default {
 
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + desertConfig.anydesert + ')'");
+  background: v-bind("'url(' + wakeupConfig.anywakeup + ')'");
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
-  background-size: 83% 238%;
+  background-size: 76% 166%;
 }
-.desertp-item:nth-child(2){
-  margin-right: 20%;
+.wakeupp-item:nth-child(2){
+  /* margin-right: 20%; */
 }
-.desertp-item-img {
+.wakeupp-item-img {
   position: relative;
 
   display: none;
   width: 100%;
   height: 100%;
 }
-.desertp-item-img img {
+.wakeupp-item-img img {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 32%;
+    left: 48%;
   transform: translate(-50%, -50%) scale(1.1);
   z-index: -1;
-  width: 80%;
-  height: 80%;
+  width: 64%;
+    height: 60%;
 }
 .modal {
   display: flex;
   justify-content: center;
-  align-items: flex-stdesert;
+  align-items: flex-stwakeup;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -683,7 +710,7 @@ export default {
   height: 100vh;
   z-index: 9999;
   /* background-color: rgba(0, 0, 0, 0.5); */
-  /* background: v-bind("'url(' + desertConfig.dialogdesert + ')'") no-repeat; */
+  /* background: v-bind("'url(' + wakeupConfig.dialogwakeup + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star {
@@ -705,17 +732,17 @@ export default {
   width: 70%;
 }
 
-.stdesert-bg {
+.stwakeup-bg {
   position: absolute;
 
   top: 0;
   z-index: 1;
 }
-.stdesert-bg img {
+.stwakeup-bg img {
   width: 100%;
 }
 
-.modeldesert-list {
+.modelwakeup-list {
   position: absolute;
   left: 60%;
   top: 39.5%;
@@ -727,47 +754,46 @@ export default {
   font-size: 16px;
   /* transform: rotate(7deg) translateX(-36px); */
 }
-.modeldesert-item {
+.modelwakeup-item {
   margin-bottom: 11px;
 }
-.modeldesert-total {
+.modelwakeup-total {
   padding: 7px 14px;
 }
 
-.headdesert {
+.headwakeup {
   margin-top: 10vh;
   width: 80%;
 }
 /* 定义步长图片动画关键帧 */
 @keyframes image-animation {
   0% {
-    background-image: v-bind("'url(' + desertConfig.animation1 + ')'");
+    background-image: v-bind("'url(' + wakeupConfig.animation1 + ')'");
   }
 
   25% {
-    background-image: v-bind("'url(' + desertConfig.animation4 + ')'");
+    background-image: v-bind("'url(' + wakeupConfig.animation4 + ')'");
   }
 
   75% {
-    background-image: v-bind("'url(' + desertConfig.animation8 + ')'");
+    background-image: v-bind("'url(' + wakeupConfig.animation8 + ')'");
   }
 
   100% {
-    background-image: v-bind("'url(' + desertConfig.animation12 + ')'");
+    background-image: v-bind("'url(' + wakeupConfig.animation12 + ')'");
   }
 }
 
 /* 设置动画元素样式和动画 */
 .animation {
-  width: 100%;
+  /* width: 100%;
   height: 100%;
   background-repeat: no-repeat;
   background-position-y: center;
-  /* background-size: cover; */
-  /* 2秒钟的步长图片动画，5帧图片，无限循环 */
+
   background-position-y: center;
   background-position-x: center;
-  background-size: 99%;
+  background-size: 99%; */
 
   /* animation: image-animation 2s steps(4) infinite; */
 }
