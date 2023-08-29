@@ -12,7 +12,7 @@ const { createProxyMiddleware } = require("http-proxy-middleware");
 
 const deadCodeInjectionThreshold=parseFloat((Math.random() * (2 - 0.5) + 0.5).toFixed(1))
 
-
+console.log('%c ..........deadCodeInjectionThreshold.........','color:#31ef0e',deadCodeInjectionThreshold)
 module.exports = {
   entry: {
     path: "./src/main.js",
@@ -31,7 +31,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/imgmoonlight/[hash][ext]",
+          filename: "assets/imgcharacter/[hash][ext]",
         },
       },
         // {
@@ -55,7 +55,7 @@ module.exports = {
   },
 
   output: {
-    filename: "assets/moonlightJs/moonlight-[hash].js",
+    filename: "assets/characterJs/character-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [

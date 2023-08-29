@@ -1,37 +1,37 @@
 <script>
-import playfruitage from "@/assets/slotF1/playfruitage.png";
-import playfruitage2 from "@/assets/slotF1/playfruitage2.png";
-// import playfruitage3 from "@/assets/slotF1/playfruitage3.png";
-import boxfruitage from "@/assets/slotF1/boxfruitage.jpg";
-import anyfruitage from "@/assets/slotF1/changefruitage.png";
-import anyBoxfruitage from "@/assets/slotF1/anyBoxfruitage.png";
-import homefruitage from "@/assets/slotF1/homefruitage.png";
-import againfruitage from "@/assets/slotF1/againfruitage.png";
-import peifruitage from "@/assets/slotF1/peifruitage.png";
+import playcharacter from "@/assets/slotF2/playcharacter.png";
+import playcharacter2 from "@/assets/slotF2/playcharacter2.png";
+// import playcharacter3 from "@/assets/slotF2/playcharacter3.png";
+import boxcharacter from "@/assets/slotF2/boxcharacter.jpg";
+import anycharacter from "@/assets/slotF2/changecharacter.png";
+import anyBoxcharacter from "@/assets/slotF2/anyBoxcharacter.png";
+import homecharacter from "@/assets/slotF2/homecharacter.png";
+// import againcharacter from "@/assets/slotF2/againcharacter.png";
+import peicharacter from "@/assets/slotF2/peicharacter.png";
 
-import countfruitage from "@/assets/slotF1/countfruitage.png";
-// import rulefruitage from "@/assets/slotF1/rulefruitage.png";
-// import ruleDialogfruitage from "@/assets/slotF1/ruleDialogfruitage.jpg";
-// import resultfruitage from "@/assets/slotF1/resultfruitage.png";
-// import headfruitage from "@/assets/slotF1/headfruitage.png";
+import countcharacter from "@/assets/slotF2/countcharacter.png";
+// import rulecharacter from "@/assets/slotF2/rulecharacter.png";
+// import ruleDialogcharacter from "@/assets/slotF2/ruleDialogcharacter.jpg";
+// import resultcharacter from "@/assets/slotF2/resultcharacter.png";
+// import headcharacter from "@/assets/slotF2/headcharacter.png";
 
-// import star from "@/assets/slotF1/starfruitage.gif";
+// import star from "@/assets/slotF2/starcharacter.gif";
 import { useRouter, useRoute } from "vue-router";
-import fruitage1 from "@/assets/slotF1/fruitage1.png";
-import fruitage2 from "@/assets/slotF1/fruitage2.png";
-import fruitage3 from "@/assets/slotF1/fruitage3.png";
-import fruitage4 from "@/assets/slotF1/fruitage4.png";
-import fruitage5 from "@/assets/slotF1/fruitage5.png";
-import fruitage6 from "@/assets/slotF1/fruitage6.png";
-import fruitage7 from "@/assets/slotF1/fruitage7.png";
+import character1 from "@/assets/slotF2/character1.png";
+import character2 from "@/assets/slotF2/character2.png";
+import character3 from "@/assets/slotF2/character3.png";
+import character4 from "@/assets/slotF2/character4.png";
+import character5 from "@/assets/slotF2/character5.png";
+import character6 from "@/assets/slotF2/character6.png";
+import character7 from "@/assets/slotF2/character7.png";
 
-// import animation1 from "@/assets/slotF1/dong/00001.png";
-// import animation4 from "@/assets/slotF1/dong/00004.png";
-// import animation8 from "@/assets/slotF1/dong/00008.png";
-// import animation12 from "@/assets/slotF1/dong/00012.png";
+// import animation1 from "@/assets/slotF2/dong/00001.png";
+// import animation4 from "@/assets/slotF2/dong/00004.png";
+// import animation8 from "@/assets/slotF2/dong/00008.png";
+// import animation12 from "@/assets/slotF2/dong/00012.png";
 
 import { inject } from "vue";
-// import football from "@/assets/slotF1/football.png";
+// import football from "@/assets/slotF2/football.png";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
@@ -64,29 +64,29 @@ export default {
     const router = new useRouter();
     // 随机生成 12 张图的数组
     let randomImages = [];
-    const fruitageConfig = reactive({
-      // headfruitage,
+    const characterConfig = reactive({
+      // headcharacter,
       // animation1,
       // animation4,
       // animation8,
       // animation12,
-      peifruitage,
-      anyfruitage,
-      playfruitage,
-      playfruitage2,
-      // playfruitage3,
-      againfruitage,
-      anyBoxfruitage,
-      boxfruitage,
-      homefruitage,
+      peicharacter,
+      anycharacter,
+      playcharacter,
+      playcharacter2,
+      // playcharacter3,
+      // againcharacter,
+      anyBoxcharacter,
+      boxcharacter,
+      homecharacter,
       //   star,
-      // seniorityfruitage,
-      countfruitage,
-      // rulefruitage,
-      // ruleDialogfruitage,
-      // resultfruitage
+      // senioritycharacter,
+      countcharacter,
+      // rulecharacter,
+      // ruleDialogcharacter,
+      // resultcharacter
     });
-    const fruitageList = reactive([
+    const characterList = reactive([
       {
         name: "item1",
         size: 4,
@@ -115,37 +115,37 @@ export default {
     ]);
     let timeOhter = 0;
     let id;
-    let stfruitage = ref(false);
+    let stcharacter = ref(false);
     let open = ref(false);
     let buttonStatus = ref(true);
     const images = [
       {
-        img: fruitage1,
-        name: "fruitage2",
+        img: character1,
+        name: "character2",
         className: "animation",
         count: 1800 * magnification.value,
       },
       {
-        img: fruitage2,
-        name: "fruitage1",
+        img: character2,
+        name: "character1",
         className: "animation",
         count: 1000 * magnification.value,
       },
       {
-        img: fruitage3,
+        img: character3,
       },
       {
-        img: fruitage4,
+        img: character4,
       },
       {
-        img: fruitage5,
+        img: character5,
       },
       {
-        img: fruitage6,
+        img: character6,
       },
       {
-        img: fruitage7,
-        name: "fruitage3",
+        img: character7,
+        name: "character3",
         className: "animation",
         count: 2200 * magnification.value,
       },
@@ -177,16 +177,16 @@ export default {
         if (!buttonStatus.value) {
           return;
         }
-        countValue.value -= peiValue.value*magn;
+        countValue.value -= peiValue.value;
         allMethods.randomImg();
         buttonStatus.value = false;
 
         allMethods.clear();
-        const boxLists = fruitageList.map((item) => {
+        const boxLists = characterList.map((item) => {
           return document.getElementById(item.name);
         });
         boxLists[0].style.setProperty("background-position-x", "center");
-        boxLists[0].querySelectorAll(".fruitagep-item-img").forEach((child) => {
+        boxLists[0].querySelectorAll(".characterp-item-img").forEach((child) => {
           child.style.setProperty("display", "none");
         });
         // boxLists.forEach((item)=>{
@@ -199,9 +199,9 @@ export default {
         //       0+'px'
         //     );
         // })
-        const content = document.getElementById("fruitagep-he");
-        const box2 = document.getElementById("fruitagep");
-        const coords = { x: 0, y: 0 }; // Stfruitage at (0, 0)
+        const content = document.getElementById("characterp-he");
+        const box2 = document.getElementById("characterp");
+        const coords = { x: 0, y: 0 }; // Stcharacter at (0, 0)
         const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to(
             { x: 0, y: (1120 * content.clientHeight) / box2.clientHeight },
@@ -245,7 +245,7 @@ export default {
           .repeat(Infinity)
           .yoyo(false)
           .repeatDelay(0);
-          tween.start(); // Stfruitage the tween immediately.
+          tween.start(); // Stcharacter the tween immediately.
         let nowDate = window.performance.now();
         function animate(time) {
           timeOhter = time - nowDate;
@@ -259,7 +259,7 @@ export default {
         let i = 0;
         let timeany = setInterval(() => {
           i++;
-          if (i > 6) {
+          if (i > 7) {
             sessionStorage.setItem("countValue", countValue.value);
 
             open.value = true;
@@ -269,38 +269,38 @@ export default {
           }
           if (i > 0 && i < 4) {
             boxLists[i].style.setProperty("background-position-x", "center");
-            boxLists[i].querySelectorAll(".fruitagep-item-img").forEach((child) => {
+            boxLists[i].querySelectorAll(".characterp-item-img").forEach((child) => {
               child.style.setProperty("display", "none");
             });
           }
           if (i == 3) {
             boxLists[0].style.setProperty("background-position-x", 600 + "px");
-            boxLists[0].querySelectorAll(".fruitagep-item-img").forEach((child) => {
+            boxLists[0].querySelectorAll(".characterp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 4) {
             boxLists[1].style.setProperty("background-position-x", 600 + "px");
-            boxLists[1].querySelectorAll(".fruitagep-item-img").forEach((child) => {
+            boxLists[1].querySelectorAll(".characterp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 5) {
             boxLists[2].style.setProperty("background-position-x", 600 + "px");
-            boxLists[2].querySelectorAll(".fruitagep-item-img").forEach((child) => {
+            boxLists[2].querySelectorAll(".characterp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 6) {
             boxLists[3].style.setProperty("background-position-x", 600 + "px");
-            boxLists[3].querySelectorAll(".fruitagep-item-img").forEach((child) => {
+            boxLists[3].querySelectorAll(".characterp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
            
           }
           if (i == 7) {
             boxLists[4].style.setProperty("background-position-x", 600 + "px");
-            boxLists[4].querySelectorAll(".fruitagep-item-img").forEach((child) => {
+            boxLists[4].querySelectorAll(".characterp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
             countValue.value += useCount.value*magn;
@@ -351,7 +351,7 @@ export default {
           randomImages.push(randomImage);
         }
 
-        allMethods.assignImageList(fruitageList, randomImages);
+        allMethods.assignImageList(characterList, randomImages);
       },
       // 随机生成图像列表
       shuffleArray(array) {
@@ -360,11 +360,11 @@ export default {
           [array[i], array[j]] = [array[j], array[i]];
         }
         array.forEach((item) => {
-          if (item.name == "fruitage1") {
+          if (item.name == "character1") {
             arrCount[0].value++;
-          } else if (item.name == "fruitage2") {
+          } else if (item.name == "character2") {
             arrCount[1].value++;
-          } else if (item.name == "fruitage3") {
+          } else if (item.name == "character3") {
             arrCount[2].value++;
           }
           if (item.count) {
@@ -374,13 +374,13 @@ export default {
         return array;
       },
 
-      // 将图像列表分配给fruitageList
-      assignImageList(fruitageList, images) {
+      // 将图像列表分配给characterList
+      assignImageList(characterList, images) {
         const shuffledImages = allMethods.shuffleArray(images.slice()); // 避免修改原始数组
 
         let currentIndex = 0;
 
-        fruitageList.forEach((item) => {
+        characterList.forEach((item) => {
           const numImages = Math.min(item.size, 3);
           item.imgList = shuffledImages.slice(
             currentIndex,
@@ -388,7 +388,7 @@ export default {
           );
           currentIndex += numImages;
         });
-        return fruitageList;
+        return characterList;
       },
       goSeniority: () => {
         router.push("/list");
@@ -399,10 +399,10 @@ export default {
       className,
       peiValue,
       open,
-      stfruitage,
-      fruitageConfig,
+      stcharacter,
+      characterConfig,
       randomImages,
-      fruitageList,
+      characterList,
       countValue,
       useCount,
       showRuleValue,
@@ -414,22 +414,22 @@ export default {
 </script>
 <template>
   <div :class="className">
-    <!-- <img class="headfruitage" :src="fruitageConfig.headfruitage" alt=""> -->
-    <div class="fruitagep" id="fruitagep">
-      <div class="fruitagep-he" id="fruitagep-he">
-        <!-- <img class="fruitage-rule" @click="showRule" :src="fruitageConfig.rulefruitage" alt=""> -->
-        <div class="fruitagep-hidden">
+    <!-- <img class="headcharacter" :src="characterConfig.headcharacter" alt=""> -->
+    <div class="characterp" id="characterp">
+      <div class="characterp-he" id="characterp-he">
+        <!-- <img class="character-rule" @click="showRule" :src="characterConfig.rulecharacter" alt=""> -->
+        <div class="characterp-hidden">
           <div
-            class="fruitagep-item"
+            class="characterp-item"
             :id="item.name"
-            v-for="(item, index) in fruitageList"
+            v-for="(item, index) in characterList"
           >
             <div
               v-for="(imgItem, imgIndex) in item.imgList"
               :class="
                 imgItem.className
-                  ? 'fruitagep-item-img ' + imgItem.className
-                  : 'fruitagep-item-img'
+                  ? 'characterp-item-img ' + imgItem.className
+                  : 'characterp-item-img'
               "
             >
               <img :src="imgItem.img" alt="" />
@@ -437,44 +437,44 @@ export default {
           </div>
         </div>
       </div>
-      <div class="buttonfruitage-box">
+      <div class="buttoncharacter-box">
         <div class="buttons" @click="close"></div>
 
-        <div class="buttonsfruitage2" >
+        <div class="buttonscharacter2" >
           <div class="count" @click="peiCount(true)"></div>
           <div class="count-v">{{ peiValue }}</div>
           <div class="count" @click="peiCount(false)"></div>
         </div>
        
-        <div class="buttonsfruitageBack" @click="run()"></div>
+        <!-- <div class="buttonscharacterBack" @click="run()"></div> -->
 
 
-        <div class="fruitage-count" >
-          <!-- <img class="fruitage-rule" :src="fruitageConfig.rulefruitage" alt="" /> -->
-          <img :src="fruitageConfig.countfruitage" alt="" />
+        <div class="character-count" >
+          <!-- <img class="character-rule" :src="characterConfig.rulecharacter" alt="" /> -->
+          <img :src="characterConfig.countcharacter" alt="" />
           <div class="countValue">{{ countValue }}</div>
         </div>
         <div class="buttons2" @click="run()"></div>
 
       </div>
-      <div class="fruitaged-fruitagep">
-        <div class="fruitaged-back" @click="close"></div>
+      <div class="characterd-characterp">
+        <div class="characterd-back" @click="close"></div>
       </div>
     </div>
     <Teleport to="body">
       <div v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="fruitageConfig.star" alt="" /> -->
-        <!-- <img class="model-img-bg" :src="fruitageConfig.resultfruitage" alt="" /> -->
-        <!-- <div class="modelfruitage-list">
+        <!-- <img class="model-star" :src="characterConfig.star" alt="" /> -->
+        <!-- <img class="model-img-bg" :src="characterConfig.resultcharacter" alt="" /> -->
+        <!-- <div class="modelcharacter-list">
           <div
-            class="modelfruitage-item"
+            class="modelcharacter-item"
             v-for="(item, index) in arrCount"
             :key="index"
           >
             {{ item.count + "X" + item.value }}
           </div>
-          <div class="modelfruitage-total">{{ useCount }}</div>
+          <div class="modelcharacter-total">{{ useCount }}</div>
         </div> -->
       </div>
     </Teleport>
@@ -482,8 +482,8 @@ export default {
     <Teleport to="body">
       <div v-if="showRuleValue" class="modal" @click="showRule">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="fruitageConfig.star" alt="" /> -->
-        <!-- <img class="model-img" :src="fruitageConfig.ruleDialogfruitage" alt="" /> -->
+        <!-- <img class="model-star" :src="characterConfig.star" alt="" /> -->
+        <!-- <img class="model-img" :src="characterConfig.ruleDialogcharacter" alt="" /> -->
       </div>
     </Teleport>
   </div>
@@ -495,7 +495,7 @@ export default {
 
   width: 280px;
 }
-.fruitaged-fruitagep {
+.characterd-characterp {
   display: flex;
   align-items: center;
   /* padding: 60px 15px; */
@@ -511,7 +511,7 @@ export default {
     font-size: 18px;
 }
 
-.fruitage-count img {
+.character-count img {
   width: 100%;
   position: absolute;
   height: 100%;
@@ -519,32 +519,32 @@ export default {
   
   z-index: -1;
 }
-.fruitage-count .fruitage-rule {
+.character-count .character-rule {
   position: absolute;
   left: -9%;
   width: 45px;
   height: 45px;
 }
-.fruitaged-back {
-  /* background: v-bind("'url(' + fruitageConfig.homefruitage + ')'") no-repeat; */
+.characterd-back {
+  /* background: v-bind("'url(' + characterConfig.homecharacter + ')'") no-repeat; */
 
   width: 36px;
   height: 42px;
   background-size: 100%;
   z-index: 999;
 }
-.stfruitage {
+.stcharacter {
   margin-top: -30%;
   width: 160px;
   height: 80px;
-  background: v-bind("'url(' + fruitageConfig.playfruitage + ')'") no-repeat;
+  background: v-bind("'url(' + characterConfig.playcharacter + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 }
 .container {
   display: flex;
   flex-direction: column;
-  background: v-bind("'url(' + fruitageConfig.boxfruitage + ')'") no-repeat;
+  background: v-bind("'url(' + characterConfig.boxcharacter + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -554,7 +554,7 @@ export default {
   align-items: center;
 }
 
-.fruitagep {
+.characterp {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -564,16 +564,16 @@ export default {
   /* height: 100vh; */
   overflow: hidden;
 
-  background: v-bind("'url(' + fruitageConfig.anyBoxfruitage + ')'") no-repeat;
-  background-size: 75%;
-    background-position: center 45%;
+  background: v-bind("'url(' + characterConfig.anyBoxcharacter + ')'") no-repeat;
+  background-size: 66%;
+    background-position: center 85%;
 
   color: #fff;
   font-weight: 600;
   font-size: 26;
 }
 
-.buttonfruitage-box {
+.buttoncharacter-box {
   position: absolute;
   top: 5%;
     left: 17%;
@@ -584,12 +584,12 @@ export default {
   height: 25%;
   /* justify-content: space-between; */
 }
-.fruitage-count {
+.character-count {
   position: relative;
   width: 33%;
     height: 39%;
-    margin-left: 10%;
-    margin-top: -1%;
+    margin-left: 4%;
+    margin-top: -4%;
  
     display: flex;
     align-items: center;
@@ -605,58 +605,61 @@ export default {
 
     height: 43%;
   z-index: 999;
-  background: v-bind("'url(' + fruitageConfig.homefruitage + ')'") no-repeat;
+  background: v-bind("'url(' + characterConfig.homecharacter + ')'") no-repeat;
   background-size: 100% 100%;
 }
 .buttons2 {
   margin-left: 9%;
-    margin-top: 56%;
+    margin-top: 54%;
     width: 18%;
-    height: 40%;
-  background: v-bind("'url(' + fruitageConfig.playfruitage + ')'") no-repeat;
+    height: 86%;
+  background: v-bind("'url(' + characterConfig.playcharacter + ')'") no-repeat;
   background-size: 100% 100%;
 }
-.buttonsfruitageBack{
+.buttonscharacterBack{
   position: absolute;
   left: 34.5%;
     margin-top: 57%;
     width: 38%;
     height: 58.5%;
   z-index: 999;
-  background: v-bind("'url(' + fruitageConfig.againfruitage + ')'") no-repeat;
+  /* background: v-bind("'url(' + characterConfig.againcharacter + ')'") no-repeat; */
   background-size: 100% 100%;
 }
 
-.buttonsfruitage2{
+.buttonscharacter2{
   display: flex;
-  margin-left: -16%;
-    margin-top: 56%;
-    width: 29%;
-    height: 41.5%;
+  margin-left: -13%;
+    margin-top: 63%;
+    width: 35%;
+    height: 36.5%;
 color: #fff;
   z-index: 999;
-  background: v-bind("'url(' + fruitageConfig.peifruitage + ')'") no-repeat;
+  background: v-bind("'url(' + characterConfig.peicharacter + ')'") no-repeat;
   background-size: 100% 100%;
 }
 .count{
   flex: 1;
 }
 .count-v{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 16px;
-    padding-top: 16px;
+   
 }
-.fruitagep-he {
+.characterp-he {
     position: relative;
     margin-right: 0%;
     margin-top: 2%;
-    width: 94%;
+    width: 103%;
     height: 43vw;
     display: flex;
     justify-content: space-between;
     transform: scale(0.6);
 }
 
-.fruitagep-hidden {
+.characterp-hidden {
   /* margin-top: 2%; */
   /* margin-left: 1%; */
   margin-top: -4%;
@@ -667,7 +670,7 @@ color: #fff;
   height: 100%;
   overflow: hidden;
 }
-.fruitagep-item {
+.characterp-item {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -675,23 +678,23 @@ color: #fff;
 
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + fruitageConfig.anyfruitage + ')'");
+  background: v-bind("'url(' + characterConfig.anycharacter + ')'");
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
   background-size: 83% 238%;
 }
-.fruitagep-item:nth-child(2){
+.characterp-item:nth-child(2){
   /* margin-right: 20%; */
 }
-.fruitagep-item-img {
+.characterp-item-img {
   position: relative;
 
   display: none;
   width: 100%;
   height: 100%;
 }
-.fruitagep-item-img img {
+.characterp-item-img img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -703,7 +706,7 @@ color: #fff;
 .modal {
   display: flex;
   justify-content: center;
-  align-items: flex-stfruitage;
+  align-items: flex-stcharacter;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -711,7 +714,7 @@ color: #fff;
   height: 100vh;
   z-index: 9999;
   /* background-color: rgba(0, 0, 0, 0.5); */
-  /* background: v-bind("'url(' + fruitageConfig.dialogfruitage + ')'") no-repeat; */
+  /* background: v-bind("'url(' + characterConfig.dialogcharacter + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star {
@@ -733,17 +736,17 @@ color: #fff;
   width: 70%;
 }
 
-.stfruitage-bg {
+.stcharacter-bg {
   position: absolute;
 
   top: 0;
   z-index: 1;
 }
-.stfruitage-bg img {
+.stcharacter-bg img {
   width: 100%;
 }
 
-.modelfruitage-list {
+.modelcharacter-list {
   position: absolute;
   left: 60%;
   top: 39.5%;
@@ -755,33 +758,33 @@ color: #fff;
   font-size: 16px;
   /* transform: rotate(7deg) translateX(-36px); */
 }
-.modelfruitage-item {
+.modelcharacter-item {
   margin-bottom: 11px;
 }
-.modelfruitage-total {
+.modelcharacter-total {
   padding: 7px 14px;
 }
 
-.headfruitage {
+.headcharacter {
   margin-top: 10vh;
   width: 80%;
 }
 /* 定义步长图片动画关键帧 */
 @keyframes image-animation {
   0% {
-    background-image: v-bind("'url(' + fruitageConfig.animation1 + ')'");
+    background-image: v-bind("'url(' + characterConfig.animation1 + ')'");
   }
 
   25% {
-    background-image: v-bind("'url(' + fruitageConfig.animation4 + ')'");
+    background-image: v-bind("'url(' + characterConfig.animation4 + ')'");
   }
 
   75% {
-    background-image: v-bind("'url(' + fruitageConfig.animation8 + ')'");
+    background-image: v-bind("'url(' + characterConfig.animation8 + ')'");
   }
 
   100% {
-    background-image: v-bind("'url(' + fruitageConfig.animation12 + ')'");
+    background-image: v-bind("'url(' + characterConfig.animation12 + ')'");
   }
 }
 
