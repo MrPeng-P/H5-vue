@@ -1,37 +1,37 @@
 <script>
-import playcharacter from "@/assets/slotF2/playcharacter.png";
-import playcharacter2 from "@/assets/slotF2/playcharacter2.png";
-// import playcharacter3 from "@/assets/slotF2/playcharacter3.png";
-import boxcharacter from "@/assets/slotF2/boxcharacter.jpg";
-import anycharacter from "@/assets/slotF2/changecharacter.png";
-import anyBoxcharacter from "@/assets/slotF2/anyBoxcharacter.png";
-import homecharacter from "@/assets/slotF2/homecharacter.png";
-// import againcharacter from "@/assets/slotF2/againcharacter.png";
-import peicharacter from "@/assets/slotF2/peicharacter.png";
+import playpoker from "@/assets/slotF4/playpoker.png";
+// import playpoker2 from "@/assets/slotF4/playpoker2.png";
+// import playpoker3 from "@/assets/slotF4/playpoker3.png";
+import boxpoker from "@/assets/slotF4/boxpoker.jpg";
+import anypoker from "@/assets/slotF4/changepoker.png";
+import anyBoxpoker from "@/assets/slotF4/anyBoxpoker.png";
+import homepoker from "@/assets/slotF4/homepoker.png";
+// import againpoker from "@/assets/slotF4/againpoker.png";
+import peipoker from "@/assets/slotF4/peipoker.png";
 
-import countcharacter from "@/assets/slotF2/countcharacter.png";
-// import rulecharacter from "@/assets/slotF2/rulecharacter.png";
-// import ruleDialogcharacter from "@/assets/slotF2/ruleDialogcharacter.jpg";
-// import resultcharacter from "@/assets/slotF2/resultcharacter.png";
-// import headcharacter from "@/assets/slotF2/headcharacter.png";
+import countpoker from "@/assets/slotF4/countpoker.png";
+// import rulepoker from "@/assets/slotF4/rulepoker.png";
+// import ruleDialogpoker from "@/assets/slotF4/ruleDialogpoker.jpg";
+// import resultpoker from "@/assets/slotF4/resultpoker.png";
+// import headpoker from "@/assets/slotF4/headpoker.png";
 
-// import star from "@/assets/slotF2/starcharacter.gif";
+// import star from "@/assets/slotF4/starpoker.gif";
 import { useRouter, useRoute } from "vue-router";
-import character1 from "@/assets/slotF2/character1.png";
-import character2 from "@/assets/slotF2/character2.png";
-import character3 from "@/assets/slotF2/character3.png";
-import character4 from "@/assets/slotF2/character4.png";
-import character5 from "@/assets/slotF2/character5.png";
-import character6 from "@/assets/slotF2/character6.png";
-import character7 from "@/assets/slotF2/character7.png";
+import poker1 from "@/assets/slotF4/poker1.png";
+import poker2 from "@/assets/slotF4/poker2.png";
+import poker3 from "@/assets/slotF4/poker3.png";
+import poker4 from "@/assets/slotF4/poker4.png";
+import poker5 from "@/assets/slotF4/poker5.png";
+import poker6 from "@/assets/slotF4/poker6.png";
+// import poker7 from "@/assets/slotF4/poker7.png";
 
-// import animation1 from "@/assets/slotF2/dong/00001.png";
-// import animation4 from "@/assets/slotF2/dong/00004.png";
-// import animation8 from "@/assets/slotF2/dong/00008.png";
-// import animation12 from "@/assets/slotF2/dong/00012.png";
+// import animation1 from "@/assets/slotF4/dong/00001.png";
+// import animation4 from "@/assets/slotF4/dong/00004.png";
+// import animation8 from "@/assets/slotF4/dong/00008.png";
+// import animation12 from "@/assets/slotF4/dong/00012.png";
 
 import { inject } from "vue";
-// import football from "@/assets/slotF2/football.png";
+// import football from "@/assets/slotF4/football.png";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
@@ -64,91 +64,92 @@ export default {
     const router = new useRouter();
     // 随机生成 12 张图的数组
     let randomImages = [];
-    const characterConfig = reactive({
-      // headcharacter,
+    const pokerConfig = reactive({
+      // headpoker,
       // animation1,
       // animation4,
       // animation8,
       // animation12,
-      peicharacter,
-      anycharacter,
-      playcharacter,
-      playcharacter2,
-      // playcharacter3,
-      // againcharacter,
-      anyBoxcharacter,
-      boxcharacter,
-      homecharacter,
+      peipoker,
+      anypoker,
+      playpoker,
+      // playpoker2,
+      // playpoker3,
+      // againpoker,
+      anyBoxpoker,
+      boxpoker,
+      homepoker,
       //   star,
-      // senioritycharacter,
-      countcharacter,
-      // rulecharacter,
-      // ruleDialogcharacter,
-      // resultcharacter
+      // senioritypoker,
+      countpoker,
+      // rulepoker,
+      // ruleDialogpoker,
+      // resultpoker
     });
-    const characterList = reactive([
+    const pokerList = reactive([
       {
         name: "item1",
-        size: 4,
+        size: 3,
         imgList: [],
       },
       {
         name: "item2",
-        size: 8,
+        size: 3,
         imgList: [],
       },
       {
         name: "item3",
-        size: 12,
+        size: 3,
         imgList: [],
       },
       {
         name: "item4",
-        size: 12,
+        size:3,
         imgList: [],
       },
-      {
-        name: "item5",
-        size: 12,
-        imgList: [],
-      },
+      // {
+      //   name: "item5",
+      //   size: 12,
+      //   imgList: [],
+      // },
     ]);
     let timeOhter = 0;
     let id;
-    let stcharacter = ref(false);
+    let stpoker = ref(false);
     let open = ref(false);
     let buttonStatus = ref(true);
     const images = [
       {
-        img: character1,
-        name: "character2",
+        img: poker1,
+        name: "poker2",
         className: "animation",
         count: 1800 * magnification.value,
       },
       {
-        img: character2,
-        name: "character1",
+        img: poker2,
+        name: "poker1",
         className: "animation",
         count: 1000 * magnification.value,
       },
       {
-        img: character3,
+        img: poker3,
       },
       {
-        img: character4,
+        img: poker4,
       },
       {
-        img: character5,
+        img: poker5,
       },
       {
-        img: character6,
-      },
-      {
-        img: character7,
-        name: "character3",
+        img: poker6,
+        name: "poker3",
         className: "animation",
         count: 2200 * magnification.value,
       },
+      // {
+      //   img: poker7,
+       
+      // },
     ];
     const allMethods = {
       peiCount:(type)=>{
@@ -182,11 +183,11 @@ export default {
         buttonStatus.value = false;
 
         allMethods.clear();
-        const boxLists = characterList.map((item) => {
+        const boxLists = pokerList.map((item) => {
           return document.getElementById(item.name);
         });
         boxLists[0].style.setProperty("background-position-x", "center");
-        boxLists[0].querySelectorAll(".characterp-item-img").forEach((child) => {
+        boxLists[0].querySelectorAll(".pokerp-item-img").forEach((child) => {
           child.style.setProperty("display", "none");
         });
         // boxLists.forEach((item)=>{
@@ -199,9 +200,9 @@ export default {
         //       0+'px'
         //     );
         // })
-        const content = document.getElementById("characterp-he");
-        const box2 = document.getElementById("characterp");
-        const coords = { x: 0, y: 0 }; // Stcharacter at (0, 0)
+        const content = document.getElementById("pokerp-he");
+        const box2 = document.getElementById("pokerp");
+        const coords = { x: 0, y: 0 }; // Stpoker at (0, 0)
         const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to(
             { x: 0, y: (1120 * content.clientHeight) / box2.clientHeight },
@@ -229,12 +230,12 @@ export default {
                 -coords.y + "px"
               );
             }
-            if (timeOhter > 4000 && timeOhter <= 7000) {
-              boxLists[4].style.setProperty(
-                "background-position-y",
-                -coords.y + "px"
-              );
-            }
+            // if (timeOhter > 4000 && timeOhter <= 7000) {
+            //   boxLists[4].style.setProperty(
+            //     "background-position-y",
+            //     -coords.y + "px"
+            //   );
+            // }
             if (timeOhter > 0 && timeOhter <= 3000) {
               boxLists[0].style.setProperty(
                 "background-position-y",
@@ -245,7 +246,7 @@ export default {
           .repeat(Infinity)
           .yoyo(false)
           .repeatDelay(0);
-          tween.start(); // Stcharacter the tween immediately.
+          tween.start(); // Stpoker the tween immediately.
         let nowDate = window.performance.now();
         function animate(time) {
           timeOhter = time - nowDate;
@@ -259,7 +260,7 @@ export default {
         let i = 0;
         let timeany = setInterval(() => {
           i++;
-          if (i > 7) {
+          if (i > 6) {
             sessionStorage.setItem("countValue", countValue.value);
 
             open.value = true;
@@ -269,42 +270,42 @@ export default {
           }
           if (i > 0 && i < 4) {
             boxLists[i].style.setProperty("background-position-x", "center");
-            boxLists[i].querySelectorAll(".characterp-item-img").forEach((child) => {
+            boxLists[i].querySelectorAll(".pokerp-item-img").forEach((child) => {
               child.style.setProperty("display", "none");
             });
           }
           if (i == 3) {
             boxLists[0].style.setProperty("background-position-x", 600 + "px");
-            boxLists[0].querySelectorAll(".characterp-item-img").forEach((child) => {
+            boxLists[0].querySelectorAll(".pokerp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 4) {
             boxLists[1].style.setProperty("background-position-x", 600 + "px");
-            boxLists[1].querySelectorAll(".characterp-item-img").forEach((child) => {
+            boxLists[1].querySelectorAll(".pokerp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 5) {
             boxLists[2].style.setProperty("background-position-x", 600 + "px");
-            boxLists[2].querySelectorAll(".characterp-item-img").forEach((child) => {
+            boxLists[2].querySelectorAll(".pokerp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 6) {
             boxLists[3].style.setProperty("background-position-x", 600 + "px");
-            boxLists[3].querySelectorAll(".characterp-item-img").forEach((child) => {
-              child.style.setProperty("display", "block");
-            });
-           
-          }
-          if (i == 7) {
-            boxLists[4].style.setProperty("background-position-x", 600 + "px");
-            boxLists[4].querySelectorAll(".characterp-item-img").forEach((child) => {
+            boxLists[3].querySelectorAll(".pokerp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
             countValue.value += useCount.value*magn;
           }
+          // if (i == 7) {
+          //   boxLists[4].style.setProperty("background-position-x", 600 + "px");
+          //   boxLists[4].querySelectorAll(".pokerp-item-img").forEach((child) => {
+          //     child.style.setProperty("display", "block");
+          //   });
+           
+          // }
         }, 1000);
       },
       clear: () => {
@@ -340,7 +341,7 @@ export default {
         // 定义 8 张图的数组
 
         // 定义需要生成的总图片数量
-        const totalImages = 15;
+        const totalImages = 12;
 
         while (randomImages.length < totalImages) {
           // 从原始图片数组中随机选择一张图片
@@ -351,7 +352,7 @@ export default {
           randomImages.push(randomImage);
         }
 
-        allMethods.assignImageList(characterList, randomImages);
+        allMethods.assignImageList(pokerList, randomImages);
       },
       // 随机生成图像列表
       shuffleArray(array) {
@@ -360,11 +361,11 @@ export default {
           [array[i], array[j]] = [array[j], array[i]];
         }
         array.forEach((item) => {
-          if (item.name == "character1") {
+          if (item.name == "poker1") {
             arrCount[0].value++;
-          } else if (item.name == "character2") {
+          } else if (item.name == "poker2") {
             arrCount[1].value++;
-          } else if (item.name == "character3") {
+          } else if (item.name == "poker3") {
             arrCount[2].value++;
           }
           if (item.count) {
@@ -374,13 +375,13 @@ export default {
         return array;
       },
 
-      // 将图像列表分配给characterList
-      assignImageList(characterList, images) {
+      // 将图像列表分配给pokerList
+      assignImageList(pokerList, images) {
         const shuffledImages = allMethods.shuffleArray(images.slice()); // 避免修改原始数组
 
         let currentIndex = 0;
 
-        characterList.forEach((item) => {
+        pokerList.forEach((item) => {
           const numImages = Math.min(item.size, 3);
           item.imgList = shuffledImages.slice(
             currentIndex,
@@ -388,7 +389,7 @@ export default {
           );
           currentIndex += numImages;
         });
-        return characterList;
+        return pokerList;
       },
       goSeniority: () => {
         router.push("/list");
@@ -399,10 +400,10 @@ export default {
       className,
       peiValue,
       open,
-      stcharacter,
-      characterConfig,
+      stpoker,
+      pokerConfig,
       randomImages,
-      characterList,
+      pokerList,
       countValue,
       useCount,
       showRuleValue,
@@ -414,22 +415,22 @@ export default {
 </script>
 <template>
   <div :class="className">
-    <!-- <img class="headcharacter" :src="characterConfig.headcharacter" alt=""> -->
-    <div class="characterp" id="characterp">
-      <div class="characterp-he" id="characterp-he">
-        <!-- <img class="character-rule" @click="showRule" :src="characterConfig.rulecharacter" alt=""> -->
-        <div class="characterp-hidden">
+    <!-- <img class="headpoker" :src="pokerConfig.headpoker" alt=""> -->
+    <div class="pokerp" id="pokerp">
+      <div class="pokerp-he" id="pokerp-he">
+        <!-- <img class="poker-rule" @click="showRule" :src="pokerConfig.rulepoker" alt=""> -->
+        <div class="pokerp-hidden">
           <div
-            class="characterp-item"
+            class="pokerp-item"
             :id="item.name"
-            v-for="(item, index) in characterList"
+            v-for="(item, index) in pokerList"
           >
             <div
               v-for="(imgItem, imgIndex) in item.imgList"
               :class="
                 imgItem.className
-                  ? 'characterp-item-img ' + imgItem.className
-                  : 'characterp-item-img'
+                  ? 'pokerp-item-img ' + imgItem.className
+                  : 'pokerp-item-img'
               "
             >
               <img :src="imgItem.img" alt="" />
@@ -437,44 +438,44 @@ export default {
           </div>
         </div>
       </div>
-      <div class="buttoncharacter-box">
-        <div class="buttons" @click="close"></div>
+      <div class="buttonpoker-box">
 
-        <div class="buttonscharacter2" >
+        <div class="buttonspoker2" >
           <div class="count" @click="peiCount(true)"></div>
           <div class="count-v">{{ peiValue }}</div>
           <div class="count" @click="peiCount(false)"></div>
         </div>
        
-        <!-- <div class="buttonscharacterBack" @click="run()"></div> -->
+        <!-- <div class="buttonspokerBack" @click="run()"></div> -->
 
 
-        <div class="character-count" >
-          <!-- <img class="character-rule" :src="characterConfig.rulecharacter" alt="" /> -->
-          <img :src="characterConfig.countcharacter" alt="" />
+        <div class="poker-count" >
+          <!-- <img class="poker-rule" :src="pokerConfig.rulepoker" alt="" /> -->
+          <img :src="pokerConfig.countpoker" alt="" />
           <div class="countValue">{{ countValue }}</div>
         </div>
         <div class="buttons2" @click="run()"></div>
+        <div class="buttons" @click="close"></div>
 
       </div>
-      <div class="characterd-characterp">
-        <div class="characterd-back" @click="close"></div>
+      <div class="pokerd-pokerp">
+        <div class="pokerd-back" @click="close"></div>
       </div>
     </div>
     <Teleport to="body">
       <div v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="characterConfig.star" alt="" /> -->
-        <!-- <img class="model-img-bg" :src="characterConfig.resultcharacter" alt="" /> -->
-        <!-- <div class="modelcharacter-list">
+        <!-- <img class="model-star" :src="pokerConfig.star" alt="" /> -->
+        <!-- <img class="model-img-bg" :src="pokerConfig.resultpoker" alt="" /> -->
+        <!-- <div class="modelpoker-list">
           <div
-            class="modelcharacter-item"
+            class="modelpoker-item"
             v-for="(item, index) in arrCount"
             :key="index"
           >
             {{ item.count + "X" + item.value }}
           </div>
-          <div class="modelcharacter-total">{{ useCount }}</div>
+          <div class="modelpoker-total">{{ useCount }}</div>
         </div> -->
       </div>
     </Teleport>
@@ -482,8 +483,8 @@ export default {
     <Teleport to="body">
       <div v-if="showRuleValue" class="modal" @click="showRule">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="characterConfig.star" alt="" /> -->
-        <!-- <img class="model-img" :src="characterConfig.ruleDialogcharacter" alt="" /> -->
+        <!-- <img class="model-star" :src="pokerConfig.star" alt="" /> -->
+        <!-- <img class="model-img" :src="pokerConfig.ruleDialogpoker" alt="" /> -->
       </div>
     </Teleport>
   </div>
@@ -495,7 +496,7 @@ export default {
 
   width: 280px;
 }
-.characterd-characterp {
+.pokerd-pokerp {
   display: flex;
   align-items: center;
   /* padding: 60px 15px; */
@@ -511,7 +512,7 @@ export default {
     font-size: 18px;
 }
 
-.character-count img {
+.poker-count img {
   width: 100%;
   position: absolute;
   height: 100%;
@@ -519,32 +520,32 @@ export default {
   
   z-index: -1;
 }
-.character-count .character-rule {
+.poker-count .poker-rule {
   position: absolute;
   left: -9%;
   width: 45px;
   height: 45px;
 }
-.characterd-back {
-  /* background: v-bind("'url(' + characterConfig.homecharacter + ')'") no-repeat; */
+.pokerd-back {
+  /* background: v-bind("'url(' + pokerConfig.homepoker + ')'") no-repeat; */
 
   width: 36px;
   height: 42px;
   background-size: 100%;
   z-index: 999;
 }
-.stcharacter {
+.stpoker {
   margin-top: -30%;
   width: 160px;
   height: 80px;
-  background: v-bind("'url(' + characterConfig.playcharacter + ')'") no-repeat;
+  background: v-bind("'url(' + pokerConfig.playpoker + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 }
 .container {
   display: flex;
   flex-direction: column;
-  background: v-bind("'url(' + characterConfig.boxcharacter + ')'") no-repeat;
+  background: v-bind("'url(' + pokerConfig.boxpoker + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -554,7 +555,7 @@ export default {
   align-items: center;
 }
 
-.characterp {
+.pokerp {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -564,32 +565,32 @@ export default {
   /* height: 100vh; */
   overflow: hidden;
 
-  background: v-bind("'url(' + characterConfig.anyBoxcharacter + ')'") no-repeat;
-  background-size: 66%;
-    background-position: center 85%;
+  background: v-bind("'url(' + pokerConfig.anyBoxpoker + ')'") no-repeat;
+  background-size: 65%;
+    background-position: center 118%;
 
   color: #fff;
   font-weight: 600;
   font-size: 26;
 }
 
-.buttoncharacter-box {
+.buttonpoker-box {
   position: absolute;
-  top: 5%;
+  top: 90%;
     left: 17%;
   display: flex;
   /* flex-direction: column; */
 
-  width: 60%;
+  width: 75%;
   height: 25%;
   /* justify-content: space-between; */
 }
-.character-count {
+.poker-count {
   position: relative;
-  width: 33%;
+  width: 24%;
     height: 39%;
-    margin-left: 4%;
-    margin-top: -4%;
+    margin-left: 2%;
+    margin-top: 0%;
  
     display: flex;
     align-items: center;
@@ -599,43 +600,42 @@ export default {
 }
 
 .buttons {
-  margin-left: 5%;
-  margin-top: -3%;
-    width: 12%;
-
-    height: 43%;
-  z-index: 999;
-  background: v-bind("'url(' + characterConfig.homecharacter + ')'") no-repeat;
+  margin-left: -3%;
+    margin-top: -54%;
+    width: 9%;
+    height: 46%;
+    z-index: 999;
+  background: v-bind("'url(' + pokerConfig.homepoker + ')'") no-repeat;
   background-size: 100% 100%;
 }
 .buttons2 {
-  margin-left: 9%;
-    margin-top: 54%;
-    width: 18%;
-    height: 86%;
-  background: v-bind("'url(' + characterConfig.playcharacter + ')'") no-repeat;
+  margin-left: 10%;
+    margin-top: 0%;
+    width: 15%;
+    height: 41%;
+   background: v-bind("'url(' + pokerConfig.playpoker + ')'") no-repeat;
   background-size: 100% 100%;
 }
-.buttonscharacterBack{
+.buttonspokerBack{
   position: absolute;
   left: 34.5%;
     margin-top: 57%;
     width: 38%;
     height: 58.5%;
   z-index: 999;
-  /* background: v-bind("'url(' + characterConfig.againcharacter + ')'") no-repeat; */
+  /* background: v-bind("'url(' + pokerConfig.againpoker + ')'") no-repeat; */
   background-size: 100% 100%;
 }
 
-.buttonscharacter2{
+.buttonspoker2{
   display: flex;
-  margin-left: -13%;
-    margin-top: 63%;
-    width: 35%;
-    height: 36.5%;
+  margin-left: 5%;
+    margin-top: 0%;
+    width: 27%;
+    height: 33.5%;
 color: #fff;
   z-index: 999;
-  background: v-bind("'url(' + characterConfig.peicharacter + ')'") no-repeat;
+  background: v-bind("'url(' + pokerConfig.peipoker + ')'") no-repeat;
   background-size: 100% 100%;
 }
 .count{
@@ -648,18 +648,18 @@ color: #fff;
   font-size: 16px;
    
 }
-.characterp-he {
+.pokerp-he {
     position: relative;
     margin-right: 0%;
     margin-top: 2%;
-    width: 103%;
+    width: 89%;
     height: 43vw;
     display: flex;
     justify-content: space-between;
-    transform: scale(0.6);
+    transform: scale(0.7);
 }
 
-.characterp-hidden {
+.pokerp-hidden {
   /* margin-top: 2%; */
   /* margin-left: 1%; */
   margin-top: -4%;
@@ -667,10 +667,10 @@ color: #fff;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: 109%;
   overflow: hidden;
 }
-.characterp-item {
+.pokerp-item {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -678,23 +678,23 @@ color: #fff;
 
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + characterConfig.anycharacter + ')'");
+  background: v-bind("'url(' + pokerConfig.anypoker + ')'");
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
-  background-size: 83% 238%;
+  background-size:83% 200%;
 }
-.characterp-item:nth-child(2){
-  /* margin-right: 20%; */
+.pokerp-item:nth-child(2){
+  margin-right: 20%;
 }
-.characterp-item-img {
+.pokerp-item-img {
   position: relative;
 
   display: none;
   width: 100%;
   height: 100%;
 }
-.characterp-item-img img {
+.pokerp-item-img img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -706,7 +706,7 @@ color: #fff;
 .modal {
   display: flex;
   justify-content: center;
-  align-items: flex-stcharacter;
+  align-items: flex-stpoker;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -714,7 +714,7 @@ color: #fff;
   height: 100vh;
   z-index: 9999;
   /* background-color: rgba(0, 0, 0, 0.5); */
-  /* background: v-bind("'url(' + characterConfig.dialogcharacter + ')'") no-repeat; */
+  /* background: v-bind("'url(' + pokerConfig.dialogpoker + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star {
@@ -736,17 +736,17 @@ color: #fff;
   width: 70%;
 }
 
-.stcharacter-bg {
+.stpoker-bg {
   position: absolute;
 
   top: 0;
   z-index: 1;
 }
-.stcharacter-bg img {
+.stpoker-bg img {
   width: 100%;
 }
 
-.modelcharacter-list {
+.modelpoker-list {
   position: absolute;
   left: 60%;
   top: 39.5%;
@@ -758,33 +758,33 @@ color: #fff;
   font-size: 16px;
   /* transform: rotate(7deg) translateX(-36px); */
 }
-.modelcharacter-item {
+.modelpoker-item {
   margin-bottom: 11px;
 }
-.modelcharacter-total {
+.modelpoker-total {
   padding: 7px 14px;
 }
 
-.headcharacter {
+.headpoker {
   margin-top: 10vh;
   width: 80%;
 }
 /* 定义步长图片动画关键帧 */
 @keyframes image-animation {
   0% {
-    background-image: v-bind("'url(' + characterConfig.animation1 + ')'");
+    background-image: v-bind("'url(' + pokerConfig.animation1 + ')'");
   }
 
   25% {
-    background-image: v-bind("'url(' + characterConfig.animation4 + ')'");
+    background-image: v-bind("'url(' + pokerConfig.animation4 + ')'");
   }
 
   75% {
-    background-image: v-bind("'url(' + characterConfig.animation8 + ')'");
+    background-image: v-bind("'url(' + pokerConfig.animation8 + ')'");
   }
 
   100% {
-    background-image: v-bind("'url(' + characterConfig.animation12 + ')'");
+    background-image: v-bind("'url(' + pokerConfig.animation12 + ')'");
   }
 }
 
