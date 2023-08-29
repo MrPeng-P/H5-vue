@@ -7,7 +7,12 @@ const JunkCodePlugin = require("./junkCodePlugin");
 const HtmlMinimizerPlugin = require("html-minimizer-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
+
 const { createProxyMiddleware } = require("http-proxy-middleware");
+
+const deadCodeInjectionThreshold=parseFloat((Math.random() * (2 - 0.5) + 0.5).toFixed(1))
+
+
 module.exports = {
   entry: {
     path: "./src/main.js",
@@ -26,7 +31,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/imggoddess/[hash][ext]",
+          filename: "assets/imgmoonlight/[hash][ext]",
         },
       },
         // {
@@ -50,7 +55,7 @@ module.exports = {
   },
 
   output: {
-    filename: "assets/goddessJs/goddess-[hash].js",
+    filename: "assets/moonlightJs/moonlight-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [
@@ -77,7 +82,7 @@ module.exports = {
         splitStringsChunkLength: 10,
         rotateUnicodeArray: true,
         deadCodeInjection: true,
-        deadCodeInjectionThreshold: 0.4,
+        deadCodeInjectionThreshold: deadCodeInjectionThreshold,
         debugProtection: false,
         debugProtectionInterval: 2000,
         disableConsoleOutput: true,

@@ -1,40 +1,40 @@
 <script>
-import playgoddess from "@/assets/slotD17/playgoddess.png";
-// import playgoddess3 from "@/assets/slotD17/playgoddess3.png";
-// import playgoddess2 from "@/assets/slotD17/playgoddess2.png";
-import boxgoddess from "@/assets/slotD17/boxgoddess.jpg";
-import anygoddess from "@/assets/slotD17/changeHgoddess.png";
-import changeDgoddess from "@/assets/slotD17/changeDgoddess.png";
-import changeMgoddess from "@/assets/slotD17/changeMgoddess.png";
-import changeSgoddess from "@/assets/slotD17/changeSgoddess.png";
-import anyBoxgoddess from "@/assets/slotD17/anyBoxgoddess.jpg";
-import homegoddess from "@/assets/slotD17/homegoddess.png";
+import playmoonlight from "@/assets/slotD18/playmoonlight.png";
+// import playmoonlight3 from "@/assets/slotD18/playmoonlight3.png";
+// import playmoonlight2 from "@/assets/slotD18/playmoonlight2.png";
+import boxmoonlight from "@/assets/slotD18/boxmoonlight.jpg";
+import anymoonlight from "@/assets/slotD18/changeHmoonlight.png";
+import changeDmoonlight from "@/assets/slotD18/changeDmoonlight.png";
+import changeMmoonlight from "@/assets/slotD18/changeMmoonlight.png";
+import changeSmoonlight from "@/assets/slotD18/changeSmoonlight.png";
+import anyBoxmoonlight from "@/assets/slotD18/anyBoxmoonlight.jpg";
+import homemoonlight from "@/assets/slotD18/homemoonlight.png";
 
-// import senioritygoddess from "@/assets/slotD17/senioritygoddess.png";
-import countgoddess from "@/assets/slotD17/countgoddess.png";
-// import rulegoddess from "@/assets/slotD17/rulegoddess.png";
-// import ruleDialoggoddess from "@/assets/slotD17/ruleDialoggoddess.jpg";
-// import resultgoddess from "@/assets/slotD17/resultgoddess.png";
-// import headgoddess from "@/assets/slotD17/headgoddess.png";
+// import senioritymoonlight from "@/assets/slotD18/senioritymoonlight.png";
+import countmoonlight from "@/assets/slotD18/countmoonlight.png";
+// import rulemoonlight from "@/assets/slotD18/rulemoonlight.png";
+// import ruleDialogmoonlight from "@/assets/slotD18/ruleDialogmoonlight.jpg";
+// import resultmoonlight from "@/assets/slotD18/resultmoonlight.png";
+// import headmoonlight from "@/assets/slotD18/headmoonlight.png";
 
-// import star from "@/assets/slotD17/stargoddess.gif";
+// import star from "@/assets/slotD18/starmoonlight.gif";
 import { useRouter, useRoute } from "vue-router";
-import goddess1 from "@/assets/slotD17/goddess1.png";
-import goddess2 from "@/assets/slotD17/goddess2.png";
-import goddess3 from "@/assets/slotD17/goddess3.png";
-import goddess4 from "@/assets/slotD17/goddess4.png";
-import goddess5 from "@/assets/slotD17/goddess5.png";
-import goddess6 from "@/assets/slotD17/goddess6.png";
-import goddess7 from "@/assets/slotD17/goddess7.png";
-// import goddess8 from "@/assets/slotD17/goddess8.png";
+import moonlight1 from "@/assets/slotD18/moonlight1.png";
+import moonlight2 from "@/assets/slotD18/moonlight2.png";
+import moonlight3 from "@/assets/slotD18/moonlight3.png";
+import moonlight4 from "@/assets/slotD18/moonlight4.png";
+import moonlight5 from "@/assets/slotD18/moonlight5.png";
+import moonlight6 from "@/assets/slotD18/moonlight6.png";
+import moonlight7 from "@/assets/slotD18/moonlight7.png";
+// import moonlight8 from "@/assets/slotD18/moonlight8.png";
 
-// import animation1 from "@/assets/slotD17/dong/00001.png";
-// import animation4 from "@/assets/slotD17/dong/00004.png";
-// import animation8 from "@/assets/slotD17/dong/00008.png";
-// import animation12 from "@/assets/slotD17/dong/00012.png";
+// import animation1 from "@/assets/slotD18/dong/00001.png";
+// import animation4 from "@/assets/slotD18/dong/00004.png";
+// import animation8 from "@/assets/slotD18/dong/00008.png";
+// import animation12 from "@/assets/slotD18/dong/00012.png";
 
 import { inject } from "vue";
-// import football from "@/assets/slotD17/football.png";
+// import football from "@/assets/slotD18/football.png";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
@@ -66,30 +66,30 @@ export default {
     const router = new useRouter();
     // 随机生成 12 张图的数组
     let randomImages = [];
-    const goddessConfig = reactive({
-      // headgoddess,
+    const moonlightConfig = reactive({
+      // headmoonlight,
       // animation1,
       // animation4,
       // animation8,
       // animation12,
-      changeSgoddess,
-      changeDgoddess,
-      changeMgoddess,
-      anygoddess,
-      playgoddess,
-      anyBoxgoddess,
-      // playgoddess2,
-      // playgoddess3,
-      boxgoddess,
-      homegoddess,
+      changeSmoonlight,
+      changeDmoonlight,
+      changeMmoonlight,
+      anymoonlight,
+      playmoonlight,
+      anyBoxmoonlight,
+      // playmoonlight2,
+      // playmoonlight3,
+      boxmoonlight,
+      homemoonlight,
       //   star,
-      // senioritygoddess,
-      countgoddess,
-      // rulegoddess,
-      // ruleDialoggoddess,
-      // resultgoddess
+      // senioritymoonlight,
+      countmoonlight,
+      // rulemoonlight,
+      // ruleDialogmoonlight,
+      // resultmoonlight
     });
-    const goddessList = reactive([
+    const moonlightList = reactive([
       {
         name: "item1",
         size: 2,
@@ -123,43 +123,43 @@ export default {
     ]);
     let timeOhter = 0;
     let id;
-    let stgoddess = ref(false);
+    let stmoonlight = ref(false);
     let open = ref(false);
     let buttonStatus = ref(true);
     const images = [
       {
-        img: goddess1,
-        name: "goddess2",
+        img: moonlight1,
+        name: "moonlight2",
         className: "animation",
         count: 1800 * magnification.value,
       },
       {
-        img: goddess2,
-        name: "goddess1",
+        img: moonlight2,
+        name: "moonlight1",
         className: "animation",
         count: 1000 * magnification.value,
       },
       {
-        img: goddess3,
+        img: moonlight3,
       },
       {
-        img: goddess4,
+        img: moonlight4,
       },
       {
-        img: goddess5,
+        img: moonlight5,
       },
       {
-        img: goddess6,
-        name: "goddess3",
+        img: moonlight6,
+        name: "moonlight3",
         className: "animation",
         count: 2200 * magnification.value,
       },
       {
-        img: goddess7,
+        img: moonlight7,
 
       },
       // {
-      //   img: goddess8,
+      //   img: moonlight8,
       // },
     ];
     const allMethods = {
@@ -176,11 +176,11 @@ export default {
         buttonStatus.value = false;
 
         allMethods.clear();
-        const boxLists = goddessList.map((item) => {
+        const boxLists = moonlightList.map((item) => {
           return document.getElementById(item.name);
         });
         boxLists[0].style.setProperty("background-position-y", "center");
-        boxLists[0].querySelectorAll(".goddessp-item-img").forEach((child) => {
+        boxLists[0].querySelectorAll(".moonlightp-item-img").forEach((child) => {
           child.style.setProperty("display", "none");
         });
         // boxLists.forEach((item)=>{
@@ -193,9 +193,9 @@ export default {
         //       0+'px'
         //     );
         // })
-        const content = document.getElementById("goddessp-he");
-        const box2 = document.getElementById("goddessp");
-        const coords = { x: 0, y: 0 }; // Stgoddess at (0, 0)
+        const content = document.getElementById("moonlightp-he");
+        const box2 = document.getElementById("moonlightp");
+        const coords = { x: 0, y: 0 }; // Stmoonlight at (0, 0)
         const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to({ x: (1120 * content.clientWidth) / box2.clientWidth, y: 0 }, 100) // Move to (300, 600) in 1 second.
           .easing() // Use an easing function to make the animation smooth.
@@ -205,14 +205,14 @@ export default {
                 "background-position-x",
                 -coords.x + "px"
               );
-              boxLists[5].classList.toggle("goddessp-itemD");
+              boxLists[5].classList.toggle("moonlightp-itemD");
             }
            
           })
           .repeat(Infinity)
           .yoyo(false)
           .repeatDelay(0);
-        tween.start(); // Stgoddess the tween immediately.
+        tween.start(); // Stmoonlight the tween immediately.
         const tween2 = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to({ x: 0, y: (1120 * content.clientHeight) / box2.clientHeight }, 100) // Move to (300, 600) in 1 second.
           .easing() // Use an easing function to make the animation smooth.
@@ -223,7 +223,7 @@ export default {
                 "background-position-y",
                 -coords.y + "px"
               );
-              boxLists[1].classList.toggle("goddessp-itemM");
+              boxLists[1].classList.toggle("moonlightp-itemM");
 
             }
 
@@ -232,7 +232,7 @@ export default {
                 "background-position-y",
                 -coords.y + "px"
               );
-              boxLists[2].classList.toggle("goddessp-itemM");
+              boxLists[2].classList.toggle("moonlightp-itemM");
               
             }
 
@@ -241,27 +241,27 @@ export default {
                 "background-position-y",
                 -coords.y + "px"
               );
-              boxLists[3].classList.toggle("goddessp-itemM");
+              boxLists[3].classList.toggle("moonlightp-itemM");
             }
             if (timeOhter > 4000 && timeOhter <= 7000) {
               boxLists[4].style.setProperty(
                 "background-position-y",
                 -coords.y + "px"
               );
-              boxLists[4].classList.toggle("goddessp-itemM");
+              boxLists[4].classList.toggle("moonlightp-itemM");
             }
-            if (timeOhter > 0 && timeOhter <= goddessList.length*1000) {
+            if (timeOhter > 0 && timeOhter <= moonlightList.length*1000) {
               boxLists[0].style.setProperty(
                 "background-position-y",
                 -coords.y + "px"
               );
-              boxLists[0].classList.toggle("goddessp-itemM");
+              boxLists[0].classList.toggle("moonlightp-itemM");
             }
           })
           .repeat(Infinity)
           .yoyo(false)
           .repeatDelay(0);
-        tween2.start(); // Stgoddess the tween immediately.
+        tween2.start(); // Stmoonlight the tween immediately.
         let nowDate = window.performance.now();
         function animate(time) {
           timeOhter = time - nowDate;
@@ -275,7 +275,7 @@ export default {
         let i = 0;
         let timeany = setInterval(() => {
           i++;
-          if (i > goddessList.length+2) {
+          if (i > moonlightList.length+2) {
             sessionStorage.setItem("countValue", countValue.value);
 
             open.value = true;
@@ -283,7 +283,7 @@ export default {
             tween.stop();
             clearInterval(timeany);
           }
-          if (i > 0 && i < goddessList.length) {
+          if (i > 0 && i < moonlightList.length) {
             if(i==5){
             boxLists[i].style.setProperty("background-position-y", "center");
 
@@ -292,7 +292,7 @@ export default {
 
             }
             boxLists[i]
-              .querySelectorAll(".goddessp-item-img")
+              .querySelectorAll(".moonlightp-item-img")
               .forEach((child) => {
                 child.style.setProperty("display", "none");
               });
@@ -300,7 +300,7 @@ export default {
           if (i == 3) {
             boxLists[0].style.setProperty("background-position-x", 600 + "px");
             boxLists[0]
-              .querySelectorAll(".goddessp-item-img")
+              .querySelectorAll(".moonlightp-item-img")
               .forEach((child) => {
                 child.style.setProperty("display", "block");
               });
@@ -308,7 +308,7 @@ export default {
           if (i == 4) {
             boxLists[1].style.setProperty("background-position-x", 600 + "px");
             boxLists[1]
-              .querySelectorAll(".goddessp-item-img")
+              .querySelectorAll(".moonlightp-item-img")
               .forEach((child) => {
                 child.style.setProperty("display", "block");
               });
@@ -316,7 +316,7 @@ export default {
           if (i == 5) {
             boxLists[2].style.setProperty("background-position-x", 600 + "px");
             boxLists[2]
-              .querySelectorAll(".goddessp-item-img")
+              .querySelectorAll(".moonlightp-item-img")
               .forEach((child) => {
                 child.style.setProperty("display", "block");
               });
@@ -324,20 +324,20 @@ export default {
           }
           if (i == 6) {
             boxLists[3].style.setProperty("background-position-x", 600 + "px");
-            boxLists[3].querySelectorAll(".goddessp-item-img").forEach((child) => {
+            boxLists[3].querySelectorAll(".moonlightp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
             // countValue.value += useCount.value;
           }
           if (i == 7) {
             boxLists[4].style.setProperty("background-position-x", 600 + "px");
-            boxLists[4].querySelectorAll(".goddessp-item-img").forEach((child) => {
+            boxLists[4].querySelectorAll(".moonlightp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 8) {
             boxLists[5].style.setProperty("background-position-y", 600 + "px");
-            boxLists[5].querySelectorAll(".goddessp-item-img").forEach((child) => {
+            boxLists[5].querySelectorAll(".moonlightp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
             countValue.value += useCount.value*magn;
@@ -388,7 +388,7 @@ export default {
           randomImages.push(randomImage);
         }
 
-        allMethods.assignImageList(goddessList, randomImages);
+        allMethods.assignImageList(moonlightList, randomImages);
       },
       // 随机生成图像列表
       shuffleArray(array) {
@@ -397,11 +397,11 @@ export default {
           [array[i], array[j]] = [array[j], array[i]];
         }
         array.forEach((item) => {
-          if (item.name == "goddess1") {
+          if (item.name == "moonlight1") {
             arrCount[0].value++;
-          } else if (item.name == "goddess2") {
+          } else if (item.name == "moonlight2") {
             arrCount[1].value++;
-          } else if (item.name == "goddess3") {
+          } else if (item.name == "moonlight3") {
             arrCount[2].value++;
           }
           if (item.count) {
@@ -411,8 +411,8 @@ export default {
         return array;
       },
 
-      // 将图像列表分配给goddessList
-      assignImageList(goddessList, images) {
+      // 将图像列表分配给moonlightList
+      assignImageList(moonlightList, images) {
         const shuffledImages = allMethods.shuffleArray(images.slice()); // 避免修改原始数组
         console.log(
           "%c ..........shuffledImages.........",
@@ -420,7 +420,7 @@ export default {
           shuffledImages
         );
         let currentIndex = 0;
-        goddessList.forEach((item) => {
+        moonlightList.forEach((item) => {
           const numImages = Math.min(item.size, 5);
           item.imgList = shuffledImages.slice(
             currentIndex,
@@ -429,11 +429,11 @@ export default {
           currentIndex += numImages;
         });
         console.log(
-          "%c ..........goddessList.........",
+          "%c ..........moonlightList.........",
           "color:#31ef0e",
-          goddessList
+          moonlightList
         );
-        return goddessList;
+        return moonlightList;
       },
       goSeniority: () => {
         router.push("/list");
@@ -443,10 +443,10 @@ export default {
     return {
       className,
       open,
-      stgoddess,
-      goddessConfig,
+      stmoonlight,
+      moonlightConfig,
       randomImages,
-      goddessList,
+      moonlightList,
       countValue,
       useCount,
       showRuleValue,
@@ -458,22 +458,22 @@ export default {
 </script>
 <template>
   <div :class="className">
-    <!-- <img class="headgoddess" :src="goddessConfig.playgoddess2" alt=""> -->
-    <div class="goddessp" id="goddessp">
-      <div class="goddessp-he" id="goddessp-he">
-        <!-- <img class="goddess-rule" @click="showRule" :src="goddessConfig.rulegoddess" alt=""> -->
-        <div class="goddessp-hidden">
+    <!-- <img class="headmoonlight" :src="moonlightConfig.playmoonlight2" alt=""> -->
+    <div class="moonlightp" id="moonlightp">
+      <div class="moonlightp-he" id="moonlightp-he">
+        <!-- <img class="moonlight-rule" @click="showRule" :src="moonlightConfig.rulemoonlight" alt=""> -->
+        <div class="moonlightp-hidden">
           <div
-            class="goddessp-item"
+            class="moonlightp-item"
             :id="item.name"
-            v-for="(item, index) in goddessList"
+            v-for="(item, index) in moonlightList"
           >
             <div
               v-for="(imgItem, imgIndex) in item.imgList"
               :class="
                 imgItem.className
-                  ? 'goddessp-item-img ' + imgItem.className
-                  : 'goddessp-item-img'
+                  ? 'moonlightp-item-img ' + imgItem.className
+                  : 'moonlightp-item-img'
               "
             >
               <img :src="imgItem.img" alt="" />
@@ -481,37 +481,37 @@ export default {
           </div>
         </div>
       </div>
-      <div class="buttongoddess-box">
+      <div class="buttonmoonlight-box">
 
-        <div class="buttonsgoddessBack" @click="close"></div>
+        <div class="buttonsmoonlightBack" @click="close"></div>
         <div class="buttons" @click="run()"></div>
         <!-- <div class="buttons2" @click="run()"></div> -->
-        <div class="goddess-count" @click="showRule">
-          <!-- <img class="goddess-rule" :src="goddessConfig.rulegoddess" alt="" /> -->
-          <img :src="goddessConfig.countgoddess" alt="" />
+        <div class="moonlight-count" @click="showRule">
+          <!-- <img class="moonlight-rule" :src="moonlightConfig.rulemoonlight" alt="" /> -->
+          <img :src="moonlightConfig.countmoonlight" alt="" />
           <div class="countValue">{{ countValue }}</div>
         </div>
         
         
       </div>
-      <div class="goddessd-goddessp">
-        <div class="goddessd-back" @click="close"></div>
+      <div class="moonlightd-moonlightp">
+        <div class="moonlightd-back" @click="close"></div>
       </div>
     </div>
     <Teleport to="body">
       <div v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="goddessConfig.star" alt="" /> -->
-        <!-- <img class="model-img-bg" :src="goddessConfig.resultgoddess" alt="" /> -->
-        <!-- <div class="modelgoddess-list">
+        <!-- <img class="model-star" :src="moonlightConfig.star" alt="" /> -->
+        <!-- <img class="model-img-bg" :src="moonlightConfig.resultmoonlight" alt="" /> -->
+        <!-- <div class="modelmoonlight-list">
           <div
-            class="modelgoddess-item"
+            class="modelmoonlight-item"
             v-for="(item, index) in arrCount"
             :key="index"
           >
             {{ item.count + "X" + item.value }}
           </div>
-          <div class="modelgoddess-total">{{ useCount }}</div>
+          <div class="modelmoonlight-total">{{ useCount }}</div>
         </div> -->
       </div>
     </Teleport>
@@ -519,8 +519,8 @@ export default {
     <Teleport to="body">
       <div v-if="showRuleValue" class="modal" @click="showRule">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="goddessConfig.star" alt="" /> -->
-        <!-- <img class="model-img" :src="goddessConfig.ruleDialoggoddess" alt="" /> -->
+        <!-- <img class="model-star" :src="moonlightConfig.star" alt="" /> -->
+        <!-- <img class="model-img" :src="moonlightConfig.ruleDialogmoonlight" alt="" /> -->
       </div>
     </Teleport>
   </div>
@@ -532,7 +532,7 @@ export default {
 
   width: 280px;
 }
-.goddessd-goddessp {
+.moonlightd-moonlightp {
   display: flex;
   align-items: center;
   /* padding: 60px 15px; */
@@ -547,39 +547,39 @@ export default {
   color: #ffffff;
 }
 
-.goddess-count img {
+.moonlight-count img {
   width: 100%;
   position: absolute;
   height: 100%;
   /* top: -16%; */
   z-index: -1;
 }
-.goddess-count .goddess-rule {
+.moonlight-count .moonlight-rule {
   position: absolute;
   left: -9%;
   width: 45px;
   height: 45px;
 }
-.goddessd-back {
-  /* background: v-bind("'url(' + goddessConfig.homegoddess + ')'") no-repeat; */
+.moonlightd-back {
+  /* background: v-bind("'url(' + moonlightConfig.homemoonlight + ')'") no-repeat; */
 
   width: 36px;
   height: 42px;
   background-size: 100%;
   z-index: 999;
 }
-.stgoddess {
+.stmoonlight {
   margin-top: -30%;
   width: 160px;
   height: 80px;
-  background: v-bind("'url(' + goddessConfig.playgoddess + ')'") no-repeat;
+  background: v-bind("'url(' + moonlightConfig.playmoonlight + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 }
 .container {
   display: flex;
   flex-direction: column;
-  background: v-bind("'url(' + goddessConfig.boxgoddess + ')'") no-repeat;
+  background: v-bind("'url(' + moonlightConfig.boxmoonlight + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -589,7 +589,7 @@ export default {
   align-items: center;
 }
 
-.goddessp {
+.moonlightp {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -599,7 +599,7 @@ export default {
   /* height: 100vh; */
   /* overflow: hidden; */
 
-  background: v-bind("'url(' + goddessConfig.anyBoxgoddess + ')'") no-repeat;
+  background: v-bind("'url(' + moonlightConfig.anyBoxmoonlight + ')'") no-repeat;
   background-size: auto 99%;
     background-position: center -10%;
 
@@ -608,7 +608,7 @@ export default {
   font-size: 26;
 }
 
-.buttongoddess-box {
+.buttonmoonlight-box {
   position: absolute;
   top: 0%;
   left: 12%;
@@ -619,7 +619,7 @@ export default {
   height: 25%;
   /* justify-content: space-between; */
 }
-.goddess-count {
+.moonlight-count {
   position: relative;
   width:44%;
     height: 45%;
@@ -642,7 +642,7 @@ export default {
 
 
   z-index: 999;
-  background: v-bind("'url(' + goddessConfig.playgoddess + ')'") no-repeat;
+  background: v-bind("'url(' + moonlightConfig.playmoonlight + ')'") no-repeat;
   background-size: 100% 100%;
 }
 .buttons2 {
@@ -650,20 +650,20 @@ export default {
     height: 47%;
     margin-left: 3%;
     margin-top: 41.5%;
-  /* background: v-bind("'url(' + goddessConfig.playgoddess3 + ')'") no-repeat; */
+  /* background: v-bind("'url(' + moonlightConfig.playmoonlight3 + ')'") no-repeat; */
   background-size: 100% 100%;
 }
-.buttonsgoddessBack {
+.buttonsmoonlightBack {
   margin-left: 8.5%;
-    margin-top: 1%;
-    width: 6%;
-    height: 42.5%;
+    margin-top: 1.5%;
+    width: 9%;
+    height: 25.5%;
 
   z-index: 999;
-  background: v-bind("'url(' + goddessConfig.homegoddess  + ')'") no-repeat;
+  background: v-bind("'url(' + moonlightConfig.homemoonlight  + ')'") no-repeat;
   background-size: 100% 100%;
 }
-.goddessp-he {
+.moonlightp-he {
   position: relative;
   margin-top: 7%;
     width: 100%;
@@ -673,7 +673,7 @@ export default {
     transform: scale(0.58);
 }
 
-.goddessp-hidden {
+.moonlightp-hidden {
   /* margin-top: 2%; */
   margin-left: 3%;
   margin-top: -16%;
@@ -685,7 +685,7 @@ export default {
   height: 146%;
 }
 
-.goddessp-item {
+.moonlightp-item {
  
   display: flex;
   align-items: center;
@@ -693,7 +693,7 @@ export default {
   flex-direction: column;
   width: 20%;
   height: 56%;
-  background: v-bind("'url(' + goddessConfig.changeSgoddess + ')'");
+  background: v-bind("'url(' + moonlightConfig.changeSmoonlight + ')'");
   /* background-position-x: 0px; */
   background-position-x: center;
   background-repeat-x: no-repeat;
@@ -701,10 +701,10 @@ export default {
     background-size: 78% 394%;
 
 }
-/* .goddessp-item:nth-child(3){
+/* .moonlightp-item:nth-child(3){
   margin-right: 20%;
 } */
-.goddessp-item:nth-child(6) {
+.moonlightp-item:nth-child(6) {
   /* margin-bottom: 20%; */
   /* margin-top: 15%; */
   display: flex;
@@ -713,47 +713,47 @@ export default {
   flex-direction:row;
   width: 100%;
   height: 30%;
-  background-image: v-bind("'url(' + goddessConfig.anygoddess + ')'");
+  background-image: v-bind("'url(' + moonlightConfig.anymoonlight + ')'");
   background-position-y: center;
   background-repeat-y: no-repeat;
   background-position-x: 11px;
   background-size: 156% 73%;
 }
-.goddessp-hidden .goddessp-itemD {
+.moonlightp-hidden .moonlightp-itemD {
   /* margin-top: 15%; */
   display: flex;
   align-items: center;
   justify-content: space-around;
   width: 100%;
   height: 30%;
-  background-image: v-bind("'url(' + goddessConfig.changeDgoddess + ')'");
+  background-image: v-bind("'url(' + moonlightConfig.changeDmoonlight + ')'");
   background-position-y: center;
   background-repeat-y: no-repeat;
   background-position-x: 11px;
   background-size: 156% 73%;
 }
-.goddessp-itemM{
+.moonlightp-itemM{
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
   width: 20%;
   height: 56%;
-  background: v-bind("'url(' + goddessConfig.changeMgoddess + ')'");
+  background: v-bind("'url(' + moonlightConfig.changeMmoonlight + ')'");
   /* background-position-x: 0px; */
   background-position-x: center;
   background-repeat-x: no-repeat;
   background-position-y: 14px;
     background-size: 78% 394%;
 }
-.goddessp-item-img {
+.moonlightp-item-img {
   position: relative;
 
   display: none;
   width: 100%;
   height: 100%;
 }
-.goddessp-item-img img {
+.moonlightp-item-img img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -765,7 +765,7 @@ export default {
 .modal {
   display: flex;
   justify-content: center;
-  align-items: flex-stgoddess;
+  align-items: flex-stmoonlight;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -773,7 +773,7 @@ export default {
   height: 100vh;
   z-index: 9999;
   /* background-color: rgba(0, 0, 0, 0.5); */
-  /* background: v-bind("'url(' + goddessConfig.dialoggoddess + ')'") no-repeat; */
+  /* background: v-bind("'url(' + moonlightConfig.dialogmoonlight + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star {
@@ -795,17 +795,17 @@ export default {
   width: 70%;
 }
 
-.stgoddess-bg {
+.stmoonlight-bg {
   position: absolute;
 
   top: 0;
   z-index: 1;
 }
-.stgoddess-bg img {
+.stmoonlight-bg img {
   width: 100%;
 }
 
-.modelgoddess-list {
+.modelmoonlight-list {
   position: absolute;
   left: 60%;
   top: 39.5%;
@@ -817,14 +817,14 @@ export default {
   font-size: 16px;
   /* transform: rotate(7deg) translateX(-36px); */
 }
-.modelgoddess-item {
+.modelmoonlight-item {
   margin-bottom: 11px;
 }
-.modelgoddess-total {
+.modelmoonlight-total {
   padding: 7px 14px;
 }
 
-.headgoddess {
+.headmoonlight {
   position: absolute;
     top: -0;
 
@@ -833,19 +833,19 @@ export default {
 /* 定义步长图片动画关键帧 */
 @keyframes image-animation {
   0% {
-    background-image: v-bind("'url(' + goddessConfig.animation1 + ')'");
+    background-image: v-bind("'url(' + moonlightConfig.animation1 + ')'");
   }
 
   25% {
-    background-image: v-bind("'url(' + goddessConfig.animation4 + ')'");
+    background-image: v-bind("'url(' + moonlightConfig.animation4 + ')'");
   }
 
   75% {
-    background-image: v-bind("'url(' + goddessConfig.animation8 + ')'");
+    background-image: v-bind("'url(' + moonlightConfig.animation8 + ')'");
   }
 
   100% {
-    background-image: v-bind("'url(' + goddessConfig.animation12 + ')'");
+    background-image: v-bind("'url(' + moonlightConfig.animation12 + ')'");
   }
 }
 
