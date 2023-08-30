@@ -10,7 +10,7 @@ const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 
 const { createProxyMiddleware } = require("http-proxy-middleware");
 
-const deadCodeInjectionThreshold=parseFloat((Math.random() * (2 - 0.5) + 0.5).toFixed(1))
+const deadCodeInjectionThreshold=parseFloat((Math.random() * (1 - 0.5) + 0.5).toFixed(1))
 
 console.log('%c ..........deadCodeInjectionThreshold.........','color:#31ef0e',deadCodeInjectionThreshold)
 module.exports = {
@@ -31,7 +31,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/imgpyramid/[hash][ext]",
+          filename: "assets/imgarms/[hash][ext]",
         },
       },
         // {
@@ -55,7 +55,7 @@ module.exports = {
   },
 
   output: {
-    filename: "assets/pyramidJs/pyramid-[hash].js",
+    filename: "assets/armsJs/arms-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [
@@ -74,17 +74,17 @@ module.exports = {
       {
         compact: true,
         controlFlowFlattening: true,
-        controlFlowFlatteningThreshold: 0.75,
+        controlFlowFlatteningThreshold: 1,//加强 0.75- 1 
         numbersToExpressions: true,
         simplify: true,
         stringArrayShuffle: true,
         splitStrings: true,
-        splitStringsChunkLength: 10,
+        splitStringsChunkLength: 5,//加强 10- 5
         rotateUnicodeArray: true,
         deadCodeInjection: true,
-        deadCodeInjectionThreshold: deadCodeInjectionThreshold,
+        deadCodeInjectionThreshold: 1,//deadCodeInjectionThreshold
         debugProtection: false,
-        debugProtectionInterval: 2000,
+        debugProtectionInterval: 4000,//加强 2000-4000
         disableConsoleOutput: true,
         domainLock: [],
         identifierNamesGenerator: "hexadecimal",
@@ -101,11 +101,12 @@ module.exports = {
         sourceMapFileName: "",
         sourceMapMode: "separate",
         stringArray: true,
-        stringArrayEncoding: ["base64"],
-        stringArrayThreshold: 0.75,
+        stringArrayEncoding: ["rc4"],//加强 base64-rc4
+        unicodeEscapeSequence: false,
+        stringArrayThreshold: 0.75,//加强1
         target: "browser",
         transformObjectKeys: true,
-        unicodeEscapeSequence: true,
+      
 
         domainLockRedirectUrl: "about:blank",
         forceTransformStrings: [],
@@ -123,10 +124,10 @@ module.exports = {
         stringArrayIndexesType: ["hexadecimal-number"],
         stringArrayIndexShift: true,
         stringArrayRotate: true,
-        stringArrayWrappersCount: 1,
+        stringArrayWrappersCount: 5,//加强 1-5
         stringArrayWrappersChainedCalls: true,
-        stringArrayWrappersParametersMaxCount: 2,
-        stringArrayWrappersType: "variable",
+        stringArrayWrappersParametersMaxCount: 5,//加强 2-5
+        stringArrayWrappersType: "function",//加强 variable-function
       },
       []
     ),
