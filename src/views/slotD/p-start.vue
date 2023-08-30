@@ -1,7 +1,7 @@
 <script>
 
-// import playmoonlight from "@/assets/slotD18/playmoonlight2.png";
-import boxmoonlight from "@/assets/slotD18/boxmoonlight.jpg";
+// import playpyramid from "@/assets/slotD19/playpyramid2.png";
+import boxpyramid from "@/assets/slotD19/boxpyramid.jpg";
 import { onMounted, reactive, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
@@ -9,9 +9,9 @@ export default {
   setup() {
     const router = new useRouter();
     const className = "container";
-    const moonlightConfig = reactive({
-      // playmoonlight,
-      boxmoonlight,
+    const pyramidConfig = reactive({
+      // playpyramid,
+      boxpyramid,
     });
    
 
@@ -25,7 +25,7 @@ export default {
     });
     return {
         className,
-      moonlightConfig,
+      pyramidConfig,
       ...allMethods,
     };
   },
@@ -34,7 +34,7 @@ export default {
 <template>
   
   <div :class="className" @click="goHome">
-    <div class="stmoonlight" >
+    <div class="stpyramid" >
     </div>
   </div>
 </template>
@@ -42,18 +42,18 @@ export default {
 <style scoped>
 
 
-.stmoonlight{
+.stpyramid{
   margin-top: -2%;
     width: 36%;
 
     height: 252px;
-  /* background: v-bind("'url(' + moonlightConfig.playmoonlight + ')'") no-repeat; */
+  /* background: v-bind("'url(' + pyramidConfig.playpyramid + ')'") no-repeat; */
   background-size: 100%;
   z-index: 99;
 
 }        
 .container {
-  background: v-bind("'url(' + moonlightConfig.boxmoonlight + ')'") no-repeat;
+  background: v-bind("'url(' + pyramidConfig.boxpyramid + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -64,7 +64,7 @@ export default {
 }
 
 
-.moonlightp-he {
+.pyramidp-he {
   position: relative;
     margin-top: 26%;
     width: 140%;
@@ -73,7 +73,7 @@ export default {
     justify-content: space-between;
     transform: scale(0.65);
 }
-.moonlightp-hidden{
+.pyramidp-hidden{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -82,11 +82,11 @@ export default {
   overflow: hidden;
 
 }
-.moonlightp-item {
+.pyramidp-item {
   
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + moonlightConfig.anymoonlight + ')'") ;
+  background: v-bind("'url(' + pyramidConfig.anypyramid + ')'") ;
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
@@ -96,7 +96,7 @@ export default {
   padding-top: 155px;
     display: flex;
     justify-content: center;
-    align-items: flex-stmoonlight;
+    align-items: flex-stpyramid;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -104,7 +104,7 @@ export default {
     height: 100vh;
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.5);
-  /* background: v-bind("'url(' + moonlightConfig.dialogmoonlight + ')'") no-repeat; */
+  /* background: v-bind("'url(' + pyramidConfig.dialogpyramid + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star{
@@ -116,12 +116,12 @@ export default {
 
 }
 
-.stmoonlight-bg{
+.stpyramid-bg{
     position: absolute;
     top: 0;
     z-index: 1;
 }
-.stmoonlight-bg img{
+.stpyramid-bg img{
     width: 100%;
 }
 </style>

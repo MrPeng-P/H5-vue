@@ -31,7 +31,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/imgpoker/[hash][ext]",
+          filename: "assets/imgpyramid/[hash][ext]",
         },
       },
         // {
@@ -55,7 +55,7 @@ module.exports = {
   },
 
   output: {
-    filename: "assets/pokerJs/poker-[hash].js",
+    filename: "assets/pyramidJs/pyramid-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [
