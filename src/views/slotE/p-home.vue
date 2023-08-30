@@ -1,35 +1,35 @@
 <script>
-import playwakeup from "@/assets/slotE1/playwakeup.png";
-// import playwakeup2 from "@/assets/slotE1/playwakeup2.png";
-// import playwakeup3 from "@/assets/slotE1/playwakeup3.png";
-import boxwakeup from "@/assets/slotE1/boxwakeup.jpg";
-import anywakeup from "@/assets/slotE1/changeHwakeup.png";
-import anyBoxwakeup from "@/assets/slotE1/anyBoxwakeup.jpg";
-import homewakeup from "@/assets/slotE1/homewakeup.png";
-// import againwakeup from "@/assets/slotE1/againwakeup.png";
-import countwakeup from "@/assets/slotE1/countwakeup.png";
-// import rulewakeup from "@/assets/slotE1/rulewakeup.png";
-// import ruleDialogwakeup from "@/assets/slotE1/ruleDialogwakeup.jpg";
-// import resultwakeup from "@/assets/slotE1/resultwakeup.png";
-// import headwakeup from "@/assets/slotE1/headwakeup.png";
+import playEgypt from "@/assets/slotE2/playEgypt.png";
+// import playEgypt2 from "@/assets/slotE2/playEgypt2.png";
+// import playEgypt3 from "@/assets/slotE2/playEgypt3.png";
+import boxEgypt from "@/assets/slotE2/boxEgypt.jpg";
+import anyEgypt from "@/assets/slotE2/changeHEgypt.png";
+import anyBoxEgypt from "@/assets/slotE2/anyBoxEgypt.jpg";
+import homeEgypt from "@/assets/slotE2/homeEgypt.png";
+// import againEgypt from "@/assets/slotE2/againEgypt.png";
+import countEgypt from "@/assets/slotE2/countEgypt.png";
+// import ruleEgypt from "@/assets/slotE2/ruleEgypt.png";
+// import ruleDialogEgypt from "@/assets/slotE2/ruleDialogEgypt.jpg";
+// import resultEgypt from "@/assets/slotE2/resultEgypt.png";
+// import headEgypt from "@/assets/slotE2/headEgypt.png";
 
-// import star from "@/assets/slotE1/starwakeup.gif";
+// import star from "@/assets/slotE2/starEgypt.gif";
 import { useRouter, useRoute } from "vue-router";
-import wakeup1 from "@/assets/slotE1/wakeup1.png";
-import wakeup2 from "@/assets/slotE1/wakeup2.png";
-import wakeup3 from "@/assets/slotE1/wakeup3.png";
-import wakeup4 from "@/assets/slotE1/wakeup4.png";
-import wakeup5 from "@/assets/slotE1/wakeup5.png";
-import wakeup6 from "@/assets/slotE1/wakeup6.png";
-import wakeup7 from "@/assets/slotE1/wakeup7.png";
+import Egypt1 from "@/assets/slotE2/Egypt1.png";
+import Egypt2 from "@/assets/slotE2/Egypt2.png";
+import Egypt3 from "@/assets/slotE2/Egypt3.png";
+import Egypt4 from "@/assets/slotE2/Egypt4.png";
+import Egypt5 from "@/assets/slotE2/Egypt5.png";
+import Egypt6 from "@/assets/slotE2/Egypt6.png";
+import Egypt7 from "@/assets/slotE2/Egypt7.png";
 
-// import animation1 from "@/assets/slotE1/dong/00001.png";
-// import animation4 from "@/assets/slotE1/dong/00004.png";
-// import animation8 from "@/assets/slotE1/dong/00008.png";
-// import animation12 from "@/assets/slotE1/dong/00012.png";
+// import animation1 from "@/assets/slotE2/dong/00001.png";
+// import animation4 from "@/assets/slotE2/dong/00004.png";
+// import animation8 from "@/assets/slotE2/dong/00008.png";
+// import animation12 from "@/assets/slotE2/dong/00012.png";
 
 import { inject } from "vue";
-// import football from "@/assets/slotE1/football.png";
+// import football from "@/assets/slotE2/football.png";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
@@ -61,28 +61,28 @@ export default {
     const router = new useRouter();
     // 随机生成 12 张图的数组
     let randomImages = [];
-    const wakeupConfig = reactive({
-      // headwakeup,
+    const EgyptConfig = reactive({
+      // headEgypt,
       // animation1,
       // animation4,
       // animation8,
       // animation12,
-      anywakeup,
-      playwakeup,
-      // playwakeup2,
-      // playwakeup3,
-      // againwakeup,
-      anyBoxwakeup,
-      boxwakeup,
-      homewakeup,
+      anyEgypt,
+      playEgypt,
+      // playEgypt2,
+      // playEgypt3,
+      // againEgypt,
+      anyBoxEgypt,
+      boxEgypt,
+      homeEgypt,
       //   star,
-      // senioritywakeup,
-      countwakeup,
-      // rulewakeup,
-      // ruleDialogwakeup,
-      // resultwakeup
+      // seniorityEgypt,
+      countEgypt,
+      // ruleEgypt,
+      // ruleDialogEgypt,
+      // resultEgypt
     });
-    const wakeupList = reactive([
+    const EgyptList = reactive([
       {
         name: "item1",
         size: 1,
@@ -111,37 +111,37 @@ export default {
     ]);
     let timeOhter = 0;
     let id;
-    let stwakeup = ref(false);
+    let stEgypt = ref(false);
     let open = ref(false);
     let buttonStatus = ref(true);
     const images = [
       {
-        img: wakeup1,
-        name: "wakeup2",
+        img: Egypt1,
+        name: "Egypt2",
         className: "animation",
         count: 1800 * magnification.value,
       },
       {
-        img: wakeup2,
-        name: "wakeup1",
+        img: Egypt2,
+        name: "Egypt1",
         className: "animation",
         count: 1000 * magnification.value,
       },
       {
-        img: wakeup3,
+        img: Egypt3,
       },
       {
-        img: wakeup4,
+        img: Egypt4,
       },
       {
-        img: wakeup5,
+        img: Egypt5,
       },
       {
-        img: wakeup6,
+        img: Egypt6,
       },
       {
-        img: wakeup7,
-        name: "wakeup3",
+        img: Egypt7,
+        name: "Egypt3",
         className: "animation",
         count: 2200 * magnification.value,
       },
@@ -160,11 +160,11 @@ export default {
         buttonStatus.value = false;
 
         allMethods.clear();
-        const boxLists = wakeupList.map((item) => {
+        const boxLists = EgyptList.map((item) => {
           return document.getElementById(item.name);
         });
         boxLists[0].style.setProperty("background-position-x", "center");
-        boxLists[0].querySelectorAll(".wakeupp-item-img").forEach((child) => {
+        boxLists[0].querySelectorAll(".Egyptp-item-img").forEach((child) => {
           child.style.setProperty("display", "none");
         });
         // boxLists.forEach((item)=>{
@@ -177,9 +177,9 @@ export default {
         //       0+'px'
         //     );
         // })
-        const content = document.getElementById("wakeupp-he");
-        const box2 = document.getElementById("wakeupp");
-        const coords = { x: 0, y: 0 }; // Stwakeup at (0, 0)
+        const content = document.getElementById("Egyptp-he");
+        const box2 = document.getElementById("Egyptp");
+        const coords = { x: 0, y: 0 }; // StEgypt at (0, 0)
         const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to(
             { x: 0, y: (1120 * content.clientHeight) / box2.clientHeight },
@@ -223,7 +223,7 @@ export default {
           .repeat(Infinity)
           .yoyo(false)
           .repeatDelay(0);
-          tween.start(); // Stwakeup the tween immediately.
+          tween.start(); // StEgypt the tween immediately.
         let nowDate = window.performance.now();
         function animate(time) {
           timeOhter = time - nowDate;
@@ -247,38 +247,38 @@ export default {
           }
           if (i > 0 && i < 4) {
             boxLists[i].style.setProperty("background-position-x", "center");
-            boxLists[i].querySelectorAll(".wakeupp-item-img").forEach((child) => {
+            boxLists[i].querySelectorAll(".Egyptp-item-img").forEach((child) => {
               child.style.setProperty("display", "none");
             });
           }
           if (i == 3) {
             boxLists[0].style.setProperty("background-position-x", 600 + "px");
-            boxLists[0].querySelectorAll(".wakeupp-item-img").forEach((child) => {
+            boxLists[0].querySelectorAll(".Egyptp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 4) {
             boxLists[1].style.setProperty("background-position-x", 600 + "px");
-            boxLists[1].querySelectorAll(".wakeupp-item-img").forEach((child) => {
+            boxLists[1].querySelectorAll(".Egyptp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 5) {
             boxLists[2].style.setProperty("background-position-x", 600 + "px");
-            boxLists[2].querySelectorAll(".wakeupp-item-img").forEach((child) => {
+            boxLists[2].querySelectorAll(".Egyptp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 6) {
             boxLists[3].style.setProperty("background-position-x", 600 + "px");
-            boxLists[3].querySelectorAll(".wakeupp-item-img").forEach((child) => {
+            boxLists[3].querySelectorAll(".Egyptp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
             // countValue.value += useCount.value*magn;
           }
           if (i == 7) {
             boxLists[4].style.setProperty("background-position-x", 600 + "px");
-            boxLists[4].querySelectorAll(".wakeupp-item-img").forEach((child) => {
+            boxLists[4].querySelectorAll(".Egyptp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
             countValue.value += useCount.value*magn;
@@ -329,7 +329,7 @@ export default {
           randomImages.push(randomImage);
         }
 
-        allMethods.assignImageList(wakeupList, randomImages);
+        allMethods.assignImageList(EgyptList, randomImages);
       },
       // 随机生成图像列表
       shuffleArray(array) {
@@ -338,11 +338,11 @@ export default {
           [array[i], array[j]] = [array[j], array[i]];
         }
         array.forEach((item) => {
-          if (item.name == "wakeup1") {
+          if (item.name == "Egypt1") {
             arrCount[0].value++;
-          } else if (item.name == "wakeup2") {
+          } else if (item.name == "Egypt2") {
             arrCount[1].value++;
-          } else if (item.name == "wakeup3") {
+          } else if (item.name == "Egypt3") {
             arrCount[2].value++;
           }
           if (item.count) {
@@ -352,13 +352,13 @@ export default {
         return array;
       },
 
-      // 将图像列表分配给wakeupList
-      assignImageList(wakeupList, images) {
+      // 将图像列表分配给EgyptList
+      assignImageList(EgyptList, images) {
         const shuffledImages = allMethods.shuffleArray(images.slice()); // 避免修改原始数组
 
         let currentIndex = 0;
 
-        wakeupList.forEach((item) => {
+        EgyptList.forEach((item) => {
           const numImages = Math.min(item.size, 5);
           item.imgList = shuffledImages.slice(
             currentIndex,
@@ -366,7 +366,7 @@ export default {
           );
           currentIndex += numImages;
         });
-        return wakeupList;
+        return EgyptList;
       },
       goSeniority: () => {
         router.push("/list");
@@ -376,10 +376,10 @@ export default {
     return {
       className,
       open,
-      stwakeup,
-      wakeupConfig,
+      stEgypt,
+      EgyptConfig,
       randomImages,
-      wakeupList,
+      EgyptList,
       countValue,
       useCount,
       showRuleValue,
@@ -391,23 +391,23 @@ export default {
 </script>
 <template>
   <div :class="className">
-    <!-- <img class="headwakeup" :src="wakeupConfig.headwakeup" alt=""> -->
-    <div class="wakeupp" id="wakeupp">
-      <div class="wakeupp-he" id="wakeupp-he">
-        <!-- <img class="wakeup-rule" @click="showRule" :src="wakeupConfig.rulewakeup" alt=""> -->
-        <div class="wakeupp-hidden">
+    <!-- <img class="headEgypt" :src="EgyptConfig.headEgypt" alt=""> -->
+    <div class="Egyptp" id="Egyptp">
+      <div class="Egyptp-he" id="Egyptp-he">
+        <!-- <img class="Egypt-rule" @click="showRule" :src="EgyptConfig.ruleEgypt" alt=""> -->
+        <div class="Egyptp-hidden">
           <div
-            class="wakeupp-item-box"
+            class="Egyptp-item-box"
            
-            v-for="(item, index) in wakeupList"
+            v-for="(item, index) in EgyptList"
           >
-           <div class="wakeupp-item"  :id="item.name">
+           <div class="Egyptp-item"  :id="item.name">
             <div
               v-for="(imgItem, imgIndex) in item.imgList"
               :class="
                 imgItem.className
-                  ? 'wakeupp-item-img ' + imgItem.className
-                  : 'wakeupp-item-img'
+                  ? 'Egyptp-item-img ' + imgItem.className
+                  : 'Egyptp-item-img'
               "
             >
               <img :src="imgItem.img" alt="" />
@@ -416,39 +416,39 @@ export default {
           </div>
         </div>
       </div>
-      <div class="buttonwakeup-box">
+      <div class="buttonEgypt-box">
         <div class="buttons" @click="close"></div>
 
-        <div class="buttonswakeup2" @click="run()"></div>
+        <div class="buttonsEgypt2" @click="run()"></div>
        
-        <div class="buttonswakeupBack" @click="run()"></div>
+        <div class="buttonsEgyptBack" @click="run()"></div>
 
         <!-- <div class="buttons2" @click="goSeniority"></div> -->
 
-        <div class="wakeup-count" @click="showRule">
-          <!-- <img class="wakeup-rule" :src="wakeupConfig.rulewakeup" alt="" /> -->
-          <img :src="wakeupConfig.countwakeup" alt="" />
+        <div class="Egypt-count" @click="showRule">
+          <!-- <img class="Egypt-rule" :src="EgyptConfig.ruleEgypt" alt="" /> -->
+          <img :src="EgyptConfig.countEgypt" alt="" />
           <div class="countValue">{{ countValue }}</div>
         </div>
       </div>
-      <div class="wakeupd-wakeupp">
-        <div class="wakeupd-back" @click="close"></div>
+      <div class="Egyptd-Egyptp">
+        <div class="Egyptd-back" @click="close"></div>
       </div>
     </div>
     <Teleport to="body">
       <div v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="wakeupConfig.star" alt="" /> -->
-        <!-- <img class="model-img-bg" :src="wakeupConfig.resultwakeup" alt="" /> -->
-        <!-- <div class="modelwakeup-list">
+        <!-- <img class="model-star" :src="EgyptConfig.star" alt="" /> -->
+        <!-- <img class="model-img-bg" :src="EgyptConfig.resultEgypt" alt="" /> -->
+        <!-- <div class="modelEgypt-list">
           <div
-            class="modelwakeup-item"
+            class="modelEgypt-item"
             v-for="(item, index) in arrCount"
             :key="index"
           >
             {{ item.count + "X" + item.value }}
           </div>
-          <div class="modelwakeup-total">{{ useCount }}</div>
+          <div class="modelEgypt-total">{{ useCount }}</div>
         </div> -->
       </div>
     </Teleport>
@@ -456,8 +456,8 @@ export default {
     <Teleport to="body">
       <div v-if="showRuleValue" class="modal" @click="showRule">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="wakeupConfig.star" alt="" /> -->
-        <!-- <img class="model-img" :src="wakeupConfig.ruleDialogwakeup" alt="" /> -->
+        <!-- <img class="model-star" :src="EgyptConfig.star" alt="" /> -->
+        <!-- <img class="model-img" :src="EgyptConfig.ruleDialogEgypt" alt="" /> -->
       </div>
     </Teleport>
   </div>
@@ -469,7 +469,7 @@ export default {
 
   width: 280px;
 }
-.wakeupd-wakeupp {
+.Egyptd-Egyptp {
   display: flex;
   align-items: center;
   /* padding: 60px 15px; */
@@ -486,39 +486,39 @@ export default {
     transform: rotateZ(90deg);
 }
 
-.wakeup-count img {
+.Egypt-count img {
   width: 100%;
   position: absolute;
   height: 100%;
   /* top: -16%; */
   z-index: -1;
 }
-.wakeup-count .wakeup-rule {
+.Egypt-count .Egypt-rule {
   position: absolute;
   left: -9%;
   width: 45px;
   height: 45px;
 }
-.wakeupd-back {
-  /* background: v-bind("'url(' + wakeupConfig.homewakeup + ')'") no-repeat; */
+.Egyptd-back {
+  /* background: v-bind("'url(' + EgyptConfig.homeEgypt + ')'") no-repeat; */
 
   width: 36px;
   height: 42px;
   background-size: 100%;
   z-index: 999;
 }
-.stwakeup {
+.stEgypt {
   margin-top: -30%;
   width: 160px;
   height: 80px;
-  background: v-bind("'url(' + wakeupConfig.playwakeup + ')'") no-repeat;
+  background: v-bind("'url(' + EgyptConfig.playEgypt + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 }
 .container {
   display: flex;
   flex-direction: column;
-  background: v-bind("'url(' + wakeupConfig.boxwakeup + ')'") no-repeat;
+  background: v-bind("'url(' + EgyptConfig.boxEgypt + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -528,7 +528,7 @@ export default {
   align-items: center;
 }
 
-.wakeupp {
+.Egyptp {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -538,8 +538,8 @@ export default {
   /* height: 100vh; */
   overflow: hidden;
 
-  background: v-bind("'url(' + wakeupConfig.anyBoxwakeup + ')'") no-repeat;
-  background-size: 100%;
+  background: v-bind("'url(' + EgyptConfig.anyBoxEgypt + ')'") no-repeat;
+  background-size: 100% 100%;
     background-position: center 0%;
 
   color: #fff;
@@ -547,10 +547,11 @@ export default {
   font-size: 26;
 }
 
-.buttonwakeup-box {
+.buttonEgypt-box {
   position: absolute;
   top: 5%;
-    left: 17%;
+ 
+  left: 21%;
   display: flex;
   /* flex-direction: column; */
 
@@ -558,7 +559,7 @@ export default {
     height: 25%;
   /* justify-content: space-between; */
 }
-.wakeup-count {
+.Egypt-count {
   position: relative;
   width: 6%;
     height: 203%;
@@ -578,7 +579,7 @@ export default {
 
     height: 43%;
   z-index: 999;
-  background: v-bind("'url(' + wakeupConfig.homewakeup + ')'") no-repeat;
+  background: v-bind("'url(' + EgyptConfig.homeEgypt + ')'") no-repeat;
   background-size: 100% 100%;
 }
 .buttons2 {
@@ -590,83 +591,83 @@ export default {
   width: 30%;
   height: 40%;
   z-index: 999;
-  /* background: v-bind("'url(' + wakeupConfig.senioritywakeup + ')'") no-repeat; */
+  /* background: v-bind("'url(' + EgyptConfig.seniorityEgypt + ')'") no-repeat; */
   background-size: 100% 100%;
 }
-.buttonswakeupBack{
+.buttonsEgyptBack{
   position: absolute;
   left: 65.5%;
     margin-top: 64%;
     width: 38%;
     height: 45.5%;
   z-index: 999;
-  /* background: v-bind("'url(' + wakeupConfig.againwakeup + ')'") no-repeat; */
+  /* background: v-bind("'url(' + EgyptConfig.againEgypt + ')'") no-repeat; */
   background-size: 100% 100%;
 }
 
-.buttonswakeup2{
+.buttonsEgypt2{
   margin-left: 65%;
     margin-top: 8%;
     width: 6%;
     height: 88.5%;
   z-index: 999;
-  background: v-bind("'url(' + wakeupConfig.playwakeup + ')'") no-repeat;
+  background: v-bind("'url(' + EgyptConfig.playEgypt + ')'") no-repeat;
   background-size: 100% 100%;
 }
-.wakeupp-he {
+.Egyptp-he {
   position: relative;
-    margin-right: 0%;
-    margin-top: 5%;
-    width: 71%;
+  margin-right: -5%;
+    margin-top: 3%;
+    width: 75%;
     height: 43vw;
     display: flex;
     justify-content: space-between;
-    transform: scale(0.8);
+    transform: scale(0.67);
 }
 
-.wakeupp-hidden {
+.Egyptp-hidden {
   /* margin-top: 2%; */
   /* margin-left: 1%; */
   margin-top: -4%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  height: 190%;
-    transform: rotateZ(57deg) translate(-13vw,-11vw);
+  width: 105%;
+    height: 187%;
+    transform: rotateZ(57deg) translate(-10vw,-9vw);
 
   overflow: hidden;
 }
-.wakeupp-item-box{
+.Egyptp-item-box{
   height: 100%;
   flex: 1;
  
     overflow: hidden;
 }
 
-.wakeupp-item-box:nth-child(1),.wakeupp-item-box:nth-child(5){
+.Egyptp-item-box:nth-child(1),.Egyptp-item-box:nth-child(5){
   height:20%;
   transform: translateY(16vw);
-  .wakeupp-item{
+  .Egyptp-item{
     background-size: 76% 783%;
 
   }
 }
-.wakeupp-item-box:nth-child(5){
+.Egyptp-item-box:nth-child(5){
   transform: translate(3vw,-10vw);
 }
-.wakeupp-item-box:nth-child(2),.wakeupp-item-box:nth-child(4){
+.Egyptp-item-box:nth-child(2),.Egyptp-item-box:nth-child(4){
   transform: translate(-2vw,8vw);
   height: 60%;
-  .wakeupp-item{
+  .Egyptp-item{
     background-size: 76% 266%;
 
   }
 }
-.wakeupp-item-box:nth-child(4){
+.Egyptp-item-box:nth-child(4){
   transform: translate(1vw,-5vw);
 }
-.wakeupp-item {
+.Egyptp-item {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -674,23 +675,23 @@ export default {
 
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + wakeupConfig.anywakeup + ')'");
+  background: v-bind("'url(' + EgyptConfig.anyEgypt + ')'");
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
   background-size: 76% 166%;
 }
-.wakeupp-item:nth-child(2){
+.Egyptp-item:nth-child(2){
   /* margin-right: 20%; */
 }
-.wakeupp-item-img {
+.Egyptp-item-img {
   position: relative;
 
   display: none;
   width: 100%;
   height: 100%;
 }
-.wakeupp-item-img img {
+.Egyptp-item-img img {
   position: absolute;
   top: 32%;
     left: 48%;
@@ -702,7 +703,7 @@ export default {
 .modal {
   display: flex;
   justify-content: center;
-  align-items: flex-stwakeup;
+  align-items: flex-stEgypt;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -710,7 +711,7 @@ export default {
   height: 100vh;
   z-index: 9999;
   /* background-color: rgba(0, 0, 0, 0.5); */
-  /* background: v-bind("'url(' + wakeupConfig.dialogwakeup + ')'") no-repeat; */
+  /* background: v-bind("'url(' + EgyptConfig.dialogEgypt + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star {
@@ -732,17 +733,17 @@ export default {
   width: 70%;
 }
 
-.stwakeup-bg {
+.stEgypt-bg {
   position: absolute;
 
   top: 0;
   z-index: 1;
 }
-.stwakeup-bg img {
+.stEgypt-bg img {
   width: 100%;
 }
 
-.modelwakeup-list {
+.modelEgypt-list {
   position: absolute;
   left: 60%;
   top: 39.5%;
@@ -754,33 +755,33 @@ export default {
   font-size: 16px;
   /* transform: rotate(7deg) translateX(-36px); */
 }
-.modelwakeup-item {
+.modelEgypt-item {
   margin-bottom: 11px;
 }
-.modelwakeup-total {
+.modelEgypt-total {
   padding: 7px 14px;
 }
 
-.headwakeup {
+.headEgypt {
   margin-top: 10vh;
   width: 80%;
 }
 /* 定义步长图片动画关键帧 */
 @keyframes image-animation {
   0% {
-    background-image: v-bind("'url(' + wakeupConfig.animation1 + ')'");
+    background-image: v-bind("'url(' + EgyptConfig.animation1 + ')'");
   }
 
   25% {
-    background-image: v-bind("'url(' + wakeupConfig.animation4 + ')'");
+    background-image: v-bind("'url(' + EgyptConfig.animation4 + ')'");
   }
 
   75% {
-    background-image: v-bind("'url(' + wakeupConfig.animation8 + ')'");
+    background-image: v-bind("'url(' + EgyptConfig.animation8 + ')'");
   }
 
   100% {
-    background-image: v-bind("'url(' + wakeupConfig.animation12 + ')'");
+    background-image: v-bind("'url(' + EgyptConfig.animation12 + ')'");
   }
 }
 
