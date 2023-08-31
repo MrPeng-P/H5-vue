@@ -31,7 +31,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/imgarms/[hash][ext]",
+          filename: "assets/imgBudo/[hash][ext]",
         },
       },
         // {
@@ -55,7 +55,7 @@ module.exports = {
   },
 
   output: {
-    filename: "assets/armsJs/arms-[hash].js",
+    filename: "assets/BudoJs/Budo-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [

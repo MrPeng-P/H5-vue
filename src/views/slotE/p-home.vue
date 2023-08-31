@@ -1,35 +1,35 @@
 <script>
-import playEgypt from "@/assets/slotE2/playEgypt.png";
-// import playEgypt2 from "@/assets/slotE2/playEgypt2.png";
-// import playEgypt3 from "@/assets/slotE2/playEgypt3.png";
-import boxEgypt from "@/assets/slotE2/boxEgypt.jpg";
-import anyEgypt from "@/assets/slotE2/changeHEgypt.png";
-import anyBoxEgypt from "@/assets/slotE2/anyBoxEgypt.jpg";
-import homeEgypt from "@/assets/slotE2/homeEgypt.png";
-// import againEgypt from "@/assets/slotE2/againEgypt.png";
-import countEgypt from "@/assets/slotE2/countEgypt.png";
-// import ruleEgypt from "@/assets/slotE2/ruleEgypt.png";
-// import ruleDialogEgypt from "@/assets/slotE2/ruleDialogEgypt.jpg";
-// import resultEgypt from "@/assets/slotE2/resultEgypt.png";
-// import headEgypt from "@/assets/slotE2/headEgypt.png";
+import playBudo from "@/assets/slotE3/playBudo.png";
+// import playBudo2 from "@/assets/slotE3/playBudo2.png";
+// import playBudo3 from "@/assets/slotE3/playBudo3.png";
+import boxBudo from "@/assets/slotE3/boxBudo.jpg";
+import anyBudo from "@/assets/slotE3/changeHBudo.png";
+import anyBoxBudo from "@/assets/slotE3/anyBoxBudo.jpg";
+import homeBudo from "@/assets/slotE3/homeBudo.png";
+// import againBudo from "@/assets/slotE3/againBudo.png";
+import countBudo from "@/assets/slotE3/countBudo.png";
+// import ruleBudo from "@/assets/slotE3/ruleBudo.png";
+// import ruleDialogBudo from "@/assets/slotE3/ruleDialogBudo.jpg";
+// import resultBudo from "@/assets/slotE3/resultBudo.png";
+// import headBudo from "@/assets/slotE3/headBudo.png";
 
-// import star from "@/assets/slotE2/starEgypt.gif";
+// import star from "@/assets/slotE3/starBudo.gif";
 import { useRouter, useRoute } from "vue-router";
-import Egypt1 from "@/assets/slotE2/Egypt1.png";
-import Egypt2 from "@/assets/slotE2/Egypt2.png";
-import Egypt3 from "@/assets/slotE2/Egypt3.png";
-import Egypt4 from "@/assets/slotE2/Egypt4.png";
-import Egypt5 from "@/assets/slotE2/Egypt5.png";
-import Egypt6 from "@/assets/slotE2/Egypt6.png";
-import Egypt7 from "@/assets/slotE2/Egypt7.png";
+import Budo1 from "@/assets/slotE3/Budo1.png";
+import Budo2 from "@/assets/slotE3/Budo2.png";
+import Budo3 from "@/assets/slotE3/Budo3.png";
+import Budo4 from "@/assets/slotE3/Budo4.png";
+import Budo5 from "@/assets/slotE3/Budo5.png";
+import Budo6 from "@/assets/slotE3/Budo6.png";
+import Budo7 from "@/assets/slotE3/Budo7.png";
 
-// import animation1 from "@/assets/slotE2/dong/00001.png";
-// import animation4 from "@/assets/slotE2/dong/00004.png";
-// import animation8 from "@/assets/slotE2/dong/00008.png";
-// import animation12 from "@/assets/slotE2/dong/00012.png";
+// import animation1 from "@/assets/slotE3/dong/00001.png";
+// import animation4 from "@/assets/slotE3/dong/00004.png";
+// import animation8 from "@/assets/slotE3/dong/00008.png";
+// import animation12 from "@/assets/slotE3/dong/00012.png";
 
 import { inject } from "vue";
-// import football from "@/assets/slotE2/football.png";
+// import football from "@/assets/slotE3/football.png";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
@@ -61,28 +61,28 @@ export default {
     const router = new useRouter();
     // 随机生成 12 张图的数组
     let randomImages = [];
-    const EgyptConfig = reactive({
-      // headEgypt,
+    const BudoConfig = reactive({
+      // headBudo,
       // animation1,
       // animation4,
       // animation8,
       // animation12,
-      anyEgypt,
-      playEgypt,
-      // playEgypt2,
-      // playEgypt3,
-      // againEgypt,
-      anyBoxEgypt,
-      boxEgypt,
-      homeEgypt,
+      anyBudo,
+      playBudo,
+      // playBudo2,
+      // playBudo3,
+      // againBudo,
+      anyBoxBudo,
+      boxBudo,
+      homeBudo,
       //   star,
-      // seniorityEgypt,
-      countEgypt,
-      // ruleEgypt,
-      // ruleDialogEgypt,
-      // resultEgypt
+      // seniorityBudo,
+      countBudo,
+      // ruleBudo,
+      // ruleDialogBudo,
+      // resultBudo
     });
-    const EgyptList = reactive([
+    const BudoList = reactive([
       {
         name: "item1",
         size: 1,
@@ -111,37 +111,37 @@ export default {
     ]);
     let timeOhter = 0;
     let id;
-    let stEgypt = ref(false);
+    let stBudo = ref(false);
     let open = ref(false);
     let buttonStatus = ref(true);
     const images = [
       {
-        img: Egypt1,
-        name: "Egypt2",
+        img: Budo1,
+        name: "Budo2",
         className: "animation",
         count: 1800 * magnification.value,
       },
       {
-        img: Egypt2,
-        name: "Egypt1",
+        img: Budo2,
+        name: "Budo1",
         className: "animation",
         count: 1000 * magnification.value,
       },
       {
-        img: Egypt3,
+        img: Budo3,
       },
       {
-        img: Egypt4,
+        img: Budo4,
       },
       {
-        img: Egypt5,
+        img: Budo5,
       },
       {
-        img: Egypt6,
+        img: Budo6,
       },
       {
-        img: Egypt7,
-        name: "Egypt3",
+        img: Budo7,
+        name: "Budo3",
         className: "animation",
         count: 2200 * magnification.value,
       },
@@ -160,11 +160,11 @@ export default {
         buttonStatus.value = false;
 
         allMethods.clear();
-        const boxLists = EgyptList.map((item) => {
+        const boxLists = BudoList.map((item) => {
           return document.getElementById(item.name);
         });
         boxLists[0].style.setProperty("background-position-x", "center");
-        boxLists[0].querySelectorAll(".Egyptp-item-img").forEach((child) => {
+        boxLists[0].querySelectorAll(".Budop-item-img").forEach((child) => {
           child.style.setProperty("display", "none");
         });
         // boxLists.forEach((item)=>{
@@ -177,9 +177,9 @@ export default {
         //       0+'px'
         //     );
         // })
-        const content = document.getElementById("Egyptp-he");
-        const box2 = document.getElementById("Egyptp");
-        const coords = { x: 0, y: 0 }; // StEgypt at (0, 0)
+        const content = document.getElementById("Budop-he");
+        const box2 = document.getElementById("Budop");
+        const coords = { x: 0, y: 0 }; // StBudo at (0, 0)
         const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to(
             { x: 0, y: (1120 * content.clientHeight) / box2.clientHeight },
@@ -223,7 +223,7 @@ export default {
           .repeat(Infinity)
           .yoyo(false)
           .repeatDelay(0);
-          tween.start(); // StEgypt the tween immediately.
+          tween.start(); // StBudo the tween immediately.
         let nowDate = window.performance.now();
         function animate(time) {
           timeOhter = time - nowDate;
@@ -247,38 +247,38 @@ export default {
           }
           if (i > 0 && i < 4) {
             boxLists[i].style.setProperty("background-position-x", "center");
-            boxLists[i].querySelectorAll(".Egyptp-item-img").forEach((child) => {
+            boxLists[i].querySelectorAll(".Budop-item-img").forEach((child) => {
               child.style.setProperty("display", "none");
             });
           }
           if (i == 3) {
             boxLists[0].style.setProperty("background-position-x", 600 + "px");
-            boxLists[0].querySelectorAll(".Egyptp-item-img").forEach((child) => {
+            boxLists[0].querySelectorAll(".Budop-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 4) {
             boxLists[1].style.setProperty("background-position-x", 600 + "px");
-            boxLists[1].querySelectorAll(".Egyptp-item-img").forEach((child) => {
+            boxLists[1].querySelectorAll(".Budop-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 5) {
             boxLists[2].style.setProperty("background-position-x", 600 + "px");
-            boxLists[2].querySelectorAll(".Egyptp-item-img").forEach((child) => {
+            boxLists[2].querySelectorAll(".Budop-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 6) {
             boxLists[3].style.setProperty("background-position-x", 600 + "px");
-            boxLists[3].querySelectorAll(".Egyptp-item-img").forEach((child) => {
+            boxLists[3].querySelectorAll(".Budop-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
             // countValue.value += useCount.value*magn;
           }
           if (i == 7) {
             boxLists[4].style.setProperty("background-position-x", 600 + "px");
-            boxLists[4].querySelectorAll(".Egyptp-item-img").forEach((child) => {
+            boxLists[4].querySelectorAll(".Budop-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
             countValue.value += useCount.value*magn;
@@ -329,7 +329,7 @@ export default {
           randomImages.push(randomImage);
         }
 
-        allMethods.assignImageList(EgyptList, randomImages);
+        allMethods.assignImageList(BudoList, randomImages);
       },
       // 随机生成图像列表
       shuffleArray(array) {
@@ -338,11 +338,11 @@ export default {
           [array[i], array[j]] = [array[j], array[i]];
         }
         array.forEach((item) => {
-          if (item.name == "Egypt1") {
+          if (item.name == "Budo1") {
             arrCount[0].value++;
-          } else if (item.name == "Egypt2") {
+          } else if (item.name == "Budo2") {
             arrCount[1].value++;
-          } else if (item.name == "Egypt3") {
+          } else if (item.name == "Budo3") {
             arrCount[2].value++;
           }
           if (item.count) {
@@ -352,13 +352,13 @@ export default {
         return array;
       },
 
-      // 将图像列表分配给EgyptList
-      assignImageList(EgyptList, images) {
+      // 将图像列表分配给BudoList
+      assignImageList(BudoList, images) {
         const shuffledImages = allMethods.shuffleArray(images.slice()); // 避免修改原始数组
 
         let currentIndex = 0;
 
-        EgyptList.forEach((item) => {
+        BudoList.forEach((item) => {
           const numImages = Math.min(item.size, 5);
           item.imgList = shuffledImages.slice(
             currentIndex,
@@ -366,7 +366,7 @@ export default {
           );
           currentIndex += numImages;
         });
-        return EgyptList;
+        return BudoList;
       },
       goSeniority: () => {
         router.push("/list");
@@ -376,10 +376,10 @@ export default {
     return {
       className,
       open,
-      stEgypt,
-      EgyptConfig,
+      stBudo,
+      BudoConfig,
       randomImages,
-      EgyptList,
+      BudoList,
       countValue,
       useCount,
       showRuleValue,
@@ -391,23 +391,23 @@ export default {
 </script>
 <template>
   <div :class="className">
-    <!-- <img class="headEgypt" :src="EgyptConfig.headEgypt" alt=""> -->
-    <div class="Egyptp" id="Egyptp">
-      <div class="Egyptp-he" id="Egyptp-he">
-        <!-- <img class="Egypt-rule" @click="showRule" :src="EgyptConfig.ruleEgypt" alt=""> -->
-        <div class="Egyptp-hidden">
+    <!-- <img class="headBudo" :src="BudoConfig.headBudo" alt=""> -->
+    <div class="Budop" id="Budop">
+      <div class="Budop-he" id="Budop-he">
+        <!-- <img class="Budo-rule" @click="showRule" :src="BudoConfig.ruleBudo" alt=""> -->
+        <div class="Budop-hidden">
           <div
-            class="Egyptp-item-box"
+            class="Budop-item-box"
            
-            v-for="(item, index) in EgyptList"
+            v-for="(item, index) in BudoList"
           >
-           <div class="Egyptp-item"  :id="item.name">
+           <div class="Budop-item"  :id="item.name">
             <div
               v-for="(imgItem, imgIndex) in item.imgList"
               :class="
                 imgItem.className
-                  ? 'Egyptp-item-img ' + imgItem.className
-                  : 'Egyptp-item-img'
+                  ? 'Budop-item-img ' + imgItem.className
+                  : 'Budop-item-img'
               "
             >
               <img :src="imgItem.img" alt="" />
@@ -416,39 +416,39 @@ export default {
           </div>
         </div>
       </div>
-      <div class="buttonEgypt-box">
+      <div class="buttonBudo-box">
         <div class="buttons" @click="close"></div>
 
-        <div class="buttonsEgypt2" @click="run()"></div>
+        <div class="buttonsBudo2" @click="run()"></div>
        
-        <div class="buttonsEgyptBack" @click="run()"></div>
+        <div class="buttonsBudoBack" @click="run()"></div>
 
         <!-- <div class="buttons2" @click="goSeniority"></div> -->
 
-        <div class="Egypt-count" @click="showRule">
-          <!-- <img class="Egypt-rule" :src="EgyptConfig.ruleEgypt" alt="" /> -->
-          <img :src="EgyptConfig.countEgypt" alt="" />
+        <div class="Budo-count" @click="showRule">
+          <!-- <img class="Budo-rule" :src="BudoConfig.ruleBudo" alt="" /> -->
+          <img :src="BudoConfig.countBudo" alt="" />
           <div class="countValue">{{ countValue }}</div>
         </div>
       </div>
-      <div class="Egyptd-Egyptp">
-        <div class="Egyptd-back" @click="close"></div>
+      <div class="Budod-Budop">
+        <div class="Budod-back" @click="close"></div>
       </div>
     </div>
     <Teleport to="body">
       <div v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="EgyptConfig.star" alt="" /> -->
-        <!-- <img class="model-img-bg" :src="EgyptConfig.resultEgypt" alt="" /> -->
-        <!-- <div class="modelEgypt-list">
+        <!-- <img class="model-star" :src="BudoConfig.star" alt="" /> -->
+        <!-- <img class="model-img-bg" :src="BudoConfig.resultBudo" alt="" /> -->
+        <!-- <div class="modelBudo-list">
           <div
-            class="modelEgypt-item"
+            class="modelBudo-item"
             v-for="(item, index) in arrCount"
             :key="index"
           >
             {{ item.count + "X" + item.value }}
           </div>
-          <div class="modelEgypt-total">{{ useCount }}</div>
+          <div class="modelBudo-total">{{ useCount }}</div>
         </div> -->
       </div>
     </Teleport>
@@ -456,8 +456,8 @@ export default {
     <Teleport to="body">
       <div v-if="showRuleValue" class="modal" @click="showRule">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="EgyptConfig.star" alt="" /> -->
-        <!-- <img class="model-img" :src="EgyptConfig.ruleDialogEgypt" alt="" /> -->
+        <!-- <img class="model-star" :src="BudoConfig.star" alt="" /> -->
+        <!-- <img class="model-img" :src="BudoConfig.ruleDialogBudo" alt="" /> -->
       </div>
     </Teleport>
   </div>
@@ -469,7 +469,7 @@ export default {
 
   width: 280px;
 }
-.Egyptd-Egyptp {
+.Budod-Budop {
   display: flex;
   align-items: center;
   /* padding: 60px 15px; */
@@ -486,39 +486,39 @@ export default {
     transform: rotateZ(90deg);
 }
 
-.Egypt-count img {
+.Budo-count img {
   width: 100%;
   position: absolute;
   height: 100%;
   /* top: -16%; */
   z-index: -1;
 }
-.Egypt-count .Egypt-rule {
+.Budo-count .Budo-rule {
   position: absolute;
   left: -9%;
   width: 45px;
   height: 45px;
 }
-.Egyptd-back {
-  /* background: v-bind("'url(' + EgyptConfig.homeEgypt + ')'") no-repeat; */
+.Budod-back {
+  /* background: v-bind("'url(' + BudoConfig.homeBudo + ')'") no-repeat; */
 
   width: 36px;
   height: 42px;
   background-size: 100%;
   z-index: 999;
 }
-.stEgypt {
+.stBudo {
   margin-top: -30%;
   width: 160px;
   height: 80px;
-  background: v-bind("'url(' + EgyptConfig.playEgypt + ')'") no-repeat;
+  background: v-bind("'url(' + BudoConfig.playBudo + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 }
 .container {
   display: flex;
   flex-direction: column;
-  background: v-bind("'url(' + EgyptConfig.boxEgypt + ')'") no-repeat;
+  background: v-bind("'url(' + BudoConfig.boxBudo + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -528,7 +528,7 @@ export default {
   align-items: center;
 }
 
-.Egyptp {
+.Budop {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -538,7 +538,7 @@ export default {
   /* height: 100vh; */
   overflow: hidden;
 
-  background: v-bind("'url(' + EgyptConfig.anyBoxEgypt + ')'") no-repeat;
+  background: v-bind("'url(' + BudoConfig.anyBoxBudo + ')'") no-repeat;
   background-size: 100% 100%;
     background-position: center 0%;
 
@@ -547,7 +547,7 @@ export default {
   font-size: 26;
 }
 
-.buttonEgypt-box {
+.buttonBudo-box {
   position: absolute;
   top: 5%;
  
@@ -559,12 +559,12 @@ export default {
     height: 25%;
   /* justify-content: space-between; */
 }
-.Egypt-count {
+.Budo-count {
   position: relative;
   width: 6%;
     height: 203%;
     margin-left: -6%;
-    margin-top: 21%;
+    margin-top: 17%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -577,9 +577,9 @@ export default {
     margin-top: -1%;
     width: 7%;
 
-    height: 43%;
+    height: 52%;
   z-index: 999;
-  background: v-bind("'url(' + EgyptConfig.homeEgypt + ')'") no-repeat;
+  background: v-bind("'url(' + BudoConfig.homeBudo + ')'") no-repeat;
   background-size: 100% 100%;
 }
 .buttons2 {
@@ -591,30 +591,30 @@ export default {
   width: 30%;
   height: 40%;
   z-index: 999;
-  /* background: v-bind("'url(' + EgyptConfig.seniorityEgypt + ')'") no-repeat; */
+  /* background: v-bind("'url(' + BudoConfig.seniorityBudo + ')'") no-repeat; */
   background-size: 100% 100%;
 }
-.buttonsEgyptBack{
+.buttonsBudoBack{
   position: absolute;
   left: 65.5%;
     margin-top: 64%;
     width: 38%;
     height: 45.5%;
   z-index: 999;
-  /* background: v-bind("'url(' + EgyptConfig.againEgypt + ')'") no-repeat; */
+  /* background: v-bind("'url(' + BudoConfig.againBudo + ')'") no-repeat; */
   background-size: 100% 100%;
 }
 
-.buttonsEgypt2{
-  margin-left: 65%;
-    margin-top: 8%;
+.buttonsBudo2{
+  margin-left: 60%;
+  margin-top: 3%;
     width: 6%;
     height: 88.5%;
   z-index: 999;
-  background: v-bind("'url(' + EgyptConfig.playEgypt + ')'") no-repeat;
+  background: v-bind("'url(' + BudoConfig.playBudo + ')'") no-repeat;
   background-size: 100% 100%;
 }
-.Egyptp-he {
+.Budop-he {
   position: relative;
   margin-right: -5%;
     margin-top: 3%;
@@ -625,7 +625,7 @@ export default {
     transform: scale(0.67);
 }
 
-.Egyptp-hidden {
+.Budop-hidden {
   /* margin-top: 2%; */
   /* margin-left: 1%; */
   margin-top: -4%;
@@ -634,40 +634,40 @@ export default {
   align-items: center;
   width: 105%;
     height: 187%;
-    transform: rotateZ(57deg) translate(-10vw,-9vw);
+    transform: rotateZ(57deg) translate(-17vw,-9vw);
 
   overflow: hidden;
 }
-.Egyptp-item-box{
+.Budop-item-box{
   height: 100%;
   flex: 1;
  
     overflow: hidden;
 }
 
-.Egyptp-item-box:nth-child(1),.Egyptp-item-box:nth-child(5){
+.Budop-item-box:nth-child(1),.Budop-item-box:nth-child(5){
   height:20%;
   transform: translateY(16vw);
-  .Egyptp-item{
+  .Budop-item{
     background-size: 76% 783%;
 
   }
 }
-.Egyptp-item-box:nth-child(5){
+.Budop-item-box:nth-child(5){
   transform: translate(3vw,-10vw);
 }
-.Egyptp-item-box:nth-child(2),.Egyptp-item-box:nth-child(4){
+.Budop-item-box:nth-child(2),.Budop-item-box:nth-child(4){
   transform: translate(-2vw,8vw);
   height: 60%;
-  .Egyptp-item{
+  .Budop-item{
     background-size: 76% 266%;
 
   }
 }
-.Egyptp-item-box:nth-child(4){
+.Budop-item-box:nth-child(4){
   transform: translate(1vw,-5vw);
 }
-.Egyptp-item {
+.Budop-item {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -675,23 +675,23 @@ export default {
 
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + EgyptConfig.anyEgypt + ')'");
+  background: v-bind("'url(' + BudoConfig.anyBudo + ')'");
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
   background-size: 76% 166%;
 }
-.Egyptp-item:nth-child(2){
+.Budop-item:nth-child(2){
   /* margin-right: 20%; */
 }
-.Egyptp-item-img {
+.Budop-item-img {
   position: relative;
 
   display: none;
   width: 100%;
   height: 100%;
 }
-.Egyptp-item-img img {
+.Budop-item-img img {
   position: absolute;
   top: 32%;
     left: 48%;
@@ -703,7 +703,7 @@ export default {
 .modal {
   display: flex;
   justify-content: center;
-  align-items: flex-stEgypt;
+  align-items: flex-stBudo;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -711,7 +711,7 @@ export default {
   height: 100vh;
   z-index: 9999;
   /* background-color: rgba(0, 0, 0, 0.5); */
-  /* background: v-bind("'url(' + EgyptConfig.dialogEgypt + ')'") no-repeat; */
+  /* background: v-bind("'url(' + BudoConfig.dialogBudo + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star {
@@ -733,17 +733,17 @@ export default {
   width: 70%;
 }
 
-.stEgypt-bg {
+.stBudo-bg {
   position: absolute;
 
   top: 0;
   z-index: 1;
 }
-.stEgypt-bg img {
+.stBudo-bg img {
   width: 100%;
 }
 
-.modelEgypt-list {
+.modelBudo-list {
   position: absolute;
   left: 60%;
   top: 39.5%;
@@ -755,33 +755,33 @@ export default {
   font-size: 16px;
   /* transform: rotate(7deg) translateX(-36px); */
 }
-.modelEgypt-item {
+.modelBudo-item {
   margin-bottom: 11px;
 }
-.modelEgypt-total {
+.modelBudo-total {
   padding: 7px 14px;
 }
 
-.headEgypt {
+.headBudo {
   margin-top: 10vh;
   width: 80%;
 }
 /* 定义步长图片动画关键帧 */
 @keyframes image-animation {
   0% {
-    background-image: v-bind("'url(' + EgyptConfig.animation1 + ')'");
+    background-image: v-bind("'url(' + BudoConfig.animation1 + ')'");
   }
 
   25% {
-    background-image: v-bind("'url(' + EgyptConfig.animation4 + ')'");
+    background-image: v-bind("'url(' + BudoConfig.animation4 + ')'");
   }
 
   75% {
-    background-image: v-bind("'url(' + EgyptConfig.animation8 + ')'");
+    background-image: v-bind("'url(' + BudoConfig.animation8 + ')'");
   }
 
   100% {
-    background-image: v-bind("'url(' + EgyptConfig.animation12 + ')'");
+    background-image: v-bind("'url(' + BudoConfig.animation12 + ')'");
   }
 }
 

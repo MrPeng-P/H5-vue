@@ -1,7 +1,7 @@
 <script>
 
-// import playEgypt from "@/assets/slotE2/playEgypt.png";
-import boxEgypt from "@/assets/slotE2/boxEgypt.jpg";
+// import playBudo from "@/assets/slotE3/playBudo.png";
+import boxBudo from "@/assets/slotE3/boxBudo.jpg";
 import { onMounted, reactive, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
@@ -9,9 +9,9 @@ export default {
   setup() {
     const router = new useRouter();
     const className = "container";
-    const EgyptConfig = reactive({
-      // playEgypt,
-      boxEgypt,
+    const BudoConfig = reactive({
+      // playBudo,
+      boxBudo,
     });
    
 
@@ -25,7 +25,7 @@ export default {
     });
     return {
         className,
-      EgyptConfig,
+      BudoConfig,
       ...allMethods,
     };
   },
@@ -34,7 +34,7 @@ export default {
 <template>
   
   <div :class="className" @click="goHome">
-    <div class="stEgypt" >
+    <div class="stBudo" >
     </div>
   </div>
 </template>
@@ -42,17 +42,17 @@ export default {
 <style scoped>
 
 
-.stEgypt{
+.stBudo{
   margin-top: 27%;
     width: 30%;
     height: 252px;
-  /* background: v-bind("'url(' + EgyptConfig.playEgypt + ')'") no-repeat; */
+  /* background: v-bind("'url(' + BudoConfig.playBudo + ')'") no-repeat; */
   background-size: 100%;
   z-index: 99;
 
 }
 .container {
-  background: v-bind("'url(' + EgyptConfig.boxEgypt + ')'") no-repeat;
+  background: v-bind("'url(' + BudoConfig.boxBudo + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -63,7 +63,7 @@ export default {
 }
 
 
-.Egyptp-he {
+.Budop-he {
   position: relative;
     margin-top: 26%;
     width: 140%;
@@ -72,7 +72,7 @@ export default {
     justify-content: space-between;
     transform: scale(0.65);
 }
-.Egyptp-hidden{
+.Budop-hidden{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -81,11 +81,11 @@ export default {
   overflow: hidden;
 
 }
-.Egyptp-item {
+.Budop-item {
   
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + EgyptConfig.anyEgypt + ')'") ;
+  background: v-bind("'url(' + BudoConfig.anyBudo + ')'") ;
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
@@ -95,7 +95,7 @@ export default {
   padding-top: 155px;
     display: flex;
     justify-content: center;
-    align-items: flex-stEgypt;
+    align-items: flex-stBudo;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -103,7 +103,7 @@ export default {
     height: 100vh;
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.5);
-  /* background: v-bind("'url(' + EgyptConfig.dialogEgypt + ')'") no-repeat; */
+  /* background: v-bind("'url(' + BudoConfig.dialogBudo + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star{
@@ -115,12 +115,12 @@ export default {
 
 }
 
-.stEgypt-bg{
+.stBudo-bg{
     position: absolute;
     top: 0;
     z-index: 1;
 }
-.stEgypt-bg img{
+.stBudo-bg img{
     width: 100%;
 }
 </style>
