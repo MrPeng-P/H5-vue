@@ -31,7 +31,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/imgBudo/[hash][ext]",
+          filename: "assets/imgcrusader/[hash][ext]",
         },
       },
         // {
@@ -55,7 +55,7 @@ module.exports = {
   },
 
   output: {
-    filename: "assets/BudoJs/Budo-[hash].js",
+    filename: "assets/crusaderJs/crusader-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [
