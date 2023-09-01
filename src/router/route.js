@@ -124,20 +124,20 @@ import {
 // ];
 
 // 复杂老虎机-简化-横排滚动-wu排行
-// export const routes = [
-//   {
-//     path: "/",
-//     name: "startD",
-//     component: () => import("@/views/slotD/p-start.vue"),
-//   },
+export const routes = [
+  {
+    path: "/",
+    name: "startD",
+    component: () => import("@/views/slotD/p-start.vue"),
+  },
 
-//   {
-//     path: "/home",
-//     name: "homeD",
-//     component: () => import("@/views/slotD/p-home.vue"),
-//   },
+  {
+    path: "/home",
+    name: "homeD",
+    component: () => import("@/views/slotD/p-home.vue"),
+  },
 
-// ];
+];
 
 //复杂老虎机-简化-斜向滚动-wu排行
 // export const routes = [
@@ -172,20 +172,20 @@ import {
 
 
 // 第三版
-export const routes = [
-  {
-    path: "/",
-    name: "startF",
-    component: () => import("@/views/slot1A/p-start.vue"),
-  },
+// export const routes = [
+//   {
+//     path: "/",
+//     name: "startF",
+//     component: () => import("@/views/slot1A/p-start.vue"),
+//   },
 
-  {
-    path: "/home",
-    name: "homeF",
-    component: () => import("@/views/slot1A/p-home.vue"),
-  },
+//   {
+//     path: "/home",
+//     name: "homeF",
+//     component: () => import("@/views/slot1A/p-home.vue"),
+//   },
 
-];
+// ];
 
 const routerConfig = createRouter({
   // history: createWebHistory(), // ===>mode:"history"

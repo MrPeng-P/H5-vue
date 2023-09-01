@@ -31,7 +31,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/imgcrusader/[hash][ext]",
+          filename: "assets/imgWolf/[hash][ext]",
         },
       },
         // {
@@ -55,7 +55,7 @@ module.exports = {
   },
 
   output: {
-    filename: "assets/crusaderJs/crusader-[hash].js",
+    filename: "assets/WolfJs/Wolf-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [
