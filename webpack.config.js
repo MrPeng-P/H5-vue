@@ -31,7 +31,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/imgstorm/[hash][ext]",
+          filename: "assets/imgnavigation/[hash][ext]",
         },
       },
         // {
@@ -55,7 +55,7 @@ module.exports = {
   },
 
   output: {
-    filename: "assets/stormJs/storm-[hash].js",
+    filename: "assets/navigationJs/navigation-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [

@@ -608,21 +608,20 @@ export default {
 
 .buttonnavigation-box {
   position: absolute;
-  top: 0%;
-  left: 12%;
-  display: flex;
-  /* flex-direction: column; */
-
-  width: 90%;
-  height: 25%;
+  top: 4%;
+    left: 12%;
+    display: flex;
+    /* flex-direction: column; */
+    width: 82%;
+    height: 25%;
   /* justify-content: space-between; */
 }
 .navigation-count {
   position: relative;
-  width:44%;
-    height: 45%;
+  width: 44%;
+    height: 40%;
     margin-left: 1.5%;
-    margin-top: 17.6%;
+    margin-top: 19.6%;
 
   display: flex;
   align-items: center;
@@ -633,10 +632,10 @@ export default {
 
 .buttons {
 
-  margin-left: -3%;
-  margin-top: 17.6%;
+  margin-left: 1%;
+    margin-top: 19.6%;
     width: 15%;
-    height: 46%;
+    height: 40%;
 
 
   z-index: 999;
