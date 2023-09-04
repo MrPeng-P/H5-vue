@@ -1,35 +1,35 @@
 <script>
-import playcrusader from "@/assets/slotE4/playcrusader.png";
-// import playcrusader2 from "@/assets/slotE4/playcrusader2.png";
-// import playcrusader3 from "@/assets/slotE4/playcrusader3.png";
-import boxcrusader from "@/assets/slotE4/boxcrusader.jpg";
-import anycrusader from "@/assets/slotE4/changeHcrusader.png";
-import anyBoxcrusader from "@/assets/slotE4/anyBoxcrusader.jpg";
-import homecrusader from "@/assets/slotE4/homecrusader.png";
-// import againcrusader from "@/assets/slotE4/againcrusader.png";
-import countcrusader from "@/assets/slotE4/countcrusader.png";
-// import rulecrusader from "@/assets/slotE4/rulecrusader.png";
-// import ruleDialogcrusader from "@/assets/slotE4/ruleDialogcrusader.jpg";
-// import resultcrusader from "@/assets/slotE4/resultcrusader.png";
-// import headcrusader from "@/assets/slotE4/headcrusader.png";
+import playstorm from "@/assets/slotE5/playstorm.png";
+// import playstorm2 from "@/assets/slotE5/playstorm2.png";
+// import playstorm3 from "@/assets/slotE5/playstorm3.png";
+import boxstorm from "@/assets/slotE5/boxstorm.jpg";
+import anystorm from "@/assets/slotE5/changeHstorm.png";
+import anyBoxstorm from "@/assets/slotE5/anyBoxstorm.jpg";
+import homestorm from "@/assets/slotE5/homestorm.png";
+// import againstorm from "@/assets/slotE5/againstorm.png";
+import countstorm from "@/assets/slotE5/countstorm.png";
+// import rulestorm from "@/assets/slotE5/rulestorm.png";
+// import ruleDialogstorm from "@/assets/slotE5/ruleDialogstorm.jpg";
+// import resultstorm from "@/assets/slotE5/resultstorm.png";
+// import headstorm from "@/assets/slotE5/headstorm.png";
 
-// import star from "@/assets/slotE4/starcrusader.gif";
+// import star from "@/assets/slotE5/starstorm.gif";
 import { useRouter, useRoute } from "vue-router";
-import crusader1 from "@/assets/slotE4/crusader1.png";
-import crusader2 from "@/assets/slotE4/crusader2.png";
-import crusader3 from "@/assets/slotE4/crusader3.png";
-import crusader4 from "@/assets/slotE4/crusader4.png";
-import crusader5 from "@/assets/slotE4/crusader5.png";
-import crusader6 from "@/assets/slotE4/crusader6.png";
-import crusader7 from "@/assets/slotE4/crusader7.png";
+import storm1 from "@/assets/slotE5/storm1.png";
+import storm2 from "@/assets/slotE5/storm2.png";
+import storm3 from "@/assets/slotE5/storm3.png";
+import storm4 from "@/assets/slotE5/storm4.png";
+import storm5 from "@/assets/slotE5/storm5.png";
+import storm6 from "@/assets/slotE5/storm6.png";
+import storm7 from "@/assets/slotE5/storm7.png";
 
-// import animation1 from "@/assets/slotE4/dong/00001.png";
-// import animation4 from "@/assets/slotE4/dong/00004.png";
-// import animation8 from "@/assets/slotE4/dong/00008.png";
-// import animation12 from "@/assets/slotE4/dong/00012.png";
+// import animation1 from "@/assets/slotE5/dong/00001.png";
+// import animation4 from "@/assets/slotE5/dong/00004.png";
+// import animation8 from "@/assets/slotE5/dong/00008.png";
+// import animation12 from "@/assets/slotE5/dong/00012.png";
 
 import { inject } from "vue";
-// import football from "@/assets/slotE4/football.png";
+// import football from "@/assets/slotE5/football.png";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
@@ -61,28 +61,28 @@ export default {
     const router = new useRouter();
     // 随机生成 12 张图的数组
     let randomImages = [];
-    const crusaderConfig = reactive({
-      // headcrusader,
+    const stormConfig = reactive({
+      // headstorm,
       // animation1,
       // animation4,
       // animation8,
       // animation12,
-      anycrusader,
-      playcrusader,
-      // playcrusader2,
-      // playcrusader3,
-      // againcrusader,
-      anyBoxcrusader,
-      boxcrusader,
-      homecrusader,
+      anystorm,
+      playstorm,
+      // playstorm2,
+      // playstorm3,
+      // againstorm,
+      anyBoxstorm,
+      boxstorm,
+      homestorm,
       //   star,
-      // senioritycrusader,
-      countcrusader,
-      // rulecrusader,
-      // ruleDialogcrusader,
-      // resultcrusader
+      // senioritystorm,
+      countstorm,
+      // rulestorm,
+      // ruleDialogstorm,
+      // resultstorm
     });
-    const crusaderList = reactive([
+    const stormList = reactive([
       {
         name: "item1",
         size: 1,
@@ -111,37 +111,37 @@ export default {
     ]);
     let timeOhter = 0;
     let id;
-    let stcrusader = ref(false);
+    let ststorm = ref(false);
     let open = ref(false);
     let buttonStatus = ref(true);
     const images = [
       {
-        img: crusader1,
-        name: "crusader2",
+        img: storm1,
+        name: "storm2",
         className: "animation",
         count: 1800 * magnification.value,
       },
       {
-        img: crusader2,
-        name: "crusader1",
+        img: storm2,
+        name: "storm1",
         className: "animation",
         count: 1000 * magnification.value,
       },
       {
-        img: crusader3,
+        img: storm3,
       },
       {
-        img: crusader4,
+        img: storm4,
       },
       {
-        img: crusader5,
+        img: storm5,
       },
       {
-        img: crusader6,
+        img: storm6,
       },
       {
-        img: crusader7,
-        name: "crusader3",
+        img: storm7,
+        name: "storm3",
         className: "animation",
         count: 2200 * magnification.value,
       },
@@ -160,11 +160,11 @@ export default {
         buttonStatus.value = false;
 
         allMethods.clear();
-        const boxLists = crusaderList.map((item) => {
+        const boxLists = stormList.map((item) => {
           return document.getElementById(item.name);
         });
         boxLists[0].style.setProperty("background-position-x", "center");
-        boxLists[0].querySelectorAll(".crusaderp-item-img").forEach((child) => {
+        boxLists[0].querySelectorAll(".stormp-item-img").forEach((child) => {
           child.style.setProperty("display", "none");
         });
         // boxLists.forEach((item)=>{
@@ -177,9 +177,9 @@ export default {
         //       0+'px'
         //     );
         // })
-        const content = document.getElementById("crusaderp-he");
-        const box2 = document.getElementById("crusaderp");
-        const coords = { x: 0, y: 0 }; // Stcrusader at (0, 0)
+        const content = document.getElementById("stormp-he");
+        const box2 = document.getElementById("stormp");
+        const coords = { x: 0, y: 0 }; // Ststorm at (0, 0)
         const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to(
             { x: 0, y: (1120 * content.clientHeight) / box2.clientHeight },
@@ -223,7 +223,7 @@ export default {
           .repeat(Infinity)
           .yoyo(false)
           .repeatDelay(0);
-          tween.start(); // Stcrusader the tween immediately.
+          tween.start(); // Ststorm the tween immediately.
         let nowDate = window.performance.now();
         function animate(time) {
           timeOhter = time - nowDate;
@@ -247,38 +247,38 @@ export default {
           }
           if (i > 0 && i < 4) {
             boxLists[i].style.setProperty("background-position-x", "center");
-            boxLists[i].querySelectorAll(".crusaderp-item-img").forEach((child) => {
+            boxLists[i].querySelectorAll(".stormp-item-img").forEach((child) => {
               child.style.setProperty("display", "none");
             });
           }
           if (i == 3) {
             boxLists[0].style.setProperty("background-position-x", 600 + "px");
-            boxLists[0].querySelectorAll(".crusaderp-item-img").forEach((child) => {
+            boxLists[0].querySelectorAll(".stormp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 4) {
             boxLists[1].style.setProperty("background-position-x", 600 + "px");
-            boxLists[1].querySelectorAll(".crusaderp-item-img").forEach((child) => {
+            boxLists[1].querySelectorAll(".stormp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 5) {
             boxLists[2].style.setProperty("background-position-x", 600 + "px");
-            boxLists[2].querySelectorAll(".crusaderp-item-img").forEach((child) => {
+            boxLists[2].querySelectorAll(".stormp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 6) {
             boxLists[3].style.setProperty("background-position-x", 600 + "px");
-            boxLists[3].querySelectorAll(".crusaderp-item-img").forEach((child) => {
+            boxLists[3].querySelectorAll(".stormp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
             // countValue.value += useCount.value*magn;
           }
           if (i == 7) {
             boxLists[4].style.setProperty("background-position-x", 600 + "px");
-            boxLists[4].querySelectorAll(".crusaderp-item-img").forEach((child) => {
+            boxLists[4].querySelectorAll(".stormp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
             countValue.value += useCount.value*magn;
@@ -329,7 +329,7 @@ export default {
           randomImages.push(randomImage);
         }
 
-        allMethods.assignImageList(crusaderList, randomImages);
+        allMethods.assignImageList(stormList, randomImages);
       },
       // 随机生成图像列表
       shuffleArray(array) {
@@ -338,11 +338,11 @@ export default {
           [array[i], array[j]] = [array[j], array[i]];
         }
         array.forEach((item) => {
-          if (item.name == "crusader1") {
+          if (item.name == "storm1") {
             arrCount[0].value++;
-          } else if (item.name == "crusader2") {
+          } else if (item.name == "storm2") {
             arrCount[1].value++;
-          } else if (item.name == "crusader3") {
+          } else if (item.name == "storm3") {
             arrCount[2].value++;
           }
           if (item.count) {
@@ -352,13 +352,13 @@ export default {
         return array;
       },
 
-      // 将图像列表分配给crusaderList
-      assignImageList(crusaderList, images) {
+      // 将图像列表分配给stormList
+      assignImageList(stormList, images) {
         const shuffledImages = allMethods.shuffleArray(images.slice()); // 避免修改原始数组
 
         let currentIndex = 0;
 
-        crusaderList.forEach((item) => {
+        stormList.forEach((item) => {
           const numImages = Math.min(item.size, 5);
           item.imgList = shuffledImages.slice(
             currentIndex,
@@ -366,7 +366,7 @@ export default {
           );
           currentIndex += numImages;
         });
-        return crusaderList;
+        return stormList;
       },
       goSeniority: () => {
         router.push("/list");
@@ -376,10 +376,10 @@ export default {
     return {
       className,
       open,
-      stcrusader,
-      crusaderConfig,
+      ststorm,
+      stormConfig,
       randomImages,
-      crusaderList,
+      stormList,
       countValue,
       useCount,
       showRuleValue,
@@ -391,23 +391,23 @@ export default {
 </script>
 <template>
   <div :class="className">
-    <!-- <img class="headcrusader" :src="crusaderConfig.headcrusader" alt=""> -->
-    <div class="crusaderp" id="crusaderp">
-      <div class="crusaderp-he" id="crusaderp-he">
-        <!-- <img class="crusader-rule" @click="showRule" :src="crusaderConfig.rulecrusader" alt=""> -->
-        <div class="crusaderp-hidden">
+    <!-- <img class="headstorm" :src="stormConfig.headstorm" alt=""> -->
+    <div class="stormp" id="stormp">
+      <div class="stormp-he" id="stormp-he">
+        <!-- <img class="storm-rule" @click="showRule" :src="stormConfig.rulestorm" alt=""> -->
+        <div class="stormp-hidden">
           <div
-            class="crusaderp-item-box"
+            class="stormp-item-box"
            
-            v-for="(item, index) in crusaderList"
+            v-for="(item, index) in stormList"
           >
-           <div class="crusaderp-item"  :id="item.name">
+           <div class="stormp-item"  :id="item.name">
             <div
               v-for="(imgItem, imgIndex) in item.imgList"
               :class="
                 imgItem.className
-                  ? 'crusaderp-item-img ' + imgItem.className
-                  : 'crusaderp-item-img'
+                  ? 'stormp-item-img ' + imgItem.className
+                  : 'stormp-item-img'
               "
             >
               <img :src="imgItem.img" alt="" />
@@ -416,39 +416,39 @@ export default {
           </div>
         </div>
       </div>
-      <div class="buttoncrusader-box">
+      <div class="buttonstorm-box">
         <div class="buttons" @click="close"></div>
 
-        <div class="buttonscrusader2" @click="run()"></div>
+        <div class="buttonsstorm2" @click="run()"></div>
        
-        <div class="buttonscrusaderBack" @click="run()"></div>
+        <div class="buttonsstormBack" @click="run()"></div>
 
         <!-- <div class="buttons2" @click="goSeniority"></div> -->
 
-        <div class="crusader-count" @click="showRule">
-          <!-- <img class="crusader-rule" :src="crusaderConfig.rulecrusader" alt="" /> -->
-          <img :src="crusaderConfig.countcrusader" alt="" />
+        <div class="storm-count" @click="showRule">
+          <!-- <img class="storm-rule" :src="stormConfig.rulestorm" alt="" /> -->
+          <img :src="stormConfig.countstorm" alt="" />
           <div class="countValue">{{ countValue }}</div>
         </div>
       </div>
-      <div class="crusaderd-crusaderp">
-        <div class="crusaderd-back" @click="close"></div>
+      <div class="stormd-stormp">
+        <div class="stormd-back" @click="close"></div>
       </div>
     </div>
     <Teleport to="body">
       <div v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="crusaderConfig.star" alt="" /> -->
-        <!-- <img class="model-img-bg" :src="crusaderConfig.resultcrusader" alt="" /> -->
-        <!-- <div class="modelcrusader-list">
+        <!-- <img class="model-star" :src="stormConfig.star" alt="" /> -->
+        <!-- <img class="model-img-bg" :src="stormConfig.resultstorm" alt="" /> -->
+        <!-- <div class="modelstorm-list">
           <div
-            class="modelcrusader-item"
+            class="modelstorm-item"
             v-for="(item, index) in arrCount"
             :key="index"
           >
             {{ item.count + "X" + item.value }}
           </div>
-          <div class="modelcrusader-total">{{ useCount }}</div>
+          <div class="modelstorm-total">{{ useCount }}</div>
         </div> -->
       </div>
     </Teleport>
@@ -456,8 +456,8 @@ export default {
     <Teleport to="body">
       <div v-if="showRuleValue" class="modal" @click="showRule">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="crusaderConfig.star" alt="" /> -->
-        <!-- <img class="model-img" :src="crusaderConfig.ruleDialogcrusader" alt="" /> -->
+        <!-- <img class="model-star" :src="stormConfig.star" alt="" /> -->
+        <!-- <img class="model-img" :src="stormConfig.ruleDialogstorm" alt="" /> -->
       </div>
     </Teleport>
   </div>
@@ -469,7 +469,7 @@ export default {
 
   width: 280px;
 }
-.crusaderd-crusaderp {
+.stormd-stormp {
   display: flex;
   align-items: center;
   /* padding: 60px 15px; */
@@ -480,45 +480,45 @@ export default {
   color: #fff;
 }
 .countValue {
-  margin: 0% 0 -2%;
+  margin: 0% 0 -42%;
     color: #FFF;
     font-size: 18px;
-    /* transform: rotateZ(90deg); */
+    transform: rotateZ(90deg);
 }
 
-.crusader-count img {
+.storm-count img {
   width: 100%;
   position: absolute;
   height: 100%;
   /* top: -16%; */
   z-index: -1;
 }
-.crusader-count .crusader-rule {
+.storm-count .storm-rule {
   position: absolute;
   left: -9%;
   width: 45px;
   height: 45px;
 }
-.crusaderd-back {
-  /* background: v-bind("'url(' + crusaderConfig.homecrusader + ')'") no-repeat; */
+.stormd-back {
+  /* background: v-bind("'url(' + stormConfig.homestorm + ')'") no-repeat; */
 
   width: 36px;
   height: 42px;
   background-size: 100%;
   z-index: 999;
 }
-.stcrusader {
+.ststorm {
   margin-top: -30%;
   width: 160px;
   height: 80px;
-  background: v-bind("'url(' + crusaderConfig.playcrusader + ')'") no-repeat;
+  background: v-bind("'url(' + stormConfig.playstorm + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 }
 .container {
   display: flex;
   flex-direction: column;
-  background: v-bind("'url(' + crusaderConfig.boxcrusader + ')'") no-repeat;
+  background: v-bind("'url(' + stormConfig.boxstorm + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -528,7 +528,7 @@ export default {
   align-items: center;
 }
 
-.crusaderp {
+.stormp {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -538,7 +538,7 @@ export default {
   /* height: 100vh; */
   overflow: hidden;
 
-  background: v-bind("'url(' + crusaderConfig.anyBoxcrusader + ')'") no-repeat;
+  background: v-bind("'url(' + stormConfig.anyBoxstorm + ')'") no-repeat;
   background-size: 100% 100%;
     background-position: center 0%;
 
@@ -547,23 +547,20 @@ export default {
   font-size: 26;
 }
 
-.buttoncrusader-box {
+.buttonstorm-box {
   position: absolute;
-  top: 5%;
- 
-  left: 21%;
-  display: flex;
-  /* flex-direction: column; */
-
-  width: 88%;
-    height: 25%;
-  /* justify-content: space-between; */
+    top: 5%;
+    left: 21%;
+    display: flex;
+    flex-direction: column;
+    width: 88%;
+    height: 86%;
 }
-.crusader-count {
+.storm-count {
   position: relative;
-  width: 28%;
-    height: 43%;
-    margin-left: 2%;
+  width: 7%;
+    height: 99%;
+    margin-left: 61%;
     margin-top: 0%;
     display: flex;
     align-items: center;
@@ -573,60 +570,56 @@ export default {
 }
 
 .buttons {
-  margin-left: 1%;
+  margin-left: 61%;
     margin-top: -1%;
-    width: 7%;
-
-    height: 52%;
+    width: 6%;
+    height: 25%;
   z-index: 999;
-  background: v-bind("'url(' + crusaderConfig.homecrusader + ')'") no-repeat;
+  background: v-bind("'url(' + stormConfig.homestorm + ')'") no-repeat;
   background-size: 100% 100%;
 }
 .buttons2 {
-  /* margin-left: 53%;
-  margin-bottom: -57%; */
-  /* margin-left: 4%; */
-    margin-top: -1%;
-    margin-right: 0%;
-  width: 30%;
-  height: 40%;
+  margin-left: 61%;
+    margin-top: 1%;
+    width: 7%;
+    height: 54.5%;
   z-index: 999;
-  /* background: v-bind("'url(' + crusaderConfig.senioritycrusader + ')'") no-repeat; */
+  /* background: v-bind("'url(' + stormConfig.senioritystorm + ')'") no-repeat; */
   background-size: 100% 100%;
 }
-.buttonscrusaderBack{
+.buttonsstormBack{
   position: absolute;
   left: 65.5%;
     margin-top: 64%;
     width: 38%;
     height: 45.5%;
   z-index: 999;
-  /* background: v-bind("'url(' + crusaderConfig.againcrusader + ')'") no-repeat; */
+  /* background: v-bind("'url(' + stormConfig.againstorm + ')'") no-repeat; */
   background-size: 100% 100%;
 }
 
-.buttonscrusader2{
-  margin-left: 12%;
+.buttonsstorm2{
+
+  margin-left: 61%;
     margin-top: 0%;
-    width: 14%;
-    height: 44.5%;
+    width: 7%;
+    height: 57.5%;
 
   z-index: 999;
-  background: v-bind("'url(' + crusaderConfig.playcrusader + ')'") no-repeat;
+  background: v-bind("'url(' + stormConfig.playstorm + ')'") no-repeat;
   background-size: 100% 100%;
 }
-.crusaderp-he {
+.stormp-he {
   position: relative;
   margin-right: -5%;
-    margin-top: 3%;
     width: 75%;
-    height: 43vw;
+    height: 46vw;
     display: flex;
     justify-content: space-between;
     transform: scale(0.67);
 }
 
-.crusaderp-hidden {
+.stormp-hidden {
   /* margin-top: 2%; */
   /* margin-left: 1%; */
   margin-top: -4%;
@@ -635,40 +628,40 @@ export default {
   align-items: center;
   width: 105%;
     height: 187%;
-    transform: rotateZ(57deg) translate(-14vw,-4vw);
+    transform: rotateZ(55deg) translate(-17vw,-5vw);
 
   overflow: hidden;
 }
-.crusaderp-item-box{
+.stormp-item-box{
   height: 100%;
   flex: 1;
  
     overflow: hidden;
 }
 
-.crusaderp-item-box:nth-child(1),.crusaderp-item-box:nth-child(5){
+.stormp-item-box:nth-child(1),.stormp-item-box:nth-child(5){
   height:20%;
   transform: translateY(16vw);
-  .crusaderp-item{
+  .stormp-item{
     background-size: 76% 783%;
 
   }
 }
-.crusaderp-item-box:nth-child(5){
+.stormp-item-box:nth-child(5){
   transform: translate(3vw,-10vw);
 }
-.crusaderp-item-box:nth-child(2),.crusaderp-item-box:nth-child(4){
+.stormp-item-box:nth-child(2),.stormp-item-box:nth-child(4){
   transform: translate(-2vw,8vw);
   height: 60%;
-  .crusaderp-item{
+  .stormp-item{
     background-size: 76% 266%;
 
   }
 }
-.crusaderp-item-box:nth-child(4){
+.stormp-item-box:nth-child(4){
   transform: translate(1vw,-5vw);
 }
-.crusaderp-item {
+.stormp-item {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -676,23 +669,23 @@ export default {
 
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + crusaderConfig.anycrusader + ')'");
+  background: v-bind("'url(' + stormConfig.anystorm + ')'");
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
   background-size: 76% 166%;
 }
-.crusaderp-item:nth-child(2){
+.stormp-item:nth-child(2){
   /* margin-right: 20%; */
 }
-.crusaderp-item-img {
+.stormp-item-img {
   position: relative;
 
   display: none;
   width: 100%;
   height: 100%;
 }
-.crusaderp-item-img img {
+.stormp-item-img img {
   position: absolute;
   top: 32%;
     left: 48%;
@@ -704,7 +697,7 @@ export default {
 .modal {
   display: flex;
   justify-content: center;
-  align-items: flex-stcrusader;
+  align-items: flex-ststorm;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -712,7 +705,7 @@ export default {
   height: 100vh;
   z-index: 9999;
   /* background-color: rgba(0, 0, 0, 0.5); */
-  /* background: v-bind("'url(' + crusaderConfig.dialogcrusader + ')'") no-repeat; */
+  /* background: v-bind("'url(' + stormConfig.dialogstorm + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star {
@@ -734,17 +727,17 @@ export default {
   width: 70%;
 }
 
-.stcrusader-bg {
+.ststorm-bg {
   position: absolute;
 
   top: 0;
   z-index: 1;
 }
-.stcrusader-bg img {
+.ststorm-bg img {
   width: 100%;
 }
 
-.modelcrusader-list {
+.modelstorm-list {
   position: absolute;
   left: 60%;
   top: 39.5%;
@@ -756,33 +749,33 @@ export default {
   font-size: 16px;
   /* transform: rotate(7deg) translateX(-36px); */
 }
-.modelcrusader-item {
+.modelstorm-item {
   margin-bottom: 11px;
 }
-.modelcrusader-total {
+.modelstorm-total {
   padding: 7px 14px;
 }
 
-.headcrusader {
+.headstorm {
   margin-top: 10vh;
   width: 80%;
 }
 /* 定义步长图片动画关键帧 */
 @keyframes image-animation {
   0% {
-    background-image: v-bind("'url(' + crusaderConfig.animation1 + ')'");
+    background-image: v-bind("'url(' + stormConfig.animation1 + ')'");
   }
 
   25% {
-    background-image: v-bind("'url(' + crusaderConfig.animation4 + ')'");
+    background-image: v-bind("'url(' + stormConfig.animation4 + ')'");
   }
 
   75% {
-    background-image: v-bind("'url(' + crusaderConfig.animation8 + ')'");
+    background-image: v-bind("'url(' + stormConfig.animation8 + ')'");
   }
 
   100% {
-    background-image: v-bind("'url(' + crusaderConfig.animation12 + ')'");
+    background-image: v-bind("'url(' + stormConfig.animation12 + ')'");
   }
 }
 

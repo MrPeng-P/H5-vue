@@ -31,7 +31,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/imgWolf/[hash][ext]",
+          filename: "assets/imgstorm/[hash][ext]",
         },
       },
         // {
@@ -55,7 +55,7 @@ module.exports = {
   },
 
   output: {
-    filename: "assets/WolfJs/Wolf-[hash].js",
+    filename: "assets/stormJs/storm-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [
