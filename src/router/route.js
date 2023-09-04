@@ -124,36 +124,36 @@ import {
 // ];
 
 // 复杂老虎机-简化-横排滚动-wu排行
-// export const routes = [
-//   {
-//     path: "/",
-//     name: "startD",
-//     component: () => import("@/views/slotD/p-start.vue"),
-//   },
-
-//   {
-//     path: "/home",
-//     name: "homeD",
-//     component: () => import("@/views/slotD/p-home.vue"),
-//   },
-
-// ];
-
-//复杂老虎机-简化-斜向滚动-wu排行
 export const routes = [
   {
     path: "/",
-    name: "startE",
-    component: () => import("@/views/slotE/p-start.vue"),
+    name: "startD",
+    component: () => import("@/views/slotD/p-start.vue"),
   },
 
   {
     path: "/home",
-    name: "homeE",
-    component: () => import("@/views/slotE/p-home.vue"),
+    name: "homeD",
+    component: () => import("@/views/slotD/p-home.vue"),
   },
 
 ];
+
+//复杂老虎机-简化-斜向滚动-wu排行
+// export const routes = [
+//   {
+//     path: "/",
+//     name: "startE",
+//     component: () => import("@/views/slotE/p-start.vue"),
+//   },
+
+//   {
+//     path: "/home",
+//     name: "homeE",
+//     component: () => import("@/views/slotE/p-home.vue"),
+//   },
+
+// ];
 //复杂老虎机-简化-竖排滚动-wu排行-倍数
 // export const routes = [
 //   {
