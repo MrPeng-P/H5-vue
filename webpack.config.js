@@ -31,7 +31,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/imgnavigation/[hash][ext]",
+          filename: "assets/imginternationality/[hash][ext]",
         },
       },
         // {
@@ -55,7 +55,7 @@ module.exports = {
   },
 
   output: {
-    filename: "assets/navigationJs/navigation-[hash].js",
+    filename: "assets/internationalityJs/internationality-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [

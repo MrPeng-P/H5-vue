@@ -1,37 +1,37 @@
 <script>
-import playarms from "@/assets/slotF5/playarms.png";
-// import playarms2 from "@/assets/slotF5/playarms2.png";
-// import playarms3 from "@/assets/slotF5/playarms3.png";
-import boxarms from "@/assets/slotF5/boxarms.jpg";
-import anyarms from "@/assets/slotF5/changearms.png";
-import anyBoxarms from "@/assets/slotF5/anyBoxarms.png";
-import homearms from "@/assets/slotF5/homearms.png";
-// import againarms from "@/assets/slotF5/againarms.png";
-import peiarms from "@/assets/slotF5/peiarms.png";
+import playinternationality from "@/assets/slotF6/playinternationality.png";
+// import playinternationality2 from "@/assets/slotF6/playinternationality2.png";
+// import playinternationality3 from "@/assets/slotF6/playinternationality3.png";
+import boxinternationality from "@/assets/slotF6/boxinternationality.png";
+import anyinternationality from "@/assets/slotF6/changeinternationality.png";
+import anyBoxinternationality from "@/assets/slotF6/anyBoxinternationality.jpg";
+import homeinternationality from "@/assets/slotF6/homeinternationality.png";
+// import againinternationality from "@/assets/slotF6/againinternationality.png";
+import peiinternationality from "@/assets/slotF6/peiinternationality.png";
 
-import countarms from "@/assets/slotF5/countarms.png";
-// import rulearms from "@/assets/slotF5/rulearms.png";
-// import ruleDialogarms from "@/assets/slotF5/ruleDialogarms.jpg";
-// import resultarms from "@/assets/slotF5/resultarms.png";
-// import headarms from "@/assets/slotF5/headarms.png";
+import countinternationality from "@/assets/slotF6/countinternationality.png";
+// import ruleinternationality from "@/assets/slotF6/ruleinternationality.png";
+// import ruleDialoginternationality from "@/assets/slotF6/ruleDialoginternationality.jpg";
+// import resultinternationality from "@/assets/slotF6/resultinternationality.png";
+// import headinternationality from "@/assets/slotF6/headinternationality.png";
 
-// import star from "@/assets/slotF5/stararms.gif";
+// import star from "@/assets/slotF6/starinternationality.gif";
 import { useRouter, useRoute } from "vue-router";
-import arms1 from "@/assets/slotF5/arms1.png";
-import arms2 from "@/assets/slotF5/arms2.png";
-import arms3 from "@/assets/slotF5/arms3.png";
-import arms4 from "@/assets/slotF5/arms4.png";
-import arms5 from "@/assets/slotF5/arms5.png";
-import arms6 from "@/assets/slotF5/arms6.png";
-// import arms7 from "@/assets/slotF5/arms7.png";
+import internationality1 from "@/assets/slotF6/internationality1.png";
+import internationality2 from "@/assets/slotF6/internationality2.png";
+import internationality3 from "@/assets/slotF6/internationality3.png";
+import internationality4 from "@/assets/slotF6/internationality4.png";
+import internationality5 from "@/assets/slotF6/internationality5.png";
+import internationality6 from "@/assets/slotF6/internationality6.png";
+// import internationality7 from "@/assets/slotF6/internationality7.png";
 
-// import animation1 from "@/assets/slotF5/dong/00001.png";
-// import animation4 from "@/assets/slotF5/dong/00004.png";
-// import animation8 from "@/assets/slotF5/dong/00008.png";
-// import animation12 from "@/assets/slotF5/dong/00012.png";
+// import animation1 from "@/assets/slotF6/dong/00001.png";
+// import animation4 from "@/assets/slotF6/dong/00004.png";
+// import animation8 from "@/assets/slotF6/dong/00008.png";
+// import animation12 from "@/assets/slotF6/dong/00012.png";
 
 import { inject } from "vue";
-// import football from "@/assets/slotF5/football.png";
+// import football from "@/assets/slotF6/football.png";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
@@ -64,29 +64,29 @@ export default {
     const router = new useRouter();
     // 随机生成 12 张图的数组
     let randomImages = [];
-    const armsConfig = reactive({
-      // headarms,
+    const internationalityConfig = reactive({
+      // headinternationality,
       // animation1,
       // animation4,
       // animation8,
       // animation12,
-      peiarms,
-      anyarms,
-      playarms,
-      // playarms2,
-      // playarms3,
-      // againarms,
-      anyBoxarms,
-      boxarms,
-      homearms,
+      peiinternationality,
+      anyinternationality,
+      playinternationality,
+      // playinternationality2,
+      // playinternationality3,
+      // againinternationality,
+      anyBoxinternationality,
+      boxinternationality,
+      homeinternationality,
       //   star,
-      // seniorityarms,
-      countarms,
-      // rulearms,
-      // ruleDialogarms,
-      // resultarms
+      // seniorityinternationality,
+      countinternationality,
+      // ruleinternationality,
+      // ruleDialoginternationality,
+      // resultinternationality
     });
-    const armsList = reactive([
+    const internationalityList = reactive([
       {
         name: "item1",
         size: 3,
@@ -115,39 +115,39 @@ export default {
     ]);
     let timeOhter = 0;
     let id;
-    let starms = ref(false);
+    let stinternationality = ref(false);
     let open = ref(false);
     let buttonStatus = ref(true);
     const images = [
       {
-        img: arms1,
-        name: "arms2",
+        img: internationality1,
+        name: "internationality2",
         className: "animation",
         count: 1800 * magnification.value,
       },
       {
-        img: arms2,
-        name: "arms1",
+        img: internationality2,
+        name: "internationality1",
         className: "animation",
         count: 1000 * magnification.value,
       },
       {
-        img: arms3,
+        img: internationality3,
       },
       {
-        img: arms4,
+        img: internationality4,
       },
       {
-        img: arms5,
+        img: internationality5,
       },
       {
-        img: arms6,
-        name: "arms3",
+        img: internationality6,
+        name: "internationality3",
         className: "animation",
         count: 2200 * magnification.value,
       },
       // {
-      //   img: arms7,
+      //   img: internationality7,
        
       // },
     ];
@@ -183,11 +183,11 @@ export default {
         buttonStatus.value = false;
 
         allMethods.clear();
-        const boxLists = armsList.map((item) => {
+        const boxLists = internationalityList.map((item) => {
           return document.getElementById(item.name);
         });
         boxLists[0].style.setProperty("background-position-x", "center");
-        boxLists[0].querySelectorAll(".armsp-item-img").forEach((child) => {
+        boxLists[0].querySelectorAll(".internationalityp-item-img").forEach((child) => {
           child.style.setProperty("display", "none");
         });
         // boxLists.forEach((item)=>{
@@ -200,9 +200,9 @@ export default {
         //       0+'px'
         //     );
         // })
-        const content = document.getElementById("armsp-he");
-        const box2 = document.getElementById("armsp");
-        const coords = { x: 0, y: 0 }; // Starms at (0, 0)
+        const content = document.getElementById("internationalityp-he");
+        const box2 = document.getElementById("internationalityp");
+        const coords = { x: 0, y: 0 }; // Stinternationality at (0, 0)
         const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to(
             { x: 0, y: (1120 * content.clientHeight) / box2.clientHeight },
@@ -246,7 +246,7 @@ export default {
           .repeat(Infinity)
           .yoyo(false)
           .repeatDelay(0);
-          tween.start(); // Starms the tween immediately.
+          tween.start(); // Stinternationality the tween immediately.
         let nowDate = window.performance.now();
         function animate(time) {
           timeOhter = time - nowDate;
@@ -270,38 +270,38 @@ export default {
           }
           if (i > 0 && i < 4) {
             boxLists[i].style.setProperty("background-position-x", "center");
-            boxLists[i].querySelectorAll(".armsp-item-img").forEach((child) => {
+            boxLists[i].querySelectorAll(".internationalityp-item-img").forEach((child) => {
               child.style.setProperty("display", "none");
             });
           }
           if (i == 3) {
             boxLists[0].style.setProperty("background-position-x", 600 + "px");
-            boxLists[0].querySelectorAll(".armsp-item-img").forEach((child) => {
+            boxLists[0].querySelectorAll(".internationalityp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 4) {
             boxLists[1].style.setProperty("background-position-x", 600 + "px");
-            boxLists[1].querySelectorAll(".armsp-item-img").forEach((child) => {
+            boxLists[1].querySelectorAll(".internationalityp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 5) {
             boxLists[2].style.setProperty("background-position-x", 600 + "px");
-            boxLists[2].querySelectorAll(".armsp-item-img").forEach((child) => {
+            boxLists[2].querySelectorAll(".internationalityp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 6) {
             boxLists[3].style.setProperty("background-position-x", 600 + "px");
-            boxLists[3].querySelectorAll(".armsp-item-img").forEach((child) => {
+            boxLists[3].querySelectorAll(".internationalityp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
             countValue.value += useCount.value*magn;
           }
           // if (i == 7) {
           //   boxLists[4].style.setProperty("background-position-x", 600 + "px");
-          //   boxLists[4].querySelectorAll(".armsp-item-img").forEach((child) => {
+          //   boxLists[4].querySelectorAll(".internationalityp-item-img").forEach((child) => {
           //     child.style.setProperty("display", "block");
           //   });
            
@@ -352,7 +352,7 @@ export default {
           randomImages.push(randomImage);
         }
 
-        allMethods.assignImageList(armsList, randomImages);
+        allMethods.assignImageList(internationalityList, randomImages);
       },
       // 随机生成图像列表
       shuffleArray(array) {
@@ -361,11 +361,11 @@ export default {
           [array[i], array[j]] = [array[j], array[i]];
         }
         array.forEach((item) => {
-          if (item.name == "arms1") {
+          if (item.name == "internationality1") {
             arrCount[0].value++;
-          } else if (item.name == "arms2") {
+          } else if (item.name == "internationality2") {
             arrCount[1].value++;
-          } else if (item.name == "arms3") {
+          } else if (item.name == "internationality3") {
             arrCount[2].value++;
           }
           if (item.count) {
@@ -375,13 +375,13 @@ export default {
         return array;
       },
 
-      // 将图像列表分配给armsList
-      assignImageList(armsList, images) {
+      // 将图像列表分配给internationalityList
+      assignImageList(internationalityList, images) {
         const shuffledImages = allMethods.shuffleArray(images.slice()); // 避免修改原始数组
 
         let currentIndex = 0;
 
-        armsList.forEach((item) => {
+        internationalityList.forEach((item) => {
           const numImages = Math.min(item.size, 3);
           item.imgList = shuffledImages.slice(
             currentIndex,
@@ -389,7 +389,7 @@ export default {
           );
           currentIndex += numImages;
         });
-        return armsList;
+        return internationalityList;
       },
       goSeniority: () => {
         router.push("/list");
@@ -400,10 +400,10 @@ export default {
       className,
       peiValue,
       open,
-      starms,
-      armsConfig,
+      stinternationality,
+      internationalityConfig,
       randomImages,
-      armsList,
+      internationalityList,
       countValue,
       useCount,
       showRuleValue,
@@ -415,22 +415,22 @@ export default {
 </script>
 <template>
   <div :class="className">
-    <!-- <img class="headarms" :src="armsConfig.headarms" alt=""> -->
-    <div class="armsp" id="armsp">
-      <div class="armsp-he" id="armsp-he">
-        <!-- <img class="arms-rule" @click="showRule" :src="armsConfig.rulearms" alt=""> -->
-        <div class="armsp-hidden">
+    <!-- <img class="headinternationality" :src="internationalityConfig.headinternationality" alt=""> -->
+    <div class="internationalityp" id="internationalityp">
+      <div class="internationalityp-he" id="internationalityp-he">
+        <!-- <img class="internationality-rule" @click="showRule" :src="internationalityConfig.ruleinternationality" alt=""> -->
+        <div class="internationalityp-hidden">
           <div
-            class="armsp-item"
+            class="internationalityp-item"
             :id="item.name"
-            v-for="(item, index) in armsList"
+            v-for="(item, index) in internationalityList"
           >
             <div
               v-for="(imgItem, imgIndex) in item.imgList"
               :class="
                 imgItem.className
-                  ? 'armsp-item-img ' + imgItem.className
-                  : 'armsp-item-img'
+                  ? 'internationalityp-item-img ' + imgItem.className
+                  : 'internationalityp-item-img'
               "
             >
               <img :src="imgItem.img" alt="" />
@@ -438,44 +438,44 @@ export default {
           </div>
         </div>
       </div>
-      <div class="buttonarms-box">
+      <div class="buttoninternationality-box">
         <div class="buttons" @click="close"></div>
         <div class="buttons2" @click="run()"></div>
 
-        <div class="buttonsarms2" >
-          <div class="count" @click="peiCount(true)"></div>
-          <div class="count-v">{{ peiValue }}</div>
+        <div class="buttonsinternationality2" >
           <div class="count" @click="peiCount(false)"></div>
+          <div class="count-v">{{ peiValue }}</div>
+          <div class="count" @click="peiCount(true)"></div>
         </div>
        
-        <!-- <div class="buttonsarmsBack" @click="run()"></div> -->
+        <!-- <div class="buttonsinternationalityBack" @click="run()"></div> -->
 
 
-        <div class="arms-count" >
-          <!-- <img class="arms-rule" :src="armsConfig.rulearms" alt="" /> -->
-          <img :src="armsConfig.countarms" alt="" />
+        <div class="internationality-count" >
+          <!-- <img class="internationality-rule" :src="internationalityConfig.ruleinternationality" alt="" /> -->
+          <img :src="internationalityConfig.countinternationality" alt="" />
           <div class="countValue">{{ countValue }}</div>
         </div>
 
       </div>
-      <div class="armsd-armsp">
-        <div class="armsd-back" @click="close"></div>
+      <div class="internationalityd-internationalityp">
+        <div class="internationalityd-back" @click="close"></div>
       </div>
     </div>
     <Teleport to="body">
       <div v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="armsConfig.star" alt="" /> -->
-        <!-- <img class="model-img-bg" :src="armsConfig.resultarms" alt="" /> -->
-        <!-- <div class="modelarms-list">
+        <!-- <img class="model-star" :src="internationalityConfig.star" alt="" /> -->
+        <!-- <img class="model-img-bg" :src="internationalityConfig.resultinternationality" alt="" /> -->
+        <!-- <div class="modelinternationality-list">
           <div
-            class="modelarms-item"
+            class="modelinternationality-item"
             v-for="(item, index) in arrCount"
             :key="index"
           >
             {{ item.count + "X" + item.value }}
           </div>
-          <div class="modelarms-total">{{ useCount }}</div>
+          <div class="modelinternationality-total">{{ useCount }}</div>
         </div> -->
       </div>
     </Teleport>
@@ -483,8 +483,8 @@ export default {
     <Teleport to="body">
       <div v-if="showRuleValue" class="modal" @click="showRule">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="armsConfig.star" alt="" /> -->
-        <!-- <img class="model-img" :src="armsConfig.ruleDialogarms" alt="" /> -->
+        <!-- <img class="model-star" :src="internationalityConfig.star" alt="" /> -->
+        <!-- <img class="model-img" :src="internationalityConfig.ruleDialoginternationality" alt="" /> -->
       </div>
     </Teleport>
   </div>
@@ -496,7 +496,7 @@ export default {
 
   width: 280px;
 }
-.armsd-armsp {
+.internationalityd-internationalityp {
   display: flex;
   align-items: center;
   /* padding: 60px 15px; */
@@ -507,13 +507,14 @@ export default {
   color: #fff;
 }
 .countValue {
-  margin: 0 0 0 0%;
+  margin: 151% 0% 0 0%;
+
     color: #FFF;
     font-size: 18px;
     transform: rotateZ(90deg);
 }
 
-.arms-count img {
+.internationality-count img {
   width: 100%;
   position: absolute;
   height: 100%;
@@ -521,32 +522,32 @@ export default {
   
   z-index: -1;
 }
-.arms-count .arms-rule {
+.internationality-count .internationality-rule {
   position: absolute;
   left: -9%;
   width: 45px;
   height: 45px;
 }
-.armsd-back {
-  /* background: v-bind("'url(' + armsConfig.homearms + ')'") no-repeat; */
+.internationalityd-back {
+  /* background: v-bind("'url(' + internationalityConfig.homeinternationality + ')'") no-repeat; */
 
   width: 36px;
   height: 42px;
   background-size: 100%;
   z-index: 999;
 }
-.starms {
+.stinternationality {
   margin-top: -30%;
   width: 160px;
   height: 80px;
-  background: v-bind("'url(' + armsConfig.playarms + ')'") no-repeat;
+  background: v-bind("'url(' + internationalityConfig.playinternationality + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 }
 .container {
   display: flex;
   flex-direction: column;
-  background: v-bind("'url(' + armsConfig.boxarms + ')'") no-repeat;
+  background: v-bind("'url(' + internationalityConfig.boxinternationality + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -556,7 +557,7 @@ export default {
   align-items: center;
 }
 
-.armsp {
+.internationalityp {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -566,16 +567,16 @@ export default {
   /* height: 100vh; */
   overflow: hidden;
 
-  background: v-bind("'url(' + armsConfig.anyBoxarms + ')'") no-repeat;
-  background-size: 65%;
-    background-position: center 52%;
+  background: v-bind("'url(' + internationalityConfig.anyBoxinternationality + ')'") no-repeat;
+  background-size: 120%;
+    background-position: center 36%;
 
   color: #fff;
   font-weight: 600;
   font-size: 26;
 }
 
-.buttonarms-box {
+.buttoninternationality-box {
   position: absolute;
   top: 90%;
     left: 17%;
@@ -586,12 +587,12 @@ export default {
   height: 25%;
   /* justify-content: space-between; */
 }
-.arms-count {
+.internationality-count {
   position: relative;
-  width: 6%;
-    height: 150%;
-    margin-left: -5.5%;
-    margin-top: -19%;
+  width: 8%;
+    height: 307%;
+    margin-left: 5.5%;
+    margin-top: -37%;
  
     display: flex;
     align-items: center;
@@ -601,44 +602,43 @@ export default {
 }
 
 .buttons {
-  margin-left: -3%;
+  margin-left: 0%;
     margin-top: -44%;
-    width: 8%;
-    height: 59%;
+    width: 6%;
+    height: 49%;
     z-index: 999;
-  background: v-bind("'url(' + armsConfig.homearms + ')'") no-repeat;
+  background: v-bind("'url(' + internationalityConfig.homeinternationality + ')'") no-repeat;
   background-size: 100% 100%;
 }
 .buttons2 {
-  margin-left: 57%;
+  margin-left: 7%;
     margin-top: -44%;
     width: 13%;
     height: 39%;
-   background: v-bind("'url(' + armsConfig.playarms + ')'") no-repeat;
+   background: v-bind("'url(' + internationalityConfig.playinternationality + ')'") no-repeat;
   background-size: 100% 100%;
 }
-.buttonsarmsBack{
+.buttonsinternationalityBack{
   position: absolute;
   left: 34.5%;
     margin-top: 57%;
     width: 38%;
     height: 58.5%;
   z-index: 999;
-  /* background: v-bind("'url(' + armsConfig.againarms + ')'") no-repeat; */
+  /* background: v-bind("'url(' + internationalityConfig.againinternationality + ')'") no-repeat; */
   background-size: 100% 100%;
 }
 
-.buttonsarms2{
+.buttonsinternationality2{
   display: flex;
-  flex-direction: column;
-
-  margin-left: -1%;
-    margin-top: -37%;
-    width: 5%;
-    height: 118.5%;
+  /* flex-direction: column; */
+  margin-left: 16%;
+    margin-top: -44%;
+    width: 26%;
+    height: 40.5%;
 color: #fff;
   z-index: 999;
-  background: v-bind("'url(' + armsConfig.peiarms + ')'") no-repeat;
+  background: v-bind("'url(' + internationalityConfig.peiinternationality + ')'") no-repeat;
   background-size: 100% 100%;
 }
 .count{
@@ -648,11 +648,11 @@ color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: rotateZ(90deg);
+  /* transform: rotateZ(90deg); */
   font-size: 16px;
    
 }
-.armsp-he {
+.internationalityp-he {
     position: relative;
     margin-right: 0%;
     margin-top: 2%;
@@ -663,10 +663,10 @@ color: #fff;
     transform: scale(0.7);
 }
 
-.armsp-hidden {
+.internationalityp-hidden {
   /* margin-top: 2%; */
-  /* margin-left: 1%; */
-  margin-top: -4%;
+  margin-left: 4%;
+  margin-top: 1%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -674,7 +674,7 @@ color: #fff;
   height: 109%;
   overflow: hidden;
 }
-.armsp-item {
+.internationalityp-item {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -682,23 +682,23 @@ color: #fff;
 
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + armsConfig.anyarms + ')'");
+  background: v-bind("'url(' + internationalityConfig.anyinternationality + ')'");
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
-  background-size:83% 251%;
+  background-size:83% 278%;
 }
-.armsp-item:nth-child(2){
+.internationalityp-item:nth-child(2){
   margin-right: 20%;
 }
-.armsp-item-img {
+.internationalityp-item-img {
   position: relative;
 
   display: none;
   width: 100%;
   height: 100%;
 }
-.armsp-item-img img {
+.internationalityp-item-img img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -710,7 +710,7 @@ color: #fff;
 .modal {
   display: flex;
   justify-content: center;
-  align-items: flex-starms;
+  align-items: flex-stinternationality;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -718,7 +718,7 @@ color: #fff;
   height: 100vh;
   z-index: 9999;
   /* background-color: rgba(0, 0, 0, 0.5); */
-  /* background: v-bind("'url(' + armsConfig.dialogarms + ')'") no-repeat; */
+  /* background: v-bind("'url(' + internationalityConfig.dialoginternationality + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star {
@@ -740,17 +740,17 @@ color: #fff;
   width: 70%;
 }
 
-.starms-bg {
+.stinternationality-bg {
   position: absolute;
 
   top: 0;
   z-index: 1;
 }
-.starms-bg img {
+.stinternationality-bg img {
   width: 100%;
 }
 
-.modelarms-list {
+.modelinternationality-list {
   position: absolute;
   left: 60%;
   top: 39.5%;
@@ -762,33 +762,33 @@ color: #fff;
   font-size: 16px;
   /* transform: rotate(7deg) translateX(-36px); */
 }
-.modelarms-item {
+.modelinternationality-item {
   margin-bottom: 11px;
 }
-.modelarms-total {
+.modelinternationality-total {
   padding: 7px 14px;
 }
 
-.headarms {
+.headinternationality {
   margin-top: 10vh;
   width: 80%;
 }
 /* 定义步长图片动画关键帧 */
 @keyframes image-animation {
   0% {
-    background-image: v-bind("'url(' + armsConfig.animation1 + ')'");
+    background-image: v-bind("'url(' + internationalityConfig.animation1 + ')'");
   }
 
   25% {
-    background-image: v-bind("'url(' + armsConfig.animation4 + ')'");
+    background-image: v-bind("'url(' + internationalityConfig.animation4 + ')'");
   }
 
   75% {
-    background-image: v-bind("'url(' + armsConfig.animation8 + ')'");
+    background-image: v-bind("'url(' + internationalityConfig.animation8 + ')'");
   }
 
   100% {
-    background-image: v-bind("'url(' + armsConfig.animation12 + ')'");
+    background-image: v-bind("'url(' + internationalityConfig.animation12 + ')'");
   }
 }
 

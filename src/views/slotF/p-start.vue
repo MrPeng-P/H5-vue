@@ -1,7 +1,7 @@
 <script>
 
-import playarms2 from "@/assets/slotF5/playarms2.png";
-import boxarms from "@/assets/slotF5/boxarms.jpg";
+import playinternationality2 from "@/assets/slotF6/playinternationality.png";
+import boxinternationality from "@/assets/slotF6/boxinternationality.png";
 import { onMounted, reactive, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
@@ -9,9 +9,9 @@ export default {
   setup() {
     const router = new useRouter();
     const className = "container";
-    const armsConfig = reactive({
-      playarms2,
-      boxarms,
+    const internationalityConfig = reactive({
+      playinternationality2,
+      boxinternationality,
     });
    
 
@@ -25,7 +25,7 @@ export default {
     });
     return {
         className,
-      armsConfig,
+      internationalityConfig,
       ...allMethods,
     };
   },
@@ -34,7 +34,7 @@ export default {
 <template>
   
   <div :class="className" @click="goHome">
-    <div class="starms" >
+    <div class="stinternationality" >
     </div>
   </div>
 </template>
@@ -42,17 +42,17 @@ export default {
 <style scoped>
 
 
-.starms{
+.stinternationality{
   margin-top: 1%;
     width: 20%;
     height: 252px;
-  background: v-bind("'url(' + armsConfig.playarms2 + ')'") no-repeat;
+  /* background: v-bind("'url(' + internationalityConfig.playinternationality2 + ')'") no-repeat; */
   background-size: 100%;
   z-index: 99;
 
 }
 .container {
-  background: v-bind("'url(' + armsConfig.boxarms + ')'") no-repeat;
+  background: v-bind("'url(' + internationalityConfig.boxinternationality + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -63,7 +63,7 @@ export default {
 }
 
 
-.armsp-he {
+.internationalityp-he {
   position: relative;
     margin-top: 26%;
     width: 140%;
@@ -72,7 +72,7 @@ export default {
     justify-content: space-between;
     transform: scale(0.65);
 }
-.armsp-hidden{
+.internationalityp-hidden{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -81,11 +81,11 @@ export default {
   overflow: hidden;
 
 }
-.armsp-item {
+.internationalityp-item {
   
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + armsConfig.anyarms + ')'") ;
+  background: v-bind("'url(' + internationalityConfig.anyinternationality + ')'") ;
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
@@ -95,7 +95,7 @@ export default {
   padding-top: 155px;
     display: flex;
     justify-content: center;
-    align-items: flex-starms;
+    align-items: flex-stinternationality;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -103,7 +103,7 @@ export default {
     height: 100vh;
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.5);
-  /* background: v-bind("'url(' + armsConfig.dialogarms + ')'") no-repeat; */
+  /* background: v-bind("'url(' + internationalityConfig.dialoginternationality + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star{
@@ -115,12 +115,12 @@ export default {
 
 }
 
-.starms-bg{
+.stinternationality-bg{
     position: absolute;
     top: 0;
     z-index: 1;
 }
-.starms-bg img{
+.stinternationality-bg img{
     width: 100%;
 }
 </style>
