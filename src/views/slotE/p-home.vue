@@ -1,35 +1,35 @@
 <script>
-import playstorm from "@/assets/slotE5/playstorm.png";
-// import playstorm2 from "@/assets/slotE5/playstorm2.png";
-// import playstorm3 from "@/assets/slotE5/playstorm3.png";
-import boxstorm from "@/assets/slotE5/boxstorm.jpg";
-import anystorm from "@/assets/slotE5/changeHstorm.png";
-import anyBoxstorm from "@/assets/slotE5/anyBoxstorm.jpg";
-import homestorm from "@/assets/slotE5/homestorm.png";
-// import againstorm from "@/assets/slotE5/againstorm.png";
-import countstorm from "@/assets/slotE5/countstorm.png";
-// import rulestorm from "@/assets/slotE5/rulestorm.png";
-// import ruleDialogstorm from "@/assets/slotE5/ruleDialogstorm.jpg";
-// import resultstorm from "@/assets/slotE5/resultstorm.png";
-// import headstorm from "@/assets/slotE5/headstorm.png";
+import playharvest from "@/assets/slotE7/playharvest.png";
+// import playharvest2 from "@/assets/slotE7/playharvest2.png";
+// import playharvest3 from "@/assets/slotE7/playharvest3.png";
+import boxharvest from "@/assets/slotE7/boxharvest.jpg";
+import anyharvest from "@/assets/slotE7/changeHharvest.png";
+import anyBoxharvest from "@/assets/slotE7/anyBoxharvest.jpg";
+import homeharvest from "@/assets/slotE7/homeharvest.png";
+// import againharvest from "@/assets/slotE7/againharvest.png";
+import countharvest from "@/assets/slotE7/countharvest.png";
+// import ruleharvest from "@/assets/slotE7/ruleharvest.png";
+// import ruleDialogharvest from "@/assets/slotE7/ruleDialogharvest.jpg";
+// import resultharvest from "@/assets/slotE7/resultharvest.png";
+// import headharvest from "@/assets/slotE7/headharvest.png";
 
-// import star from "@/assets/slotE5/starstorm.gif";
+// import star from "@/assets/slotE7/starharvest.gif";
 import { useRouter, useRoute } from "vue-router";
-import storm1 from "@/assets/slotE5/storm1.png";
-import storm2 from "@/assets/slotE5/storm2.png";
-import storm3 from "@/assets/slotE5/storm3.png";
-import storm4 from "@/assets/slotE5/storm4.png";
-import storm5 from "@/assets/slotE5/storm5.png";
-import storm6 from "@/assets/slotE5/storm6.png";
-import storm7 from "@/assets/slotE5/storm7.png";
+import harvest1 from "@/assets/slotE7/harvest1.png";
+import harvest2 from "@/assets/slotE7/harvest2.png";
+import harvest3 from "@/assets/slotE7/harvest3.png";
+import harvest4 from "@/assets/slotE7/harvest4.png";
+import harvest5 from "@/assets/slotE7/harvest5.png";
+import harvest6 from "@/assets/slotE7/harvest6.png";
+import harvest7 from "@/assets/slotE7/harvest7.png";
 
-// import animation1 from "@/assets/slotE5/dong/00001.png";
-// import animation4 from "@/assets/slotE5/dong/00004.png";
-// import animation8 from "@/assets/slotE5/dong/00008.png";
-// import animation12 from "@/assets/slotE5/dong/00012.png";
+// import animation1 from "@/assets/slotE7/dong/00001.png";
+// import animation4 from "@/assets/slotE7/dong/00004.png";
+// import animation8 from "@/assets/slotE7/dong/00008.png";
+// import animation12 from "@/assets/slotE7/dong/00012.png";
 
 import { inject } from "vue";
-// import football from "@/assets/slotE5/football.png";
+// import football from "@/assets/slotE7/football.png";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
@@ -61,31 +61,31 @@ export default {
     const router = new useRouter();
     // 随机生成 12 张图的数组
     let randomImages = [];
-    const stormConfig = reactive({
-      // headstorm,
+    const harvestConfig = reactive({
+      // headharvest,
       // animation1,
       // animation4,
       // animation8,
       // animation12,
-      anystorm,
-      playstorm,
-      // playstorm2,
-      // playstorm3,
-      // againstorm,
-      anyBoxstorm,
-      boxstorm,
-      homestorm,
+      anyharvest,
+      playharvest,
+      // playharvest2,
+      // playharvest3,
+      // againharvest,
+      anyBoxharvest,
+      boxharvest,
+      homeharvest,
       //   star,
-      // senioritystorm,
-      countstorm,
-      // rulestorm,
-      // ruleDialogstorm,
-      // resultstorm
+      // seniorityharvest,
+      countharvest,
+      // ruleharvest,
+      // ruleDialogharvest,
+      // resultharvest
     });
-    const stormList = reactive([
+    const harvestList = reactive([
       {
         name: "item1",
-        size: 1,
+        size: 0,
         imgList: [],
       },
       {
@@ -105,43 +105,43 @@ export default {
       },
       {
         name: "item5",
-        size: 1,
+        size: 0,
         imgList: [],
       },
     ]);
     let timeOhter = 0;
     let id;
-    let ststorm = ref(false);
+    let stharvest = ref(false);
     let open = ref(false);
     let buttonStatus = ref(true);
     const images = [
       {
-        img: storm1,
-        name: "storm2",
+        img: harvest1,
+        name: "harvest2",
         className: "animation",
         count: 1800 * magnification.value,
       },
       {
-        img: storm2,
-        name: "storm1",
+        img: harvest2,
+        name: "harvest1",
         className: "animation",
         count: 1000 * magnification.value,
       },
       {
-        img: storm3,
+        img: harvest3,
       },
       {
-        img: storm4,
+        img: harvest4,
       },
       {
-        img: storm5,
+        img: harvest5,
       },
       {
-        img: storm6,
+        img: harvest6,
       },
       {
-        img: storm7,
-        name: "storm3",
+        img: harvest7,
+        name: "harvest3",
         className: "animation",
         count: 2200 * magnification.value,
       },
@@ -160,11 +160,11 @@ export default {
         buttonStatus.value = false;
 
         allMethods.clear();
-        const boxLists = stormList.map((item) => {
+        const boxLists = harvestList.map((item) => {
           return document.getElementById(item.name);
         });
         boxLists[0].style.setProperty("background-position-x", "center");
-        boxLists[0].querySelectorAll(".stormp-item-img").forEach((child) => {
+        boxLists[0].querySelectorAll(".harvestp-item-img").forEach((child) => {
           child.style.setProperty("display", "none");
         });
         // boxLists.forEach((item)=>{
@@ -177,9 +177,9 @@ export default {
         //       0+'px'
         //     );
         // })
-        const content = document.getElementById("stormp-he");
-        const box2 = document.getElementById("stormp");
-        const coords = { x: 0, y: 0 }; // Ststorm at (0, 0)
+        const content = document.getElementById("harvestp-he");
+        const box2 = document.getElementById("harvestp");
+        const coords = { x: 0, y: 0 }; // Stharvest at (0, 0)
         const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to(
             { x: 0, y: (1120 * content.clientHeight) / box2.clientHeight },
@@ -188,33 +188,33 @@ export default {
           .easing() // Use an easing function to make the animation smooth.
           .onUpdate(() => {
             if (timeOhter > 1000 && timeOhter <= 4000) {
-              boxLists[1].style.setProperty(
-                "background-position-y",
-                -coords.y + "px"
-              );
-            }
-
-            if (timeOhter > 2000 && timeOhter <= 5000) {
               boxLists[2].style.setProperty(
                 "background-position-y",
                 -coords.y + "px"
               );
             }
 
-            if (timeOhter > 3000 && timeOhter <= 6000) {
+            if (timeOhter > 2000 && timeOhter <= 5000) {
               boxLists[3].style.setProperty(
                 "background-position-y",
                 -coords.y + "px"
               );
             }
-            if (timeOhter > 4000 && timeOhter <= 7000) {
-              boxLists[4].style.setProperty(
-                "background-position-y",
-                -coords.y + "px"
-              );
-            }
+
+            // if (timeOhter > 3000 && timeOhter <= 6000) {
+            //   boxLists[3].style.setProperty(
+            //     "background-position-y",
+            //     -coords.y + "px"
+            //   );
+            // }
+            // if (timeOhter > 4000 && timeOhter <= 7000) {
+            //   boxLists[4].style.setProperty(
+            //     "background-position-y",
+            //     -coords.y + "px"
+            //   );
+            // }
             if (timeOhter > 0 && timeOhter <= 3000) {
-              boxLists[0].style.setProperty(
+              boxLists[1].style.setProperty(
                 "background-position-y",
                 -coords.y + "px"
               );
@@ -223,7 +223,7 @@ export default {
           .repeat(Infinity)
           .yoyo(false)
           .repeatDelay(0);
-          tween.start(); // Ststorm the tween immediately.
+          tween.start(); // Stharvest the tween immediately.
         let nowDate = window.performance.now();
         function animate(time) {
           timeOhter = time - nowDate;
@@ -237,7 +237,7 @@ export default {
         let i = 0;
         let timeany = setInterval(() => {
           i++;
-          if (i > 7) {
+          if (i > 5) {
             sessionStorage.setItem("countValue", countValue.value);
 
             open.value = true;
@@ -247,42 +247,43 @@ export default {
           }
           if (i > 0 && i < 4) {
             boxLists[i].style.setProperty("background-position-x", "center");
-            boxLists[i].querySelectorAll(".stormp-item-img").forEach((child) => {
+            boxLists[i].querySelectorAll(".harvestp-item-img").forEach((child) => {
               child.style.setProperty("display", "none");
             });
           }
           if (i == 3) {
-            boxLists[0].style.setProperty("background-position-x", 600 + "px");
-            boxLists[0].querySelectorAll(".stormp-item-img").forEach((child) => {
+            boxLists[1].style.setProperty("background-position-x", 600 + "px");
+            boxLists[1].querySelectorAll(".harvestp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 4) {
-            boxLists[1].style.setProperty("background-position-x", 600 + "px");
-            boxLists[1].querySelectorAll(".stormp-item-img").forEach((child) => {
+            boxLists[2].style.setProperty("background-position-x", 600 + "px");
+            boxLists[2].querySelectorAll(".harvestp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 5) {
-            boxLists[2].style.setProperty("background-position-x", 600 + "px");
-            boxLists[2].querySelectorAll(".stormp-item-img").forEach((child) => {
-              child.style.setProperty("display", "block");
-            });
-          }
-          if (i == 6) {
             boxLists[3].style.setProperty("background-position-x", 600 + "px");
-            boxLists[3].querySelectorAll(".stormp-item-img").forEach((child) => {
-              child.style.setProperty("display", "block");
-            });
-            // countValue.value += useCount.value*magn;
-          }
-          if (i == 7) {
-            boxLists[4].style.setProperty("background-position-x", 600 + "px");
-            boxLists[4].querySelectorAll(".stormp-item-img").forEach((child) => {
+            boxLists[3].querySelectorAll(".harvestp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
             countValue.value += useCount.value*magn;
           }
+          // if (i == 6) {
+          //   boxLists[3].style.setProperty("background-position-x", 600 + "px");
+          //   boxLists[3].querySelectorAll(".harvestp-item-img").forEach((child) => {
+          //     child.style.setProperty("display", "block");
+          //   });
+          //   // countValue.value += useCount.value*magn;
+          // }
+          // if (i == 7) {
+          //   boxLists[4].style.setProperty("background-position-x", 600 + "px");
+          //   boxLists[4].querySelectorAll(".harvestp-item-img").forEach((child) => {
+          //     child.style.setProperty("display", "block");
+          //   });
+          //   countValue.value += useCount.value*magn;
+          // }
         }, 1000);
       },
       clear: () => {
@@ -318,7 +319,7 @@ export default {
         // 定义 8 张图的数组
 
         // 定义需要生成的总图片数量
-        const totalImages = 15;
+        const totalImages = 11;
 
         while (randomImages.length < totalImages) {
           // 从原始图片数组中随机选择一张图片
@@ -329,7 +330,7 @@ export default {
           randomImages.push(randomImage);
         }
 
-        allMethods.assignImageList(stormList, randomImages);
+        allMethods.assignImageList(harvestList, randomImages);
       },
       // 随机生成图像列表
       shuffleArray(array) {
@@ -338,11 +339,11 @@ export default {
           [array[i], array[j]] = [array[j], array[i]];
         }
         array.forEach((item) => {
-          if (item.name == "storm1") {
+          if (item.name == "harvest1") {
             arrCount[0].value++;
-          } else if (item.name == "storm2") {
+          } else if (item.name == "harvest2") {
             arrCount[1].value++;
-          } else if (item.name == "storm3") {
+          } else if (item.name == "harvest3") {
             arrCount[2].value++;
           }
           if (item.count) {
@@ -352,13 +353,13 @@ export default {
         return array;
       },
 
-      // 将图像列表分配给stormList
-      assignImageList(stormList, images) {
+      // 将图像列表分配给harvestList
+      assignImageList(harvestList, images) {
         const shuffledImages = allMethods.shuffleArray(images.slice()); // 避免修改原始数组
 
         let currentIndex = 0;
 
-        stormList.forEach((item) => {
+        harvestList.forEach((item) => {
           const numImages = Math.min(item.size, 5);
           item.imgList = shuffledImages.slice(
             currentIndex,
@@ -366,7 +367,7 @@ export default {
           );
           currentIndex += numImages;
         });
-        return stormList;
+        return harvestList;
       },
       goSeniority: () => {
         router.push("/list");
@@ -376,10 +377,10 @@ export default {
     return {
       className,
       open,
-      ststorm,
-      stormConfig,
+      stharvest,
+      harvestConfig,
       randomImages,
-      stormList,
+      harvestList,
       countValue,
       useCount,
       showRuleValue,
@@ -391,23 +392,23 @@ export default {
 </script>
 <template>
   <div :class="className">
-    <!-- <img class="headstorm" :src="stormConfig.headstorm" alt=""> -->
-    <div class="stormp" id="stormp">
-      <div class="stormp-he" id="stormp-he">
-        <!-- <img class="storm-rule" @click="showRule" :src="stormConfig.rulestorm" alt=""> -->
-        <div class="stormp-hidden">
+    <!-- <img class="headharvest" :src="harvestConfig.headharvest" alt=""> -->
+    <div class="harvestp" id="harvestp">
+      <div class="harvestp-he" id="harvestp-he">
+        <!-- <img class="harvest-rule" @click="showRule" :src="harvestConfig.ruleharvest" alt=""> -->
+        <div class="harvestp-hidden">
           <div
-            class="stormp-item-box"
+            class="harvestp-item-box"
            
-            v-for="(item, index) in stormList"
+            v-for="(item, index) in harvestList"
           >
-           <div class="stormp-item"  :id="item.name">
+           <div class="harvestp-item"  :id="item.name">
             <div
               v-for="(imgItem, imgIndex) in item.imgList"
               :class="
                 imgItem.className
-                  ? 'stormp-item-img ' + imgItem.className
-                  : 'stormp-item-img'
+                  ? 'harvestp-item-img ' + imgItem.className
+                  : 'harvestp-item-img'
               "
             >
               <img :src="imgItem.img" alt="" />
@@ -416,39 +417,39 @@ export default {
           </div>
         </div>
       </div>
-      <div class="buttonstorm-box">
+      <div class="buttonharvest-box">
         <div class="buttons" @click="close"></div>
 
-        <div class="buttonsstorm2" @click="run()"></div>
+        <div class="buttonsharvest2" @click="run()"></div>
        
-        <div class="buttonsstormBack" @click="run()"></div>
+        <div class="buttonsharvestBack" @click="run()"></div>
 
         <!-- <div class="buttons2" @click="goSeniority"></div> -->
 
-        <div class="storm-count" @click="showRule">
-          <!-- <img class="storm-rule" :src="stormConfig.rulestorm" alt="" /> -->
-          <img :src="stormConfig.countstorm" alt="" />
+        <div class="harvest-count" @click="showRule">
+          <!-- <img class="harvest-rule" :src="harvestConfig.ruleharvest" alt="" /> -->
+          <img :src="harvestConfig.countharvest" alt="" />
           <div class="countValue">{{ countValue }}</div>
         </div>
       </div>
-      <div class="stormd-stormp">
-        <div class="stormd-back" @click="close"></div>
+      <div class="harvestd-harvestp">
+        <div class="harvestd-back" @click="close"></div>
       </div>
     </div>
     <Teleport to="body">
       <div v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="stormConfig.star" alt="" /> -->
-        <!-- <img class="model-img-bg" :src="stormConfig.resultstorm" alt="" /> -->
-        <!-- <div class="modelstorm-list">
+        <!-- <img class="model-star" :src="harvestConfig.star" alt="" /> -->
+        <!-- <img class="model-img-bg" :src="harvestConfig.resultharvest" alt="" /> -->
+        <!-- <div class="modelharvest-list">
           <div
-            class="modelstorm-item"
+            class="modelharvest-item"
             v-for="(item, index) in arrCount"
             :key="index"
           >
             {{ item.count + "X" + item.value }}
           </div>
-          <div class="modelstorm-total">{{ useCount }}</div>
+          <div class="modelharvest-total">{{ useCount }}</div>
         </div> -->
       </div>
     </Teleport>
@@ -456,8 +457,8 @@ export default {
     <Teleport to="body">
       <div v-if="showRuleValue" class="modal" @click="showRule">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="stormConfig.star" alt="" /> -->
-        <!-- <img class="model-img" :src="stormConfig.ruleDialogstorm" alt="" /> -->
+        <!-- <img class="model-star" :src="harvestConfig.star" alt="" /> -->
+        <!-- <img class="model-img" :src="harvestConfig.ruleDialogharvest" alt="" /> -->
       </div>
     </Teleport>
   </div>
@@ -469,7 +470,7 @@ export default {
 
   width: 280px;
 }
-.stormd-stormp {
+.harvestd-harvestp {
   display: flex;
   align-items: center;
   /* padding: 60px 15px; */
@@ -480,45 +481,44 @@ export default {
   color: #fff;
 }
 .countValue {
-  margin: 0% 0 -42%;
+  margin: 0% 11% 0%;
     color: #FFF;
     font-size: 18px;
-    transform: rotateZ(90deg);
 }
 
-.storm-count img {
+.harvest-count img {
   width: 100%;
   position: absolute;
   height: 100%;
   /* top: -16%; */
   z-index: -1;
 }
-.storm-count .storm-rule {
+.harvest-count .harvest-rule {
   position: absolute;
   left: -9%;
   width: 45px;
   height: 45px;
 }
-.stormd-back {
-  /* background: v-bind("'url(' + stormConfig.homestorm + ')'") no-repeat; */
+.harvestd-back {
+  /* background: v-bind("'url(' + harvestConfig.homeharvest + ')'") no-repeat; */
 
   width: 36px;
   height: 42px;
   background-size: 100%;
   z-index: 999;
 }
-.ststorm {
+.stharvest {
   margin-top: -30%;
   width: 160px;
   height: 80px;
-  background: v-bind("'url(' + stormConfig.playstorm + ')'") no-repeat;
+  background: v-bind("'url(' + harvestConfig.playharvest + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 }
 .container {
   display: flex;
   flex-direction: column;
-  background: v-bind("'url(' + stormConfig.boxstorm + ')'") no-repeat;
+  background: v-bind("'url(' + harvestConfig.boxharvest + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -528,7 +528,7 @@ export default {
   align-items: center;
 }
 
-.stormp {
+.harvestp {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -538,44 +538,44 @@ export default {
   /* height: 100vh; */
   overflow: hidden;
 
-  background: v-bind("'url(' + stormConfig.anyBoxstorm + ')'") no-repeat;
-  background-size: 100% 100%;
-    background-position: center 0%;
+  background: v-bind("'url(' + harvestConfig.anyBoxharvest + ')'") no-repeat;
+  background-size: 120% 114%;
+    background-position: center 15%;
 
   color: #fff;
   font-weight: 600;
   font-size: 26;
 }
 
-.buttonstorm-box {
+.buttonharvest-box {
   position: absolute;
     top: 5%;
-    left: 21%;
+    left: 31%;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     width: 88%;
     height: 86%;
 }
-.storm-count {
+.harvest-count {
   position: relative;
-  width: 7%;
-    height: 99%;
-    margin-left: 61%;
-    margin-top: 0%;
+  width: 33%;
+    height: 15%;
+    margin-left: -26%;
+    margin-top: -0.5%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     font-size: 16px;
     z-index: 1;
 }
 
 .buttons {
-  margin-left: 61%;
-    margin-top: -1%;
-    width: 6%;
-    height: 25%;
-  z-index: 999;
-  background: v-bind("'url(' + stormConfig.homestorm + ')'") no-repeat;
+  margin-left: -22%;
+    margin-top: 0%;
+    width: 7%;
+    height: 16%;
+    z-index: 999;
+  background: v-bind("'url(' + harvestConfig.homeharvest + ')'") no-repeat;
   background-size: 100% 100%;
 }
 .buttons2 {
@@ -584,84 +584,82 @@ export default {
     width: 7%;
     height: 54.5%;
   z-index: 999;
-  /* background: v-bind("'url(' + stormConfig.senioritystorm + ')'") no-repeat; */
+  /* background: v-bind("'url(' + harvestConfig.seniorityharvest + ')'") no-repeat; */
   background-size: 100% 100%;
 }
-.buttonsstormBack{
+.buttonsharvestBack{
   position: absolute;
   left: 65.5%;
     margin-top: 64%;
     width: 38%;
     height: 45.5%;
   z-index: 999;
-  /* background: v-bind("'url(' + stormConfig.againstorm + ')'") no-repeat; */
+  /* background: v-bind("'url(' + harvestConfig.againharvest + ')'") no-repeat; */
   background-size: 100% 100%;
 }
 
-.buttonsstorm2{
-
-  margin-left: 61%;
-    margin-top: 0%;
-    width: 7%;
-    height: 57.5%;
-
+.buttonsharvest2{
+  margin-left: 58%;
+    margin-top: 8%;
+    width: 16%;
+    height: 13.5%;
   z-index: 999;
-  background: v-bind("'url(' + stormConfig.playstorm + ')'") no-repeat;
+  background: v-bind("'url(' + harvestConfig.playharvest + ')'") no-repeat;
   background-size: 100% 100%;
 }
-.stormp-he {
+.harvestp-he {
   position: relative;
-  margin-right: -5%;
+  margin-right: -16%;
     width: 75%;
     height: 46vw;
     display: flex;
     justify-content: space-between;
-    transform: scale(0.67);
+    transform: scale(0.77);
 }
 
-.stormp-hidden {
+.harvestp-hidden {
   /* margin-top: 2%; */
   /* margin-left: 1%; */
-  margin-top: -4%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 105%;
-    height: 187%;
-    transform: rotateZ(55deg) translate(-17vw,-5vw);
-
+  margin-top: -6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 105%;
+    height: 190%;
+    transform: rotateZ(-57.5deg) translate(7vw,-17vw);
   overflow: hidden;
 }
-.stormp-item-box{
+.harvestp-item-box{
   height: 100%;
   flex: 1;
  
     overflow: hidden;
 }
 
-.stormp-item-box:nth-child(1),.stormp-item-box:nth-child(5){
+.harvestp-item-box:nth-child(1),.harvestp-item-box:nth-child(5){
+ 
   height:20%;
-  transform: translateY(16vw);
-  .stormp-item{
-    background-size: 76% 783%;
+  transform: translate(-1002vw,-22vw);
+  .harvestp-item{
+    background-size: 75% 690%;
 
   }
 }
-.stormp-item-box:nth-child(5){
-  transform: translate(3vw,-10vw);
+.harvestp-item-box:nth-child(5){
+  transform: translate(-1002vw,24vw);
 }
-.stormp-item-box:nth-child(2),.stormp-item-box:nth-child(4){
-  transform: translate(-2vw,8vw);
+.harvestp-item-box:nth-child(2),.harvestp-item-box:nth-child(4){
+  transform: translate(-2vw,-7vw);
   height: 60%;
-  .stormp-item{
-    background-size: 76% 266%;
+  .harvestp-item{
+    background-size: 94% 292%;
 
   }
 }
-.stormp-item-box:nth-child(4){
-  transform: translate(1vw,-5vw);
+.harvestp-item-box:nth-child(4){
+  transform: translate(1vw,9vw);
 }
-.stormp-item {
+.harvestp-item {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -669,35 +667,35 @@ export default {
 
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + stormConfig.anystorm + ')'");
+  background: v-bind("'url(' + harvestConfig.anyharvest + ')'");
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
-  background-size: 76% 166%;
+  background-size: 94% 171%;
 }
-.stormp-item:nth-child(2){
+.harvestp-item:nth-child(2){
   /* margin-right: 20%; */
 }
-.stormp-item-img {
+.harvestp-item-img {
   position: relative;
 
   display: none;
   width: 100%;
   height: 100%;
 }
-.stormp-item-img img {
+.harvestp-item-img img {
   position: absolute;
-  top: 32%;
+    top: 32%;
     left: 48%;
-  transform: translate(-50%, -50%) scale(1.1);
-  z-index: -1;
-  width: 64%;
-    height: 60%;
+    transform: translate(-50%, -23%) scale(1.1);
+    z-index: -1;
+    width: 63%;
+    height: 55%;
 }
 .modal {
   display: flex;
   justify-content: center;
-  align-items: flex-ststorm;
+  align-items: flex-stharvest;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -705,7 +703,7 @@ export default {
   height: 100vh;
   z-index: 9999;
   /* background-color: rgba(0, 0, 0, 0.5); */
-  /* background: v-bind("'url(' + stormConfig.dialogstorm + ')'") no-repeat; */
+  /* background: v-bind("'url(' + harvestConfig.dialogharvest + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star {
@@ -727,17 +725,17 @@ export default {
   width: 70%;
 }
 
-.ststorm-bg {
+.stharvest-bg {
   position: absolute;
 
   top: 0;
   z-index: 1;
 }
-.ststorm-bg img {
+.stharvest-bg img {
   width: 100%;
 }
 
-.modelstorm-list {
+.modelharvest-list {
   position: absolute;
   left: 60%;
   top: 39.5%;
@@ -749,33 +747,33 @@ export default {
   font-size: 16px;
   /* transform: rotate(7deg) translateX(-36px); */
 }
-.modelstorm-item {
+.modelharvest-item {
   margin-bottom: 11px;
 }
-.modelstorm-total {
+.modelharvest-total {
   padding: 7px 14px;
 }
 
-.headstorm {
+.headharvest {
   margin-top: 10vh;
   width: 80%;
 }
 /* 定义步长图片动画关键帧 */
 @keyframes image-animation {
   0% {
-    background-image: v-bind("'url(' + stormConfig.animation1 + ')'");
+    background-image: v-bind("'url(' + harvestConfig.animation1 + ')'");
   }
 
   25% {
-    background-image: v-bind("'url(' + stormConfig.animation4 + ')'");
+    background-image: v-bind("'url(' + harvestConfig.animation4 + ')'");
   }
 
   75% {
-    background-image: v-bind("'url(' + stormConfig.animation8 + ')'");
+    background-image: v-bind("'url(' + harvestConfig.animation8 + ')'");
   }
 
   100% {
-    background-image: v-bind("'url(' + stormConfig.animation12 + ')'");
+    background-image: v-bind("'url(' + harvestConfig.animation12 + ')'");
   }
 }
 

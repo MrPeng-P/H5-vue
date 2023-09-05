@@ -1,7 +1,7 @@
 <script>
 
-// import playstorm from "@/assets/slotE5/playstorm.png";
-import boxstorm from "@/assets/slotE5/boxstorm.jpg";
+// import playharvest from "@/assets/slotE7/playharvest.png";
+import boxharvest from "@/assets/slotE7/boxharvest.jpg";
 import { onMounted, reactive, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
@@ -9,9 +9,9 @@ export default {
   setup() {
     const router = new useRouter();
     const className = "container";
-    const stormConfig = reactive({
-      // playstorm,
-      boxstorm,
+    const harvestConfig = reactive({
+      // playharvest,
+      boxharvest,
     });
    
 
@@ -25,7 +25,7 @@ export default {
     });
     return {
         className,
-      stormConfig,
+      harvestConfig,
       ...allMethods,
     };
   },
@@ -34,7 +34,7 @@ export default {
 <template>
   
   <div :class="className" @click="goHome">
-    <div class="ststorm" >
+    <div class="stharvest" >
     </div>
   </div>
 </template>
@@ -42,17 +42,17 @@ export default {
 <style scoped>
 
 
-.ststorm{
+.stharvest{
   margin-top: 27%;
     width: 30%;
     height: 252px;
-  /* background: v-bind("'url(' + stormConfig.playstorm + ')'") no-repeat; */
+  /* background: v-bind("'url(' + harvestConfig.playharvest + ')'") no-repeat; */
   background-size: 100%;
   z-index: 99;
 
 }
 .container {
-  background: v-bind("'url(' + stormConfig.boxstorm + ')'") no-repeat;
+  background: v-bind("'url(' + harvestConfig.boxharvest + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -63,7 +63,7 @@ export default {
 }
 
 
-.stormp-he {
+.harvestp-he {
   position: relative;
     margin-top: 26%;
     width: 140%;
@@ -72,7 +72,7 @@ export default {
     justify-content: space-between;
     transform: scale(0.65);
 }
-.stormp-hidden{
+.harvestp-hidden{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -81,11 +81,11 @@ export default {
   overflow: hidden;
 
 }
-.stormp-item {
+.harvestp-item {
   
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + stormConfig.anystorm + ')'") ;
+  background: v-bind("'url(' + harvestConfig.anyharvest + ')'") ;
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
@@ -95,7 +95,7 @@ export default {
   padding-top: 155px;
     display: flex;
     justify-content: center;
-    align-items: flex-ststorm;
+    align-items: flex-stharvest;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -103,7 +103,7 @@ export default {
     height: 100vh;
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.5);
-  /* background: v-bind("'url(' + stormConfig.dialogstorm + ')'") no-repeat; */
+  /* background: v-bind("'url(' + harvestConfig.dialogharvest + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star{
@@ -115,12 +115,12 @@ export default {
 
 }
 
-.ststorm-bg{
+.stharvest-bg{
     position: absolute;
     top: 0;
     z-index: 1;
 }
-.ststorm-bg img{
+.stharvest-bg img{
     width: 100%;
 }
 </style>
