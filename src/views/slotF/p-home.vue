@@ -1,37 +1,37 @@
 <script>
-import playinternationality from "@/assets/slotF6/playinternationality.png";
-// import playinternationality2 from "@/assets/slotF6/playinternationality2.png";
-// import playinternationality3 from "@/assets/slotF6/playinternationality3.png";
-import boxinternationality from "@/assets/slotF6/boxinternationality.png";
-import anyinternationality from "@/assets/slotF6/changeinternationality.png";
-import anyBoxinternationality from "@/assets/slotF6/anyBoxinternationality.jpg";
-import homeinternationality from "@/assets/slotF6/homeinternationality.png";
-// import againinternationality from "@/assets/slotF6/againinternationality.png";
-import peiinternationality from "@/assets/slotF6/peiinternationality.png";
+import playjaguar from "@/assets/slotF7/playjaguar.png";
+// import playjaguar2 from "@/assets/slotF7/playjaguar2.png";
+// import playjaguar3 from "@/assets/slotF7/playjaguar3.png";
+import boxjaguar from "@/assets/slotF7/boxjaguar.jpg";
+import anyjaguar from "@/assets/slotF7/changejaguar.png";
+import anyBoxjaguar from "@/assets/slotF7/anyBoxjaguar.jpg";
+import homejaguar from "@/assets/slotF7/homejaguar.png";
+// import againjaguar from "@/assets/slotF7/againjaguar.png";
+import peijaguar from "@/assets/slotF7/peijaguar.png";
 
-import countinternationality from "@/assets/slotF6/countinternationality.png";
-// import ruleinternationality from "@/assets/slotF6/ruleinternationality.png";
-// import ruleDialoginternationality from "@/assets/slotF6/ruleDialoginternationality.jpg";
-// import resultinternationality from "@/assets/slotF6/resultinternationality.png";
-// import headinternationality from "@/assets/slotF6/headinternationality.png";
+import countjaguar from "@/assets/slotF7/countjaguar.png";
+// import rulejaguar from "@/assets/slotF7/rulejaguar.png";
+// import ruleDialogjaguar from "@/assets/slotF7/ruleDialogjaguar.jpg";
+// import resultjaguar from "@/assets/slotF7/resultjaguar.png";
+// import headjaguar from "@/assets/slotF7/headjaguar.png";
 
-// import star from "@/assets/slotF6/starinternationality.gif";
+// import star from "@/assets/slotF7/starjaguar.gif";
 import { useRouter, useRoute } from "vue-router";
-import internationality1 from "@/assets/slotF6/internationality1.png";
-import internationality2 from "@/assets/slotF6/internationality2.png";
-import internationality3 from "@/assets/slotF6/internationality3.png";
-import internationality4 from "@/assets/slotF6/internationality4.png";
-import internationality5 from "@/assets/slotF6/internationality5.png";
-import internationality6 from "@/assets/slotF6/internationality6.png";
-// import internationality7 from "@/assets/slotF6/internationality7.png";
+import jaguar1 from "@/assets/slotF7/jaguar1.png";
+import jaguar2 from "@/assets/slotF7/jaguar2.png";
+import jaguar3 from "@/assets/slotF7/jaguar3.png";
+import jaguar4 from "@/assets/slotF7/jaguar4.png";
+import jaguar5 from "@/assets/slotF7/jaguar5.png";
+import jaguar6 from "@/assets/slotF7/jaguar6.png";
+// import jaguar7 from "@/assets/slotF7/jaguar7.png";
 
-// import animation1 from "@/assets/slotF6/dong/00001.png";
-// import animation4 from "@/assets/slotF6/dong/00004.png";
-// import animation8 from "@/assets/slotF6/dong/00008.png";
-// import animation12 from "@/assets/slotF6/dong/00012.png";
+// import animation1 from "@/assets/slotF7/dong/00001.png";
+// import animation4 from "@/assets/slotF7/dong/00004.png";
+// import animation8 from "@/assets/slotF7/dong/00008.png";
+// import animation12 from "@/assets/slotF7/dong/00012.png";
 
 import { inject } from "vue";
-// import football from "@/assets/slotF6/football.png";
+// import football from "@/assets/slotF7/football.png";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
@@ -64,29 +64,29 @@ export default {
     const router = new useRouter();
     // 随机生成 12 张图的数组
     let randomImages = [];
-    const internationalityConfig = reactive({
-      // headinternationality,
+    const jaguarConfig = reactive({
+      // headjaguar,
       // animation1,
       // animation4,
       // animation8,
       // animation12,
-      peiinternationality,
-      anyinternationality,
-      playinternationality,
-      // playinternationality2,
-      // playinternationality3,
-      // againinternationality,
-      anyBoxinternationality,
-      boxinternationality,
-      homeinternationality,
+      peijaguar,
+      anyjaguar,
+      playjaguar,
+      // playjaguar2,
+      // playjaguar3,
+      // againjaguar,
+      anyBoxjaguar,
+      boxjaguar,
+      homejaguar,
       //   star,
-      // seniorityinternationality,
-      countinternationality,
-      // ruleinternationality,
-      // ruleDialoginternationality,
-      // resultinternationality
+      // seniorityjaguar,
+      countjaguar,
+      // rulejaguar,
+      // ruleDialogjaguar,
+      // resultjaguar
     });
-    const internationalityList = reactive([
+    const jaguarList = reactive([
       {
         name: "item1",
         size: 3,
@@ -115,39 +115,39 @@ export default {
     ]);
     let timeOhter = 0;
     let id;
-    let stinternationality = ref(false);
+    let stjaguar = ref(false);
     let open = ref(false);
     let buttonStatus = ref(true);
     const images = [
       {
-        img: internationality1,
-        name: "internationality2",
+        img: jaguar1,
+        name: "jaguar2",
         className: "animation",
         count: 1800 * magnification.value,
       },
       {
-        img: internationality2,
-        name: "internationality1",
+        img: jaguar2,
+        name: "jaguar1",
         className: "animation",
         count: 1000 * magnification.value,
       },
       {
-        img: internationality3,
+        img: jaguar3,
       },
       {
-        img: internationality4,
+        img: jaguar4,
       },
       {
-        img: internationality5,
+        img: jaguar5,
       },
       {
-        img: internationality6,
-        name: "internationality3",
+        img: jaguar6,
+        name: "jaguar3",
         className: "animation",
         count: 2200 * magnification.value,
       },
       // {
-      //   img: internationality7,
+      //   img: jaguar7,
        
       // },
     ];
@@ -183,11 +183,11 @@ export default {
         buttonStatus.value = false;
 
         allMethods.clear();
-        const boxLists = internationalityList.map((item) => {
+        const boxLists = jaguarList.map((item) => {
           return document.getElementById(item.name);
         });
         boxLists[0].style.setProperty("background-position-x", "center");
-        boxLists[0].querySelectorAll(".internationalityp-item-img").forEach((child) => {
+        boxLists[0].querySelectorAll(".jaguarp-item-img").forEach((child) => {
           child.style.setProperty("display", "none");
         });
         // boxLists.forEach((item)=>{
@@ -200,9 +200,9 @@ export default {
         //       0+'px'
         //     );
         // })
-        const content = document.getElementById("internationalityp-he");
-        const box2 = document.getElementById("internationalityp");
-        const coords = { x: 0, y: 0 }; // Stinternationality at (0, 0)
+        const content = document.getElementById("jaguarp-he");
+        const box2 = document.getElementById("jaguarp");
+        const coords = { x: 0, y: 0 }; // Stjaguar at (0, 0)
         const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to(
             { x: 0, y: (1120 * content.clientHeight) / box2.clientHeight },
@@ -246,7 +246,7 @@ export default {
           .repeat(Infinity)
           .yoyo(false)
           .repeatDelay(0);
-          tween.start(); // Stinternationality the tween immediately.
+          tween.start(); // Stjaguar the tween immediately.
         let nowDate = window.performance.now();
         function animate(time) {
           timeOhter = time - nowDate;
@@ -270,38 +270,38 @@ export default {
           }
           if (i > 0 && i < 4) {
             boxLists[i].style.setProperty("background-position-x", "center");
-            boxLists[i].querySelectorAll(".internationalityp-item-img").forEach((child) => {
+            boxLists[i].querySelectorAll(".jaguarp-item-img").forEach((child) => {
               child.style.setProperty("display", "none");
             });
           }
           if (i == 3) {
             boxLists[0].style.setProperty("background-position-x", 600 + "px");
-            boxLists[0].querySelectorAll(".internationalityp-item-img").forEach((child) => {
+            boxLists[0].querySelectorAll(".jaguarp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 4) {
             boxLists[1].style.setProperty("background-position-x", 600 + "px");
-            boxLists[1].querySelectorAll(".internationalityp-item-img").forEach((child) => {
+            boxLists[1].querySelectorAll(".jaguarp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 5) {
             boxLists[2].style.setProperty("background-position-x", 600 + "px");
-            boxLists[2].querySelectorAll(".internationalityp-item-img").forEach((child) => {
+            boxLists[2].querySelectorAll(".jaguarp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 6) {
             boxLists[3].style.setProperty("background-position-x", 600 + "px");
-            boxLists[3].querySelectorAll(".internationalityp-item-img").forEach((child) => {
+            boxLists[3].querySelectorAll(".jaguarp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
             countValue.value += useCount.value*magn;
           }
           // if (i == 7) {
           //   boxLists[4].style.setProperty("background-position-x", 600 + "px");
-          //   boxLists[4].querySelectorAll(".internationalityp-item-img").forEach((child) => {
+          //   boxLists[4].querySelectorAll(".jaguarp-item-img").forEach((child) => {
           //     child.style.setProperty("display", "block");
           //   });
            
@@ -352,7 +352,7 @@ export default {
           randomImages.push(randomImage);
         }
 
-        allMethods.assignImageList(internationalityList, randomImages);
+        allMethods.assignImageList(jaguarList, randomImages);
       },
       // 随机生成图像列表
       shuffleArray(array) {
@@ -361,11 +361,11 @@ export default {
           [array[i], array[j]] = [array[j], array[i]];
         }
         array.forEach((item) => {
-          if (item.name == "internationality1") {
+          if (item.name == "jaguar1") {
             arrCount[0].value++;
-          } else if (item.name == "internationality2") {
+          } else if (item.name == "jaguar2") {
             arrCount[1].value++;
-          } else if (item.name == "internationality3") {
+          } else if (item.name == "jaguar3") {
             arrCount[2].value++;
           }
           if (item.count) {
@@ -375,13 +375,13 @@ export default {
         return array;
       },
 
-      // 将图像列表分配给internationalityList
-      assignImageList(internationalityList, images) {
+      // 将图像列表分配给jaguarList
+      assignImageList(jaguarList, images) {
         const shuffledImages = allMethods.shuffleArray(images.slice()); // 避免修改原始数组
 
         let currentIndex = 0;
 
-        internationalityList.forEach((item) => {
+        jaguarList.forEach((item) => {
           const numImages = Math.min(item.size, 3);
           item.imgList = shuffledImages.slice(
             currentIndex,
@@ -389,7 +389,7 @@ export default {
           );
           currentIndex += numImages;
         });
-        return internationalityList;
+        return jaguarList;
       },
       goSeniority: () => {
         router.push("/list");
@@ -400,10 +400,10 @@ export default {
       className,
       peiValue,
       open,
-      stinternationality,
-      internationalityConfig,
+      stjaguar,
+      jaguarConfig,
       randomImages,
-      internationalityList,
+      jaguarList,
       countValue,
       useCount,
       showRuleValue,
@@ -415,22 +415,22 @@ export default {
 </script>
 <template>
   <div :class="className">
-    <!-- <img class="headinternationality" :src="internationalityConfig.headinternationality" alt=""> -->
-    <div class="internationalityp" id="internationalityp">
-      <div class="internationalityp-he" id="internationalityp-he">
-        <!-- <img class="internationality-rule" @click="showRule" :src="internationalityConfig.ruleinternationality" alt=""> -->
-        <div class="internationalityp-hidden">
+    <!-- <img class="headjaguar" :src="jaguarConfig.headjaguar" alt=""> -->
+    <div class="jaguarp" id="jaguarp">
+      <div class="jaguarp-he" id="jaguarp-he">
+        <!-- <img class="jaguar-rule" @click="showRule" :src="jaguarConfig.rulejaguar" alt=""> -->
+        <div class="jaguarp-hidden">
           <div
-            class="internationalityp-item"
+            class="jaguarp-item"
             :id="item.name"
-            v-for="(item, index) in internationalityList"
+            v-for="(item, index) in jaguarList"
           >
             <div
               v-for="(imgItem, imgIndex) in item.imgList"
               :class="
                 imgItem.className
-                  ? 'internationalityp-item-img ' + imgItem.className
-                  : 'internationalityp-item-img'
+                  ? 'jaguarp-item-img ' + imgItem.className
+                  : 'jaguarp-item-img'
               "
             >
               <img :src="imgItem.img" alt="" />
@@ -438,44 +438,44 @@ export default {
           </div>
         </div>
       </div>
-      <div class="buttoninternationality-box">
+      <div class="buttonjaguar-box">
         <div class="buttons" @click="close"></div>
         <div class="buttons2" @click="run()"></div>
 
-        <div class="buttonsinternationality2" >
+        <div class="buttonsjaguar2" >
           <div class="count" @click="peiCount(false)"></div>
           <div class="count-v">{{ peiValue }}</div>
           <div class="count" @click="peiCount(true)"></div>
         </div>
        
-        <!-- <div class="buttonsinternationalityBack" @click="run()"></div> -->
+        <!-- <div class="buttonsjaguarBack" @click="run()"></div> -->
 
 
-        <div class="internationality-count" >
-          <!-- <img class="internationality-rule" :src="internationalityConfig.ruleinternationality" alt="" /> -->
-          <img :src="internationalityConfig.countinternationality" alt="" />
+        <div class="jaguar-count" >
+          <!-- <img class="jaguar-rule" :src="jaguarConfig.rulejaguar" alt="" /> -->
+          <img :src="jaguarConfig.countjaguar" alt="" />
           <div class="countValue">{{ countValue }}</div>
         </div>
 
       </div>
-      <div class="internationalityd-internationalityp">
-        <div class="internationalityd-back" @click="close"></div>
+      <div class="jaguard-jaguarp">
+        <div class="jaguard-back" @click="close"></div>
       </div>
     </div>
     <Teleport to="body">
       <div v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="internationalityConfig.star" alt="" /> -->
-        <!-- <img class="model-img-bg" :src="internationalityConfig.resultinternationality" alt="" /> -->
-        <!-- <div class="modelinternationality-list">
+        <!-- <img class="model-star" :src="jaguarConfig.star" alt="" /> -->
+        <!-- <img class="model-img-bg" :src="jaguarConfig.resultjaguar" alt="" /> -->
+        <!-- <div class="modeljaguar-list">
           <div
-            class="modelinternationality-item"
+            class="modeljaguar-item"
             v-for="(item, index) in arrCount"
             :key="index"
           >
             {{ item.count + "X" + item.value }}
           </div>
-          <div class="modelinternationality-total">{{ useCount }}</div>
+          <div class="modeljaguar-total">{{ useCount }}</div>
         </div> -->
       </div>
     </Teleport>
@@ -483,8 +483,8 @@ export default {
     <Teleport to="body">
       <div v-if="showRuleValue" class="modal" @click="showRule">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="internationalityConfig.star" alt="" /> -->
-        <!-- <img class="model-img" :src="internationalityConfig.ruleDialoginternationality" alt="" /> -->
+        <!-- <img class="model-star" :src="jaguarConfig.star" alt="" /> -->
+        <!-- <img class="model-img" :src="jaguarConfig.ruleDialogjaguar" alt="" /> -->
       </div>
     </Teleport>
   </div>
@@ -496,7 +496,7 @@ export default {
 
   width: 280px;
 }
-.internationalityd-internationalityp {
+.jaguard-jaguarp {
   display: flex;
   align-items: center;
   /* padding: 60px 15px; */
@@ -514,7 +514,7 @@ export default {
     transform: rotateZ(90deg);
 }
 
-.internationality-count img {
+.jaguar-count img {
   width: 100%;
   position: absolute;
   height: 100%;
@@ -522,32 +522,32 @@ export default {
   
   z-index: -1;
 }
-.internationality-count .internationality-rule {
+.jaguar-count .jaguar-rule {
   position: absolute;
   left: -9%;
   width: 45px;
   height: 45px;
 }
-.internationalityd-back {
-  /* background: v-bind("'url(' + internationalityConfig.homeinternationality + ')'") no-repeat; */
+.jaguard-back {
+  /* background: v-bind("'url(' + jaguarConfig.homejaguar + ')'") no-repeat; */
 
   width: 36px;
   height: 42px;
   background-size: 100%;
   z-index: 999;
 }
-.stinternationality {
+.stjaguar {
   margin-top: -30%;
   width: 160px;
   height: 80px;
-  background: v-bind("'url(' + internationalityConfig.playinternationality + ')'") no-repeat;
+  background: v-bind("'url(' + jaguarConfig.playjaguar + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 }
 .container {
   display: flex;
   flex-direction: column;
-  background: v-bind("'url(' + internationalityConfig.boxinternationality + ')'") no-repeat;
+  background: v-bind("'url(' + jaguarConfig.boxjaguar + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -557,7 +557,7 @@ export default {
   align-items: center;
 }
 
-.internationalityp {
+.jaguarp {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -567,7 +567,7 @@ export default {
   /* height: 100vh; */
   overflow: hidden;
 
-  background: v-bind("'url(' + internationalityConfig.anyBoxinternationality + ')'") no-repeat;
+  background: v-bind("'url(' + jaguarConfig.anyBoxjaguar + ')'") no-repeat;
   background-size: 120%;
     background-position: center 36%;
 
@@ -576,10 +576,10 @@ export default {
   font-size: 26;
 }
 
-.buttoninternationality-box {
+.buttonjaguar-box {
   position: absolute;
-  top: 90%;
-    left: 17%;
+  top: 93%;
+    left: 21%;
   display: flex;
   /* flex-direction: column; */
 
@@ -587,7 +587,7 @@ export default {
   height: 25%;
   /* justify-content: space-between; */
 }
-.internationality-count {
+.jaguar-count {
   position: relative;
   width: 8%;
     height: 307%;
@@ -607,7 +607,7 @@ export default {
     width: 6%;
     height: 49%;
     z-index: 999;
-  background: v-bind("'url(' + internationalityConfig.homeinternationality + ')'") no-repeat;
+  background: v-bind("'url(' + jaguarConfig.homejaguar + ')'") no-repeat;
   background-size: 100% 100%;
 }
 .buttons2 {
@@ -615,21 +615,21 @@ export default {
     margin-top: -44%;
     width: 13%;
     height: 39%;
-   background: v-bind("'url(' + internationalityConfig.playinternationality + ')'") no-repeat;
+   background: v-bind("'url(' + jaguarConfig.playjaguar + ')'") no-repeat;
   background-size: 100% 100%;
 }
-.buttonsinternationalityBack{
+.buttonsjaguarBack{
   position: absolute;
   left: 34.5%;
     margin-top: 57%;
     width: 38%;
     height: 58.5%;
   z-index: 999;
-  /* background: v-bind("'url(' + internationalityConfig.againinternationality + ')'") no-repeat; */
+  /* background: v-bind("'url(' + jaguarConfig.againjaguar + ')'") no-repeat; */
   background-size: 100% 100%;
 }
 
-.buttonsinternationality2{
+.buttonsjaguar2{
   display: flex;
   /* flex-direction: column; */
   margin-left: 16%;
@@ -638,7 +638,7 @@ export default {
     height: 40.5%;
 color: #fff;
   z-index: 999;
-  background: v-bind("'url(' + internationalityConfig.peiinternationality + ')'") no-repeat;
+  background: v-bind("'url(' + jaguarConfig.peijaguar + ')'") no-repeat;
   background-size: 100% 100%;
 }
 .count{
@@ -652,9 +652,9 @@ color: #fff;
   font-size: 16px;
    
 }
-.internationalityp-he {
+.jaguarp-he {
     position: relative;
-    margin-right: 0%;
+    margin-right: -8%;
     margin-top: 2%;
     width: 89%;
     height: 43vw;
@@ -663,7 +663,7 @@ color: #fff;
     transform: scale(0.7);
 }
 
-.internationalityp-hidden {
+.jaguarp-hidden {
   /* margin-top: 2%; */
   margin-left: 4%;
   margin-top: 1%;
@@ -674,7 +674,7 @@ color: #fff;
   height: 109%;
   overflow: hidden;
 }
-.internationalityp-item {
+.jaguarp-item {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -682,23 +682,23 @@ color: #fff;
 
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + internationalityConfig.anyinternationality + ')'");
+  background: v-bind("'url(' + jaguarConfig.anyjaguar + ')'");
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
   background-size:83% 278%;
 }
-.internationalityp-item:nth-child(2){
+.jaguarp-item:nth-child(2){
   margin-right: 20%;
 }
-.internationalityp-item-img {
+.jaguarp-item-img {
   position: relative;
 
   display: none;
   width: 100%;
   height: 100%;
 }
-.internationalityp-item-img img {
+.jaguarp-item-img img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -710,7 +710,7 @@ color: #fff;
 .modal {
   display: flex;
   justify-content: center;
-  align-items: flex-stinternationality;
+  align-items: flex-stjaguar;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -718,7 +718,7 @@ color: #fff;
   height: 100vh;
   z-index: 9999;
   /* background-color: rgba(0, 0, 0, 0.5); */
-  /* background: v-bind("'url(' + internationalityConfig.dialoginternationality + ')'") no-repeat; */
+  /* background: v-bind("'url(' + jaguarConfig.dialogjaguar + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star {
@@ -740,17 +740,17 @@ color: #fff;
   width: 70%;
 }
 
-.stinternationality-bg {
+.stjaguar-bg {
   position: absolute;
 
   top: 0;
   z-index: 1;
 }
-.stinternationality-bg img {
+.stjaguar-bg img {
   width: 100%;
 }
 
-.modelinternationality-list {
+.modeljaguar-list {
   position: absolute;
   left: 60%;
   top: 39.5%;
@@ -762,33 +762,33 @@ color: #fff;
   font-size: 16px;
   /* transform: rotate(7deg) translateX(-36px); */
 }
-.modelinternationality-item {
+.modeljaguar-item {
   margin-bottom: 11px;
 }
-.modelinternationality-total {
+.modeljaguar-total {
   padding: 7px 14px;
 }
 
-.headinternationality {
+.headjaguar {
   margin-top: 10vh;
   width: 80%;
 }
 /* 定义步长图片动画关键帧 */
 @keyframes image-animation {
   0% {
-    background-image: v-bind("'url(' + internationalityConfig.animation1 + ')'");
+    background-image: v-bind("'url(' + jaguarConfig.animation1 + ')'");
   }
 
   25% {
-    background-image: v-bind("'url(' + internationalityConfig.animation4 + ')'");
+    background-image: v-bind("'url(' + jaguarConfig.animation4 + ')'");
   }
 
   75% {
-    background-image: v-bind("'url(' + internationalityConfig.animation8 + ')'");
+    background-image: v-bind("'url(' + jaguarConfig.animation8 + ')'");
   }
 
   100% {
-    background-image: v-bind("'url(' + internationalityConfig.animation12 + ')'");
+    background-image: v-bind("'url(' + jaguarConfig.animation12 + ')'");
   }
 }
 

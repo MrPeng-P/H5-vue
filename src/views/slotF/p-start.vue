@@ -1,7 +1,7 @@
 <script>
 
-import playinternationality2 from "@/assets/slotF6/playinternationality.png";
-import boxinternationality from "@/assets/slotF6/boxinternationality.png";
+import playjaguar2 from "@/assets/slotF7/playjaguar.png";
+import boxjaguar from "@/assets/slotF7/boxjaguar.jpg";
 import { onMounted, reactive, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
@@ -9,9 +9,9 @@ export default {
   setup() {
     const router = new useRouter();
     const className = "container";
-    const internationalityConfig = reactive({
-      playinternationality2,
-      boxinternationality,
+    const jaguarConfig = reactive({
+      playjaguar2,
+      boxjaguar,
     });
    
 
@@ -25,7 +25,7 @@ export default {
     });
     return {
         className,
-      internationalityConfig,
+      jaguarConfig,
       ...allMethods,
     };
   },
@@ -34,7 +34,7 @@ export default {
 <template>
   
   <div :class="className" @click="goHome">
-    <div class="stinternationality" >
+    <div class="stjaguar" >
     </div>
   </div>
 </template>
@@ -42,17 +42,17 @@ export default {
 <style scoped>
 
 
-.stinternationality{
+.stjaguar{
   margin-top: 1%;
     width: 20%;
     height: 252px;
-  /* background: v-bind("'url(' + internationalityConfig.playinternationality2 + ')'") no-repeat; */
+  /* background: v-bind("'url(' + jaguarConfig.playjaguar2 + ')'") no-repeat; */
   background-size: 100%;
   z-index: 99;
 
 }
 .container {
-  background: v-bind("'url(' + internationalityConfig.boxinternationality + ')'") no-repeat;
+  background: v-bind("'url(' + jaguarConfig.boxjaguar + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -63,7 +63,7 @@ export default {
 }
 
 
-.internationalityp-he {
+.jaguarp-he {
   position: relative;
     margin-top: 26%;
     width: 140%;
@@ -72,7 +72,7 @@ export default {
     justify-content: space-between;
     transform: scale(0.65);
 }
-.internationalityp-hidden{
+.jaguarp-hidden{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -81,11 +81,11 @@ export default {
   overflow: hidden;
 
 }
-.internationalityp-item {
+.jaguarp-item {
   
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + internationalityConfig.anyinternationality + ')'") ;
+  background: v-bind("'url(' + jaguarConfig.anyjaguar + ')'") ;
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
@@ -95,7 +95,7 @@ export default {
   padding-top: 155px;
     display: flex;
     justify-content: center;
-    align-items: flex-stinternationality;
+    align-items: flex-stjaguar;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -103,7 +103,7 @@ export default {
     height: 100vh;
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.5);
-  /* background: v-bind("'url(' + internationalityConfig.dialoginternationality + ')'") no-repeat; */
+  /* background: v-bind("'url(' + jaguarConfig.dialogjaguar + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star{
@@ -115,12 +115,12 @@ export default {
 
 }
 
-.stinternationality-bg{
+.stjaguar-bg{
     position: absolute;
     top: 0;
     z-index: 1;
 }
-.stinternationality-bg img{
+.stjaguar-bg img{
     width: 100%;
 }
 </style>

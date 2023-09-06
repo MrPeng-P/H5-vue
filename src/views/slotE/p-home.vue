@@ -1,35 +1,35 @@
 <script>
-import playharvest from "@/assets/slotE7/playharvest.png";
-// import playharvest2 from "@/assets/slotE7/playharvest2.png";
-// import playharvest3 from "@/assets/slotE7/playharvest3.png";
-import boxharvest from "@/assets/slotE7/boxharvest.jpg";
-import anyharvest from "@/assets/slotE7/changeHharvest.png";
-import anyBoxharvest from "@/assets/slotE7/anyBoxharvest.jpg";
-import homeharvest from "@/assets/slotE7/homeharvest.png";
-// import againharvest from "@/assets/slotE7/againharvest.png";
-import countharvest from "@/assets/slotE7/countharvest.png";
-// import ruleharvest from "@/assets/slotE7/ruleharvest.png";
-// import ruleDialogharvest from "@/assets/slotE7/ruleDialogharvest.jpg";
-// import resultharvest from "@/assets/slotE7/resultharvest.png";
-// import headharvest from "@/assets/slotE7/headharvest.png";
+import playCleopatra from "@/assets/slotE8/playCleopatra.png";
+// import playCleopatra2 from "@/assets/slotE8/playCleopatra2.png";
+// import playCleopatra3 from "@/assets/slotE8/playCleopatra3.png";
+import boxCleopatra from "@/assets/slotE8/boxCleopatra.jpg";
+import anyCleopatra from "@/assets/slotE8/changeHCleopatra.png";
+import anyBoxCleopatra from "@/assets/slotE8/anyBoxCleopatra.jpg";
+import homeCleopatra from "@/assets/slotE8/homeCleopatra.png";
+// import againCleopatra from "@/assets/slotE8/againCleopatra.png";
+import countCleopatra from "@/assets/slotE8/countCleopatra.png";
+// import ruleCleopatra from "@/assets/slotE8/ruleCleopatra.png";
+// import ruleDialogCleopatra from "@/assets/slotE8/ruleDialogCleopatra.jpg";
+// import resultCleopatra from "@/assets/slotE8/resultCleopatra.png";
+// import headCleopatra from "@/assets/slotE8/headCleopatra.png";
 
-// import star from "@/assets/slotE7/starharvest.gif";
+// import star from "@/assets/slotE8/starCleopatra.gif";
 import { useRouter, useRoute } from "vue-router";
-import harvest1 from "@/assets/slotE7/harvest1.png";
-import harvest2 from "@/assets/slotE7/harvest2.png";
-import harvest3 from "@/assets/slotE7/harvest3.png";
-import harvest4 from "@/assets/slotE7/harvest4.png";
-import harvest5 from "@/assets/slotE7/harvest5.png";
-import harvest6 from "@/assets/slotE7/harvest6.png";
-import harvest7 from "@/assets/slotE7/harvest7.png";
+import Cleopatra1 from "@/assets/slotE8/Cleopatra1.png";
+import Cleopatra2 from "@/assets/slotE8/Cleopatra2.png";
+import Cleopatra3 from "@/assets/slotE8/Cleopatra3.png";
+import Cleopatra4 from "@/assets/slotE8/Cleopatra4.png";
+import Cleopatra5 from "@/assets/slotE8/Cleopatra5.png";
+import Cleopatra6 from "@/assets/slotE8/Cleopatra6.png";
+import Cleopatra7 from "@/assets/slotE8/Cleopatra7.png";
 
-// import animation1 from "@/assets/slotE7/dong/00001.png";
-// import animation4 from "@/assets/slotE7/dong/00004.png";
-// import animation8 from "@/assets/slotE7/dong/00008.png";
-// import animation12 from "@/assets/slotE7/dong/00012.png";
+// import animation1 from "@/assets/slotE8/dong/00001.png";
+// import animation4 from "@/assets/slotE8/dong/00004.png";
+// import animation8 from "@/assets/slotE8/dong/00008.png";
+// import animation12 from "@/assets/slotE8/dong/00012.png";
 
 import { inject } from "vue";
-// import football from "@/assets/slotE7/football.png";
+// import football from "@/assets/slotE8/football.png";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
@@ -61,28 +61,28 @@ export default {
     const router = new useRouter();
     // 随机生成 12 张图的数组
     let randomImages = [];
-    const harvestConfig = reactive({
-      // headharvest,
+    const CleopatraConfig = reactive({
+      // headCleopatra,
       // animation1,
       // animation4,
       // animation8,
       // animation12,
-      anyharvest,
-      playharvest,
-      // playharvest2,
-      // playharvest3,
-      // againharvest,
-      anyBoxharvest,
-      boxharvest,
-      homeharvest,
+      anyCleopatra,
+      playCleopatra,
+      // playCleopatra2,
+      // playCleopatra3,
+      // againCleopatra,
+      anyBoxCleopatra,
+      boxCleopatra,
+      homeCleopatra,
       //   star,
-      // seniorityharvest,
-      countharvest,
-      // ruleharvest,
-      // ruleDialogharvest,
-      // resultharvest
+      // seniorityCleopatra,
+      countCleopatra,
+      // ruleCleopatra,
+      // ruleDialogCleopatra,
+      // resultCleopatra
     });
-    const harvestList = reactive([
+    const CleopatraList = reactive([
       {
         name: "item1",
         size: 0,
@@ -111,37 +111,37 @@ export default {
     ]);
     let timeOhter = 0;
     let id;
-    let stharvest = ref(false);
+    let stCleopatra = ref(false);
     let open = ref(false);
     let buttonStatus = ref(true);
     const images = [
       {
-        img: harvest1,
-        name: "harvest2",
+        img: Cleopatra1,
+        name: "Cleopatra2",
         className: "animation",
         count: 1800 * magnification.value,
       },
       {
-        img: harvest2,
-        name: "harvest1",
+        img: Cleopatra2,
+        name: "Cleopatra1",
         className: "animation",
         count: 1000 * magnification.value,
       },
       {
-        img: harvest3,
+        img: Cleopatra3,
       },
       {
-        img: harvest4,
+        img: Cleopatra4,
       },
       {
-        img: harvest5,
+        img: Cleopatra5,
       },
       {
-        img: harvest6,
+        img: Cleopatra6,
       },
       {
-        img: harvest7,
-        name: "harvest3",
+        img: Cleopatra7,
+        name: "Cleopatra3",
         className: "animation",
         count: 2200 * magnification.value,
       },
@@ -160,11 +160,11 @@ export default {
         buttonStatus.value = false;
 
         allMethods.clear();
-        const boxLists = harvestList.map((item) => {
+        const boxLists = CleopatraList.map((item) => {
           return document.getElementById(item.name);
         });
         boxLists[0].style.setProperty("background-position-x", "center");
-        boxLists[0].querySelectorAll(".harvestp-item-img").forEach((child) => {
+        boxLists[0].querySelectorAll(".Cleopatrap-item-img").forEach((child) => {
           child.style.setProperty("display", "none");
         });
         // boxLists.forEach((item)=>{
@@ -177,9 +177,9 @@ export default {
         //       0+'px'
         //     );
         // })
-        const content = document.getElementById("harvestp-he");
-        const box2 = document.getElementById("harvestp");
-        const coords = { x: 0, y: 0 }; // Stharvest at (0, 0)
+        const content = document.getElementById("Cleopatrap-he");
+        const box2 = document.getElementById("Cleopatrap");
+        const coords = { x: 0, y: 0 }; // StCleopatra at (0, 0)
         const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to(
             { x: 0, y: (1120 * content.clientHeight) / box2.clientHeight },
@@ -223,7 +223,7 @@ export default {
           .repeat(Infinity)
           .yoyo(false)
           .repeatDelay(0);
-          tween.start(); // Stharvest the tween immediately.
+          tween.start(); // StCleopatra the tween immediately.
         let nowDate = window.performance.now();
         function animate(time) {
           timeOhter = time - nowDate;
@@ -247,39 +247,39 @@ export default {
           }
           if (i > 0 && i < 4) {
             boxLists[i].style.setProperty("background-position-x", "center");
-            boxLists[i].querySelectorAll(".harvestp-item-img").forEach((child) => {
+            boxLists[i].querySelectorAll(".Cleopatrap-item-img").forEach((child) => {
               child.style.setProperty("display", "none");
             });
           }
           if (i == 3) {
             boxLists[1].style.setProperty("background-position-x", 600 + "px");
-            boxLists[1].querySelectorAll(".harvestp-item-img").forEach((child) => {
+            boxLists[1].querySelectorAll(".Cleopatrap-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 4) {
             boxLists[2].style.setProperty("background-position-x", 600 + "px");
-            boxLists[2].querySelectorAll(".harvestp-item-img").forEach((child) => {
+            boxLists[2].querySelectorAll(".Cleopatrap-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 5) {
             boxLists[3].style.setProperty("background-position-x", 600 + "px");
-            boxLists[3].querySelectorAll(".harvestp-item-img").forEach((child) => {
+            boxLists[3].querySelectorAll(".Cleopatrap-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
             countValue.value += useCount.value*magn;
           }
           // if (i == 6) {
           //   boxLists[3].style.setProperty("background-position-x", 600 + "px");
-          //   boxLists[3].querySelectorAll(".harvestp-item-img").forEach((child) => {
+          //   boxLists[3].querySelectorAll(".Cleopatrap-item-img").forEach((child) => {
           //     child.style.setProperty("display", "block");
           //   });
           //   // countValue.value += useCount.value*magn;
           // }
           // if (i == 7) {
           //   boxLists[4].style.setProperty("background-position-x", 600 + "px");
-          //   boxLists[4].querySelectorAll(".harvestp-item-img").forEach((child) => {
+          //   boxLists[4].querySelectorAll(".Cleopatrap-item-img").forEach((child) => {
           //     child.style.setProperty("display", "block");
           //   });
           //   countValue.value += useCount.value*magn;
@@ -330,7 +330,7 @@ export default {
           randomImages.push(randomImage);
         }
 
-        allMethods.assignImageList(harvestList, randomImages);
+        allMethods.assignImageList(CleopatraList, randomImages);
       },
       // 随机生成图像列表
       shuffleArray(array) {
@@ -339,11 +339,11 @@ export default {
           [array[i], array[j]] = [array[j], array[i]];
         }
         array.forEach((item) => {
-          if (item.name == "harvest1") {
+          if (item.name == "Cleopatra1") {
             arrCount[0].value++;
-          } else if (item.name == "harvest2") {
+          } else if (item.name == "Cleopatra2") {
             arrCount[1].value++;
-          } else if (item.name == "harvest3") {
+          } else if (item.name == "Cleopatra3") {
             arrCount[2].value++;
           }
           if (item.count) {
@@ -353,13 +353,13 @@ export default {
         return array;
       },
 
-      // 将图像列表分配给harvestList
-      assignImageList(harvestList, images) {
+      // 将图像列表分配给CleopatraList
+      assignImageList(CleopatraList, images) {
         const shuffledImages = allMethods.shuffleArray(images.slice()); // 避免修改原始数组
 
         let currentIndex = 0;
 
-        harvestList.forEach((item) => {
+        CleopatraList.forEach((item) => {
           const numImages = Math.min(item.size, 5);
           item.imgList = shuffledImages.slice(
             currentIndex,
@@ -367,7 +367,7 @@ export default {
           );
           currentIndex += numImages;
         });
-        return harvestList;
+        return CleopatraList;
       },
       goSeniority: () => {
         router.push("/list");
@@ -377,10 +377,10 @@ export default {
     return {
       className,
       open,
-      stharvest,
-      harvestConfig,
+      stCleopatra,
+      CleopatraConfig,
       randomImages,
-      harvestList,
+      CleopatraList,
       countValue,
       useCount,
       showRuleValue,
@@ -392,23 +392,23 @@ export default {
 </script>
 <template>
   <div :class="className">
-    <!-- <img class="headharvest" :src="harvestConfig.headharvest" alt=""> -->
-    <div class="harvestp" id="harvestp">
-      <div class="harvestp-he" id="harvestp-he">
-        <!-- <img class="harvest-rule" @click="showRule" :src="harvestConfig.ruleharvest" alt=""> -->
-        <div class="harvestp-hidden">
+    <!-- <img class="headCleopatra" :src="CleopatraConfig.headCleopatra" alt=""> -->
+    <div class="Cleopatrap" id="Cleopatrap">
+      <div class="Cleopatrap-he" id="Cleopatrap-he">
+        <!-- <img class="Cleopatra-rule" @click="showRule" :src="CleopatraConfig.ruleCleopatra" alt=""> -->
+        <div class="Cleopatrap-hidden">
           <div
-            class="harvestp-item-box"
+            class="Cleopatrap-item-box"
            
-            v-for="(item, index) in harvestList"
+            v-for="(item, index) in CleopatraList"
           >
-           <div class="harvestp-item"  :id="item.name">
+           <div class="Cleopatrap-item"  :id="item.name">
             <div
               v-for="(imgItem, imgIndex) in item.imgList"
               :class="
                 imgItem.className
-                  ? 'harvestp-item-img ' + imgItem.className
-                  : 'harvestp-item-img'
+                  ? 'Cleopatrap-item-img ' + imgItem.className
+                  : 'Cleopatrap-item-img'
               "
             >
               <img :src="imgItem.img" alt="" />
@@ -417,39 +417,39 @@ export default {
           </div>
         </div>
       </div>
-      <div class="buttonharvest-box">
+      <div class="buttonCleopatra-box">
         <div class="buttons" @click="close"></div>
 
-        <div class="buttonsharvest2" @click="run()"></div>
+        <div class="buttonsCleopatra2" @click="run()"></div>
        
-        <div class="buttonsharvestBack" @click="run()"></div>
+        <div class="buttonsCleopatraBack" @click="run()"></div>
 
         <!-- <div class="buttons2" @click="goSeniority"></div> -->
 
-        <div class="harvest-count" @click="showRule">
-          <!-- <img class="harvest-rule" :src="harvestConfig.ruleharvest" alt="" /> -->
-          <img :src="harvestConfig.countharvest" alt="" />
+        <div class="Cleopatra-count" @click="showRule">
+          <!-- <img class="Cleopatra-rule" :src="CleopatraConfig.ruleCleopatra" alt="" /> -->
+          <img :src="CleopatraConfig.countCleopatra" alt="" />
           <div class="countValue">{{ countValue }}</div>
         </div>
       </div>
-      <div class="harvestd-harvestp">
-        <div class="harvestd-back" @click="close"></div>
+      <div class="Cleopatrad-Cleopatrap">
+        <div class="Cleopatrad-back" @click="close"></div>
       </div>
     </div>
     <Teleport to="body">
       <div v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="harvestConfig.star" alt="" /> -->
-        <!-- <img class="model-img-bg" :src="harvestConfig.resultharvest" alt="" /> -->
-        <!-- <div class="modelharvest-list">
+        <!-- <img class="model-star" :src="CleopatraConfig.star" alt="" /> -->
+        <!-- <img class="model-img-bg" :src="CleopatraConfig.resultCleopatra" alt="" /> -->
+        <!-- <div class="modelCleopatra-list">
           <div
-            class="modelharvest-item"
+            class="modelCleopatra-item"
             v-for="(item, index) in arrCount"
             :key="index"
           >
             {{ item.count + "X" + item.value }}
           </div>
-          <div class="modelharvest-total">{{ useCount }}</div>
+          <div class="modelCleopatra-total">{{ useCount }}</div>
         </div> -->
       </div>
     </Teleport>
@@ -457,8 +457,8 @@ export default {
     <Teleport to="body">
       <div v-if="showRuleValue" class="modal" @click="showRule">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="harvestConfig.star" alt="" /> -->
-        <!-- <img class="model-img" :src="harvestConfig.ruleDialogharvest" alt="" /> -->
+        <!-- <img class="model-star" :src="CleopatraConfig.star" alt="" /> -->
+        <!-- <img class="model-img" :src="CleopatraConfig.ruleDialogCleopatra" alt="" /> -->
       </div>
     </Teleport>
   </div>
@@ -470,7 +470,7 @@ export default {
 
   width: 280px;
 }
-.harvestd-harvestp {
+.Cleopatrad-Cleopatrap {
   display: flex;
   align-items: center;
   /* padding: 60px 15px; */
@@ -481,44 +481,45 @@ export default {
   color: #fff;
 }
 .countValue {
-  margin: 0% 11% 0%;
+  margin: 169% 11% 0%;
     color: #FFF;
     font-size: 18px;
+    transform: rotateZ(90deg);
 }
 
-.harvest-count img {
+.Cleopatra-count img {
   width: 100%;
   position: absolute;
   height: 100%;
   /* top: -16%; */
   z-index: -1;
 }
-.harvest-count .harvest-rule {
+.Cleopatra-count .Cleopatra-rule {
   position: absolute;
   left: -9%;
   width: 45px;
   height: 45px;
 }
-.harvestd-back {
-  /* background: v-bind("'url(' + harvestConfig.homeharvest + ')'") no-repeat; */
+.Cleopatrad-back {
+  /* background: v-bind("'url(' + CleopatraConfig.homeCleopatra + ')'") no-repeat; */
 
   width: 36px;
   height: 42px;
   background-size: 100%;
   z-index: 999;
 }
-.stharvest {
+.stCleopatra {
   margin-top: -30%;
   width: 160px;
   height: 80px;
-  background: v-bind("'url(' + harvestConfig.playharvest + ')'") no-repeat;
+  background: v-bind("'url(' + CleopatraConfig.playCleopatra + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 }
 .container {
   display: flex;
   flex-direction: column;
-  background: v-bind("'url(' + harvestConfig.boxharvest + ')'") no-repeat;
+  background: v-bind("'url(' + CleopatraConfig.boxCleopatra + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -528,7 +529,7 @@ export default {
   align-items: center;
 }
 
-.harvestp {
+.Cleopatrap {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -538,8 +539,8 @@ export default {
   /* height: 100vh; */
   overflow: hidden;
 
-  background: v-bind("'url(' + harvestConfig.anyBoxharvest + ')'") no-repeat;
-  background-size: 120% 114%;
+  background: v-bind("'url(' + CleopatraConfig.anyBoxCleopatra + ')'") no-repeat;
+  background-size: 100% 100%;
     background-position: center 15%;
 
   color: #fff;
@@ -547,21 +548,21 @@ export default {
   font-size: 26;
 }
 
-.buttonharvest-box {
+.buttonCleopatra-box {
   position: absolute;
     top: 5%;
     left: 31%;
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
     width: 88%;
     height: 86%;
 }
-.harvest-count {
+.Cleopatra-count {
   position: relative;
-  width: 33%;
-    height: 15%;
-    margin-left: -26%;
-    margin-top: -0.5%;
+  width: 7%;
+    height: 51%;
+    margin-left: -10%;
+    margin-top: 1.5%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -570,12 +571,12 @@ export default {
 }
 
 .buttons {
-  margin-left: -22%;
+  margin-left: -10%;
     margin-top: 0%;
     width: 7%;
     height: 16%;
     z-index: 999;
-  background: v-bind("'url(' + harvestConfig.homeharvest + ')'") no-repeat;
+  background: v-bind("'url(' + CleopatraConfig.homeCleopatra + ')'") no-repeat;
   background-size: 100% 100%;
 }
 .buttons2 {
@@ -584,40 +585,40 @@ export default {
     width: 7%;
     height: 54.5%;
   z-index: 999;
-  /* background: v-bind("'url(' + harvestConfig.seniorityharvest + ')'") no-repeat; */
+  /* background: v-bind("'url(' + CleopatraConfig.seniorityCleopatra + ')'") no-repeat; */
   background-size: 100% 100%;
 }
-.buttonsharvestBack{
+.buttonsCleopatraBack{
   position: absolute;
   left: 65.5%;
     margin-top: 64%;
     width: 38%;
     height: 45.5%;
   z-index: 999;
-  /* background: v-bind("'url(' + harvestConfig.againharvest + ')'") no-repeat; */
+  /* background: v-bind("'url(' + CleopatraConfig.againCleopatra + ')'") no-repeat; */
   background-size: 100% 100%;
 }
 
-.buttonsharvest2{
-  margin-left: 58%;
-    margin-top: 8%;
-    width: 16%;
-    height: 13.5%;
-  z-index: 999;
-  background: v-bind("'url(' + harvestConfig.playharvest + ')'") no-repeat;
+.buttonsCleopatra2{
+  margin-left: -10%;
+    margin-top: 2%;
+    width: 7%;
+    height: 24.5%;
+    z-index: 999;
+  background: v-bind("'url(' + CleopatraConfig.playCleopatra + ')'") no-repeat;
   background-size: 100% 100%;
 }
-.harvestp-he {
+.Cleopatrap-he {
   position: relative;
   margin-right: -16%;
     width: 75%;
     height: 46vw;
     display: flex;
     justify-content: space-between;
-    transform: scale(0.77);
+    transform: scale(0.67);
 }
 
-.harvestp-hidden {
+.Cleopatrap-hidden {
   /* margin-top: 2%; */
   /* margin-left: 1%; */
   margin-top: -6%;
@@ -626,40 +627,41 @@ export default {
     align-items: center;
     width: 105%;
     height: 190%;
-    transform: rotateZ(-57.5deg) translate(7vw,-17vw);
+    transform: rotateZ(-53.5deg) translate(9vw,-17vw);
   overflow: hidden;
 }
-.harvestp-item-box{
+.Cleopatrap-item-box{
   height: 100%;
   flex: 1;
  
     overflow: hidden;
 }
 
-.harvestp-item-box:nth-child(1),.harvestp-item-box:nth-child(5){
+.Cleopatrap-item-box:nth-child(1),.Cleopatrap-item-box:nth-child(5){
  
   height:20%;
-  transform: translate(-1002vw,-22vw);
-  .harvestp-item{
-    background-size: 75% 690%;
+  
+  transform: translate(-2vw,-12vw);
+  .Cleopatrap-item{
+    background-size: 83% 810%;
 
   }
 }
-.harvestp-item-box:nth-child(5){
-  transform: translate(-1002vw,24vw);
+.Cleopatrap-item-box:nth-child(5){
+  transform: translate(1vw,11vw);
 }
-.harvestp-item-box:nth-child(2),.harvestp-item-box:nth-child(4){
-  transform: translate(-2vw,-7vw);
+.Cleopatrap-item-box:nth-child(2),.Cleopatrap-item-box:nth-child(4){
+  transform: translate(-2vw,-5vw);
   height: 60%;
-  .harvestp-item{
-    background-size: 94% 292%;
+  .Cleopatrap-item{
+    background-size: 81% 258%;
 
   }
 }
-.harvestp-item-box:nth-child(4){
-  transform: translate(1vw,9vw);
+.Cleopatrap-item-box:nth-child(4){
+  transform: translate(0vw,6vw);
 }
-.harvestp-item {
+.Cleopatrap-item {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -667,23 +669,23 @@ export default {
 
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + harvestConfig.anyharvest + ')'");
+  background: v-bind("'url(' + CleopatraConfig.anyCleopatra + ')'");
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
-  background-size: 94% 171%;
+  background-size: 85% 156%;
 }
-.harvestp-item:nth-child(2){
+.Cleopatrap-item:nth-child(2){
   /* margin-right: 20%; */
 }
-.harvestp-item-img {
+.Cleopatrap-item-img {
   position: relative;
 
   display: none;
   width: 100%;
   height: 100%;
 }
-.harvestp-item-img img {
+.Cleopatrap-item-img img {
   position: absolute;
     top: 32%;
     left: 48%;
@@ -695,7 +697,7 @@ export default {
 .modal {
   display: flex;
   justify-content: center;
-  align-items: flex-stharvest;
+  align-items: flex-stCleopatra;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -703,7 +705,7 @@ export default {
   height: 100vh;
   z-index: 9999;
   /* background-color: rgba(0, 0, 0, 0.5); */
-  /* background: v-bind("'url(' + harvestConfig.dialogharvest + ')'") no-repeat; */
+  /* background: v-bind("'url(' + CleopatraConfig.dialogCleopatra + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star {
@@ -725,17 +727,17 @@ export default {
   width: 70%;
 }
 
-.stharvest-bg {
+.stCleopatra-bg {
   position: absolute;
 
   top: 0;
   z-index: 1;
 }
-.stharvest-bg img {
+.stCleopatra-bg img {
   width: 100%;
 }
 
-.modelharvest-list {
+.modelCleopatra-list {
   position: absolute;
   left: 60%;
   top: 39.5%;
@@ -747,33 +749,33 @@ export default {
   font-size: 16px;
   /* transform: rotate(7deg) translateX(-36px); */
 }
-.modelharvest-item {
+.modelCleopatra-item {
   margin-bottom: 11px;
 }
-.modelharvest-total {
+.modelCleopatra-total {
   padding: 7px 14px;
 }
 
-.headharvest {
+.headCleopatra {
   margin-top: 10vh;
   width: 80%;
 }
 /* 定义步长图片动画关键帧 */
 @keyframes image-animation {
   0% {
-    background-image: v-bind("'url(' + harvestConfig.animation1 + ')'");
+    background-image: v-bind("'url(' + CleopatraConfig.animation1 + ')'");
   }
 
   25% {
-    background-image: v-bind("'url(' + harvestConfig.animation4 + ')'");
+    background-image: v-bind("'url(' + CleopatraConfig.animation4 + ')'");
   }
 
   75% {
-    background-image: v-bind("'url(' + harvestConfig.animation8 + ')'");
+    background-image: v-bind("'url(' + CleopatraConfig.animation8 + ')'");
   }
 
   100% {
-    background-image: v-bind("'url(' + harvestConfig.animation12 + ')'");
+    background-image: v-bind("'url(' + CleopatraConfig.animation12 + ')'");
   }
 }
 

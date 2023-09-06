@@ -18,15 +18,36 @@ export default {
       image2List: [],
       image3List: [],
     });
+    let cssObj = {
+      img: 100,
+      change: -2000,
+    };
+    let imgClassObj = reactive({
+      imgClassList: [
+        {
+          imgClass: "",
+          imageList:[]
+        },
+        {
+          imgClass: "",
+          imageList:[]
+        },
+        {
+          imgClass: "",
+          imageList:[]
+        },
+        {
+          imgClass: "",
+          imageList:[]
+        },
+      ],
+    });
 
-    let imgClass = ref("");
+    let timer = 0;
     const allMethods = {
       reset() {
         ceshi();
-        imgClass.value = "";
-        randomImages.imageList = [];
-        randomImages.image2List = [];
-        randomImages.image3List = [];
+     
       },
       async randomImg(type) {
         //  allMethods.reset()
@@ -34,33 +55,30 @@ export default {
 
         // 定义需要生成的总图片数量
         const totalImages = 60;
-
-        while (randomImages.imageList.length < totalImages) {
+        imgClassObj.imgClassList.forEach((item,index)=>{
+          while (item.imageList.length < totalImages) {
           // 从原始图片数组中随机选择一张图片
           const randomIndex = Math.floor(Math.random() * armImageList.length);
           const randomImage = armImageList[randomIndex];
 
           // 将选中的图片加入到随机图片数组中
-          randomImages.imageList.push(randomImage);
+          item.imageList.push(randomImage);
         }
-        while (randomImages.image2List.length < totalImages) {
-          // 从原始图片数组中随机选择一张图片
-          const randomIndex = Math.floor(Math.random() * armImageList.length);
-          const randomImage = armImageList[randomIndex];
-
-          // 将选中的图片加入到随机图片数组中
-          randomImages.image2List.push(randomImage);
-        }
-        while (randomImages.image3List.length < totalImages) {
-          // 从原始图片数组中随机选择一张图片
-          const randomIndex = Math.floor(Math.random() * armImageList.length);
-          const randomImage = armImageList[randomIndex];
-
-          // 将选中的图片加入到随机图片数组中
-          randomImages.image3List.push(randomImage);
-        }
+        })
+       
+   
         if (type) {
-          imgClass.value = "randomImages";
+          imgClassObj.imgClassList[0].imgClass="randomImages"
+          const timeInter = setInterval(() => {
+            timer++;
+            
+
+            if(imgClassObj.imgClassList.length>timer){
+              imgClassObj.imgClassList[timer].imgClass="randomImages"
+            }else{
+              clearInterval(timeInter);
+            }
+          }, 1000);
         }
       },
     };
@@ -68,8 +86,10 @@ export default {
       allMethods.randomImg(false);
     });
     return {
+      imgClassObj,
       randomImages,
-      imgClass,
+  
+      cssObj,
       ...allMethods,
     };
   },
@@ -77,40 +97,37 @@ export default {
 </script>
 
 <template>
-  <div class="container">
-    <div class="box">
-      <div :class="imgClass">
-        <div v-for="item in randomImages.imageList">
-          <img :src="item" alt="" />
+  <div class="content">
+    <div class="container">
+    <div class="box" v-for="(item,index) of imgClassObj.imgClassList" :key="index">
+      <div :class="item.imgClass">
+        <div v-for="imgs in item.imageList">
+          <img :src="imgs" alt="" />
         </div>
       </div>
     </div>
-    <div class="box">
-      <div :class="imgClass">
-        <div v-for="item in randomImages.image2List">
-          <img :src="item" alt="" />
-        </div>
-      </div>
-    </div>
-    <div class="box">
-      <div :class="imgClass">
-        <div v-for="item in randomImages.image3List">
-          <img :src="item" alt="" />
-        </div>
-      </div>
-    </div>
-    <div>
+
+    <div class="buttons">
       <div class="start" @click="randomImg(true)">开始</div>
       <div class="start" @click="reset()">重置</div>
     </div>
-    <!-- <div class="start" @click="randomImg()">重新开始</div> -->
+  </div>
   </div>
 </template>
 <style scoped>
-.container {
-  margin: 0 auto;
+.content{
+  width: 100%;
+  height: 100%;
   display: flex;
-  width: 400px;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  position: relative;
+  
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
 }
 .box {
   width: 100px;
@@ -121,7 +138,13 @@ export default {
 
 .randomImages {
   animation: image-animation 2s;
-  transform: translateY(-2000px);
+  transform: translateY(v-bind("cssObj.change+'px'"));
+}
+
+.buttons{
+  display: flex;
+  position: absolute;
+  bottom: -30px;
 }
 .start {
   width: 100px;
@@ -129,8 +152,8 @@ export default {
   background-color: aqua;
 }
 img {
-  width: 100px;
-  height: 100px;
+  width: v-bind("cssObj.img+'px'");
+  height: v-bind("cssObj.img+'px'");
 }
 
 @keyframes image-animation {
@@ -139,7 +162,7 @@ img {
   }
 
   100% {
-    transform: translateY(-2000px);
+    transform: translateY(v-bind("cssObj.change+'px'"));
   }
 }
 </style>

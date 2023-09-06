@@ -31,7 +31,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/imgharvest/[hash][ext]",
+          filename: "assets/imgjaguar/[hash][ext]",
         },
       },
         // {
@@ -55,7 +55,7 @@ module.exports = {
   },
 
   output: {
-    filename: "assets/harvestJs/harvest-[hash].js",
+    filename: "assets/jaguarJs/jaguar-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [

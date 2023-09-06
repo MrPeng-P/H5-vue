@@ -1,7 +1,7 @@
 <script>
 
-// import playQueen from "@/assets/slotD23/playQueen2.png";
-import boxQueen from "@/assets/slotD23/boxQueen.jpg";
+// import playarrogance from "@/assets/slotD24/playarrogance2.png";
+import boxarrogance from "@/assets/slotD24/boxarrogance.jpg";
 import { onMounted, reactive, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
@@ -9,9 +9,9 @@ export default {
   setup() {
     const router = new useRouter();
     const className = "container";
-    const QueenConfig = reactive({
-      // playQueen,
-      boxQueen,
+    const arroganceConfig = reactive({
+      // playarrogance,
+      boxarrogance,
     });
    
 
@@ -25,7 +25,7 @@ export default {
     });
     return {
         className,
-      QueenConfig,
+      arroganceConfig,
       ...allMethods,
     };
   },
@@ -34,7 +34,7 @@ export default {
 <template>
   
   <div :class="className" @click="goHome">
-    <div class="stQueen" >
+    <div class="starrogance" >
     </div>
   </div>
 </template>
@@ -42,18 +42,18 @@ export default {
 <style scoped>
 
 
-.stQueen{
+.starrogance{
   margin-top: -2%;
     width: 36%;
 
     height: 252px;
-  /* background: v-bind("'url(' + QueenConfig.playQueen + ')'") no-repeat; */
+  /* background: v-bind("'url(' + arroganceConfig.playarrogance + ')'") no-repeat; */
   background-size: 100%;
   z-index: 99;
 
 }        
 .container {
-  background: v-bind("'url(' + QueenConfig.boxQueen + ')'") no-repeat;
+  background: v-bind("'url(' + arroganceConfig.boxarrogance + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -64,7 +64,7 @@ export default {
 }
 
 
-.Queenp-he {
+.arrogancep-he {
   position: relative;
     margin-top: 26%;
     width: 140%;
@@ -73,7 +73,7 @@ export default {
     justify-content: space-between;
     transform: scale(0.65);
 }
-.Queenp-hidden{
+.arrogancep-hidden{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -82,11 +82,11 @@ export default {
   overflow: hidden;
 
 }
-.Queenp-item {
+.arrogancep-item {
   
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + QueenConfig.anyQueen + ')'") ;
+  background: v-bind("'url(' + arroganceConfig.anyarrogance + ')'") ;
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
@@ -96,7 +96,7 @@ export default {
   padding-top: 155px;
     display: flex;
     justify-content: center;
-    align-items: flex-stQueen;
+    align-items: flex-starrogance;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -104,7 +104,7 @@ export default {
     height: 100vh;
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.5);
-  /* background: v-bind("'url(' + QueenConfig.dialogQueen + ')'") no-repeat; */
+  /* background: v-bind("'url(' + arroganceConfig.dialogarrogance + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star{
@@ -116,12 +116,12 @@ export default {
 
 }
 
-.stQueen-bg{
+.starrogance-bg{
     position: absolute;
     top: 0;
     z-index: 1;
 }
-.stQueen-bg img{
+.starrogance-bg img{
     width: 100%;
 }
 </style>

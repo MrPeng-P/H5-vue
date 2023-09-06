@@ -1,7 +1,7 @@
 <script>
 
-// import playharvest from "@/assets/slotE7/playharvest.png";
-import boxharvest from "@/assets/slotE7/boxharvest.jpg";
+// import playCleopatra from "@/assets/slotE8/playCleopatra.png";
+import boxCleopatra from "@/assets/slotE8/boxCleopatra.jpg";
 import { onMounted, reactive, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
@@ -9,9 +9,9 @@ export default {
   setup() {
     const router = new useRouter();
     const className = "container";
-    const harvestConfig = reactive({
-      // playharvest,
-      boxharvest,
+    const CleopatraConfig = reactive({
+      // playCleopatra,
+      boxCleopatra,
     });
    
 
@@ -25,7 +25,7 @@ export default {
     });
     return {
         className,
-      harvestConfig,
+      CleopatraConfig,
       ...allMethods,
     };
   },
@@ -34,7 +34,7 @@ export default {
 <template>
   
   <div :class="className" @click="goHome">
-    <div class="stharvest" >
+    <div class="stCleopatra" >
     </div>
   </div>
 </template>
@@ -42,17 +42,17 @@ export default {
 <style scoped>
 
 
-.stharvest{
+.stCleopatra{
   margin-top: 27%;
     width: 30%;
     height: 252px;
-  /* background: v-bind("'url(' + harvestConfig.playharvest + ')'") no-repeat; */
+  /* background: v-bind("'url(' + CleopatraConfig.playCleopatra + ')'") no-repeat; */
   background-size: 100%;
   z-index: 99;
 
 }
 .container {
-  background: v-bind("'url(' + harvestConfig.boxharvest + ')'") no-repeat;
+  background: v-bind("'url(' + CleopatraConfig.boxCleopatra + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -63,7 +63,7 @@ export default {
 }
 
 
-.harvestp-he {
+.Cleopatrap-he {
   position: relative;
     margin-top: 26%;
     width: 140%;
@@ -72,7 +72,7 @@ export default {
     justify-content: space-between;
     transform: scale(0.65);
 }
-.harvestp-hidden{
+.Cleopatrap-hidden{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -81,11 +81,11 @@ export default {
   overflow: hidden;
 
 }
-.harvestp-item {
+.Cleopatrap-item {
   
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + harvestConfig.anyharvest + ')'") ;
+  background: v-bind("'url(' + CleopatraConfig.anyCleopatra + ')'") ;
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
@@ -95,7 +95,7 @@ export default {
   padding-top: 155px;
     display: flex;
     justify-content: center;
-    align-items: flex-stharvest;
+    align-items: flex-stCleopatra;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -103,7 +103,7 @@ export default {
     height: 100vh;
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.5);
-  /* background: v-bind("'url(' + harvestConfig.dialogharvest + ')'") no-repeat; */
+  /* background: v-bind("'url(' + CleopatraConfig.dialogCleopatra + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star{
@@ -115,12 +115,12 @@ export default {
 
 }
 
-.stharvest-bg{
+.stCleopatra-bg{
     position: absolute;
     top: 0;
     z-index: 1;
 }
-.stharvest-bg img{
+.stCleopatra-bg img{
     width: 100%;
 }
 </style>
