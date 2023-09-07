@@ -31,7 +31,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/imgjaguar/[hash][ext]",
+          filename: "assets/imgRenesanco/[hash][ext]",
         },
       },
         // {
@@ -55,7 +55,7 @@ module.exports = {
   },
 
   output: {
-    filename: "assets/jaguarJs/jaguar-[hash].js",
+    filename: "assets/RenesancoJs/Renesanco-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [

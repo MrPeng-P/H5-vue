@@ -1,7 +1,7 @@
 <script>
 
-// import playCleopatra from "@/assets/slotE8/playCleopatra.png";
-import boxCleopatra from "@/assets/slotE8/boxCleopatra.jpg";
+// import playRenesanco from "@/assets/slotE9/playRenesanco.png";
+import boxRenesanco from "@/assets/slotE9/boxRenesanco.jpg";
 import { onMounted, reactive, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
@@ -9,9 +9,9 @@ export default {
   setup() {
     const router = new useRouter();
     const className = "container";
-    const CleopatraConfig = reactive({
-      // playCleopatra,
-      boxCleopatra,
+    const RenesancoConfig = reactive({
+      // playRenesanco,
+      boxRenesanco,
     });
    
 
@@ -25,7 +25,7 @@ export default {
     });
     return {
         className,
-      CleopatraConfig,
+      RenesancoConfig,
       ...allMethods,
     };
   },
@@ -34,7 +34,7 @@ export default {
 <template>
   
   <div :class="className" @click="goHome">
-    <div class="stCleopatra" >
+    <div class="stRenesanco" >
     </div>
   </div>
 </template>
@@ -42,17 +42,17 @@ export default {
 <style scoped>
 
 
-.stCleopatra{
+.stRenesanco{
   margin-top: 27%;
     width: 30%;
     height: 252px;
-  /* background: v-bind("'url(' + CleopatraConfig.playCleopatra + ')'") no-repeat; */
+  /* background: v-bind("'url(' + RenesancoConfig.playRenesanco + ')'") no-repeat; */
   background-size: 100%;
   z-index: 99;
 
 }
 .container {
-  background: v-bind("'url(' + CleopatraConfig.boxCleopatra + ')'") no-repeat;
+  background: v-bind("'url(' + RenesancoConfig.boxRenesanco + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -63,7 +63,7 @@ export default {
 }
 
 
-.Cleopatrap-he {
+.Renesancop-he {
   position: relative;
     margin-top: 26%;
     width: 140%;
@@ -72,7 +72,7 @@ export default {
     justify-content: space-between;
     transform: scale(0.65);
 }
-.Cleopatrap-hidden{
+.Renesancop-hidden{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -81,11 +81,11 @@ export default {
   overflow: hidden;
 
 }
-.Cleopatrap-item {
+.Renesancop-item {
   
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + CleopatraConfig.anyCleopatra + ')'") ;
+  background: v-bind("'url(' + RenesancoConfig.anyRenesanco + ')'") ;
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
@@ -95,7 +95,7 @@ export default {
   padding-top: 155px;
     display: flex;
     justify-content: center;
-    align-items: flex-stCleopatra;
+    align-items: flex-stRenesanco;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -103,7 +103,7 @@ export default {
     height: 100vh;
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.5);
-  /* background: v-bind("'url(' + CleopatraConfig.dialogCleopatra + ')'") no-repeat; */
+  /* background: v-bind("'url(' + RenesancoConfig.dialogRenesanco + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star{
@@ -115,12 +115,12 @@ export default {
 
 }
 
-.stCleopatra-bg{
+.stRenesanco-bg{
     position: absolute;
     top: 0;
     z-index: 1;
 }
-.stCleopatra-bg img{
+.stRenesanco-bg img{
     width: 100%;
 }
 </style>
