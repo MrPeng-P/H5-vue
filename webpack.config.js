@@ -12,7 +12,6 @@ const { createProxyMiddleware } = require("http-proxy-middleware");
 
 const deadCodeInjectionThreshold=parseFloat((Math.random() * (1 - 0.5) + 0.5).toFixed(1))
 
-console.log('%c ..........deadCodeInjectionThreshold.........','color:#31ef0e',deadCodeInjectionThreshold)
 module.exports = {
   entry: {
     path: "./src/main.js",
@@ -31,7 +30,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/imgRenesanco/[hash][ext]",
+          filename: "assets/imggodsend/[hash][ext]",
         },
       },
         // {
@@ -55,7 +54,7 @@ module.exports = {
   },
 
   output: {
-    filename: "assets/RenesancoJs/Renesanco-[hash].js",
+    filename: "assets/godsendJs/godsend-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [

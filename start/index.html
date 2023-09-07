@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function generateRandomString(length) {
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let result = '';
+
+            // 生成第一个字符，确保它是一个字母
+            const firstCharacter = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+            result += firstCharacter.charAt(Math.floor(Math.random() * firstCharacter.length));
+
+            for (let i = 1; i < length; i++) {
+                const randomIndex = Math.floor(Math.random() * characters.length);
+                result += characters.charAt(randomIndex);
+            }
+
+            return result;
+        }
+        function generateRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+
+
+
+
+
+        function generateJunkCode(number) {
+            const keywords = [
+                'if', 'else', 'while', 'for', 'switch', 'case', 'break', 'continue',
+                'public', 'private', 'protected', 'static', 'final', 'return', 'void',
+                'class', 'interface', 'extends', 'implements', 'new', 'this', 'super',
+                'true', 'false', 'null', 'int', 'long', 'float', 'double', 'String',
+            ];
+
+            const operators = ['+', '-', '*', '/', '%', '=', '==', '!=', '>', '<', '>=', '<='];
+
+            const variables = ['a', 'b', 'c', 'x', 'y', 'z', 'i', 'j', 'k'];
+
+            const randomKeyword = () => keywords[Math.floor(Math.random() * keywords.length)];
+            const randomOperator = () => operators[Math.floor(Math.random() * operators.length)];
+            const randomVariable = () => variables[Math.floor(Math.random() * variables.length)];
+
+            let junkCode = '';
+            const numLines = Math.floor(Math.random() * 100) + 50; // 生成 50-150 行代码
+
+            for (let i = 0; i < numLines; i++) {
+                const lineType = generateRandomNumber(0.1,number?number:1);
+                if (lineType < 0.5) {
+                    // 生成赋值语句
+                    const variable = randomVariable();
+                    const value = Math.floor(Math.random() * 100);
+                    junkCode += `${variable} = ${value};\n`;
+                } else if (lineType < 0.8) {
+                    // 生成逻辑判断语句
+                    const variable1 = randomVariable();
+                    const variable2 = randomVariable();
+                    const operator = randomOperator();
+                    junkCode += `if (${variable1} ${operator} ${variable2}) {\n  ${generateJunkCode(0.7)} \n}\n`;
+                } else {
+                    // 生成循环语句
+                    const variable = randomVariable();
+                  
+                    junkCode += `for (let ${variable} = 0; ${variable} < 10; ${variable}++) {\n  }\n`;
+                }
+            }
+
+            return junkCode;
+        }
+
+        // 生成指定数量的垃圾函数
+        function generateJunkFunctions(count) {
+            let junkFunctions = '';
+            for (let i = 0; i < count; i++) {
+                // 生成一个长度为 10 的随机字符串
+                const randomString = generateRandomString(generateRandomNumber(4,20));
+                junkFunctions += `function ${randomString + i}() {\n`;
+                junkFunctions += generateJunkCode();
+                junkFunctions += `}\n\n`;
+            }
+            return junkFunctions;
+        }
+
+        // 生成指定数量的垃圾资源
+        function generateJunkResources(count) {
+            let junkResources = '';
+            for (let i = 0; i < count; i++) {
+                junkResources += `
+                    <div id="${generateRandomString(generateRandomNumber(4,20))+i}" class="godsend ${generateRandomString(generateRandomNumber(4,8))}">
+                        <div id="${generateRandomString(generateRandomNumber(4,20))+i}" class="godsend ${generateRandomString(generateRandomNumber(4,8))}">
+                            <div id="${generateRandomString(generateRandomNumber(4,20))+i}" class="godsend ${generateRandomString(generateRandomNumber(4,8))}">
+                                ${generateRandomString(generateRandomNumber(20,80))}
+                            </div>
+                        </div>
+                    </div>\n`;
+            }
+            return junkResources;
+        }
+
+        // 将垃圾代码和资源插入到应用程序的源代码中
+        function JunkCodePluginResources() {
+            // 生成垃圾函数和资源
+            const junkFunctions = generateJunkFunctions(generateRandomNumber(10,80));
+            console.log('%c ..........junkFunctions.........','color:#31ef0e',junkFunctions)
+            const junkResources = generateJunkResources(generateRandomNumber(10,100));
+            console.log('%c ..........junkResources.........','color:#31ef0e',junkResources)
+            return junkFunctions
+            // return junkFunctions + '\n' + junkResources;
+        }
+        // 生成垃圾代码和资源
+        const junkCode = JunkCodePluginResources();
+        // console.log('%c ............junkCode.......', 'color:#31ef0e', junkCode)
+    </script>
+</body>
+
+</html>

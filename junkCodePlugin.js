@@ -59,7 +59,7 @@ function generateJunkCode() {
   function generateJunkResources(count) {
     let junkResources = '';
     for (let i = 0; i < count; i++) {
-      junkResources += `<div id="junkResource${i}" class="junk-resource"></div>\n`;
+      junkResources += `<div id="junkResource${i}" class="godsend"></div>\n`;
     }
     return junkResources;
   }
