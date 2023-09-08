@@ -21,7 +21,7 @@ import { inject } from "vue";
 export default {
   setup() {
     const showRuleValue = ref(false);
-    const platinumVal=ref(1000)
+
     const ceshiplatinum = inject("reload");
     const platinumimgList = {
       boxplatinum,
@@ -46,7 +46,7 @@ export default {
     });
     let platinumcssObj = {
       img: 100,
-      change: -80,
+      change: -2000,
     };
     let platinumimgClassObj = reactive({
       imgClassList: [
@@ -71,9 +71,6 @@ export default {
       platinumpei:()=>{
 
       },
-      platinumRandomNumber(min, max) {
-            return Math.floor(Math.random() * (max - min + 1)) + min;
-        },
       showRuleplatinum: () => {
         console.log('%c ..........111.........','color:#31ef0e',showRuleValue.value)
         showRuleValue.value = !showRuleValue.value;
@@ -108,8 +105,6 @@ export default {
               platinumimgClassObj.imgClassList[timer].imgClass = "platinumrandomImages";
             } else {
               !showRuleValue.value&&(showRuleValue.value=true)
-              platinumVal.value=platinumVal.value+platinumallMethods.platinumRandomNumber(1000,5000)
-              sessionStorage.setItem('platinumVal',platinumVal.value)
               clearInterval(timeInter);
             }
           }, 1000);
@@ -125,7 +120,6 @@ export default {
       showRuleValue,
       platinumimgList,
       platinumcssObj,
-      platinumVal,
       ...platinumallMethods,
     };
   },
@@ -153,9 +147,7 @@ export default {
 
         <div class="platinumimg-start" @click="platinumrandomImg(true)"></div>
         <div class="platinumimg-pei" @click="platinumpei()"></div>
-        <div class="platinumimg-count" >
-          <div class="platinumimg-countValue">{{ platinumVal }}</div>
-        </div>
+        <div class="platinumimg-count" ></div>
       </div>
     </div>
     </div>
@@ -177,8 +169,6 @@ export default {
   width: 100vw;
   height: 100vh;
   z-index: 9999;
-  color: #fff;
-  font-size: 16px;
   /* background-color: rgba(0, 0, 0, 0.5); */
   /* background: v-bind("'url(' + lionConfig.dialoglion + ')'") no-repeat; */
   /* background-size: 100%; */
@@ -201,7 +191,7 @@ justify-content: center;
   width: 100%;
   height: 100%;
   background: v-bind("'url(' + platinumimgList.anyBoxplatinum + ')'") no-repeat;
-  background-size:100%;
+  background-size:140%;
   background-position: center;
 }
 .platinumimg-container {
@@ -211,22 +201,18 @@ justify-content: center;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 50%;
+  width: 70%;
 
 
 }
 .platinumimg-box {
   flex: 1;
   max-width: 20%;
-  height: 73%;
+  height: 300px;
   /* border: 2px solid red; */
   overflow: hidden;
 }
 
-.platinumimg-img{
-  display: flex;
-  justify-content: center;
-}
 .platinumrandomImages {
   animation: image-animation 2s;
   transform: translateY(v-bind("platinumcssObj.change+'px'"));
@@ -237,66 +223,41 @@ justify-content: center;
     position: absolute;
     left: 41%;
     top: 0%;
-    width: 100%;
-    height: 10vw;
 }
 
 .platinumimg-back{
-  position: absolute;
-    left: -58%;
-    width: 46px;
-    height: 44px;
+  width: 100px;
+  height: 30px;
   background: v-bind("'url(' + platinumimgList.homeplatinum + ')'") no-repeat;
   background-size: cover;
   background-position: center;
 }
 .platinumimg-start {
-  position: absolute;
-  left: -37%;
-    top: 361%;
-    width: 32%;
-    height: 52%;
+  width: 100px;
+  height: 30px;
   background: v-bind("'url(' + platinumimgList.playplatinum + ')'") no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .platinumimg-pei{
-  position: absolute;
-  left: -1%;
-    top: 361%;
-    width: 61%;
-    height: 52%;
+  width: 100px;
+  height: 30px;
   background: v-bind("'url(' + platinumimgList.peiplatinum + ')'") no-repeat;
   background-size: cover;
   background-position: center;
 }
 .platinumimg-count{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  left: 63%;
-    top: 52%;
-    width: 11%;
-    height: 321%;
+  width: 100px;
+  height: 30px;
   background: v-bind("'url(' + platinumimgList.countplatinum + ')'") no-repeat;
   background-size: cover;
   background-position: center;
-  z-index: 0;
-}
-.platinumimg-countValue{
-  margin:107% 0% 0% -4%;
-  color: #fff;
-  font-size: 16px;
-  z-index:9;
-  transform: rotateZ(90deg);
 }
 img {
-
   margin: 0 0 0 -6%;
-  width: v-bind("platinumcssObj.img+'%'");
-  height: v-bind("platinumcssObj.img+'%'");
+  width: v-bind("platinumcssObj.img+'px'");
+  height: v-bind("platinumcssObj.img+'px'");
   
 }
 
@@ -306,7 +267,7 @@ img {
   }
 
   100% {
-    transform: translateY(v-bind("platinumcssObj.change+'%'"));
+    transform: translateY(v-bind("platinumcssObj.change+'px'"));
   }
 }
 </style>

@@ -30,7 +30,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/imggodsend/[hash][ext]",
+          filename: "assets/imgswan/[hash][ext]",
         },
       },
         // {
@@ -54,7 +54,7 @@ module.exports = {
   },
 
   output: {
-    filename: "assets/godsendJs/godsend-[hash].js",
+    filename: "assets/swanJs/swan-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [
@@ -73,17 +73,17 @@ module.exports = {
       {
         compact: true,
         controlFlowFlattening: true,
-        controlFlowFlatteningThreshold: 1,//加强 0.75- 1 
+        controlFlowFlatteningThreshold: 0.75,
         numbersToExpressions: true,
         simplify: true,
         stringArrayShuffle: true,
         splitStrings: true,
-        splitStringsChunkLength: 5,//加强 10- 5
+        splitStringsChunkLength: 10,
         rotateUnicodeArray: true,
         deadCodeInjection: true,
-        deadCodeInjectionThreshold: 1,//deadCodeInjectionThreshold
+        deadCodeInjectionThreshold: deadCodeInjectionThreshold,
         debugProtection: false,
-        debugProtectionInterval: 4000,//加强 2000-4000
+        debugProtectionInterval: 2000,
         disableConsoleOutput: true,
         domainLock: [],
         identifierNamesGenerator: "hexadecimal",
@@ -100,12 +100,11 @@ module.exports = {
         sourceMapFileName: "",
         sourceMapMode: "separate",
         stringArray: true,
-        stringArrayEncoding: ["rc4"],//加强 base64-rc4
-        unicodeEscapeSequence: false,
-        stringArrayThreshold: 0.75,//加强1
+        stringArrayEncoding: ["base64"],
+        stringArrayThreshold: 0.75,
         target: "browser",
         transformObjectKeys: true,
-      
+        unicodeEscapeSequence: true,
 
         domainLockRedirectUrl: "about:blank",
         forceTransformStrings: [],
@@ -123,10 +122,10 @@ module.exports = {
         stringArrayIndexesType: ["hexadecimal-number"],
         stringArrayIndexShift: true,
         stringArrayRotate: true,
-        stringArrayWrappersCount: 5,//加强 1-5
+        stringArrayWrappersCount: 1,
         stringArrayWrappersChainedCalls: true,
-        stringArrayWrappersParametersMaxCount: 5,//加强 2-5
-        stringArrayWrappersType: "function",//加强 variable-function
+        stringArrayWrappersParametersMaxCount: 2,
+        stringArrayWrappersType: "variable",
       },
       []
     ),
