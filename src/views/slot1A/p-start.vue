@@ -1,7 +1,7 @@
 <script>
-
-import playarms2 from "@/assets/slotF5/playarms2.png";
-import boxarms from "@/assets/slotF5/boxarms.jpg";
+console.log('%c ..........111.........','color:#31ef0e',111)
+import playplatinum2 from "@/assets/slotAA/playplatinum.png";
+import boxplatinum from "@/assets/slotAA/boxplatinum.jpg";
 import { onMounted, reactive, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
@@ -9,9 +9,9 @@ export default {
   setup() {
     const router = new useRouter();
     const className = "container";
-    const armsConfig = reactive({
-      playarms2,
-      boxarms,
+    const platinumConfig = reactive({
+      playplatinum2,
+      boxplatinum,
     });
    
 
@@ -25,16 +25,16 @@ export default {
     });
     return {
         className,
-      armsConfig,
+      platinumConfig,
       ...allMethods,
     };
   },
 };
 </script>
 <template>
-  
   <div :class="className" @click="goHome">
-    <div class="starms" >
+    <div class="stplatinum" >
+      
     </div>
   </div>
 </template>
@@ -42,17 +42,17 @@ export default {
 <style scoped>
 
 
-.starms{
+.stplatinum{
   margin-top: 1%;
     width: 20%;
     height: 252px;
-  background: v-bind("'url(' + armsConfig.playarms2 + ')'") no-repeat;
+  /* background: v-bind("'url(' + platinumConfig.playplatinum2 + ')'") no-repeat; */
   background-size: 100%;
   z-index: 99;
 
 }
 .container {
-  background: v-bind("'url(' + armsConfig.boxarms + ')'") no-repeat;
+  background: v-bind("'url(' + platinumConfig.boxplatinum + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -63,7 +63,7 @@ export default {
 }
 
 
-.armsp-he {
+.platinump-he {
   position: relative;
     margin-top: 26%;
     width: 140%;
@@ -72,7 +72,7 @@ export default {
     justify-content: space-between;
     transform: scale(0.65);
 }
-.armsp-hidden{
+.platinump-hidden{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -81,11 +81,11 @@ export default {
   overflow: hidden;
 
 }
-.armsp-item {
+.platinump-item {
   
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + armsConfig.anyarms + ')'") ;
+  background: v-bind("'url(' + platinumConfig.anyplatinum + ')'") ;
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
@@ -95,7 +95,7 @@ export default {
   padding-top: 155px;
     display: flex;
     justify-content: center;
-    align-items: flex-starms;
+    align-items: flex-stplatinum;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -103,7 +103,7 @@ export default {
     height: 100vh;
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.5);
-  /* background: v-bind("'url(' + armsConfig.dialogarms + ')'") no-repeat; */
+  /* background: v-bind("'url(' + platinumConfig.dialogplatinum + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star{
@@ -115,12 +115,12 @@ export default {
 
 }
 
-.starms-bg{
+.stplatinum-bg{
     position: absolute;
     top: 0;
     z-index: 1;
 }
-.starms-bg img{
+.stplatinum-bg img{
     width: 100%;
 }
 </style>
