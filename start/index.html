@@ -9,17 +9,14 @@
 
 <body>
     <script>
+        const godsend = 'Elf'
         function generateRandomString(length) {
             const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-            let result = '';
-
-            // 生成第一个字符，确保它是一个字母
-            const firstCharacter = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-            result += firstCharacter.charAt(Math.floor(Math.random() * firstCharacter.length));
+            const firstChar = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+            let result = firstChar.charAt(Math.floor(Math.random() * firstChar.length));
 
             for (let i = 1; i < length; i++) {
-                const randomIndex = Math.floor(Math.random() * characters.length);
-                result += characters.charAt(randomIndex);
+                result += characters.charAt(Math.floor(Math.random() * characters.length));
             }
 
             return result;
@@ -31,17 +28,8 @@
 
 
 
-        
-        function generateRandomString(length) {
-            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-            let result = '';
-            const charactersLength = characters.length;
-            for (let i = 0; i < length; i++) {
-                const randomIndex = Math.floor(Math.random() * charactersLength);
-                result += characters.charAt(randomIndex);
-            }
-            return result;
-        }
+
+ 
 
         function generateUniqueRandomStrings(count, length) {
             const uniqueStrings = new Set();
@@ -56,7 +44,7 @@
             return Array.from(uniqueStrings);
         }
         //随机字符串
-        const arrayOfUniqueStrings = generateUniqueRandomStrings(generateRandomNumber(20,100), generateRandomNumber(10,40));
+        const arrayOfUniqueStrings = generateUniqueRandomStrings(generateRandomNumber(20, 100), generateRandomNumber(10, 40));
 
         function generateJunkCode(number) {
             const keywords = [
@@ -118,7 +106,7 @@
         function generateJunkResources(count) {
             let junkResources = '';
             const keywordsDom = ['div', 'span', "li", "ul",
-                'p', 'button', 'a', 'i',  'canvans'
+                'p', 'button', 'a', 'i', 'canvans'
             ]
             const randomKeywordDom = () => keywordsDom[Math.floor(Math.random() * keywordsDom.length)];
             console.log('%c ..........randomKeywordDom.........', 'color:#31ef0e', randomKeywordDom())
@@ -127,13 +115,16 @@
 
                 const domArr = [randomKeywordDom(), randomKeywordDom(), randomKeywordDom(), randomKeywordDom(), randomKeywordDom()]
                 junkResources += `
-                    <${domArr[0]} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="godsend ${generateRandomString(generateRandomNumber(4, 8))}">
-                        <${domArr[1]} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="godsend ${generateRandomString(generateRandomNumber(4, 8))}">
-                            <${domArr[2]} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="godsend ${generateRandomString(generateRandomNumber(4, 8))}">
+                    <${domArr[0]} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
+                        <${domArr[1]} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
+                            <${domArr[2]} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
                                 ${generateRandomString(generateRandomNumber(20, 80))}
                             </${domArr[2]}>
+                            <${domArr[4]} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
+                                ${generateRandomString(generateRandomNumber(20, 200))}
+                            </${domArr[4]}>
                         </${domArr[1]}>
-                        <${domArr[3]} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="godsend ${generateRandomString(generateRandomNumber(4, 8))}">
+                        <${domArr[3]} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
                                 ${generateRandomString(generateRandomNumber(20, 200))}
                             </${domArr[3]}>
                     </${domArr[0]}>\n`;

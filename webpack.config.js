@@ -30,7 +30,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/imgswan/[hash][ext]",
+          filename: "assets/imgElf/[hash][ext]",
         },
       },
         // {
@@ -54,7 +54,7 @@ module.exports = {
   },
 
   output: {
-    filename: "assets/swanJs/swan-[hash].js",
+    filename: "assets/ElfJs/Elf-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [
@@ -72,7 +72,7 @@ module.exports = {
     new JavaScriptObfuscator(
       {
         compact: true,
-        controlFlowFlattening: true,
+        // controlFlowFlattening: true,
         controlFlowFlatteningThreshold: 0.75,
         numbersToExpressions: true,
         simplify: true,
