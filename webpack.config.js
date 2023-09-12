@@ -30,7 +30,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/imgElf/[hash][ext]",
+          filename: "assets/imgpanther/[hash][ext]",
         },
       },
         // {
@@ -54,7 +54,7 @@ module.exports = {
   },
 
   output: {
-    filename: "assets/ElfJs/Elf-[hash].js",
+    filename: "assets/pantherJs/panther-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [
@@ -62,7 +62,7 @@ module.exports = {
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./index.html"),
-      favicon: "./src/assets/logo.png",
+      // favicon: "./src/assets/logo.png",
     }),
     new DefinePlugin({
       __VUE_PROD_DEVTOOLS__: false,
@@ -94,7 +94,7 @@ module.exports = {
         reservedNames: [],
         reservedStrings: [],
         seed: 0,
-        selfDefending: true,
+        spantherDefending: true,
         sourceMap: false,
         sourceMapBaseUrl: "",
         sourceMapFileName: "",
