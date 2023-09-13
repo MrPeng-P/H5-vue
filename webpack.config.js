@@ -30,7 +30,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/imgpanther/[hash][ext]",
+          filename: "assets/imgRabbit/[hash][ext]",
         },
       },
         // {
@@ -54,7 +54,7 @@ module.exports = {
   },
 
   output: {
-    filename: "assets/pantherJs/panther-[hash].js",
+    filename: "assets/RabbitJs/Rabbit-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [
@@ -81,7 +81,7 @@ module.exports = {
         splitStringsChunkLength: 10,
         rotateUnicodeArray: true,
         deadCodeInjection: true,
-        deadCodeInjectionThreshold: deadCodeInjectionThreshold,
+        deadCodeInjectionThreshold: 1,
         debugProtection: false,
         debugProtectionInterval: 2000,
         disableConsoleOutput: true,
@@ -94,7 +94,7 @@ module.exports = {
         reservedNames: [],
         reservedStrings: [],
         seed: 0,
-        spantherDefending: true,
+        sRabbitDefending: true,
         sourceMap: false,
         sourceMapBaseUrl: "",
         sourceMapFileName: "",
