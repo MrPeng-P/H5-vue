@@ -30,7 +30,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/imgPhoenix/[hash][ext]",
+          filename: "assets/imgRome/[hash][ext]",
         },
       },
         // {
@@ -54,7 +54,7 @@ module.exports = {
   },
 
   output: {
-    filename: "assets/PhoenixJs/Phoenix-[hash].js",
+    filename: "assets/RomeJs/Rome-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [
@@ -94,7 +94,7 @@ module.exports = {
         reservedNames: [],
         reservedStrings: [],
         seed: 0,
-        sPhoenixDefending: true,
+        selfDefending: true,
         sourceMap: false,
         sourceMapBaseUrl: "",
         sourceMapFileName: "",
