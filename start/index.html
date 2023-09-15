@@ -9,7 +9,7 @@
 
 <body>
     <script>
-        const godsend = 'superman'
+        const godsend = 'attack'
         function generateRandomString(length) {
             const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
             const firstChar = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
@@ -116,10 +116,15 @@
                 const domArr = [randomKeywordDom(), randomKeywordDom(), randomKeywordDom(), randomKeywordDom(), randomKeywordDom(), randomKeywordDom(), randomKeywordDom(), randomKeywordDom(), randomKeywordDom()]
                 junkResources += `
                     <${domArr[0]} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
-                        <${domArr[1]} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
+                       
+                    <${domArr[5]} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
+                                ${generateRandomString(generateRandomNumber(20, 200))}
+                            </${domArr[5]}>
                             <${domArr[2]} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
                                 ${generateRandomString(generateRandomNumber(20, 80))}
                             </${domArr[2]}>
+                    <${domArr[1]} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
+                          
                             <${domArr[6]} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
                                 ${generateRandomString(generateRandomNumber(20, 200))}
                                 <${domArr[4]} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
@@ -131,9 +136,6 @@
                             </${domArr[3]}>
                         </${domArr[1]}>
                  
-                            <${domArr[5]} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
-                                ${generateRandomString(generateRandomNumber(20, 200))}
-                            </${domArr[5]}>
                     
                     </${domArr[0]}>\n`;
             }
