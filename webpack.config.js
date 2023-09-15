@@ -30,7 +30,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/imgRome/[hash][ext]",
+          filename: "assets/imggodoflight/[hash][ext]",
         },
       },
         // {
@@ -54,7 +54,7 @@ module.exports = {
   },
 
   output: {
-    filename: "assets/RomeJs/Rome-[hash].js",
+    filename: "assets/godoflightJs/godoflight-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [
