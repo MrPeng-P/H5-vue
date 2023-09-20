@@ -12,19 +12,11 @@ import {
 //     },
 
 //   ];
-// export const routes = [{
-//     path: '/',
-//     name: 'home',
-//     component: () => import('@/views/p-roate/p-home.vue'),
-// },{
-//     path: '/detail',
-//     name: 'detail',
-//     component: () => import('@/views/p-roate/p-roate.vue'),
-// },{
-//     path: '/over',
-//     name: 'over',
-//     component: () => import('@/views/p-roate/p-over.vue'),
-// }]
+export const routes = [{
+    path: '/',
+    name: 'detail',
+    component: () => import('@/views/p-roate/p-roate.vue'),
+}]
 
 // export const routes = [
 //   {
@@ -108,20 +100,20 @@ import {
 
 // ];
 //复杂老虎机-简化-横排滚动-wu排行
-export const routes = [
-  {
-    path: "/",
-    name: "startC",
-    component: () => import("@/views/slotC/p-start.vue"),
-  },
+// export const routes = [
+//   {
+//     path: "/",
+//     name: "startC",
+//     component: () => import("@/views/slotC/p-start.vue"),
+//   },
 
-  {
-    path: "/home",
-    name: "homeC",
-    component: () => import("@/views/slotC/p-home.vue"),
-  },
+//   {
+//     path: "/home",
+//     name: "homeC",
+//     component: () => import("@/views/slotC/p-home.vue"),
+//   },
 
-];
+// ];
 
 // 复杂老虎机-简化-横排滚动-wu排行
 // export const routes = [

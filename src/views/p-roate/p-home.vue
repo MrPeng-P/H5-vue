@@ -12,7 +12,6 @@ const imageObj = {
 function routeAll() {
   const router = new useRouter();
   function goDetail() {
-    console.log("%c ..........11.........", "color:#31ef0e", 11);
     router.push("/detail");
   }
   return {
@@ -42,7 +41,7 @@ const { goDetail } = routeAll();
 }
 .start{
   margin-top: -90%;
-    width: 220px;
+  width: 220px;
 }
 
 </style>

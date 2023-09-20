@@ -287,7 +287,6 @@ export default {
     <div class="button-box">
       <div class="buttom-item" @click.stop.prevent="startGo"><img :src="imageObj.play" alt=""> </div>
       <div class="buttom-item" @click.stop.prevent="startGo"><img :src="imageObj.start" alt=""> </div>
-
     </div>
   </div>
   <!-- <Teleport to="body">
