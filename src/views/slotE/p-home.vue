@@ -1,34 +1,34 @@
 <script>
-import playRome from "@/assets/slotE13/playRome.png";
-// import playRome2 from "@/assets/slotE13/playRome2.png";
-// import playRome3 from "@/assets/slotE13/playRome3.png";
-import boxRome from "@/assets/slotE13/boxRome.jpg";
-import anyRome from "@/assets/slotE13/changeHRome.png";
-import anyBoxRome from "@/assets/slotE13/anyBoxRome.jpg";
-import homeRome from "@/assets/slotE13/homeRome.png";
-// import againRome from "@/assets/slotE13/againRome.png";
-import countRome from "@/assets/slotE13/countRome.png";
-// import ruleRome from "@/assets/slotE13/ruleRome.png";
-// import ruleDialogRome from "@/assets/slotE13/ruleDialogRome.jpg";
-// import resultRome from "@/assets/slotE13/resultRome.png";
-// import headRome from "@/assets/slotE13/headRome.png";
-// import star from "@/assets/slotE13/starRome.gif";
+import playwild from "@/assets/slotE14/playwild.png";
+// import playwild2 from "@/assets/slotE14/playwild2.png";
+// import playwild3 from "@/assets/slotE14/playwild3.png";
+import boxwild from "@/assets/slotE14/boxwild.jpg";
+import anywild from "@/assets/slotE14/changeHwild.png";
+import anyBoxwild from "@/assets/slotE14/anyBoxwild.jpg";
+import homewild from "@/assets/slotE14/homewild.png";
+// import againwild from "@/assets/slotE14/againwild.png";
+import countwild from "@/assets/slotE14/countwild.png";
+// import rulewild from "@/assets/slotE14/rulewild.png";
+// import ruleDialogwild from "@/assets/slotE14/ruleDialogwild.jpg";
+// import resultwild from "@/assets/slotE14/resultwild.png";
+// import headwild from "@/assets/slotE14/headwild.png";
+// import star from "@/assets/slotE14/starwild.gif";
 import { useRouter, useRoute } from "vue-router";
-import Rome1 from "@/assets/slotE13/Rome1.png";
-import Rome2 from "@/assets/slotE13/Rome2.png";
-import Rome3 from "@/assets/slotE13/Rome3.png";
-import Rome4 from "@/assets/slotE13/Rome4.png";
-import Rome5 from "@/assets/slotE13/Rome5.png";
-import Rome6 from "@/assets/slotE13/Rome6.png";
-import Rome7 from "@/assets/slotE13/Rome7.png";
+import wild1 from "@/assets/slotE14/wild1.png";
+import wild2 from "@/assets/slotE14/wild2.png";
+import wild3 from "@/assets/slotE14/wild3.png";
+import wild4 from "@/assets/slotE14/wild4.png";
+import wild5 from "@/assets/slotE14/wild5.png";
+import wild6 from "@/assets/slotE14/wild6.png";
+import wild7 from "@/assets/slotE14/wild7.png";
 
-// import animation1 from "@/assets/slotE13/dong/00001.png";
-// import animation4 from "@/assets/slotE13/dong/00004.png";
-// import animation8 from "@/assets/slotE13/dong/00008.png";
-// import animation12 from "@/assets/slotE13/dong/00012.png";
+// import animation1 from "@/assets/slotE14/dong/00001.png";
+// import animation4 from "@/assets/slotE14/dong/00004.png";
+// import animation8 from "@/assets/slotE14/dong/00008.png";
+// import animation12 from "@/assets/slotE14/dong/00012.png";
 
 import { inject } from "vue";
-// import football from "@/assets/slotE13/football.png";
+// import football from "@/assets/slotE14/football.png";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
@@ -60,31 +60,31 @@ export default {
     const router = new useRouter();
     // 随机生成 12 张图的数组
     let randomImages = [];
-    const RomeConfig = reactive({
-      // headRome,
+    const wildConfig = reactive({
+      // headwild,
       // animation1,
       // animation4,
       // animation8,
       // animation12,
-      anyRome,
-      playRome,
-      // playRome2,
-      // playRome3,
-      // againRome,
-      anyBoxRome,
-      boxRome,
-      homeRome,
+      anywild,
+      playwild,
+      // playwild2,
+      // playwild3,
+      // againwild,
+      anyBoxwild,
+      boxwild,
+      homewild,
       //   star,
-      // seniorityRome,
-      countRome,
-      // ruleRome,
-      // ruleDialogRome,
-      // resultRome
+      // senioritywild,
+      countwild,
+      // rulewild,
+      // ruleDialogwild,
+      // resultwild
     });
    
 
 
-    const RomeList = reactive([
+    const wildList = reactive([
       {
         name: "item1",
         size: 1,
@@ -97,53 +97,53 @@ export default {
       },
       {
         name: "item3",
-        size: 5,
-        imgList: [],
-      },
-      {
-        name: "item4",
         size: 3,
         imgList: [],
       },
       {
-        name: "item5",
+        name: "item4",
         size: 1,
         imgList: [],
       },
+      // {
+      //   name: "item5",
+      //   size: 1,
+      //   imgList: [],
+      // },
     ]);
     let timeOhter = 0;
     let id;
-    let stRome = ref(false);
+    let stwild = ref(false);
     let open = ref(false);
     let buttonStatus = ref(true);
     const images = [
       {
-        img: Rome1,
-        name: "Rome2",
+        img: wild1,
+        name: "wild2",
         className: "animation",
         count: 1800 * magnification.value,
       },
       {
-        img: Rome2,
-        name: "Rome1",
+        img: wild2,
+        name: "wild1",
         className: "animation",
         count: 1000 * magnification.value,
       },
       {
-        img: Rome3,
+        img: wild3,
       },
       {
-        img: Rome4,
+        img: wild4,
       },
       {
-        img: Rome5,
+        img: wild5,
       },
       {
-        img: Rome6,
+        img: wild6,
       },
       {
-        img: Rome7,
-        name: "Rome3",
+        img: wild7,
+        name: "wild3",
         className: "animation",
         count: 2200 * magnification.value,
       },
@@ -164,11 +164,11 @@ export default {
         buttonStatus.value = false;
 
         allMethods.clear();
-        const boxLists = RomeList.map((item) => {
+        const boxLists = wildList.map((item) => {
           return document.getElementById(item.name);
         });
         boxLists[0].style.setProperty("background-position-x", "center");
-        boxLists[0].querySelectorAll(".Romep-item-img").forEach((child) => {
+        boxLists[0].querySelectorAll(".wildp-item-img").forEach((child) => {
           child.style.setProperty("display", "none");
         });
         // boxLists.forEach((item)=>{
@@ -181,9 +181,9 @@ export default {
         //       0+'px'
         //     );
         // })
-        const content = document.getElementById("Romep-he");
-        const box2 = document.getElementById("Romep");
-        const coords = { x: 0, y: 0 }; // StRome at (0, 0)
+        const content = document.getElementById("wildp-he");
+        const box2 = document.getElementById("wildp");
+        const coords = { x: 0, y: 0 }; // Stwild at (0, 0)
         const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to(
             { x: 0, y: (1120 * content.clientHeight) / box2.clientHeight },
@@ -211,12 +211,12 @@ export default {
                 -coords.y + "px"
               );
             }
-            if (timeOhter > 4000 && timeOhter <= 7000) {
-              boxLists[4].style.setProperty(
-                "background-position-y",
-                -coords.y + "px"
-              );
-            }
+            // if (timeOhter > 4000 && timeOhter <= 7000) {
+            //   boxLists[4].style.setProperty(
+            //     "background-position-y",
+            //     -coords.y + "px"
+            //   );
+            // }
             if (timeOhter > 0 && timeOhter <= 3000) {
               boxLists[0].style.setProperty(
                 "background-position-y",
@@ -227,7 +227,7 @@ export default {
           .repeat(Infinity)
           .yoyo(false)
           .repeatDelay(0);
-        tween.start(); // StRome the tween immediately.
+        tween.start(); // Stwild the tween immediately.
         let nowDate = window.performance.now();
         function animate(time) {
           timeOhter = time - nowDate;
@@ -241,7 +241,7 @@ export default {
         let i = 0;
         let timeany = setInterval(() => {
           i++;
-          if (i > 7) {
+          if (i > 6) {
             sessionStorage.setItem("countValue", countValue.value);
 
             open.value = true;
@@ -252,7 +252,7 @@ export default {
           if (i > 0 && i < 4) {
             boxLists[i].style.setProperty("background-position-x", "center");
             boxLists[i]
-              .querySelectorAll(".Romep-item-img")
+              .querySelectorAll(".wildp-item-img")
               .forEach((child) => {
                 child.style.setProperty("display", "none");
               });
@@ -260,7 +260,7 @@ export default {
           if (i == 3) {
             boxLists[0].style.setProperty("background-position-x", 600 + "px");
             boxLists[0]
-              .querySelectorAll(".Romep-item-img")
+              .querySelectorAll(".wildp-item-img")
               .forEach((child) => {
                 child.style.setProperty("display", "block");
               });
@@ -268,7 +268,7 @@ export default {
           if (i == 4) {
             boxLists[1].style.setProperty("background-position-x", 600 + "px");
             boxLists[1]
-              .querySelectorAll(".Romep-item-img")
+              .querySelectorAll(".wildp-item-img")
               .forEach((child) => {
                 child.style.setProperty("display", "block");
               });
@@ -276,7 +276,7 @@ export default {
           if (i == 5) {
             boxLists[2].style.setProperty("background-position-x", 600 + "px");
             boxLists[2]
-              .querySelectorAll(".Romep-item-img")
+              .querySelectorAll(".wildp-item-img")
               .forEach((child) => {
                 child.style.setProperty("display", "block");
               });
@@ -284,18 +284,18 @@ export default {
           }
           if (i == 6) {
             boxLists[3].style.setProperty("background-position-x", 600 + "px");
-            boxLists[3].querySelectorAll(".Romep-item-img").forEach((child) => {
-              child.style.setProperty("display", "block");
-            });
-            // countValue.value += useCount.value*magn;
-          }
-          if (i == 7) {
-            boxLists[4].style.setProperty("background-position-x", 600 + "px");
-            boxLists[4].querySelectorAll(".Romep-item-img").forEach((child) => {
+            boxLists[3].querySelectorAll(".wildp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
             countValue.value += useCount.value*magn;
           }
+          // if (i == 7) {
+          //   boxLists[4].style.setProperty("background-position-x", 600 + "px");
+          //   boxLists[4].querySelectorAll(".wildp-item-img").forEach((child) => {
+          //     child.style.setProperty("display", "block");
+          //   });
+          //   countValue.value += useCount.value*magn;
+          // }
         }, 1000);
       },
       clear: () => {
@@ -342,7 +342,7 @@ export default {
           randomImages.push(randomImage);
         }
 
-        allMethods.assignImageList(RomeList, randomImages);
+        allMethods.assignImageList(wildList, randomImages);
       },
       // 随机生成图像列表
       shuffleArray(array) {
@@ -352,11 +352,11 @@ export default {
           [array[i], array[j]] = [array[j], array[i]];
         }
         array.forEach((item) => {
-          if (item.name == "Rome1") {
+          if (item.name == "wild1") {
             arrCount[0].value++;
-          } else if (item.name == "Rome2") {
+          } else if (item.name == "wild2") {
             arrCount[1].value++;
-          } else if (item.name == "Rome3") {
+          } else if (item.name == "wild3") {
             arrCount[2].value++;
           }
           if (item.count) {
@@ -366,13 +366,13 @@ export default {
         return array;
       },
 
-      // 将图像列表分配给RomeList
-      assignImageList(RomeList, images) {
+      // 将图像列表分配给wildList
+      assignImageList(wildList, images) {
         const shuffledImages = allMethods.shuffleArray(images.slice()); // 避免修改原始数组
 
         let currentIndex = 0;
 
-        RomeList.forEach((item) => {
+        wildList.forEach((item) => {
           const numImages = Math.min(item.size, 5);
           item.imgList = shuffledImages.slice(
             currentIndex,
@@ -380,7 +380,7 @@ export default {
           );
           currentIndex += numImages;
         });
-        return RomeList;
+        return wildList;
       },
       goSeniority: () => {
         router.push("/list");
@@ -390,10 +390,10 @@ export default {
     return {
       className,
       open,
-      stRome,
-      RomeConfig,
+      stwild,
+      wildConfig,
       randomImages,
-      RomeList,
+      wildList,
       countValue,
       useCount,
       showRuleValue,
@@ -433,19 +433,19 @@ export default {
     </Teleport>
 
   <div :class="className">
-    <!-- <img class="headRome" :src="RomeConfig.headRome" alt=""> -->
-    <div class="Romep" id="Romep">
-      <div class="Romep-he" id="Romep-he">
-        <!-- <img class="Rome-rule" @click="showRule" :src="RomeConfig.ruleRome" alt=""> -->
-        <div class="Romep-hidden">
-          <div class="Romep-item-box" v-for="(item, index) in RomeList">
-            <div class="Romep-item" :id="item.name">
+    <!-- <img class="headwild" :src="wildConfig.headwild" alt=""> -->
+    <div class="wildp" id="wildp">
+      <div class="wildp-he" id="wildp-he">
+        <!-- <img class="wild-rule" @click="showRule" :src="wildConfig.rulewild" alt=""> -->
+        <div class="wildp-hidden">
+          <div class="wildp-item-box" v-for="(item, index) in wildList">
+            <div class="wildp-item" :id="item.name">
               <div
                 v-for="(imgItem, imgIndex) in item.imgList"
                 :class="
                   imgItem.className
-                    ? 'Romep-item-img ' + imgItem.className
-                    : 'Romep-item-img'
+                    ? 'wildp-item-img ' + imgItem.className
+                    : 'wildp-item-img'
                 "
               >
                 <img :src="imgItem.img" alt="" />
@@ -454,23 +454,23 @@ export default {
           </div>
         </div>
       </div>
-      <div class="buttonRome-box">
+      <div class="buttonwild-box">
         <div class="buttons" @click="close"></div>
 
-        <div class="buttonsRome2" @click="run()"></div>
+        <div class="buttonswild2" @click="run()"></div>
 
-        <div class="buttonsRomeBack" @click="run()"></div>
+        <div class="buttonswildBack" @click="run()"></div>
 
         <!-- <div class="buttons2" @click="goSeniority"></div> -->
 
-        <div class="Rome-count" @click="showRule">
-          <!-- <img class="Rome-rule" :src="RomeConfig.ruleRome" alt="" /> -->
-          <img :src="RomeConfig.countRome" alt="" />
+        <div class="wild-count" @click="showRule">
+          <!-- <img class="wild-rule" :src="wildConfig.rulewild" alt="" /> -->
+          <img :src="wildConfig.countwild" alt="" />
           <div class="countValue">{{ countValue }}</div>
         </div>
       </div>
-      <div class="Romed-Romep">
-        <div class="Romed-back" @click="close"></div>
+      <div class="wildd-wildp">
+        <div class="wildd-back" @click="close"></div>
       </div>
     </div>
     
@@ -488,7 +488,7 @@ export default {
 
   width: 280px;
 }
-.Romed-Romep {
+.wildd-wildp {
   display: flex;
   align-items: center;
   /* padding: 60px 15px; */
@@ -506,39 +506,39 @@ export default {
     /* transform: rotateZ(90deg); */
 }
 
-.Rome-count img {
+.wild-count img {
   width: 100%;
   position: absolute;
   height: 100%;
   /* top: -16%; */
   z-index: -1;
 }
-.Rome-count .Rome-rule {
+.wild-count .wild-rule {
   position: absolute;
   left: -9%;
   width: 45px;
   height: 45px;
 }
-.Romed-back {
-  /* background: v-bind("'url(' + RomeConfig.homeRome + ')'") no-repeat; */
+.wildd-back {
+  /* background: v-bind("'url(' + wildConfig.homewild + ')'") no-repeat; */
 
   width: 36px;
   height: 42px;
   background-size: 100%;
   z-index: 999;
 }
-.stRome {
+.stwild {
   margin-top: -30%;
   width: 160px;
   height: 80px;
-  background: v-bind("'url(' + RomeConfig.playRome + ')'") no-repeat;
+  background: v-bind("'url(' + wildConfig.playwild + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 }
 .container {
   display: flex;
   flex-direction: column;
-  background: v-bind("'url(' + RomeConfig.boxRome + ')'") no-repeat;
+  background: v-bind("'url(' + wildConfig.boxwild + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -548,7 +548,7 @@ export default {
   align-items: center;
 }
 
-.Romep {
+.wildp {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -558,7 +558,7 @@ export default {
   /* height: 100vh; */
   overflow: hidden;
 
-  background: v-bind("'url(' + RomeConfig.anyBoxRome + ')'") no-repeat;
+  background: v-bind("'url(' + wildConfig.anyBoxwild + ')'") no-repeat;
   background-size: 100% 100%;
   background-position: center 15%;
 
@@ -567,7 +567,7 @@ export default {
   font-size: 26;
 }
 
-.buttonRome-box {
+.buttonwild-box {
   position: absolute;
   top: 5%;
   left: 31%;
@@ -576,7 +576,7 @@ export default {
   width: 88%;
   height: 86%;
 }
-.Rome-count {
+.wild-count {
   position: relative;
   width: 31%;
     height: 17%;
@@ -595,7 +595,7 @@ export default {
   width: 7%;
   height: 16%;
   z-index: 999;
-  background: v-bind("'url(' + RomeConfig.homeRome + ')'") no-repeat;
+  background: v-bind("'url(' + wildConfig.homewild + ')'") no-repeat;
   background-size: 100% 100%;
 }
 .buttons2 {
@@ -604,30 +604,30 @@ export default {
   width: 7%;
   height: 54.5%;
   z-index: 999;
-  /* background: v-bind("'url(' + RomeConfig.seniorityRome + ')'") no-repeat; */
+  /* background: v-bind("'url(' + wildConfig.senioritywild + ')'") no-repeat; */
   background-size: 100% 100%;
 }
-.buttonsRomeBack {
+.buttonswildBack {
   position: absolute;
   left: 65.5%;
   margin-top: 64%;
   width: 38%;
   height: 45.5%;
   z-index: 999;
-  /* background: v-bind("'url(' + RomeConfig.againRome + ')'") no-repeat; */
+  /* background: v-bind("'url(' + wildConfig.againwild + ')'") no-repeat; */
   background-size: 100% 100%;
 }
 
-.buttonsRome2 {
+.buttonswild2 {
   margin-left: 3%;
     margin-top: -10%;
     width: 18%;
     height: 16.5%;
   z-index: 999;
-  background: v-bind("'url(' + RomeConfig.playRome + ')'") no-repeat;
+  background: v-bind("'url(' + wildConfig.playwild + ')'") no-repeat;
   background-size: 100% 100%;
 }
-.Romep-he {
+.wildp-he {
   position: relative;
   margin-right: -12%;
   width: 75%;
@@ -637,7 +637,7 @@ export default {
   transform: scale(0.67);
 }
 
-.Romep-hidden {
+.wildp-hidden {
   /* margin-top: 2%; */
   margin-left: 3%;
   margin-top: -6%;
@@ -649,38 +649,38 @@ export default {
     transform:rotateZ(-59.5deg) translate(10vw, -16vw);
   overflow: hidden;
 }
-.Romep-item-box {
+.wildp-item-box {
   height: 100%;
   flex: 1;
 
   overflow: hidden;
 }
 
-.Romep-item-box:nth-child(1),
-.Romep-item-box:nth-child(5) {
+.wildp-item-box:nth-child(1),
+.wildp-item-box:nth-child(4) {
   height: 20%;
 
   transform: translate(-3vw, -19vw);
 
-  .Romep-item {
+  .wildp-item {
     background-size: 91% 928%;
   }
 }
-.Romep-item-box:nth-child(5) {
+.wildp-item-box:nth-child(4) {
   transform: translate(3vw, 19vw);
 }
-.Romep-item-box:nth-child(2),
-.Romep-item-box:nth-child(4) {
+.wildp-item-box:nth-child(2),
+.wildp-item-box:nth-child(3) {
   transform: translate(-3vw, -9vw);
   height: 60%;
-  .Romep-item {
+  .wildp-item {
     background-size: 91% 343%;
   }
 }
-.Romep-item-box:nth-child(4) {
+.wildp-item-box:nth-child(3) {
   transform: translate(4vw, 10vw);
 }
-.Romep-item {
+.wildp-item {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -688,24 +688,24 @@ export default {
 
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + RomeConfig.anyRome + ')'");
+  background: v-bind("'url(' + wildConfig.anywild + ')'");
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
  
   background-size: 100% 217%;
 }
-.Romep-item:nth-child(2) {
+.wildp-item:nth-child(2) {
   /* margin-right: 20%; */
 }
-.Romep-item-img {
+.wildp-item-img {
   position: relative;
 
   display: none;
   width: 100%;
   height: 100%;
 }
-.Romep-item-img img {
+.wildp-item-img img {
   position: absolute;
   top: 32%;
   left: 48%;
@@ -717,7 +717,7 @@ export default {
 .modal {
   display: flex;
   justify-content: center;
-  align-items: flex-stRome;
+  align-items: flex-stwild;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -725,7 +725,7 @@ export default {
   height: 100vh;
   z-index: 9999;
   /* background-color: rgba(0, 0, 0, 0.5); */
-  /* background: v-bind("'url(' + RomeConfig.dialogRome + ')'") no-repeat; */
+  /* background: v-bind("'url(' + wildConfig.dialogwild + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star {
@@ -747,17 +747,17 @@ export default {
   width: 70%;
 }
 
-.stRome-bg {
+.stwild-bg {
   position: absolute;
 
   top: 0;
   z-index: 1;
 }
-.stRome-bg img {
+.stwild-bg img {
   width: 100%;
 }
 
-.modelRome-list {
+.modelwild-list {
   position: absolute;
   left: 60%;
   top: 39.5%;
@@ -769,33 +769,33 @@ export default {
   font-size: 16px;
   /* transform: rotate(7deg) translateX(-36px); */
 }
-.modelRome-item {
+.modelwild-item {
   margin-bottom: 11px;
 }
-.modelRome-total {
+.modelwild-total {
   padding: 7px 14px;
 }
 
-.headRome {
+.headwild {
   margin-top: 10vh;
   width: 80%;
 }
 /* 定义步长图片动画关键帧 */
 @keyframes image-animation {
   0% {
-    background-image: v-bind("'url(' + RomeConfig.animation1 + ')'");
+    background-image: v-bind("'url(' + wildConfig.animation1 + ')'");
   }
 
   25% {
-    background-image: v-bind("'url(' + RomeConfig.animation4 + ')'");
+    background-image: v-bind("'url(' + wildConfig.animation4 + ')'");
   }
 
   75% {
-    background-image: v-bind("'url(' + RomeConfig.animation8 + ')'");
+    background-image: v-bind("'url(' + wildConfig.animation8 + ')'");
   }
 
   100% {
-    background-image: v-bind("'url(' + RomeConfig.animation12 + ')'");
+    background-image: v-bind("'url(' + wildConfig.animation12 + ')'");
   }
 }
 
@@ -812,7 +812,7 @@ export default {
 
   /* animation: image-animation 2s steps(4) infinite; */
 }
-.Rome{
+.wild{
   display: none;
 }
 </style>

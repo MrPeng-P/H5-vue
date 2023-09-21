@@ -12,11 +12,11 @@ import {
 //     },
 
 //   ];
-export const routes = [{
-    path: '/',
-    name: 'detail',
-    component: () => import('@/views/p-roate/p-roate.vue'),
-}]
+// export const routes = [{
+//     path: '/',
+//     name: 'detail',
+//     component: () => import('@/views/p-roate/p-roate.vue'),
+// }]
 
 // export const routes = [
 //   {
@@ -32,17 +32,17 @@ export const routes = [{
 // ];
 
 //翻牌
-// export const routes = [{
-//     path: '/',
-//     name: 'home',
-//     component: () => import('@/views/flop/p-home.vue'),
-// },
-// {
-//     path: '/flop',
-//     name: 'flop',
-//     component: () => import('@/views/flop/p-flop.vue'),
-// }
-// ]
+export const routes = [{
+    path: '/',
+    name: 'home',
+    component: () => import('@/views/flop/p-home.vue'),
+},
+{
+    path: '/flop',
+    name: 'flop',
+    component: () => import('@/views/flop/p-flop.vue'),
+}
+]
 
 // //复杂老虎机
 // export const routes = [

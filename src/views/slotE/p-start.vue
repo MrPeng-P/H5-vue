@@ -1,7 +1,7 @@
 <script>
 
-// import playRome from "@/assets/slotE13/playRome.png";
-import boxRome from "@/assets/slotE13/boxRome.jpg";
+// import playwild from "@/assets/slotE14/playwild.png";
+import boxwild from "@/assets/slotE14/boxwild.jpg";
 import { onMounted, reactive, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
@@ -10,9 +10,9 @@ export default {
   setup() {
     const router = new useRouter();
     const className = "container";
-    const RomeConfig = reactive({
-      // playRome,
-      boxRome,
+    const wildConfig = reactive({
+      // playwild,
+      boxwild,
     });
 
     const allMethods = {
@@ -27,7 +27,7 @@ export default {
     })
     return {
       className,
-      RomeConfig,
+      wildConfig,
       ...allMethods,
     };
   },
@@ -39,7 +39,7 @@ export default {
 
   <div :class="className" @click="goHome">
     
-   <div class="stRome">
+   <div class="stwild">
     
    </div>
   </div>
@@ -47,19 +47,19 @@ export default {
 </template>
 
 <style scoped>
-.Rome{
+.wild{
   display: none;
 }
-.stRome {
+.stwild {
   margin-top: 27%;
   width: 30%;
   height: 252px;
-  /* background: v-bind("'url(' + RomeConfig.playRome + ')'") no-repeat; */
+  /* background: v-bind("'url(' + wildConfig.playwild + ')'") no-repeat; */
   background-size: 100%;
   z-index: 99;
 }
 .container {
-  background: v-bind("'url(' + RomeConfig.boxRome + ')'") no-repeat;
+  background: v-bind("'url(' + wildConfig.boxwild + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -69,7 +69,7 @@ export default {
   align-items: center;
 }
 
-.Romep-he {
+.wildp-he {
   position: relative;
   margin-top: 26%;
   width: 140%;
@@ -78,7 +78,7 @@ export default {
   justify-content: space-between;
   transform: scale(0.65);
 }
-.Romep-hidden {
+.wildp-hidden {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -86,10 +86,10 @@ export default {
   height: 100%;
   overflow: hidden;
 }
-.Romep-item {
+.wildp-item {
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + RomeConfig.anyRome + ')'");
+  background: v-bind("'url(' + wildConfig.anywild + ')'");
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
@@ -99,7 +99,7 @@ export default {
   padding-top: 155px;
   display: flex;
   justify-content: center;
-  align-items: flex-stRome;
+  align-items: flex-stwild;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -107,7 +107,7 @@ export default {
   height: 100vh;
   z-index: 9999;
   background-color: rgba(0, 0, 0, 0.5);
-  /* background: v-bind("'url(' + RomeConfig.dialogRome + ')'") no-repeat; */
+  /* background: v-bind("'url(' + wildConfig.dialogwild + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star {
@@ -118,12 +118,12 @@ export default {
   width: 90%;
 }
 
-.stRome-bg {
+.stwild-bg {
   position: absolute;
   top: 0;
   z-index: 1;
 }
-.stRome-bg img {
+.stwild-bg img {
   width: 100%;
 }
 .swan{
