@@ -30,7 +30,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/imgcombustion/[hash][ext]",
+          filename: "assets/imgdiamond/[hash][ext]",
         },
       },
         // {
@@ -54,7 +54,7 @@ module.exports = {
   },
 
   output: {
-    filename: "assets/combustionJs/combustion-[hash].js",
+    filename: "assets/diamondJs/diamond-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [
