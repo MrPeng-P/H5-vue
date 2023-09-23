@@ -32,17 +32,17 @@ import {
 // ];
 
 //翻牌
-export const routes = [{
-    path: '/',
-    name: 'home',
-    component: () => import('@/views/flop/p-home.vue'),
-},
-{
-    path: '/flop',
-    name: 'flop',
-    component: () => import('@/views/flop/p-flop.vue'),
-}
-]
+// export const routes = [{
+//     path: '/',
+//     name: 'home',
+//     component: () => import('@/views/flop/p-home.vue'),
+// },
+// {
+//     path: '/flop',
+//     name: 'flop',
+//     component: () => import('@/views/flop/p-flop.vue'),
+// }
+// ]
 
 // //复杂老虎机
 // export const routes = [
@@ -116,20 +116,20 @@ export const routes = [{
 // ];
 
 // 复杂老虎机-简化-横排滚动-wu排行
-// export const routes = [
-//   {
-//     path: "/",
-//     name: "startD",
-//     component: () => import("@/views/slotD/p-start.vue"),
-//   },
+export const routes = [
+  {
+    path: "/",
+    name: "startD",
+    component: () => import("@/views/slotD/p-start.vue"),
+  },
 
-//   {
-//     path: "/home",
-//     name: "homeD",
-//     component: () => import("@/views/slotD/p-home.vue"),
-//   },
+  {
+    path: "/home",
+    name: "homeD",
+    component: () => import("@/views/slotD/p-home.vue"),
+  },
 
-// ];
+];
 
 //复杂老虎机-简化-斜向滚动-wu排行
 // export const routes = [
