@@ -30,7 +30,7 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/,
         type: "asset/resource",
         generator: {
-          filename: "assets/imgclubbox/[hash][ext]",
+          filename: "assets/imgmagicFruit/[hash][ext]",
         },
       },
         // {
@@ -54,7 +54,7 @@ module.exports = {
   },
 
   output: {
-    filename: "assets/clubboxJs/clubbox-[hash].js",
+    filename: "assets/magicFruitJs/magicFruit-[hash].js",
     path: path.resolve(__dirname, "./dist"),
   },
   plugins: [
