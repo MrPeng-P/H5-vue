@@ -1,38 +1,38 @@
 <script>
 
-import playmagicFruit from "@/assets/slotB11/playmagicFruit2.png";
-import playmagicFruit2 from "@/assets/slotB11/playmagicFruit.png";
-// import playmagicFruit3 from "@/assets/slotB11/playmagicFruit3.png";
-import boxmagicFruit from "@/assets/slotB11/boxmagicFruit.jpg";
-import anymagicFruit from "@/assets/slotB11/changemagicFruit.png";
-import anyBoxmagicFruit from "@/assets/slotB11/anyBoxmagicFruit.png";
-import homemagicFruit from "@/assets/slotB11/homemagicFruit.png";
-// import againmagicFruit from "@/assets/slotB11/againmagicFruit.png";
-import countmagicFruit from "@/assets/slotB11/countmagicFruit.png";
-// import rulemagicFruit from "@/assets/slotB11/rulemagicFruit.png";
-// import ruleDialogmagicFruit from "@/assets/slotB11/ruleDialogmagicFruit.jpg";
-// import resultmagicFruit from "@/assets/slotB11/resultmagicFruit.png";
-// import headmagicFruit from "@/assets/slotB11/headmagicFruit.png";
+import playFruitcoins from "@/assets/slotB12/playFruitcoins2.png";
+import playFruitcoins2 from "@/assets/slotB12/playFruitcoins.png";
+// import playFruitcoins3 from "@/assets/slotB12/playFruitcoins3.png";
+import boxFruitcoins from "@/assets/slotB12/boxFruitcoins.jpg";
+import anyFruitcoins from "@/assets/slotB12/changeFruitcoins.png";
+import anyBoxFruitcoins from "@/assets/slotB12/anyBoxFruitcoins.png";
+import homeFruitcoins from "@/assets/slotB12/homeFruitcoins.png";
+// import againFruitcoins from "@/assets/slotB12/againFruitcoins.png";
+import countFruitcoins from "@/assets/slotB12/countFruitcoins.png";
+// import ruleFruitcoins from "@/assets/slotB12/ruleFruitcoins.png";
+// import ruleDialogFruitcoins from "@/assets/slotB12/ruleDialogFruitcoins.jpg";
+// import resultFruitcoins from "@/assets/slotB12/resultFruitcoins.png";
+// import headFruitcoins from "@/assets/slotB12/headFruitcoins.png";
 
-// import star from "@/assets/slotB11/starmagicFruit.gif";
+// import star from "@/assets/slotB12/starFruitcoins.gif";
 import { useRouter, useRoute } from "vue-router";
-import magicFruit1 from "@/assets/slotB11/magicFruit1.png";
-import magicFruit2 from "@/assets/slotB11/magicFruit2.png";
-import magicFruit3 from "@/assets/slotB11/magicFruit3.png";
-import magicFruit4 from "@/assets/slotB11/magicFruit4.png";
-import magicFruit5 from "@/assets/slotB11/magicFruit5.png";
-import magicFruit6 from "@/assets/slotB11/magicFruit6.png";
-// import magicFruit8 from "@/assets/slotB11/magicFruit8.png";
-import magicFruit7 from "@/assets/slotB11/magicFruit7.png";
-// import magicFruit9 from "@/assets/slotB11/magicFruit9.png";
+import Fruitcoins1 from "@/assets/slotB12/Fruitcoins1.png";
+import Fruitcoins2 from "@/assets/slotB12/Fruitcoins2.png";
+import Fruitcoins3 from "@/assets/slotB12/Fruitcoins3.png";
+import Fruitcoins4 from "@/assets/slotB12/Fruitcoins4.png";
+import Fruitcoins5 from "@/assets/slotB12/Fruitcoins5.png";
+import Fruitcoins6 from "@/assets/slotB12/Fruitcoins6.png";
+// import Fruitcoins8 from "@/assets/slotB12/Fruitcoins8.png";
+import Fruitcoins7 from "@/assets/slotB12/Fruitcoins7.png";
+// import Fruitcoins9 from "@/assets/slotB12/Fruitcoins9.png";
 
-// import animation1 from "@/assets/slotB11/dong/00001.png";
-// import animation4 from "@/assets/slotB11/dong/00004.png";
-// import animation8 from "@/assets/slotB11/dong/00008.png";
-// import animation12 from "@/assets/slotB11/dong/00012.png";
+// import animation1 from "@/assets/slotB12/dong/00001.png";
+// import animation4 from "@/assets/slotB12/dong/00004.png";
+// import animation8 from "@/assets/slotB12/dong/00008.png";
+// import animation12 from "@/assets/slotB12/dong/00012.png";
 
 import { inject } from "vue";
-// import football from "@/assets/slotB11/football.png";
+// import football from "@/assets/slotB12/football.png";
 import { onMounted, reactive, ref } from "vue";
 import * as TWEEN from "@tweenjs/tween.js";
 export default {
@@ -64,87 +64,78 @@ export default {
     const router = new useRouter();
     // 随机生成 12 张图的数组
     let randomImages = [];
-    const magicFruitConfig = reactive({
-      // headmagicFruit,
+    const FruitcoinsConfig = reactive({
+      // headFruitcoins,
       // animation1,
       // animation4,
       // animation8,
       // animation12,
-      anymagicFruit,
-      playmagicFruit,
-      playmagicFruit2,
-      // playmagicFruit3,
-      // againmagicFruit,
-      anyBoxmagicFruit,
-      boxmagicFruit,
-      homemagicFruit,
+      anyFruitcoins,
+      playFruitcoins,
+      playFruitcoins2,
+      // playFruitcoins3,
+      // againFruitcoins,
+      anyBoxFruitcoins,
+      boxFruitcoins,
+      homeFruitcoins,
       //   star,
-      // senioritymagicFruit,
-      countmagicFruit,
-      // rulemagicFruit,
-      // ruleDialogmagicFruit,
-      // resultmagicFruit
+      // seniorityFruitcoins,
+      countFruitcoins,
+      // ruleFruitcoins,
+      // ruleDialogFruitcoins,
+      // resultFruitcoins
     });
-    const magicFruitList = reactive([
+    const FruitcoinsList = reactive([
       {
         name: "item1",
-        size: 4,
+        size: 2,
         imgList: [],
       },
       {
         name: "item2",
-        size: 4,
+        size: 2,
         imgList: [],
       },
       {
         name: "item3",
-        size: 4,
+        size: 2,
         imgList: [],
       },
-      {
-        name: "item4",
-        size: 4,
-        imgList: [],
-      },
-      {
-        name: "item5",
-        size: 4,
-        imgList: [],
-      },
+     
     ]);
     let timeOhter = 0;
     let id;
-    let stmagicFruit = ref(false);
+    let stFruitcoins = ref(false);
     let open = ref(false);
     let buttonStatus = ref(true);
     const images = [
       {
-        img: magicFruit1,
-        name: "magicFruit2",
+        img: Fruitcoins1,
+        name: "Fruitcoins2",
         className: "animation",
         count: 1800 * magnification.value,
       },
       {
-        img: magicFruit2,
-        name: "magicFruit1",
+        img: Fruitcoins2,
+        name: "Fruitcoins1",
         className: "animation",
         count: 1000 * magnification.value,
       },
       {
-        img: magicFruit3,
+        img: Fruitcoins3,
       },
       {
-        img: magicFruit4,
+        img: Fruitcoins4,
       },
       {
-        img: magicFruit5,
+        img: Fruitcoins5,
       },
       {
-        img: magicFruit6,
+        img: Fruitcoins6,
       },
       {
-        img: magicFruit7,
-        name: "magicFruit3",
+        img: Fruitcoins7,
+        name: "Fruitcoins3",
         className: "animation",
         count: 2200 * magnification.value,
       },
@@ -163,11 +154,11 @@ export default {
         buttonStatus.value = false;
 
         allMethods.clear();
-        const boxLists = magicFruitList.map((item) => {
+        const boxLists = FruitcoinsList.map((item) => {
           return document.getElementById(item.name);
         });
         boxLists[0].style.setProperty("background-position-x", "center");
-        boxLists[0].querySelectorAll(".magicFruitp-item-img").forEach((child) => {
+        boxLists[0].querySelectorAll(".Fruitcoinsp-item-img").forEach((child) => {
           child.style.setProperty("display", "none");
         });
         // boxLists.forEach((item)=>{
@@ -180,9 +171,9 @@ export default {
         //       0+'px'
         //     );
         // })
-        const content = document.getElementById("magicFruitp-he");
-        const box2 = document.getElementById("magicFruitp");
-        const coords = { x: 0, y: 0 }; // StmagicFruit at (0, 0)
+        const content = document.getElementById("Fruitcoinsp-he");
+        const box2 = document.getElementById("Fruitcoinsp");
+        const coords = { x: 0, y: 0 }; // StFruitcoins at (0, 0)
         const tween = new TWEEN.Tween(coords) // Create a new tween that modifies 'coords'.
           .to(
             { x: 0, y: (1120 * content.clientHeight) / box2.clientHeight },
@@ -190,6 +181,12 @@ export default {
           ) // Move to (300, 600) in 1 second.
           .easing() // Use an easing function to make the animation smooth.
           .onUpdate(() => {
+                if (timeOhter > 0 && timeOhter <= 3000) {
+              boxLists[0].style.setProperty(
+                "background-position-y",
+                -coords.y + "px"
+              );
+            }
             if (timeOhter > 1000 && timeOhter <= 4000) {
               boxLists[1].style.setProperty(
                 "background-position-y",
@@ -204,29 +201,24 @@ export default {
               );
             }
 
-            if (timeOhter > 3000 && timeOhter <= 6000) {
-              boxLists[3].style.setProperty(
-                "background-position-y",
-                -coords.y + "px"
-              );
-            }
-            if (timeOhter > 4000 && timeOhter <= 7000) {
-              boxLists[4].style.setProperty(
-                "background-position-y",
-                -coords.y + "px"
-              );
-            }
-            if (timeOhter > 0 && timeOhter <= 3000) {
-              boxLists[0].style.setProperty(
-                "background-position-y",
-                -coords.y + "px"
-              );
-            }
+            // if (timeOhter > 3000 && timeOhter <= 6000) {
+            //   boxLists[3].style.setProperty(
+            //     "background-position-y",
+            //     -coords.y + "px"
+            //   );
+            // }
+            // if (timeOhter > 4000 && timeOhter <= 7000) {
+            //   boxLists[4].style.setProperty(
+            //     "background-position-y",
+            //     -coords.y + "px"
+            //   );
+            // }
+        
           })
           .repeat(Infinity)
           .yoyo(false)
           .repeatDelay(0);
-          tween.start(); // StmagicFruit the tween immediately.
+          tween.start(); // StFruitcoins the tween immediately.
         let nowDate = window.performance.now();
         function animate(time) {
           timeOhter = time - nowDate;
@@ -250,42 +242,43 @@ export default {
           }
           if (i > 0 && i < 4) {
             boxLists[i].style.setProperty("background-position-x", "center");
-            boxLists[i].querySelectorAll(".magicFruitp-item-img").forEach((child) => {
+            boxLists[i].querySelectorAll(".Fruitcoinsp-item-img").forEach((child) => {
               child.style.setProperty("display", "none");
             });
           }
           if (i == 3) {
             boxLists[0].style.setProperty("background-position-x", 600 + "px");
-            boxLists[0].querySelectorAll(".magicFruitp-item-img").forEach((child) => {
+            boxLists[0].querySelectorAll(".Fruitcoinsp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 4) {
             boxLists[1].style.setProperty("background-position-x", 600 + "px");
-            boxLists[1].querySelectorAll(".magicFruitp-item-img").forEach((child) => {
+            boxLists[1].querySelectorAll(".Fruitcoinsp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
           }
           if (i == 5) {
             boxLists[2].style.setProperty("background-position-x", 600 + "px");
-            boxLists[2].querySelectorAll(".magicFruitp-item-img").forEach((child) => {
-              child.style.setProperty("display", "block");
-            });
-          }
-          if (i == 6) {
-            boxLists[3].style.setProperty("background-position-x", 600 + "px");
-            boxLists[3].querySelectorAll(".magicFruitp-item-img").forEach((child) => {
-              child.style.setProperty("display", "block");
-            });
-            
-          }
-          if (i == 7) {
-            boxLists[4].style.setProperty("background-position-x", 600 + "px");
-            boxLists[4].querySelectorAll(".magicFruitp-item-img").forEach((child) => {
+            boxLists[2].querySelectorAll(".Fruitcoinsp-item-img").forEach((child) => {
               child.style.setProperty("display", "block");
             });
             countValue.value += useCount.value*magn;
+
           }
+          // if (i == 6) {
+          //   boxLists[3].style.setProperty("background-position-x", 600 + "px");
+          //   boxLists[3].querySelectorAll(".Fruitcoinsp-item-img").forEach((child) => {
+          //     child.style.setProperty("display", "block");
+          //   });
+            
+          // }
+          // if (i == 7) {
+          //   boxLists[4].style.setProperty("background-position-x", 600 + "px");
+          //   boxLists[4].querySelectorAll(".Fruitcoinsp-item-img").forEach((child) => {
+          //     child.style.setProperty("display", "block");
+          //   });
+          // }
         }, 1000);
       },
       clear: () => {
@@ -332,7 +325,7 @@ export default {
           randomImages.push(randomImage);
         }
 
-        allMethods.assignImageList(magicFruitList, randomImages);
+        allMethods.assignImageList(FruitcoinsList, randomImages);
       },
       // 随机生成图像列表
       shuffleArray(array) {
@@ -341,11 +334,11 @@ export default {
           [array[i], array[j]] = [array[j], array[i]];
         }
         array.forEach((item) => {
-          if (item.name == "magicFruit1") {
+          if (item.name == "Fruitcoins1") {
             arrCount[0].value++;
-          } else if (item.name == "magicFruit2") {
+          } else if (item.name == "Fruitcoins2") {
             arrCount[1].value++;
-          } else if (item.name == "magicFruit3") {
+          } else if (item.name == "Fruitcoins3") {
             arrCount[2].value++;
           }
           if (item.count) {
@@ -355,13 +348,13 @@ export default {
         return array;
       },
 
-      // 将图像列表分配给magicFruitList
-      assignImageList(magicFruitList, images) {
+      // 将图像列表分配给FruitcoinsList
+      assignImageList(FruitcoinsList, images) {
         const shuffledImages = allMethods.shuffleArray(images.slice()); // 避免修改原始数组
 
         let currentIndex = 0;
 
-        magicFruitList.forEach((item) => {
+        FruitcoinsList.forEach((item) => {
           const numImages = Math.min(item.size, 4);
           item.imgList = shuffledImages.slice(
             currentIndex,
@@ -369,7 +362,7 @@ export default {
           );
           currentIndex += numImages;
         });
-        return magicFruitList;
+        return FruitcoinsList;
       },
       goSeniority: () => {
         router.push("/list");
@@ -379,10 +372,10 @@ export default {
     return {
       className,
       open,
-      stmagicFruit,
-      magicFruitConfig,
+      stFruitcoins,
+      FruitcoinsConfig,
       randomImages,
-      magicFruitList,
+      FruitcoinsList,
       countValue,
       useCount,
       showRuleValue,
@@ -394,22 +387,22 @@ export default {
 </script>
 <template>
   <div :class="className">
-    <!-- <img class="headmagicFruit" :src="magicFruitConfig.headmagicFruit" alt=""> -->
-    <div class="magicFruitp" id="magicFruitp">
-      <div class="magicFruitp-he" id="magicFruitp-he">
-        <!-- <img class="magicFruit-rule" @click="showRule" :src="magicFruitConfig.rulemagicFruit" alt=""> -->
-        <div class="magicFruitp-hidden">
+    <!-- <img class="headFruitcoins" :src="FruitcoinsConfig.headFruitcoins" alt=""> -->
+    <div class="Fruitcoinsp" id="Fruitcoinsp">
+      <div class="Fruitcoinsp-he" id="Fruitcoinsp-he">
+        <!-- <img class="Fruitcoins-rule" @click="showRule" :src="FruitcoinsConfig.ruleFruitcoins" alt=""> -->
+        <div class="Fruitcoinsp-hidden">
           <div
-            class="magicFruitp-item"
+            class="Fruitcoinsp-item"
             :id="item.name"
-            v-for="(item, index) in magicFruitList"
+            v-for="(item, index) in FruitcoinsList"
           >
             <div
               v-for="(imgItem, imgIndex) in item.imgList"
               :class="
                 imgItem.className
-                  ? 'magicFruitp-item-img ' + imgItem.className
-                  : 'magicFruitp-item-img'
+                  ? 'Fruitcoinsp-item-img ' + imgItem.className
+                  : 'Fruitcoinsp-item-img'
               "
             >
               <img :src="imgItem.img" alt="" />
@@ -417,39 +410,39 @@ export default {
           </div>
         </div>
       </div>
-      <div class="buttonmagicFruit-box">
+      <div class="buttonFruitcoins-box">
         <div class="buttons" @click="close"></div>
 
-        <div class="buttonsmagicFruit2" @click="run()"></div>
+        <div class="buttonsFruitcoins2" @click="run()"></div>
        
-        <div class="buttonsmagicFruitBack" @click="run()"></div>
+        <div class="buttonsFruitcoinsBack" @click="run()"></div>
 
         <!-- <div class="buttons2" @click="goSeniority"></div> -->
 
-        <div class="magicFruit-count" @click="showRule">
-          <!-- <img class="magicFruit-rule" :src="magicFruitConfig.rulemagicFruit" alt="" /> -->
-          <img :src="magicFruitConfig.countmagicFruit" alt="" />
+        <div class="Fruitcoins-count" @click="showRule">
+          <!-- <img class="Fruitcoins-rule" :src="FruitcoinsConfig.ruleFruitcoins" alt="" /> -->
+          <img :src="FruitcoinsConfig.countFruitcoins" alt="" />
           <div class="countValue">{{ countValue }}</div>
         </div>
       </div>
-      <div class="magicFruitd-magicFruitp">
-        <div class="magicFruitd-back" @click="close"></div>
+      <div class="Fruitcoinsd-Fruitcoinsp">
+        <div class="Fruitcoinsd-back" @click="close"></div>
       </div>
     </div>
     <Teleport to="body">
       <div v-if="open" class="modal" @click="openDialog">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="magicFruitConfig.star" alt="" /> -->
-        <!-- <img class="model-img-bg" :src="magicFruitConfig.resultmagicFruit" alt="" /> -->
-        <!-- <div class="modelmagicFruit-list">
+        <!-- <img class="model-star" :src="FruitcoinsConfig.star" alt="" /> -->
+        <!-- <img class="model-img-bg" :src="FruitcoinsConfig.resultFruitcoins" alt="" /> -->
+        <!-- <div class="modelFruitcoins-list">
           <div
-            class="modelmagicFruit-item"
+            class="modelFruitcoins-item"
             v-for="(item, index) in arrCount"
             :key="index"
           >
             {{ item.count + "X" + item.value }}
           </div>
-          <div class="modelmagicFruit-total">{{ useCount }}</div>
+          <div class="modelFruitcoins-total">{{ useCount }}</div>
         </div> -->
       </div>
     </Teleport>
@@ -457,8 +450,8 @@ export default {
     <Teleport to="body">
       <div v-if="showRuleValue" class="modal" @click="showRule">
         <!-- 12312 -->
-        <!-- <img class="model-star" :src="magicFruitConfig.star" alt="" /> -->
-        <!-- <img class="model-img" :src="magicFruitConfig.ruleDialogmagicFruit" alt="" /> -->
+        <!-- <img class="model-star" :src="FruitcoinsConfig.star" alt="" /> -->
+        <!-- <img class="model-img" :src="FruitcoinsConfig.ruleDialogFruitcoins" alt="" /> -->
       </div>
     </Teleport>
   </div>
@@ -470,7 +463,7 @@ export default {
 
   width: 280px;
 }
-.magicFruitd-magicFruitp {
+.Fruitcoinsd-Fruitcoinsp {
   display: flex;
   align-items: center;
   /* padding: 60px 15px; */
@@ -486,39 +479,39 @@ export default {
     font-size: 18px;
 }
 
-.magicFruit-count img {
+.Fruitcoins-count img {
   width: 100%;
   position: absolute;
   height: 100%;
   /* top: -16%; */
   z-index: -1;
 }
-.magicFruit-count .magicFruit-rule {
+.Fruitcoins-count .Fruitcoins-rule {
   position: absolute;
   left: -9%;
   width: 45px;
   height: 45px;
 }
-.magicFruitd-back {
-  /* background: v-bind("'url(' + magicFruitConfig.homemagicFruit + ')'") no-repeat; */
+.Fruitcoinsd-back {
+  /* background: v-bind("'url(' + FruitcoinsConfig.homeFruitcoins + ')'") no-repeat; */
 
   width: 36px;
   height: 42px;
   background-size: 100%;
   z-index: 999;
 }
-.stmagicFruit {
+.stFruitcoins {
   margin-top: -30%;
   width: 160px;
   height: 80px;
-  background: v-bind("'url(' + magicFruitConfig.playmagicFruit + ')'") no-repeat;
+  background: v-bind("'url(' + FruitcoinsConfig.playFruitcoins + ')'") no-repeat;
   background-size: 100%;
   z-index: 99;
 }
 .container {
   display: flex;
   flex-direction: column;
-  background: v-bind("'url(' + magicFruitConfig.boxmagicFruit + ')'") no-repeat;
+  background: v-bind("'url(' + FruitcoinsConfig.boxFruitcoins + ')'") no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -528,7 +521,7 @@ export default {
   align-items: center;
 }
 
-.magicFruitp {
+.Fruitcoinsp {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -538,7 +531,7 @@ export default {
   /* height: 100vh; */
   overflow: hidden;
 
-  background: v-bind("'url(' + magicFruitConfig.anyBoxmagicFruit + ')'") no-repeat;
+  background: v-bind("'url(' + FruitcoinsConfig.anyBoxFruitcoins + ')'") no-repeat;
   background-size: 56%;
     background-position: center 40%;
 
@@ -547,7 +540,7 @@ export default {
   font-size: 26;
 }
 
-.buttonmagicFruit-box {
+.buttonFruitcoins-box {
   position: absolute;
   top: 5%;
     left: 17%;
@@ -558,13 +551,12 @@ export default {
   height: 25%;
   /* justify-content: space-between; */
 }
-.magicFruit-count {
+.Fruitcoins-count {
   position: relative;
   width: 46%;
-    height: 45%;
-
-    margin-left: -1%;
-    margin-top: 64%;
+    height: 44%;
+    margin-left: 3%;
+    margin-top: 60%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -579,7 +571,7 @@ export default {
 
     height: 43%;
   z-index: 999;
-  background: v-bind("'url(' + magicFruitConfig.homemagicFruit + ')'") no-repeat;
+  background: v-bind("'url(' + FruitcoinsConfig.homeFruitcoins + ')'") no-repeat;
   background-size: 100% 100%;
 }
 .buttons2 {
@@ -591,30 +583,30 @@ export default {
   width: 30%;
   height: 40%;
   z-index: 999;
-  /* background: v-bind("'url(' + magicFruitConfig.senioritymagicFruit + ')'") no-repeat; */
+  /* background: v-bind("'url(' + FruitcoinsConfig.seniorityFruitcoins + ')'") no-repeat; */
   background-size: 100% 100%;
 }
-.buttonsmagicFruitBack{
+.buttonsFruitcoinsBack{
   position: absolute;
   left: 65.5%;
     margin-top: 64%;
     width: 38%;
     height: 45.5%;
   z-index: 999;
-  /* background: v-bind("'url(' + magicFruitConfig.againmagicFruit + ')'") no-repeat; */
+  /* background: v-bind("'url(' + FruitcoinsConfig.againFruitcoins + ')'") no-repeat; */
   background-size: 100% 100%;
 }
 
-.buttonsmagicFruit2{
-  margin-left: 5%;
-    margin-top: 64%;
-    width: 28%;
+.buttonsFruitcoins2{
+  margin-left: 1%;
+    margin-top: 60%;
+    width: 26%;
     height: 44.5%;
     z-index: 999;
-  background: v-bind("'url(' + magicFruitConfig.playmagicFruit2 + ')'") no-repeat;
+  background: v-bind("'url(' + FruitcoinsConfig.playFruitcoins2 + ')'") no-repeat;
   background-size: 100% 100%;
 }
-.magicFruitp-he {
+.Fruitcoinsp-he {
   position: relative;
     margin-right: 0%;
     margin-top: 5%;
@@ -622,10 +614,10 @@ export default {
     height: 43vw;
     display: flex;
     justify-content: space-between;
-    transform: scale(0.7);
+    transform: scale(0.6);
 }
 
-.magicFruitp-hidden {
+.Fruitcoinsp-hidden {
   /* margin-top: 2%; */
   /* margin-left: 1%; */
   margin-top: -4%;
@@ -636,7 +628,7 @@ export default {
   height: 100%;
   overflow: hidden;
 }
-.magicFruitp-item {
+.Fruitcoinsp-item {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -644,23 +636,23 @@ export default {
 
   height: 100%;
   flex: 1;
-  background: v-bind("'url(' + magicFruitConfig.anymagicFruit + ')'");
+  background: v-bind("'url(' + FruitcoinsConfig.anyFruitcoins + ')'");
   background-position-x: center;
   background-position-y: -0px;
   background-repeat-x: no-repeat;
-  background-size: 63% 197%;
+  background-size: 71% 410%;
 }
-.magicFruitp-item:nth-child(2){
+.Fruitcoinsp-item:nth-child(2){
   /* margin-right: 20%; */
 }
-.magicFruitp-item-img {
+.Fruitcoinsp-item-img {
   position: relative;
 
   display: none;
   width: 100%;
   height: 100%;
 }
-.magicFruitp-item-img img {
+.Fruitcoinsp-item-img img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -672,7 +664,7 @@ export default {
 .modal {
   display: flex;
   justify-content: center;
-  align-items: flex-stmagicFruit;
+  align-items: flex-stFruitcoins;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -680,7 +672,7 @@ export default {
   height: 100vh;
   z-index: 9999;
   /* background-color: rgba(0, 0, 0, 0.5); */
-  /* background: v-bind("'url(' + magicFruitConfig.dialogmagicFruit + ')'") no-repeat; */
+  /* background: v-bind("'url(' + FruitcoinsConfig.dialogFruitcoins + ')'") no-repeat; */
   /* background-size: 100%; */
 }
 .model-star {
@@ -702,17 +694,17 @@ export default {
   width: 70%;
 }
 
-.stmagicFruit-bg {
+.stFruitcoins-bg {
   position: absolute;
 
   top: 0;
   z-index: 1;
 }
-.stmagicFruit-bg img {
+.stFruitcoins-bg img {
   width: 100%;
 }
 
-.modelmagicFruit-list {
+.modelFruitcoins-list {
   position: absolute;
   left: 60%;
   top: 39.5%;
@@ -724,33 +716,33 @@ export default {
   font-size: 16px;
   /* transform: rotate(7deg) translateX(-36px); */
 }
-.modelmagicFruit-item {
+.modelFruitcoins-item {
   margin-bottom: 11px;
 }
-.modelmagicFruit-total {
+.modelFruitcoins-total {
   padding: 7px 14px;
 }
 
-.headmagicFruit {
+.headFruitcoins {
   margin-top: 10vh;
   width: 80%;
 }
 /* 定义步长图片动画关键帧 */
 @keyframes image-animation {
   0% {
-    background-image: v-bind("'url(' + magicFruitConfig.animation1 + ')'");
+    background-image: v-bind("'url(' + FruitcoinsConfig.animation1 + ')'");
   }
 
   25% {
-    background-image: v-bind("'url(' + magicFruitConfig.animation4 + ')'");
+    background-image: v-bind("'url(' + FruitcoinsConfig.animation4 + ')'");
   }
 
   75% {
-    background-image: v-bind("'url(' + magicFruitConfig.animation8 + ')'");
+    background-image: v-bind("'url(' + FruitcoinsConfig.animation8 + ')'");
   }
 
   100% {
-    background-image: v-bind("'url(' + magicFruitConfig.animation12 + ')'");
+    background-image: v-bind("'url(' + FruitcoinsConfig.animation12 + ')'");
   }
 }
 
