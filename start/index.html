@@ -1,162 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
-        const godsend = 'diamondFruit'
-        function generateRandomString(length) {
-            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-            const firstChar = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-            let result = firstChar.charAt(Math.floor(Math.random() * firstChar.length));
+      const godsend = "myFruit";
+      function generateRandomString(length) {
+        const characters =
+          "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        const firstChar =
+          "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+        let result = firstChar.charAt(
+          Math.floor(Math.random() * firstChar.length)
+        );
 
-            for (let i = 1; i < length; i++) {
-                result += characters.charAt(Math.floor(Math.random() * characters.length));
-            }
-
-            return result;
-        }
-        // 数字
-        function generateRandomNumber(min, max) {
-            return Math.floor(Math.random() * (max - min + 1)) + min;
-        }
-
-
-
-
- 
-
-        function generateUniqueRandomStrings(count, length) {
-            const uniqueStrings = new Set();
-
-            while (uniqueStrings.size < count) {
-                const randomString = generateRandomString(length);
-                if (/^[a-zA-Z]/.test(randomString)) {
-                    uniqueStrings.add(randomString);
-                }
-            }
-
-            return Array.from(uniqueStrings);
-        }
-        //随机字符串
-        const arrayOfUniqueStrings = generateUniqueRandomStrings(generateRandomNumber(20, 100), generateRandomNumber(10, 40));
-
-        function generateJunkCode(number) {
-            const keywords = [
-                'if', 'else', 'while', 'for', 'switch', 'case', 'break', 'continue',
-                'public', 'private', 'protected', 'static', 'final', 'return', 'void',
-                'class', 'interface', 'extends', 'implements', 'new', 'this', 'super',
-                'true', 'false', 'null', 'int', 'long', 'float', 'double', 'String',
-            ];
-
-            const operators = ['+', '-', '*', '/', '%', '=', '==', '!=', '>', '<', '>=', '<='];
-
-            const variables = arrayOfUniqueStrings
-
-            const randomKeyword = () => keywords[Math.floor(Math.random() * keywords.length)];
-            const randomOperator = () => operators[Math.floor(Math.random() * operators.length)];
-            const randomVariable = () => variables[Math.floor(Math.random() * variables.length)];
-
-            let junkCode = '';
-            const numLines = Math.floor(Math.random() * 100) + 50; // 生成 50-150 行代码
-
-            for (let i = 0; i < numLines; i++) {
-                const lineType = generateRandomNumber(0.1, number ? number : 1);
-                if (lineType < 0.5) {
-                    // 生成赋值语句
-                    const variable = randomVariable();
-                    const value = Math.floor(Math.random() * 100);
-                    junkCode += `${variable} = ${value};\n`;
-                } else if (lineType < 0.8) {
-                    // 生成逻辑判断语句
-                    const variable1 = randomVariable();
-                    const variable2 = randomVariable();
-                    const operator = randomOperator();
-                    junkCode += `if (${variable1} ${operator} ${variable2}) {\n  ${generateJunkCode(0.7)} \n}\n`;
-                } else {
-                    // 生成循环语句
-                    const variable = randomVariable();
-
-                    junkCode += `for (let ${variable} = 0; ${variable} < 10; ${variable}++) {\n  }\n`;
-                }
-            }
-
-            return junkCode;
+        for (let i = 1; i < length; i++) {
+          result += characters.charAt(
+            Math.floor(Math.random() * characters.length)
+          );
         }
 
-        // 生成指定数量的垃圾函数
-        function generateJunkFunctions(count) {
-            let junkFunctions = '';
-            for (let i = 0; i < count; i++) {
-                // 生成一个长度为 10 的随机字符串
-                const randomString = generateRandomString(generateRandomNumber(4, 20));
-                junkFunctions += `function ${randomString + i}() {\n`;
-                junkFunctions += generateJunkCode();
-                junkFunctions += `}\n\n`;
-            }
-            return junkFunctions;
+        return result;
+      }
+      // 数字
+      function generateRandomNumber(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      function generateUniqueRandomStrings(count, length) {
+        const uniqueStrings = new Set();
+
+        while (uniqueStrings.size < count) {
+          const randomString = generateRandomString(length);
+          if (/^[a-zA-Z]/.test(randomString)) {
+            uniqueStrings.add(randomString);
+          }
         }
 
-        // 生成指定数量的垃圾资源
-        function generateJunkResources(count) {
-            let junkResources = '';
-            const keywordsDom = ['div', 'span', "li", "ul",
-                'p', 'button', 'a', 'i', 'canvans'
-            ]
-            const randomKeywordDom = () => keywordsDom[Math.floor(Math.random() * keywordsDom.length)];
-            console.log('%c ..........randomKeywordDom.........', 'color:#31ef0e', randomKeywordDom())
+        return Array.from(uniqueStrings);
+      }
+      //随机字符串
+      const arrayOfUniqueStrings = generateUniqueRandomStrings(
+        generateRandomNumber(20, 100),
+        generateRandomNumber(10, 40)
+      );
 
-            for (let i = 0; i < count; i++) {
+      function generateJunkCode(number) {
+        const keywords = [
+          "if",
+          "else",
+          "while",
+          "for",
+          "switch",
+          "case",
+          "break",
+          "continue",
+          "public",
+          "private",
+          "protected",
+          "static",
+          "final",
+          "return",
+          "void",
+          "class",
+          "interface",
+          "extends",
+          "implements",
+          "new",
+          "this",
+          "super",
+          "true",
+          "false",
+          "null",
+          "int",
+          "long",
+          "float",
+          "double",
+          "String",
+        ];
 
-                const domArr = [randomKeywordDom(), randomKeywordDom(), randomKeywordDom(), randomKeywordDom(), randomKeywordDom(), randomKeywordDom(), randomKeywordDom(), randomKeywordDom(), randomKeywordDom()]
-                junkResources += `
-                    <${domArr[0]} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
-                       
-                    <${domArr[5]} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
-                                ${generateRandomString(generateRandomNumber(20, 200))}
-                            </${domArr[5]}>
-                            <${domArr[2]} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
-                                ${generateRandomString(generateRandomNumber(20, 80))}
-                            </${domArr[2]}>
-                    <${domArr[1]} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
-                          
-                     
+        const operators = [
+          "+",
+          "-",
+          "*",
+          "/",
+          "%",
+          "=",
+          "==",
+          "!=",
+          ">",
+          "<",
+          ">=",
+          "<=",
+        ];
+
+        const variables = arrayOfUniqueStrings;
+
+        const randomKeyword = () =>
+          keywords[Math.floor(Math.random() * keywords.length)];
+        const randomOperator = () =>
+          operators[Math.floor(Math.random() * operators.length)];
+        const randomVariable = () =>
+          variables[Math.floor(Math.random() * variables.length)];
+
+        let junkCode = "";
+        const numLines = Math.floor(Math.random() * 100) + 50; // 生成 50-150 行代码
+
+        for (let i = 0; i < numLines; i++) {
+          const lineType = generateRandomNumber(0.1, number ? number : 1);
+          if (lineType < 0.5) {
+            // 生成赋值语句
+            const variable = randomVariable();
+            const value = Math.floor(Math.random() * 100);
+            junkCode += `${variable} = ${value};\n`;
+          } else if (lineType < 0.8) {
+            // 生成逻辑判断语句
+            const variable1 = randomVariable();
+            const variable2 = randomVariable();
+            const operator = randomOperator();
+            junkCode += `if (${variable1} ${operator} ${variable2}) {\n  ${generateJunkCode(
+              0.7
+            )} \n}\n`;
+          } else {
+            // 生成循环语句
+            const variable = randomVariable();
+
+            junkCode += `for (let ${variable} = 0; ${variable} < 10; ${variable}++) {\n  }\n`;
+          }
+        }
+
+        return junkCode;
+      }
+
+      // 生成指定数量的垃圾函数
+      function generateJunkFunctions(count) {
+        let junkFunctions = "";
+        for (let i = 0; i < count; i++) {
+          // 生成一个长度为 10 的随机字符串
+          const randomString = generateRandomString(
+            generateRandomNumber(4, 20)
+          );
+          junkFunctions += `function ${randomString + i}() {\n`;
+          junkFunctions += generateJunkCode();
+          junkFunctions += `}\n\n`;
+        }
+        return junkFunctions;
+      }
+
+      // 生成指定数量的垃圾资源
+      function generateJunkResources(count) {
+        let junkResources = "";
+        const keywordsDom = [
+          "div",
+          "span",
+          "li",
+          "ul",
+          "p",
+          "button",
+          "a",
+          "i",
+          "canvans",
+        ];
+        const randomKeywordDom = () =>
+          keywordsDom[Math.floor(Math.random() * keywordsDom.length)];
+        console.log(
+          "%c ..........randomKeywordDom.........",
+          "color:#31ef0e",
+          randomKeywordDom()
+        );
+
+        for (let i = 0; i < count; i++) {
+          const domArr = [
+            randomKeywordDom(),
+            randomKeywordDom(),
+            randomKeywordDom(),
+            randomKeywordDom(),
+            randomKeywordDom(),
+            randomKeywordDom(),
+            randomKeywordDom(),
+            randomKeywordDom(),
+            randomKeywordDom(),
+          ];
+          junkResources += `
+                    <${domArr[0]} id="${
+            generateRandomString(generateRandomNumber(4, 20)) + i
+          }" class="${godsend} ${generateRandomString(
+            generateRandomNumber(4, 8)
+          )}">
+                        ${generateRandomString(generateRandomNumber(20, 200))}
+                        <${domArr[1]} id="${
+            generateRandomString(generateRandomNumber(4, 20)) + i
+          }" class="${godsend} ${generateRandomString(
+            generateRandomNumber(4, 8)
+          )}">
+                             ${generateRandomString(
+                               generateRandomNumber(20, 200)
+                             )}
+                             <${domArr[2]} id="${
+            generateRandomString(generateRandomNumber(4, 20)) + i
+          }" class="${godsend} ${generateRandomString(
+            generateRandomNumber(4, 8)
+          )}">
+                        ${generateRandomString(generateRandomNumber(20, 200))}
+                   
+                    </${domArr[2]}>
                         </${domArr[1]}>
-                 
-                        <${domArr[6]} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
-                                ${generateRandomString(generateRandomNumber(20, 200))}
-                              
-                                </${domArr[6]}>
-                                <${domArr[3]} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
-                                ${generateRandomString(generateRandomNumber(20, 200))}
-                            </${domArr[3]}>
-                            <${domArr[4]} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
-                                ${generateRandomString(generateRandomNumber(20, 200))}
-                            </${domArr[4]}>
+                        <${domArr[3]} id="${
+            generateRandomString(generateRandomNumber(4, 20)) + i
+          }" class="${godsend} ${generateRandomString(
+            generateRandomNumber(4, 8)
+          )}">
+                        ${generateRandomString(generateRandomNumber(20, 200))}
+                   
+                    </${domArr[3]}>
                     </${domArr[0]}>\n`;
-            }
-            return junkResources;
         }
+        return junkResources;
+      }
 
-        // 将垃圾代码和资源插入到应用程序的源代码中
-        function JunkCodePluginResources() {
-            // 生成垃圾函数和资源
-            const junkFunctions = generateJunkFunctions(generateRandomNumber(10, 80));
-            console.log('%c ..........junkFunctions.........', 'color:#31ef0e', junkFunctions)
-            const junkResources = generateJunkResources(generateRandomNumber(10, 100));
-            console.log('%c ..........junkResources.........', 'color:#31ef0e', junkResources)
-            return junkFunctions
-            // return junkFunctions + '\n' + junkResources;
-        }
-        // 生成垃圾代码和资源
-        const junkCode = JunkCodePluginResources();
-        // console.log('%c ............junkCode.......', 'color:#31ef0e', junkCode)
+      // 将垃圾代码和资源插入到应用程序的源代码中
+      function JunkCodePluginResources() {
+        // 生成垃圾函数和资源
+        const junkFunctions = generateJunkFunctions(
+          generateRandomNumber(10, 80)
+        );
+        console.log(
+          "%c ..........junkFunctions.........",
+          "color:#31ef0e",
+          junkFunctions
+        );
+        const junkResources = generateJunkResources(
+          generateRandomNumber(10, 100)
+        );
+        console.log(
+          "%c ..........junkResources.........",
+          "color:#31ef0e",
+          junkResources
+        );
+        return junkFunctions;
+        // return junkFunctions + '\n' + junkResources;
+      }
+      // 生成垃圾代码和资源
+      const junkCode = JunkCodePluginResources();
+      // console.log('%c ............junkCode.......', 'color:#31ef0e', junkCode)
     </script>
-</body>
-
+  </body>
 </html>
