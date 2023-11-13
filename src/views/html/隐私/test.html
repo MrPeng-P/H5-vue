@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.container {
+  width: 300px; /* 3 columns, each 100px wide */
+  height: 300px; /* 3 rows, each 100px tall */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  font-size: 24px;
+  background-color: #3498db;
+  color: #fff;
+  animation: scroll 10s linear infinite;
+  animation-delay: 0s, 2s, 4s, 6s, 8s, 10s, 12s, 14s, 16s;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-200px);
+  }
+}
+
+
+  </style>
+</head>
+<body>
+    <body>
+        <div class="container">
+          <div class="row">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+          </div>
+          <div class="row">
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+          </div>
+          <div class="row">
+            <div class="box">7</div>
+            <div class="box">8</div>
+            <div class="box">9</div>
+          </div>
+        </div>
+        <script src="script.js"></script>
+      </body>
+</body>
+</html>
+

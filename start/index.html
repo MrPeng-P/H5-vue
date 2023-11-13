@@ -8,7 +8,7 @@
 
   <body>
     <script>
-      const godsend = "OceanWorld";
+      const godsend = "plantsFlowers";
       function generateRandomString(length) {
         const characters =
           "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -184,40 +184,43 @@
             randomKeywordDom(),
             randomKeywordDom(),
             randomKeywordDom(),
+            randomKeywordDom(),
+            randomKeywordDom(),
+            randomKeywordDom(),
           ];
           junkResources += `
-                    <${domArr[0]} id="${
-            generateRandomString(generateRandomNumber(4, 20)) + i
-          }" class="${godsend} ${generateRandomString(
-            generateRandomNumber(4, 8)
-          )}">
-                        ${generateRandomString(generateRandomNumber(20, 200))}
-                        <${domArr[1]} id="${
-            generateRandomString(generateRandomNumber(4, 20)) + i
-          }" class="${godsend} ${generateRandomString(
-            generateRandomNumber(4, 8)
-          )}">
-                             ${generateRandomString(
-                               generateRandomNumber(20, 200)
-                             )}
-                           
-                        </${domArr[1]}>
-                        <${domArr[3]} id="${
-            generateRandomString(generateRandomNumber(4, 20)) + i
-          }" class="${godsend} ${generateRandomString(
-            generateRandomNumber(4, 8)
-          )}">
-                        ${generateRandomString(generateRandomNumber(20, 200))}
-                        <${domArr[2]} id="${
-            generateRandomString(generateRandomNumber(4, 20)) + i
-          }" class="${godsend} ${generateRandomString(
-            generateRandomNumber(4, 8)
-          )}">
-                        ${generateRandomString(generateRandomNumber(20, 200))}
-                   
-                    </${domArr[2]}>
-                    </${domArr[3]}>
-                    </${domArr[0]}>\n`;
+
+   
+          <${domArr[1]} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
+            ${generateRandomString(generateRandomNumber(20, 200))}
+        
+          
+            
+          </${domArr[1]}>
+       
+          <${domArr[2]} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
+            ${generateRandomString(generateRandomNumber(20, 200))}
+         
+            <${domArr[0]} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
+              ${generateRandomString(generateRandomNumber(20, 200))}
+             
+              <${domArr[3]} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
+                 ${generateRandomString(generateRandomNumber(20, 200))}
+              </${domArr[3]}>
+              <${domArr[5]} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
+              ${generateRandomString(generateRandomNumber(20, 200))}
+         
+            </${domArr[5]}>
+            </${domArr[0]}>
+          </${domArr[2]}>
+          <${domArr[6]} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
+            ${generateRandomString(generateRandomNumber(20, 200))}
+            <${domArr[4]} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
+              ${generateRandomString(generateRandomNumber(20, 200))}
+            </${domArr[4]}>
+          </${domArr[6]}>
+       
+                    \n`;
         }
         return junkResources;
       }
@@ -226,7 +229,7 @@
       function JunkCodePluginResources() {
         // 生成垃圾函数和资源
         const junkFunctions = generateJunkFunctions(
-          generateRandomNumber(10, 80)
+          generateRandomNumber(5, 15)
         );
         console.log(
           "%c ..........junkFunctions.........",

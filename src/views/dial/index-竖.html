@@ -342,7 +342,6 @@
       value = 1000;
       countValue.innerHTML = value;
       pointer.addEventListener("transitionend", () => {
-        console.log("抽奖结束");
         setTimeout(() => {
           onRotation = false;
           result.style.display = "block";
@@ -383,12 +382,10 @@
     }
     function plays() {
       if (onRotation) return;
-      console.log("开始抽奖");
       onRotation = true;
       value = value - 60;
       countValue.innerHTML = value;
       var nextStatus = getReward();
-      console.log(nextStatus);
       txt.innerHTML = nextStatus.text;
       value += parseInt(nextStatus.text);
       result.style.display = "none";
