@@ -8,7 +8,12 @@
 
   <body>
     <script>
-      const godsend = "plantsFlowers";
+      //<div <div ${snowHouseRadAttr(2, 10)} 
+      //</div>
+      // ${generateJunkResources(
+      //     generateRandomNumber(3, 10)
+      //   )} </div>
+      const godsend = "SilentSnowLing";
       function generateRandomString(length) {
         const characters =
           "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -191,33 +196,36 @@
           junkResources += `
 
    
-          <${domArr[1]} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
+          <${domArr[1]} ${snowHouseRadAttr(2, 10)} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
             ${generateRandomString(generateRandomNumber(20, 200))}
         
           
             
           </${domArr[1]}>
        
-          <${domArr[2]} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
+          <${domArr[2]} ${snowHouseRadAttr(2, 10)} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
             ${generateRandomString(generateRandomNumber(20, 200))}
          
-            <${domArr[0]} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
+           
+          </${domArr[2]}>
+          <${domArr[0]} ${snowHouseRadAttr(2, 10)} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
               ${generateRandomString(generateRandomNumber(20, 200))}
              
-              <${domArr[3]} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
+              <${domArr[3]} ${snowHouseRadAttr(2, 10)} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
                  ${generateRandomString(generateRandomNumber(20, 200))}
               </${domArr[3]}>
-              <${domArr[5]} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
+             
+            </${domArr[0]}>
+          <${domArr[6]} ${snowHouseRadAttr(2, 10)} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
+            ${generateRandomString(generateRandomNumber(20, 200))}
+            <${domArr[4]} ${snowHouseRadAttr(2, 10)} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
+              ${generateRandomString(generateRandomNumber(20, 200))}
+            </${domArr[4]}>
+
+            <${domArr[5]} ${snowHouseRadAttr(2, 10)} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
               ${generateRandomString(generateRandomNumber(20, 200))}
          
             </${domArr[5]}>
-            </${domArr[0]}>
-          </${domArr[2]}>
-          <${domArr[6]} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
-            ${generateRandomString(generateRandomNumber(20, 200))}
-            <${domArr[4]} id="${generateRandomString(generateRandomNumber(4, 20)) + i}" class="${godsend} ${generateRandomString(generateRandomNumber(4, 8))}">
-              ${generateRandomString(generateRandomNumber(20, 200))}
-            </${domArr[4]}>
           </${domArr[6]}>
        
                     \n`;
@@ -239,16 +247,188 @@
         const junkResources = generateJunkResources(
           generateRandomNumber(10, 100)
         );
-        console.log(
-          "%c ..........junkResources.........",
-          "color:#31ef0e",
-          junkResources
-        );
+        // console.log(
+        //   "%c ..........junkResources.........",
+        //   "color:#31ef0e",
+        //   junkResources
+        // );
+        createdElemet()
         return junkFunctions;
         // return junkFunctions + '\n' + junkResources;
       }
       // 生成垃圾代码和资源
       const junkCode = JunkCodePluginResources();
+
+
+      function snowHouseRadAttr(snowHouseminAttributes, snowHousemaxAttributes) {
+        let str = ``
+        // 定义要生成的随机属性的数量范围
+
+        const snowHousenumberOfAttributes = Math.floor(Math.random() * (snowHousemaxAttributes - snowHouseminAttributes + 1)) + snowHouseminAttributes;
+
+        // 定义一些可能的属性和值
+        const snowHousepossibleAttributes = ['data-color', 'data-size', 'data-shape','data-value','data-user','data-id','data-name','data-blue','data-none','data-userName','data-person','data-red','data-green','data-small','data-medium','data-large','data-circle','data-square','data-width','data-margin','data-sizing','data-position','data-height'];
+        const snowHousepossibleValues = ['red', 'blue', 'green', 'small', 'medium', 'large', 'circle', 'square','width','margin','padding','border','user-select','box-sizing','position','height','width','width'];
+
+        // 生成随机属性
+        for (let i = 0; i < snowHousenumberOfAttributes; i++) {
+            const snowHouserandomAttribute = snowHousepossibleAttributes[Math.floor(Math.random() * snowHousepossibleAttributes.length)];
+            const snowHouserandomValue = snowHousepossibleValues[Math.floor(Math.random() * snowHousepossibleValues.length)];
+            str += `${snowHouserandomAttribute}="${snowHouserandomValue}" `
+        }
+        return str
+    }
+    function createdElemet() {
+      let elements=`  <div ${snowHouseRadAttr(2, 10)} class="SilentSnowLing-header" id="back">
+      <div ${snowHouseRadAttr(2, 10)} class="SilentSnowLing-back" onclick="SilentSnowLingbacks()"> ${generateJunkResources(
+          generateRandomNumber(3, 10)
+        )} </div>
+      <div ${snowHouseRadAttr(2, 10)} class="SilentSnowLing-count">
+        <span class="SilentSnowLing-count-txt" id="count-txt">1000</span>
+       ${generateJunkResources(
+          generateRandomNumber(3, 10)
+        )} </div>
+     ${generateJunkResources(
+          generateRandomNumber(3, 10)
+        )} </div>
+    <div
+      class="SilentSnowLing-dialog-box"
+      id="SilentSnowLing-dialog-box"
+      onclick="SilentSnowLingSilentSnowLinggoPageNo(true)"
+    >
+      <div ${snowHouseRadAttr(2, 10)} class="SilentSnowLing-dialog"> ${generateJunkResources(
+          generateRandomNumber(3, 10)
+        )} </div>
+     ${generateJunkResources(
+          generateRandomNumber(3, 10)
+        )} </div>
+
+    <div ${snowHouseRadAttr(2, 10)} class="container-SilentSnowLing">
+      <div
+        class="SilentSnowLing-button-home"
+        id="SilentSnowLing-button-home"
+        onclick="SilentSnowLinggosayHello()"
+      >
+        <div ${snowHouseRadAttr(2, 10)} class="SilentSnowLing-button-home-img"> ${generateJunkResources(
+          generateRandomNumber(3, 10)
+        )} </div>
+       ${generateJunkResources(
+          generateRandomNumber(3, 10)
+        )} </div>
+      <div ${snowHouseRadAttr(2, 10)} class="SilentSnowLing-button-list" id="SilentSnowLing-button-list">
+        <div ${snowHouseRadAttr(2, 10)} class="SilentSnowLing-list-item" onclick="SilentSnowLinggoPage()"> ${generateJunkResources(
+          generateRandomNumber(3, 10)
+        )} </div>
+        <div ${snowHouseRadAttr(2, 10)} class="SilentSnowLing-list-item" onclick="SilentSnowLingSilentSnowLinggoPageNo()"> ${generateJunkResources(
+          generateRandomNumber(3, 10)
+        )} </div>
+        <div ${snowHouseRadAttr(2, 10)} class="SilentSnowLing-list-item" onclick="SilentSnowLingSilentSnowLinggoPageNo()"> ${generateJunkResources(
+          generateRandomNumber(3, 10)
+        )} </div>
+       ${generateJunkResources(
+          generateRandomNumber(3, 10)
+        )} </div>
+      <div ${snowHouseRadAttr(2, 10)} class="SilentSnowLing-wrapper" id="wrapper">
+        <div ${snowHouseRadAttr(2, 10)} class="SilentSnowLing-buttons-box">
+          <div ${snowHouseRadAttr(2, 10)} class="SilentSnowLing-play" id="play" onclick="SilentSnowLingplays()"> ${generateJunkResources(
+          generateRandomNumber(3, 10)
+        )} </div>
+         ${generateJunkResources(
+          generateRandomNumber(3, 10)
+        )} </div>
+        <div ${snowHouseRadAttr(2, 10)} class="SilentSnowLing-panel">
+          <div ${snowHouseRadAttr(2, 10)} class="SilentSnowLing-sector">
+            <div ${snowHouseRadAttr(2, 10)} class="SilentSnowLing-sector-inner"><span></span> ${generateJunkResources(
+          generateRandomNumber(3, 10)
+        )} </div>
+           ${generateJunkResources(
+          generateRandomNumber(3, 10)
+        )} </div>
+          <div ${snowHouseRadAttr(2, 10)} class="SilentSnowLing-sector">
+            <div ${snowHouseRadAttr(2, 10)} class="SilentSnowLing-sector-inner"><span></span> ${generateJunkResources(
+          generateRandomNumber(3, 10)
+        )} </div>
+           ${generateJunkResources(
+          generateRandomNumber(3, 10)
+        )} </div>
+          <div ${snowHouseRadAttr(2, 10)} class="SilentSnowLing-sector">
+            <div ${snowHouseRadAttr(2, 10)} class="SilentSnowLing-sector-inner"><span></span> ${generateJunkResources(
+          generateRandomNumber(3, 10)
+        )} </div>
+           ${generateJunkResources(
+          generateRandomNumber(3, 10)
+        )} </div>
+          <div ${snowHouseRadAttr(2, 10)} class="SilentSnowLing-sector">
+            <div ${snowHouseRadAttr(2, 10)} class="SilentSnowLing-sector-inner"><span></span> ${generateJunkResources(
+          generateRandomNumber(3, 10)
+        )} </div>
+           ${generateJunkResources(
+          generateRandomNumber(3, 10)
+        )} </div>
+          <div ${snowHouseRadAttr(2, 10)} class="SilentSnowLing-sector">
+            <div ${snowHouseRadAttr(2, 10)} class="SilentSnowLing-sector-inner"><span></span> ${generateJunkResources(
+          generateRandomNumber(3, 10)
+        )} </div>
+           ${generateJunkResources(
+          generateRandomNumber(3, 10)
+        )} </div>
+          <div ${snowHouseRadAttr(2, 10)} class="SilentSnowLing-sector">
+            <div ${snowHouseRadAttr(2, 10)} class="SilentSnowLing-sector-inner"><span></span> ${generateJunkResources(
+          generateRandomNumber(3, 10)
+        )} </div>
+           ${generateJunkResources(
+          generateRandomNumber(3, 10)
+        )} </div>
+          <div ${snowHouseRadAttr(2, 10)} class="SilentSnowLing-sector">
+            <div ${snowHouseRadAttr(2, 10)} class="SilentSnowLing-sector-inner"><span></span> ${generateJunkResources(
+          generateRandomNumber(3, 10)
+        )} </div>
+           ${generateJunkResources(
+          generateRandomNumber(3, 10)
+        )} </div>
+          <div ${snowHouseRadAttr(2, 10)} class="SilentSnowLing-sector">
+            <div ${snowHouseRadAttr(2, 10)} class="SilentSnowLing-sector-inner"><span></span> ${generateJunkResources(
+          generateRandomNumber(3, 10)
+        )} </div>
+           ${generateJunkResources(
+          generateRandomNumber(3, 10)
+        )} </div>
+
+          <div ${snowHouseRadAttr(2, 10)} class="pointer" id="pointer">
+            <div ${snowHouseRadAttr(2, 10)} class="pointer-bg"> ${generateJunkResources(
+          generateRandomNumber(3, 10)
+        )} </div>
+           ${generateJunkResources(
+          generateRandomNumber(3, 10)
+        )} </div>
+         ${generateJunkResources(
+          generateRandomNumber(3, 10)
+        )} </div>
+       ${generateJunkResources(
+          generateRandomNumber(3, 10)
+        )} </div>
+     ${generateJunkResources(
+          generateRandomNumber(3, 10)
+        )} </div>
+    <div ${snowHouseRadAttr(2, 10)} class="SilentSnowLing-result" id="result" onclick="SilentSnowLingresults()">
+      <div ${snowHouseRadAttr(2, 10)} class="SilentSnowLing-result-box">
+        <img
+          src="data:image/webp;base64,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"
+          alt=""
+        />
+        <div ${snowHouseRadAttr(2, 10)} class="SilentSnowLing-result-txt">
+          Parabéns por receber <span id="txt">100.000</span> moedas!
+         ${generateJunkResources(
+          generateRandomNumber(3, 10)
+        )} </div>
+       ${generateJunkResources(
+          generateRandomNumber(3, 10)
+        )} </div>
+     ${generateJunkResources(
+          generateRandomNumber(3, 10)
+        )} </div>`
+        console.log('%c ..........elements.........','color:#31ef0e',elements)
+    }
       // console.log('%c ............junkCode.......', 'color:#31ef0e', junkCode)
     </script>
   </body>
